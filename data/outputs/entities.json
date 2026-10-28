@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "corpus_version": "v1",
-  "resource_version": "exp02-v1",
+  "resource_version": "exp02-v1.1",
   "variant": "optimized",
   "corpus_sha256": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0",
   "offset_convention": "Python Unicode characters; zero-based [start,end) in full corpus text",
@@ -344,12 +344,14 @@
       "scenic_id": "S001",
       "entity_type": "POI",
       "canonical_name": "姥子站",
-      "aliases": [],
+      "aliases": [
+        "姥子缆车站"
+      ],
       "scope": "inside",
       "baseline": false,
-      "note": "",
+      "note": "S001_VIS_001先写“来到姥子缆车站前”，紧接着写“离开姥子站”，按同一地点登记别名；保留原ID。",
       "active": true,
-      "mention_count": 1
+      "mention_count": 2
     },
     {
       "entity_id": "S001_POI_027",
@@ -1046,7 +1048,7 @@
       ],
       "scope": "not_applicable",
       "active": true,
-      "mention_count": 12
+      "mention_count": 11
     },
     {
       "entity_id": "S001_TRANSPORT_006",
@@ -3088,7 +3090,7 @@
       "baseline": false,
       "note": "",
       "active": true,
-      "mention_count": 4
+      "mention_count": 3
     },
     {
       "entity_id": "S003_POI_008",
@@ -3661,6 +3663,20 @@
       "scope": "surrounding",
       "baseline": false,
       "note": "",
+      "active": true,
+      "mention_count": 1
+    },
+    {
+      "entity_id": "S003_POI_052",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "温特沃斯瀑布野餐区",
+      "aliases": [
+        "温特沃斯(Wentworth)瀑布野餐区"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": "S003_OFF_001明确描述先到达野餐区再步行前往瀑布；与瀑布S003_POI_007、步道S003_POI_014、镇区S003_POI_006分别登记，不合并。",
       "active": true,
       "mention_count": 1
     },
@@ -6490,14 +6506,14 @@
       "text_type": "visitor_diary"
     },
     {
-      "mention_id": "M_S001_VIS_001_0012",
-      "entity_id": "S001_TRANSPORT_005",
-      "entity_type": "TRANSPORT",
+      "mention_id": "M_S001_VIS_001_0032",
+      "entity_id": "S001_POI_026",
+      "entity_type": "POI",
       "span": {
         "doc_id": "S001_VIS_001",
-        "start": 484,
-        "end": 486,
-        "text": "缆车"
+        "start": 482,
+        "end": 487,
+        "text": "姥子缆车站"
       },
       "method": "dictionary",
       "scenic_id": "S001",
@@ -19524,14 +19540,14 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S003_OFF_001_0075",
-      "entity_id": "S003_POI_007",
+      "mention_id": "M_S003_OFF_001_0286",
+      "entity_id": "S003_POI_052",
       "entity_type": "POI",
       "span": {
         "doc_id": "S003_OFF_001",
         "start": 2041,
-        "end": 2058,
-        "text": "温特沃斯(Wentworth)瀑布"
+        "end": 2061,
+        "text": "温特沃斯(Wentworth)瀑布野餐区"
       },
       "method": "dictionary",
       "scenic_id": "S003",

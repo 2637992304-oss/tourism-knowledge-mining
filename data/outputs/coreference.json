@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "corpus_version": "v1",
   "corpus_sha256": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0",
-  "entities_sha256": "a61b4ae87293d04896e9bca218acc15a9eeb622f326954908eab62fe3486ddb2",
+  "entities_sha256": "71598abfdec68cd99d3983cd5099ee07c653d41438968d14d7c9ee46ea6caac9",
   "reference_sha256": "a24ca1764030d08ee294e4904a46d74fc6d9ae7bcae0b995a7082f3df18dd642",
   "annotation_provenance": "AI辅助逐例阅读原文并标注，非学生或多名人工标注者独立复核；在运行消解预测前固定此参考。",
   "parameters": {

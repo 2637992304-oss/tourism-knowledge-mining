@@ -70,6 +70,23 @@ def main():
     ids=lambda obj:{(m['span']['doc_id'],m['span']['start'],m['span']['end'],m['entity_id']):m['mention_id'] for m in obj['mentions']}
     assert ids(reordered)==ids(output),'顺序变化导致ID变化'
     assert {m['span']['doc_id'] for m in ms}==set(docs)
+    # YZH反馈的车站别名及独立野餐区，按完整地点边界核对，防止退回短词或误合并。
+    confirmations=read_json(ROOT/'data/resources/exp02_alignment_confirmations.json')
+    assert confirmations['corpus_sha256']==h
+    assert confirmations['resource_version']==lex['resource_version']==output['resource_version']
+    for mapping in confirmations['mappings']:
+        e=catalog[mapping['entity_id']]
+        assert e['active'] and e['entity_type']=='POI'
+        assert e['canonical_name']==mapping['canonical_name']
+        assert mapping['surface'] in [e['canonical_name']]+e['aliases']
+        for field in ['evidence','context']:
+            s=mapping[field]
+            assert docs[s['doc_id']]['text'][s['start']:s['end']]==s['text']
+        matches=[m for m in ms if m['span']==mapping['evidence']]
+        assert len(matches)==1 and matches[0]['entity_id']==mapping['entity_id']
+        for other_id in mapping.get('distinct_from',[]):
+            assert other_id!=e['entity_id'] and catalog[other_id]['active']
+            assert any(m['entity_id']==other_id for m in ms)
     # Each reference label is checked against frozen original text, including empty negative cases.
     reference=read_json(ROOT/'data/resources/exp02_review_reference.json')
     assert reference['corpus_sha256']==h
@@ -87,6 +104,7 @@ def main():
         'no_duplicate_or_overlapping_mentions':True,'no_exact_stopwords':True,
         'deterministic_rerun':True,'ids_stable_after_document_reordering':True,'review_reference_source_spans':True},
         corpus_sha256=h,review_metrics={v:r['metrics'] for v,r in review.items()})
+    quality['checks']['confirmed_poi_mappings']=len(confirmations['mappings'])
     write_json(ROOT/'results/checks/exp02_quality.json',quality)
     pending=[]
     for item in lex['ambiguous_names']:

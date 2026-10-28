@@ -2,10 +2,10 @@
   "variant": "optimized",
   "documents": 18,
   "mentions": 1403,
-  "active_entities": 326,
+  "active_entities": 327,
   "by_type": {
-    "POI": 981,
-    "TRANSPORT": 221,
+    "POI": 982,
+    "TRANSPORT": 220,
     "TIME": 201
   },
   "per_scenic": [
@@ -15,8 +15,8 @@
       "docs": 6,
       "scoped_chars": 10082,
       "mentions_by_type": {
-        "POI": 295,
-        "TRANSPORT": 95,
+        "POI": 296,
+        "TRANSPORT": 94,
         "TIME": 41
       },
       "entities_by_type": {
@@ -52,7 +52,7 @@
         "TIME": 53
       },
       "entities_by_type": {
-        "POI": 51,
+        "POI": 52,
         "TRANSPORT": 10,
         "TIME": 25
       }
@@ -159,16 +159,16 @@
         "count": 15
       },
       {
-        "entity_id": "S001_TRANSPORT_005",
-        "canonical_name": "缆车",
-        "scenic_id": "S001",
-        "count": 12
-      },
-      {
         "entity_id": "S003_TRANSPORT_001",
         "canonical_name": "步行",
         "scenic_id": "S003",
         "count": 12
+      },
+      {
+        "entity_id": "S001_TRANSPORT_005",
+        "canonical_name": "缆车",
+        "scenic_id": "S001",
+        "count": 11
       },
       {
         "entity_id": "S001_TRANSPORT_010",

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "corpus_version": "v1",
-  "resource_version": "exp02-v1",
+  "resource_version": "exp02-v1.1",
   "variant": "baseline",
   "corpus_sha256": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0",
   "offset_convention": "Python Unicode characters; zero-based [start,end) in full corpus text",

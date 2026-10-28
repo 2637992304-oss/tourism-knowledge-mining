@@ -40,7 +40,7 @@ S001_POI_023,S001,POI,黑蛋馆,inside,official_route,2
 S001_POI_023,S001,POI,黑蛋馆,inside,visitor_diary,1
 S001_POI_024,S001,POI,箱根地质博物馆,inside,official_route,3
 S001_POI_025,S001,POI,箱根登山名产店 汤本店,inside,official_route,3
-S001_POI_026,S001,POI,姥子站,inside,visitor_diary,1
+S001_POI_026,S001,POI,姥子站,inside,visitor_diary,2
 S001_POI_027,S001,POI,金太郎展望台,inside,visitor_diary,1
 S001_POI_028,S001,POI,仙石原,inside,visitor_diary,2
 S001_POI_029,S001,POI,宫之下,inside,visitor_diary,1
@@ -103,7 +103,7 @@ S001_TRANSPORT_003,S001,TRANSPORT,列车,not_applicable,official_route,4
 S001_TRANSPORT_003,S001,TRANSPORT,列车,not_applicable,visitor_diary,1
 S001_TRANSPORT_004,S001,TRANSPORT,自驾,not_applicable,visitor_diary,2
 S001_TRANSPORT_005,S001,TRANSPORT,缆车,not_applicable,official_route,3
-S001_TRANSPORT_005,S001,TRANSPORT,缆车,not_applicable,visitor_diary,9
+S001_TRANSPORT_005,S001,TRANSPORT,缆车,not_applicable,visitor_diary,8
 S001_TRANSPORT_006,S001,TRANSPORT,游船,not_applicable,official_route,1
 S001_TRANSPORT_006,S001,TRANSPORT,游船,not_applicable,visitor_diary,6
 S001_TRANSPORT_007,S001,TRANSPORT,出租车,not_applicable,visitor_diary,1
@@ -292,7 +292,7 @@ S003_POI_004,S003,POI,Katoomba,surrounding,official_route,20
 S003_POI_004,S003,POI,Katoomba,surrounding,visitor_diary,1
 S003_POI_005,S003,POI,Leura,surrounding,official_route,32
 S003_POI_006,S003,POI,Wentworth Falls,surrounding,official_route,4
-S003_POI_007,S003,POI,温特沃斯瀑布,inside,official_route,4
+S003_POI_007,S003,POI,温特沃斯瀑布,inside,official_route,3
 S003_POI_008,S003,POI,Grand Cliff Top Walk,inside,official_route,3
 S003_POI_009,S003,POI,悉尼,external,official_route,12
 S003_POI_009,S003,POI,悉尼,external,visitor_diary,14
@@ -339,6 +339,7 @@ S003_POI_048,S003,POI,伍德福德学院,surrounding,official_route,1
 S003_POI_049,S003,POI,莉莲菲尔斯日间水疗中心,surrounding,official_route,1
 S003_POI_050,S003,POI,昔日美人珍藏茶壶博物馆和茶室,surrounding,official_route,1
 S003_POI_051,S003,POI,梅加隆谷茶室,surrounding,official_route,1
+S003_POI_052,S003,POI,温特沃斯瀑布野餐区,inside,official_route,1
 S003_TIME_001,S003,TIME,2天,not_applicable,official_route,5
 S003_TIME_002,S003,TIME,2小时,not_applicable,official_route,1
 S003_TIME_003,S003,TIME,Day 1,not_applicable,official_route,1
