@@ -2,6 +2,7 @@
   "schema_version": "1.0",
   "corpus_version": "v1",
   "graph_version": "v1",
+  "entity_resource_version": "exp02-v1.1",
   "completion_status": "entity_route_fused",
   "inactive_entities_skipped": [
     "S003_TIME_023"
@@ -24,7 +25,6 @@
     "N_ENTITY_S001_POI_022",
     "N_ENTITY_S001_POI_023",
     "N_ENTITY_S001_POI_024",
-    "N_ENTITY_S001_POI_026",
     "N_ENTITY_S001_POI_028",
     "N_ENTITY_S001_POI_029",
     "N_ENTITY_S001_POI_030",
@@ -68,6 +68,7 @@
     "N_ENTITY_S001_TRANSPORT_002",
     "N_ENTITY_S001_TRANSPORT_003",
     "N_ENTITY_S001_TRANSPORT_004",
+    "N_ENTITY_S001_TRANSPORT_005",
     "N_ENTITY_S001_TRANSPORT_006",
     "N_ENTITY_S001_TRANSPORT_007",
     "N_ENTITY_S001_TRANSPORT_013",
@@ -1177,6 +1178,38 @@
       }
     },
     {
+      "node_id": "N_ENTITY_S001_POI_026",
+      "node_type": "POI",
+      "name": "姥子站",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "entity_id": "S001_POI_026",
+        "aliases": [
+          "姥子缆车站"
+        ],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "S001_VIS_001先写“来到姥子缆车站前”，紧接着写“离开姥子站”，按同一地点登记别名；保留原ID。",
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 482,
+            "end": 487,
+            "text": "姥子缆车站"
+          },
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 521,
+            "end": 524,
+            "text": "姥子站"
+          }
+        ]
+      }
+    },
+    {
       "node_id": "N_ENTITY_S001_POI_027",
       "node_type": "POI",
       "name": "金太郎展望台",
@@ -1538,102 +1571,6 @@
             "start": 5742,
             "end": 5744,
             "text": "漫步"
-          }
-        ]
-      }
-    },
-    {
-      "node_id": "N_ENTITY_S001_TRANSPORT_005",
-      "node_type": "TRANSPORT",
-      "name": "缆车",
-      "scenic_id": "S001",
-      "source_refs": [
-        "S001_OFF_001",
-        "S001_VIS_001",
-        "S001_VIS_003",
-        "S001_VIS_004",
-        "S001_VIS_005"
-      ],
-      "attributes": {
-        "entity_id": "S001_TRANSPORT_005",
-        "aliases": [
-          "箱根缆车"
-        ],
-        "alignment_status": "aligned",
-        "scope": "not_applicable",
-        "note": null,
-        "evidence": [
-          {
-            "doc_id": "S001_OFF_001",
-            "start": 1379,
-            "end": 1381,
-            "text": "缆车"
-          },
-          {
-            "doc_id": "S001_OFF_001",
-            "start": 1421,
-            "end": 1423,
-            "text": "缆车"
-          },
-          {
-            "doc_id": "S001_OFF_001",
-            "start": 1459,
-            "end": 1461,
-            "text": "缆车"
-          },
-          {
-            "doc_id": "S001_VIS_001",
-            "start": 484,
-            "end": 486,
-            "text": "缆车"
-          },
-          {
-            "doc_id": "S001_VIS_001",
-            "start": 919,
-            "end": 921,
-            "text": "缆车"
-          },
-          {
-            "doc_id": "S001_VIS_003",
-            "start": 278,
-            "end": 280,
-            "text": "缆车"
-          },
-          {
-            "doc_id": "S001_VIS_003",
-            "start": 285,
-            "end": 287,
-            "text": "缆车"
-          },
-          {
-            "doc_id": "S001_VIS_003",
-            "start": 371,
-            "end": 373,
-            "text": "缆车"
-          },
-          {
-            "doc_id": "S001_VIS_003",
-            "start": 450,
-            "end": 452,
-            "text": "缆车"
-          },
-          {
-            "doc_id": "S001_VIS_004",
-            "start": 5631,
-            "end": 5633,
-            "text": "缆车"
-          },
-          {
-            "doc_id": "S001_VIS_004",
-            "start": 5728,
-            "end": 5730,
-            "text": "缆车"
-          },
-          {
-            "doc_id": "S001_VIS_005",
-            "start": 6078,
-            "end": 6082,
-            "text": "箱根缆车"
           }
         ]
       }
@@ -2661,6 +2598,32 @@
       }
     },
     {
+      "node_id": "N_ENTITY_S003_POI_052",
+      "node_type": "POI",
+      "name": "温特沃斯瀑布野餐区",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_POI_052",
+        "aliases": [
+          "温特沃斯(Wentworth)瀑布野餐区"
+        ],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "S003_OFF_001明确描述先到达野餐区再步行前往瀑布；与瀑布S003_POI_007、步道S003_POI_014、镇区S003_POI_006分别登记，不合并。",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2041,
+            "end": 2061,
+            "text": "温特沃斯(Wentworth)瀑布野餐区"
+          }
+        ]
+      }
+    },
+    {
       "node_id": "N_ENTITY_S003_TIME_007",
       "node_type": "TIME",
       "name": "90分钟",
@@ -3368,19 +3331,6 @@
       }
     },
     {
-      "node_id": "N_POI_S001_64d6b0dbb557",
-      "node_type": "POI",
-      "name": "姥子缆车站",
-      "scenic_id": "S001",
-      "source_refs": [
-        "S001_VIS_001"
-      ],
-      "attributes": {
-        "entity_id": null,
-        "alignment_status": "pending"
-      }
-    },
-    {
       "node_id": "N_STEP_R_S001_VIS_001_01_006",
       "node_type": "STEP",
       "name": "离开姥子站继续向大涌谷进发",
@@ -3472,19 +3422,6 @@
             "text": "只需 10 分钟车程穿过原始丛林即可到达温特沃斯(Wentworth)瀑布野餐区"
           }
         ]
-      }
-    },
-    {
-      "node_id": "N_POI_S003_30e67948f5b7",
-      "node_type": "POI",
-      "name": "温特沃斯(Wentworth)瀑布野餐区",
-      "scenic_id": "S003",
-      "source_refs": [
-        "S003_OFF_001"
-      ],
-      "attributes": {
-        "entity_id": null,
-        "alignment_status": "pending"
       }
     },
     {
@@ -4772,7 +4709,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S001_VIS_001_01_005",
       "source": "N_STEP_R_S001_VIS_001_01_005",
-      "target": "N_POI_S001_64d6b0dbb557",
+      "target": "N_ENTITY_S001_POI_026",
       "relation": "VISITS",
       "source_refs": [
         "S001_VIS_001"
@@ -4803,25 +4740,6 @@
             "start": 477,
             "end": 480,
             "text": "1小时"
-          }
-        ]
-      }
-    },
-    {
-      "edge_id": "EDGE_USES_TRANSPORT_R_S001_VIS_001_01_005_M_S001_VIS_001_0012",
-      "source": "N_STEP_R_S001_VIS_001_01_005",
-      "target": "N_ENTITY_S001_TRANSPORT_005",
-      "relation": "USES_TRANSPORT",
-      "source_refs": [
-        "S001_VIS_001"
-      ],
-      "attributes": {
-        "evidence": [
-          {
-            "doc_id": "S001_VIS_001",
-            "start": 484,
-            "end": 486,
-            "text": "缆车"
           }
         ]
       }
@@ -4931,7 +4849,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S003_OFF_001_01_002",
       "source": "N_STEP_R_S003_OFF_001_01_002",
-      "target": "N_POI_S003_30e67948f5b7",
+      "target": "N_ENTITY_S003_POI_052",
       "relation": "VISITS",
       "source_refs": [
         "S003_OFF_001"

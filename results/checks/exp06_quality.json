@@ -3,12 +3,12 @@
   "missing_inputs": [
     "advice.json"
   ],
-  "nodes": 83,
-  "edges": 119,
+  "nodes": 82,
+  "edges": 118,
   "node_types": {
     "POI": 24,
     "TIME": 14,
-    "TRANSPORT": 9,
+    "TRANSPORT": 8,
     "SCENIC": 2,
     "ROUTE": 4,
     "STEP": 30
@@ -18,7 +18,7 @@
     "HAS_STEP": 30,
     "VISITS": 30,
     "AT_TIME": 14,
-    "USES_TRANSPORT": 15,
+    "USES_TRANSPORT": 14,
     "NEXT_STEP": 26
   },
   "isolated_nodes": [],

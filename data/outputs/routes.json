@@ -295,8 +295,8 @@
           "step_no": 5,
           "time_bucket": "unknown",
           "time_text": null,
-          "poi_entity_id": null,
-          "poi_name": "姥子缆车站",
+          "poi_entity_id": "S001_POI_026",
+          "poi_name": "姥子站",
           "raw_poi_name": "姥子缆车站",
           "activity": "大约1小时来到姥子缆车站前",
           "duration_minutes": null,
@@ -308,7 +308,7 @@
               "text": "大约1小时来到姥子缆车站前"
             }
           ],
-          "alignment_method": "pending"
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 6,
@@ -362,8 +362,8 @@
           "step_no": 2,
           "time_bucket": "morning",
           "time_text": "早晨",
-          "poi_entity_id": null,
-          "poi_name": "温特沃斯(Wentworth)瀑布野餐区",
+          "poi_entity_id": "S003_POI_052",
+          "poi_name": "温特沃斯瀑布野餐区",
           "raw_poi_name": "温特沃斯(Wentworth)瀑布野餐区",
           "activity": "只需 10 分钟车程穿过原始丛林即可到达温特沃斯(Wentworth)瀑布野餐区",
           "duration_minutes": null,
@@ -375,7 +375,7 @@
               "text": "只需 10 分钟车程穿过原始丛林即可到达温特沃斯(Wentworth)瀑布野餐区"
             }
           ],
-          "alignment_method": "pending"
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 3,

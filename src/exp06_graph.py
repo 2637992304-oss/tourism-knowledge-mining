@@ -175,6 +175,7 @@ def build(routes_data, registry, entities=None, advice=None):
         del nodes[nid]
     missing = [name for name, value in (("entities.json", entities), ("advice.json", advice)) if value is None]
     return {"schema_version": "1.0", "corpus_version": version, "graph_version": "v1",
+            "entity_resource_version": (entities or {}).get("resource_version"),
             "completion_status": "route_stage" if entities is None else "entity_route_fused" if advice is None else "fused",
             "inactive_entities_skipped": sorted(inactive),
             "unused_entity_nodes_filtered": unused,

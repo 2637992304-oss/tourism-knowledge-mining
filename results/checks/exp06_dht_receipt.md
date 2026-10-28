@@ -1,9 +1,9 @@
 # YZH 对 DHT 实验 2 的接收记录
 
-已同步 origin/main 的 a71afcf 提交；合并时仅 .gitignore 的独立新增项冲突，已同时保留双方规则，没有改写 DHT 的实体文件和资源。
+已同步 origin/main 的 efd920f 提交及其 exp02-v1.1 实体对齐确认文件。未改写 DHT 的实体文件和资源。
 
-读取正式 entities.json：schema_version=1.0、corpus_version=v1、resource_version=exp02-v1；327 条目录，326 条活跃，1 条停用，1403 次提及。构建器过滤停用记录。实体原文证据、来源文档和版本已在真实融合后的图谱检查中验证。
+读取正式 entities.json：schema_version=1.0、corpus_version=v1、resource_version=exp02-v1.1；328 条目录，327 条活跃，1 条停用，1403 次提及。构建器过滤停用记录。实体原文证据、来源文档和版本已在真实融合后的图谱检查中验证。
 
-本次 30 个步骤有 28 个唯一映射到正式 POI ID；其余 2 个记录及原文证据见 exp06_alignment.json。当前真实图谱包含 AT_TIME 14 条、USES_TRANSPORT 15 条，均依据实际提及区间建立；没有重新推测交通线路或时间。
+本次 30/30 步唯一映射到正式 POI ID，无剩余名称缺口。新增两处确认：R_S001_VIS_001_01 第 5 步→S001_POI_026，R_S003_OFF_001_01 第 2 步→S003_POI_052；原文与图谱检查见 exp06_alignment.json。当前图谱包含 AT_TIME 14 条、USES_TRANSPORT 14 条，依据实际提及区间建立；没有重新推测交通线路或时间。
 
 已实际读取箱根官方 7:30 的时间实体、完成路线与实体融合并复跑质量检查。此记录表示 YZH 模块已程序接收，不代表三名成员已独立人工复核。待确认名称只形成反馈文件，未擅自添加别名或修改标准实体 ID。

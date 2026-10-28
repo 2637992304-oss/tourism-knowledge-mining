@@ -1,5 +1,7 @@
 # YZH 对 DHT 实验 4 新提交的接收检查
 
+本文件是接收 c258291 时的历史记录。后续 efd920f 已解决文末提到的两处名称等待项；最新状态见 reports/YZH_当前进度.md。
+
 已同步 main 的 c258291（Complete experiment 4 coreference and validation）至 yzh/routes-graph。新增的是共指消解、示例全文和验证材料；正式实体目录及实验 2 别名资源未改变，未新增 advice.json。
 
 执行 python src/exp04_verify.py：5 篇、59 例共指、404 处证据位置通过结构检查，原始语料及实体输入哈希未变，消解结果可稳定复跑。DHT 报告的目的选样开发集总体准确率为 38/59=64.41%，结构通过不能解释为预测全部正确。

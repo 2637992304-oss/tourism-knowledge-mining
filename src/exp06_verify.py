@@ -74,6 +74,25 @@ def main():
                         "bilingual_resolved": [s for s in alignment if s["alignment_method"] == "bilingual_components"],
                         "inactive_entities_skipped": data.get("inactive_entities_skipped", []),
                         "unused_entity_nodes_filtered": len(data.get("unused_entity_nodes_filtered", []))}
+    confirmation_path = Path("data/resources/exp02_alignment_confirmations.json")
+    if confirmation_path.exists():
+        confirmations = json.loads(confirmation_path.read_text(encoding="utf-8"))
+        assert confirmations["corpus_version"] == data["corpus_version"], "确认文件语料版本不一致"
+        assert confirmations["resource_version"] == data["entity_resource_version"], "实体资源版本不一致"
+        confirmed = []
+        for item in confirmations["mappings"]:
+            ref = item["evidence"]
+            assert docs[ref["doc_id"]]["text"][ref["start"]:ref["end"]] == ref["text"]
+            matched = [s for s in alignment if s["raw_poi_name"] == item["surface"]
+                       and any(e["doc_id"] == ref["doc_id"] for e in s["evidence"])]
+            assert matched, "确认映射未接入路线"
+            assert all(s["entity_id"] == item["entity_id"] for s in matched), "确认映射 ID 错误"
+            assert "N_ENTITY_" + item["entity_id"] in graph, "确认实体未进入图谱"
+            confirmed.append({"surface": item["surface"], "entity_id": item["entity_id"],
+                              "route_steps": [{"route_id": s["route_id"], "step_no": s["step_no"]}
+                                              for s in matched], "passed": True})
+        alignment_result["entity_resource_version"] = confirmations["resource_version"]
+        alignment_result["confirmed_updates"] = confirmed
     Path("results/checks/exp06_alignment.json").write_text(json.dumps(alignment_result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"nodes": graph.number_of_nodes(), "edges": graph.number_of_edges(),
                       "route_checks": len(chain_results), "checks_passed": True}))

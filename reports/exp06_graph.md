@@ -4,7 +4,7 @@
 
 ## 1. 输入与版本
 
-正式运行读取景区登记、routes.json 和 DHT 的 entities.json（resource_version=exp02-v1），版本为 schema_version=1.0、corpus_version=v1、graph_version=v1。状态 route_stage 表示没有实体，entity_route_fused 表示已有实体但建议未到，fused 表示实体与建议均到位。当前状态为 entity_route_fused，missing_inputs 仅包含 advice.json；状态字段不替代质量验收。
+正式运行读取景区登记、routes.json 和 DHT 的 entities.json（resource_version=exp02-v1.1），版本为 schema_version=1.0、corpus_version=v1、graph_version=v1。状态 route_stage 表示没有实体，entity_route_fused 表示已有实体但建议未到，fused 表示实体与建议均到位。当前状态为 entity_route_fused，missing_inputs 仅包含 advice.json；状态字段不替代质量验收。
 
 当前路线来自箱根、蓝山的 4 篇文本；实体目录来自 DHT 的全 18 篇语料，关联实体保留其全部提及来源。官网和游客的来源差异持续保留。知识是各篇文本中的历史行程描述，不宣称其中价格、开放状态或交通状况是当前事实。
 
@@ -36,7 +36,9 @@
 
 ## 3. 正式结果与可视化
 
-当前 graph.json 共 83 节点、119 边：2 景区、4 路线、30 步骤、24 地点、14 时间、9 交通；边为 HAS_ROUTE 4、HAS_STEP 30、NEXT_STEP 26、VISITS 30、AT_TIME 14、USES_TRANSPORT 15。30 步中 28 步对齐标准实体，2 步待确认。另导出 graph_nodes.csv、graph_edges.csv，列表和属性以 JSON 字符串存于 CSV 单元格。条件建议尚无正式输入。
+当前 graph.json 共 82 节点、118 边：2 景区、4 路线、30 步骤、24 地点、14 时间、8 交通；边为 HAS_ROUTE 4、HAS_STEP 30、NEXT_STEP 26、VISITS 30、AT_TIME 14、USES_TRANSPORT 14。30/30 步已对齐正式实体，无待确认名称。另导出 graph_nodes.csv、graph_edges.csv，列表和属性以 JSON 字符串存于 CSV 单元格。条件建议尚无正式输入。
+
+与上一版 83 节点、119 边相比，DHT 将“姥子缆车站”内部的“缆车”提及改为完整站点提及，移除一条交通关联及相应未关联交通节点。这是实体边界修正，不是路线步骤丢失；原有 30 步和两条来源路线的顺序均保留。
 
 ![箱根路线知识图谱](../results/figures/exp06_hakone_graph.png)
 
@@ -57,7 +59,7 @@ src/exp06_verify.py 将正式 JSON 读为 NetworkX MultiDiGraph，检查节点�
 
 ## 5. 局限与后续验收
 
-真实失败案例：前版“早云山/早云山站”未合并，导致地点节点分裂；接入 DHT 确认的别名后已指向 S001_POI_009。中英文复合名称只有在两个组成部分各自唯一匹配相同 DHT 实体 ID 时才可对齐；据此已解决 Blackheath、Scenic World、Jenolan Caves 的三个复合名称。仍有姥子缆车站、温特沃斯瀑布野餐区 2 个名称待 DHT 确认，具体证据见 exp06_alignment.json；不删除“野餐区”等后缀后强行映射。
+真实失败案例：前版“早云山/早云山站”未合并，导致地点节点分裂；接入 DHT 确认的别名后已指向 S001_POI_009。中英文复合名称只有在两个组成部分各自唯一匹配相同 DHT 实体 ID 时才可对齐；据此解决 Blackheath、Scenic World、Jenolan Caves 的三个复合名称。最后两处暂停项已由 DHT exp02-v1.1 解决：姥子缆车站→S001_POI_026，野餐区→S003_POI_052。野餐区与镇区、瀑布、步道独立，未通过删后缀强行映射；两处路线和图谱验收记录见 exp06_alignment.json。
 
 交通、时间关系采用证据区间包含规则，可能遗漏跨句指代或标题外描述。建议只在关联实体 ID 已确认时连接，不靠字符串猜测；这提高可核查性，也可能降低关系覆盖率。后续应抽样检查这些漏连，并与更宽的上下文窗口作对照。
 

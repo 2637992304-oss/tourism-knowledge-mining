@@ -1,45 +1,11 @@
 {
   "steps": 30,
-  "aligned": 28,
+  "aligned": 30,
   "methods": {
-    "exact_alias": 25,
-    "pending": 2,
+    "exact_alias": 27,
     "bilingual_components": 3
   },
-  "pending": [
-    {
-      "route_id": "R_S001_VIS_001_01",
-      "step_no": 5,
-      "raw_poi_name": "姥子缆车站",
-      "poi_name": "姥子缆车站",
-      "entity_id": null,
-      "alignment_method": "pending",
-      "evidence": [
-        {
-          "doc_id": "S001_VIS_001",
-          "start": 475,
-          "end": 488,
-          "text": "大约1小时来到姥子缆车站前"
-        }
-      ]
-    },
-    {
-      "route_id": "R_S003_OFF_001_01",
-      "step_no": 2,
-      "raw_poi_name": "温特沃斯(Wentworth)瀑布野餐区",
-      "poi_name": "温特沃斯(Wentworth)瀑布野餐区",
-      "entity_id": null,
-      "alignment_method": "pending",
-      "evidence": [
-        {
-          "doc_id": "S003_OFF_001",
-          "start": 2021,
-          "end": 2061,
-          "text": "只需 10 分钟车程穿过原始丛林即可到达温特沃斯(Wentworth)瀑布野餐区"
-        }
-      ]
-    }
-  ],
+  "pending": [],
   "bilingual_resolved": [
     {
       "route_id": "R_S003_OFF_001_01",
@@ -93,5 +59,30 @@
   "inactive_entities_skipped": [
     "S003_TIME_023"
   ],
-  "unused_entity_nodes_filtered": 281
+  "unused_entity_nodes_filtered": 281,
+  "entity_resource_version": "exp02-v1.1",
+  "confirmed_updates": [
+    {
+      "surface": "姥子缆车站",
+      "entity_id": "S001_POI_026",
+      "route_steps": [
+        {
+          "route_id": "R_S001_VIS_001_01",
+          "step_no": 5
+        }
+      ],
+      "passed": true
+    },
+    {
+      "surface": "温特沃斯(Wentworth)瀑布野餐区",
+      "entity_id": "S003_POI_052",
+      "route_steps": [
+        {
+          "route_id": "R_S003_OFF_001_01",
+          "step_no": 2
+        }
+      ],
+      "passed": true
+    }
+  ]
 }
