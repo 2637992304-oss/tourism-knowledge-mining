@@ -7,6 +7,30 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from exp06_graph import build
 from exp03_routes import make_step
 from exp03_rules import extract
+from exp03_alignment import align_poi
+
+
+class AlignmentTests(unittest.TestCase):
+    def setUp(self):
+        self.catalog = [{"entity_id": "P", "scenic_id": "S003", "entity_type": "POI",
+                         "canonical_name": "Scenic World", "aliases": ["风景世界"]}]
+
+    def test_both_languages_must_map_to_same_id(self):
+        entity, method = align_poi("风景世界(Scenic World)", "S003", self.catalog)
+        self.assertEqual(entity["entity_id"], "P")
+        self.assertEqual(method, "bilingual_components")
+        entity, _ = align_poi("Scenic World风景世界", "S003", self.catalog)
+        self.assertEqual(entity["entity_id"], "P")
+
+    def test_parent_child_suffix_not_dropped(self):
+        entity, _ = align_poi("风景世界(Scenic World)野餐区", "S003", self.catalog)
+        self.assertIsNone(entity)
+
+    def test_conflicting_aliases_not_merged(self):
+        self.catalog.append({"entity_id": "Q", "scenic_id": "S003", "entity_type": "POI",
+                             "canonical_name": "其他景点", "aliases": ["风景世界"]})
+        entity, _ = align_poi("风景世界(Scenic World)", "S003", self.catalog)
+        self.assertIsNone(entity)
 
 
 class FusionTests(unittest.TestCase):

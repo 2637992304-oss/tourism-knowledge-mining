@@ -64,10 +64,14 @@ def main():
     Path("results/checks/exp06_quality.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     alignment = [{"route_id": r["route_id"], "step_no": s["step_no"],
                   "raw_poi_name": s.get("raw_poi_name", s["poi_name"]), "poi_name": s["poi_name"],
-                  "entity_id": s["poi_entity_id"], "evidence": s["evidence"]}
+                  "entity_id": s["poi_entity_id"], "alignment_method": s.get("alignment_method", "pending"),
+                  "evidence": s["evidence"]}
                  for r in routes for s in r["steps"]]
     alignment_result = {"steps": len(alignment), "aligned": sum(bool(s["entity_id"]) for s in alignment),
+                        "methods": dict(Counter(s.get("alignment_method", "pending")
+                                                for r in routes for s in r["steps"])),
                         "pending": [s for s in alignment if not s["entity_id"]],
+                        "bilingual_resolved": [s for s in alignment if s["alignment_method"] == "bilingual_components"],
                         "inactive_entities_skipped": data.get("inactive_entities_skipped", []),
                         "unused_entity_nodes_filtered": len(data.get("unused_entity_nodes_filtered", []))}
     Path("results/checks/exp06_alignment.json").write_text(json.dumps(alignment_result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

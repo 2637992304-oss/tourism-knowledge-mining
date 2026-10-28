@@ -25,7 +25,8 @@
               "end": 246,
               "text": "7:30 ~ 从新宿乘坐“浪漫”特快前往箱根汤本"
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 2,
@@ -43,7 +44,8 @@
               "end": 564,
               "text": "9:20 ~ 在箱根入口·箱根汤本站换乘"
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 3,
@@ -61,7 +63,8 @@
               "end": 738,
               "text": "9:25 ~ 乘坐箱根登山电车前往箱根雕刻森林美术馆"
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 4,
@@ -79,7 +82,8 @@
               "end": 966,
               "text": "10:00 ~ 在箱根雕刻森林美术馆享受艺术漫步"
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 5,
@@ -97,7 +101,8 @@
               "end": 1297,
               "text": "11:20 ~ 乘坐箱根登山缆车前往大涌谷"
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 6,
@@ -121,7 +126,8 @@
               "end": 1431,
               "text": "早云山站"
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 7,
@@ -139,7 +145,8 @@
               "end": 1592,
               "text": "12:55 ~ 在大涌谷尽情欣赏动人心弦的自然美景&品尝特色美食"
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 8,
@@ -157,7 +164,8 @@
               "end": 2085,
               "text": "14:20 ~ 从大涌谷前往芦之湖,乘坐箱根海贼观光船游览芦之湖吧!"
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 9,
@@ -175,7 +183,8 @@
               "end": 2337,
               "text": "15:40 ~ 参拜具有历史渊源的箱根神社"
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 10,
@@ -193,7 +202,8 @@
               "end": 2715,
               "text": "17:00 ~ 购买伴手礼推荐去“箱根登山名产店 汤本店”"
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         }
       ],
       "scope_note": "小田急箱根运营方官网示范行程；7:30新宿出发至17:00汤本购物；景区外接驳起点仍保留。"
@@ -221,7 +231,8 @@
               "end": 45,
               "text": "从早云山乘坐箱根登山吊舱(rope way)到终点桃源台下车"
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 2,
@@ -239,7 +250,8 @@
               "end": 45,
               "text": "从早云山乘坐箱根登山吊舱(rope way)到终点桃源台下车"
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 3,
@@ -257,7 +269,8 @@
               "end": 113,
               "text": "黑石渣铺成的路面一直延伸到芦之湖畔"
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 4,
@@ -275,7 +288,8 @@
               "end": 438,
               "text": "来到一处可以眺望芦之湖的金太郎展望台"
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 5,
@@ -293,7 +307,8 @@
               "end": 488,
               "text": "大约1小时来到姥子缆车站前"
             }
-          ]
+          ],
+          "alignment_method": "pending"
         },
         {
           "step_no": 6,
@@ -311,7 +326,8 @@
               "end": 532,
               "text": "离开姥子站继续向大涌谷进发"
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         }
       ],
       "scope_note": "真实游客综合游记；保留园外行程和历史陈述，下游按景区范围筛选，价格、路况不作为当前事实。"
@@ -339,7 +355,8 @@
               "end": 1924,
               "text": "劳森黑凤头鹦鹉面包店 (Lawson's Black Cockatoo Bakery) 不容错过"
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 2,
@@ -357,7 +374,8 @@
               "end": 2061,
               "text": "只需 10 分钟车程穿过原始丛林即可到达温特沃斯(Wentworth)瀑布野餐区"
             }
-          ]
+          ],
+          "alignment_method": "pending"
         },
         {
           "step_no": 3,
@@ -375,7 +393,8 @@
               "end": 2100,
               "text": "从杰米森瞭望台 (Jamison Lookout) 出发"
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 4,
@@ -393,7 +412,8 @@
               "end": 2180,
               "text": "然后前往温特沃斯(Wentworth)瀑布步道 (Wentworth Falls Track) "
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 5,
@@ -411,7 +431,8 @@
               "end": 2412,
               "text": "不妨前往Josophan's Fine Chocolates品尝纯正的比利时巧克力和手工松露巧克力"
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 6,
@@ -429,14 +450,15 @@
               "end": 2464,
               "text": "您可以参观罗拉(Leura)购物中心的凯特·索迪画廊 (Kate Soady Gallery) "
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 7,
           "time_bucket": "afternoon",
           "time_text": "下午",
-          "poi_entity_id": null,
-          "poi_name": "布莱克希思(Blackheath)",
+          "poi_entity_id": "S003_POI_016",
+          "poi_name": "Blackheath",
           "raw_poi_name": "布莱克希思(Blackheath)",
           "activity": "驾车前往布莱克希思(Blackheath)享用美味的地中海午餐",
           "duration_minutes": null,
@@ -447,7 +469,8 @@
               "end": 2649,
               "text": "驾车前往布莱克希思(Blackheath)享用美味的地中海午餐"
             }
-          ]
+          ],
+          "alignment_method": "bilingual_components"
         },
         {
           "step_no": 8,
@@ -465,7 +488,8 @@
               "end": 2747,
               "text": "您可以去附近的埃文斯瞭望台呼吸着清新的山间空气"
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 9,
@@ -483,7 +507,8 @@
               "end": 2799,
               "text": "可以轻松前往大峡谷步道"
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 10,
@@ -501,14 +526,15 @@
               "end": 3054,
               "text": " 山地文化啤酒公司"
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 11,
           "time_bucket": "evening",
           "time_text": "晚上",
-          "poi_entity_id": null,
-          "poi_name": "风景世界(Scenic World)",
+          "poi_entity_id": "S003_POI_003",
+          "poi_name": "Scenic World",
           "raw_poi_name": "风景世界(Scenic World)",
           "activity": "卡通巴另一个不容错过的活动是 Beyond Skyway 体验风景世界(Scenic World). Beyond Skyway 是全球首创的 90 分钟屋顶缆车体验",
           "duration_minutes": null,
@@ -519,7 +545,8 @@
               "end": 3239,
               "text": "卡通巴另一个不容错过的活动是 Beyond Skyway 体验风景世界(Scenic World). Beyond Skyway 是全球首创的 90 分钟屋顶缆车体验"
             }
-          ]
+          ],
+          "alignment_method": "bilingual_components"
         },
         {
           "step_no": 12,
@@ -537,7 +564,8 @@
               "end": 3387,
               "text": "感受卡通巴瀑布自然保护区夜间灯光步道黄昏时分"
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         }
       ],
       "scope_note": "NSW国家公园部门19km两日步道及旅游局中文一日游；二者为备选路线，不强制拼接。"
@@ -565,14 +593,15 @@
               "end": 190,
               "text": "饭后驱车沿32号公路直上海拔1100米高的蓝山三姐妹峰"
             }
-          ]
+          ],
+          "alignment_method": "exact_alias"
         },
         {
           "step_no": 2,
           "time_bucket": "unknown",
           "time_text": null,
-          "poi_entity_id": null,
-          "poi_name": "Jenolan Caves珍罗兰洞",
+          "poi_entity_id": "S003_POI_037",
+          "poi_name": "Jenolan Caves",
           "raw_poi_name": "Jenolan Caves珍罗兰洞",
           "activity": "而是驱车前往Jenolan Caves珍罗兰洞",
           "duration_minutes": null,
@@ -583,7 +612,8 @@
               "end": 784,
               "text": "而是驱车前往Jenolan Caves珍罗兰洞"
             }
-          ]
+          ],
+          "alignment_method": "bilingual_components"
         }
       ],
       "scope_note": "真实游客综合游记；保留园外行程和历史陈述，下游按景区范围筛选，价格、路况不作为当前事实。"

@@ -5,6 +5,7 @@ import json
 import re
 from pathlib import Path
 from exp03_rules import extract
+from exp03_alignment import align_poi
 
 OFFICIAL_ID = "S001_OFF_001"
 VISITOR_ID = "S001_VIS_001"
@@ -109,12 +110,12 @@ def main():
                 raise ValueError("实体与语料版本不一致")
             for route in routes:
                 for step in route["steps"]:
-                    candidates = [e for e in entities["entity_catalog"]
-                                  if e.get("active", True) and e["scenic_id"] == route["scenic_id"] and e["entity_type"] == "POI"
-                                  and step["poi_name"] in [e["canonical_name"], *e.get("aliases", [])]]
-                    if len(candidates) == 1:
-                        step["poi_entity_id"] = candidates[0]["entity_id"]
-                        step["poi_name"] = candidates[0]["canonical_name"]
+                    entity, method = align_poi(step["raw_poi_name"], route["scenic_id"],
+                                               entities["entity_catalog"])
+                    step["alignment_method"] = method
+                    if entity:
+                        step["poi_entity_id"] = entity["entity_id"]
+                        step["poi_name"] = entity["canonical_name"]
         for route in routes:
             if not route["steps"]:
                 raise ValueError(f"路线为空：{route['route_id']}")
