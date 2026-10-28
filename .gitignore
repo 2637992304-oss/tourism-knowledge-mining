@@ -43,3 +43,4 @@ models/
 # 本地填写版Word及其排版核对记录不提交。
 *（实验1已填写）.docx
 results/checks/exp01_document_fidelity.json
+.deps/

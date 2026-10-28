@@ -1,0 +1,82 @@
+{
+  "dataset_role": "development",
+  "annotation_note": "依据清洗原文逐条对照整理的开发集参考顺序，待组员复核；不是独立测试集。可选岔路不计入主线，游客未具名站点不计入。",
+  "routes": [
+    {
+      "route_id": "R_S001_OFF_001_01",
+      "predicted": 10,
+      "gold": 10,
+      "matched": 10,
+      "precision": 1.0,
+      "recall": 1.0,
+      "ordered_matched": 10,
+      "sequence_recall": 1.0,
+      "missing": []
+    },
+    {
+      "route_id": "R_S001_VIS_001_01",
+      "predicted": 6,
+      "gold": 6,
+      "matched": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "ordered_matched": 6,
+      "sequence_recall": 1.0,
+      "missing": []
+    },
+    {
+      "route_id": "R_S003_OFF_001_01",
+      "predicted": 11,
+      "gold": 12,
+      "matched": 11,
+      "precision": 1.0,
+      "recall": 0.9166666666666666,
+      "ordered_matched": 11,
+      "sequence_recall": 0.9166666666666666,
+      "missing": [
+        "山地文化啤酒公司"
+      ]
+    },
+    {
+      "route_id": "R_S003_VIS_001_01",
+      "predicted": 2,
+      "gold": 2,
+      "matched": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "ordered_matched": 2,
+      "sequence_recall": 1.0,
+      "missing": []
+    }
+  ],
+  "evidence_checked": 30,
+  "comparisons": [
+    {
+      "scenic_id": "S001",
+      "official_unique": 8,
+      "visitor_unique": 6,
+      "shared": [
+        "大涌谷",
+        "芦之湖"
+      ],
+      "jaccard": 0.16666666666666666,
+      "ordered_overlap": 1,
+      "official_time_known": 10,
+      "official_steps": 10,
+      "visitor_time_known": 0,
+      "visitor_steps": 6
+    },
+    {
+      "scenic_id": "S003",
+      "official_unique": 11,
+      "visitor_unique": 2,
+      "shared": [],
+      "jaccard": 0.0,
+      "ordered_overlap": 0,
+      "official_time_known": 11,
+      "official_steps": 11,
+      "visitor_time_known": 0,
+      "visitor_steps": 2
+    }
+  ]
+}

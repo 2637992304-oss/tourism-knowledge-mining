@@ -1,0 +1,2380 @@
+{
+  "schema_version": "1.0",
+  "corpus_version": "v1",
+  "graph_version": "v1",
+  "completion_status": "route_stage",
+  "missing_inputs": [
+    "entities.json",
+    "advice.json"
+  ],
+  "nodes": [
+    {
+      "node_id": "N_SCENIC_S001",
+      "node_type": "SCENIC",
+      "name": "日本箱根",
+      "scenic_id": "S001",
+      "source_refs": [],
+      "attributes": {}
+    },
+    {
+      "node_id": "N_ROUTE_R_S001_OFF_001_01",
+      "node_type": "ROUTE",
+      "name": "初游箱根当日往返路线",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_OFF_001_01",
+        "text_type": "official_route",
+        "scope_note": "小田急箱根运营方官网示范行程；7:30新宿出发至17:00汤本购物；景区外接驳起点仍保留。"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S001_OFF_001_01_001",
+      "node_type": "STEP",
+      "name": "从新宿乘坐“浪漫”特快前往箱根汤本",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_OFF_001_01",
+        "step_no": 1,
+        "time_bucket": "morning",
+        "time_text": "7:30",
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 222,
+            "end": 246,
+            "text": "7:30 ~ 从新宿乘坐“浪漫”特快前往箱根汤本"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S001_cd33aa0f571f",
+      "node_type": "POI",
+      "name": "箱根汤本",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S001_OFF_001_01_002",
+      "node_type": "STEP",
+      "name": "在箱根入口·箱根汤本站换乘",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_OFF_001_01",
+        "step_no": 2,
+        "time_bucket": "morning",
+        "time_text": "9:20",
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 544,
+            "end": 564,
+            "text": "9:20 ~ 在箱根入口·箱根汤本站换乘"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S001_4710f36491d0",
+      "node_type": "POI",
+      "name": "箱根汤本站",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S001_OFF_001_01_003",
+      "node_type": "STEP",
+      "name": "乘坐箱根登山电车前往箱根雕刻森林美术馆",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_OFF_001_01",
+        "step_no": 3,
+        "time_bucket": "morning",
+        "time_text": "9:25",
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 712,
+            "end": 738,
+            "text": "9:25 ~ 乘坐箱根登山电车前往箱根雕刻森林美术馆"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S001_8d24b40365ea",
+      "node_type": "POI",
+      "name": "箱根雕刻森林美术馆",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S001_OFF_001_01_004",
+      "node_type": "STEP",
+      "name": "在箱根雕刻森林美术馆享受艺术漫步",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_OFF_001_01",
+        "step_no": 4,
+        "time_bucket": "morning",
+        "time_text": "10:00",
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 942,
+            "end": 966,
+            "text": "10:00 ~ 在箱根雕刻森林美术馆享受艺术漫步"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S001_OFF_001_01_005",
+      "node_type": "STEP",
+      "name": "乘坐箱根登山缆车前往大涌谷",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_OFF_001_01",
+        "step_no": 5,
+        "time_bucket": "noon",
+        "time_text": "11:20",
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1276,
+            "end": 1297,
+            "text": "11:20 ~ 乘坐箱根登山缆车前往大涌谷"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S001_dee07e824505",
+      "node_type": "POI",
+      "name": "大涌谷",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001",
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S001_OFF_001_01_006",
+      "node_type": "STEP",
+      "name": "能眺望富士山美景的箱根空中缆车",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_OFF_001_01",
+        "step_no": 6,
+        "time_bucket": "noon",
+        "time_text": "11:45",
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1395,
+            "end": 1418,
+            "text": "11:45 ~ 能眺望富士山美景的箱根空中缆车"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1427,
+            "end": 1431,
+            "text": "早云山站"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S001_9a7284ecee80",
+      "node_type": "POI",
+      "name": "早云山站",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S001_OFF_001_01_007",
+      "node_type": "STEP",
+      "name": "在大涌谷尽情欣赏动人心弦的自然美景&品尝特色美食",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_OFF_001_01",
+        "step_no": 7,
+        "time_bucket": "noon",
+        "time_text": "12:55",
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1560,
+            "end": 1592,
+            "text": "12:55 ~ 在大涌谷尽情欣赏动人心弦的自然美景&品尝特色美食"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S001_OFF_001_01_008",
+      "node_type": "STEP",
+      "name": "从大涌谷前往芦之湖,乘坐箱根海贼观光船游览芦之湖吧!",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_OFF_001_01",
+        "step_no": 8,
+        "time_bucket": "afternoon",
+        "time_text": "14:20",
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2051,
+            "end": 2085,
+            "text": "14:20 ~ 从大涌谷前往芦之湖,乘坐箱根海贼观光船游览芦之湖吧!"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S001_7d7a00eea7b4",
+      "node_type": "POI",
+      "name": "芦之湖",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001",
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S001_OFF_001_01_009",
+      "node_type": "STEP",
+      "name": "参拜具有历史渊源的箱根神社",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_OFF_001_01",
+        "step_no": 9,
+        "time_bucket": "afternoon",
+        "time_text": "15:40",
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2316,
+            "end": 2337,
+            "text": "15:40 ~ 参拜具有历史渊源的箱根神社"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S001_b0d173157925",
+      "node_type": "POI",
+      "name": "箱根神社",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S001_OFF_001_01_010",
+      "node_type": "STEP",
+      "name": "购买伴手礼推荐去“箱根登山名产店 汤本店”",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_OFF_001_01",
+        "step_no": 10,
+        "time_bucket": "afternoon",
+        "time_text": "17:00",
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2686,
+            "end": 2715,
+            "text": "17:00 ~ 购买伴手礼推荐去“箱根登山名产店 汤本店”"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S001_e5f9736699ef",
+      "node_type": "POI",
+      "name": "箱根登山名产店 汤本店",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_ROUTE_R_S001_VIS_001_01",
+      "node_type": "ROUTE",
+      "name": "第三次日本行：3湖尻〜大涌谷徒步（行进片段）",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_VIS_001_01",
+        "text_type": "visitor_diary",
+        "scope_note": "真实游客综合游记；保留园外行程和历史陈述，下游按景区范围筛选，价格、路况不作为当前事实。"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S001_VIS_001_01_001",
+      "node_type": "STEP",
+      "name": "从早云山乘坐箱根登山吊舱(rope way)到终点桃源台下车",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_VIS_001_01",
+        "step_no": 1,
+        "time_bucket": "unknown",
+        "time_text": null,
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 15,
+            "end": 45,
+            "text": "从早云山乘坐箱根登山吊舱(rope way)到终点桃源台下车"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S001_4e5c49fb5db0",
+      "node_type": "POI",
+      "name": "早云山",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S001_VIS_001_01_002",
+      "node_type": "STEP",
+      "name": "从早云山乘坐箱根登山吊舱(rope way)到终点桃源台下车",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_VIS_001_01",
+        "step_no": 2,
+        "time_bucket": "unknown",
+        "time_text": null,
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 15,
+            "end": 45,
+            "text": "从早云山乘坐箱根登山吊舱(rope way)到终点桃源台下车"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S001_efee2d89f691",
+      "node_type": "POI",
+      "name": "桃源台",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S001_VIS_001_01_003",
+      "node_type": "STEP",
+      "name": "黑石渣铺成的路面一直延伸到芦之湖畔",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_VIS_001_01",
+        "step_no": 3,
+        "time_bucket": "unknown",
+        "time_text": null,
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 96,
+            "end": 113,
+            "text": "黑石渣铺成的路面一直延伸到芦之湖畔"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S001_VIS_001_01_004",
+      "node_type": "STEP",
+      "name": "来到一处可以眺望芦之湖的金太郎展望台",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_VIS_001_01",
+        "step_no": 4,
+        "time_bucket": "unknown",
+        "time_text": null,
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 420,
+            "end": 438,
+            "text": "来到一处可以眺望芦之湖的金太郎展望台"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S001_bb5b73d28fad",
+      "node_type": "POI",
+      "name": "金太郎展望台",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S001_VIS_001_01_005",
+      "node_type": "STEP",
+      "name": "大约1小时来到姥子缆车站前",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_VIS_001_01",
+        "step_no": 5,
+        "time_bucket": "unknown",
+        "time_text": null,
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 475,
+            "end": 488,
+            "text": "大约1小时来到姥子缆车站前"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S001_64d6b0dbb557",
+      "node_type": "POI",
+      "name": "姥子缆车站",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S001_VIS_001_01_006",
+      "node_type": "STEP",
+      "name": "离开姥子站继续向大涌谷进发",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_VIS_001_01",
+        "step_no": 6,
+        "time_bucket": "unknown",
+        "time_text": null,
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 519,
+            "end": 532,
+            "text": "离开姥子站继续向大涌谷进发"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_SCENIC_S003",
+      "node_type": "SCENIC",
+      "name": "澳大利亚蓝山国家公园",
+      "scenic_id": "S003",
+      "source_refs": [],
+      "attributes": {}
+    },
+    {
+      "node_id": "N_ROUTE_R_S003_OFF_001_01",
+      "node_type": "ROUTE",
+      "name": "蓝山一日游时间分段路线",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01",
+        "text_type": "official_route",
+        "scope_note": "NSW国家公园部门19km两日步道及旅游局中文一日游；二者为备选路线，不强制拼接。"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S003_OFF_001_01_001",
+      "node_type": "STEP",
+      "name": "劳森黑凤头鹦鹉面包店 (Lawson's Black Cockatoo Bakery) 不容错过",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01",
+        "step_no": 1,
+        "time_bucket": "morning",
+        "time_text": "早晨",
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 1876,
+            "end": 1924,
+            "text": "劳森黑凤头鹦鹉面包店 (Lawson's Black Cockatoo Bakery) 不容错过"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S003_d689932a79b4",
+      "node_type": "POI",
+      "name": "劳森黑凤头鹦鹉面包店",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S003_OFF_001_01_002",
+      "node_type": "STEP",
+      "name": "只需 10 分钟车程穿过原始丛林即可到达温特沃斯(Wentworth)瀑布野餐区",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01",
+        "step_no": 2,
+        "time_bucket": "morning",
+        "time_text": "早晨",
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2021,
+            "end": 2061,
+            "text": "只需 10 分钟车程穿过原始丛林即可到达温特沃斯(Wentworth)瀑布野餐区"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S003_30e67948f5b7",
+      "node_type": "POI",
+      "name": "温特沃斯(Wentworth)瀑布野餐区",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S003_OFF_001_01_003",
+      "node_type": "STEP",
+      "name": "从杰米森瞭望台 (Jamison Lookout) 出发",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01",
+        "step_no": 3,
+        "time_bucket": "morning",
+        "time_text": "早晨",
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2072,
+            "end": 2100,
+            "text": "从杰米森瞭望台 (Jamison Lookout) 出发"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S003_b9ea41f5bf1a",
+      "node_type": "POI",
+      "name": "杰米森瞭望台",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S003_OFF_001_01_004",
+      "node_type": "STEP",
+      "name": "然后前往温特沃斯(Wentworth)瀑布步道 (Wentworth Falls Track)",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01",
+        "step_no": 4,
+        "time_bucket": "morning",
+        "time_text": "早晨",
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2132,
+            "end": 2180,
+            "text": "然后前往温特沃斯(Wentworth)瀑布步道 (Wentworth Falls Track) "
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S003_5b5f2e6e2e53",
+      "node_type": "POI",
+      "name": "温特沃斯(Wentworth)瀑布步道",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S003_OFF_001_01_005",
+      "node_type": "STEP",
+      "name": "不妨前往Josophan's Fine Chocolates品尝纯正的比利时巧克力和手工松露巧克力",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01",
+        "step_no": 5,
+        "time_bucket": "morning",
+        "time_text": "早晨",
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2363,
+            "end": 2412,
+            "text": "不妨前往Josophan's Fine Chocolates品尝纯正的比利时巧克力和手工松露巧克力"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S003_1fae3adf91f0",
+      "node_type": "POI",
+      "name": "Josophan's Fine Chocolates",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S003_OFF_001_01_006",
+      "node_type": "STEP",
+      "name": "您可以参观罗拉(Leura)购物中心的凯特·索迪画廊 (Kate Soady Gallery)",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01",
+        "step_no": 6,
+        "time_bucket": "morning",
+        "time_text": "早晨",
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2416,
+            "end": 2464,
+            "text": "您可以参观罗拉(Leura)购物中心的凯特·索迪画廊 (Kate Soady Gallery) "
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S003_b399c709a6ad",
+      "node_type": "POI",
+      "name": "凯特·索迪画廊",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S003_OFF_001_01_007",
+      "node_type": "STEP",
+      "name": "驾车前往布莱克希思(Blackheath)享用美味的地中海午餐",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01",
+        "step_no": 7,
+        "time_bucket": "afternoon",
+        "time_text": "下午",
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2618,
+            "end": 2649,
+            "text": "驾车前往布莱克希思(Blackheath)享用美味的地中海午餐"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S003_9975febcc119",
+      "node_type": "POI",
+      "name": "布莱克希思(Blackheath)",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S003_OFF_001_01_008",
+      "node_type": "STEP",
+      "name": "您可以去附近的埃文斯瞭望台呼吸着清新的山间空气",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01",
+        "step_no": 8,
+        "time_bucket": "afternoon",
+        "time_text": "下午",
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2724,
+            "end": 2747,
+            "text": "您可以去附近的埃文斯瞭望台呼吸着清新的山间空气"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S003_42f416506907",
+      "node_type": "POI",
+      "name": "埃文斯瞭望台",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S003_OFF_001_01_009",
+      "node_type": "STEP",
+      "name": "可以轻松前往大峡谷步道",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01",
+        "step_no": 9,
+        "time_bucket": "afternoon",
+        "time_text": "下午",
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2788,
+            "end": 2799,
+            "text": "可以轻松前往大峡谷步道"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S003_4ab34ee33fc5",
+      "node_type": "POI",
+      "name": "大峡谷步道",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S003_OFF_001_01_010",
+      "node_type": "STEP",
+      "name": "山地文化啤酒公司",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01",
+        "step_no": 10,
+        "time_bucket": "evening",
+        "time_text": "晚上",
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3045,
+            "end": 3054,
+            "text": " 山地文化啤酒公司"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S003_8393ce2a1178",
+      "node_type": "POI",
+      "name": "山地文化啤酒公司",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S003_OFF_001_01_011",
+      "node_type": "STEP",
+      "name": "卡通巴另一个不容错过的活动是 Beyond Skyway 体验风景世界(Scenic World). Beyond Skyway 是全球首创的 90 分钟屋顶缆车体验",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01",
+        "step_no": 11,
+        "time_bucket": "evening",
+        "time_text": "晚上",
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3156,
+            "end": 3239,
+            "text": "卡通巴另一个不容错过的活动是 Beyond Skyway 体验风景世界(Scenic World). Beyond Skyway 是全球首创的 90 分钟屋顶缆车体验"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S003_f23e1a4e63c3",
+      "node_type": "POI",
+      "name": "风景世界(Scenic World)",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S003_OFF_001_01_012",
+      "node_type": "STEP",
+      "name": "感受卡通巴瀑布自然保护区夜间灯光步道黄昏时分",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01",
+        "step_no": 12,
+        "time_bucket": "evening",
+        "time_text": "晚上",
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3365,
+            "end": 3387,
+            "text": "感受卡通巴瀑布自然保护区夜间灯光步道黄昏时分"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S003_c795198741f0",
+      "node_type": "POI",
+      "name": "卡通巴瀑布自然保护区夜间灯光步道",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_ROUTE_R_S003_VIS_001_01",
+      "node_type": "ROUTE",
+      "name": "独行澳大利亚之二十悉尼蓝山（行进片段）",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_VIS_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_VIS_001_01",
+        "text_type": "visitor_diary",
+        "scope_note": "真实游客综合游记；保留园外行程和历史陈述，下游按景区范围筛选，价格、路况不作为当前事实。"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S003_VIS_001_01_001",
+      "node_type": "STEP",
+      "name": "饭后驱车沿32号公路直上海拔1100米高的蓝山三姐妹峰",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_VIS_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_VIS_001_01",
+        "step_no": 1,
+        "time_bucket": "unknown",
+        "time_text": null,
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 163,
+            "end": 190,
+            "text": "饭后驱车沿32号公路直上海拔1100米高的蓝山三姐妹峰"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S003_c0f34e208a08",
+      "node_type": "POI",
+      "name": "三姐妹峰",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_VIS_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    },
+    {
+      "node_id": "N_STEP_R_S003_VIS_001_01_002",
+      "node_type": "STEP",
+      "name": "而是驱车前往Jenolan Caves珍罗兰洞",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_VIS_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_VIS_001_01",
+        "step_no": 2,
+        "time_bucket": "unknown",
+        "time_text": null,
+        "duration_minutes": null,
+        "evidence": [
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 761,
+            "end": 784,
+            "text": "而是驱车前往Jenolan Caves珍罗兰洞"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_POI_S003_e5aa502e71fa",
+      "node_type": "POI",
+      "name": "Jenolan Caves珍罗兰洞",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_VIS_001"
+      ],
+      "attributes": {
+        "entity_id": null,
+        "alignment_status": "pending"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "EDGE_HAS_ROUTE_R_S001_OFF_001_01",
+      "source": "N_SCENIC_S001",
+      "target": "N_ROUTE_R_S001_OFF_001_01",
+      "relation": "HAS_ROUTE",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S001_OFF_001_01_001",
+      "source": "N_ROUTE_R_S001_OFF_001_01",
+      "target": "N_STEP_R_S001_OFF_001_01_001",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S001_OFF_001_01_001",
+      "source": "N_STEP_R_S001_OFF_001_01_001",
+      "target": "N_POI_S001_cd33aa0f571f",
+      "relation": "VISITS",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 222,
+            "end": 246,
+            "text": "7:30 ~ 从新宿乘坐“浪漫”特快前往箱根汤本"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S001_OFF_001_01_002",
+      "source": "N_ROUTE_R_S001_OFF_001_01",
+      "target": "N_STEP_R_S001_OFF_001_01_002",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S001_OFF_001_01_001",
+      "source": "N_STEP_R_S001_OFF_001_01_001",
+      "target": "N_STEP_R_S001_OFF_001_01_002",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_OFF_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S001_OFF_001_01_002",
+      "source": "N_STEP_R_S001_OFF_001_01_002",
+      "target": "N_POI_S001_4710f36491d0",
+      "relation": "VISITS",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 544,
+            "end": 564,
+            "text": "9:20 ~ 在箱根入口·箱根汤本站换乘"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S001_OFF_001_01_003",
+      "source": "N_ROUTE_R_S001_OFF_001_01",
+      "target": "N_STEP_R_S001_OFF_001_01_003",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S001_OFF_001_01_002",
+      "source": "N_STEP_R_S001_OFF_001_01_002",
+      "target": "N_STEP_R_S001_OFF_001_01_003",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_OFF_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S001_OFF_001_01_003",
+      "source": "N_STEP_R_S001_OFF_001_01_003",
+      "target": "N_POI_S001_8d24b40365ea",
+      "relation": "VISITS",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 712,
+            "end": 738,
+            "text": "9:25 ~ 乘坐箱根登山电车前往箱根雕刻森林美术馆"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S001_OFF_001_01_004",
+      "source": "N_ROUTE_R_S001_OFF_001_01",
+      "target": "N_STEP_R_S001_OFF_001_01_004",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S001_OFF_001_01_003",
+      "source": "N_STEP_R_S001_OFF_001_01_003",
+      "target": "N_STEP_R_S001_OFF_001_01_004",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_OFF_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S001_OFF_001_01_004",
+      "source": "N_STEP_R_S001_OFF_001_01_004",
+      "target": "N_POI_S001_8d24b40365ea",
+      "relation": "VISITS",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 942,
+            "end": 966,
+            "text": "10:00 ~ 在箱根雕刻森林美术馆享受艺术漫步"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S001_OFF_001_01_005",
+      "source": "N_ROUTE_R_S001_OFF_001_01",
+      "target": "N_STEP_R_S001_OFF_001_01_005",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S001_OFF_001_01_004",
+      "source": "N_STEP_R_S001_OFF_001_01_004",
+      "target": "N_STEP_R_S001_OFF_001_01_005",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_OFF_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S001_OFF_001_01_005",
+      "source": "N_STEP_R_S001_OFF_001_01_005",
+      "target": "N_POI_S001_dee07e824505",
+      "relation": "VISITS",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1276,
+            "end": 1297,
+            "text": "11:20 ~ 乘坐箱根登山缆车前往大涌谷"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S001_OFF_001_01_006",
+      "source": "N_ROUTE_R_S001_OFF_001_01",
+      "target": "N_STEP_R_S001_OFF_001_01_006",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S001_OFF_001_01_005",
+      "source": "N_STEP_R_S001_OFF_001_01_005",
+      "target": "N_STEP_R_S001_OFF_001_01_006",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_OFF_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S001_OFF_001_01_006",
+      "source": "N_STEP_R_S001_OFF_001_01_006",
+      "target": "N_POI_S001_9a7284ecee80",
+      "relation": "VISITS",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1395,
+            "end": 1418,
+            "text": "11:45 ~ 能眺望富士山美景的箱根空中缆车"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1427,
+            "end": 1431,
+            "text": "早云山站"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S001_OFF_001_01_007",
+      "source": "N_ROUTE_R_S001_OFF_001_01",
+      "target": "N_STEP_R_S001_OFF_001_01_007",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S001_OFF_001_01_006",
+      "source": "N_STEP_R_S001_OFF_001_01_006",
+      "target": "N_STEP_R_S001_OFF_001_01_007",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_OFF_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S001_OFF_001_01_007",
+      "source": "N_STEP_R_S001_OFF_001_01_007",
+      "target": "N_POI_S001_dee07e824505",
+      "relation": "VISITS",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1560,
+            "end": 1592,
+            "text": "12:55 ~ 在大涌谷尽情欣赏动人心弦的自然美景&品尝特色美食"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S001_OFF_001_01_008",
+      "source": "N_ROUTE_R_S001_OFF_001_01",
+      "target": "N_STEP_R_S001_OFF_001_01_008",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S001_OFF_001_01_007",
+      "source": "N_STEP_R_S001_OFF_001_01_007",
+      "target": "N_STEP_R_S001_OFF_001_01_008",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_OFF_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S001_OFF_001_01_008",
+      "source": "N_STEP_R_S001_OFF_001_01_008",
+      "target": "N_POI_S001_7d7a00eea7b4",
+      "relation": "VISITS",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2051,
+            "end": 2085,
+            "text": "14:20 ~ 从大涌谷前往芦之湖,乘坐箱根海贼观光船游览芦之湖吧!"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S001_OFF_001_01_009",
+      "source": "N_ROUTE_R_S001_OFF_001_01",
+      "target": "N_STEP_R_S001_OFF_001_01_009",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S001_OFF_001_01_008",
+      "source": "N_STEP_R_S001_OFF_001_01_008",
+      "target": "N_STEP_R_S001_OFF_001_01_009",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_OFF_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S001_OFF_001_01_009",
+      "source": "N_STEP_R_S001_OFF_001_01_009",
+      "target": "N_POI_S001_b0d173157925",
+      "relation": "VISITS",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2316,
+            "end": 2337,
+            "text": "15:40 ~ 参拜具有历史渊源的箱根神社"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S001_OFF_001_01_010",
+      "source": "N_ROUTE_R_S001_OFF_001_01",
+      "target": "N_STEP_R_S001_OFF_001_01_010",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S001_OFF_001_01_009",
+      "source": "N_STEP_R_S001_OFF_001_01_009",
+      "target": "N_STEP_R_S001_OFF_001_01_010",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_OFF_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S001_OFF_001_01_010",
+      "source": "N_STEP_R_S001_OFF_001_01_010",
+      "target": "N_POI_S001_e5f9736699ef",
+      "relation": "VISITS",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2686,
+            "end": 2715,
+            "text": "17:00 ~ 购买伴手礼推荐去“箱根登山名产店 汤本店”"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_ROUTE_R_S001_VIS_001_01",
+      "source": "N_SCENIC_S001",
+      "target": "N_ROUTE_R_S001_VIS_001_01",
+      "relation": "HAS_ROUTE",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S001_VIS_001_01_001",
+      "source": "N_ROUTE_R_S001_VIS_001_01",
+      "target": "N_STEP_R_S001_VIS_001_01_001",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S001_VIS_001_01_001",
+      "source": "N_STEP_R_S001_VIS_001_01_001",
+      "target": "N_POI_S001_4e5c49fb5db0",
+      "relation": "VISITS",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 15,
+            "end": 45,
+            "text": "从早云山乘坐箱根登山吊舱(rope way)到终点桃源台下车"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S001_VIS_001_01_002",
+      "source": "N_ROUTE_R_S001_VIS_001_01",
+      "target": "N_STEP_R_S001_VIS_001_01_002",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S001_VIS_001_01_001",
+      "source": "N_STEP_R_S001_VIS_001_01_001",
+      "target": "N_STEP_R_S001_VIS_001_01_002",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_VIS_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S001_VIS_001_01_002",
+      "source": "N_STEP_R_S001_VIS_001_01_002",
+      "target": "N_POI_S001_efee2d89f691",
+      "relation": "VISITS",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 15,
+            "end": 45,
+            "text": "从早云山乘坐箱根登山吊舱(rope way)到终点桃源台下车"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S001_VIS_001_01_003",
+      "source": "N_ROUTE_R_S001_VIS_001_01",
+      "target": "N_STEP_R_S001_VIS_001_01_003",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S001_VIS_001_01_002",
+      "source": "N_STEP_R_S001_VIS_001_01_002",
+      "target": "N_STEP_R_S001_VIS_001_01_003",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_VIS_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S001_VIS_001_01_003",
+      "source": "N_STEP_R_S001_VIS_001_01_003",
+      "target": "N_POI_S001_7d7a00eea7b4",
+      "relation": "VISITS",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 96,
+            "end": 113,
+            "text": "黑石渣铺成的路面一直延伸到芦之湖畔"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S001_VIS_001_01_004",
+      "source": "N_ROUTE_R_S001_VIS_001_01",
+      "target": "N_STEP_R_S001_VIS_001_01_004",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S001_VIS_001_01_003",
+      "source": "N_STEP_R_S001_VIS_001_01_003",
+      "target": "N_STEP_R_S001_VIS_001_01_004",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_VIS_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S001_VIS_001_01_004",
+      "source": "N_STEP_R_S001_VIS_001_01_004",
+      "target": "N_POI_S001_bb5b73d28fad",
+      "relation": "VISITS",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 420,
+            "end": 438,
+            "text": "来到一处可以眺望芦之湖的金太郎展望台"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S001_VIS_001_01_005",
+      "source": "N_ROUTE_R_S001_VIS_001_01",
+      "target": "N_STEP_R_S001_VIS_001_01_005",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S001_VIS_001_01_004",
+      "source": "N_STEP_R_S001_VIS_001_01_004",
+      "target": "N_STEP_R_S001_VIS_001_01_005",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_VIS_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S001_VIS_001_01_005",
+      "source": "N_STEP_R_S001_VIS_001_01_005",
+      "target": "N_POI_S001_64d6b0dbb557",
+      "relation": "VISITS",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 475,
+            "end": 488,
+            "text": "大约1小时来到姥子缆车站前"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S001_VIS_001_01_006",
+      "source": "N_ROUTE_R_S001_VIS_001_01",
+      "target": "N_STEP_R_S001_VIS_001_01_006",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S001_VIS_001_01_005",
+      "source": "N_STEP_R_S001_VIS_001_01_005",
+      "target": "N_STEP_R_S001_VIS_001_01_006",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "route_id": "R_S001_VIS_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S001_VIS_001_01_006",
+      "source": "N_STEP_R_S001_VIS_001_01_006",
+      "target": "N_POI_S001_dee07e824505",
+      "relation": "VISITS",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 519,
+            "end": 532,
+            "text": "离开姥子站继续向大涌谷进发"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_ROUTE_R_S003_OFF_001_01",
+      "source": "N_SCENIC_S003",
+      "target": "N_ROUTE_R_S003_OFF_001_01",
+      "relation": "HAS_ROUTE",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S003_OFF_001_01_001",
+      "source": "N_ROUTE_R_S003_OFF_001_01",
+      "target": "N_STEP_R_S003_OFF_001_01_001",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S003_OFF_001_01_001",
+      "source": "N_STEP_R_S003_OFF_001_01_001",
+      "target": "N_POI_S003_d689932a79b4",
+      "relation": "VISITS",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 1876,
+            "end": 1924,
+            "text": "劳森黑凤头鹦鹉面包店 (Lawson's Black Cockatoo Bakery) 不容错过"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S003_OFF_001_01_002",
+      "source": "N_ROUTE_R_S003_OFF_001_01",
+      "target": "N_STEP_R_S003_OFF_001_01_002",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S003_OFF_001_01_001",
+      "source": "N_STEP_R_S003_OFF_001_01_001",
+      "target": "N_STEP_R_S003_OFF_001_01_002",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S003_OFF_001_01_002",
+      "source": "N_STEP_R_S003_OFF_001_01_002",
+      "target": "N_POI_S003_30e67948f5b7",
+      "relation": "VISITS",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2021,
+            "end": 2061,
+            "text": "只需 10 分钟车程穿过原始丛林即可到达温特沃斯(Wentworth)瀑布野餐区"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S003_OFF_001_01_003",
+      "source": "N_ROUTE_R_S003_OFF_001_01",
+      "target": "N_STEP_R_S003_OFF_001_01_003",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S003_OFF_001_01_002",
+      "source": "N_STEP_R_S003_OFF_001_01_002",
+      "target": "N_STEP_R_S003_OFF_001_01_003",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S003_OFF_001_01_003",
+      "source": "N_STEP_R_S003_OFF_001_01_003",
+      "target": "N_POI_S003_b9ea41f5bf1a",
+      "relation": "VISITS",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2072,
+            "end": 2100,
+            "text": "从杰米森瞭望台 (Jamison Lookout) 出发"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S003_OFF_001_01_004",
+      "source": "N_ROUTE_R_S003_OFF_001_01",
+      "target": "N_STEP_R_S003_OFF_001_01_004",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S003_OFF_001_01_003",
+      "source": "N_STEP_R_S003_OFF_001_01_003",
+      "target": "N_STEP_R_S003_OFF_001_01_004",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S003_OFF_001_01_004",
+      "source": "N_STEP_R_S003_OFF_001_01_004",
+      "target": "N_POI_S003_5b5f2e6e2e53",
+      "relation": "VISITS",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2132,
+            "end": 2180,
+            "text": "然后前往温特沃斯(Wentworth)瀑布步道 (Wentworth Falls Track) "
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S003_OFF_001_01_005",
+      "source": "N_ROUTE_R_S003_OFF_001_01",
+      "target": "N_STEP_R_S003_OFF_001_01_005",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S003_OFF_001_01_004",
+      "source": "N_STEP_R_S003_OFF_001_01_004",
+      "target": "N_STEP_R_S003_OFF_001_01_005",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S003_OFF_001_01_005",
+      "source": "N_STEP_R_S003_OFF_001_01_005",
+      "target": "N_POI_S003_1fae3adf91f0",
+      "relation": "VISITS",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2363,
+            "end": 2412,
+            "text": "不妨前往Josophan's Fine Chocolates品尝纯正的比利时巧克力和手工松露巧克力"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S003_OFF_001_01_006",
+      "source": "N_ROUTE_R_S003_OFF_001_01",
+      "target": "N_STEP_R_S003_OFF_001_01_006",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S003_OFF_001_01_005",
+      "source": "N_STEP_R_S003_OFF_001_01_005",
+      "target": "N_STEP_R_S003_OFF_001_01_006",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S003_OFF_001_01_006",
+      "source": "N_STEP_R_S003_OFF_001_01_006",
+      "target": "N_POI_S003_b399c709a6ad",
+      "relation": "VISITS",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2416,
+            "end": 2464,
+            "text": "您可以参观罗拉(Leura)购物中心的凯特·索迪画廊 (Kate Soady Gallery) "
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S003_OFF_001_01_007",
+      "source": "N_ROUTE_R_S003_OFF_001_01",
+      "target": "N_STEP_R_S003_OFF_001_01_007",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S003_OFF_001_01_006",
+      "source": "N_STEP_R_S003_OFF_001_01_006",
+      "target": "N_STEP_R_S003_OFF_001_01_007",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S003_OFF_001_01_007",
+      "source": "N_STEP_R_S003_OFF_001_01_007",
+      "target": "N_POI_S003_9975febcc119",
+      "relation": "VISITS",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2618,
+            "end": 2649,
+            "text": "驾车前往布莱克希思(Blackheath)享用美味的地中海午餐"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S003_OFF_001_01_008",
+      "source": "N_ROUTE_R_S003_OFF_001_01",
+      "target": "N_STEP_R_S003_OFF_001_01_008",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S003_OFF_001_01_007",
+      "source": "N_STEP_R_S003_OFF_001_01_007",
+      "target": "N_STEP_R_S003_OFF_001_01_008",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S003_OFF_001_01_008",
+      "source": "N_STEP_R_S003_OFF_001_01_008",
+      "target": "N_POI_S003_42f416506907",
+      "relation": "VISITS",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2724,
+            "end": 2747,
+            "text": "您可以去附近的埃文斯瞭望台呼吸着清新的山间空气"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S003_OFF_001_01_009",
+      "source": "N_ROUTE_R_S003_OFF_001_01",
+      "target": "N_STEP_R_S003_OFF_001_01_009",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S003_OFF_001_01_008",
+      "source": "N_STEP_R_S003_OFF_001_01_008",
+      "target": "N_STEP_R_S003_OFF_001_01_009",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S003_OFF_001_01_009",
+      "source": "N_STEP_R_S003_OFF_001_01_009",
+      "target": "N_POI_S003_4ab34ee33fc5",
+      "relation": "VISITS",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2788,
+            "end": 2799,
+            "text": "可以轻松前往大峡谷步道"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S003_OFF_001_01_010",
+      "source": "N_ROUTE_R_S003_OFF_001_01",
+      "target": "N_STEP_R_S003_OFF_001_01_010",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S003_OFF_001_01_009",
+      "source": "N_STEP_R_S003_OFF_001_01_009",
+      "target": "N_STEP_R_S003_OFF_001_01_010",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S003_OFF_001_01_010",
+      "source": "N_STEP_R_S003_OFF_001_01_010",
+      "target": "N_POI_S003_8393ce2a1178",
+      "relation": "VISITS",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3045,
+            "end": 3054,
+            "text": " 山地文化啤酒公司"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S003_OFF_001_01_011",
+      "source": "N_ROUTE_R_S003_OFF_001_01",
+      "target": "N_STEP_R_S003_OFF_001_01_011",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S003_OFF_001_01_010",
+      "source": "N_STEP_R_S003_OFF_001_01_010",
+      "target": "N_STEP_R_S003_OFF_001_01_011",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S003_OFF_001_01_011",
+      "source": "N_STEP_R_S003_OFF_001_01_011",
+      "target": "N_POI_S003_f23e1a4e63c3",
+      "relation": "VISITS",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3156,
+            "end": 3239,
+            "text": "卡通巴另一个不容错过的活动是 Beyond Skyway 体验风景世界(Scenic World). Beyond Skyway 是全球首创的 90 分钟屋顶缆车体验"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S003_OFF_001_01_012",
+      "source": "N_ROUTE_R_S003_OFF_001_01",
+      "target": "N_STEP_R_S003_OFF_001_01_012",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S003_OFF_001_01_011",
+      "source": "N_STEP_R_S003_OFF_001_01_011",
+      "target": "N_STEP_R_S003_OFF_001_01_012",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_OFF_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S003_OFF_001_01_012",
+      "source": "N_STEP_R_S003_OFF_001_01_012",
+      "target": "N_POI_S003_c795198741f0",
+      "relation": "VISITS",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3365,
+            "end": 3387,
+            "text": "感受卡通巴瀑布自然保护区夜间灯光步道黄昏时分"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_ROUTE_R_S003_VIS_001_01",
+      "source": "N_SCENIC_S003",
+      "target": "N_ROUTE_R_S003_VIS_001_01",
+      "relation": "HAS_ROUTE",
+      "source_refs": [
+        "S003_VIS_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S003_VIS_001_01_001",
+      "source": "N_ROUTE_R_S003_VIS_001_01",
+      "target": "N_STEP_R_S003_VIS_001_01_001",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S003_VIS_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S003_VIS_001_01_001",
+      "source": "N_STEP_R_S003_VIS_001_01_001",
+      "target": "N_POI_S003_c0f34e208a08",
+      "relation": "VISITS",
+      "source_refs": [
+        "S003_VIS_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 163,
+            "end": 190,
+            "text": "饭后驱车沿32号公路直上海拔1100米高的蓝山三姐妹峰"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_STEP_R_S003_VIS_001_01_002",
+      "source": "N_ROUTE_R_S003_VIS_001_01",
+      "target": "N_STEP_R_S003_VIS_001_01_002",
+      "relation": "HAS_STEP",
+      "source_refs": [
+        "S003_VIS_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_NEXT_STEP_R_S003_VIS_001_01_001",
+      "source": "N_STEP_R_S003_VIS_001_01_001",
+      "target": "N_STEP_R_S003_VIS_001_01_002",
+      "relation": "NEXT_STEP",
+      "source_refs": [
+        "S003_VIS_001"
+      ],
+      "attributes": {
+        "route_id": "R_S003_VIS_001_01"
+      }
+    },
+    {
+      "edge_id": "EDGE_VISITS_R_S003_VIS_001_01_002",
+      "source": "N_STEP_R_S003_VIS_001_01_002",
+      "target": "N_POI_S003_e5aa502e71fa",
+      "relation": "VISITS",
+      "source_refs": [
+        "S003_VIS_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 761,
+            "end": 784,
+            "text": "而是驱车前往Jenolan Caves珍罗兰洞"
+          }
+        ]
+      }
+    }
+  ]
+}

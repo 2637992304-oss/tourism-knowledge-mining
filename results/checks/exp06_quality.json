@@ -1,0 +1,83 @@
+{
+  "graph_status": "route_stage",
+  "missing_inputs": [
+    "entities.json",
+    "advice.json"
+  ],
+  "nodes": 62,
+  "edges": 90,
+  "node_types": {
+    "SCENIC": 2,
+    "ROUTE": 4,
+    "STEP": 30,
+    "POI": 26
+  },
+  "relations": {
+    "HAS_ROUTE": 4,
+    "HAS_STEP": 30,
+    "VISITS": 30,
+    "NEXT_STEP": 26
+  },
+  "isolated_nodes": [],
+  "weak_components": 2,
+  "route_checks": [
+    {
+      "route_id": "R_S001_OFF_001_01",
+      "steps": 10,
+      "next_edges": 9
+    },
+    {
+      "route_id": "R_S001_VIS_001_01",
+      "steps": 6,
+      "next_edges": 5
+    },
+    {
+      "route_id": "R_S003_OFF_001_01",
+      "steps": 12,
+      "next_edges": 11
+    },
+    {
+      "route_id": "R_S003_VIS_001_01",
+      "steps": 2,
+      "next_edges": 1
+    }
+  ],
+  "queries": [
+    {
+      "query": "S001 的路线",
+      "result": [
+        "R_S001_OFF_001_01",
+        "R_S001_VIS_001_01"
+      ]
+    },
+    {
+      "query": "官方箱根路线的有序地点",
+      "result": [
+        "箱根汤本",
+        "箱根汤本站",
+        "箱根雕刻森林美术馆",
+        "箱根雕刻森林美术馆",
+        "大涌谷",
+        "早云山站",
+        "大涌谷",
+        "芦之湖",
+        "箱根神社",
+        "箱根登山名产店 汤本店"
+      ]
+    },
+    {
+      "query": "访问大涌谷的步骤",
+      "result": [
+        "N_STEP_R_S001_OFF_001_01_005",
+        "N_STEP_R_S001_OFF_001_01_007",
+        "N_STEP_R_S001_VIS_001_01_006"
+      ]
+    },
+    {
+      "query": "条件建议",
+      "result": [],
+      "availability": "missing_upstream"
+    }
+  ],
+  "checks_passed": true
+}
