@@ -49,10 +49,12 @@ def build(routes_data, registry, entities=None, advice=None):
     scenics = {item["scenic_id"]: item["scenic_name"] for item in registry["scenics"]}
     if len(scenics) != len(registry["scenics"]):
         raise ValueError("景区 ID 重复")
-    catalog = {item["entity_id"]: item for item in (entities or {}).get("entity_catalog", [])}
-    if len(catalog) != len((entities or {}).get("entity_catalog", [])):
+    full_catalog = (entities or {}).get("entity_catalog", [])
+    if len({item["entity_id"] for item in full_catalog}) != len(full_catalog):
         raise ValueError("实体 ID 重复")
-    mentions = (entities or {}).get("mentions", [])
+    inactive = {item["entity_id"] for item in full_catalog if not item.get("active", True)}
+    catalog = {item["entity_id"]: item for item in full_catalog if item["entity_id"] not in inactive}
+    mentions = [m for m in (entities or {}).get("mentions", []) if m["entity_id"] not in inactive]
     entity_nodes = {}
     for entity_id, item in catalog.items():
         scenic_id, kind = item["scenic_id"], item["entity_type"]
@@ -64,7 +66,8 @@ def build(routes_data, registry, entities=None, advice=None):
         node(nid, kind, item["canonical_name"], scenic_id,
              sorted({r["doc_id"] for r in refs}),
              {"entity_id": entity_id, "aliases": item.get("aliases", []),
-              "alignment_status": "aligned", "evidence": refs})
+              "alignment_status": "aligned", "scope": item.get("scope"),
+              "note": item.get("note"), "evidence": refs})
     for mention in mentions:
         if mention["entity_id"] not in catalog:
             raise ValueError(f"提及引用不存在的实体：{mention['entity_id']}")
@@ -166,9 +169,15 @@ def build(routes_data, registry, entities=None, advice=None):
 
     if any(e["source"] not in nodes or e["target"] not in nodes for e in edges.values()):
         raise ValueError("存在悬空边")
+    used = {endpoint for e in edges.values() for endpoint in (e["source"], e["target"])}
+    unused = [nid for nid in nodes if nid.startswith("N_ENTITY_") and nid not in used]
+    for nid in unused:
+        del nodes[nid]
     missing = [name for name, value in (("entities.json", entities), ("advice.json", advice)) if value is None]
     return {"schema_version": "1.0", "corpus_version": version, "graph_version": "v1",
-            "completion_status": "route_stage" if missing else "fused",
+            "completion_status": "route_stage" if entities is None else "entity_route_fused" if advice is None else "fused",
+            "inactive_entities_skipped": sorted(inactive),
+            "unused_entity_nodes_filtered": unused,
             "missing_inputs": missing, "nodes": list(nodes.values()), "edges": list(edges.values())}
 
 
@@ -178,6 +187,7 @@ def main():
     parser.add_argument("--registry", type=Path, default=Path("data/processed/scenic_registry.json"))
     parser.add_argument("--output", type=Path, default=Path("data/outputs/graph.json"))
     parser.add_argument("--require-complete", action="store_true", help="正式验收：缺少实体或建议时返回非零状态")
+    parser.add_argument("--require-entities", action="store_true", help="核心验收：要求真实实体已接入；条件建议可后续补充")
     args = parser.parse_args()
     try:
         routes = json.loads((args.outputs_dir / "routes.json").read_text(encoding="utf-8"))
@@ -185,6 +195,8 @@ def main():
         entities = load(args.outputs_dir / "entities.json", "entity_catalog", routes["corpus_version"])
         advice = load(args.outputs_dir / "advice.json", "advice", routes["corpus_version"])
         graph = build(routes, registry, entities, advice)
+        if args.require_entities and entities is None:
+            raise ValueError("核心融合缺少 entities.json")
         if args.require_complete and graph["missing_inputs"]:
             raise ValueError("正式融合缺少输入：" + ", ".join(graph["missing_inputs"]))
         args.output.parent.mkdir(parents=True, exist_ok=True)

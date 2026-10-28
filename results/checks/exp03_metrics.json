@@ -51,14 +51,15 @@
   "comparisons": [
     {
       "scenic_id": "S001",
-      "official_unique": 8,
+      "official_unique": 7,
       "visitor_unique": 6,
       "shared": [
         "大涌谷",
+        "早云山",
         "芦之湖"
       ],
-      "jaccard": 0.16666666666666666,
-      "ordered_overlap": 1,
+      "jaccard": 0.3,
+      "ordered_overlap": 2,
       "official_time_known": 10,
       "official_steps": 10,
       "visitor_time_known": 0,

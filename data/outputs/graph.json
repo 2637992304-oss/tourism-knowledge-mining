@@ -2,12 +2,2768 @@
   "schema_version": "1.0",
   "corpus_version": "v1",
   "graph_version": "v1",
-  "completion_status": "route_stage",
+  "completion_status": "entity_route_fused",
+  "inactive_entities_skipped": [
+    "S003_TIME_023"
+  ],
+  "unused_entity_nodes_filtered": [
+    "N_ENTITY_S001_POI_001",
+    "N_ENTITY_S001_POI_004",
+    "N_ENTITY_S001_POI_006",
+    "N_ENTITY_S001_POI_008",
+    "N_ENTITY_S001_POI_011",
+    "N_ENTITY_S001_POI_012",
+    "N_ENTITY_S001_POI_013",
+    "N_ENTITY_S001_POI_015",
+    "N_ENTITY_S001_POI_016",
+    "N_ENTITY_S001_POI_017",
+    "N_ENTITY_S001_POI_018",
+    "N_ENTITY_S001_POI_019",
+    "N_ENTITY_S001_POI_020",
+    "N_ENTITY_S001_POI_021",
+    "N_ENTITY_S001_POI_022",
+    "N_ENTITY_S001_POI_023",
+    "N_ENTITY_S001_POI_024",
+    "N_ENTITY_S001_POI_026",
+    "N_ENTITY_S001_POI_028",
+    "N_ENTITY_S001_POI_029",
+    "N_ENTITY_S001_POI_030",
+    "N_ENTITY_S001_POI_031",
+    "N_ENTITY_S001_POI_032",
+    "N_ENTITY_S001_POI_033",
+    "N_ENTITY_S001_POI_034",
+    "N_ENTITY_S001_POI_035",
+    "N_ENTITY_S001_POI_036",
+    "N_ENTITY_S001_POI_037",
+    "N_ENTITY_S001_POI_038",
+    "N_ENTITY_S001_POI_039",
+    "N_ENTITY_S001_POI_040",
+    "N_ENTITY_S001_POI_041",
+    "N_ENTITY_S001_POI_042",
+    "N_ENTITY_S001_TIME_001",
+    "N_ENTITY_S001_TIME_002",
+    "N_ENTITY_S001_TIME_009",
+    "N_ENTITY_S001_TIME_010",
+    "N_ENTITY_S001_TIME_014",
+    "N_ENTITY_S001_TIME_015",
+    "N_ENTITY_S001_TIME_017",
+    "N_ENTITY_S001_TIME_018",
+    "N_ENTITY_S001_TIME_019",
+    "N_ENTITY_S001_TIME_020",
+    "N_ENTITY_S001_TIME_022",
+    "N_ENTITY_S001_TIME_023",
+    "N_ENTITY_S001_TIME_024",
+    "N_ENTITY_S001_TIME_025",
+    "N_ENTITY_S001_TIME_026",
+    "N_ENTITY_S001_TIME_027",
+    "N_ENTITY_S001_TIME_028",
+    "N_ENTITY_S001_TIME_029",
+    "N_ENTITY_S001_TIME_030",
+    "N_ENTITY_S001_TIME_031",
+    "N_ENTITY_S001_TIME_032",
+    "N_ENTITY_S001_TIME_033",
+    "N_ENTITY_S001_TIME_034",
+    "N_ENTITY_S001_TIME_035",
+    "N_ENTITY_S001_TIME_036",
+    "N_ENTITY_S001_TRANSPORT_002",
+    "N_ENTITY_S001_TRANSPORT_003",
+    "N_ENTITY_S001_TRANSPORT_004",
+    "N_ENTITY_S001_TRANSPORT_006",
+    "N_ENTITY_S001_TRANSPORT_007",
+    "N_ENTITY_S001_TRANSPORT_013",
+    "N_ENTITY_S001_TRANSPORT_016",
+    "N_ENTITY_S002_POI_001",
+    "N_ENTITY_S002_POI_002",
+    "N_ENTITY_S002_POI_003",
+    "N_ENTITY_S002_POI_004",
+    "N_ENTITY_S002_POI_005",
+    "N_ENTITY_S002_POI_006",
+    "N_ENTITY_S002_POI_007",
+    "N_ENTITY_S002_POI_008",
+    "N_ENTITY_S002_POI_009",
+    "N_ENTITY_S002_POI_010",
+    "N_ENTITY_S002_POI_011",
+    "N_ENTITY_S002_POI_012",
+    "N_ENTITY_S002_POI_013",
+    "N_ENTITY_S002_POI_014",
+    "N_ENTITY_S002_POI_015",
+    "N_ENTITY_S002_POI_016",
+    "N_ENTITY_S002_POI_017",
+    "N_ENTITY_S002_POI_018",
+    "N_ENTITY_S002_POI_019",
+    "N_ENTITY_S002_POI_020",
+    "N_ENTITY_S002_POI_021",
+    "N_ENTITY_S002_POI_022",
+    "N_ENTITY_S002_POI_023",
+    "N_ENTITY_S002_POI_024",
+    "N_ENTITY_S002_POI_025",
+    "N_ENTITY_S002_POI_026",
+    "N_ENTITY_S002_POI_027",
+    "N_ENTITY_S002_POI_028",
+    "N_ENTITY_S002_POI_029",
+    "N_ENTITY_S002_POI_030",
+    "N_ENTITY_S002_POI_031",
+    "N_ENTITY_S002_POI_032",
+    "N_ENTITY_S002_POI_033",
+    "N_ENTITY_S002_POI_035",
+    "N_ENTITY_S002_POI_036",
+    "N_ENTITY_S002_POI_037",
+    "N_ENTITY_S002_POI_038",
+    "N_ENTITY_S002_POI_039",
+    "N_ENTITY_S002_POI_040",
+    "N_ENTITY_S002_POI_041",
+    "N_ENTITY_S002_POI_042",
+    "N_ENTITY_S002_POI_043",
+    "N_ENTITY_S002_POI_044",
+    "N_ENTITY_S002_POI_045",
+    "N_ENTITY_S002_POI_046",
+    "N_ENTITY_S002_POI_047",
+    "N_ENTITY_S002_POI_048",
+    "N_ENTITY_S002_POI_049",
+    "N_ENTITY_S002_POI_050",
+    "N_ENTITY_S002_POI_051",
+    "N_ENTITY_S002_POI_052",
+    "N_ENTITY_S002_POI_053",
+    "N_ENTITY_S002_POI_054",
+    "N_ENTITY_S002_POI_055",
+    "N_ENTITY_S002_POI_056",
+    "N_ENTITY_S002_POI_057",
+    "N_ENTITY_S002_POI_058",
+    "N_ENTITY_S002_POI_059",
+    "N_ENTITY_S002_POI_060",
+    "N_ENTITY_S002_POI_061",
+    "N_ENTITY_S002_POI_062",
+    "N_ENTITY_S002_POI_063",
+    "N_ENTITY_S002_POI_064",
+    "N_ENTITY_S002_POI_065",
+    "N_ENTITY_S002_POI_066",
+    "N_ENTITY_S002_POI_067",
+    "N_ENTITY_S002_POI_068",
+    "N_ENTITY_S002_POI_069",
+    "N_ENTITY_S002_POI_070",
+    "N_ENTITY_S002_POI_071",
+    "N_ENTITY_S002_POI_072",
+    "N_ENTITY_S002_POI_073",
+    "N_ENTITY_S002_POI_074",
+    "N_ENTITY_S002_POI_075",
+    "N_ENTITY_S002_POI_076",
+    "N_ENTITY_S002_TIME_001",
+    "N_ENTITY_S002_TIME_002",
+    "N_ENTITY_S002_TIME_003",
+    "N_ENTITY_S002_TIME_004",
+    "N_ENTITY_S002_TIME_005",
+    "N_ENTITY_S002_TIME_006",
+    "N_ENTITY_S002_TIME_007",
+    "N_ENTITY_S002_TIME_008",
+    "N_ENTITY_S002_TIME_009",
+    "N_ENTITY_S002_TIME_010",
+    "N_ENTITY_S002_TIME_011",
+    "N_ENTITY_S002_TIME_012",
+    "N_ENTITY_S002_TIME_013",
+    "N_ENTITY_S002_TIME_014",
+    "N_ENTITY_S002_TIME_015",
+    "N_ENTITY_S002_TIME_016",
+    "N_ENTITY_S002_TIME_017",
+    "N_ENTITY_S002_TIME_018",
+    "N_ENTITY_S002_TIME_019",
+    "N_ENTITY_S002_TIME_020",
+    "N_ENTITY_S002_TIME_021",
+    "N_ENTITY_S002_TIME_022",
+    "N_ENTITY_S002_TIME_023",
+    "N_ENTITY_S002_TIME_024",
+    "N_ENTITY_S002_TIME_025",
+    "N_ENTITY_S002_TIME_026",
+    "N_ENTITY_S002_TIME_027",
+    "N_ENTITY_S002_TIME_028",
+    "N_ENTITY_S002_TIME_029",
+    "N_ENTITY_S002_TIME_030",
+    "N_ENTITY_S002_TIME_031",
+    "N_ENTITY_S002_TIME_032",
+    "N_ENTITY_S002_TIME_033",
+    "N_ENTITY_S002_TIME_034",
+    "N_ENTITY_S002_TIME_035",
+    "N_ENTITY_S002_TIME_036",
+    "N_ENTITY_S002_TIME_037",
+    "N_ENTITY_S002_TIME_038",
+    "N_ENTITY_S002_TIME_039",
+    "N_ENTITY_S002_TIME_040",
+    "N_ENTITY_S002_TIME_041",
+    "N_ENTITY_S002_TIME_042",
+    "N_ENTITY_S002_TIME_043",
+    "N_ENTITY_S002_TIME_044",
+    "N_ENTITY_S002_TIME_045",
+    "N_ENTITY_S002_TIME_046",
+    "N_ENTITY_S002_TIME_047",
+    "N_ENTITY_S002_TIME_048",
+    "N_ENTITY_S002_TIME_049",
+    "N_ENTITY_S002_TIME_050",
+    "N_ENTITY_S002_TIME_051",
+    "N_ENTITY_S002_TIME_052",
+    "N_ENTITY_S002_TIME_053",
+    "N_ENTITY_S002_TIME_054",
+    "N_ENTITY_S002_TIME_055",
+    "N_ENTITY_S002_TIME_056",
+    "N_ENTITY_S002_TIME_057",
+    "N_ENTITY_S002_TIME_058",
+    "N_ENTITY_S002_TIME_059",
+    "N_ENTITY_S002_TIME_060",
+    "N_ENTITY_S002_TIME_061",
+    "N_ENTITY_S002_TIME_062",
+    "N_ENTITY_S002_TIME_063",
+    "N_ENTITY_S002_TIME_064",
+    "N_ENTITY_S002_TIME_065",
+    "N_ENTITY_S002_TIME_066",
+    "N_ENTITY_S002_TIME_067",
+    "N_ENTITY_S002_TIME_068",
+    "N_ENTITY_S002_TIME_069",
+    "N_ENTITY_S002_TRANSPORT_001",
+    "N_ENTITY_S002_TRANSPORT_002",
+    "N_ENTITY_S002_TRANSPORT_004",
+    "N_ENTITY_S002_TRANSPORT_008",
+    "N_ENTITY_S003_POI_001",
+    "N_ENTITY_S003_POI_003",
+    "N_ENTITY_S003_POI_004",
+    "N_ENTITY_S003_POI_005",
+    "N_ENTITY_S003_POI_006",
+    "N_ENTITY_S003_POI_007",
+    "N_ENTITY_S003_POI_008",
+    "N_ENTITY_S003_POI_009",
+    "N_ENTITY_S003_POI_010",
+    "N_ENTITY_S003_POI_011",
+    "N_ENTITY_S003_POI_013",
+    "N_ENTITY_S003_POI_015",
+    "N_ENTITY_S003_POI_016",
+    "N_ENTITY_S003_POI_018",
+    "N_ENTITY_S003_POI_020",
+    "N_ENTITY_S003_POI_021",
+    "N_ENTITY_S003_POI_022",
+    "N_ENTITY_S003_POI_023",
+    "N_ENTITY_S003_POI_025",
+    "N_ENTITY_S003_POI_030",
+    "N_ENTITY_S003_POI_031",
+    "N_ENTITY_S003_POI_032",
+    "N_ENTITY_S003_POI_033",
+    "N_ENTITY_S003_POI_034",
+    "N_ENTITY_S003_POI_035",
+    "N_ENTITY_S003_POI_036",
+    "N_ENTITY_S003_POI_037",
+    "N_ENTITY_S003_POI_038",
+    "N_ENTITY_S003_POI_039",
+    "N_ENTITY_S003_POI_040",
+    "N_ENTITY_S003_POI_041",
+    "N_ENTITY_S003_POI_042",
+    "N_ENTITY_S003_POI_043",
+    "N_ENTITY_S003_POI_044",
+    "N_ENTITY_S003_POI_045",
+    "N_ENTITY_S003_POI_046",
+    "N_ENTITY_S003_POI_047",
+    "N_ENTITY_S003_POI_048",
+    "N_ENTITY_S003_POI_049",
+    "N_ENTITY_S003_POI_050",
+    "N_ENTITY_S003_POI_051",
+    "N_ENTITY_S003_TIME_001",
+    "N_ENTITY_S003_TIME_002",
+    "N_ENTITY_S003_TIME_003",
+    "N_ENTITY_S003_TIME_004",
+    "N_ENTITY_S003_TIME_005",
+    "N_ENTITY_S003_TIME_006",
+    "N_ENTITY_S003_TIME_008",
+    "N_ENTITY_S003_TIME_009",
+    "N_ENTITY_S003_TIME_010",
+    "N_ENTITY_S003_TIME_012",
+    "N_ENTITY_S003_TIME_014",
+    "N_ENTITY_S003_TIME_015",
+    "N_ENTITY_S003_TIME_016",
+    "N_ENTITY_S003_TIME_017",
+    "N_ENTITY_S003_TIME_018",
+    "N_ENTITY_S003_TIME_019",
+    "N_ENTITY_S003_TIME_020",
+    "N_ENTITY_S003_TIME_021",
+    "N_ENTITY_S003_TIME_022",
+    "N_ENTITY_S003_TIME_024",
+    "N_ENTITY_S003_TIME_025",
+    "N_ENTITY_S003_TIME_026",
+    "N_ENTITY_S003_TRANSPORT_001",
+    "N_ENTITY_S003_TRANSPORT_002",
+    "N_ENTITY_S003_TRANSPORT_003",
+    "N_ENTITY_S003_TRANSPORT_008",
+    "N_ENTITY_S003_TRANSPORT_009",
+    "N_ENTITY_S003_TRANSPORT_017",
+    "N_ENTITY_S003_TRANSPORT_018",
+    "N_ENTITY_S003_TRANSPORT_019"
+  ],
   "missing_inputs": [
-    "entities.json",
     "advice.json"
   ],
   "nodes": [
+    {
+      "node_id": "N_ENTITY_S001_POI_002",
+      "node_type": "POI",
+      "name": "大涌谷",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001",
+        "S001_VIS_001",
+        "S001_VIS_002",
+        "S001_VIS_003",
+        "S001_VIS_004",
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S001_POI_002",
+        "aliases": [
+          "大地狱",
+          "箱根大涌谷"
+        ],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 152,
+            "end": 155,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1294,
+            "end": 1297,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1321,
+            "end": 1324,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1515,
+            "end": 1518,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1569,
+            "end": 1572,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1593,
+            "end": 1596,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1636,
+            "end": 1639,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1682,
+            "end": 1685,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1751,
+            "end": 1754,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1881,
+            "end": 1884,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1938,
+            "end": 1941,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1957,
+            "end": 1960,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2020,
+            "end": 2023,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2060,
+            "end": 2063,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2089,
+            "end": 2092,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2143,
+            "end": 2146,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 527,
+            "end": 530,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 715,
+            "end": 718,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 790,
+            "end": 793,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 831,
+            "end": 834,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 853,
+            "end": 856,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 911,
+            "end": 914,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_002",
+            "start": 945,
+            "end": 948,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_002",
+            "start": 981,
+            "end": 984,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_002",
+            "start": 985,
+            "end": 988,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_002",
+            "start": 1023,
+            "end": 1026,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_002",
+            "start": 1070,
+            "end": 1073,
+            "text": "大地狱"
+          },
+          {
+            "doc_id": "S001_VIS_002",
+            "start": 1075,
+            "end": 1078,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_002",
+            "start": 1138,
+            "end": 1141,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_002",
+            "start": 1143,
+            "end": 1146,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_002",
+            "start": 1147,
+            "end": 1150,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_002",
+            "start": 1259,
+            "end": 1262,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_002",
+            "start": 1353,
+            "end": 1356,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_002",
+            "start": 1357,
+            "end": 1362,
+            "text": "箱根大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_002",
+            "start": 1388,
+            "end": 1391,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_002",
+            "start": 1419,
+            "end": 1422,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_002",
+            "start": 1443,
+            "end": 1446,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_003",
+            "start": 281,
+            "end": 284,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_003",
+            "start": 377,
+            "end": 380,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 5423,
+            "end": 5426,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 5426,
+            "end": 5429,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 5455,
+            "end": 5458,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 5463,
+            "end": 5466,
+            "text": "大地狱"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 5653,
+            "end": 5656,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 5717,
+            "end": 5720,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 5748,
+            "end": 5751,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 5831,
+            "end": 5834,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 5920,
+            "end": 5923,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 5944,
+            "end": 5947,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 6067,
+            "end": 6070,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6029,
+            "end": 6032,
+            "text": "大涌谷"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6039,
+            "end": 6042,
+            "text": "大涌谷"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_POI_003",
+      "node_type": "POI",
+      "name": "芦之湖",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001",
+        "S001_VIS_001",
+        "S001_VIS_002",
+        "S001_VIS_003",
+        "S001_VIS_004",
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S001_POI_003",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 156,
+            "end": 159,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2065,
+            "end": 2068,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2080,
+            "end": 2083,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2108,
+            "end": 2111,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2233,
+            "end": 2236,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2356,
+            "end": 2359,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 109,
+            "end": 112,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 428,
+            "end": 431,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_VIS_002",
+            "start": 1454,
+            "end": 1457,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_VIS_002",
+            "start": 1459,
+            "end": 1462,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_VIS_002",
+            "start": 1463,
+            "end": 1466,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_VIS_002",
+            "start": 1606,
+            "end": 1609,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_VIS_003",
+            "start": 495,
+            "end": 498,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_VIS_003",
+            "start": 656,
+            "end": 659,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_VIS_003",
+            "start": 697,
+            "end": 700,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_VIS_003",
+            "start": 790,
+            "end": 793,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 5440,
+            "end": 5443,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 6058,
+            "end": 6061,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 7033,
+            "end": 7036,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 7041,
+            "end": 7044,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 7178,
+            "end": 7181,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 7194,
+            "end": 7197,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 7505,
+            "end": 7508,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6053,
+            "end": 6056,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6159,
+            "end": 6162,
+            "text": "芦之湖"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6337,
+            "end": 6340,
+            "text": "芦之湖"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_POI_005",
+      "node_type": "POI",
+      "name": "箱根汤本",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001",
+        "S001_VIS_003",
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S001_POI_005",
+        "aliases": [
+          "Hakone-Yomoto",
+          "箱根 汤本",
+          "箱根汤本站"
+        ],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "箱根汤本区域与车站暂共用入口节点；精细站区粒度可后续拆分，拆分时须保留ID映射。",
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 242,
+            "end": 246,
+            "text": "箱根汤本"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 390,
+            "end": 395,
+            "text": "箱根汤本站"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 498,
+            "end": 503,
+            "text": "箱根汤本站"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 557,
+            "end": 562,
+            "text": "箱根汤本站"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 582,
+            "end": 587,
+            "text": "箱根汤本站"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 741,
+            "end": 746,
+            "text": "箱根汤本站"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2602,
+            "end": 2607,
+            "text": "箱根汤本站"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2619,
+            "end": 2623,
+            "text": "箱根汤本"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2733,
+            "end": 2738,
+            "text": "箱根汤本站"
+          },
+          {
+            "doc_id": "S001_VIS_003",
+            "start": 194,
+            "end": 198,
+            "text": "箱根汤本"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5849,
+            "end": 5853,
+            "text": "箱根汤本"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5907,
+            "end": 5911,
+            "text": "箱根汤本"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5933,
+            "end": 5937,
+            "text": "箱根汤本"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5960,
+            "end": 5965,
+            "text": "箱根汤本站"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6417,
+            "end": 6421,
+            "text": "箱根汤本"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6421,
+            "end": 6434,
+            "text": "Hakone-Yomoto"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_POI_007",
+      "node_type": "POI",
+      "name": "箱根雕刻森林美术馆",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S001_POI_007",
+        "aliases": [
+          "雕刻森林美术馆"
+        ],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 729,
+            "end": 738,
+            "text": "箱根雕刻森林美术馆"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 763,
+            "end": 772,
+            "text": "箱根雕刻森林美术馆"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 951,
+            "end": 960,
+            "text": "箱根雕刻森林美术馆"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 967,
+            "end": 976,
+            "text": "箱根雕刻森林美术馆"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1257,
+            "end": 1266,
+            "text": "箱根雕刻森林美术馆"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_POI_009",
+      "node_type": "POI",
+      "name": "早云山",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001",
+        "S001_VIS_001",
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S001_POI_009",
+        "aliases": [
+          "早云山站"
+        ],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1427,
+            "end": 1431,
+            "text": "早云山站"
+          },
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 16,
+            "end": 19,
+            "text": "早云山"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6006,
+            "end": 6010,
+            "text": "早云山站"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_POI_010",
+      "node_type": "POI",
+      "name": "桃源台",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001",
+        "S001_VIS_001",
+        "S001_VIS_003",
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S001_POI_010",
+        "aliases": [
+          "桃源台站"
+        ],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2156,
+            "end": 2160,
+            "text": "桃源台站"
+          },
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 40,
+            "end": 43,
+            "text": "桃源台"
+          },
+          {
+            "doc_id": "S001_VIS_003",
+            "start": 255,
+            "end": 258,
+            "text": "桃源台"
+          },
+          {
+            "doc_id": "S001_VIS_003",
+            "start": 456,
+            "end": 459,
+            "text": "桃源台"
+          },
+          {
+            "doc_id": "S001_VIS_003",
+            "start": 486,
+            "end": 489,
+            "text": "桃源台"
+          },
+          {
+            "doc_id": "S001_VIS_003",
+            "start": 585,
+            "end": 588,
+            "text": "桃源台"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6057,
+            "end": 6061,
+            "text": "桃源台站"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6083,
+            "end": 6087,
+            "text": "桃源台站"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_POI_014",
+      "node_type": "POI",
+      "name": "箱根神社",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001",
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S001_POI_014",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2275,
+            "end": 2279,
+            "text": "箱根神社"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2333,
+            "end": 2337,
+            "text": "箱根神社"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2362,
+            "end": 2366,
+            "text": "箱根神社"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2672,
+            "end": 2676,
+            "text": "箱根神社"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6366,
+            "end": 6370,
+            "text": "箱根神社"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_POI_025",
+      "node_type": "POI",
+      "name": "箱根登山名产店 汤本店",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S001_POI_025",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2703,
+            "end": 2714,
+            "text": "箱根登山名产店 汤本店"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2740,
+            "end": 2751,
+            "text": "箱根登山名产店 汤本店"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2807,
+            "end": 2818,
+            "text": "箱根登山名产店 汤本店"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_POI_027",
+      "node_type": "POI",
+      "name": "金太郎展望台",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "entity_id": "S001_POI_027",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 432,
+            "end": 438,
+            "text": "金太郎展望台"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_TIME_003",
+      "node_type": "TIME",
+      "name": "7:30",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S001_TIME_003",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 222,
+            "end": 226,
+            "text": "7:30"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_TIME_004",
+      "node_type": "TIME",
+      "name": "9:20",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S001_TIME_004",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 544,
+            "end": 548,
+            "text": "9:20"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_TIME_005",
+      "node_type": "TIME",
+      "name": "9:25",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S001_TIME_005",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 712,
+            "end": 716,
+            "text": "9:25"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_TIME_006",
+      "node_type": "TIME",
+      "name": "10:00",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S001_TIME_006",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 942,
+            "end": 947,
+            "text": "10:00"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_TIME_007",
+      "node_type": "TIME",
+      "name": "11:20",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S001_TIME_007",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1276,
+            "end": 1281,
+            "text": "11:20"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_TIME_008",
+      "node_type": "TIME",
+      "name": "11:45",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S001_TIME_008",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1395,
+            "end": 1400,
+            "text": "11:45"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_TIME_011",
+      "node_type": "TIME",
+      "name": "12:55",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S001_TIME_011",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1560,
+            "end": 1565,
+            "text": "12:55"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_TIME_012",
+      "node_type": "TIME",
+      "name": "14:20",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S001_TIME_012",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2051,
+            "end": 2056,
+            "text": "14:20"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_TIME_013",
+      "node_type": "TIME",
+      "name": "15:40",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S001_TIME_013",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2316,
+            "end": 2321,
+            "text": "15:40"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_TIME_016",
+      "node_type": "TIME",
+      "name": "17:00",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S001_TIME_016",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2686,
+            "end": 2691,
+            "text": "17:00"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_TIME_021",
+      "node_type": "TIME",
+      "name": "1小时",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "entity_id": "S001_TIME_021",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 477,
+            "end": 480,
+            "text": "1小时"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_TRANSPORT_001",
+      "node_type": "TRANSPORT",
+      "name": "步行",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001",
+        "S001_VIS_001",
+        "S001_VIS_004"
+      ],
+      "attributes": {
+        "entity_id": "S001_TRANSPORT_001",
+        "aliases": [
+          "Hike",
+          "Hiking",
+          "hike",
+          "hiking",
+          "trekking",
+          "walk",
+          "walking",
+          "徒步",
+          "漫步"
+        ],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 964,
+            "end": 966,
+            "text": "漫步"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1009,
+            "end": 1011,
+            "text": "漫步"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1811,
+            "end": 1813,
+            "text": "步行"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2343,
+            "end": 2345,
+            "text": "步行"
+          },
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 59,
+            "end": 61,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 78,
+            "end": 80,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 666,
+            "end": 668,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 5742,
+            "end": 5744,
+            "text": "漫步"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_TRANSPORT_005",
+      "node_type": "TRANSPORT",
+      "name": "缆车",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001",
+        "S001_VIS_001",
+        "S001_VIS_003",
+        "S001_VIS_004",
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S001_TRANSPORT_005",
+        "aliases": [
+          "箱根缆车"
+        ],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1379,
+            "end": 1381,
+            "text": "缆车"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1421,
+            "end": 1423,
+            "text": "缆车"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1459,
+            "end": 1461,
+            "text": "缆车"
+          },
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 484,
+            "end": 486,
+            "text": "缆车"
+          },
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 919,
+            "end": 921,
+            "text": "缆车"
+          },
+          {
+            "doc_id": "S001_VIS_003",
+            "start": 278,
+            "end": 280,
+            "text": "缆车"
+          },
+          {
+            "doc_id": "S001_VIS_003",
+            "start": 285,
+            "end": 287,
+            "text": "缆车"
+          },
+          {
+            "doc_id": "S001_VIS_003",
+            "start": 371,
+            "end": 373,
+            "text": "缆车"
+          },
+          {
+            "doc_id": "S001_VIS_003",
+            "start": 450,
+            "end": 452,
+            "text": "缆车"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 5631,
+            "end": 5633,
+            "text": "缆车"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 5728,
+            "end": 5730,
+            "text": "缆车"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6078,
+            "end": 6082,
+            "text": "箱根缆车"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_TRANSPORT_010",
+      "node_type": "TRANSPORT",
+      "name": "箱根登山电车",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001",
+        "S001_VIS_003",
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S001_TRANSPORT_010",
+        "aliases": [
+          "登山列车",
+          "登山电车"
+        ],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 601,
+            "end": 607,
+            "text": "箱根登山电车"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 721,
+            "end": 727,
+            "text": "箱根登山电车"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 780,
+            "end": 786,
+            "text": "箱根登山电车"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 838,
+            "end": 842,
+            "text": "登山列车"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 846,
+            "end": 850,
+            "text": "登山电车"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1346,
+            "end": 1352,
+            "text": "箱根登山电车"
+          },
+          {
+            "doc_id": "S001_VIS_003",
+            "start": 207,
+            "end": 211,
+            "text": "登山电车"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5926,
+            "end": 5932,
+            "text": "箱根登山电车"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5974,
+            "end": 5980,
+            "text": "箱根登山电车"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_TRANSPORT_011",
+      "node_type": "TRANSPORT",
+      "name": "箱根登山缆车",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001",
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S001_TRANSPORT_011",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1286,
+            "end": 1292,
+            "text": "箱根登山缆车"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1363,
+            "end": 1369,
+            "text": "箱根登山缆车"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5997,
+            "end": 6003,
+            "text": "箱根登山缆车"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_TRANSPORT_012",
+      "node_type": "TRANSPORT",
+      "name": "箱根空中缆车",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001",
+        "S001_VIS_001",
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S001_TRANSPORT_012",
+        "aliases": [
+          "rope way",
+          "箱根登山吊舱"
+        ],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1412,
+            "end": 1418,
+            "text": "箱根空中缆车"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1442,
+            "end": 1448,
+            "text": "箱根空中缆车"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1544,
+            "end": 1550,
+            "text": "箱根空中缆车"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2148,
+            "end": 2154,
+            "text": "箱根空中缆车"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2872,
+            "end": 2878,
+            "text": "箱根空中缆车"
+          },
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 21,
+            "end": 27,
+            "text": "箱根登山吊舱"
+          },
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 28,
+            "end": 36,
+            "text": "rope way"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6021,
+            "end": 6027,
+            "text": "箱根空中缆车"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_TRANSPORT_014",
+      "node_type": "TRANSPORT",
+      "name": "箱根海贼观光船",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001",
+        "S001_VIS_002",
+        "S001_VIS_003",
+        "S001_VIS_004",
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S001_TRANSPORT_014",
+        "aliases": [
+          "海盗船",
+          "海贼船",
+          "海贼观光船",
+          "箱根海贼船"
+        ],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2071,
+            "end": 2078,
+            "text": "箱根海贼观光船"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2120,
+            "end": 2127,
+            "text": "箱根海贼观光船"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2176,
+            "end": 2183,
+            "text": "箱根海贼观光船"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2299,
+            "end": 2306,
+            "text": "箱根海贼观光船"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2879,
+            "end": 2886,
+            "text": "箱根海贼观光船"
+          },
+          {
+            "doc_id": "S001_VIS_002",
+            "start": 1580,
+            "end": 1583,
+            "text": "海盗船"
+          },
+          {
+            "doc_id": "S001_VIS_003",
+            "start": 490,
+            "end": 493,
+            "text": "海贼船"
+          },
+          {
+            "doc_id": "S001_VIS_003",
+            "start": 806,
+            "end": 809,
+            "text": "海贼船"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 7240,
+            "end": 7243,
+            "text": "海贼船"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 7355,
+            "end": 7358,
+            "text": "海盗船"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 7390,
+            "end": 7393,
+            "text": "海盗船"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 7403,
+            "end": 7406,
+            "text": "海盗船"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 7430,
+            "end": 7433,
+            "text": "海盗船"
+          },
+          {
+            "doc_id": "S001_VIS_004",
+            "start": 7447,
+            "end": 7450,
+            "text": "海贼船"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6073,
+            "end": 6078,
+            "text": "箱根海贼船"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6169,
+            "end": 6172,
+            "text": "海贼船"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6199,
+            "end": 6202,
+            "text": "海贼船"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6257,
+            "end": 6264,
+            "text": "箱根海贼观光船"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6265,
+            "end": 6270,
+            "text": "海贼观光船"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6308,
+            "end": 6311,
+            "text": "海贼船"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_TRANSPORT_015",
+      "node_type": "TRANSPORT",
+      "name": "浪漫特快",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001",
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S001_TRANSPORT_015",
+        "aliases": [
+          "“浪漫”特快",
+          "小田急浪漫特快"
+        ],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 234,
+            "end": 240,
+            "text": "“浪漫”特快"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 373,
+            "end": 379,
+            "text": "“浪漫”特快"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 517,
+            "end": 523,
+            "text": "“浪漫”特快"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 565,
+            "end": 571,
+            "text": "“浪漫”特快"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2791,
+            "end": 2797,
+            "text": "“浪漫”特快"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5840,
+            "end": 5847,
+            "text": "小田急浪漫特快"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5943,
+            "end": 5947,
+            "text": "浪漫特快"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_POI_002",
+      "node_type": "POI",
+      "name": "三姐妹峰",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001",
+        "S003_VIS_001",
+        "S003_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S003_POI_002",
+        "aliases": [
+          "Three Sisters",
+          "三姊妹峰",
+          "三姐妹岩"
+        ],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 1571,
+            "end": 1575,
+            "text": "三姐妹峰"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 1768,
+            "end": 1772,
+            "text": "三姐妹峰"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2304,
+            "end": 2308,
+            "text": "三姐妹峰"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3444,
+            "end": 3448,
+            "text": "三姐妹峰"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4032,
+            "end": 4036,
+            "text": "三姐妹峰"
+          },
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 186,
+            "end": 190,
+            "text": "三姐妹峰"
+          },
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 535,
+            "end": 539,
+            "text": "三姐妹岩"
+          },
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 542,
+            "end": 546,
+            "text": "三姐妹岩"
+          },
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 751,
+            "end": 755,
+            "text": "三姐妹峰"
+          },
+          {
+            "doc_id": "S003_VIS_005",
+            "start": 319,
+            "end": 323,
+            "text": "三姊妹峰"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_POI_012",
+      "node_type": "POI",
+      "name": "Jamison Lookout",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_POI_012",
+        "aliases": [
+          "杰米森瞭望台"
+        ],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2073,
+            "end": 2079,
+            "text": "杰米森瞭望台"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2081,
+            "end": 2096,
+            "text": "Jamison Lookout"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_POI_014",
+      "node_type": "POI",
+      "name": "Wentworth Falls Track",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_POI_014",
+        "aliases": [
+          "温特沃斯(Wentworth)瀑布步道"
+        ],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2136,
+            "end": 2155,
+            "text": "温特沃斯(Wentworth)瀑布步道"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2157,
+            "end": 2178,
+            "text": "Wentworth Falls Track"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_POI_017",
+      "node_type": "POI",
+      "name": "埃文斯瞭望台",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_POI_017",
+        "aliases": [
+          "埃文斯观景台"
+        ],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2731,
+            "end": 2737,
+            "text": "埃文斯瞭望台"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2779,
+            "end": 2785,
+            "text": "埃文斯观景台"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4390,
+            "end": 4396,
+            "text": "埃文斯瞭望台"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_POI_019",
+      "node_type": "POI",
+      "name": "大峡谷步道",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_POI_019",
+        "aliases": [
+          "大峡谷步行道"
+        ],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2794,
+            "end": 2799,
+            "text": "大峡谷步道"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2828,
+            "end": 2834,
+            "text": "大峡谷步行道"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4119,
+            "end": 4124,
+            "text": "大峡谷步道"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4401,
+            "end": 4406,
+            "text": "大峡谷步道"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_POI_024",
+      "node_type": "POI",
+      "name": "卡通巴瀑布自然保护区夜间灯光步道",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_POI_024",
+        "aliases": [
+          "卡通巴瀑布自然保护区夜间照明步道"
+        ],
+        "alignment_status": "aligned",
+        "scope": "surrounding",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3367,
+            "end": 3383,
+            "text": "卡通巴瀑布自然保护区夜间灯光步道"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3456,
+            "end": 3472,
+            "text": "卡通巴瀑布自然保护区夜间灯光步道"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4330,
+            "end": 4346,
+            "text": "卡通巴瀑布自然保护区夜间照明步道"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_POI_026",
+      "node_type": "POI",
+      "name": "山地文化啤酒公司",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_POI_026",
+        "aliases": [
+          "山地文化啤酒"
+        ],
+        "alignment_status": "aligned",
+        "scope": "surrounding",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3046,
+            "end": 3054,
+            "text": "山地文化啤酒公司"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3145,
+            "end": 3151,
+            "text": "山地文化啤酒"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4321,
+            "end": 4329,
+            "text": "山地文化啤酒公司"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4939,
+            "end": 4947,
+            "text": "山地文化啤酒公司"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_POI_027",
+      "node_type": "POI",
+      "name": "黑凤头鹦鹉面包店",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_POI_027",
+        "aliases": [
+          "Black Cockatoo Bakery",
+          "Lawson's Black Cockatoo Bakery",
+          "劳森黑凤头鹦鹉面包店"
+        ],
+        "alignment_status": "aligned",
+        "scope": "surrounding",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 1876,
+            "end": 1886,
+            "text": "劳森黑凤头鹦鹉面包店"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 1888,
+            "end": 1918,
+            "text": "Lawson's Black Cockatoo Bakery"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4155,
+            "end": 4163,
+            "text": "黑凤头鹦鹉面包店"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4165,
+            "end": 4186,
+            "text": "Black Cockatoo Bakery"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_POI_028",
+      "node_type": "POI",
+      "name": "Josophan's Fine Chocolates",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_POI_028",
+        "aliases": [
+          "Josophan的巧克力店"
+        ],
+        "alignment_status": "aligned",
+        "scope": "surrounding",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2367,
+            "end": 2393,
+            "text": "Josophan's Fine Chocolates"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2556,
+            "end": 2569,
+            "text": "Josophan的巧克力店"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_POI_029",
+      "node_type": "POI",
+      "name": "Kate Soady Gallery",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_POI_029",
+        "aliases": [
+          "凯特·索迪画廊"
+        ],
+        "alignment_status": "aligned",
+        "scope": "surrounding",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2435,
+            "end": 2442,
+            "text": "凯特·索迪画廊"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2444,
+            "end": 2462,
+            "text": "Kate Soady Gallery"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_TIME_007",
+      "node_type": "TIME",
+      "name": "90分钟",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_TIME_007",
+        "aliases": [
+          "90 分钟"
+        ],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 1482,
+            "end": 1486,
+            "text": "90分钟"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3228,
+            "end": 3233,
+            "text": "90 分钟"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3510,
+            "end": 3515,
+            "text": "90 分钟"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4820,
+            "end": 4825,
+            "text": "90 分钟"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_TIME_011",
+      "node_type": "TIME",
+      "name": "黄昏",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_TIME_011",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 1748,
+            "end": 1750,
+            "text": "黄昏"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3383,
+            "end": 3385,
+            "text": "黄昏"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_TIME_013",
+      "node_type": "TIME",
+      "name": "10分钟",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_TIME_013",
+        "aliases": [
+          "10 分钟"
+        ],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2024,
+            "end": 2029,
+            "text": "10 分钟"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_TRANSPORT_004",
+      "node_type": "TRANSPORT",
+      "name": "自驾",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001",
+        "S003_VIS_001",
+        "S003_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S003_TRANSPORT_004",
+        "aliases": [
+          "Driving",
+          "drive",
+          "vehicle",
+          "开车",
+          "驱车",
+          "驾车",
+          "驾驶"
+        ],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 566,
+            "end": 573,
+            "text": "Driving"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 589,
+            "end": 594,
+            "text": "drive"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 1478,
+            "end": 1480,
+            "text": "开车"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 1543,
+            "end": 1545,
+            "text": "开车"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 1789,
+            "end": 1791,
+            "text": "开车"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2618,
+            "end": 2620,
+            "text": "驾车"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3500,
+            "end": 3502,
+            "text": "驱车"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4247,
+            "end": 4249,
+            "text": "驱车"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4581,
+            "end": 4583,
+            "text": "开车"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4632,
+            "end": 4634,
+            "text": "开车"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4770,
+            "end": 4772,
+            "text": "开车"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4781,
+            "end": 4783,
+            "text": "开车"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4802,
+            "end": 4804,
+            "text": "开车"
+          },
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 165,
+            "end": 167,
+            "text": "驱车"
+          },
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 763,
+            "end": 765,
+            "text": "驱车"
+          },
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 1410,
+            "end": 1412,
+            "text": "驱车"
+          },
+          {
+            "doc_id": "S003_VIS_005",
+            "start": 203,
+            "end": 205,
+            "text": "驱车"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_TRANSPORT_005",
+      "node_type": "TRANSPORT",
+      "name": "缆车",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001",
+        "S003_VIS_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_TRANSPORT_005",
+        "aliases": [
+          "箱根缆车"
+        ],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3235,
+            "end": 3237,
+            "text": "缆车"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3253,
+            "end": 3255,
+            "text": "缆车"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3257,
+            "end": 3259,
+            "text": "缆车"
+          },
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 593,
+            "end": 595,
+            "text": "缆车"
+          },
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 606,
+            "end": 608,
+            "text": "缆车"
+          },
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 620,
+            "end": 622,
+            "text": "缆车"
+          },
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 690,
+            "end": 692,
+            "text": "缆车"
+          },
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 697,
+            "end": 699,
+            "text": "缆车"
+          },
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 725,
+            "end": 727,
+            "text": "缆车"
+          }
+        ]
+      }
+    },
     {
       "node_id": "N_SCENIC_S001",
       "node_type": "SCENIC",
@@ -55,19 +2811,6 @@
       }
     },
     {
-      "node_id": "N_POI_S001_cd33aa0f571f",
-      "node_type": "POI",
-      "name": "箱根汤本",
-      "scenic_id": "S001",
-      "source_refs": [
-        "S001_OFF_001"
-      ],
-      "attributes": {
-        "entity_id": null,
-        "alignment_status": "pending"
-      }
-    },
-    {
       "node_id": "N_STEP_R_S001_OFF_001_01_002",
       "node_type": "STEP",
       "name": "在箱根入口·箱根汤本站换乘",
@@ -92,19 +2835,6 @@
       }
     },
     {
-      "node_id": "N_POI_S001_4710f36491d0",
-      "node_type": "POI",
-      "name": "箱根汤本站",
-      "scenic_id": "S001",
-      "source_refs": [
-        "S001_OFF_001"
-      ],
-      "attributes": {
-        "entity_id": null,
-        "alignment_status": "pending"
-      }
-    },
-    {
       "node_id": "N_STEP_R_S001_OFF_001_01_003",
       "node_type": "STEP",
       "name": "乘坐箱根登山电车前往箱根雕刻森林美术馆",
@@ -126,19 +2856,6 @@
             "text": "9:25 ~ 乘坐箱根登山电车前往箱根雕刻森林美术馆"
           }
         ]
-      }
-    },
-    {
-      "node_id": "N_POI_S001_8d24b40365ea",
-      "node_type": "POI",
-      "name": "箱根雕刻森林美术馆",
-      "scenic_id": "S001",
-      "source_refs": [
-        "S001_OFF_001"
-      ],
-      "attributes": {
-        "entity_id": null,
-        "alignment_status": "pending"
       }
     },
     {
@@ -190,20 +2907,6 @@
       }
     },
     {
-      "node_id": "N_POI_S001_dee07e824505",
-      "node_type": "POI",
-      "name": "大涌谷",
-      "scenic_id": "S001",
-      "source_refs": [
-        "S001_OFF_001",
-        "S001_VIS_001"
-      ],
-      "attributes": {
-        "entity_id": null,
-        "alignment_status": "pending"
-      }
-    },
-    {
       "node_id": "N_STEP_R_S001_OFF_001_01_006",
       "node_type": "STEP",
       "name": "能眺望富士山美景的箱根空中缆车",
@@ -231,19 +2934,6 @@
             "text": "早云山站"
           }
         ]
-      }
-    },
-    {
-      "node_id": "N_POI_S001_9a7284ecee80",
-      "node_type": "POI",
-      "name": "早云山站",
-      "scenic_id": "S001",
-      "source_refs": [
-        "S001_OFF_001"
-      ],
-      "attributes": {
-        "entity_id": null,
-        "alignment_status": "pending"
       }
     },
     {
@@ -295,20 +2985,6 @@
       }
     },
     {
-      "node_id": "N_POI_S001_7d7a00eea7b4",
-      "node_type": "POI",
-      "name": "芦之湖",
-      "scenic_id": "S001",
-      "source_refs": [
-        "S001_OFF_001",
-        "S001_VIS_001"
-      ],
-      "attributes": {
-        "entity_id": null,
-        "alignment_status": "pending"
-      }
-    },
-    {
       "node_id": "N_STEP_R_S001_OFF_001_01_009",
       "node_type": "STEP",
       "name": "参拜具有历史渊源的箱根神社",
@@ -333,19 +3009,6 @@
       }
     },
     {
-      "node_id": "N_POI_S001_b0d173157925",
-      "node_type": "POI",
-      "name": "箱根神社",
-      "scenic_id": "S001",
-      "source_refs": [
-        "S001_OFF_001"
-      ],
-      "attributes": {
-        "entity_id": null,
-        "alignment_status": "pending"
-      }
-    },
-    {
       "node_id": "N_STEP_R_S001_OFF_001_01_010",
       "node_type": "STEP",
       "name": "购买伴手礼推荐去“箱根登山名产店 汤本店”",
@@ -367,19 +3030,6 @@
             "text": "17:00 ~ 购买伴手礼推荐去“箱根登山名产店 汤本店”"
           }
         ]
-      }
-    },
-    {
-      "node_id": "N_POI_S001_e5f9736699ef",
-      "node_type": "POI",
-      "name": "箱根登山名产店 汤本店",
-      "scenic_id": "S001",
-      "source_refs": [
-        "S001_OFF_001"
-      ],
-      "attributes": {
-        "entity_id": null,
-        "alignment_status": "pending"
       }
     },
     {
@@ -421,19 +3071,6 @@
       }
     },
     {
-      "node_id": "N_POI_S001_4e5c49fb5db0",
-      "node_type": "POI",
-      "name": "早云山",
-      "scenic_id": "S001",
-      "source_refs": [
-        "S001_VIS_001"
-      ],
-      "attributes": {
-        "entity_id": null,
-        "alignment_status": "pending"
-      }
-    },
-    {
       "node_id": "N_STEP_R_S001_VIS_001_01_002",
       "node_type": "STEP",
       "name": "从早云山乘坐箱根登山吊舱(rope way)到终点桃源台下车",
@@ -455,19 +3092,6 @@
             "text": "从早云山乘坐箱根登山吊舱(rope way)到终点桃源台下车"
           }
         ]
-      }
-    },
-    {
-      "node_id": "N_POI_S001_efee2d89f691",
-      "node_type": "POI",
-      "name": "桃源台",
-      "scenic_id": "S001",
-      "source_refs": [
-        "S001_VIS_001"
-      ],
-      "attributes": {
-        "entity_id": null,
-        "alignment_status": "pending"
       }
     },
     {
@@ -516,19 +3140,6 @@
             "text": "来到一处可以眺望芦之湖的金太郎展望台"
           }
         ]
-      }
-    },
-    {
-      "node_id": "N_POI_S001_bb5b73d28fad",
-      "node_type": "POI",
-      "name": "金太郎展望台",
-      "scenic_id": "S001",
-      "source_refs": [
-        "S001_VIS_001"
-      ],
-      "attributes": {
-        "entity_id": null,
-        "alignment_status": "pending"
       }
     },
     {
@@ -639,19 +3250,6 @@
       }
     },
     {
-      "node_id": "N_POI_S003_d689932a79b4",
-      "node_type": "POI",
-      "name": "劳森黑凤头鹦鹉面包店",
-      "scenic_id": "S003",
-      "source_refs": [
-        "S003_OFF_001"
-      ],
-      "attributes": {
-        "entity_id": null,
-        "alignment_status": "pending"
-      }
-    },
-    {
       "node_id": "N_STEP_R_S003_OFF_001_01_002",
       "node_type": "STEP",
       "name": "只需 10 分钟车程穿过原始丛林即可到达温特沃斯(Wentworth)瀑布野餐区",
@@ -713,19 +3311,6 @@
       }
     },
     {
-      "node_id": "N_POI_S003_b9ea41f5bf1a",
-      "node_type": "POI",
-      "name": "杰米森瞭望台",
-      "scenic_id": "S003",
-      "source_refs": [
-        "S003_OFF_001"
-      ],
-      "attributes": {
-        "entity_id": null,
-        "alignment_status": "pending"
-      }
-    },
-    {
       "node_id": "N_STEP_R_S003_OFF_001_01_004",
       "node_type": "STEP",
       "name": "然后前往温特沃斯(Wentworth)瀑布步道 (Wentworth Falls Track)",
@@ -747,19 +3332,6 @@
             "text": "然后前往温特沃斯(Wentworth)瀑布步道 (Wentworth Falls Track) "
           }
         ]
-      }
-    },
-    {
-      "node_id": "N_POI_S003_5b5f2e6e2e53",
-      "node_type": "POI",
-      "name": "温特沃斯(Wentworth)瀑布步道",
-      "scenic_id": "S003",
-      "source_refs": [
-        "S003_OFF_001"
-      ],
-      "attributes": {
-        "entity_id": null,
-        "alignment_status": "pending"
       }
     },
     {
@@ -787,19 +3359,6 @@
       }
     },
     {
-      "node_id": "N_POI_S003_1fae3adf91f0",
-      "node_type": "POI",
-      "name": "Josophan's Fine Chocolates",
-      "scenic_id": "S003",
-      "source_refs": [
-        "S003_OFF_001"
-      ],
-      "attributes": {
-        "entity_id": null,
-        "alignment_status": "pending"
-      }
-    },
-    {
       "node_id": "N_STEP_R_S003_OFF_001_01_006",
       "node_type": "STEP",
       "name": "您可以参观罗拉(Leura)购物中心的凯特·索迪画廊 (Kate Soady Gallery)",
@@ -821,19 +3380,6 @@
             "text": "您可以参观罗拉(Leura)购物中心的凯特·索迪画廊 (Kate Soady Gallery) "
           }
         ]
-      }
-    },
-    {
-      "node_id": "N_POI_S003_b399c709a6ad",
-      "node_type": "POI",
-      "name": "凯特·索迪画廊",
-      "scenic_id": "S003",
-      "source_refs": [
-        "S003_OFF_001"
-      ],
-      "attributes": {
-        "entity_id": null,
-        "alignment_status": "pending"
       }
     },
     {
@@ -898,19 +3444,6 @@
       }
     },
     {
-      "node_id": "N_POI_S003_42f416506907",
-      "node_type": "POI",
-      "name": "埃文斯瞭望台",
-      "scenic_id": "S003",
-      "source_refs": [
-        "S003_OFF_001"
-      ],
-      "attributes": {
-        "entity_id": null,
-        "alignment_status": "pending"
-      }
-    },
-    {
       "node_id": "N_STEP_R_S003_OFF_001_01_009",
       "node_type": "STEP",
       "name": "可以轻松前往大峡谷步道",
@@ -935,19 +3468,6 @@
       }
     },
     {
-      "node_id": "N_POI_S003_4ab34ee33fc5",
-      "node_type": "POI",
-      "name": "大峡谷步道",
-      "scenic_id": "S003",
-      "source_refs": [
-        "S003_OFF_001"
-      ],
-      "attributes": {
-        "entity_id": null,
-        "alignment_status": "pending"
-      }
-    },
-    {
       "node_id": "N_STEP_R_S003_OFF_001_01_010",
       "node_type": "STEP",
       "name": "山地文化啤酒公司",
@@ -969,19 +3489,6 @@
             "text": " 山地文化啤酒公司"
           }
         ]
-      }
-    },
-    {
-      "node_id": "N_POI_S003_8393ce2a1178",
-      "node_type": "POI",
-      "name": "山地文化啤酒公司",
-      "scenic_id": "S003",
-      "source_refs": [
-        "S003_OFF_001"
-      ],
-      "attributes": {
-        "entity_id": null,
-        "alignment_status": "pending"
       }
     },
     {
@@ -1046,19 +3553,6 @@
       }
     },
     {
-      "node_id": "N_POI_S003_c795198741f0",
-      "node_type": "POI",
-      "name": "卡通巴瀑布自然保护区夜间灯光步道",
-      "scenic_id": "S003",
-      "source_refs": [
-        "S003_OFF_001"
-      ],
-      "attributes": {
-        "entity_id": null,
-        "alignment_status": "pending"
-      }
-    },
-    {
       "node_id": "N_ROUTE_R_S003_VIS_001_01",
       "node_type": "ROUTE",
       "name": "独行澳大利亚之二十悉尼蓝山（行进片段）",
@@ -1094,19 +3588,6 @@
             "text": "饭后驱车沿32号公路直上海拔1100米高的蓝山三姐妹峰"
           }
         ]
-      }
-    },
-    {
-      "node_id": "N_POI_S003_c0f34e208a08",
-      "node_type": "POI",
-      "name": "三姐妹峰",
-      "scenic_id": "S003",
-      "source_refs": [
-        "S003_VIS_001"
-      ],
-      "attributes": {
-        "entity_id": null,
-        "alignment_status": "pending"
       }
     },
     {
@@ -1171,7 +3652,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S001_OFF_001_01_001",
       "source": "N_STEP_R_S001_OFF_001_01_001",
-      "target": "N_POI_S001_cd33aa0f571f",
+      "target": "N_ENTITY_S001_POI_005",
       "relation": "VISITS",
       "source_refs": [
         "S001_OFF_001"
@@ -1183,6 +3664,44 @@
             "start": 222,
             "end": 246,
             "text": "7:30 ~ 从新宿乘坐“浪漫”特快前往箱根汤本"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_AT_TIME_R_S001_OFF_001_01_001_M_S001_OFF_001_0011",
+      "source": "N_STEP_R_S001_OFF_001_01_001",
+      "target": "N_ENTITY_S001_TIME_003",
+      "relation": "AT_TIME",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 222,
+            "end": 226,
+            "text": "7:30"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_USES_TRANSPORT_R_S001_OFF_001_01_001_M_S001_OFF_001_0013",
+      "source": "N_STEP_R_S001_OFF_001_01_001",
+      "target": "N_ENTITY_S001_TRANSPORT_015",
+      "relation": "USES_TRANSPORT",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 234,
+            "end": 240,
+            "text": "“浪漫”特快"
           }
         ]
       }
@@ -1212,7 +3731,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S001_OFF_001_01_002",
       "source": "N_STEP_R_S001_OFF_001_01_002",
-      "target": "N_POI_S001_4710f36491d0",
+      "target": "N_ENTITY_S001_POI_005",
       "relation": "VISITS",
       "source_refs": [
         "S001_OFF_001"
@@ -1224,6 +3743,25 @@
             "start": 544,
             "end": 564,
             "text": "9:20 ~ 在箱根入口·箱根汤本站换乘"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_AT_TIME_R_S001_OFF_001_01_002_M_S001_OFF_001_0030",
+      "source": "N_STEP_R_S001_OFF_001_01_002",
+      "target": "N_ENTITY_S001_TIME_004",
+      "relation": "AT_TIME",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 544,
+            "end": 548,
+            "text": "9:20"
           }
         ]
       }
@@ -1253,7 +3791,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S001_OFF_001_01_003",
       "source": "N_STEP_R_S001_OFF_001_01_003",
-      "target": "N_POI_S001_8d24b40365ea",
+      "target": "N_ENTITY_S001_POI_007",
       "relation": "VISITS",
       "source_refs": [
         "S001_OFF_001"
@@ -1265,6 +3803,44 @@
             "start": 712,
             "end": 738,
             "text": "9:25 ~ 乘坐箱根登山电车前往箱根雕刻森林美术馆"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_AT_TIME_R_S001_OFF_001_01_003_M_S001_OFF_001_0039",
+      "source": "N_STEP_R_S001_OFF_001_01_003",
+      "target": "N_ENTITY_S001_TIME_005",
+      "relation": "AT_TIME",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 712,
+            "end": 716,
+            "text": "9:25"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_USES_TRANSPORT_R_S001_OFF_001_01_003_M_S001_OFF_001_0040",
+      "source": "N_STEP_R_S001_OFF_001_01_003",
+      "target": "N_ENTITY_S001_TRANSPORT_010",
+      "relation": "USES_TRANSPORT",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 721,
+            "end": 727,
+            "text": "箱根登山电车"
           }
         ]
       }
@@ -1294,7 +3870,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S001_OFF_001_01_004",
       "source": "N_STEP_R_S001_OFF_001_01_004",
-      "target": "N_POI_S001_8d24b40365ea",
+      "target": "N_ENTITY_S001_POI_007",
       "relation": "VISITS",
       "source_refs": [
         "S001_OFF_001"
@@ -1306,6 +3882,44 @@
             "start": 942,
             "end": 966,
             "text": "10:00 ~ 在箱根雕刻森林美术馆享受艺术漫步"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_AT_TIME_R_S001_OFF_001_01_004_M_S001_OFF_001_0053",
+      "source": "N_STEP_R_S001_OFF_001_01_004",
+      "target": "N_ENTITY_S001_TIME_006",
+      "relation": "AT_TIME",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 942,
+            "end": 947,
+            "text": "10:00"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_USES_TRANSPORT_R_S001_OFF_001_01_004_M_S001_OFF_001_0055",
+      "source": "N_STEP_R_S001_OFF_001_01_004",
+      "target": "N_ENTITY_S001_TRANSPORT_001",
+      "relation": "USES_TRANSPORT",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 964,
+            "end": 966,
+            "text": "漫步"
           }
         ]
       }
@@ -1335,7 +3949,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S001_OFF_001_01_005",
       "source": "N_STEP_R_S001_OFF_001_01_005",
-      "target": "N_POI_S001_dee07e824505",
+      "target": "N_ENTITY_S001_POI_002",
       "relation": "VISITS",
       "source_refs": [
         "S001_OFF_001"
@@ -1347,6 +3961,44 @@
             "start": 1276,
             "end": 1297,
             "text": "11:20 ~ 乘坐箱根登山缆车前往大涌谷"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_AT_TIME_R_S001_OFF_001_01_005_M_S001_OFF_001_0064",
+      "source": "N_STEP_R_S001_OFF_001_01_005",
+      "target": "N_ENTITY_S001_TIME_007",
+      "relation": "AT_TIME",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1276,
+            "end": 1281,
+            "text": "11:20"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_USES_TRANSPORT_R_S001_OFF_001_01_005_M_S001_OFF_001_0065",
+      "source": "N_STEP_R_S001_OFF_001_01_005",
+      "target": "N_ENTITY_S001_TRANSPORT_011",
+      "relation": "USES_TRANSPORT",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1286,
+            "end": 1292,
+            "text": "箱根登山缆车"
           }
         ]
       }
@@ -1376,7 +4028,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S001_OFF_001_01_006",
       "source": "N_STEP_R_S001_OFF_001_01_006",
-      "target": "N_POI_S001_9a7284ecee80",
+      "target": "N_ENTITY_S001_POI_009",
       "relation": "VISITS",
       "source_refs": [
         "S001_OFF_001"
@@ -1394,6 +4046,44 @@
             "start": 1427,
             "end": 1431,
             "text": "早云山站"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_AT_TIME_R_S001_OFF_001_01_006_M_S001_OFF_001_0073",
+      "source": "N_STEP_R_S001_OFF_001_01_006",
+      "target": "N_ENTITY_S001_TIME_008",
+      "relation": "AT_TIME",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1395,
+            "end": 1400,
+            "text": "11:45"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_USES_TRANSPORT_R_S001_OFF_001_01_006_M_S001_OFF_001_0075",
+      "source": "N_STEP_R_S001_OFF_001_01_006",
+      "target": "N_ENTITY_S001_TRANSPORT_012",
+      "relation": "USES_TRANSPORT",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1412,
+            "end": 1418,
+            "text": "箱根空中缆车"
           }
         ]
       }
@@ -1423,7 +4113,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S001_OFF_001_01_007",
       "source": "N_STEP_R_S001_OFF_001_01_007",
-      "target": "N_POI_S001_dee07e824505",
+      "target": "N_ENTITY_S001_POI_002",
       "relation": "VISITS",
       "source_refs": [
         "S001_OFF_001"
@@ -1435,6 +4125,25 @@
             "start": 1560,
             "end": 1592,
             "text": "12:55 ~ 在大涌谷尽情欣赏动人心弦的自然美景&品尝特色美食"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_AT_TIME_R_S001_OFF_001_01_007_M_S001_OFF_001_0085",
+      "source": "N_STEP_R_S001_OFF_001_01_007",
+      "target": "N_ENTITY_S001_TIME_011",
+      "relation": "AT_TIME",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1560,
+            "end": 1565,
+            "text": "12:55"
           }
         ]
       }
@@ -1464,7 +4173,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S001_OFF_001_01_008",
       "source": "N_STEP_R_S001_OFF_001_01_008",
-      "target": "N_POI_S001_7d7a00eea7b4",
+      "target": "N_ENTITY_S001_POI_003",
       "relation": "VISITS",
       "source_refs": [
         "S001_OFF_001"
@@ -1476,6 +4185,44 @@
             "start": 2051,
             "end": 2085,
             "text": "14:20 ~ 从大涌谷前往芦之湖,乘坐箱根海贼观光船游览芦之湖吧!"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_AT_TIME_R_S001_OFF_001_01_008_M_S001_OFF_001_0106",
+      "source": "N_STEP_R_S001_OFF_001_01_008",
+      "target": "N_ENTITY_S001_TIME_012",
+      "relation": "AT_TIME",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2051,
+            "end": 2056,
+            "text": "14:20"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_USES_TRANSPORT_R_S001_OFF_001_01_008_M_S001_OFF_001_0109",
+      "source": "N_STEP_R_S001_OFF_001_01_008",
+      "target": "N_ENTITY_S001_TRANSPORT_014",
+      "relation": "USES_TRANSPORT",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2071,
+            "end": 2078,
+            "text": "箱根海贼观光船"
           }
         ]
       }
@@ -1505,7 +4252,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S001_OFF_001_01_009",
       "source": "N_STEP_R_S001_OFF_001_01_009",
-      "target": "N_POI_S001_b0d173157925",
+      "target": "N_ENTITY_S001_POI_014",
       "relation": "VISITS",
       "source_refs": [
         "S001_OFF_001"
@@ -1517,6 +4264,25 @@
             "start": 2316,
             "end": 2337,
             "text": "15:40 ~ 参拜具有历史渊源的箱根神社"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_AT_TIME_R_S001_OFF_001_01_009_M_S001_OFF_001_0128",
+      "source": "N_STEP_R_S001_OFF_001_01_009",
+      "target": "N_ENTITY_S001_TIME_013",
+      "relation": "AT_TIME",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2316,
+            "end": 2321,
+            "text": "15:40"
           }
         ]
       }
@@ -1546,7 +4312,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S001_OFF_001_01_010",
       "source": "N_STEP_R_S001_OFF_001_01_010",
-      "target": "N_POI_S001_e5f9736699ef",
+      "target": "N_ENTITY_S001_POI_025",
       "relation": "VISITS",
       "source_refs": [
         "S001_OFF_001"
@@ -1558,6 +4324,25 @@
             "start": 2686,
             "end": 2715,
             "text": "17:00 ~ 购买伴手礼推荐去“箱根登山名产店 汤本店”"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_AT_TIME_R_S001_OFF_001_01_010_M_S001_OFF_001_0149",
+      "source": "N_STEP_R_S001_OFF_001_01_010",
+      "target": "N_ENTITY_S001_TIME_016",
+      "relation": "AT_TIME",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2686,
+            "end": 2691,
+            "text": "17:00"
           }
         ]
       }
@@ -1585,7 +4370,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S001_VIS_001_01_001",
       "source": "N_STEP_R_S001_VIS_001_01_001",
-      "target": "N_POI_S001_4e5c49fb5db0",
+      "target": "N_ENTITY_S001_POI_009",
       "relation": "VISITS",
       "source_refs": [
         "S001_VIS_001"
@@ -1597,6 +4382,44 @@
             "start": 15,
             "end": 45,
             "text": "从早云山乘坐箱根登山吊舱(rope way)到终点桃源台下车"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_USES_TRANSPORT_R_S001_VIS_001_01_001_M_S001_VIS_001_0003",
+      "source": "N_STEP_R_S001_VIS_001_01_001",
+      "target": "N_ENTITY_S001_TRANSPORT_012",
+      "relation": "USES_TRANSPORT",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 21,
+            "end": 27,
+            "text": "箱根登山吊舱"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_USES_TRANSPORT_R_S001_VIS_001_01_001_M_S001_VIS_001_0004",
+      "source": "N_STEP_R_S001_VIS_001_01_001",
+      "target": "N_ENTITY_S001_TRANSPORT_012",
+      "relation": "USES_TRANSPORT",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 28,
+            "end": 36,
+            "text": "rope way"
           }
         ]
       }
@@ -1626,7 +4449,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S001_VIS_001_01_002",
       "source": "N_STEP_R_S001_VIS_001_01_002",
-      "target": "N_POI_S001_efee2d89f691",
+      "target": "N_ENTITY_S001_POI_010",
       "relation": "VISITS",
       "source_refs": [
         "S001_VIS_001"
@@ -1638,6 +4461,44 @@
             "start": 15,
             "end": 45,
             "text": "从早云山乘坐箱根登山吊舱(rope way)到终点桃源台下车"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_USES_TRANSPORT_R_S001_VIS_001_01_002_M_S001_VIS_001_0003",
+      "source": "N_STEP_R_S001_VIS_001_01_002",
+      "target": "N_ENTITY_S001_TRANSPORT_012",
+      "relation": "USES_TRANSPORT",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 21,
+            "end": 27,
+            "text": "箱根登山吊舱"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_USES_TRANSPORT_R_S001_VIS_001_01_002_M_S001_VIS_001_0004",
+      "source": "N_STEP_R_S001_VIS_001_01_002",
+      "target": "N_ENTITY_S001_TRANSPORT_012",
+      "relation": "USES_TRANSPORT",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 28,
+            "end": 36,
+            "text": "rope way"
           }
         ]
       }
@@ -1667,7 +4528,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S001_VIS_001_01_003",
       "source": "N_STEP_R_S001_VIS_001_01_003",
-      "target": "N_POI_S001_7d7a00eea7b4",
+      "target": "N_ENTITY_S001_POI_003",
       "relation": "VISITS",
       "source_refs": [
         "S001_VIS_001"
@@ -1708,7 +4569,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S001_VIS_001_01_004",
       "source": "N_STEP_R_S001_VIS_001_01_004",
-      "target": "N_POI_S001_bb5b73d28fad",
+      "target": "N_ENTITY_S001_POI_027",
       "relation": "VISITS",
       "source_refs": [
         "S001_VIS_001"
@@ -1766,6 +4627,44 @@
       }
     },
     {
+      "edge_id": "EDGE_AT_TIME_R_S001_VIS_001_01_005_M_S001_VIS_001_0011",
+      "source": "N_STEP_R_S001_VIS_001_01_005",
+      "target": "N_ENTITY_S001_TIME_021",
+      "relation": "AT_TIME",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 477,
+            "end": 480,
+            "text": "1小时"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_USES_TRANSPORT_R_S001_VIS_001_01_005_M_S001_VIS_001_0012",
+      "source": "N_STEP_R_S001_VIS_001_01_005",
+      "target": "N_ENTITY_S001_TRANSPORT_005",
+      "relation": "USES_TRANSPORT",
+      "source_refs": [
+        "S001_VIS_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_001",
+            "start": 484,
+            "end": 486,
+            "text": "缆车"
+          }
+        ]
+      }
+    },
+    {
       "edge_id": "EDGE_HAS_STEP_R_S001_VIS_001_01_006",
       "source": "N_ROUTE_R_S001_VIS_001_01",
       "target": "N_STEP_R_S001_VIS_001_01_006",
@@ -1790,7 +4689,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S001_VIS_001_01_006",
       "source": "N_STEP_R_S001_VIS_001_01_006",
-      "target": "N_POI_S001_dee07e824505",
+      "target": "N_ENTITY_S001_POI_002",
       "relation": "VISITS",
       "source_refs": [
         "S001_VIS_001"
@@ -1829,7 +4728,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S003_OFF_001_01_001",
       "source": "N_STEP_R_S003_OFF_001_01_001",
-      "target": "N_POI_S003_d689932a79b4",
+      "target": "N_ENTITY_S003_POI_027",
       "relation": "VISITS",
       "source_refs": [
         "S003_OFF_001"
@@ -1887,6 +4786,25 @@
       }
     },
     {
+      "edge_id": "EDGE_AT_TIME_R_S003_OFF_001_01_002_M_S003_OFF_001_0074",
+      "source": "N_STEP_R_S003_OFF_001_01_002",
+      "target": "N_ENTITY_S003_TIME_013",
+      "relation": "AT_TIME",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2024,
+            "end": 2029,
+            "text": "10 分钟"
+          }
+        ]
+      }
+    },
+    {
       "edge_id": "EDGE_HAS_STEP_R_S003_OFF_001_01_003",
       "source": "N_ROUTE_R_S003_OFF_001_01",
       "target": "N_STEP_R_S003_OFF_001_01_003",
@@ -1911,7 +4829,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S003_OFF_001_01_003",
       "source": "N_STEP_R_S003_OFF_001_01_003",
-      "target": "N_POI_S003_b9ea41f5bf1a",
+      "target": "N_ENTITY_S003_POI_012",
       "relation": "VISITS",
       "source_refs": [
         "S003_OFF_001"
@@ -1952,7 +4870,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S003_OFF_001_01_004",
       "source": "N_STEP_R_S003_OFF_001_01_004",
-      "target": "N_POI_S003_5b5f2e6e2e53",
+      "target": "N_ENTITY_S003_POI_014",
       "relation": "VISITS",
       "source_refs": [
         "S003_OFF_001"
@@ -1993,7 +4911,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S003_OFF_001_01_005",
       "source": "N_STEP_R_S003_OFF_001_01_005",
-      "target": "N_POI_S003_1fae3adf91f0",
+      "target": "N_ENTITY_S003_POI_028",
       "relation": "VISITS",
       "source_refs": [
         "S003_OFF_001"
@@ -2034,7 +4952,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S003_OFF_001_01_006",
       "source": "N_STEP_R_S003_OFF_001_01_006",
-      "target": "N_POI_S003_b399c709a6ad",
+      "target": "N_ENTITY_S003_POI_029",
       "relation": "VISITS",
       "source_refs": [
         "S003_OFF_001"
@@ -2092,6 +5010,25 @@
       }
     },
     {
+      "edge_id": "EDGE_USES_TRANSPORT_R_S003_OFF_001_01_007_M_S003_OFF_001_0106",
+      "source": "N_STEP_R_S003_OFF_001_01_007",
+      "target": "N_ENTITY_S003_TRANSPORT_004",
+      "relation": "USES_TRANSPORT",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2618,
+            "end": 2620,
+            "text": "驾车"
+          }
+        ]
+      }
+    },
+    {
       "edge_id": "EDGE_HAS_STEP_R_S003_OFF_001_01_008",
       "source": "N_ROUTE_R_S003_OFF_001_01",
       "target": "N_STEP_R_S003_OFF_001_01_008",
@@ -2116,7 +5053,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S003_OFF_001_01_008",
       "source": "N_STEP_R_S003_OFF_001_01_008",
-      "target": "N_POI_S003_42f416506907",
+      "target": "N_ENTITY_S003_POI_017",
       "relation": "VISITS",
       "source_refs": [
         "S003_OFF_001"
@@ -2157,7 +5094,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S003_OFF_001_01_009",
       "source": "N_STEP_R_S003_OFF_001_01_009",
-      "target": "N_POI_S003_4ab34ee33fc5",
+      "target": "N_ENTITY_S003_POI_019",
       "relation": "VISITS",
       "source_refs": [
         "S003_OFF_001"
@@ -2198,7 +5135,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S003_OFF_001_01_010",
       "source": "N_STEP_R_S003_OFF_001_01_010",
-      "target": "N_POI_S003_8393ce2a1178",
+      "target": "N_ENTITY_S003_POI_026",
       "relation": "VISITS",
       "source_refs": [
         "S003_OFF_001"
@@ -2256,6 +5193,44 @@
       }
     },
     {
+      "edge_id": "EDGE_AT_TIME_R_S003_OFF_001_01_011_M_S003_OFF_001_0137",
+      "source": "N_STEP_R_S003_OFF_001_01_011",
+      "target": "N_ENTITY_S003_TIME_007",
+      "relation": "AT_TIME",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3228,
+            "end": 3233,
+            "text": "90 分钟"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_USES_TRANSPORT_R_S003_OFF_001_01_011_M_S003_OFF_001_0138",
+      "source": "N_STEP_R_S003_OFF_001_01_011",
+      "target": "N_ENTITY_S003_TRANSPORT_005",
+      "relation": "USES_TRANSPORT",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3235,
+            "end": 3237,
+            "text": "缆车"
+          }
+        ]
+      }
+    },
+    {
       "edge_id": "EDGE_HAS_STEP_R_S003_OFF_001_01_012",
       "source": "N_ROUTE_R_S003_OFF_001_01",
       "target": "N_STEP_R_S003_OFF_001_01_012",
@@ -2280,7 +5255,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S003_OFF_001_01_012",
       "source": "N_STEP_R_S003_OFF_001_01_012",
-      "target": "N_POI_S003_c795198741f0",
+      "target": "N_ENTITY_S003_POI_024",
       "relation": "VISITS",
       "source_refs": [
         "S003_OFF_001"
@@ -2292,6 +5267,25 @@
             "start": 3365,
             "end": 3387,
             "text": "感受卡通巴瀑布自然保护区夜间灯光步道黄昏时分"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_AT_TIME_R_S003_OFF_001_01_012_M_S003_OFF_001_0145",
+      "source": "N_STEP_R_S003_OFF_001_01_012",
+      "target": "N_ENTITY_S003_TIME_011",
+      "relation": "AT_TIME",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3383,
+            "end": 3385,
+            "text": "黄昏"
           }
         ]
       }
@@ -2319,7 +5313,7 @@
     {
       "edge_id": "EDGE_VISITS_R_S003_VIS_001_01_001",
       "source": "N_STEP_R_S003_VIS_001_01_001",
-      "target": "N_POI_S003_c0f34e208a08",
+      "target": "N_ENTITY_S003_POI_002",
       "relation": "VISITS",
       "source_refs": [
         "S003_VIS_001"
@@ -2331,6 +5325,25 @@
             "start": 163,
             "end": 190,
             "text": "饭后驱车沿32号公路直上海拔1100米高的蓝山三姐妹峰"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_USES_TRANSPORT_R_S003_VIS_001_01_001_M_S003_VIS_001_0007",
+      "source": "N_STEP_R_S003_VIS_001_01_001",
+      "target": "N_ENTITY_S003_TRANSPORT_004",
+      "relation": "USES_TRANSPORT",
+      "source_refs": [
+        "S003_VIS_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 165,
+            "end": 167,
+            "text": "驱车"
           }
         ]
       }
@@ -2372,6 +5385,25 @@
             "start": 761,
             "end": 784,
             "text": "而是驱车前往Jenolan Caves珍罗兰洞"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_USES_TRANSPORT_R_S003_VIS_001_01_002_M_S003_VIS_001_0025",
+      "source": "N_STEP_R_S003_VIS_001_01_002",
+      "target": "N_ENTITY_S003_TRANSPORT_004",
+      "relation": "USES_TRANSPORT",
+      "source_refs": [
+        "S003_VIS_001"
+      ],
+      "attributes": {
+        "evidence": [
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 763,
+            "end": 765,
+            "text": "驱车"
           }
         ]
       }

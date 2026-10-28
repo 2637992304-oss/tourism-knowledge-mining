@@ -21,7 +21,7 @@ def main():
     metrics, comparisons = [], []
     refs = 0
     for route in routes:
-        predicted = [s["poi_name"] for s in route["steps"]]
+        predicted = [s.get("raw_poi_name", s["poi_name"]) for s in route["steps"]]
         expected = gold["routes"][route["route_id"]]
         hits = sum((Counter(predicted) & Counter(expected)).values())
         ordered = lcs(predicted, expected)
@@ -32,7 +32,7 @@ def main():
                         "sequence_recall": ordered / len(expected),
                         "missing": list((Counter(expected) - Counter(predicted)).elements())})
         for s in route["steps"]:
-            assert any(s["poi_name"] in ref["text"] for ref in s["evidence"]) or s["poi_entity_id"], s
+            assert any(s.get("raw_poi_name", s["poi_name"]) in ref["text"] for ref in s["evidence"]), s
             for ref in s["evidence"]:
                 assert docs[ref["doc_id"]]["text"][ref["start"]:ref["end"]] == ref["text"]
                 refs += 1

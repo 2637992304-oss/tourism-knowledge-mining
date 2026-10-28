@@ -43,7 +43,7 @@ def make_step(doc, no, poi, activity, start, end, time_text=None):
               else "afternoon" if hour < 18 else "evening") if hour is not None else "unknown"
     return {
         "step_no": no, "time_bucket": bucket, "time_text": time_text,
-        "poi_entity_id": None, "poi_name": poi, "activity": activity,
+        "poi_entity_id": None, "poi_name": poi, "raw_poi_name": poi, "activity": activity,
         "duration_minutes": None,
         "evidence": [{"doc_id": doc["doc_id"], "start": start, "end": end,
                       "text": doc["text"][start:end]}],
@@ -110,7 +110,7 @@ def main():
             for route in routes:
                 for step in route["steps"]:
                     candidates = [e for e in entities["entity_catalog"]
-                                  if e["scenic_id"] == route["scenic_id"] and e["entity_type"] == "POI"
+                                  if e.get("active", True) and e["scenic_id"] == route["scenic_id"] and e["entity_type"] == "POI"
                                   and step["poi_name"] in [e["canonical_name"], *e.get("aliases", [])]]
                     if len(candidates) == 1:
                         step["poi_entity_id"] = candidates[0]["entity_id"]

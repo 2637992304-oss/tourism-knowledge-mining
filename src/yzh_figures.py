@@ -5,7 +5,8 @@ import math
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
-PALETTE = {"SCENIC": "#194b70", "ROUTE": "#376b96", "STEP": "#e5f0f7", "POI": "#e4f2e8"}
+PALETTE = {"SCENIC": "#194b70", "ROUTE": "#376b96", "STEP": "#e5f0f7", "POI": "#e4f2e8",
+           "TIME": "#f4e6cf", "TRANSPORT": "#eae3f5"}
 
 
 def font(path, size):
@@ -71,17 +72,17 @@ def main():
 
     graph = json.loads(Path("data/outputs/graph.json").read_text(encoding="utf-8"))
     nodes = {n["node_id"]: n for n in graph["nodes"] if n["scenic_id"] == "S001"}
-    im = Image.new("RGB", (2100, 1900), "#f8fafc")
+    im = Image.new("RGB", (2700, 2100), "#f8fafc")
     draw = ImageDraw.Draw(im)
     draw.text((55, 30), "实验 6 · 箱根路线知识图谱", font=title, fill="#183344")
-    draw.text((55, 95), "route_stage / 实体与条件建议尚未交付；地点按原文字面保留", font=f, fill="#8b4a27")
+    draw.text((55, 95), graph["completion_status"] + " / 已对齐实体按标准名称显示；条件建议输入状态见 graph.json", font=f, fill="#8b4a27")
     draw.text((55, 145), "景区 → HAS_ROUTE → 路线 → HAS_STEP → 步骤 → VISITS → 地点；纵向箭头为 NEXT_STEP", font=f, fill="#486475")
     positions = {}
-    kinds = ["SCENIC", "ROUTE", "STEP", "POI"]
-    for layer, kind in enumerate(kinds):
-        ids = [key for key, node in nodes.items() if node["node_type"] == kind]
+    kinds = [("SCENIC",), ("ROUTE",), ("STEP",), ("POI",), ("TIME", "TRANSPORT")]
+    for layer, group in enumerate(kinds):
+        ids = [key for key, node in nodes.items() if node["node_type"] in group]
         for i, key in enumerate(ids):
-            positions[key] = (220 + layer*545, 280 + (i+0.5)*1450/max(len(ids), 1))
+            positions[key] = (220 + layer*545, 280 + (i+0.5)*1600/max(len(ids), 1))
     for edge in graph["edges"]:
         if edge["source"] not in nodes or edge["target"] not in nodes:
             continue
@@ -98,8 +99,10 @@ def main():
         if kind == "STEP":
             at = node["attributes"]
             text = f"{'官方' if 'OFF' in at['route_id'] else '游客'} 步骤 {at['step_no']} / {at['time_text'] or 'unknown'}"
+        if kind in ("TIME", "TRANSPORT"):
+            text = ("时间 " if kind == "TIME" else "交通 ") + text
         box(draw, positions[key], text, f, PALETTE[kind], dark=kind in ("SCENIC", "ROUTE"))
-    draw.text((55, 1820), "数据源：data/outputs/graph.json；步骤与边的 attributes.evidence 可回查 corpus.jsonl", font=f, fill="#486475")
+    draw.text((55, 2020), "数据源：graph.json；右列为 AT_TIME / USES_TRANSPORT 目标；已过滤未关联实体", font=f, fill="#486475")
     im.save(output / "exp06_hakone_graph.png")
     print("saved exp03_time_hierarchy.png and exp06_hakone_graph.png")
 

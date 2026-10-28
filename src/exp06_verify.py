@@ -24,6 +24,8 @@ def main():
         graph.add_edge(edge["source"], edge["target"], key=edge["edge_id"], **edge)
         for ref in edge["attributes"].get("evidence", []):
             assert docs[ref["doc_id"]]["text"][ref["start"]:ref["end"]] == ref["text"]
+    assert not list(nx.isolates(graph)), "存在未关联节点"
+    assert all("N_ENTITY_" + eid not in graph for eid in data.get("inactive_entities_skipped", [])), "停用实体被导入"
     next_edges = [e for e in data["edges"] if e["relation"] == "NEXT_STEP"]
     chain_results = []
     for route in routes:
@@ -60,6 +62,15 @@ def main():
               "weak_components": nx.number_weakly_connected_components(graph),
               "route_checks": chain_results, "queries": queries, "checks_passed": True}
     Path("results/checks/exp06_quality.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    alignment = [{"route_id": r["route_id"], "step_no": s["step_no"],
+                  "raw_poi_name": s.get("raw_poi_name", s["poi_name"]), "poi_name": s["poi_name"],
+                  "entity_id": s["poi_entity_id"], "evidence": s["evidence"]}
+                 for r in routes for s in r["steps"]]
+    alignment_result = {"steps": len(alignment), "aligned": sum(bool(s["entity_id"]) for s in alignment),
+                        "pending": [s for s in alignment if not s["entity_id"]],
+                        "inactive_entities_skipped": data.get("inactive_entities_skipped", []),
+                        "unused_entity_nodes_filtered": len(data.get("unused_entity_nodes_filtered", []))}
+    Path("results/checks/exp06_alignment.json").write_text(json.dumps(alignment_result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"nodes": graph.number_of_nodes(), "edges": graph.number_of_edges(),
                       "route_checks": len(chain_results), "checks_passed": True}))
 

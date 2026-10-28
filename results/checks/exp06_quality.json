@@ -1,21 +1,24 @@
 {
-  "graph_status": "route_stage",
+  "graph_status": "entity_route_fused",
   "missing_inputs": [
-    "entities.json",
     "advice.json"
   ],
-  "nodes": 62,
-  "edges": 90,
+  "nodes": 83,
+  "edges": 119,
   "node_types": {
+    "POI": 24,
+    "TIME": 14,
+    "TRANSPORT": 9,
     "SCENIC": 2,
     "ROUTE": 4,
-    "STEP": 30,
-    "POI": 26
+    "STEP": 30
   },
   "relations": {
     "HAS_ROUTE": 4,
     "HAS_STEP": 30,
     "VISITS": 30,
+    "AT_TIME": 14,
+    "USES_TRANSPORT": 15,
     "NEXT_STEP": 26
   },
   "isolated_nodes": [],
@@ -54,11 +57,11 @@
       "query": "官方箱根路线的有序地点",
       "result": [
         "箱根汤本",
-        "箱根汤本站",
+        "箱根汤本",
         "箱根雕刻森林美术馆",
         "箱根雕刻森林美术馆",
         "大涌谷",
-        "早云山站",
+        "早云山",
         "大涌谷",
         "芦之湖",
         "箱根神社",
