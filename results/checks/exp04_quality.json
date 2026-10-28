@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "python": "3.12.14",
+  "documents": 5,
+  "characters": 6053,
+  "cases": 59,
+  "checked_evidence_spans": 404,
+  "ids_unique": true,
+  "input_hashes_unchanged": {
+    "data/processed/corpus.jsonl": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0",
+    "data/outputs/entities.json": "a61b4ae87293d04896e9bca218acc15a9eeb622f326954908eab62fe3486ddb2",
+    "data/resources/exp04_reference.json": "a24ca1764030d08ee294e4904a46d74fc6d9ae7bcae0b995a7082f3df18dd642"
+  },
+  "deterministic_rerun": true,
+  "full_document_detection_matches_reference": true,
+  "repeated_pronouns_in_corpus": [
+    {
+      "doc_id": "S002_VIS_005",
+      "sentence_start": 1510,
+      "pronoun": "这里",
+      "count": 2
+    },
+    {
+      "doc_id": "S002_VIS_005",
+      "sentence_start": 1631,
+      "pronoun": "这里",
+      "count": 2
+    }
+  ],
+  "synthetic_duplicate_position_check": true,
+  "resolved_document_maps_valid": true,
+  "metrics_recomputed": true,
+  "semantic_review_provenance": "AI辅助逐例阅读原文并标注，非学生或多名人工标注者独立复核；在运行消解预测前固定此参考。"
+}

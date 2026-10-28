@@ -1,0 +1,5480 @@
+{
+  "schema_version": "1.0",
+  "corpus_version": "v1",
+  "corpus_sha256": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0",
+  "entities_sha256": "a61b4ae87293d04896e9bca218acc15a9eeb622f326954908eab62fe3486ddb2",
+  "reference_sha256": "a24ca1764030d08ee294e4904a46d74fc6d9ae7bcae0b995a7082f3df18dd642",
+  "annotation_provenance": "AI辅助逐例阅读原文并标注，非学生或多名人工标注者独立复核；在运行消解预测前固定此参考。",
+  "parameters": {
+    "variant": "baseline",
+    "window_characters": 320,
+    "max_previous_sentences": 4,
+    "pronoun_pattern": "(?<!其)(?:他们|她们|它们|这里|那里|此处|这儿|那儿|这位|那位|这个|那个|这些|那些|它|他|她|这(?!么|样)|那(?!么|样))"
+  },
+  "documents": [
+    {
+      "doc_id": "S001_VIS_001",
+      "scenic_id": "S001",
+      "source_title": "第三次日本行：3湖尻〜大涌谷徒步",
+      "source_url": "https://you.ctrip.com/travels/Hakone60571/1826441.html",
+      "characters": 993
+    },
+    {
+      "doc_id": "S001_VIS_003",
+      "scenic_id": "S001",
+      "source_title": "箱根温泉2日之旅",
+      "source_url": "https://you.ctrip.com/travels/Japan100041/4120600.html",
+      "characters": 972
+    },
+    {
+      "doc_id": "S002_VIS_005",
+      "scenic_id": "S002",
+      "source_title": "北美 ｜ 国家公园(1)：Yosemite优胜美地",
+      "source_url": "https://www.8264.com/youji/5722172.html",
+      "characters": 2028
+    },
+    {
+      "doc_id": "S003_VIS_001",
+      "scenic_id": "S003",
+      "source_title": "独行澳大利亚之二十悉尼蓝山",
+      "source_url": "https://you.ctrip.com/travels/Australia100048/1884682.html",
+      "characters": 1608
+    },
+    {
+      "doc_id": "S003_VIS_005",
+      "scenic_id": "S003",
+      "source_title": "蓝山公园（Blue Mountains National Park）——澳大利亚悉尼游记（3）",
+      "source_url": "https://www.meipian.cn/4012kleg",
+      "characters": 452
+    }
+  ],
+  "metrics": {
+    "total": 59,
+    "positive": 48,
+    "gold_null": 11,
+    "answered": 54,
+    "correct_links": 13,
+    "correct_nulls": 3,
+    "metrics": {
+      "overall_accuracy": {
+        "numerator": 16,
+        "denominator": 59,
+        "value": 0.2711864406779661
+      },
+      "positive_accuracy": {
+        "numerator": 13,
+        "denominator": 48,
+        "value": 0.2708333333333333
+      },
+      "coverage": {
+        "numerator": 54,
+        "denominator": 59,
+        "value": 0.9152542372881356
+      },
+      "answered_precision": {
+        "numerator": 13,
+        "denominator": 54,
+        "value": 0.24074074074074073
+      },
+      "null_rejection_accuracy": {
+        "numerator": 3,
+        "denominator": 11,
+        "value": 0.2727272727272727
+      },
+      "unresolved_rate": {
+        "numerator": 5,
+        "denominator": 59,
+        "value": 0.0847457627118644
+      }
+    },
+    "status_counts": {
+      "resolved": 48,
+      "non_anaphoric": 4,
+      "exophoric": 5,
+      "ambiguous": 2
+    }
+  },
+  "cases": [
+    {
+      "case_id": "CR_S001_VIS_001_00068",
+      "doc_id": "S001_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S001_VIS_001",
+        "start": 68,
+        "end": 69,
+        "text": "这"
+      },
+      "sentence": {
+        "doc_id": "S001_VIS_001",
+        "start": 68,
+        "end": 95,
+        "text": "这是一条享受森林浴的徒步线路,而且难度不大、老少皆宜。"
+      },
+      "sentence_index": 2,
+      "context": {
+        "doc_id": "S001_VIS_001",
+        "start": 0,
+        "end": 169,
+        "text": "第1天 2014-05-18\n从早云山乘坐箱根登山吊舱(rope way)到终点桃源台下车,走出站外的湖边即能看见一个徒步路线的标识牌。这是一条享受森林浴的徒步线路,而且难度不大、老少皆宜。\n黑石渣铺成的路面一直延伸到芦之湖畔,路旁植被繁茂,即便烈日当头仍然十分凉爽,处处散发着绿叶的清香味道,走上一会儿堪比洗肺功效。\n没走多久路过一片花"
+      },
+      "predicted_antecedent": {
+        "text": "步行",
+        "entity_id": "S001_TRANSPORT_001"
+      },
+      "predicted_evidence": {
+        "doc_id": "S001_VIS_001",
+        "start": 59,
+        "end": 61,
+        "text": "徒步"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "步行",
+          "entity_id": "S001_TRANSPORT_001",
+          "candidate_type": "TRANSPORT",
+          "distance": 7,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 59,
+            "end": 61,
+            "text": "徒步"
+          }
+        },
+        {
+          "text": "桃源台",
+          "entity_id": "S001_POI_010",
+          "candidate_type": "POI",
+          "distance": 25,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 40,
+            "end": 43,
+            "text": "桃源台"
+          }
+        },
+        {
+          "text": "箱根空中缆车",
+          "entity_id": "S001_TRANSPORT_012",
+          "candidate_type": "TRANSPORT",
+          "distance": 32,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 28,
+            "end": 36,
+            "text": "rope way"
+          }
+        },
+        {
+          "text": "箱根空中缆车",
+          "entity_id": "S001_TRANSPORT_012",
+          "candidate_type": "TRANSPORT",
+          "distance": 41,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 21,
+            "end": 27,
+            "text": "箱根登山吊舱"
+          }
+        },
+        {
+          "text": "早云山",
+          "entity_id": "S001_POI_009",
+          "candidate_type": "POI",
+          "distance": 49,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 16,
+            "end": 19,
+            "text": "早云山"
+          }
+        }
+      ],
+      "resolved_text": "这（指：步行）是一条享受森林浴的徒步线路,而且难度不大、老少皆宜。",
+      "gold_status": "resolved",
+      "antecedent_type": "ROUTE",
+      "gold_antecedent": {
+        "text": "徒步路线",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_001",
+        "start": 59,
+        "end": 63,
+        "text": "徒步路线"
+      },
+      "annotation_note": "指前句标识牌所标示的徒步路线，不指最近的桃源台站。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S001_VIS_001_00264",
+      "doc_id": "S001_VIS_001",
+      "pronoun": "他们",
+      "span": {
+        "doc_id": "S001_VIS_001",
+        "start": 264,
+        "end": 266,
+        "text": "他们"
+      },
+      "sentence": {
+        "doc_id": "S001_VIS_001",
+        "start": 222,
+        "end": 267,
+        "text": "走过小花园看见一片草坪运动场,看见一对夫妇带着三个孩子在玩类似棒球的游戏,真得好羡慕他们。"
+      },
+      "sentence_index": 6,
+      "context": {
+        "doc_id": "S001_VIS_001",
+        "start": 0,
+        "end": 366,
+        "text": "第1天 2014-05-18\n从早云山乘坐箱根登山吊舱(rope way)到终点桃源台下车,走出站外的湖边即能看见一个徒步路线的标识牌。这是一条享受森林浴的徒步线路,而且难度不大、老少皆宜。\n黑石渣铺成的路面一直延伸到芦之湖畔,路旁植被繁茂,即便烈日当头仍然十分凉爽,处处散发着绿叶的清香味道,走上一会儿堪比洗肺功效。\n没走多久路过一片花园,各种各样说不出名字的鲜花在路边毫无节制地绽放着。\n最傲人的一颗大樱花树,大大的粉色花瓣满满开了一树。\n走过小花园看见一片草坪运动场,看见一对夫妇带着三个孩子在玩类似棒球的游戏,真得好羡慕他们。\n继续往前走,树木愈发茂密,游人也越来越少,只能偶尔听见几声鸟叫声。\n步道没有水泥路面,全部由碎石和原木铺成,和周边的林木景观融为一体。踩上去很舒服的感觉。\n路过一段树根裸露的路面,有点后悔没穿户外"
+      },
+      "predicted_antecedent": {
+        "text": "芦之湖",
+        "entity_id": "S001_POI_003"
+      },
+      "predicted_evidence": {
+        "doc_id": "S001_VIS_001",
+        "start": 109,
+        "end": 112,
+        "text": "芦之湖"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "芦之湖",
+          "entity_id": "S001_POI_003",
+          "candidate_type": "POI",
+          "distance": 152,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 109,
+            "end": 112,
+            "text": "芦之湖"
+          }
+        },
+        {
+          "text": "步行",
+          "entity_id": "S001_TRANSPORT_001",
+          "candidate_type": "TRANSPORT",
+          "distance": 184,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 78,
+            "end": 80,
+            "text": "徒步"
+          }
+        }
+      ],
+      "resolved_text": "走过小花园看见一片草坪运动场,看见一对夫妇带着三个孩子在玩类似棒球的游戏,真得好羡慕他们（指：芦之湖）。",
+      "gold_status": "resolved",
+      "antecedent_type": "PERSON",
+      "gold_antecedent": {
+        "text": "一对夫妇带着三个孩子",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_001",
+        "start": 239,
+        "end": 249,
+        "text": "一对夫妇带着三个孩子"
+      },
+      "annotation_note": "他们指正在游戏的一家五口。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S001_VIS_001_00534",
+      "doc_id": "S001_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S001_VIS_001",
+        "start": 534,
+        "end": 535,
+        "text": "这"
+      },
+      "sentence": {
+        "doc_id": "S001_VIS_001",
+        "start": 519,
+        "end": 563,
+        "text": "离开姥子站继续向大涌谷进发,但这段路明显陡峭起来,台阶密度很大,我们也开始呼哧呼哧喘气。"
+      },
+      "sentence_index": 16,
+      "context": {
+        "doc_id": "S001_VIS_001",
+        "start": 214,
+        "end": 635,
+        "text": "满满开了一树。\n走过小花园看见一片草坪运动场,看见一对夫妇带着三个孩子在玩类似棒球的游戏,真得好羡慕他们。\n继续往前走,树木愈发茂密,游人也越来越少,只能偶尔听见几声鸟叫声。\n步道没有水泥路面,全部由碎石和原木铺成,和周边的林木景观融为一体。踩上去很舒服的感觉。\n路过一段树根裸露的路面,有点后悔没穿户外鞋出来,只好降低速度,小心翼翼前行。还好脚底厚度和脸皮成正比,没磨出水泡真是万幸。\n顺着一路标识清楚的路牌,来到一处可以眺望芦之湖的金太郎展望台。\n返回步道继续前行,俨然变成了森林隧道,全然感觉不到此时已是夕阳夕照。\n大约1小时来到姥子缆车站前,步道已经走完一半距离。已经退役的旧式吊舱摆在站前永久纪念。\n离开姥子站继续向大涌谷进发,但这段路明显陡峭起来,台阶密度很大,我们也开始呼哧呼哧喘气。\n显然这段路不再老少皆宜,不过大口呼吸大自然的新鲜空气也很惬意。\n也许是海拔不断升高的关系,走着走着高大茂密的松树不见了,低矮繁茂的灌木和草丛取"
+      },
+      "predicted_antecedent": {
+        "text": "大涌谷",
+        "entity_id": "S001_POI_002"
+      },
+      "predicted_evidence": {
+        "doc_id": "S001_VIS_001",
+        "start": 527,
+        "end": 530,
+        "text": "大涌谷"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "大涌谷",
+          "entity_id": "S001_POI_002",
+          "candidate_type": "POI",
+          "distance": 4,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 527,
+            "end": 530,
+            "text": "大涌谷"
+          }
+        },
+        {
+          "text": "姥子站",
+          "entity_id": "S001_POI_026",
+          "candidate_type": "POI",
+          "distance": 10,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 521,
+            "end": 524,
+            "text": "姥子站"
+          }
+        },
+        {
+          "text": "缆车",
+          "entity_id": "S001_TRANSPORT_005",
+          "candidate_type": "TRANSPORT",
+          "distance": 48,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 484,
+            "end": 486,
+            "text": "缆车"
+          }
+        },
+        {
+          "text": "金太郎展望台",
+          "entity_id": "S001_POI_027",
+          "candidate_type": "POI",
+          "distance": 96,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 432,
+            "end": 438,
+            "text": "金太郎展望台"
+          }
+        },
+        {
+          "text": "芦之湖",
+          "entity_id": "S001_POI_003",
+          "candidate_type": "POI",
+          "distance": 103,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 428,
+            "end": 431,
+            "text": "芦之湖"
+          }
+        }
+      ],
+      "resolved_text": "离开姥子站继续向大涌谷进发,但这（指：大涌谷）段路明显陡峭起来,台阶密度很大,我们也开始呼哧呼哧喘气。",
+      "gold_status": "resolved",
+      "antecedent_type": "ROUTE",
+      "gold_antecedent": {
+        "text": "离开姥子站继续向大涌谷进发",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_001",
+        "start": 519,
+        "end": 532,
+        "text": "离开姥子站继续向大涌谷进发"
+      },
+      "annotation_note": "这段路是姥子站至大涌谷的当前步行区段。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S001_VIS_001_00566",
+      "doc_id": "S001_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S001_VIS_001",
+        "start": 566,
+        "end": 567,
+        "text": "这"
+      },
+      "sentence": {
+        "doc_id": "S001_VIS_001",
+        "start": 564,
+        "end": 595,
+        "text": "显然这段路不再老少皆宜,不过大口呼吸大自然的新鲜空气也很惬意。"
+      },
+      "sentence_index": 17,
+      "context": {
+        "doc_id": "S001_VIS_001",
+        "start": 246,
+        "end": 667,
+        "text": "个孩子在玩类似棒球的游戏,真得好羡慕他们。\n继续往前走,树木愈发茂密,游人也越来越少,只能偶尔听见几声鸟叫声。\n步道没有水泥路面,全部由碎石和原木铺成,和周边的林木景观融为一体。踩上去很舒服的感觉。\n路过一段树根裸露的路面,有点后悔没穿户外鞋出来,只好降低速度,小心翼翼前行。还好脚底厚度和脸皮成正比,没磨出水泡真是万幸。\n顺着一路标识清楚的路牌,来到一处可以眺望芦之湖的金太郎展望台。\n返回步道继续前行,俨然变成了森林隧道,全然感觉不到此时已是夕阳夕照。\n大约1小时来到姥子缆车站前,步道已经走完一半距离。已经退役的旧式吊舱摆在站前永久纪念。\n离开姥子站继续向大涌谷进发,但这段路明显陡峭起来,台阶密度很大,我们也开始呼哧呼哧喘气。\n显然这段路不再老少皆宜,不过大口呼吸大自然的新鲜空气也很惬意。\n也许是海拔不断升高的关系,走着走着高大茂密的松树不见了,低矮繁茂的灌木和草丛取而代之。\n又大约过了一小时,看到了终点标识。很享受这段森林浴的徒"
+      },
+      "predicted_antecedent": {
+        "text": "大涌谷",
+        "entity_id": "S001_POI_002"
+      },
+      "predicted_evidence": {
+        "doc_id": "S001_VIS_001",
+        "start": 527,
+        "end": 530,
+        "text": "大涌谷"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "大涌谷",
+          "entity_id": "S001_POI_002",
+          "candidate_type": "POI",
+          "distance": 36,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 527,
+            "end": 530,
+            "text": "大涌谷"
+          }
+        },
+        {
+          "text": "姥子站",
+          "entity_id": "S001_POI_026",
+          "candidate_type": "POI",
+          "distance": 42,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 521,
+            "end": 524,
+            "text": "姥子站"
+          }
+        },
+        {
+          "text": "缆车",
+          "entity_id": "S001_TRANSPORT_005",
+          "candidate_type": "TRANSPORT",
+          "distance": 80,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 484,
+            "end": 486,
+            "text": "缆车"
+          }
+        }
+      ],
+      "resolved_text": "显然这（指：大涌谷）段路不再老少皆宜,不过大口呼吸大自然的新鲜空气也很惬意。",
+      "gold_status": "resolved",
+      "antecedent_type": "ROUTE",
+      "gold_antecedent": {
+        "text": "离开姥子站继续向大涌谷进发",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_001",
+        "start": 519,
+        "end": 532,
+        "text": "离开姥子站继续向大涌谷进发"
+      },
+      "annotation_note": "沿用前句同一区段，不能替换成单个大涌谷景点。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S001_VIS_001_00660",
+      "doc_id": "S001_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S001_VIS_001",
+        "start": 660,
+        "end": 661,
+        "text": "这"
+      },
+      "sentence": {
+        "doc_id": "S001_VIS_001",
+        "start": 657,
+        "end": 698,
+        "text": "很享受这段森林浴的徒步道,以至于过于兴奋忘记了回程巴士的时间〜大麻烦正在等着我们。"
+      },
+      "sentence_index": 20,
+      "context": {
+        "doc_id": "S001_VIS_001",
+        "start": 340,
+        "end": 761,
+        "text": "服的感觉。\n路过一段树根裸露的路面,有点后悔没穿户外鞋出来,只好降低速度,小心翼翼前行。还好脚底厚度和脸皮成正比,没磨出水泡真是万幸。\n顺着一路标识清楚的路牌,来到一处可以眺望芦之湖的金太郎展望台。\n返回步道继续前行,俨然变成了森林隧道,全然感觉不到此时已是夕阳夕照。\n大约1小时来到姥子缆车站前,步道已经走完一半距离。已经退役的旧式吊舱摆在站前永久纪念。\n离开姥子站继续向大涌谷进发,但这段路明显陡峭起来,台阶密度很大,我们也开始呼哧呼哧喘气。\n显然这段路不再老少皆宜,不过大口呼吸大自然的新鲜空气也很惬意。\n也许是海拔不断升高的关系,走着走着高大茂密的松树不见了,低矮繁茂的灌木和草丛取而代之。\n又大约过了一小时,看到了终点标识。很享受这段森林浴的徒步道,以至于过于兴奋忘记了回程巴士的时间〜大麻烦正在等着我们。\n在没意识到大麻烦之前还是欣赏一下大涌谷喷烟地,一个可以近距离体验活火山活动的地方,没几分钟浓浓的硫磺味道熏得我有点头疼。\n原"
+      },
+      "predicted_antecedent": {
+        "text": "大涌谷",
+        "entity_id": "S001_POI_002"
+      },
+      "predicted_evidence": {
+        "doc_id": "S001_VIS_001",
+        "start": 527,
+        "end": 530,
+        "text": "大涌谷"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "大涌谷",
+          "entity_id": "S001_POI_002",
+          "candidate_type": "POI",
+          "distance": 130,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 527,
+            "end": 530,
+            "text": "大涌谷"
+          }
+        },
+        {
+          "text": "姥子站",
+          "entity_id": "S001_POI_026",
+          "candidate_type": "POI",
+          "distance": 136,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 521,
+            "end": 524,
+            "text": "姥子站"
+          }
+        }
+      ],
+      "resolved_text": "很享受这（指：大涌谷）段森林浴的徒步道,以至于过于兴奋忘记了回程巴士的时间〜大麻烦正在等着我们。",
+      "gold_status": "resolved",
+      "antecedent_type": "ROUTE",
+      "gold_antecedent": {
+        "text": "徒步路线",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_001",
+        "start": 59,
+        "end": 63,
+        "text": "徒步路线"
+      },
+      "annotation_note": "总结整段森林浴徒步道，回指篇首路线。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S001_VIS_001_00891",
+      "doc_id": "S001_VIS_001",
+      "pronoun": "她",
+      "span": {
+        "doc_id": "S001_VIS_001",
+        "start": 891,
+        "end": 892,
+        "text": "她"
+      },
+      "sentence": {
+        "doc_id": "S001_VIS_001",
+        "start": 891,
+        "end": 911,
+        "text": "她二话不说开车30公里免费送我们回酒店。"
+      },
+      "sentence_index": 27,
+      "context": {
+        "doc_id": "S001_VIS_001",
+        "start": 571,
+        "end": 992,
+        "text": "老少皆宜,不过大口呼吸大自然的新鲜空气也很惬意。\n也许是海拔不断升高的关系,走着走着高大茂密的松树不见了,低矮繁茂的灌木和草丛取而代之。\n又大约过了一小时,看到了终点标识。很享受这段森林浴的徒步道,以至于过于兴奋忘记了回程巴士的时间〜大麻烦正在等着我们。\n在没意识到大麻烦之前还是欣赏一下大涌谷喷烟地,一个可以近距离体验活火山活动的地方,没几分钟浓浓的硫磺味道熏得我有点头疼。\n原来我们离火山这么近,哧哧喷着的白烟随时都有喷发的危险吧?\n大涌谷特产〜温泉煮鸡蛋,500日元5个,因为硫磺成分太高把鸡蛋皮染成黑色,却成就了大涌谷甚至箱根的特产。\n最后一班巴士已经离开大涌谷!出租车也没了。幸运的是我们遇到一位能讲英语的大姐,真是不幸中的万幸。她二话不说开车30公里免费送我们回酒店。大涌谷到强罗只有缆车直通,开车必须绕过仙石的盘旋山道。困难无助时陌生人的慷慨相助让我们心里感到无比温暖,我和同行朋友会永远记住这位不知姓名的日本大姐,好人一生平安"
+      },
+      "predicted_antecedent": {
+        "text": "出租车",
+        "entity_id": "S001_TRANSPORT_007"
+      },
+      "predicted_evidence": {
+        "doc_id": "S001_VIS_001",
+        "start": 857,
+        "end": 860,
+        "text": "出租车"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "出租车",
+          "entity_id": "S001_TRANSPORT_007",
+          "candidate_type": "TRANSPORT",
+          "distance": 31,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 857,
+            "end": 860,
+            "text": "出租车"
+          }
+        },
+        {
+          "text": "大涌谷",
+          "entity_id": "S001_POI_002",
+          "candidate_type": "POI",
+          "distance": 35,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 853,
+            "end": 856,
+            "text": "大涌谷"
+          }
+        },
+        {
+          "text": "巴士",
+          "entity_id": "S001_TRANSPORT_002",
+          "candidate_type": "TRANSPORT",
+          "distance": 42,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 847,
+            "end": 849,
+            "text": "巴士"
+          }
+        },
+        {
+          "text": "箱根",
+          "entity_id": "S001_POI_001",
+          "candidate_type": "POI",
+          "distance": 53,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 836,
+            "end": 838,
+            "text": "箱根"
+          }
+        },
+        {
+          "text": "大涌谷",
+          "entity_id": "S001_POI_002",
+          "candidate_type": "POI",
+          "distance": 57,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 831,
+            "end": 834,
+            "text": "大涌谷"
+          }
+        }
+      ],
+      "resolved_text": "她（指：出租车）二话不说开车30公里免费送我们回酒店。",
+      "gold_status": "resolved",
+      "antecedent_type": "PERSON",
+      "gold_antecedent": {
+        "text": "一位能讲英语的大姐",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_001",
+        "start": 872,
+        "end": 881,
+        "text": "一位能讲英语的大姐"
+      },
+      "annotation_note": "施事是刚遇到的大姐。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S001_VIS_001_00974",
+      "doc_id": "S001_VIS_001",
+      "pronoun": "这位",
+      "span": {
+        "doc_id": "S001_VIS_001",
+        "start": 974,
+        "end": 976,
+        "text": "这位"
+      },
+      "sentence": {
+        "doc_id": "S001_VIS_001",
+        "start": 938,
+        "end": 993,
+        "text": "困难无助时陌生人的慷慨相助让我们心里感到无比温暖,我和同行朋友会永远记住这位不知姓名的日本大姐,好人一生平安!"
+      },
+      "sentence_index": 29,
+      "context": {
+        "doc_id": "S001_VIS_001",
+        "start": 654,
+        "end": 993,
+        "text": "标识。很享受这段森林浴的徒步道,以至于过于兴奋忘记了回程巴士的时间〜大麻烦正在等着我们。\n在没意识到大麻烦之前还是欣赏一下大涌谷喷烟地,一个可以近距离体验活火山活动的地方,没几分钟浓浓的硫磺味道熏得我有点头疼。\n原来我们离火山这么近,哧哧喷着的白烟随时都有喷发的危险吧?\n大涌谷特产〜温泉煮鸡蛋,500日元5个,因为硫磺成分太高把鸡蛋皮染成黑色,却成就了大涌谷甚至箱根的特产。\n最后一班巴士已经离开大涌谷!出租车也没了。幸运的是我们遇到一位能讲英语的大姐,真是不幸中的万幸。她二话不说开车30公里免费送我们回酒店。大涌谷到强罗只有缆车直通,开车必须绕过仙石的盘旋山道。困难无助时陌生人的慷慨相助让我们心里感到无比温暖,我和同行朋友会永远记住这位不知姓名的日本大姐,好人一生平安!"
+      },
+      "predicted_antecedent": {
+        "text": "仙石原",
+        "entity_id": "S001_POI_028"
+      },
+      "predicted_evidence": {
+        "doc_id": "S001_VIS_001",
+        "start": 930,
+        "end": 932,
+        "text": "仙石"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "仙石原",
+          "entity_id": "S001_POI_028",
+          "candidate_type": "POI",
+          "distance": 42,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 930,
+            "end": 932,
+            "text": "仙石"
+          }
+        },
+        {
+          "text": "自驾",
+          "entity_id": "S001_TRANSPORT_004",
+          "candidate_type": "TRANSPORT",
+          "distance": 48,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 924,
+            "end": 926,
+            "text": "开车"
+          }
+        },
+        {
+          "text": "缆车",
+          "entity_id": "S001_TRANSPORT_005",
+          "candidate_type": "TRANSPORT",
+          "distance": 53,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 919,
+            "end": 921,
+            "text": "缆车"
+          }
+        },
+        {
+          "text": "强罗",
+          "entity_id": "S001_POI_008",
+          "candidate_type": "POI",
+          "distance": 57,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 915,
+            "end": 917,
+            "text": "强罗"
+          }
+        },
+        {
+          "text": "大涌谷",
+          "entity_id": "S001_POI_002",
+          "candidate_type": "POI",
+          "distance": 60,
+          "evidence": {
+            "doc_id": "S001_VIS_001",
+            "start": 911,
+            "end": 914,
+            "text": "大涌谷"
+          }
+        }
+      ],
+      "resolved_text": "困难无助时陌生人的慷慨相助让我们心里感到无比温暖,我和同行朋友会永远记住这位（指：仙石原）不知姓名的日本大姐,好人一生平安!",
+      "gold_status": "resolved",
+      "antecedent_type": "PERSON",
+      "gold_antecedent": {
+        "text": "一位能讲英语的大姐",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_001",
+        "start": 872,
+        "end": 881,
+        "text": "一位能讲英语的大姐"
+      },
+      "annotation_note": "这位日本大姐与提供帮助的大姐同指。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S001_VIS_003_00031",
+      "doc_id": "S001_VIS_003",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S001_VIS_003",
+        "start": 31,
+        "end": 32,
+        "text": "这"
+      },
+      "sentence": {
+        "doc_id": "S001_VIS_003",
+        "start": 29,
+        "end": 48,
+        "text": "所以这次日本游就规划了箱根泡温泉之旅."
+      },
+      "sentence_index": 1,
+      "context": {
+        "doc_id": "S001_VIS_003",
+        "start": 0,
+        "end": 132,
+        "text": "箱根是日本泡温泉比较有名的地方,也是当地人喜欢的温泉之乡.所以这次日本游就规划了箱根泡温泉之旅.首先买了小田急线的箱根2日周游券,这个券用下来实在是太方便了!我买的是电子版的,生效以后是实时的二维码,搭乘各种交通工具前只要扫码或者出示给工作人员即可,省去换乘买票的"
+      },
+      "predicted_antecedent": {
+        "text": "箱根",
+        "entity_id": "S001_POI_001"
+      },
+      "predicted_evidence": {
+        "doc_id": "S001_VIS_003",
+        "start": 0,
+        "end": 2,
+        "text": "箱根"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "箱根",
+          "entity_id": "S001_POI_001",
+          "candidate_type": "POI",
+          "distance": 29,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 0,
+            "end": 2,
+            "text": "箱根"
+          }
+        }
+      ],
+      "resolved_text": "所以这（指：箱根）次日本游就规划了箱根泡温泉之旅.",
+      "gold_status": "non_anaphoric",
+      "antecedent_type": "TIME",
+      "gold_antecedent": null,
+      "gold_evidence": null,
+      "annotation_note": "这次日本游是当前叙事行程的指示限定，无可替换的明确先行词。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S001_VIS_003_00065",
+      "doc_id": "S001_VIS_003",
+      "pronoun": "这个",
+      "span": {
+        "doc_id": "S001_VIS_003",
+        "start": 65,
+        "end": 67,
+        "text": "这个"
+      },
+      "sentence": {
+        "doc_id": "S001_VIS_003",
+        "start": 48,
+        "end": 79,
+        "text": "首先买了小田急线的箱根2日周游券,这个券用下来实在是太方便了!"
+      },
+      "sentence_index": 2,
+      "context": {
+        "doc_id": "S001_VIS_003",
+        "start": 0,
+        "end": 167,
+        "text": "箱根是日本泡温泉比较有名的地方,也是当地人喜欢的温泉之乡.所以这次日本游就规划了箱根泡温泉之旅.首先买了小田急线的箱根2日周游券,这个券用下来实在是太方便了!我买的是电子版的,生效以后是实时的二维码,搭乘各种交通工具前只要扫码或者出示给工作人员即可,省去换乘买票的繁琐,而且这个周游券比单买票价便宜不少,它可以用于小田急线加上箱根地区"
+      },
+      "predicted_antecedent": {
+        "text": "小田急线",
+        "entity_id": "S001_TRANSPORT_016"
+      },
+      "predicted_evidence": {
+        "doc_id": "S001_VIS_003",
+        "start": 52,
+        "end": 56,
+        "text": "小田急线"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "小田急线",
+          "entity_id": "S001_TRANSPORT_016",
+          "candidate_type": "TRANSPORT",
+          "distance": 9,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 52,
+            "end": 56,
+            "text": "小田急线"
+          }
+        },
+        {
+          "text": "箱根",
+          "entity_id": "S001_POI_001",
+          "candidate_type": "POI",
+          "distance": 23,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 40,
+            "end": 42,
+            "text": "箱根"
+          }
+        },
+        {
+          "text": "箱根",
+          "entity_id": "S001_POI_001",
+          "candidate_type": "POI",
+          "distance": 63,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 0,
+            "end": 2,
+            "text": "箱根"
+          }
+        }
+      ],
+      "resolved_text": "首先买了小田急线的箱根2日周游券,这个（指：小田急线）券用下来实在是太方便了!",
+      "gold_status": "resolved",
+      "antecedent_type": "TICKET",
+      "gold_antecedent": {
+        "text": "小田急线的箱根2日周游券",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_003",
+        "start": 52,
+        "end": 64,
+        "text": "小田急线的箱根2日周游券"
+      },
+      "annotation_note": "票券是物品，不是交通方式或箱根地点。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S001_VIS_003_00137",
+      "doc_id": "S001_VIS_003",
+      "pronoun": "这个",
+      "span": {
+        "doc_id": "S001_VIS_003",
+        "start": 137,
+        "end": 139,
+        "text": "这个"
+      },
+      "sentence": {
+        "doc_id": "S001_VIS_003",
+        "start": 79,
+        "end": 180,
+        "text": "我买的是电子版的,生效以后是实时的二维码,搭乘各种交通工具前只要扫码或者出示给工作人员即可,省去换乘买票的繁琐,而且这个周游券比单买票价便宜不少,它可以用于小田急线加上箱根地区的八种交通工具,畅游箱根."
+      },
+      "sentence_index": 3,
+      "context": {
+        "doc_id": "S001_VIS_003",
+        "start": 0,
+        "end": 239,
+        "text": "箱根是日本泡温泉比较有名的地方,也是当地人喜欢的温泉之乡.所以这次日本游就规划了箱根泡温泉之旅.首先买了小田急线的箱根2日周游券,这个券用下来实在是太方便了!我买的是电子版的,生效以后是实时的二维码,搭乘各种交通工具前只要扫码或者出示给工作人员即可,省去换乘买票的繁琐,而且这个周游券比单买票价便宜不少,它可以用于小田急线加上箱根地区的八种交通工具,畅游箱根.\n小田急线终点小田原后换乘往箱根汤本的列车,到站后转乘登山电车到宫之下,因为有周游券,你可以看到好的风景就随时自由上下"
+      },
+      "predicted_antecedent": {
+        "text": "小田急线",
+        "entity_id": "S001_TRANSPORT_016"
+      },
+      "predicted_evidence": {
+        "doc_id": "S001_VIS_003",
+        "start": 52,
+        "end": 56,
+        "text": "小田急线"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "小田急线",
+          "entity_id": "S001_TRANSPORT_016",
+          "candidate_type": "TRANSPORT",
+          "distance": 81,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 52,
+            "end": 56,
+            "text": "小田急线"
+          }
+        },
+        {
+          "text": "箱根",
+          "entity_id": "S001_POI_001",
+          "candidate_type": "POI",
+          "distance": 95,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 40,
+            "end": 42,
+            "text": "箱根"
+          }
+        },
+        {
+          "text": "箱根",
+          "entity_id": "S001_POI_001",
+          "candidate_type": "POI",
+          "distance": 135,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 0,
+            "end": 2,
+            "text": "箱根"
+          }
+        }
+      ],
+      "resolved_text": "我买的是电子版的,生效以后是实时的二维码,搭乘各种交通工具前只要扫码或者出示给工作人员即可,省去换乘买票的繁琐,而且这个（指：小田急线）周游券比单买票价便宜不少,它可以用于小田急线加上箱根地区的八种交通工具,畅游箱根.",
+      "gold_status": "resolved",
+      "antecedent_type": "TICKET",
+      "gold_antecedent": {
+        "text": "小田急线的箱根2日周游券",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_003",
+        "start": 52,
+        "end": 64,
+        "text": "小田急线的箱根2日周游券"
+      },
+      "annotation_note": "仍指同一周游券。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S001_VIS_003_00152",
+      "doc_id": "S001_VIS_003",
+      "pronoun": "它",
+      "span": {
+        "doc_id": "S001_VIS_003",
+        "start": 152,
+        "end": 153,
+        "text": "它"
+      },
+      "sentence": {
+        "doc_id": "S001_VIS_003",
+        "start": 79,
+        "end": 180,
+        "text": "我买的是电子版的,生效以后是实时的二维码,搭乘各种交通工具前只要扫码或者出示给工作人员即可,省去换乘买票的繁琐,而且这个周游券比单买票价便宜不少,它可以用于小田急线加上箱根地区的八种交通工具,畅游箱根."
+      },
+      "sentence_index": 3,
+      "context": {
+        "doc_id": "S001_VIS_003",
+        "start": 0,
+        "end": 253,
+        "text": "箱根是日本泡温泉比较有名的地方,也是当地人喜欢的温泉之乡.所以这次日本游就规划了箱根泡温泉之旅.首先买了小田急线的箱根2日周游券,这个券用下来实在是太方便了!我买的是电子版的,生效以后是实时的二维码,搭乘各种交通工具前只要扫码或者出示给工作人员即可,省去换乘买票的繁琐,而且这个周游券比单买票价便宜不少,它可以用于小田急线加上箱根地区的八种交通工具,畅游箱根.\n小田急线终点小田原后换乘往箱根汤本的列车,到站后转乘登山电车到宫之下,因为有周游券,你可以看到好的风景就随时自由上下车.不会错过任何美景.因为我"
+      },
+      "predicted_antecedent": {
+        "text": "小田急线",
+        "entity_id": "S001_TRANSPORT_016"
+      },
+      "predicted_evidence": {
+        "doc_id": "S001_VIS_003",
+        "start": 52,
+        "end": 56,
+        "text": "小田急线"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "小田急线",
+          "entity_id": "S001_TRANSPORT_016",
+          "candidate_type": "TRANSPORT",
+          "distance": 96,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 52,
+            "end": 56,
+            "text": "小田急线"
+          }
+        },
+        {
+          "text": "箱根",
+          "entity_id": "S001_POI_001",
+          "candidate_type": "POI",
+          "distance": 110,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 40,
+            "end": 42,
+            "text": "箱根"
+          }
+        },
+        {
+          "text": "箱根",
+          "entity_id": "S001_POI_001",
+          "candidate_type": "POI",
+          "distance": 150,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 0,
+            "end": 2,
+            "text": "箱根"
+          }
+        }
+      ],
+      "resolved_text": "我买的是电子版的,生效以后是实时的二维码,搭乘各种交通工具前只要扫码或者出示给工作人员即可,省去换乘买票的繁琐,而且这个周游券比单买票价便宜不少,它（指：小田急线）可以用于小田急线加上箱根地区的八种交通工具,畅游箱根.",
+      "gold_status": "resolved",
+      "antecedent_type": "TICKET",
+      "gold_antecedent": {
+        "text": "小田急线的箱根2日周游券",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_003",
+        "start": 52,
+        "end": 64,
+        "text": "小田急线的箱根2日周游券"
+      },
+      "annotation_note": "它可以用于交通工具，主语为票券。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S001_VIS_003_00270",
+      "doc_id": "S001_VIS_003",
+      "pronoun": "那里",
+      "span": {
+        "doc_id": "S001_VIS_003",
+        "start": 270,
+        "end": 272,
+        "text": "那里"
+      },
+      "sentence": {
+        "doc_id": "S001_VIS_003",
+        "start": 250,
+        "end": 285,
+        "text": "因为我订了桃源台的酒店,所以出游的方向就那里,首先是换乘缆车去大涌谷."
+      },
+      "sentence_index": 6,
+      "context": {
+        "doc_id": "S001_VIS_003",
+        "start": 0,
+        "end": 372,
+        "text": "箱根是日本泡温泉比较有名的地方,也是当地人喜欢的温泉之乡.所以这次日本游就规划了箱根泡温泉之旅.首先买了小田急线的箱根2日周游券,这个券用下来实在是太方便了!我买的是电子版的,生效以后是实时的二维码,搭乘各种交通工具前只要扫码或者出示给工作人员即可,省去换乘买票的繁琐,而且这个周游券比单买票价便宜不少,它可以用于小田急线加上箱根地区的八种交通工具,畅游箱根.\n小田急线终点小田原后换乘往箱根汤本的列车,到站后转乘登山电车到宫之下,因为有周游券,你可以看到好的风景就随时自由上下车.不会错过任何美景.因为我订了桃源台的酒店,所以出游的方向就那里,首先是换乘缆车去大涌谷.缆车先是在树林上方前行,突然就可以看到左手方向的地貌陡然改变,浓烟滚滚,往下看原来是硫磺谷,谷里遍地都是燃烧着浓烟的硫磺洞,那情景恍惚让人置身于人间地狱一般,很震撼.\n下了缆"
+      },
+      "predicted_antecedent": {
+        "text": "桃源台",
+        "entity_id": "S001_POI_010"
+      },
+      "predicted_evidence": {
+        "doc_id": "S001_VIS_003",
+        "start": 255,
+        "end": 258,
+        "text": "桃源台"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "桃源台",
+          "entity_id": "S001_POI_010",
+          "candidate_type": "POI",
+          "distance": 12,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 255,
+            "end": 258,
+            "text": "桃源台"
+          }
+        },
+        {
+          "text": "宫之下",
+          "entity_id": "S001_POI_029",
+          "candidate_type": "POI",
+          "distance": 55,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 212,
+            "end": 215,
+            "text": "宫之下"
+          }
+        },
+        {
+          "text": "箱根登山电车",
+          "entity_id": "S001_TRANSPORT_010",
+          "candidate_type": "TRANSPORT",
+          "distance": 59,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 207,
+            "end": 211,
+            "text": "登山电车"
+          }
+        },
+        {
+          "text": "列车",
+          "entity_id": "S001_TRANSPORT_003",
+          "candidate_type": "TRANSPORT",
+          "distance": 69,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 199,
+            "end": 201,
+            "text": "列车"
+          }
+        },
+        {
+          "text": "箱根汤本",
+          "entity_id": "S001_POI_005",
+          "candidate_type": "POI",
+          "distance": 72,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 194,
+            "end": 198,
+            "text": "箱根汤本"
+          }
+        }
+      ],
+      "resolved_text": "因为我订了桃源台的酒店,所以出游的方向就那里（指：桃源台）,首先是换乘缆车去大涌谷.",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "桃源台",
+        "entity_id": "S001_POI_010"
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_003",
+        "start": 255,
+        "end": 258,
+        "text": "桃源台"
+      },
+      "annotation_note": "出游方向指前文订酒店的桃源台地区。",
+      "correct": true
+    },
+    {
+      "case_id": "CR_S001_VIS_003_00347",
+      "doc_id": "S001_VIS_003",
+      "pronoun": "那",
+      "span": {
+        "doc_id": "S001_VIS_003",
+        "start": 347,
+        "end": 348,
+        "text": "那"
+      },
+      "sentence": {
+        "doc_id": "S001_VIS_003",
+        "start": 285,
+        "end": 368,
+        "text": "缆车先是在树林上方前行,突然就可以看到左手方向的地貌陡然改变,浓烟滚滚,往下看原来是硫磺谷,谷里遍地都是燃烧着浓烟的硫磺洞,那情景恍惚让人置身于人间地狱一般,很震撼."
+      },
+      "sentence_index": 7,
+      "context": {
+        "doc_id": "S001_VIS_003",
+        "start": 27,
+        "end": 448,
+        "text": "乡.所以这次日本游就规划了箱根泡温泉之旅.首先买了小田急线的箱根2日周游券,这个券用下来实在是太方便了!我买的是电子版的,生效以后是实时的二维码,搭乘各种交通工具前只要扫码或者出示给工作人员即可,省去换乘买票的繁琐,而且这个周游券比单买票价便宜不少,它可以用于小田急线加上箱根地区的八种交通工具,畅游箱根.\n小田急线终点小田原后换乘往箱根汤本的列车,到站后转乘登山电车到宫之下,因为有周游券,你可以看到好的风景就随时自由上下车.不会错过任何美景.因为我订了桃源台的酒店,所以出游的方向就那里,首先是换乘缆车去大涌谷.缆车先是在树林上方前行,突然就可以看到左手方向的地貌陡然改变,浓烟滚滚,往下看原来是硫磺谷,谷里遍地都是燃烧着浓烟的硫磺洞,那情景恍惚让人置身于人间地狱一般,很震撼.\n下了缆车,就到了大涌谷,游客们一般都会去买黑鸡蛋,据说是用这里的硫磺水煮的,外皮黑漆漆的,里面是正常鸡蛋颜色,味道差不多.据说吃一枚可以延寿7年(哈哈!).\n"
+      },
+      "predicted_antecedent": {
+        "text": "缆车",
+        "entity_id": "S001_TRANSPORT_005"
+      },
+      "predicted_evidence": {
+        "doc_id": "S001_VIS_003",
+        "start": 285,
+        "end": 287,
+        "text": "缆车"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "缆车",
+          "entity_id": "S001_TRANSPORT_005",
+          "candidate_type": "TRANSPORT",
+          "distance": 60,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 285,
+            "end": 287,
+            "text": "缆车"
+          }
+        },
+        {
+          "text": "大涌谷",
+          "entity_id": "S001_POI_002",
+          "candidate_type": "POI",
+          "distance": 63,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 281,
+            "end": 284,
+            "text": "大涌谷"
+          }
+        },
+        {
+          "text": "缆车",
+          "entity_id": "S001_TRANSPORT_005",
+          "candidate_type": "TRANSPORT",
+          "distance": 67,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 278,
+            "end": 280,
+            "text": "缆车"
+          }
+        },
+        {
+          "text": "桃源台",
+          "entity_id": "S001_POI_010",
+          "candidate_type": "POI",
+          "distance": 89,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 255,
+            "end": 258,
+            "text": "桃源台"
+          }
+        },
+        {
+          "text": "宫之下",
+          "entity_id": "S001_POI_029",
+          "candidate_type": "POI",
+          "distance": 132,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 212,
+            "end": 215,
+            "text": "宫之下"
+          }
+        }
+      ],
+      "resolved_text": "缆车先是在树林上方前行,突然就可以看到左手方向的地貌陡然改变,浓烟滚滚,往下看原来是硫磺谷,谷里遍地都是燃烧着浓烟的硫磺洞,那（指：缆车）情景恍惚让人置身于人间地狱一般,很震撼.",
+      "gold_status": "resolved",
+      "antecedent_type": "EVENT",
+      "gold_antecedent": {
+        "text": "浓烟滚滚,往下看原来是硫磺谷,谷里遍地都是燃烧着浓烟的硫磺洞",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_003",
+        "start": 316,
+        "end": 346,
+        "text": "浓烟滚滚,往下看原来是硫磺谷,谷里遍地都是燃烧着浓烟的硫磺洞"
+      },
+      "annotation_note": "那情景概括前面描写的火山景象。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S001_VIS_003_00398",
+      "doc_id": "S001_VIS_003",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S001_VIS_003",
+        "start": 398,
+        "end": 400,
+        "text": "这里"
+      },
+      "sentence": {
+        "doc_id": "S001_VIS_003",
+        "start": 369,
+        "end": 430,
+        "text": "下了缆车,就到了大涌谷,游客们一般都会去买黑鸡蛋,据说是用这里的硫磺水煮的,外皮黑漆漆的,里面是正常鸡蛋颜色,味道差不多."
+      },
+      "sentence_index": 8,
+      "context": {
+        "doc_id": "S001_VIS_003",
+        "start": 78,
+        "end": 500,
+        "text": "!我买的是电子版的,生效以后是实时的二维码,搭乘各种交通工具前只要扫码或者出示给工作人员即可,省去换乘买票的繁琐,而且这个周游券比单买票价便宜不少,它可以用于小田急线加上箱根地区的八种交通工具,畅游箱根.\n小田急线终点小田原后换乘往箱根汤本的列车,到站后转乘登山电车到宫之下,因为有周游券,你可以看到好的风景就随时自由上下车.不会错过任何美景.因为我订了桃源台的酒店,所以出游的方向就那里,首先是换乘缆车去大涌谷.缆车先是在树林上方前行,突然就可以看到左手方向的地貌陡然改变,浓烟滚滚,往下看原来是硫磺谷,谷里遍地都是燃烧着浓烟的硫磺洞,那情景恍惚让人置身于人间地狱一般,很震撼.\n下了缆车,就到了大涌谷,游客们一般都会去买黑鸡蛋,据说是用这里的硫磺水煮的,外皮黑漆漆的,里面是正常鸡蛋颜色,味道差不多.据说吃一枚可以延寿7年(哈哈!).\n再乘缆车就可以到桃源台了,因为时间尚早,我们的酒店下午3点才能办入住,所以在桃源台乘海贼船游览芦之湖全景"
+      },
+      "predicted_antecedent": {
+        "text": "大涌谷",
+        "entity_id": "S001_POI_002"
+      },
+      "predicted_evidence": {
+        "doc_id": "S001_VIS_003",
+        "start": 377,
+        "end": 380,
+        "text": "大涌谷"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "大涌谷",
+          "entity_id": "S001_POI_002",
+          "candidate_type": "POI",
+          "distance": 18,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 377,
+            "end": 380,
+            "text": "大涌谷"
+          }
+        },
+        {
+          "text": "缆车",
+          "entity_id": "S001_TRANSPORT_005",
+          "candidate_type": "TRANSPORT",
+          "distance": 25,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 371,
+            "end": 373,
+            "text": "缆车"
+          }
+        },
+        {
+          "text": "缆车",
+          "entity_id": "S001_TRANSPORT_005",
+          "candidate_type": "TRANSPORT",
+          "distance": 111,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 285,
+            "end": 287,
+            "text": "缆车"
+          }
+        },
+        {
+          "text": "大涌谷",
+          "entity_id": "S001_POI_002",
+          "candidate_type": "POI",
+          "distance": 114,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 281,
+            "end": 284,
+            "text": "大涌谷"
+          }
+        },
+        {
+          "text": "缆车",
+          "entity_id": "S001_TRANSPORT_005",
+          "candidate_type": "TRANSPORT",
+          "distance": 118,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 278,
+            "end": 280,
+            "text": "缆车"
+          }
+        }
+      ],
+      "resolved_text": "下了缆车,就到了大涌谷,游客们一般都会去买黑鸡蛋,据说是用这里（指：大涌谷）的硫磺水煮的,外皮黑漆漆的,里面是正常鸡蛋颜色,味道差不多.",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "大涌谷",
+        "entity_id": "S001_POI_002"
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_003",
+        "start": 377,
+        "end": 380,
+        "text": "大涌谷"
+      },
+      "annotation_note": "硫磺水的地点是当前大涌谷。",
+      "correct": true
+    },
+    {
+      "case_id": "CR_S001_VIS_003_00559",
+      "doc_id": "S001_VIS_003",
+      "pronoun": "这个",
+      "span": {
+        "doc_id": "S001_VIS_003",
+        "start": 559,
+        "end": 561,
+        "text": "这个"
+      },
+      "sentence": {
+        "doc_id": "S001_VIS_003",
+        "start": 547,
+        "end": 579,
+        "text": "在元箱根港看了水中神社,这个拍照打卡点人气太旺,排队排到半山腰."
+      },
+      "sentence_index": 13,
+      "context": {
+        "doc_id": "S001_VIS_003",
+        "start": 239,
+        "end": 661,
+        "text": "车.不会错过任何美景.因为我订了桃源台的酒店,所以出游的方向就那里,首先是换乘缆车去大涌谷.缆车先是在树林上方前行,突然就可以看到左手方向的地貌陡然改变,浓烟滚滚,往下看原来是硫磺谷,谷里遍地都是燃烧着浓烟的硫磺洞,那情景恍惚让人置身于人间地狱一般,很震撼.\n下了缆车,就到了大涌谷,游客们一般都会去买黑鸡蛋,据说是用这里的硫磺水煮的,外皮黑漆漆的,里面是正常鸡蛋颜色,味道差不多.据说吃一枚可以延寿7年(哈哈!).\n再乘缆车就可以到桃源台了,因为时间尚早,我们的酒店下午3点才能办入住,所以在桃源台乘海贼船游览芦之湖全景.因为有周游券,所以每个停靠点都随意下来,看看美景,当天天气不太好,在箱根町港没能看到富士山.在元箱根港看了水中神社,这个拍照打卡点人气太旺,排队排到半山腰.\n回 回程到桃源台,导航去芦之湖花织酒店,才走3分钟,前面有人左转上了小山坡,我抬头看到了酒店标志,顺着小山坡蜿蜒而上,直接走进酒店侧门,超方便.酒店面对芦之湖,景"
+      },
+      "predicted_antecedent": {
+        "text": "元箱根港",
+        "entity_id": "S001_POI_013"
+      },
+      "predicted_evidence": {
+        "doc_id": "S001_VIS_003",
+        "start": 548,
+        "end": 552,
+        "text": "元箱根港"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "元箱根港",
+          "entity_id": "S001_POI_013",
+          "candidate_type": "POI",
+          "distance": 7,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 548,
+            "end": 552,
+            "text": "元箱根港"
+          }
+        },
+        {
+          "text": "富士山",
+          "entity_id": "S001_POI_004",
+          "candidate_type": "POI",
+          "distance": 13,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 543,
+            "end": 546,
+            "text": "富士山"
+          }
+        },
+        {
+          "text": "箱根町港",
+          "entity_id": "S001_POI_012",
+          "candidate_type": "POI",
+          "distance": 20,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 535,
+            "end": 539,
+            "text": "箱根町港"
+          }
+        },
+        {
+          "text": "芦之湖",
+          "entity_id": "S001_POI_003",
+          "candidate_type": "POI",
+          "distance": 61,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 495,
+            "end": 498,
+            "text": "芦之湖"
+          }
+        },
+        {
+          "text": "箱根海贼观光船",
+          "entity_id": "S001_TRANSPORT_014",
+          "candidate_type": "TRANSPORT",
+          "distance": 66,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 490,
+            "end": 493,
+            "text": "海贼船"
+          }
+        }
+      ],
+      "resolved_text": "在元箱根港看了水中神社,这个（指：元箱根港）拍照打卡点人气太旺,排队排到半山腰.",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "水中神社",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_003",
+        "start": 554,
+        "end": 558,
+        "text": "水中神社"
+      },
+      "annotation_note": "这个打卡点指刚参观的水中神社；实验2目录没有此名称，entity_id为null。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S002_VIS_005_00113",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "它",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 113,
+        "end": 114,
+        "text": "它"
+      },
+      "sentence": {
+        "doc_id": "S002_VIS_005",
+        "start": 102,
+        "end": 115,
+        "text": "于是,我留了3天时间给它。"
+      },
+      "sentence_index": 2,
+      "context": {
+        "doc_id": "S002_VIS_005",
+        "start": 0,
+        "end": 214,
+        "text": "优胜美地离旧金山3.5小时车程,是户外活动的大本营,比如前几年爆火的《Free Solo》就是酋长岩攀登的纪录片,屏息凝神中的惊心动魄。网上的信息说优胜美地国家公园内徒步路线很多,不妨多留些时间好好感受。于是,我留了3天时间给它。实际玩下来,觉得还是要看季节:我们4月下旬去,3天其实有点多,因为这是优胜美地刚转入春天的时间,除非带上装备,否则稍微高处些的路线就尚有积雪不适宜徒步,同时风景很好的的Glacie Point和Ti"
+      },
+      "predicted_antecedent": {
+        "text": "步行",
+        "entity_id": "S002_TRANSPORT_001"
+      },
+      "predicted_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 83,
+        "end": 85,
+        "text": "徒步"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "步行",
+          "entity_id": "S002_TRANSPORT_001",
+          "candidate_type": "TRANSPORT",
+          "distance": 28,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 83,
+            "end": 85,
+            "text": "徒步"
+          }
+        },
+        {
+          "text": "优胜美地国家公园",
+          "entity_id": "S002_POI_001",
+          "candidate_type": "POI",
+          "distance": 31,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 74,
+            "end": 82,
+            "text": "优胜美地国家公园"
+          }
+        },
+        {
+          "text": "El Capitan",
+          "entity_id": "S002_POI_003",
+          "candidate_type": "POI",
+          "distance": 63,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 47,
+            "end": 50,
+            "text": "酋长岩"
+          }
+        },
+        {
+          "text": "旧金山",
+          "entity_id": "S002_POI_074",
+          "candidate_type": "POI",
+          "distance": 105,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 5,
+            "end": 8,
+            "text": "旧金山"
+          }
+        },
+        {
+          "text": "优胜美地国家公园",
+          "entity_id": "S002_POI_001",
+          "candidate_type": "POI",
+          "distance": 109,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 0,
+            "end": 4,
+            "text": "优胜美地"
+          }
+        }
+      ],
+      "resolved_text": "于是,我留了3天时间给它（指：步行）。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "优胜美地国家公园",
+        "entity_id": "S002_POI_001"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 74,
+        "end": 82,
+        "text": "优胜美地国家公园"
+      },
+      "annotation_note": "给它三天时间，指游览目标公园。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S002_VIS_005_00148",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 148,
+        "end": 149,
+        "text": "这"
+      },
+      "sentence": {
+        "doc_id": "S002_VIS_005",
+        "start": 115,
+        "end": 228,
+        "text": "实际玩下来,觉得还是要看季节:我们4月下旬去,3天其实有点多,因为这是优胜美地刚转入春天的时间,除非带上装备,否则稍微高处些的路线就尚有积雪不适宜徒步,同时风景很好的的Glacie Point和Tioga Road都尚未开放。"
+      },
+      "sentence_index": 3,
+      "context": {
+        "doc_id": "S002_VIS_005",
+        "start": 0,
+        "end": 249,
+        "text": "优胜美地离旧金山3.5小时车程,是户外活动的大本营,比如前几年爆火的《Free Solo》就是酋长岩攀登的纪录片,屏息凝神中的惊心动魄。网上的信息说优胜美地国家公园内徒步路线很多,不妨多留些时间好好感受。于是,我留了3天时间给它。实际玩下来,觉得还是要看季节:我们4月下旬去,3天其实有点多,因为这是优胜美地刚转入春天的时间,除非带上装备,否则稍微高处些的路线就尚有积雪不适宜徒步,同时风景很好的的Glacie Point和Tioga Road都尚未开放。此时开车+主要观景点打卡拍照的话,一天其实"
+      },
+      "predicted_antecedent": {
+        "text": "步行",
+        "entity_id": "S002_TRANSPORT_001"
+      },
+      "predicted_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 83,
+        "end": 85,
+        "text": "徒步"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "步行",
+          "entity_id": "S002_TRANSPORT_001",
+          "candidate_type": "TRANSPORT",
+          "distance": 63,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 83,
+            "end": 85,
+            "text": "徒步"
+          }
+        },
+        {
+          "text": "优胜美地国家公园",
+          "entity_id": "S002_POI_001",
+          "candidate_type": "POI",
+          "distance": 66,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 74,
+            "end": 82,
+            "text": "优胜美地国家公园"
+          }
+        },
+        {
+          "text": "El Capitan",
+          "entity_id": "S002_POI_003",
+          "candidate_type": "POI",
+          "distance": 98,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 47,
+            "end": 50,
+            "text": "酋长岩"
+          }
+        },
+        {
+          "text": "旧金山",
+          "entity_id": "S002_POI_074",
+          "candidate_type": "POI",
+          "distance": 140,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 5,
+            "end": 8,
+            "text": "旧金山"
+          }
+        },
+        {
+          "text": "优胜美地国家公园",
+          "entity_id": "S002_POI_001",
+          "candidate_type": "POI",
+          "distance": 144,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 0,
+            "end": 4,
+            "text": "优胜美地"
+          }
+        }
+      ],
+      "resolved_text": "实际玩下来,觉得还是要看季节:我们4月下旬去,3天其实有点多,因为这（指：步行）是优胜美地刚转入春天的时间,除非带上装备,否则稍微高处些的路线就尚有积雪不适宜徒步,同时风景很好的的Glacie Point和Tioga Road都尚未开放。",
+      "gold_status": "non_anaphoric",
+      "antecedent_type": "TIME",
+      "gold_antecedent": null,
+      "gold_evidence": null,
+      "annotation_note": "这是…时间为当下季节的时间指示，不强行对齐公园。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S002_VIS_005_00403",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "那",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 403,
+        "end": 404,
+        "text": "那"
+      },
+      "sentence": {
+        "doc_id": "S002_VIS_005",
+        "start": 393,
+        "end": 472,
+        "text": "主景区是优胜美地山谷那一片,非常集中,众多观景点顺着公路+小段徒步可达,公路虽然窄,但是单行线,我们去时相当顺畅,可以想象暑假期间人潮汹涌,完全是另一个模样。"
+      },
+      "sentence_index": 7,
+      "context": {
+        "doc_id": "S002_VIS_005",
+        "start": 83,
+        "end": 504,
+        "text": "徒步路线很多,不妨多留些时间好好感受。于是,我留了3天时间给它。实际玩下来,觉得还是要看季节:我们4月下旬去,3天其实有点多,因为这是优胜美地刚转入春天的时间,除非带上装备,否则稍微高处些的路线就尚有积雪不适宜徒步,同时风景很好的的Glacie Point和Tioga Road都尚未开放。此时开车+主要观景点打卡拍照的话,一天其实就可以转完,当然也是不深入,所以4月下旬我觉得安排2天比较合适:谷地1.5天+巨大红杉林0.5天。\n从旧金山去往优胜美地的途中,不出意外,盘山路明丽轻快,草长莺飞,草波在大风中荡漾,如海浪如麦浪,光泽闪耀。我们在进入El Portal前的镇子上午餐,居然有中餐馆“枫林餐厅”,口味一般。\n主景区是优胜美地山谷那一片,非常集中,众多观景点顺着公路+小段徒步可达,公路虽然窄,但是单行线,我们去时相当顺畅,可以想象暑假期间人潮汹涌,完全是另一个模样。因为22年冬季雪大,我们去时那些全靠融雪的瀑布水量非常壮观,当然"
+      },
+      "predicted_antecedent": {
+        "text": "Yosemite Valley",
+        "entity_id": "S002_POI_002"
+      },
+      "predicted_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 397,
+        "end": 403,
+        "text": "优胜美地山谷"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "Yosemite Valley",
+          "entity_id": "S002_POI_002",
+          "candidate_type": "POI",
+          "distance": 0,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 397,
+            "end": 403,
+            "text": "优胜美地山谷"
+          }
+        },
+        {
+          "text": "El Portal",
+          "entity_id": "S002_POI_070",
+          "candidate_type": "POI",
+          "distance": 37,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 357,
+            "end": 366,
+            "text": "El Portal"
+          }
+        },
+        {
+          "text": "优胜美地国家公园",
+          "entity_id": "S002_POI_001",
+          "candidate_type": "POI",
+          "distance": 94,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 305,
+            "end": 309,
+            "text": "优胜美地"
+          }
+        },
+        {
+          "text": "旧金山",
+          "entity_id": "S002_POI_074",
+          "candidate_type": "POI",
+          "distance": 100,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 300,
+            "end": 303,
+            "text": "旧金山"
+          }
+        },
+        {
+          "text": "Mariposa Grove",
+          "entity_id": "S002_POI_068",
+          "candidate_type": "POI",
+          "distance": 110,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 288,
+            "end": 293,
+            "text": "巨大红杉林"
+          }
+        }
+      ],
+      "resolved_text": "主景区是优胜美地山谷那（指：Yosemite Valley）一片,非常集中,众多观景点顺着公路+小段徒步可达,公路虽然窄,但是单行线,我们去时相当顺畅,可以想象暑假期间人潮汹涌,完全是另一个模样。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Yosemite Valley",
+        "entity_id": "S002_POI_002"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 397,
+        "end": 403,
+        "text": "优胜美地山谷"
+      },
+      "annotation_note": "那一片指山谷区域。",
+      "correct": true
+    },
+    {
+      "case_id": "CR_S002_VIS_005_00486",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "那些",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 486,
+        "end": 488,
+        "text": "那些"
+      },
+      "sentence": {
+        "doc_id": "S002_VIS_005",
+        "start": 472,
+        "end": 540,
+        "text": "因为22年冬季雪大,我们去时那些全靠融雪的瀑布水量非常壮观,当然后续就是因为水量过大引发洪灾,4月底5月初部分露营地被紧急关闭以策安全。"
+      },
+      "sentence_index": 8,
+      "context": {
+        "doc_id": "S002_VIS_005",
+        "start": 166,
+        "end": 588,
+        "text": "上装备,否则稍微高处些的路线就尚有积雪不适宜徒步,同时风景很好的的Glacie Point和Tioga Road都尚未开放。此时开车+主要观景点打卡拍照的话,一天其实就可以转完,当然也是不深入,所以4月下旬我觉得安排2天比较合适:谷地1.5天+巨大红杉林0.5天。\n从旧金山去往优胜美地的途中,不出意外,盘山路明丽轻快,草长莺飞,草波在大风中荡漾,如海浪如麦浪,光泽闪耀。我们在进入El Portal前的镇子上午餐,居然有中餐馆“枫林餐厅”,口味一般。\n主景区是优胜美地山谷那一片,非常集中,众多观景点顺着公路+小段徒步可达,公路虽然窄,但是单行线,我们去时相当顺畅,可以想象暑假期间人潮汹涌,完全是另一个模样。因为22年冬季雪大,我们去时那些全靠融雪的瀑布水量非常壮观,当然后续就是因为水量过大引发洪灾,4月底5月初部分露营地被紧急关闭以策安全。优胜美地国家公园经过150多年的发展和经营,管理井井有条,信息通畅及时,各类设施与周边风景融和不"
+      },
+      "predicted_antecedent": {
+        "text": "步行",
+        "entity_id": "S002_TRANSPORT_001"
+      },
+      "predicted_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 424,
+        "end": 426,
+        "text": "徒步"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "步行",
+          "entity_id": "S002_TRANSPORT_001",
+          "candidate_type": "TRANSPORT",
+          "distance": 60,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 424,
+            "end": 426,
+            "text": "徒步"
+          }
+        },
+        {
+          "text": "Yosemite Valley",
+          "entity_id": "S002_POI_002",
+          "candidate_type": "POI",
+          "distance": 83,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 397,
+            "end": 403,
+            "text": "优胜美地山谷"
+          }
+        },
+        {
+          "text": "El Portal",
+          "entity_id": "S002_POI_070",
+          "candidate_type": "POI",
+          "distance": 120,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 357,
+            "end": 366,
+            "text": "El Portal"
+          }
+        },
+        {
+          "text": "优胜美地国家公园",
+          "entity_id": "S002_POI_001",
+          "candidate_type": "POI",
+          "distance": 177,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 305,
+            "end": 309,
+            "text": "优胜美地"
+          }
+        },
+        {
+          "text": "旧金山",
+          "entity_id": "S002_POI_074",
+          "candidate_type": "POI",
+          "distance": 183,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 300,
+            "end": 303,
+            "text": "旧金山"
+          }
+        }
+      ],
+      "resolved_text": "因为22年冬季雪大,我们去时那些（指：步行）全靠融雪的瀑布水量非常壮观,当然后续就是因为水量过大引发洪灾,4月底5月初部分露营地被紧急关闭以策安全。",
+      "gold_status": "exophoric",
+      "antecedent_type": "OBJECT",
+      "gold_antecedent": null,
+      "gold_evidence": null,
+      "annotation_note": "那些全靠融雪的瀑布为泛指复数，无已明确枚举的单一先行词。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S002_VIS_005_00637",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这些",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 637,
+        "end": 639,
+        "text": "这些"
+      },
+      "sentence": {
+        "doc_id": "S002_VIS_005",
+        "start": 604,
+        "end": 704,
+        "text": "看全景的最佳地点非Tunnel View莫属,可以把酋长岩和半圆顶这些标志性景点一并纳入,日落时新娘面纱瀑布被夕阳染成金色,配合下方光影交错绿毯一般的杉林,美如油画——也确实会有人在那里现场临摹作画。"
+      },
+      "sentence_index": 10,
+      "context": {
+        "doc_id": "S002_VIS_005",
+        "start": 317,
+        "end": 739,
+        "text": ",盘山路明丽轻快,草长莺飞,草波在大风中荡漾,如海浪如麦浪,光泽闪耀。我们在进入El Portal前的镇子上午餐,居然有中餐馆“枫林餐厅”,口味一般。\n主景区是优胜美地山谷那一片,非常集中,众多观景点顺着公路+小段徒步可达,公路虽然窄,但是单行线,我们去时相当顺畅,可以想象暑假期间人潮汹涌,完全是另一个模样。因为22年冬季雪大,我们去时那些全靠融雪的瀑布水量非常壮观,当然后续就是因为水量过大引发洪灾,4月底5月初部分露营地被紧急关闭以策安全。优胜美地国家公园经过150多年的发展和经营,管理井井有条,信息通畅及时,各类设施与周边风景融和不突兀,让人心生望尘莫及的感叹。\n看全景的最佳地点非Tunnel View莫属,可以把酋长岩和半圆顶这些标志性景点一并纳入,日落时新娘面纱瀑布被夕阳染成金色,配合下方光影交错绿毯一般的杉林,美如油画——也确实会有人在那里现场临摹作画。但凡天气好,优胜美地的标准照在这里唾手可得。顺便说,园内大部分地区都没"
+      },
+      "predicted_antecedent": {
+        "text": "Half Dome",
+        "entity_id": "S002_POI_004"
+      },
+      "predicted_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 634,
+        "end": 637,
+        "text": "半圆顶"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "Half Dome",
+          "entity_id": "S002_POI_004",
+          "candidate_type": "POI",
+          "distance": 0,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 634,
+            "end": 637,
+            "text": "半圆顶"
+          }
+        },
+        {
+          "text": "El Capitan",
+          "entity_id": "S002_POI_003",
+          "candidate_type": "POI",
+          "distance": 4,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 630,
+            "end": 633,
+            "text": "酋长岩"
+          }
+        },
+        {
+          "text": "Tunnel View",
+          "entity_id": "S002_POI_006",
+          "candidate_type": "POI",
+          "distance": 13,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 613,
+            "end": 624,
+            "text": "Tunnel View"
+          }
+        },
+        {
+          "text": "优胜美地国家公园",
+          "entity_id": "S002_POI_001",
+          "candidate_type": "POI",
+          "distance": 89,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 540,
+            "end": 548,
+            "text": "优胜美地国家公园"
+          }
+        },
+        {
+          "text": "步行",
+          "entity_id": "S002_TRANSPORT_001",
+          "candidate_type": "TRANSPORT",
+          "distance": 211,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 424,
+            "end": 426,
+            "text": "徒步"
+          }
+        }
+      ],
+      "resolved_text": "看全景的最佳地点非Tunnel View莫属,可以把酋长岩和半圆顶这些（指：Half Dome）标志性景点一并纳入,日落时新娘面纱瀑布被夕阳染成金色,配合下方光影交错绿毯一般的杉林,美如油画——也确实会有人在那里现场临摹作画。",
+      "gold_status": "resolved",
+      "antecedent_type": "GROUP",
+      "gold_antecedent": {
+        "text": "酋长岩和半圆顶",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 630,
+        "end": 637,
+        "text": "酋长岩和半圆顶"
+      },
+      "annotation_note": "这些标志性景点是前面的两个景点组成的集合。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S002_VIS_005_00695",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "那里",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 695,
+        "end": 697,
+        "text": "那里"
+      },
+      "sentence": {
+        "doc_id": "S002_VIS_005",
+        "start": 604,
+        "end": 704,
+        "text": "看全景的最佳地点非Tunnel View莫属,可以把酋长岩和半圆顶这些标志性景点一并纳入,日落时新娘面纱瀑布被夕阳染成金色,配合下方光影交错绿毯一般的杉林,美如油画——也确实会有人在那里现场临摹作画。"
+      },
+      "sentence_index": 10,
+      "context": {
+        "doc_id": "S002_VIS_005",
+        "start": 375,
+        "end": 797,
+        "text": "然有中餐馆“枫林餐厅”,口味一般。\n主景区是优胜美地山谷那一片,非常集中,众多观景点顺着公路+小段徒步可达,公路虽然窄,但是单行线,我们去时相当顺畅,可以想象暑假期间人潮汹涌,完全是另一个模样。因为22年冬季雪大,我们去时那些全靠融雪的瀑布水量非常壮观,当然后续就是因为水量过大引发洪灾,4月底5月初部分露营地被紧急关闭以策安全。优胜美地国家公园经过150多年的发展和经营,管理井井有条,信息通畅及时,各类设施与周边风景融和不突兀,让人心生望尘莫及的感叹。\n看全景的最佳地点非Tunnel View莫属,可以把酋长岩和半圆顶这些标志性景点一并纳入,日落时新娘面纱瀑布被夕阳染成金色,配合下方光影交错绿毯一般的杉林,美如油画——也确实会有人在那里现场临摹作画。但凡天气好,优胜美地的标准照在这里唾手可得。顺便说,园内大部分地区都没有网络,但Tunnel View这里信号不错。\n遇到几处计划内山火,其中一处是下午,靠近酋长岩的路边林间。山火的烟雾"
+      },
+      "predicted_antecedent": {
+        "text": "Bridalveil Fall",
+        "entity_id": "S002_POI_007"
+      },
+      "predicted_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 652,
+        "end": 658,
+        "text": "新娘面纱瀑布"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "Bridalveil Fall",
+          "entity_id": "S002_POI_007",
+          "candidate_type": "POI",
+          "distance": 37,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 652,
+            "end": 658,
+            "text": "新娘面纱瀑布"
+          }
+        },
+        {
+          "text": "Half Dome",
+          "entity_id": "S002_POI_004",
+          "candidate_type": "POI",
+          "distance": 58,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 634,
+            "end": 637,
+            "text": "半圆顶"
+          }
+        },
+        {
+          "text": "El Capitan",
+          "entity_id": "S002_POI_003",
+          "candidate_type": "POI",
+          "distance": 62,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 630,
+            "end": 633,
+            "text": "酋长岩"
+          }
+        },
+        {
+          "text": "Tunnel View",
+          "entity_id": "S002_POI_006",
+          "candidate_type": "POI",
+          "distance": 71,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 613,
+            "end": 624,
+            "text": "Tunnel View"
+          }
+        },
+        {
+          "text": "优胜美地国家公园",
+          "entity_id": "S002_POI_001",
+          "candidate_type": "POI",
+          "distance": 147,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 540,
+            "end": 548,
+            "text": "优胜美地国家公园"
+          }
+        }
+      ],
+      "resolved_text": "看全景的最佳地点非Tunnel View莫属,可以把酋长岩和半圆顶这些标志性景点一并纳入,日落时新娘面纱瀑布被夕阳染成金色,配合下方光影交错绿毯一般的杉林,美如油画——也确实会有人在那里（指：Bridalveil Fall）现场临摹作画。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Tunnel View",
+        "entity_id": "S002_POI_006"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 613,
+        "end": 624,
+        "text": "Tunnel View"
+      },
+      "annotation_note": "现场作画地点沿用本段主题观景点；最近瀑布是拍摄对象。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S002_VIS_005_00719",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 719,
+        "end": 721,
+        "text": "这里"
+      },
+      "sentence": {
+        "doc_id": "S002_VIS_005",
+        "start": 704,
+        "end": 726,
+        "text": "但凡天气好,优胜美地的标准照在这里唾手可得。"
+      },
+      "sentence_index": 11,
+      "context": {
+        "doc_id": "S002_VIS_005",
+        "start": 399,
+        "end": 821,
+        "text": "美地山谷那一片,非常集中,众多观景点顺着公路+小段徒步可达,公路虽然窄,但是单行线,我们去时相当顺畅,可以想象暑假期间人潮汹涌,完全是另一个模样。因为22年冬季雪大,我们去时那些全靠融雪的瀑布水量非常壮观,当然后续就是因为水量过大引发洪灾,4月底5月初部分露营地被紧急关闭以策安全。优胜美地国家公园经过150多年的发展和经营,管理井井有条,信息通畅及时,各类设施与周边风景融和不突兀,让人心生望尘莫及的感叹。\n看全景的最佳地点非Tunnel View莫属,可以把酋长岩和半圆顶这些标志性景点一并纳入,日落时新娘面纱瀑布被夕阳染成金色,配合下方光影交错绿毯一般的杉林,美如油画——也确实会有人在那里现场临摹作画。但凡天气好,优胜美地的标准照在这里唾手可得。顺便说,园内大部分地区都没有网络,但Tunnel View这里信号不错。\n遇到几处计划内山火,其中一处是下午,靠近酋长岩的路边林间。山火的烟雾逐渐散开,斜阳下化作万千光束,从路的一侧掷向另一"
+      },
+      "predicted_antecedent": {
+        "text": "优胜美地国家公园",
+        "entity_id": "S002_POI_001"
+      },
+      "predicted_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 710,
+        "end": 714,
+        "text": "优胜美地"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "优胜美地国家公园",
+          "entity_id": "S002_POI_001",
+          "candidate_type": "POI",
+          "distance": 5,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 710,
+            "end": 714,
+            "text": "优胜美地"
+          }
+        },
+        {
+          "text": "Bridalveil Fall",
+          "entity_id": "S002_POI_007",
+          "candidate_type": "POI",
+          "distance": 61,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 652,
+            "end": 658,
+            "text": "新娘面纱瀑布"
+          }
+        },
+        {
+          "text": "Half Dome",
+          "entity_id": "S002_POI_004",
+          "candidate_type": "POI",
+          "distance": 82,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 634,
+            "end": 637,
+            "text": "半圆顶"
+          }
+        },
+        {
+          "text": "El Capitan",
+          "entity_id": "S002_POI_003",
+          "candidate_type": "POI",
+          "distance": 86,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 630,
+            "end": 633,
+            "text": "酋长岩"
+          }
+        },
+        {
+          "text": "Tunnel View",
+          "entity_id": "S002_POI_006",
+          "candidate_type": "POI",
+          "distance": 95,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 613,
+            "end": 624,
+            "text": "Tunnel View"
+          }
+        }
+      ],
+      "resolved_text": "但凡天气好,优胜美地的标准照在这里（指：优胜美地国家公园）唾手可得。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Tunnel View",
+        "entity_id": "S002_POI_006"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 613,
+        "end": 624,
+        "text": "Tunnel View"
+      },
+      "annotation_note": "拍标准照的地点仍为Tunnel View。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S002_VIS_005_00755",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 755,
+        "end": 757,
+        "text": "这里"
+      },
+      "sentence": {
+        "doc_id": "S002_VIS_005",
+        "start": 726,
+        "end": 762,
+        "text": "顺便说,园内大部分地区都没有网络,但Tunnel View这里信号不错。"
+      },
+      "sentence_index": 12,
+      "context": {
+        "doc_id": "S002_VIS_005",
+        "start": 435,
+        "end": 857,
+        "text": "但是单行线,我们去时相当顺畅,可以想象暑假期间人潮汹涌,完全是另一个模样。因为22年冬季雪大,我们去时那些全靠融雪的瀑布水量非常壮观,当然后续就是因为水量过大引发洪灾,4月底5月初部分露营地被紧急关闭以策安全。优胜美地国家公园经过150多年的发展和经营,管理井井有条,信息通畅及时,各类设施与周边风景融和不突兀,让人心生望尘莫及的感叹。\n看全景的最佳地点非Tunnel View莫属,可以把酋长岩和半圆顶这些标志性景点一并纳入,日落时新娘面纱瀑布被夕阳染成金色,配合下方光影交错绿毯一般的杉林,美如油画——也确实会有人在那里现场临摹作画。但凡天气好,优胜美地的标准照在这里唾手可得。顺便说,园内大部分地区都没有网络,但Tunnel View这里信号不错。\n遇到几处计划内山火,其中一处是下午,靠近酋长岩的路边林间。山火的烟雾逐渐散开,斜阳下化作万千光束,从路的一侧掷向另一侧。迷蒙烟气中,人与车勾勒出轮廓鲜明的剪影,成就了当日最佳照片,没想到这"
+      },
+      "predicted_antecedent": {
+        "text": "Tunnel View",
+        "entity_id": "S002_POI_006"
+      },
+      "predicted_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 744,
+        "end": 755,
+        "text": "Tunnel View"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "Tunnel View",
+          "entity_id": "S002_POI_006",
+          "candidate_type": "POI",
+          "distance": 0,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 744,
+            "end": 755,
+            "text": "Tunnel View"
+          }
+        },
+        {
+          "text": "优胜美地国家公园",
+          "entity_id": "S002_POI_001",
+          "candidate_type": "POI",
+          "distance": 41,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 710,
+            "end": 714,
+            "text": "优胜美地"
+          }
+        },
+        {
+          "text": "Bridalveil Fall",
+          "entity_id": "S002_POI_007",
+          "candidate_type": "POI",
+          "distance": 97,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 652,
+            "end": 658,
+            "text": "新娘面纱瀑布"
+          }
+        },
+        {
+          "text": "Half Dome",
+          "entity_id": "S002_POI_004",
+          "candidate_type": "POI",
+          "distance": 118,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 634,
+            "end": 637,
+            "text": "半圆顶"
+          }
+        },
+        {
+          "text": "El Capitan",
+          "entity_id": "S002_POI_003",
+          "candidate_type": "POI",
+          "distance": 122,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 630,
+            "end": 633,
+            "text": "酋长岩"
+          }
+        }
+      ],
+      "resolved_text": "顺便说,园内大部分地区都没有网络,但Tunnel View这里（指：Tunnel View）信号不错。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Tunnel View",
+        "entity_id": "S002_POI_006"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 744,
+        "end": 755,
+        "text": "Tunnel View"
+      },
+      "annotation_note": "同句Tunnel View这里，局部复指观景点。",
+      "correct": true
+    },
+    {
+      "case_id": "CR_S002_VIS_005_00856",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 856,
+        "end": 857,
+        "text": "这"
+      },
+      "sentence": {
+        "doc_id": "S002_VIS_005",
+        "start": 823,
+        "end": 871,
+        "text": "迷蒙烟气中,人与车勾勒出轮廓鲜明的剪影,成就了当日最佳照片,没想到这美丽国烧个山火也能烧出艺术!"
+      },
+      "sentence_index": 15,
+      "context": {
+        "doc_id": "S002_VIS_005",
+        "start": 536,
+        "end": 957,
+        "text": "策安全。优胜美地国家公园经过150多年的发展和经营,管理井井有条,信息通畅及时,各类设施与周边风景融和不突兀,让人心生望尘莫及的感叹。\n看全景的最佳地点非Tunnel View莫属,可以把酋长岩和半圆顶这些标志性景点一并纳入,日落时新娘面纱瀑布被夕阳染成金色,配合下方光影交错绿毯一般的杉林,美如油画——也确实会有人在那里现场临摹作画。但凡天气好,优胜美地的标准照在这里唾手可得。顺便说,园内大部分地区都没有网络,但Tunnel View这里信号不错。\n遇到几处计划内山火,其中一处是下午,靠近酋长岩的路边林间。山火的烟雾逐渐散开,斜阳下化作万千光束,从路的一侧掷向另一侧。迷蒙烟气中,人与车勾勒出轮廓鲜明的剪影,成就了当日最佳照片,没想到这美丽国烧个山火也能烧出艺术!\n另一个惊喜来自于酋长岩东壁的马尾瀑布horsetail。从密密的松林之中望见它的侧面,绸缎般细密的水面在四点多的阳光下耀如闪电,让车内的我们直接惊呼出声。据此想像2月间,"
+      },
+      "predicted_antecedent": {
+        "text": "El Capitan",
+        "entity_id": "S002_POI_003"
+      },
+      "predicted_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 783,
+        "end": 786,
+        "text": "酋长岩"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "El Capitan",
+          "entity_id": "S002_POI_003",
+          "candidate_type": "POI",
+          "distance": 70,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 783,
+            "end": 786,
+            "text": "酋长岩"
+          }
+        },
+        {
+          "text": "Tunnel View",
+          "entity_id": "S002_POI_006",
+          "candidate_type": "POI",
+          "distance": 101,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 744,
+            "end": 755,
+            "text": "Tunnel View"
+          }
+        },
+        {
+          "text": "优胜美地国家公园",
+          "entity_id": "S002_POI_001",
+          "candidate_type": "POI",
+          "distance": 142,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 710,
+            "end": 714,
+            "text": "优胜美地"
+          }
+        }
+      ],
+      "resolved_text": "迷蒙烟气中,人与车勾勒出轮廓鲜明的剪影,成就了当日最佳照片,没想到这（指：El Capitan）美丽国烧个山火也能烧出艺术!",
+      "gold_status": "non_anaphoric",
+      "antecedent_type": "POI",
+      "gold_antecedent": null,
+      "gold_evidence": null,
+      "annotation_note": "这美丽国是对美国的口语指示称呼，前文没有同指明确名词。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S002_VIS_005_00910",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "它",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 910,
+        "end": 911,
+        "text": "它"
+      },
+      "sentence": {
+        "doc_id": "S002_VIS_005",
+        "start": 900,
+        "end": 949,
+        "text": "从密密的松林之中望见它的侧面,绸缎般细密的水面在四点多的阳光下耀如闪电,让车内的我们直接惊呼出声。"
+      },
+      "sentence_index": 17,
+      "context": {
+        "doc_id": "S002_VIS_005",
+        "start": 590,
+        "end": 1011,
+        "text": ",让人心生望尘莫及的感叹。\n看全景的最佳地点非Tunnel View莫属,可以把酋长岩和半圆顶这些标志性景点一并纳入,日落时新娘面纱瀑布被夕阳染成金色,配合下方光影交错绿毯一般的杉林,美如油画——也确实会有人在那里现场临摹作画。但凡天气好,优胜美地的标准照在这里唾手可得。顺便说,园内大部分地区都没有网络,但Tunnel View这里信号不错。\n遇到几处计划内山火,其中一处是下午,靠近酋长岩的路边林间。山火的烟雾逐渐散开,斜阳下化作万千光束,从路的一侧掷向另一侧。迷蒙烟气中,人与车勾勒出轮廓鲜明的剪影,成就了当日最佳照片,没想到这美丽国烧个山火也能烧出艺术!\n另一个惊喜来自于酋长岩东壁的马尾瀑布horsetail。从密密的松林之中望见它的侧面,绸缎般细密的水面在四点多的阳光下耀如闪电,让车内的我们直接惊呼出声。据此想像2月间,因为夕阳的角度,马尾瀑布变成火瀑的模样,难怪届时入园需要预约——据说那时候园内长满了长枪短炮的老法师们。\n我"
+      },
+      "predicted_antecedent": {
+        "text": "Horsetail Fall",
+        "entity_id": "S002_POI_037"
+      },
+      "predicted_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 886,
+        "end": 890,
+        "text": "马尾瀑布"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "Horsetail Fall",
+          "entity_id": "S002_POI_037",
+          "candidate_type": "POI",
+          "distance": 20,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 886,
+            "end": 890,
+            "text": "马尾瀑布"
+          }
+        },
+        {
+          "text": "El Capitan",
+          "entity_id": "S002_POI_003",
+          "candidate_type": "POI",
+          "distance": 27,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 880,
+            "end": 883,
+            "text": "酋长岩"
+          }
+        },
+        {
+          "text": "El Capitan",
+          "entity_id": "S002_POI_003",
+          "candidate_type": "POI",
+          "distance": 124,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 783,
+            "end": 786,
+            "text": "酋长岩"
+          }
+        }
+      ],
+      "resolved_text": "从密密的松林之中望见它（指：Horsetail Fall）的侧面,绸缎般细密的水面在四点多的阳光下耀如闪电,让车内的我们直接惊呼出声。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Horsetail Fall",
+        "entity_id": "S002_POI_037"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 886,
+        "end": 890,
+        "text": "马尾瀑布"
+      },
+      "annotation_note": "它的侧面指刚介绍的马尾瀑布。",
+      "correct": true
+    },
+    {
+      "case_id": "CR_S002_VIS_005_00991",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "那",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 991,
+        "end": 992,
+        "text": "那"
+      },
+      "sentence": {
+        "doc_id": "S002_VIS_005",
+        "start": 949,
+        "end": 1009,
+        "text": "据此想像2月间,因为夕阳的角度,马尾瀑布变成火瀑的模样,难怪届时入园需要预约——据说那时候园内长满了长枪短炮的老法师们。"
+      },
+      "sentence_index": 18,
+      "context": {
+        "doc_id": "S002_VIS_005",
+        "start": 671,
+        "end": 1092,
+        "text": "影交错绿毯一般的杉林,美如油画——也确实会有人在那里现场临摹作画。但凡天气好,优胜美地的标准照在这里唾手可得。顺便说,园内大部分地区都没有网络,但Tunnel View这里信号不错。\n遇到几处计划内山火,其中一处是下午,靠近酋长岩的路边林间。山火的烟雾逐渐散开,斜阳下化作万千光束,从路的一侧掷向另一侧。迷蒙烟气中,人与车勾勒出轮廓鲜明的剪影,成就了当日最佳照片,没想到这美丽国烧个山火也能烧出艺术!\n另一个惊喜来自于酋长岩东壁的马尾瀑布horsetail。从密密的松林之中望见它的侧面,绸缎般细密的水面在四点多的阳光下耀如闪电,让车内的我们直接惊呼出声。据此想像2月间,因为夕阳的角度,马尾瀑布变成火瀑的模样,难怪届时入园需要预约——据说那时候园内长满了长枪短炮的老法师们。\n我们在优胜美地瀑布走了步道。这是园内最长的瀑布,水量也大,分上下两段,走走拍拍2小时多,经过了一片过膝深的雪地,到达下瀑的上方,望见彩虹和冰洞。路不难走,但继续往上"
+      },
+      "predicted_antecedent": {
+        "text": "Horsetail Fall",
+        "entity_id": "S002_POI_037"
+      },
+      "predicted_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 965,
+        "end": 969,
+        "text": "马尾瀑布"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "Horsetail Fall",
+          "entity_id": "S002_POI_037",
+          "candidate_type": "POI",
+          "distance": 22,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 965,
+            "end": 969,
+            "text": "马尾瀑布"
+          }
+        },
+        {
+          "text": "Horsetail Fall",
+          "entity_id": "S002_POI_037",
+          "candidate_type": "POI",
+          "distance": 101,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 886,
+            "end": 890,
+            "text": "马尾瀑布"
+          }
+        },
+        {
+          "text": "El Capitan",
+          "entity_id": "S002_POI_003",
+          "candidate_type": "POI",
+          "distance": 108,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 880,
+            "end": 883,
+            "text": "酋长岩"
+          }
+        }
+      ],
+      "resolved_text": "据此想像2月间,因为夕阳的角度,马尾瀑布变成火瀑的模样,难怪届时入园需要预约——据说那（指：Horsetail Fall）时候园内长满了长枪短炮的老法师们。",
+      "gold_status": "resolved",
+      "antecedent_type": "EVENT",
+      "gold_antecedent": {
+        "text": "2月间",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 953,
+        "end": 956,
+        "text": "2月间"
+      },
+      "annotation_note": "那时候回指前述二月火瀑拍摄时段。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S002_VIS_005_01024",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 1024,
+        "end": 1025,
+        "text": "这"
+      },
+      "sentence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1024,
+        "end": 1082,
+        "text": "这是园内最长的瀑布,水量也大,分上下两段,走走拍拍2小时多,经过了一片过膝深的雪地,到达下瀑的上方,望见彩虹和冰洞。"
+      },
+      "sentence_index": 20,
+      "context": {
+        "doc_id": "S002_VIS_005",
+        "start": 704,
+        "end": 1125,
+        "text": "但凡天气好,优胜美地的标准照在这里唾手可得。顺便说,园内大部分地区都没有网络,但Tunnel View这里信号不错。\n遇到几处计划内山火,其中一处是下午,靠近酋长岩的路边林间。山火的烟雾逐渐散开,斜阳下化作万千光束,从路的一侧掷向另一侧。迷蒙烟气中,人与车勾勒出轮廓鲜明的剪影,成就了当日最佳照片,没想到这美丽国烧个山火也能烧出艺术!\n另一个惊喜来自于酋长岩东壁的马尾瀑布horsetail。从密密的松林之中望见它的侧面,绸缎般细密的水面在四点多的阳光下耀如闪电,让车内的我们直接惊呼出声。据此想像2月间,因为夕阳的角度,马尾瀑布变成火瀑的模样,难怪届时入园需要预约——据说那时候园内长满了长枪短炮的老法师们。\n我们在优胜美地瀑布走了步道。这是园内最长的瀑布,水量也大,分上下两段,走走拍拍2小时多,经过了一片过膝深的雪地,到达下瀑的上方,望见彩虹和冰洞。路不难走,但继续往上冰雪愈多,完全没做准备的我们决定放弃。\n从停车场往Mirror L"
+      },
+      "predicted_antecedent": {
+        "text": "Yosemite Falls",
+        "entity_id": "S002_POI_008"
+      },
+      "predicted_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1013,
+        "end": 1019,
+        "text": "优胜美地瀑布"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "Yosemite Falls",
+          "entity_id": "S002_POI_008",
+          "candidate_type": "POI",
+          "distance": 5,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1013,
+            "end": 1019,
+            "text": "优胜美地瀑布"
+          }
+        },
+        {
+          "text": "Horsetail Fall",
+          "entity_id": "S002_POI_037",
+          "candidate_type": "POI",
+          "distance": 55,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 965,
+            "end": 969,
+            "text": "马尾瀑布"
+          }
+        },
+        {
+          "text": "Horsetail Fall",
+          "entity_id": "S002_POI_037",
+          "candidate_type": "POI",
+          "distance": 134,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 886,
+            "end": 890,
+            "text": "马尾瀑布"
+          }
+        },
+        {
+          "text": "El Capitan",
+          "entity_id": "S002_POI_003",
+          "candidate_type": "POI",
+          "distance": 141,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 880,
+            "end": 883,
+            "text": "酋长岩"
+          }
+        }
+      ],
+      "resolved_text": "这（指：Yosemite Falls）是园内最长的瀑布,水量也大,分上下两段,走走拍拍2小时多,经过了一片过膝深的雪地,到达下瀑的上方,望见彩虹和冰洞。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Yosemite Falls",
+        "entity_id": "S002_POI_008"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1013,
+        "end": 1019,
+        "text": "优胜美地瀑布"
+      },
+      "annotation_note": "这是园内最长的瀑布，回指前句游览对象。",
+      "correct": true
+    },
+    {
+      "case_id": "CR_S002_VIS_005_01430",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 1430,
+        "end": 1431,
+        "text": "这"
+      },
+      "sentence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1398,
+        "end": 1455,
+        "text": "仔细观察可见挖出通道后,红杉又继续顽强地生出新的树皮包裹伤口,而这通道无疑也是美国环境保护水平发展的一个历史见证。"
+      },
+      "sentence_index": 29,
+      "context": {
+        "doc_id": "S002_VIS_005",
+        "start": 1110,
+        "end": 1531,
+        "text": "。\n从停车场往Mirror Lake走去的道路两侧是高耸挺拔峻美的杉树。途中有人群聚集,打听之下得知是有人望见前方有小熊,但因为小熊静止中,我反正没找到。据说优胜美地的熊相当胆怯腼腆,从未有伤人记录,防熊喷雾自是不必。\n除了峡谷主景区,我们还去了属于优胜美地的Mariposa红杉公园。当时不知何故,穿梭巴士停运,必须步行从公园门口去往红杉处,是2公里的盘山路接步道。步道处开始有积雪,最深处差不多有1米,好在游客不多,积雪未踩成薄冰,走起来也还安全。红杉有六、七十米高,名为California Tunnel的红杉有2700年树龄,曾经真的在底部被挖出一个通道,供马车通行。仔细观察可见挖出通道后,红杉又继续顽强地生出新的树皮包裹伤口,而这通道无疑也是美国环境保护水平发展的一个历史见证。巨大红杉下有着各种其他植被,共同构成的生态滋养着这里所有的生物,行走其间的我们,也得以享受和煦的阳光与温暖。\n我们还去了一小时车程需要翻山的Hetch "
+      },
+      "predicted_antecedent": {
+        "text": "步行",
+        "entity_id": "S002_TRANSPORT_001"
+      },
+      "predicted_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1269,
+        "end": 1271,
+        "text": "步行"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "步行",
+          "entity_id": "S002_TRANSPORT_001",
+          "candidate_type": "TRANSPORT",
+          "distance": 159,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1269,
+            "end": 1271,
+            "text": "步行"
+          }
+        },
+        {
+          "text": "巴士",
+          "entity_id": "S002_TRANSPORT_002",
+          "candidate_type": "TRANSPORT",
+          "distance": 166,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1260,
+            "end": 1264,
+            "text": "穿梭巴士"
+          }
+        },
+        {
+          "text": "Mariposa Grove",
+          "entity_id": "S002_POI_068",
+          "candidate_type": "POI",
+          "distance": 178,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1240,
+            "end": 1252,
+            "text": "Mariposa红杉公园"
+          }
+        },
+        {
+          "text": "优胜美地国家公园",
+          "entity_id": "S002_POI_001",
+          "candidate_type": "POI",
+          "distance": 191,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1235,
+            "end": 1239,
+            "text": "优胜美地"
+          }
+        }
+      ],
+      "resolved_text": "仔细观察可见挖出通道后,红杉又继续顽强地生出新的树皮包裹伤口,而这（指：步行）通道无疑也是美国环境保护水平发展的一个历史见证。",
+      "gold_status": "resolved",
+      "antecedent_type": "OBJECT",
+      "gold_antecedent": {
+        "text": "一个通道",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1387,
+        "end": 1391,
+        "text": "一个通道"
+      },
+      "annotation_note": "这通道指在树底部挖出的通道，不能对齐红杉公园。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S002_VIS_005_01479",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 1479,
+        "end": 1481,
+        "text": "这里"
+      },
+      "sentence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1455,
+        "end": 1509,
+        "text": "巨大红杉下有着各种其他植被,共同构成的生态滋养着这里所有的生物,行走其间的我们,也得以享受和煦的阳光与温暖。"
+      },
+      "sentence_index": 30,
+      "context": {
+        "doc_id": "S002_VIS_005",
+        "start": 1159,
+        "end": 1581,
+        "text": "知是有人望见前方有小熊,但因为小熊静止中,我反正没找到。据说优胜美地的熊相当胆怯腼腆,从未有伤人记录,防熊喷雾自是不必。\n除了峡谷主景区,我们还去了属于优胜美地的Mariposa红杉公园。当时不知何故,穿梭巴士停运,必须步行从公园门口去往红杉处,是2公里的盘山路接步道。步道处开始有积雪,最深处差不多有1米,好在游客不多,积雪未踩成薄冰,走起来也还安全。红杉有六、七十米高,名为California Tunnel的红杉有2700年树龄,曾经真的在底部被挖出一个通道,供马车通行。仔细观察可见挖出通道后,红杉又继续顽强地生出新的树皮包裹伤口,而这通道无疑也是美国环境保护水平发展的一个历史见证。巨大红杉下有着各种其他植被,共同构成的生态滋养着这里所有的生物,行走其间的我们,也得以享受和煦的阳光与温暖。\n我们还去了一小时车程需要翻山的Hetch Hetchy——这里以前是和优胜美地谷一样美的峡谷,至今也能看到挂在岩壁上的多条瀑布,20世纪初这里"
+      },
+      "predicted_antecedent": {
+        "text": "步行",
+        "entity_id": "S002_TRANSPORT_001"
+      },
+      "predicted_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1269,
+        "end": 1271,
+        "text": "步行"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "步行",
+          "entity_id": "S002_TRANSPORT_001",
+          "candidate_type": "TRANSPORT",
+          "distance": 208,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1269,
+            "end": 1271,
+            "text": "步行"
+          }
+        },
+        {
+          "text": "巴士",
+          "entity_id": "S002_TRANSPORT_002",
+          "candidate_type": "TRANSPORT",
+          "distance": 215,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1260,
+            "end": 1264,
+            "text": "穿梭巴士"
+          }
+        }
+      ],
+      "resolved_text": "巨大红杉下有着各种其他植被,共同构成的生态滋养着这里（指：步行）所有的生物,行走其间的我们,也得以享受和煦的阳光与温暖。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Mariposa Grove",
+        "entity_id": "S002_POI_068"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1240,
+        "end": 1252,
+        "text": "Mariposa红杉公园"
+      },
+      "annotation_note": "生态滋养这里所有生物，范围是当前红杉公园。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S002_VIS_005_01539",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 1539,
+        "end": 1541,
+        "text": "这里"
+      },
+      "sentence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1510,
+        "end": 1597,
+        "text": "我们还去了一小时车程需要翻山的Hetch Hetchy——这里以前是和优胜美地谷一样美的峡谷,至今也能看到挂在岩壁上的多条瀑布,20世纪初这里改造为水库,成了旧金山的水源地。"
+      },
+      "sentence_index": 31,
+      "context": {
+        "doc_id": "S002_VIS_005",
+        "start": 1219,
+        "end": 1641,
+        "text": "\n除了峡谷主景区,我们还去了属于优胜美地的Mariposa红杉公园。当时不知何故,穿梭巴士停运,必须步行从公园门口去往红杉处,是2公里的盘山路接步道。步道处开始有积雪,最深处差不多有1米,好在游客不多,积雪未踩成薄冰,走起来也还安全。红杉有六、七十米高,名为California Tunnel的红杉有2700年树龄,曾经真的在底部被挖出一个通道,供马车通行。仔细观察可见挖出通道后,红杉又继续顽强地生出新的树皮包裹伤口,而这通道无疑也是美国环境保护水平发展的一个历史见证。巨大红杉下有着各种其他植被,共同构成的生态滋养着这里所有的生物,行走其间的我们,也得以享受和煦的阳光与温暖。\n我们还去了一小时车程需要翻山的Hetch Hetchy——这里以前是和优胜美地谷一样美的峡谷,至今也能看到挂在岩壁上的多条瀑布,20世纪初这里改造为水库,成了旧金山的水源地。抵达时正在放水,水流奔涌而出,进入溪流,溪流渐宽而缓,深向树林深处。徒了一个小,看介绍说"
+      },
+      "predicted_antecedent": {
+        "text": "Hetch Hetchy",
+        "entity_id": "S002_POI_069"
+      },
+      "predicted_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1525,
+        "end": 1537,
+        "text": "Hetch Hetchy"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "Hetch Hetchy",
+          "entity_id": "S002_POI_069",
+          "candidate_type": "POI",
+          "distance": 2,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1525,
+            "end": 1537,
+            "text": "Hetch Hetchy"
+          }
+        }
+      ],
+      "resolved_text": "我们还去了一小时车程需要翻山的Hetch Hetchy——这里（指：Hetch Hetchy）以前是和优胜美地谷一样美的峡谷,至今也能看到挂在岩壁上的多条瀑布,20世纪初这里改造为水库,成了旧金山的水源地。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Hetch Hetchy",
+        "entity_id": "S002_POI_069"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1525,
+        "end": 1537,
+        "text": "Hetch Hetchy"
+      },
+      "annotation_note": "Hetch Hetchy后的破折号引出同指地点。",
+      "correct": true
+    },
+    {
+      "case_id": "CR_S002_VIS_005_01579",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 1579,
+        "end": 1581,
+        "text": "这里"
+      },
+      "sentence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1510,
+        "end": 1597,
+        "text": "我们还去了一小时车程需要翻山的Hetch Hetchy——这里以前是和优胜美地谷一样美的峡谷,至今也能看到挂在岩壁上的多条瀑布,20世纪初这里改造为水库,成了旧金山的水源地。"
+      },
+      "sentence_index": 31,
+      "context": {
+        "doc_id": "S002_VIS_005",
+        "start": 1259,
+        "end": 1681,
+        "text": ",穿梭巴士停运,必须步行从公园门口去往红杉处,是2公里的盘山路接步道。步道处开始有积雪,最深处差不多有1米,好在游客不多,积雪未踩成薄冰,走起来也还安全。红杉有六、七十米高,名为California Tunnel的红杉有2700年树龄,曾经真的在底部被挖出一个通道,供马车通行。仔细观察可见挖出通道后,红杉又继续顽强地生出新的树皮包裹伤口,而这通道无疑也是美国环境保护水平发展的一个历史见证。巨大红杉下有着各种其他植被,共同构成的生态滋养着这里所有的生物,行走其间的我们,也得以享受和煦的阳光与温暖。\n我们还去了一小时车程需要翻山的Hetch Hetchy——这里以前是和优胜美地谷一样美的峡谷,至今也能看到挂在岩壁上的多条瀑布,20世纪初这里改造为水库,成了旧金山的水源地。抵达时正在放水,水流奔涌而出,进入溪流,溪流渐宽而缓,深向树林深处。徒了一个小,看介绍说这里有278英里步道,提供徒步、单车、鹳鸟和钓鱼等多种活动,而每年在这里从事户外"
+      },
+      "predicted_antecedent": {
+        "text": "Yosemite Valley",
+        "entity_id": "S002_POI_002"
+      },
+      "predicted_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1545,
+        "end": 1550,
+        "text": "优胜美地谷"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "Yosemite Valley",
+          "entity_id": "S002_POI_002",
+          "candidate_type": "POI",
+          "distance": 29,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1545,
+            "end": 1550,
+            "text": "优胜美地谷"
+          }
+        },
+        {
+          "text": "Hetch Hetchy",
+          "entity_id": "S002_POI_069",
+          "candidate_type": "POI",
+          "distance": 42,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1525,
+            "end": 1537,
+            "text": "Hetch Hetchy"
+          }
+        }
+      ],
+      "resolved_text": "我们还去了一小时车程需要翻山的Hetch Hetchy——这里以前是和优胜美地谷一样美的峡谷,至今也能看到挂在岩壁上的多条瀑布,20世纪初这里（指：Yosemite Valley）改造为水库,成了旧金山的水源地。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Hetch Hetchy",
+        "entity_id": "S002_POI_069"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1525,
+        "end": 1537,
+        "text": "Hetch Hetchy"
+      },
+      "annotation_note": "改造为水库的是Hetch Hetchy，优胜美地谷为比较对象。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S002_VIS_005_01641",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 1641,
+        "end": 1643,
+        "text": "这里"
+      },
+      "sentence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1631,
+        "end": 1702,
+        "text": "徒了一个小,看介绍说这里有278英里步道,提供徒步、单车、鹳鸟和钓鱼等多种活动,而每年在这里从事户外活动遇险需要救援的人数也达到200人之众。"
+      },
+      "sentence_index": 33,
+      "context": {
+        "doc_id": "S002_VIS_005",
+        "start": 1321,
+        "end": 1743,
+        "text": "雪未踩成薄冰,走起来也还安全。红杉有六、七十米高,名为California Tunnel的红杉有2700年树龄,曾经真的在底部被挖出一个通道,供马车通行。仔细观察可见挖出通道后,红杉又继续顽强地生出新的树皮包裹伤口,而这通道无疑也是美国环境保护水平发展的一个历史见证。巨大红杉下有着各种其他植被,共同构成的生态滋养着这里所有的生物,行走其间的我们,也得以享受和煦的阳光与温暖。\n我们还去了一小时车程需要翻山的Hetch Hetchy——这里以前是和优胜美地谷一样美的峡谷,至今也能看到挂在岩壁上的多条瀑布,20世纪初这里改造为水库,成了旧金山的水源地。抵达时正在放水,水流奔涌而出,进入溪流,溪流渐宽而缓,深向树林深处。徒了一个小,看介绍说这里有278英里步道,提供徒步、单车、鹳鸟和钓鱼等多种活动,而每年在这里从事户外活动遇险需要救援的人数也达到200人之众。嗯,我们实属时节尚早去不了Tioga Road那里的Toulume草甸,不然这个水"
+      },
+      "predicted_antecedent": {
+        "text": "旧金山",
+        "entity_id": "S002_POI_074"
+      },
+      "predicted_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1589,
+        "end": 1592,
+        "text": "旧金山"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "旧金山",
+          "entity_id": "S002_POI_074",
+          "candidate_type": "POI",
+          "distance": 49,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1589,
+            "end": 1592,
+            "text": "旧金山"
+          }
+        },
+        {
+          "text": "Yosemite Valley",
+          "entity_id": "S002_POI_002",
+          "candidate_type": "POI",
+          "distance": 91,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1545,
+            "end": 1550,
+            "text": "优胜美地谷"
+          }
+        },
+        {
+          "text": "Hetch Hetchy",
+          "entity_id": "S002_POI_069",
+          "candidate_type": "POI",
+          "distance": 104,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1525,
+            "end": 1537,
+            "text": "Hetch Hetchy"
+          }
+        }
+      ],
+      "resolved_text": "徒了一个小,看介绍说这里（指：旧金山）有278英里步道,提供徒步、单车、鹳鸟和钓鱼等多种活动,而每年在这里从事户外活动遇险需要救援的人数也达到200人之众。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Hetch Hetchy",
+        "entity_id": "S002_POI_069"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1525,
+        "end": 1537,
+        "text": "Hetch Hetchy"
+      },
+      "annotation_note": "这里有278英里步道仍是水库游览区。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S002_VIS_005_01675",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 1675,
+        "end": 1677,
+        "text": "这里"
+      },
+      "sentence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1631,
+        "end": 1702,
+        "text": "徒了一个小,看介绍说这里有278英里步道,提供徒步、单车、鹳鸟和钓鱼等多种活动,而每年在这里从事户外活动遇险需要救援的人数也达到200人之众。"
+      },
+      "sentence_index": 33,
+      "context": {
+        "doc_id": "S002_VIS_005",
+        "start": 1355,
+        "end": 1777,
+        "text": "nia Tunnel的红杉有2700年树龄,曾经真的在底部被挖出一个通道,供马车通行。仔细观察可见挖出通道后,红杉又继续顽强地生出新的树皮包裹伤口,而这通道无疑也是美国环境保护水平发展的一个历史见证。巨大红杉下有着各种其他植被,共同构成的生态滋养着这里所有的生物,行走其间的我们,也得以享受和煦的阳光与温暖。\n我们还去了一小时车程需要翻山的Hetch Hetchy——这里以前是和优胜美地谷一样美的峡谷,至今也能看到挂在岩壁上的多条瀑布,20世纪初这里改造为水库,成了旧金山的水源地。抵达时正在放水,水流奔涌而出,进入溪流,溪流渐宽而缓,深向树林深处。徒了一个小,看介绍说这里有278英里步道,提供徒步、单车、鹳鸟和钓鱼等多种活动,而每年在这里从事户外活动遇险需要救援的人数也达到200人之众。嗯,我们实属时节尚早去不了Tioga Road那里的Toulume草甸,不然这个水库其实不太值得来。这一程唯一的亮点是途中盘旋山路上的积雪,部分地段积"
+      },
+      "predicted_antecedent": {
+        "text": "自行车",
+        "entity_id": "S002_TRANSPORT_008"
+      },
+      "predicted_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1657,
+        "end": 1659,
+        "text": "单车"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "自行车",
+          "entity_id": "S002_TRANSPORT_008",
+          "candidate_type": "TRANSPORT",
+          "distance": 16,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1657,
+            "end": 1659,
+            "text": "单车"
+          }
+        },
+        {
+          "text": "步行",
+          "entity_id": "S002_TRANSPORT_001",
+          "candidate_type": "TRANSPORT",
+          "distance": 19,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1654,
+            "end": 1656,
+            "text": "徒步"
+          }
+        },
+        {
+          "text": "旧金山",
+          "entity_id": "S002_POI_074",
+          "candidate_type": "POI",
+          "distance": 83,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1589,
+            "end": 1592,
+            "text": "旧金山"
+          }
+        },
+        {
+          "text": "Yosemite Valley",
+          "entity_id": "S002_POI_002",
+          "candidate_type": "POI",
+          "distance": 125,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1545,
+            "end": 1550,
+            "text": "优胜美地谷"
+          }
+        },
+        {
+          "text": "Hetch Hetchy",
+          "entity_id": "S002_POI_069",
+          "candidate_type": "POI",
+          "distance": 138,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1525,
+            "end": 1537,
+            "text": "Hetch Hetchy"
+          }
+        }
+      ],
+      "resolved_text": "徒了一个小,看介绍说这里有278英里步道,提供徒步、单车、鹳鸟和钓鱼等多种活动,而每年在这里（指：自行车）从事户外活动遇险需要救援的人数也达到200人之众。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Hetch Hetchy",
+        "entity_id": "S002_POI_069"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1525,
+        "end": 1537,
+        "text": "Hetch Hetchy"
+      },
+      "annotation_note": "救援人数对应同一游览区。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S002_VIS_005_01725",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "那里",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 1725,
+        "end": 1727,
+        "text": "那里"
+      },
+      "sentence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1702,
+        "end": 1752,
+        "text": "嗯,我们实属时节尚早去不了Tioga Road那里的Toulume草甸,不然这个水库其实不太值得来。"
+      },
+      "sentence_index": 34,
+      "context": {
+        "doc_id": "S002_VIS_005",
+        "start": 1405,
+        "end": 1827,
+        "text": "出通道后,红杉又继续顽强地生出新的树皮包裹伤口,而这通道无疑也是美国环境保护水平发展的一个历史见证。巨大红杉下有着各种其他植被,共同构成的生态滋养着这里所有的生物,行走其间的我们,也得以享受和煦的阳光与温暖。\n我们还去了一小时车程需要翻山的Hetch Hetchy——这里以前是和优胜美地谷一样美的峡谷,至今也能看到挂在岩壁上的多条瀑布,20世纪初这里改造为水库,成了旧金山的水源地。抵达时正在放水,水流奔涌而出,进入溪流,溪流渐宽而缓,深向树林深处。徒了一个小,看介绍说这里有278英里步道,提供徒步、单车、鹳鸟和钓鱼等多种活动,而每年在这里从事户外活动遇险需要救援的人数也达到200人之众。嗯,我们实属时节尚早去不了Tioga Road那里的Toulume草甸,不然这个水库其实不太值得来。这一程唯一的亮点是途中盘旋山路上的积雪,部分地段积雪尚深,有的路段还立了个“玩雪处”的牌子。闲不住的我自然没有放过这机会,下车在无人涉足的雪地里深呼吸"
+      },
+      "predicted_antecedent": {
+        "text": "Tioga Road",
+        "entity_id": "S002_POI_038"
+      },
+      "predicted_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1715,
+        "end": 1725,
+        "text": "Tioga Road"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "Tioga Road",
+          "entity_id": "S002_POI_038",
+          "candidate_type": "POI",
+          "distance": 0,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1715,
+            "end": 1725,
+            "text": "Tioga Road"
+          }
+        },
+        {
+          "text": "自行车",
+          "entity_id": "S002_TRANSPORT_008",
+          "candidate_type": "TRANSPORT",
+          "distance": 66,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1657,
+            "end": 1659,
+            "text": "单车"
+          }
+        },
+        {
+          "text": "步行",
+          "entity_id": "S002_TRANSPORT_001",
+          "candidate_type": "TRANSPORT",
+          "distance": 69,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1654,
+            "end": 1656,
+            "text": "徒步"
+          }
+        },
+        {
+          "text": "旧金山",
+          "entity_id": "S002_POI_074",
+          "candidate_type": "POI",
+          "distance": 133,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1589,
+            "end": 1592,
+            "text": "旧金山"
+          }
+        },
+        {
+          "text": "Yosemite Valley",
+          "entity_id": "S002_POI_002",
+          "candidate_type": "POI",
+          "distance": 175,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1545,
+            "end": 1550,
+            "text": "优胜美地谷"
+          }
+        }
+      ],
+      "resolved_text": "嗯,我们实属时节尚早去不了Tioga Road那里（指：Tioga Road）的Toulume草甸,不然这个水库其实不太值得来。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Tioga Road",
+        "entity_id": "S002_POI_038"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1715,
+        "end": 1725,
+        "text": "Tioga Road"
+      },
+      "annotation_note": "那里是Tioga Road所指的另一出游区域。",
+      "correct": true
+    },
+    {
+      "case_id": "CR_S002_VIS_005_01740",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这个",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 1740,
+        "end": 1742,
+        "text": "这个"
+      },
+      "sentence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1702,
+        "end": 1752,
+        "text": "嗯,我们实属时节尚早去不了Tioga Road那里的Toulume草甸,不然这个水库其实不太值得来。"
+      },
+      "sentence_index": 34,
+      "context": {
+        "doc_id": "S002_VIS_005",
+        "start": 1420,
+        "end": 1842,
+        "text": "新的树皮包裹伤口,而这通道无疑也是美国环境保护水平发展的一个历史见证。巨大红杉下有着各种其他植被,共同构成的生态滋养着这里所有的生物,行走其间的我们,也得以享受和煦的阳光与温暖。\n我们还去了一小时车程需要翻山的Hetch Hetchy——这里以前是和优胜美地谷一样美的峡谷,至今也能看到挂在岩壁上的多条瀑布,20世纪初这里改造为水库,成了旧金山的水源地。抵达时正在放水,水流奔涌而出,进入溪流,溪流渐宽而缓,深向树林深处。徒了一个小,看介绍说这里有278英里步道,提供徒步、单车、鹳鸟和钓鱼等多种活动,而每年在这里从事户外活动遇险需要救援的人数也达到200人之众。嗯,我们实属时节尚早去不了Tioga Road那里的Toulume草甸,不然这个水库其实不太值得来。这一程唯一的亮点是途中盘旋山路上的积雪,部分地段积雪尚深,有的路段还立了个“玩雪处”的牌子。闲不住的我自然没有放过这机会,下车在无人涉足的雪地里深呼吸,体会寂静与纯净。\nTips:"
+      },
+      "predicted_antecedent": {
+        "text": "Tioga Road",
+        "entity_id": "S002_POI_038"
+      },
+      "predicted_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1715,
+        "end": 1725,
+        "text": "Tioga Road"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "Tioga Road",
+          "entity_id": "S002_POI_038",
+          "candidate_type": "POI",
+          "distance": 15,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1715,
+            "end": 1725,
+            "text": "Tioga Road"
+          }
+        },
+        {
+          "text": "自行车",
+          "entity_id": "S002_TRANSPORT_008",
+          "candidate_type": "TRANSPORT",
+          "distance": 81,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1657,
+            "end": 1659,
+            "text": "单车"
+          }
+        },
+        {
+          "text": "步行",
+          "entity_id": "S002_TRANSPORT_001",
+          "candidate_type": "TRANSPORT",
+          "distance": 84,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1654,
+            "end": 1656,
+            "text": "徒步"
+          }
+        },
+        {
+          "text": "旧金山",
+          "entity_id": "S002_POI_074",
+          "candidate_type": "POI",
+          "distance": 148,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1589,
+            "end": 1592,
+            "text": "旧金山"
+          }
+        },
+        {
+          "text": "Yosemite Valley",
+          "entity_id": "S002_POI_002",
+          "candidate_type": "POI",
+          "distance": 190,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1545,
+            "end": 1550,
+            "text": "优胜美地谷"
+          }
+        }
+      ],
+      "resolved_text": "嗯,我们实属时节尚早去不了Tioga Road那里的Toulume草甸,不然这个（指：Tioga Road）水库其实不太值得来。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Hetch Hetchy",
+        "entity_id": "S002_POI_069"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1525,
+        "end": 1537,
+        "text": "Hetch Hetchy"
+      },
+      "annotation_note": "这个水库返回当前Hetch Hetchy；插入的Tioga Road不是水库。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S002_VIS_005_01752",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 1752,
+        "end": 1753,
+        "text": "这"
+      },
+      "sentence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1752,
+        "end": 1798,
+        "text": "这一程唯一的亮点是途中盘旋山路上的积雪,部分地段积雪尚深,有的路段还立了个“玩雪处”的牌子。"
+      },
+      "sentence_index": 35,
+      "context": {
+        "doc_id": "S002_VIS_005",
+        "start": 1432,
+        "end": 1853,
+        "text": "道无疑也是美国环境保护水平发展的一个历史见证。巨大红杉下有着各种其他植被,共同构成的生态滋养着这里所有的生物,行走其间的我们,也得以享受和煦的阳光与温暖。\n我们还去了一小时车程需要翻山的Hetch Hetchy——这里以前是和优胜美地谷一样美的峡谷,至今也能看到挂在岩壁上的多条瀑布,20世纪初这里改造为水库,成了旧金山的水源地。抵达时正在放水,水流奔涌而出,进入溪流,溪流渐宽而缓,深向树林深处。徒了一个小,看介绍说这里有278英里步道,提供徒步、单车、鹳鸟和钓鱼等多种活动,而每年在这里从事户外活动遇险需要救援的人数也达到200人之众。嗯,我们实属时节尚早去不了Tioga Road那里的Toulume草甸,不然这个水库其实不太值得来。这一程唯一的亮点是途中盘旋山路上的积雪,部分地段积雪尚深,有的路段还立了个“玩雪处”的牌子。闲不住的我自然没有放过这机会,下车在无人涉足的雪地里深呼吸,体会寂静与纯净。\nTips:推荐Yosemite "
+      },
+      "predicted_antecedent": {
+        "text": "Tioga Road",
+        "entity_id": "S002_POI_038"
+      },
+      "predicted_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1715,
+        "end": 1725,
+        "text": "Tioga Road"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "Tioga Road",
+          "entity_id": "S002_POI_038",
+          "candidate_type": "POI",
+          "distance": 27,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1715,
+            "end": 1725,
+            "text": "Tioga Road"
+          }
+        },
+        {
+          "text": "自行车",
+          "entity_id": "S002_TRANSPORT_008",
+          "candidate_type": "TRANSPORT",
+          "distance": 93,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1657,
+            "end": 1659,
+            "text": "单车"
+          }
+        },
+        {
+          "text": "步行",
+          "entity_id": "S002_TRANSPORT_001",
+          "candidate_type": "TRANSPORT",
+          "distance": 96,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1654,
+            "end": 1656,
+            "text": "徒步"
+          }
+        },
+        {
+          "text": "旧金山",
+          "entity_id": "S002_POI_074",
+          "candidate_type": "POI",
+          "distance": 160,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1589,
+            "end": 1592,
+            "text": "旧金山"
+          }
+        },
+        {
+          "text": "Yosemite Valley",
+          "entity_id": "S002_POI_002",
+          "candidate_type": "POI",
+          "distance": 202,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1545,
+            "end": 1550,
+            "text": "优胜美地谷"
+          }
+        }
+      ],
+      "resolved_text": "这（指：Tioga Road）一程唯一的亮点是途中盘旋山路上的积雪,部分地段积雪尚深,有的路段还立了个“玩雪处”的牌子。",
+      "gold_status": "resolved",
+      "antecedent_type": "EVENT",
+      "gold_antecedent": {
+        "text": "去了一小时车程需要翻山的Hetch Hetchy",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1513,
+        "end": 1537,
+        "text": "去了一小时车程需要翻山的Hetch Hetchy"
+      },
+      "annotation_note": "这一程指到Hetch Hetchy的整段行程。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S002_VIS_005_01809",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 1809,
+        "end": 1810,
+        "text": "这"
+      },
+      "sentence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1798,
+        "end": 1836,
+        "text": "闲不住的我自然没有放过这机会,下车在无人涉足的雪地里深呼吸,体会寂静与纯净。"
+      },
+      "sentence_index": 36,
+      "context": {
+        "doc_id": "S002_VIS_005",
+        "start": 1489,
+        "end": 1910,
+        "text": "其间的我们,也得以享受和煦的阳光与温暖。\n我们还去了一小时车程需要翻山的Hetch Hetchy——这里以前是和优胜美地谷一样美的峡谷,至今也能看到挂在岩壁上的多条瀑布,20世纪初这里改造为水库,成了旧金山的水源地。抵达时正在放水,水流奔涌而出,进入溪流,溪流渐宽而缓,深向树林深处。徒了一个小,看介绍说这里有278英里步道,提供徒步、单车、鹳鸟和钓鱼等多种活动,而每年在这里从事户外活动遇险需要救援的人数也达到200人之众。嗯,我们实属时节尚早去不了Tioga Road那里的Toulume草甸,不然这个水库其实不太值得来。这一程唯一的亮点是途中盘旋山路上的积雪,部分地段积雪尚深,有的路段还立了个“玩雪处”的牌子。闲不住的我自然没有放过这机会,下车在无人涉足的雪地里深呼吸,体会寂静与纯净。\nTips:推荐Yosemite View Lodge,位于El Portal,离国家公园大门很近,附近有超市和加油站,非常方便,设施齐全,房价适中"
+      },
+      "predicted_antecedent": {
+        "text": "Tioga Road",
+        "entity_id": "S002_POI_038"
+      },
+      "predicted_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1715,
+        "end": 1725,
+        "text": "Tioga Road"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "Tioga Road",
+          "entity_id": "S002_POI_038",
+          "candidate_type": "POI",
+          "distance": 84,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1715,
+            "end": 1725,
+            "text": "Tioga Road"
+          }
+        },
+        {
+          "text": "自行车",
+          "entity_id": "S002_TRANSPORT_008",
+          "candidate_type": "TRANSPORT",
+          "distance": 150,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1657,
+            "end": 1659,
+            "text": "单车"
+          }
+        },
+        {
+          "text": "步行",
+          "entity_id": "S002_TRANSPORT_001",
+          "candidate_type": "TRANSPORT",
+          "distance": 153,
+          "evidence": {
+            "doc_id": "S002_VIS_005",
+            "start": 1654,
+            "end": 1656,
+            "text": "徒步"
+          }
+        }
+      ],
+      "resolved_text": "闲不住的我自然没有放过这（指：Tioga Road）机会,下车在无人涉足的雪地里深呼吸,体会寂静与纯净。",
+      "gold_status": "resolved",
+      "antecedent_type": "EVENT",
+      "gold_antecedent": {
+        "text": "途中盘旋山路上的积雪",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1761,
+        "end": 1771,
+        "text": "途中盘旋山路上的积雪"
+      },
+      "annotation_note": "这机会指途中停车玩雪的机会，以前句积雪表述为证据。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00101",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这个",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 101,
+        "end": 103,
+        "text": "这个"
+      },
+      "sentence": {
+        "doc_id": "S003_VIS_001",
+        "start": 76,
+        "end": 111,
+        "text": "从动物园出来,临近中午,导游就安排我们在半路的枫林这个中国餐馆吃午餐。"
+      },
+      "sentence_index": 2,
+      "context": {
+        "doc_id": "S003_VIS_001",
+        "start": 0,
+        "end": 203,
+        "text": "7-19 从布里斯班回来第二天就预订了蓝山一日游,20元澳币的优惠价格仅包含了车费。澳大利亚的动物园很多,去蓝山的路上又路过一个动物园,门票25澳币。\n从动物园出来,临近中午,导游就安排我们在半路的枫林这个中国餐馆吃午餐。据说这是当地最好的中国餐馆了。在这里上了袋鼠肉,黑椒味,做的没有一点奇怪的袋鼠味,口感柔韧,媲美牛肉。\n饭后驱车沿32号公路直上海拔1100米高的蓝山三姐妹峰。这就是蓝山的大门标志了,"
+      },
+      "predicted_antecedent": {
+        "text": "蓝山国家公园",
+        "entity_id": "S003_POI_001"
+      },
+      "predicted_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 54,
+        "end": 56,
+        "text": "蓝山"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "蓝山国家公园",
+          "entity_id": "S003_POI_001",
+          "candidate_type": "POI",
+          "distance": 45,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 54,
+            "end": 56,
+            "text": "蓝山"
+          }
+        },
+        {
+          "text": "蓝山国家公园",
+          "entity_id": "S003_POI_001",
+          "candidate_type": "POI",
+          "distance": 80,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 19,
+            "end": 21,
+            "text": "蓝山"
+          }
+        }
+      ],
+      "resolved_text": "从动物园出来,临近中午,导游就安排我们在半路的枫林这个（指：蓝山国家公园）中国餐馆吃午餐。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "枫林",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 99,
+        "end": 101,
+        "text": "枫林"
+      },
+      "annotation_note": "这个中国餐馆复指同句紧邻的枫林，未登记实体ID。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00113",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 113,
+        "end": 114,
+        "text": "这"
+      },
+      "sentence": {
+        "doc_id": "S003_VIS_001",
+        "start": 111,
+        "end": 126,
+        "text": "据说这是当地最好的中国餐馆了。"
+      },
+      "sentence_index": 3,
+      "context": {
+        "doc_id": "S003_VIS_001",
+        "start": 0,
+        "end": 214,
+        "text": "7-19 从布里斯班回来第二天就预订了蓝山一日游,20元澳币的优惠价格仅包含了车费。澳大利亚的动物园很多,去蓝山的路上又路过一个动物园,门票25澳币。\n从动物园出来,临近中午,导游就安排我们在半路的枫林这个中国餐馆吃午餐。据说这是当地最好的中国餐馆了。在这里上了袋鼠肉,黑椒味,做的没有一点奇怪的袋鼠味,口感柔韧,媲美牛肉。\n饭后驱车沿32号公路直上海拔1100米高的蓝山三姐妹峰。这就是蓝山的大门标志了,是3个山峰。等看到著名"
+      },
+      "predicted_antecedent": {
+        "text": "蓝山国家公园",
+        "entity_id": "S003_POI_001"
+      },
+      "predicted_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 54,
+        "end": 56,
+        "text": "蓝山"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "蓝山国家公园",
+          "entity_id": "S003_POI_001",
+          "candidate_type": "POI",
+          "distance": 57,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 54,
+            "end": 56,
+            "text": "蓝山"
+          }
+        },
+        {
+          "text": "蓝山国家公园",
+          "entity_id": "S003_POI_001",
+          "candidate_type": "POI",
+          "distance": 92,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 19,
+            "end": 21,
+            "text": "蓝山"
+          }
+        }
+      ],
+      "resolved_text": "据说这（指：蓝山国家公园）是当地最好的中国餐馆了。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "枫林",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 99,
+        "end": 101,
+        "text": "枫林"
+      },
+      "annotation_note": "这是当地最好的中国餐馆，仍指枫林餐馆。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00127",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 127,
+        "end": 129,
+        "text": "这里"
+      },
+      "sentence": {
+        "doc_id": "S003_VIS_001",
+        "start": 126,
+        "end": 162,
+        "text": "在这里上了袋鼠肉,黑椒味,做的没有一点奇怪的袋鼠味,口感柔韧,媲美牛肉。"
+      },
+      "sentence_index": 4,
+      "context": {
+        "doc_id": "S003_VIS_001",
+        "start": 0,
+        "end": 229,
+        "text": "7-19 从布里斯班回来第二天就预订了蓝山一日游,20元澳币的优惠价格仅包含了车费。澳大利亚的动物园很多,去蓝山的路上又路过一个动物园,门票25澳币。\n从动物园出来,临近中午,导游就安排我们在半路的枫林这个中国餐馆吃午餐。据说这是当地最好的中国餐馆了。在这里上了袋鼠肉,黑椒味,做的没有一点奇怪的袋鼠味,口感柔韧,媲美牛肉。\n饭后驱车沿32号公路直上海拔1100米高的蓝山三姐妹峰。这就是蓝山的大门标志了,是3个山峰。等看到著名的山了,我会给大家讲故事。这个"
+      },
+      "predicted_antecedent": {
+        "text": "蓝山国家公园",
+        "entity_id": "S003_POI_001"
+      },
+      "predicted_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 54,
+        "end": 56,
+        "text": "蓝山"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "蓝山国家公园",
+          "entity_id": "S003_POI_001",
+          "candidate_type": "POI",
+          "distance": 71,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 54,
+            "end": 56,
+            "text": "蓝山"
+          }
+        },
+        {
+          "text": "蓝山国家公园",
+          "entity_id": "S003_POI_001",
+          "candidate_type": "POI",
+          "distance": 106,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 19,
+            "end": 21,
+            "text": "蓝山"
+          }
+        }
+      ],
+      "resolved_text": "在这里（指：蓝山国家公园）上了袋鼠肉,黑椒味,做的没有一点奇怪的袋鼠味,口感柔韧,媲美牛肉。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "枫林",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 99,
+        "end": 101,
+        "text": "枫林"
+      },
+      "annotation_note": "这里上了袋鼠肉，指用餐地点。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00191",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 191,
+        "end": 192,
+        "text": "这"
+      },
+      "sentence": {
+        "doc_id": "S003_VIS_001",
+        "start": 191,
+        "end": 209,
+        "text": "这就是蓝山的大门标志了,是3个山峰。"
+      },
+      "sentence_index": 6,
+      "context": {
+        "doc_id": "S003_VIS_001",
+        "start": 0,
+        "end": 292,
+        "text": "7-19 从布里斯班回来第二天就预订了蓝山一日游,20元澳币的优惠价格仅包含了车费。澳大利亚的动物园很多,去蓝山的路上又路过一个动物园,门票25澳币。\n从动物园出来,临近中午,导游就安排我们在半路的枫林这个中国餐馆吃午餐。据说这是当地最好的中国餐馆了。在这里上了袋鼠肉,黑椒味,做的没有一点奇怪的袋鼠味,口感柔韧,媲美牛肉。\n饭后驱车沿32号公路直上海拔1100米高的蓝山三姐妹峰。这就是蓝山的大门标志了,是3个山峰。等看到著名的山了,我会给大家讲故事。这个景观是免费游览的,所以能看到不是游客的当地民众悠闲地进出。\n为什么叫蓝山,因为这里的桉树挥发的油滴在空中经折射会呈现蓝光,所以"
+      },
+      "predicted_antecedent": {
+        "text": "三姐妹峰",
+        "entity_id": "S003_POI_002"
+      },
+      "predicted_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 186,
+        "end": 190,
+        "text": "三姐妹峰"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "三姐妹峰",
+          "entity_id": "S003_POI_002",
+          "candidate_type": "POI",
+          "distance": 1,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 186,
+            "end": 190,
+            "text": "三姐妹峰"
+          }
+        },
+        {
+          "text": "蓝山国家公园",
+          "entity_id": "S003_POI_001",
+          "candidate_type": "POI",
+          "distance": 5,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 184,
+            "end": 186,
+            "text": "蓝山"
+          }
+        },
+        {
+          "text": "自驾",
+          "entity_id": "S003_TRANSPORT_004",
+          "candidate_type": "TRANSPORT",
+          "distance": 24,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 165,
+            "end": 167,
+            "text": "驱车"
+          }
+        }
+      ],
+      "resolved_text": "这（指：三姐妹峰）就是蓝山的大门标志了,是3个山峰。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "三姐妹峰",
+        "entity_id": "S003_POI_002"
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 186,
+        "end": 190,
+        "text": "三姐妹峰"
+      },
+      "annotation_note": "这就是蓝山大门标志，指刚抵达的三姐妹峰。",
+      "correct": true
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00227",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这个",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 227,
+        "end": 229,
+        "text": "这个"
+      },
+      "sentence": {
+        "doc_id": "S003_VIS_001",
+        "start": 227,
+        "end": 258,
+        "text": "这个景观是免费游览的,所以能看到不是游客的当地民众悠闲地进出。"
+      },
+      "sentence_index": 8,
+      "context": {
+        "doc_id": "S003_VIS_001",
+        "start": 0,
+        "end": 329,
+        "text": "7-19 从布里斯班回来第二天就预订了蓝山一日游,20元澳币的优惠价格仅包含了车费。澳大利亚的动物园很多,去蓝山的路上又路过一个动物园,门票25澳币。\n从动物园出来,临近中午,导游就安排我们在半路的枫林这个中国餐馆吃午餐。据说这是当地最好的中国餐馆了。在这里上了袋鼠肉,黑椒味,做的没有一点奇怪的袋鼠味,口感柔韧,媲美牛肉。\n饭后驱车沿32号公路直上海拔1100米高的蓝山三姐妹峰。这就是蓝山的大门标志了,是3个山峰。等看到著名的山了,我会给大家讲故事。这个景观是免费游览的,所以能看到不是游客的当地民众悠闲地进出。\n为什么叫蓝山,因为这里的桉树挥发的油滴在空中经折射会呈现蓝光,所以得名蓝山。无论是云雾蒙蒙还是阳光当头,总是被一层淡蓝色遮蔽,显得非常美丽,"
+      },
+      "predicted_antecedent": {
+        "text": "蓝山国家公园",
+        "entity_id": "S003_POI_001"
+      },
+      "predicted_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 194,
+        "end": 196,
+        "text": "蓝山"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "蓝山国家公园",
+          "entity_id": "S003_POI_001",
+          "candidate_type": "POI",
+          "distance": 31,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 194,
+            "end": 196,
+            "text": "蓝山"
+          }
+        },
+        {
+          "text": "三姐妹峰",
+          "entity_id": "S003_POI_002",
+          "candidate_type": "POI",
+          "distance": 37,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 186,
+            "end": 190,
+            "text": "三姐妹峰"
+          }
+        },
+        {
+          "text": "蓝山国家公园",
+          "entity_id": "S003_POI_001",
+          "candidate_type": "POI",
+          "distance": 41,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 184,
+            "end": 186,
+            "text": "蓝山"
+          }
+        },
+        {
+          "text": "自驾",
+          "entity_id": "S003_TRANSPORT_004",
+          "candidate_type": "TRANSPORT",
+          "distance": 60,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 165,
+            "end": 167,
+            "text": "驱车"
+          }
+        }
+      ],
+      "resolved_text": "这个（指：蓝山国家公园）景观是免费游览的,所以能看到不是游客的当地民众悠闲地进出。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "三姐妹峰",
+        "entity_id": "S003_POI_002"
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 186,
+        "end": 190,
+        "text": "三姐妹峰"
+      },
+      "annotation_note": "这个景观指三姐妹峰，蓝山是修饰性的父区域。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00268",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 268,
+        "end": 270,
+        "text": "这里"
+      },
+      "sentence": {
+        "doc_id": "S003_VIS_001",
+        "start": 259,
+        "end": 297,
+        "text": "为什么叫蓝山,因为这里的桉树挥发的油滴在空中经折射会呈现蓝光,所以得名蓝山。"
+      },
+      "sentence_index": 9,
+      "context": {
+        "doc_id": "S003_VIS_001",
+        "start": 0,
+        "end": 370,
+        "text": "7-19 从布里斯班回来第二天就预订了蓝山一日游,20元澳币的优惠价格仅包含了车费。澳大利亚的动物园很多,去蓝山的路上又路过一个动物园,门票25澳币。\n从动物园出来,临近中午,导游就安排我们在半路的枫林这个中国餐馆吃午餐。据说这是当地最好的中国餐馆了。在这里上了袋鼠肉,黑椒味,做的没有一点奇怪的袋鼠味,口感柔韧,媲美牛肉。\n饭后驱车沿32号公路直上海拔1100米高的蓝山三姐妹峰。这就是蓝山的大门标志了,是3个山峰。等看到著名的山了,我会给大家讲故事。这个景观是免费游览的,所以能看到不是游客的当地民众悠闲地进出。\n为什么叫蓝山,因为这里的桉树挥发的油滴在空中经折射会呈现蓝光,所以得名蓝山。无论是云雾蒙蒙还是阳光当头,总是被一层淡蓝色遮蔽,显得非常美丽,亦透着神秘。是不是蓝蒙蒙的一片呢。\n最著名的就是这3个标志上的山峰了。相传在很久以"
+      },
+      "predicted_antecedent": {
+        "text": "蓝山国家公园",
+        "entity_id": "S003_POI_001"
+      },
+      "predicted_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 263,
+        "end": 265,
+        "text": "蓝山"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "蓝山国家公园",
+          "entity_id": "S003_POI_001",
+          "candidate_type": "POI",
+          "distance": 3,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 263,
+            "end": 265,
+            "text": "蓝山"
+          }
+        },
+        {
+          "text": "蓝山国家公园",
+          "entity_id": "S003_POI_001",
+          "candidate_type": "POI",
+          "distance": 72,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 194,
+            "end": 196,
+            "text": "蓝山"
+          }
+        },
+        {
+          "text": "三姐妹峰",
+          "entity_id": "S003_POI_002",
+          "candidate_type": "POI",
+          "distance": 78,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 186,
+            "end": 190,
+            "text": "三姐妹峰"
+          }
+        },
+        {
+          "text": "蓝山国家公园",
+          "entity_id": "S003_POI_001",
+          "candidate_type": "POI",
+          "distance": 82,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 184,
+            "end": 186,
+            "text": "蓝山"
+          }
+        },
+        {
+          "text": "自驾",
+          "entity_id": "S003_TRANSPORT_004",
+          "candidate_type": "TRANSPORT",
+          "distance": 101,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 165,
+            "end": 167,
+            "text": "驱车"
+          }
+        }
+      ],
+      "resolved_text": "为什么叫蓝山,因为这里（指：蓝山国家公园）的桉树挥发的油滴在空中经折射会呈现蓝光,所以得名蓝山。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "蓝山国家公园",
+        "entity_id": "S003_POI_001"
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 263,
+        "end": 265,
+        "text": "蓝山"
+      },
+      "annotation_note": "这里的桉树，是解释蓝山得名的区域。",
+      "correct": true
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00353",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 353,
+        "end": 354,
+        "text": "这"
+      },
+      "sentence": {
+        "doc_id": "S003_VIS_001",
+        "start": 347,
+        "end": 364,
+        "text": "最著名的就是这3个标志上的山峰了。"
+      },
+      "sentence_index": 12,
+      "context": {
+        "doc_id": "S003_VIS_001",
+        "start": 33,
+        "end": 454,
+        "text": "价格仅包含了车费。澳大利亚的动物园很多,去蓝山的路上又路过一个动物园,门票25澳币。\n从动物园出来,临近中午,导游就安排我们在半路的枫林这个中国餐馆吃午餐。据说这是当地最好的中国餐馆了。在这里上了袋鼠肉,黑椒味,做的没有一点奇怪的袋鼠味,口感柔韧,媲美牛肉。\n饭后驱车沿32号公路直上海拔1100米高的蓝山三姐妹峰。这就是蓝山的大门标志了,是3个山峰。等看到著名的山了,我会给大家讲故事。这个景观是免费游览的,所以能看到不是游客的当地民众悠闲地进出。\n为什么叫蓝山,因为这里的桉树挥发的油滴在空中经折射会呈现蓝光,所以得名蓝山。无论是云雾蒙蒙还是阳光当头,总是被一层淡蓝色遮蔽,显得非常美丽,亦透着神秘。是不是蓝蒙蒙的一片呢。\n最著名的就是这3个标志上的山峰了。相传在很久以前有三位美貌的姐妹分别叫做 \"靡爱倪\", \"温拉\" 和 \"甘妮杜\"。这三位姐妹出生在Katoomba部落,很不幸的是他们三人同时爱上了山下Nepean族兄弟三人。这是有"
+      },
+      "predicted_antecedent": {
+        "text": "蓝山国家公园",
+        "entity_id": "S003_POI_001"
+      },
+      "predicted_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 294,
+        "end": 296,
+        "text": "蓝山"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "蓝山国家公园",
+          "entity_id": "S003_POI_001",
+          "candidate_type": "POI",
+          "distance": 57,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 294,
+            "end": 296,
+            "text": "蓝山"
+          }
+        },
+        {
+          "text": "蓝山国家公园",
+          "entity_id": "S003_POI_001",
+          "candidate_type": "POI",
+          "distance": 88,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 263,
+            "end": 265,
+            "text": "蓝山"
+          }
+        }
+      ],
+      "resolved_text": "最著名的就是这（指：蓝山国家公园）3个标志上的山峰了。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "三姐妹峰",
+        "entity_id": "S003_POI_002"
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 186,
+        "end": 190,
+        "text": "三姐妹峰"
+      },
+      "annotation_note": "这3个标志上的山峰回指前面三姐妹峰。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00404",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 404,
+        "end": 405,
+        "text": "这"
+      },
+      "sentence": {
+        "doc_id": "S003_VIS_001",
+        "start": 404,
+        "end": 451,
+        "text": "这三位姐妹出生在Katoomba部落,很不幸的是他们三人同时爱上了山下Nepean族兄弟三人。"
+      },
+      "sentence_index": 14,
+      "context": {
+        "doc_id": "S003_VIS_001",
+        "start": 84,
+        "end": 505,
+        "text": "近中午,导游就安排我们在半路的枫林这个中国餐馆吃午餐。据说这是当地最好的中国餐馆了。在这里上了袋鼠肉,黑椒味,做的没有一点奇怪的袋鼠味,口感柔韧,媲美牛肉。\n饭后驱车沿32号公路直上海拔1100米高的蓝山三姐妹峰。这就是蓝山的大门标志了,是3个山峰。等看到著名的山了,我会给大家讲故事。这个景观是免费游览的,所以能看到不是游客的当地民众悠闲地进出。\n为什么叫蓝山,因为这里的桉树挥发的油滴在空中经折射会呈现蓝光,所以得名蓝山。无论是云雾蒙蒙还是阳光当头,总是被一层淡蓝色遮蔽,显得非常美丽,亦透着神秘。是不是蓝蒙蒙的一片呢。\n最著名的就是这3个标志上的山峰了。相传在很久以前有三位美貌的姐妹分别叫做 \"靡爱倪\", \"温拉\" 和 \"甘妮杜\"。这三位姐妹出生在Katoomba部落,很不幸的是他们三人同时爱上了山下Nepean族兄弟三人。这是有违异族缩怨与规矩,不被父辈首肯,后来因为他们的恋情而引爆了两族的战争。当时有一位巫师为了保护三姐妹免受"
+      },
+      "predicted_antecedent": null,
+      "predicted_evidence": null,
+      "prediction_status": "abstain",
+      "method": "nearest_entity",
+      "decision_reason": "no_compatible_candidate",
+      "candidate_trace": [],
+      "resolved_text": "这三位姐妹出生在Katoomba部落,很不幸的是他们三人同时爱上了山下Nepean族兄弟三人。",
+      "gold_status": "resolved",
+      "antecedent_type": "PERSON",
+      "gold_antecedent": {
+        "text": "三位美貌的姐妹",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 372,
+        "end": 379,
+        "text": "三位美貌的姐妹"
+      },
+      "annotation_note": "这三位姐妹指前句引出的三姐妹人物。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00428",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "他们",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 428,
+        "end": 430,
+        "text": "他们"
+      },
+      "sentence": {
+        "doc_id": "S003_VIS_001",
+        "start": 404,
+        "end": 451,
+        "text": "这三位姐妹出生在Katoomba部落,很不幸的是他们三人同时爱上了山下Nepean族兄弟三人。"
+      },
+      "sentence_index": 14,
+      "context": {
+        "doc_id": "S003_VIS_001",
+        "start": 108,
+        "end": 530,
+        "text": "午餐。据说这是当地最好的中国餐馆了。在这里上了袋鼠肉,黑椒味,做的没有一点奇怪的袋鼠味,口感柔韧,媲美牛肉。\n饭后驱车沿32号公路直上海拔1100米高的蓝山三姐妹峰。这就是蓝山的大门标志了,是3个山峰。等看到著名的山了,我会给大家讲故事。这个景观是免费游览的,所以能看到不是游客的当地民众悠闲地进出。\n为什么叫蓝山,因为这里的桉树挥发的油滴在空中经折射会呈现蓝光,所以得名蓝山。无论是云雾蒙蒙还是阳光当头,总是被一层淡蓝色遮蔽,显得非常美丽,亦透着神秘。是不是蓝蒙蒙的一片呢。\n最著名的就是这3个标志上的山峰了。相传在很久以前有三位美貌的姐妹分别叫做 \"靡爱倪\", \"温拉\" 和 \"甘妮杜\"。这三位姐妹出生在Katoomba部落,很不幸的是他们三人同时爱上了山下Nepean族兄弟三人。这是有违异族缩怨与规矩,不被父辈首肯,后来因为他们的恋情而引爆了两族的战争。当时有一位巫师为了保护三姐妹免受战争的威胁就把她们变成石头。然而最后巫师却战死,剩"
+      },
+      "predicted_antecedent": {
+        "text": "Katoomba",
+        "entity_id": "S003_POI_004"
+      },
+      "predicted_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 412,
+        "end": 420,
+        "text": "Katoomba"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "Katoomba",
+          "entity_id": "S003_POI_004",
+          "candidate_type": "POI",
+          "distance": 8,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 412,
+            "end": 420,
+            "text": "Katoomba"
+          }
+        }
+      ],
+      "resolved_text": "这三位姐妹出生在Katoomba部落,很不幸的是他们（指：Katoomba）三人同时爱上了山下Nepean族兄弟三人。",
+      "gold_status": "resolved",
+      "antecedent_type": "PERSON",
+      "gold_antecedent": {
+        "text": "三位美貌的姐妹",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 372,
+        "end": 379,
+        "text": "三位美貌的姐妹"
+      },
+      "annotation_note": "原文误用他们，但语义主语仍为三姐妹，不能指部落。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00451",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 451,
+        "end": 452,
+        "text": "这"
+      },
+      "sentence": {
+        "doc_id": "S003_VIS_001",
+        "start": 451,
+        "end": 489,
+        "text": "这是有违异族缩怨与规矩,不被父辈首肯,后来因为他们的恋情而引爆了两族的战争。"
+      },
+      "sentence_index": 15,
+      "context": {
+        "doc_id": "S003_VIS_001",
+        "start": 131,
+        "end": 552,
+        "text": "袋鼠肉,黑椒味,做的没有一点奇怪的袋鼠味,口感柔韧,媲美牛肉。\n饭后驱车沿32号公路直上海拔1100米高的蓝山三姐妹峰。这就是蓝山的大门标志了,是3个山峰。等看到著名的山了,我会给大家讲故事。这个景观是免费游览的,所以能看到不是游客的当地民众悠闲地进出。\n为什么叫蓝山,因为这里的桉树挥发的油滴在空中经折射会呈现蓝光,所以得名蓝山。无论是云雾蒙蒙还是阳光当头,总是被一层淡蓝色遮蔽,显得非常美丽,亦透着神秘。是不是蓝蒙蒙的一片呢。\n最著名的就是这3个标志上的山峰了。相传在很久以前有三位美貌的姐妹分别叫做 \"靡爱倪\", \"温拉\" 和 \"甘妮杜\"。这三位姐妹出生在Katoomba部落,很不幸的是他们三人同时爱上了山下Nepean族兄弟三人。这是有违异族缩怨与规矩,不被父辈首肯,后来因为他们的恋情而引爆了两族的战争。当时有一位巫师为了保护三姐妹免受战争的威胁就把她们变成石头。然而最后巫师却战死,剩下守山谷的三姐妹岩,因此三姐妹岩成了蓝山最闻"
+      },
+      "predicted_antecedent": {
+        "text": "Katoomba",
+        "entity_id": "S003_POI_004"
+      },
+      "predicted_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 412,
+        "end": 420,
+        "text": "Katoomba"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "Katoomba",
+          "entity_id": "S003_POI_004",
+          "candidate_type": "POI",
+          "distance": 31,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 412,
+            "end": 420,
+            "text": "Katoomba"
+          }
+        }
+      ],
+      "resolved_text": "这（指：Katoomba）是有违异族缩怨与规矩,不被父辈首肯,后来因为他们的恋情而引爆了两族的战争。",
+      "gold_status": "resolved",
+      "antecedent_type": "EVENT",
+      "gold_antecedent": {
+        "text": "他们三人同时爱上了山下Nepean族兄弟三人",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 428,
+        "end": 450,
+        "text": "他们三人同时爱上了山下Nepean族兄弟三人"
+      },
+      "annotation_note": "这是有违规矩，概括前一句跨族恋爱事件。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00474",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "他们",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 474,
+        "end": 476,
+        "text": "他们"
+      },
+      "sentence": {
+        "doc_id": "S003_VIS_001",
+        "start": 451,
+        "end": 489,
+        "text": "这是有违异族缩怨与规矩,不被父辈首肯,后来因为他们的恋情而引爆了两族的战争。"
+      },
+      "sentence_index": 15,
+      "context": {
+        "doc_id": "S003_VIS_001",
+        "start": 154,
+        "end": 576,
+        "text": "柔韧,媲美牛肉。\n饭后驱车沿32号公路直上海拔1100米高的蓝山三姐妹峰。这就是蓝山的大门标志了,是3个山峰。等看到著名的山了,我会给大家讲故事。这个景观是免费游览的,所以能看到不是游客的当地民众悠闲地进出。\n为什么叫蓝山,因为这里的桉树挥发的油滴在空中经折射会呈现蓝光,所以得名蓝山。无论是云雾蒙蒙还是阳光当头,总是被一层淡蓝色遮蔽,显得非常美丽,亦透着神秘。是不是蓝蒙蒙的一片呢。\n最著名的就是这3个标志上的山峰了。相传在很久以前有三位美貌的姐妹分别叫做 \"靡爱倪\", \"温拉\" 和 \"甘妮杜\"。这三位姐妹出生在Katoomba部落,很不幸的是他们三人同时爱上了山下Nepean族兄弟三人。这是有违异族缩怨与规矩,不被父辈首肯,后来因为他们的恋情而引爆了两族的战争。当时有一位巫师为了保护三姐妹免受战争的威胁就把她们变成石头。然而最后巫师却战死,剩下守山谷的三姐妹岩,因此三姐妹岩成了蓝山最闻名的名胜。蓝山里三座岩石分别为922公尺,918"
+      },
+      "predicted_antecedent": {
+        "text": "Katoomba",
+        "entity_id": "S003_POI_004"
+      },
+      "predicted_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 412,
+        "end": 420,
+        "text": "Katoomba"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "Katoomba",
+          "entity_id": "S003_POI_004",
+          "candidate_type": "POI",
+          "distance": 54,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 412,
+            "end": 420,
+            "text": "Katoomba"
+          }
+        }
+      ],
+      "resolved_text": "这是有违异族缩怨与规矩,不被父辈首肯,后来因为他们（指：Katoomba）的恋情而引爆了两族的战争。",
+      "gold_status": "ambiguous",
+      "antecedent_type": "PERSON",
+      "gold_antecedent": null,
+      "gold_evidence": null,
+      "annotation_note": "他们的恋情可指三姐妹或三对恋人，群体边界无法唯一判断；保留歧义。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00512",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "她们",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 512,
+        "end": 514,
+        "text": "她们"
+      },
+      "sentence": {
+        "doc_id": "S003_VIS_001",
+        "start": 489,
+        "end": 519,
+        "text": "当时有一位巫师为了保护三姐妹免受战争的威胁就把她们变成石头。"
+      },
+      "sentence_index": 16,
+      "context": {
+        "doc_id": "S003_VIS_001",
+        "start": 192,
+        "end": 614,
+        "text": "就是蓝山的大门标志了,是3个山峰。等看到著名的山了,我会给大家讲故事。这个景观是免费游览的,所以能看到不是游客的当地民众悠闲地进出。\n为什么叫蓝山,因为这里的桉树挥发的油滴在空中经折射会呈现蓝光,所以得名蓝山。无论是云雾蒙蒙还是阳光当头,总是被一层淡蓝色遮蔽,显得非常美丽,亦透着神秘。是不是蓝蒙蒙的一片呢。\n最著名的就是这3个标志上的山峰了。相传在很久以前有三位美貌的姐妹分别叫做 \"靡爱倪\", \"温拉\" 和 \"甘妮杜\"。这三位姐妹出生在Katoomba部落,很不幸的是他们三人同时爱上了山下Nepean族兄弟三人。这是有违异族缩怨与规矩,不被父辈首肯,后来因为他们的恋情而引爆了两族的战争。当时有一位巫师为了保护三姐妹免受战争的威胁就把她们变成石头。然而最后巫师却战死,剩下守山谷的三姐妹岩,因此三姐妹岩成了蓝山最闻名的名胜。蓝山里三座岩石分别为922公尺,918公尺和906公尺。\n在这里可以购买缆车套票,28澳币,有3种缆车可以乘坐呢!"
+      },
+      "predicted_antecedent": {
+        "text": "Katoomba",
+        "entity_id": "S003_POI_004"
+      },
+      "predicted_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 412,
+        "end": 420,
+        "text": "Katoomba"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "Katoomba",
+          "entity_id": "S003_POI_004",
+          "candidate_type": "POI",
+          "distance": 92,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 412,
+            "end": 420,
+            "text": "Katoomba"
+          }
+        }
+      ],
+      "resolved_text": "当时有一位巫师为了保护三姐妹免受战争的威胁就把她们（指：Katoomba）变成石头。",
+      "gold_status": "resolved",
+      "antecedent_type": "PERSON",
+      "gold_antecedent": {
+        "text": "三位美貌的姐妹",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 372,
+        "end": 379,
+        "text": "三位美貌的姐妹"
+      },
+      "annotation_note": "巫师把她们变石头，受事是人物三姐妹，不能与岩石POI混合。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00587",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 587,
+        "end": 589,
+        "text": "这里"
+      },
+      "sentence": {
+        "doc_id": "S003_VIS_001",
+        "start": 586,
+        "end": 614,
+        "text": "在这里可以购买缆车套票,28澳币,有3种缆车可以乘坐呢!"
+      },
+      "sentence_index": 19,
+      "context": {
+        "doc_id": "S003_VIS_001",
+        "start": 267,
+        "end": 689,
+        "text": "为这里的桉树挥发的油滴在空中经折射会呈现蓝光,所以得名蓝山。无论是云雾蒙蒙还是阳光当头,总是被一层淡蓝色遮蔽,显得非常美丽,亦透着神秘。是不是蓝蒙蒙的一片呢。\n最著名的就是这3个标志上的山峰了。相传在很久以前有三位美貌的姐妹分别叫做 \"靡爱倪\", \"温拉\" 和 \"甘妮杜\"。这三位姐妹出生在Katoomba部落,很不幸的是他们三人同时爱上了山下Nepean族兄弟三人。这是有违异族缩怨与规矩,不被父辈首肯,后来因为他们的恋情而引爆了两族的战争。当时有一位巫师为了保护三姐妹免受战争的威胁就把她们变成石头。然而最后巫师却战死,剩下守山谷的三姐妹岩,因此三姐妹岩成了蓝山最闻名的名胜。蓝山里三座岩石分别为922公尺,918公尺和906公尺。\n在这里可以购买缆车套票,28澳币,有3种缆车可以乘坐呢! 先坐下山的缆车,途中可以看到云在桉树林上的阴影,还有云缝中投射到桉树上的阳光。\n下到山下,我们便要沿着山谷穿过树林,来乘坐世界上独一无二的近90度陡"
+      },
+      "predicted_antecedent": {
+        "text": "蓝山国家公园",
+        "entity_id": "S003_POI_001"
+      },
+      "predicted_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 557,
+        "end": 559,
+        "text": "蓝山"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "蓝山国家公园",
+          "entity_id": "S003_POI_001",
+          "candidate_type": "POI",
+          "distance": 28,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 557,
+            "end": 559,
+            "text": "蓝山"
+          }
+        },
+        {
+          "text": "蓝山国家公园",
+          "entity_id": "S003_POI_001",
+          "candidate_type": "POI",
+          "distance": 37,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 548,
+            "end": 550,
+            "text": "蓝山"
+          }
+        },
+        {
+          "text": "三姐妹峰",
+          "entity_id": "S003_POI_002",
+          "candidate_type": "POI",
+          "distance": 41,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 542,
+            "end": 546,
+            "text": "三姐妹岩"
+          }
+        },
+        {
+          "text": "三姐妹峰",
+          "entity_id": "S003_POI_002",
+          "candidate_type": "POI",
+          "distance": 48,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 535,
+            "end": 539,
+            "text": "三姐妹岩"
+          }
+        }
+      ],
+      "resolved_text": "在这里（指：蓝山国家公园）可以购买缆车套票,28澳币,有3种缆车可以乘坐呢!",
+      "gold_status": "ambiguous",
+      "antecedent_type": "POI",
+      "gold_antecedent": null,
+      "gold_evidence": null,
+      "annotation_note": "此处已进入缆车售票点叙述，但没有明确售票地点名称，不能只凭最近蓝山强填。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00700",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这个",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 700,
+        "end": 702,
+        "text": "这个"
+      },
+      "sentence": {
+        "doc_id": "S003_VIS_001",
+        "start": 694,
+        "end": 710,
+        "text": "倾斜的缆车从这个地底下钻出来的!"
+      },
+      "sentence_index": 22,
+      "context": {
+        "doc_id": "S003_VIS_001",
+        "start": 380,
+        "end": 802,
+        "text": "别叫做 \"靡爱倪\", \"温拉\" 和 \"甘妮杜\"。这三位姐妹出生在Katoomba部落,很不幸的是他们三人同时爱上了山下Nepean族兄弟三人。这是有违异族缩怨与规矩,不被父辈首肯,后来因为他们的恋情而引爆了两族的战争。当时有一位巫师为了保护三姐妹免受战争的威胁就把她们变成石头。然而最后巫师却战死,剩下守山谷的三姐妹岩,因此三姐妹岩成了蓝山最闻名的名胜。蓝山里三座岩石分别为922公尺,918公尺和906公尺。\n在这里可以购买缆车套票,28澳币,有3种缆车可以乘坐呢! 先坐下山的缆车,途中可以看到云在桉树林上的阴影,还有云缝中投射到桉树上的阳光。\n下到山下,我们便要沿着山谷穿过树林,来乘坐世界上独一无二的近90度陡的缆车。\n倾斜的缆车从这个地底下钻出来的!\n最后一段旅程乘上SKYWAY缆车横越公园山谷和瀑布。\n鉴于行程安排,我们没有去爬三姐妹峰近距离接触,而是驱车前往Jenolan Caves珍罗兰洞,30澳币。珍罗兰洞形成于三亿四千万"
+      },
+      "predicted_antecedent": {
+        "text": "缆车",
+        "entity_id": "S003_TRANSPORT_005"
+      },
+      "predicted_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 697,
+        "end": 699,
+        "text": "缆车"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "缆车",
+          "entity_id": "S003_TRANSPORT_005",
+          "candidate_type": "TRANSPORT",
+          "distance": 1,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 697,
+            "end": 699,
+            "text": "缆车"
+          }
+        },
+        {
+          "text": "缆车",
+          "entity_id": "S003_TRANSPORT_005",
+          "candidate_type": "TRANSPORT",
+          "distance": 8,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 690,
+            "end": 692,
+            "text": "缆车"
+          }
+        },
+        {
+          "text": "缆车",
+          "entity_id": "S003_TRANSPORT_005",
+          "candidate_type": "TRANSPORT",
+          "distance": 78,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 620,
+            "end": 622,
+            "text": "缆车"
+          }
+        },
+        {
+          "text": "缆车",
+          "entity_id": "S003_TRANSPORT_005",
+          "candidate_type": "TRANSPORT",
+          "distance": 92,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 606,
+            "end": 608,
+            "text": "缆车"
+          }
+        },
+        {
+          "text": "缆车",
+          "entity_id": "S003_TRANSPORT_005",
+          "candidate_type": "TRANSPORT",
+          "distance": 105,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 593,
+            "end": 595,
+            "text": "缆车"
+          }
+        }
+      ],
+      "resolved_text": "倾斜的缆车从这个（指：缆车）地底下钻出来的!",
+      "gold_status": "exophoric",
+      "antecedent_type": "POI",
+      "gold_antecedent": null,
+      "gold_evidence": null,
+      "annotation_note": "这个地底下依赖照片或现场视角，文本中无明确地点边界。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00858",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 858,
+        "end": 859,
+        "text": "这"
+      },
+      "sentence": {
+        "doc_id": "S003_VIS_001",
+        "start": 858,
+        "end": 927,
+        "text": "这是世界上最早被发现的洞穴之一,也是世界上最古老的开放式地下洞穴系统,每年约有25万人来参观这个神奇的地下世界,是一个屡获殊荣的旅游景点。"
+      },
+      "sentence_index": 27,
+      "context": {
+        "doc_id": "S003_VIS_001",
+        "start": 538,
+        "end": 959,
+        "text": "岩,因此三姐妹岩成了蓝山最闻名的名胜。蓝山里三座岩石分别为922公尺,918公尺和906公尺。\n在这里可以购买缆车套票,28澳币,有3种缆车可以乘坐呢! 先坐下山的缆车,途中可以看到云在桉树林上的阴影,还有云缝中投射到桉树上的阳光。\n下到山下,我们便要沿着山谷穿过树林,来乘坐世界上独一无二的近90度陡的缆车。\n倾斜的缆车从这个地底下钻出来的!\n最后一段旅程乘上SKYWAY缆车横越公园山谷和瀑布。\n鉴于行程安排,我们没有去爬三姐妹峰近距离接触,而是驱车前往Jenolan Caves珍罗兰洞,30澳币。珍罗兰洞形成于三亿四千万年前,大自然的鬼斧神工造就了千姿百态的巨大钟乳石溶洞。洞穴在柔和巧妙的灯光的效果下,给人一种走入仙境的奇幻感觉。这是世界上最早被发现的洞穴之一,也是世界上最古老的开放式地下洞穴系统,每年约有25万人来参观这个神奇的地下世界,是一个屡获殊荣的旅游景点。我们的导游是一位本地老头,跟我们慢慢讲述着故事。\n这是一汪水,喝"
+      },
+      "predicted_antecedent": {
+        "text": "Jenolan Caves",
+        "entity_id": "S003_POI_037"
+      },
+      "predicted_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 790,
+        "end": 794,
+        "text": "珍罗兰洞"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "Jenolan Caves",
+          "entity_id": "S003_POI_037",
+          "candidate_type": "POI",
+          "distance": 64,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 790,
+            "end": 794,
+            "text": "珍罗兰洞"
+          }
+        },
+        {
+          "text": "Jenolan Caves",
+          "entity_id": "S003_POI_037",
+          "candidate_type": "POI",
+          "distance": 74,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 780,
+            "end": 784,
+            "text": "珍罗兰洞"
+          }
+        },
+        {
+          "text": "Jenolan Caves",
+          "entity_id": "S003_POI_037",
+          "candidate_type": "POI",
+          "distance": 78,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 767,
+            "end": 780,
+            "text": "Jenolan Caves"
+          }
+        },
+        {
+          "text": "自驾",
+          "entity_id": "S003_TRANSPORT_004",
+          "candidate_type": "TRANSPORT",
+          "distance": 93,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 763,
+            "end": 765,
+            "text": "驱车"
+          }
+        },
+        {
+          "text": "三姐妹峰",
+          "entity_id": "S003_POI_002",
+          "candidate_type": "POI",
+          "distance": 103,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 751,
+            "end": 755,
+            "text": "三姐妹峰"
+          }
+        }
+      ],
+      "resolved_text": "这（指：Jenolan Caves）是世界上最早被发现的洞穴之一,也是世界上最古老的开放式地下洞穴系统,每年约有25万人来参观这个神奇的地下世界,是一个屡获殊荣的旅游景点。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Jenolan Caves",
+        "entity_id": "S003_POI_037"
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 790,
+        "end": 794,
+        "text": "珍罗兰洞"
+      },
+      "annotation_note": "这是世界上最早发现的洞穴之一，回指当前洞穴。",
+      "correct": true
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00904",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这个",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 904,
+        "end": 906,
+        "text": "这个"
+      },
+      "sentence": {
+        "doc_id": "S003_VIS_001",
+        "start": 858,
+        "end": 927,
+        "text": "这是世界上最早被发现的洞穴之一,也是世界上最古老的开放式地下洞穴系统,每年约有25万人来参观这个神奇的地下世界,是一个屡获殊荣的旅游景点。"
+      },
+      "sentence_index": 27,
+      "context": {
+        "doc_id": "S003_VIS_001",
+        "start": 584,
+        "end": 1006,
+        "text": "。\n在这里可以购买缆车套票,28澳币,有3种缆车可以乘坐呢! 先坐下山的缆车,途中可以看到云在桉树林上的阴影,还有云缝中投射到桉树上的阳光。\n下到山下,我们便要沿着山谷穿过树林,来乘坐世界上独一无二的近90度陡的缆车。\n倾斜的缆车从这个地底下钻出来的!\n最后一段旅程乘上SKYWAY缆车横越公园山谷和瀑布。\n鉴于行程安排,我们没有去爬三姐妹峰近距离接触,而是驱车前往Jenolan Caves珍罗兰洞,30澳币。珍罗兰洞形成于三亿四千万年前,大自然的鬼斧神工造就了千姿百态的巨大钟乳石溶洞。洞穴在柔和巧妙的灯光的效果下,给人一种走入仙境的奇幻感觉。这是世界上最早被发现的洞穴之一,也是世界上最古老的开放式地下洞穴系统,每年约有25万人来参观这个神奇的地下世界,是一个屡获殊荣的旅游景点。我们的导游是一位本地老头,跟我们慢慢讲述着故事。\n这是一汪水,喝喝看甜不甜。\n这些岩石跟舞会的窗帘一样,所以这里被叫做凯蒂的宴客厅。\n这只是一个石洞,导游介绍"
+      },
+      "predicted_antecedent": {
+        "text": "Jenolan Caves",
+        "entity_id": "S003_POI_037"
+      },
+      "predicted_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 790,
+        "end": 794,
+        "text": "珍罗兰洞"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "Jenolan Caves",
+          "entity_id": "S003_POI_037",
+          "candidate_type": "POI",
+          "distance": 110,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 790,
+            "end": 794,
+            "text": "珍罗兰洞"
+          }
+        },
+        {
+          "text": "Jenolan Caves",
+          "entity_id": "S003_POI_037",
+          "candidate_type": "POI",
+          "distance": 120,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 780,
+            "end": 784,
+            "text": "珍罗兰洞"
+          }
+        },
+        {
+          "text": "Jenolan Caves",
+          "entity_id": "S003_POI_037",
+          "candidate_type": "POI",
+          "distance": 124,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 767,
+            "end": 780,
+            "text": "Jenolan Caves"
+          }
+        },
+        {
+          "text": "自驾",
+          "entity_id": "S003_TRANSPORT_004",
+          "candidate_type": "TRANSPORT",
+          "distance": 139,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 763,
+            "end": 765,
+            "text": "驱车"
+          }
+        },
+        {
+          "text": "三姐妹峰",
+          "entity_id": "S003_POI_002",
+          "candidate_type": "POI",
+          "distance": 149,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 751,
+            "end": 755,
+            "text": "三姐妹峰"
+          }
+        }
+      ],
+      "resolved_text": "这是世界上最早被发现的洞穴之一,也是世界上最古老的开放式地下洞穴系统,每年约有25万人来参观这个（指：Jenolan Caves）神奇的地下世界,是一个屡获殊荣的旅游景点。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Jenolan Caves",
+        "entity_id": "S003_POI_037"
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 790,
+        "end": 794,
+        "text": "珍罗兰洞"
+      },
+      "annotation_note": "这个地下世界指珍罗兰洞整体。",
+      "correct": true
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00952",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 952,
+        "end": 953,
+        "text": "这"
+      },
+      "sentence": {
+        "doc_id": "S003_VIS_001",
+        "start": 952,
+        "end": 965,
+        "text": "这是一汪水,喝喝看甜不甜。"
+      },
+      "sentence_index": 29,
+      "context": {
+        "doc_id": "S003_VIS_001",
+        "start": 632,
+        "end": 1053,
+        "text": "树林上的阴影,还有云缝中投射到桉树上的阳光。\n下到山下,我们便要沿着山谷穿过树林,来乘坐世界上独一无二的近90度陡的缆车。\n倾斜的缆车从这个地底下钻出来的!\n最后一段旅程乘上SKYWAY缆车横越公园山谷和瀑布。\n鉴于行程安排,我们没有去爬三姐妹峰近距离接触,而是驱车前往Jenolan Caves珍罗兰洞,30澳币。珍罗兰洞形成于三亿四千万年前,大自然的鬼斧神工造就了千姿百态的巨大钟乳石溶洞。洞穴在柔和巧妙的灯光的效果下,给人一种走入仙境的奇幻感觉。这是世界上最早被发现的洞穴之一,也是世界上最古老的开放式地下洞穴系统,每年约有25万人来参观这个神奇的地下世界,是一个屡获殊荣的旅游景点。我们的导游是一位本地老头,跟我们慢慢讲述着故事。\n这是一汪水,喝喝看甜不甜。\n这些岩石跟舞会的窗帘一样,所以这里被叫做凯蒂的宴客厅。\n这只是一个石洞,导游介绍,一定要去看看更奇妙的洞。出来山洞,一片光明。\n下午茶时间到! 今天在山里的澳洲小屋里吃正宗的"
+      },
+      "predicted_antecedent": {
+        "text": "Jenolan Caves",
+        "entity_id": "S003_POI_037"
+      },
+      "predicted_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 790,
+        "end": 794,
+        "text": "珍罗兰洞"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "Jenolan Caves",
+          "entity_id": "S003_POI_037",
+          "candidate_type": "POI",
+          "distance": 158,
+          "evidence": {
+            "doc_id": "S003_VIS_001",
+            "start": 790,
+            "end": 794,
+            "text": "珍罗兰洞"
+          }
+        }
+      ],
+      "resolved_text": "这（指：Jenolan Caves）是一汪水,喝喝看甜不甜。",
+      "gold_status": "exophoric",
+      "antecedent_type": "OBJECT",
+      "gold_antecedent": null,
+      "gold_evidence": null,
+      "annotation_note": "这是一汪水依赖现场或图片，文本无明确的水体先行词。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00966",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这些",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 966,
+        "end": 968,
+        "text": "这些"
+      },
+      "sentence": {
+        "doc_id": "S003_VIS_001",
+        "start": 966,
+        "end": 993,
+        "text": "这些岩石跟舞会的窗帘一样,所以这里被叫做凯蒂的宴客厅。"
+      },
+      "sentence_index": 30,
+      "context": {
+        "doc_id": "S003_VIS_001",
+        "start": 646,
+        "end": 1068,
+        "text": "到桉树上的阳光。\n下到山下,我们便要沿着山谷穿过树林,来乘坐世界上独一无二的近90度陡的缆车。\n倾斜的缆车从这个地底下钻出来的!\n最后一段旅程乘上SKYWAY缆车横越公园山谷和瀑布。\n鉴于行程安排,我们没有去爬三姐妹峰近距离接触,而是驱车前往Jenolan Caves珍罗兰洞,30澳币。珍罗兰洞形成于三亿四千万年前,大自然的鬼斧神工造就了千姿百态的巨大钟乳石溶洞。洞穴在柔和巧妙的灯光的效果下,给人一种走入仙境的奇幻感觉。这是世界上最早被发现的洞穴之一,也是世界上最古老的开放式地下洞穴系统,每年约有25万人来参观这个神奇的地下世界,是一个屡获殊荣的旅游景点。我们的导游是一位本地老头,跟我们慢慢讲述着故事。\n这是一汪水,喝喝看甜不甜。\n这些岩石跟舞会的窗帘一样,所以这里被叫做凯蒂的宴客厅。\n这只是一个石洞,导游介绍,一定要去看看更奇妙的洞。出来山洞,一片光明。\n下午茶时间到! 今天在山里的澳洲小屋里吃正宗的英式下午茶。\n房间里昏黄的灯光"
+      },
+      "predicted_antecedent": null,
+      "predicted_evidence": null,
+      "prediction_status": "abstain",
+      "method": "nearest_entity",
+      "decision_reason": "no_compatible_candidate",
+      "candidate_trace": [],
+      "resolved_text": "这些岩石跟舞会的窗帘一样,所以这里被叫做凯蒂的宴客厅。",
+      "gold_status": "exophoric",
+      "antecedent_type": "OBJECT",
+      "gold_antecedent": null,
+      "gold_evidence": null,
+      "annotation_note": "这些岩石为照片指示，前文没有可唯一对应的具体岩石集合。",
+      "correct": true
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00981",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 981,
+        "end": 983,
+        "text": "这里"
+      },
+      "sentence": {
+        "doc_id": "S003_VIS_001",
+        "start": 966,
+        "end": 993,
+        "text": "这些岩石跟舞会的窗帘一样,所以这里被叫做凯蒂的宴客厅。"
+      },
+      "sentence_index": 30,
+      "context": {
+        "doc_id": "S003_VIS_001",
+        "start": 661,
+        "end": 1083,
+        "text": "们便要沿着山谷穿过树林,来乘坐世界上独一无二的近90度陡的缆车。\n倾斜的缆车从这个地底下钻出来的!\n最后一段旅程乘上SKYWAY缆车横越公园山谷和瀑布。\n鉴于行程安排,我们没有去爬三姐妹峰近距离接触,而是驱车前往Jenolan Caves珍罗兰洞,30澳币。珍罗兰洞形成于三亿四千万年前,大自然的鬼斧神工造就了千姿百态的巨大钟乳石溶洞。洞穴在柔和巧妙的灯光的效果下,给人一种走入仙境的奇幻感觉。这是世界上最早被发现的洞穴之一,也是世界上最古老的开放式地下洞穴系统,每年约有25万人来参观这个神奇的地下世界,是一个屡获殊荣的旅游景点。我们的导游是一位本地老头,跟我们慢慢讲述着故事。\n这是一汪水,喝喝看甜不甜。\n这些岩石跟舞会的窗帘一样,所以这里被叫做凯蒂的宴客厅。\n这只是一个石洞,导游介绍,一定要去看看更奇妙的洞。出来山洞,一片光明。\n下午茶时间到! 今天在山里的澳洲小屋里吃正宗的英式下午茶。\n房间里昏黄的灯光显得很温暖。\n再看看同行的台湾"
+      },
+      "predicted_antecedent": null,
+      "predicted_evidence": null,
+      "prediction_status": "abstain",
+      "method": "nearest_entity",
+      "decision_reason": "no_compatible_candidate",
+      "candidate_trace": [],
+      "resolved_text": "这些岩石跟舞会的窗帘一样,所以这里被叫做凯蒂的宴客厅。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "凯蒂的宴客厅",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 986,
+        "end": 992,
+        "text": "凯蒂的宴客厅"
+      },
+      "annotation_note": "这里被叫做凯蒂的宴客厅为后指，先行证据实际位于代词之后。",
+      "correct": false
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00994",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 994,
+        "end": 995,
+        "text": "这"
+      },
+      "sentence": {
+        "doc_id": "S003_VIS_001",
+        "start": 994,
+        "end": 1019,
+        "text": "这只是一个石洞,导游介绍,一定要去看看更奇妙的洞。"
+      },
+      "sentence_index": 31,
+      "context": {
+        "doc_id": "S003_VIS_001",
+        "start": 674,
+        "end": 1095,
+        "text": "乘坐世界上独一无二的近90度陡的缆车。\n倾斜的缆车从这个地底下钻出来的!\n最后一段旅程乘上SKYWAY缆车横越公园山谷和瀑布。\n鉴于行程安排,我们没有去爬三姐妹峰近距离接触,而是驱车前往Jenolan Caves珍罗兰洞,30澳币。珍罗兰洞形成于三亿四千万年前,大自然的鬼斧神工造就了千姿百态的巨大钟乳石溶洞。洞穴在柔和巧妙的灯光的效果下,给人一种走入仙境的奇幻感觉。这是世界上最早被发现的洞穴之一,也是世界上最古老的开放式地下洞穴系统,每年约有25万人来参观这个神奇的地下世界,是一个屡获殊荣的旅游景点。我们的导游是一位本地老头,跟我们慢慢讲述着故事。\n这是一汪水,喝喝看甜不甜。\n这些岩石跟舞会的窗帘一样,所以这里被叫做凯蒂的宴客厅。\n这只是一个石洞,导游介绍,一定要去看看更奇妙的洞。出来山洞,一片光明。\n下午茶时间到! 今天在山里的澳洲小屋里吃正宗的英式下午茶。\n房间里昏黄的灯光显得很温暖。\n再看看同行的台湾帅哥RICKY正在记录这"
+      },
+      "predicted_antecedent": null,
+      "predicted_evidence": null,
+      "prediction_status": "abstain",
+      "method": "nearest_entity",
+      "decision_reason": "no_compatible_candidate",
+      "candidate_trace": [],
+      "resolved_text": "这只是一个石洞,导游介绍,一定要去看看更奇妙的洞。",
+      "gold_status": "exophoric",
+      "antecedent_type": "POI",
+      "gold_antecedent": null,
+      "gold_evidence": null,
+      "annotation_note": "这只是一个石洞为现场指示，不能证明与整个珍罗兰洞同边界。",
+      "correct": true
+    },
+    {
+      "case_id": "CR_S003_VIS_001_01094",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 1094,
+        "end": 1095,
+        "text": "这"
+      },
+      "sentence": {
+        "doc_id": "S003_VIS_001",
+        "start": 1075,
+        "end": 1101,
+        "text": "再看看同行的台湾帅哥RICKY正在记录这美妙的一天。"
+      },
+      "sentence_index": 36,
+      "context": {
+        "doc_id": "S003_VIS_001",
+        "start": 774,
+        "end": 1195,
+        "text": " Caves珍罗兰洞,30澳币。珍罗兰洞形成于三亿四千万年前,大自然的鬼斧神工造就了千姿百态的巨大钟乳石溶洞。洞穴在柔和巧妙的灯光的效果下,给人一种走入仙境的奇幻感觉。这是世界上最早被发现的洞穴之一,也是世界上最古老的开放式地下洞穴系统,每年约有25万人来参观这个神奇的地下世界,是一个屡获殊荣的旅游景点。我们的导游是一位本地老头,跟我们慢慢讲述着故事。\n这是一汪水,喝喝看甜不甜。\n这些岩石跟舞会的窗帘一样,所以这里被叫做凯蒂的宴客厅。\n这只是一个石洞,导游介绍,一定要去看看更奇妙的洞。出来山洞,一片光明。\n下午茶时间到! 今天在山里的澳洲小屋里吃正宗的英式下午茶。\n房间里昏黄的灯光显得很温暖。\n再看看同行的台湾帅哥RICKY正在记录这美妙的一天。\n这么美味,是不是很有食欲呢!\n珍罗兰洞距离悉尼市有185公里,搭乘近3个小时才回到住处,累了一天,躺下休息了,晚安了。\n独行澳大利亚全集\n独行澳大利亚之二七购物篇\n独行澳大利亚之二六周围"
+      },
+      "predicted_antecedent": null,
+      "predicted_evidence": null,
+      "prediction_status": "abstain",
+      "method": "nearest_entity",
+      "decision_reason": "no_compatible_candidate",
+      "candidate_trace": [],
+      "resolved_text": "再看看同行的台湾帅哥RICKY正在记录这美妙的一天。",
+      "gold_status": "non_anaphoric",
+      "antecedent_type": "TIME",
+      "gold_antecedent": null,
+      "gold_evidence": null,
+      "annotation_note": "这美妙的一天为当前叙事日的指示，不存在明确命名的先行词。",
+      "correct": true
+    },
+    {
+      "case_id": "CR_S003_VIS_005_00298",
+      "doc_id": "S003_VIS_005",
+      "pronoun": "此处",
+      "span": {
+        "doc_id": "S003_VIS_005",
+        "start": 298,
+        "end": 300,
+        "text": "此处"
+      },
+      "sentence": {
+        "doc_id": "S003_VIS_005",
+        "start": 248,
+        "end": 306,
+        "text": "伊丽莎白女王观景台(Queen Elizabeth Lookout)因伊丽莎白女王于1954年2月在此处观景而得名。"
+      },
+      "sentence_index": 5,
+      "context": {
+        "doc_id": "S003_VIS_005",
+        "start": 0,
+        "end": 400,
+        "text": "蓝山公园(Blue Mountains National Park)——澳大利亚悉尼游记(3)\n长春(上海)\n蓝山山脉国家公园(Blue Mountains National Park)位于澳洲东南部的新南威尔士州,距悉尼以西约65公里处,占地1,989平方公里,山里生长各种桉树,空气中弥散着桉树油细滴,经光线漫射,呈现浅蓝色,因此名为蓝山。2000年被联合国教科文组织指定为世界遗产保护区。\n我们从悉尼驱车来到蓝山公园的伊丽莎白女王观景台(Queen Elizabeth Lookout)。\n伊丽莎白女王观景台(Queen Elizabeth Lookout)因伊丽莎白女王于1954年2月在此处观景而得名。\n▼观景台上看到的景观 ▲三姊妹峰是蓝山公园最闻名的一处胜景,是蓝山公园的标志。 ▼亨利王子悬崖步道(Prince Henry Cliff Walk),沿着指示牌走 ▲亨利王子悬崖 ▲不少"
+      },
+      "predicted_antecedent": {
+        "text": "伊丽莎白女王观景台",
+        "entity_id": "S003_POI_034"
+      },
+      "predicted_evidence": {
+        "doc_id": "S003_VIS_005",
+        "start": 258,
+        "end": 281,
+        "text": "Queen Elizabeth Lookout"
+      },
+      "prediction_status": "resolved",
+      "method": "nearest_entity",
+      "decision_reason": "nearest_entity",
+      "candidate_trace": [
+        {
+          "text": "伊丽莎白女王观景台",
+          "entity_id": "S003_POI_034",
+          "candidate_type": "POI",
+          "distance": 17,
+          "evidence": {
+            "doc_id": "S003_VIS_005",
+            "start": 258,
+            "end": 281,
+            "text": "Queen Elizabeth Lookout"
+          }
+        },
+        {
+          "text": "伊丽莎白女王观景台",
+          "entity_id": "S003_POI_034",
+          "candidate_type": "POI",
+          "distance": 41,
+          "evidence": {
+            "doc_id": "S003_VIS_005",
+            "start": 248,
+            "end": 257,
+            "text": "伊丽莎白女王观景台"
+          }
+        },
+        {
+          "text": "伊丽莎白女王观景台",
+          "entity_id": "S003_POI_034",
+          "candidate_type": "POI",
+          "distance": 53,
+          "evidence": {
+            "doc_id": "S003_VIS_005",
+            "start": 222,
+            "end": 245,
+            "text": "Queen Elizabeth Lookout"
+          }
+        },
+        {
+          "text": "伊丽莎白女王观景台",
+          "entity_id": "S003_POI_034",
+          "candidate_type": "POI",
+          "distance": 77,
+          "evidence": {
+            "doc_id": "S003_VIS_005",
+            "start": 212,
+            "end": 221,
+            "text": "伊丽莎白女王观景台"
+          }
+        },
+        {
+          "text": "蓝山国家公园",
+          "entity_id": "S003_POI_001",
+          "candidate_type": "POI",
+          "distance": 87,
+          "evidence": {
+            "doc_id": "S003_VIS_005",
+            "start": 207,
+            "end": 211,
+            "text": "蓝山公园"
+          }
+        }
+      ],
+      "resolved_text": "伊丽莎白女王观景台(Queen Elizabeth Lookout)因伊丽莎白女王于1954年2月在此处（指：伊丽莎白女王观景台）观景而得名。",
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "伊丽莎白女王观景台",
+        "entity_id": "S003_POI_034"
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_005",
+        "start": 248,
+        "end": 257,
+        "text": "伊丽莎白女王观景台"
+      },
+      "annotation_note": "女王在此处观景，回指同句完整观景台名称。",
+      "correct": true
+    }
+  ]
+}

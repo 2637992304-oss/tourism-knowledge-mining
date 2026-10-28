@@ -1,0 +1,60 @@
+﻿case_id,doc_id,pronoun,start,end,gold_status,gold,predicted,correct,annotation_note
+CR_S001_VIS_001_00068,S001_VIS_001,这,68,69,resolved,徒步路线 [entity_id=null],徒步路线 [entity_id=null],True,指前句标识牌所标示的徒步路线，不指最近的桃源台站。
+CR_S001_VIS_001_00264,S001_VIS_001,他们,264,266,resolved,一对夫妇带着三个孩子 [entity_id=null],一对夫妇带着三个孩子 [entity_id=null],True,他们指正在游戏的一家五口。
+CR_S001_VIS_001_00534,S001_VIS_001,这,534,535,resolved,离开姥子站继续向大涌谷进发 [entity_id=null],离开姥子站继续向大涌谷进发 [entity_id=null],True,这段路是姥子站至大涌谷的当前步行区段。
+CR_S001_VIS_001_00566,S001_VIS_001,这,566,567,resolved,离开姥子站继续向大涌谷进发 [entity_id=null],离开姥子站继续向大涌谷进发 [entity_id=null],True,沿用前句同一区段，不能替换成单个大涌谷景点。
+CR_S001_VIS_001_00660,S001_VIS_001,这,660,661,resolved,徒步路线 [entity_id=null],离开姥子站继续向大涌谷进发 [entity_id=null],False,总结整段森林浴徒步道，回指篇首路线。
+CR_S001_VIS_001_00891,S001_VIS_001,她,891,892,resolved,一位能讲英语的大姐 [entity_id=null],一位能讲英语的大姐 [entity_id=null],True,施事是刚遇到的大姐。
+CR_S001_VIS_001_00974,S001_VIS_001,这位,974,976,resolved,一位能讲英语的大姐 [entity_id=null],一位能讲英语的大姐 [entity_id=null],True,这位日本大姐与提供帮助的大姐同指。
+CR_S001_VIS_003_00031,S001_VIS_003,这,31,32,non_anaphoric,null,null,True,这次日本游是当前叙事行程的指示限定，无可替换的明确先行词。
+CR_S001_VIS_003_00065,S001_VIS_003,这个,65,67,resolved,小田急线的箱根2日周游券 [entity_id=null],小田急线的箱根2日周游券 [entity_id=null],True,票券是物品，不是交通方式或箱根地点。
+CR_S001_VIS_003_00137,S001_VIS_003,这个,137,139,resolved,小田急线的箱根2日周游券 [entity_id=null],小田急线的箱根2日周游券 [entity_id=null],True,仍指同一周游券。
+CR_S001_VIS_003_00152,S001_VIS_003,它,152,153,resolved,小田急线的箱根2日周游券 [entity_id=null],小田急线的箱根2日周游券 [entity_id=null],True,它可以用于交通工具，主语为票券。
+CR_S001_VIS_003_00270,S001_VIS_003,那里,270,272,resolved,桃源台 [S001_POI_010],桃源台 [S001_POI_010],True,出游方向指前文订酒店的桃源台地区。
+CR_S001_VIS_003_00347,S001_VIS_003,那,347,348,resolved,"浓烟滚滚,往下看原来是硫磺谷,谷里遍地都是燃烧着浓烟的硫磺洞 [entity_id=null]",null,False,那情景概括前面描写的火山景象。
+CR_S001_VIS_003_00398,S001_VIS_003,这里,398,400,resolved,大涌谷 [S001_POI_002],大涌谷 [S001_POI_002],True,硫磺水的地点是当前大涌谷。
+CR_S001_VIS_003_00559,S001_VIS_003,这个,559,561,resolved,水中神社 [entity_id=null],水中神社 [entity_id=null],True,这个打卡点指刚参观的水中神社；实验2目录没有此名称，entity_id为null。
+CR_S002_VIS_005_00113,S002_VIS_005,它,113,114,resolved,优胜美地国家公园 [S002_POI_001],优胜美地国家公园 [S002_POI_001],True,给它三天时间，指游览目标公园。
+CR_S002_VIS_005_00148,S002_VIS_005,这,148,149,non_anaphoric,null,null,True,这是…时间为当下季节的时间指示，不强行对齐公园。
+CR_S002_VIS_005_00403,S002_VIS_005,那,403,404,resolved,Yosemite Valley [S002_POI_002],Yosemite Valley [S002_POI_002],True,那一片指山谷区域。
+CR_S002_VIS_005_00486,S002_VIS_005,那些,486,488,exophoric,null,null,True,那些全靠融雪的瀑布为泛指复数，无已明确枚举的单一先行词。
+CR_S002_VIS_005_00637,S002_VIS_005,这些,637,639,resolved,酋长岩和半圆顶 [entity_id=null],酋长岩和半圆顶 [entity_id=null],True,这些标志性景点是前面的两个景点组成的集合。
+CR_S002_VIS_005_00695,S002_VIS_005,那里,695,697,resolved,Tunnel View [S002_POI_006],Bridalveil Fall [S002_POI_007],False,现场作画地点沿用本段主题观景点；最近瀑布是拍摄对象。
+CR_S002_VIS_005_00719,S002_VIS_005,这里,719,721,resolved,Tunnel View [S002_POI_006],优胜美地国家公园 [S002_POI_001],False,拍标准照的地点仍为Tunnel View。
+CR_S002_VIS_005_00755,S002_VIS_005,这里,755,757,resolved,Tunnel View [S002_POI_006],Tunnel View [S002_POI_006],True,同句Tunnel View这里，局部复指观景点。
+CR_S002_VIS_005_00856,S002_VIS_005,这,856,857,non_anaphoric,null,El Capitan [S002_POI_003],False,这美丽国是对美国的口语指示称呼，前文没有同指明确名词。
+CR_S002_VIS_005_00910,S002_VIS_005,它,910,911,resolved,Horsetail Fall [S002_POI_037],Horsetail Fall [S002_POI_037],True,它的侧面指刚介绍的马尾瀑布。
+CR_S002_VIS_005_00991,S002_VIS_005,那,991,992,resolved,2月间 [entity_id=null],null,False,那时候回指前述二月火瀑拍摄时段。
+CR_S002_VIS_005_01024,S002_VIS_005,这,1024,1025,resolved,Yosemite Falls [S002_POI_008],Yosemite Falls [S002_POI_008],True,这是园内最长的瀑布，回指前句游览对象。
+CR_S002_VIS_005_01430,S002_VIS_005,这,1430,1431,resolved,一个通道 [entity_id=null],一个通道 [entity_id=null],True,这通道指在树底部挖出的通道，不能对齐红杉公园。
+CR_S002_VIS_005_01479,S002_VIS_005,这里,1479,1481,resolved,Mariposa Grove [S002_POI_068],null,False,生态滋养这里所有生物，范围是当前红杉公园。
+CR_S002_VIS_005_01539,S002_VIS_005,这里,1539,1541,resolved,Hetch Hetchy [S002_POI_069],Hetch Hetchy [S002_POI_069],True,Hetch Hetchy后的破折号引出同指地点。
+CR_S002_VIS_005_01579,S002_VIS_005,这里,1579,1581,resolved,Hetch Hetchy [S002_POI_069],Yosemite Valley [S002_POI_002],False,改造为水库的是Hetch Hetchy，优胜美地谷为比较对象。
+CR_S002_VIS_005_01641,S002_VIS_005,这里,1641,1643,resolved,Hetch Hetchy [S002_POI_069],旧金山 [S002_POI_074],False,这里有278英里步道仍是水库游览区。
+CR_S002_VIS_005_01675,S002_VIS_005,这里,1675,1677,resolved,Hetch Hetchy [S002_POI_069],旧金山 [S002_POI_074],False,救援人数对应同一游览区。
+CR_S002_VIS_005_01725,S002_VIS_005,那里,1725,1727,resolved,Tioga Road [S002_POI_038],Tioga Road [S002_POI_038],True,那里是Tioga Road所指的另一出游区域。
+CR_S002_VIS_005_01740,S002_VIS_005,这个,1740,1742,resolved,Hetch Hetchy [S002_POI_069],Tioga Road [S002_POI_038],False,这个水库返回当前Hetch Hetchy；插入的Tioga Road不是水库。
+CR_S002_VIS_005_01752,S002_VIS_005,这,1752,1753,resolved,去了一小时车程需要翻山的Hetch Hetchy [entity_id=null],null,False,这一程指到Hetch Hetchy的整段行程。
+CR_S002_VIS_005_01809,S002_VIS_005,这,1809,1810,resolved,途中盘旋山路上的积雪 [entity_id=null],null,False,这机会指途中停车玩雪的机会，以前句积雪表述为证据。
+CR_S003_VIS_001_00101,S003_VIS_001,这个,101,103,resolved,枫林 [entity_id=null],枫林 [entity_id=null],True,这个中国餐馆复指同句紧邻的枫林，未登记实体ID。
+CR_S003_VIS_001_00113,S003_VIS_001,这,113,114,resolved,枫林 [entity_id=null],枫林 [entity_id=null],True,这是当地最好的中国餐馆，仍指枫林餐馆。
+CR_S003_VIS_001_00127,S003_VIS_001,这里,127,129,resolved,枫林 [entity_id=null],枫林 [entity_id=null],True,这里上了袋鼠肉，指用餐地点。
+CR_S003_VIS_001_00191,S003_VIS_001,这,191,192,resolved,三姐妹峰 [S003_POI_002],三姐妹峰 [S003_POI_002],True,这就是蓝山大门标志，指刚抵达的三姐妹峰。
+CR_S003_VIS_001_00227,S003_VIS_001,这个,227,229,resolved,三姐妹峰 [S003_POI_002],蓝山国家公园 [S003_POI_001],False,这个景观指三姐妹峰，蓝山是修饰性的父区域。
+CR_S003_VIS_001_00268,S003_VIS_001,这里,268,270,resolved,蓝山国家公园 [S003_POI_001],蓝山国家公园 [S003_POI_001],True,这里的桉树，是解释蓝山得名的区域。
+CR_S003_VIS_001_00353,S003_VIS_001,这,353,354,resolved,三姐妹峰 [S003_POI_002],蓝山国家公园 [S003_POI_001],False,这3个标志上的山峰回指前面三姐妹峰。
+CR_S003_VIS_001_00404,S003_VIS_001,这,404,405,resolved,三位美貌的姐妹 [entity_id=null],三位美貌的姐妹 [entity_id=null],True,这三位姐妹指前句引出的三姐妹人物。
+CR_S003_VIS_001_00428,S003_VIS_001,他们,428,430,resolved,三位美貌的姐妹 [entity_id=null],三位美貌的姐妹 [entity_id=null],True,原文误用他们，但语义主语仍为三姐妹，不能指部落。
+CR_S003_VIS_001_00451,S003_VIS_001,这,451,452,resolved,他们三人同时爱上了山下Nepean族兄弟三人 [entity_id=null],Katoomba [S003_POI_004],False,这是有违规矩，概括前一句跨族恋爱事件。
+CR_S003_VIS_001_00474,S003_VIS_001,他们,474,476,ambiguous,null,三位美貌的姐妹 [entity_id=null],False,他们的恋情可指三姐妹或三对恋人，群体边界无法唯一判断；保留歧义。
+CR_S003_VIS_001_00512,S003_VIS_001,她们,512,514,resolved,三位美貌的姐妹 [entity_id=null],三位美貌的姐妹 [entity_id=null],True,巫师把她们变石头，受事是人物三姐妹，不能与岩石POI混合。
+CR_S003_VIS_001_00587,S003_VIS_001,这里,587,589,ambiguous,null,蓝山国家公园 [S003_POI_001],False,此处已进入缆车售票点叙述，但没有明确售票地点名称，不能只凭最近蓝山强填。
+CR_S003_VIS_001_00700,S003_VIS_001,这个,700,702,exophoric,null,蓝山国家公园 [S003_POI_001],False,这个地底下依赖照片或现场视角，文本中无明确地点边界。
+CR_S003_VIS_001_00858,S003_VIS_001,这,858,859,resolved,Jenolan Caves [S003_POI_037],Jenolan Caves [S003_POI_037],True,这是世界上最早发现的洞穴之一，回指当前洞穴。
+CR_S003_VIS_001_00904,S003_VIS_001,这个,904,906,resolved,Jenolan Caves [S003_POI_037],Jenolan Caves [S003_POI_037],True,这个地下世界指珍罗兰洞整体。
+CR_S003_VIS_001_00952,S003_VIS_001,这,952,953,exophoric,null,Jenolan Caves [S003_POI_037],False,这是一汪水依赖现场或图片，文本无明确的水体先行词。
+CR_S003_VIS_001_00966,S003_VIS_001,这些,966,968,exophoric,null,null,True,这些岩石为照片指示，前文没有可唯一对应的具体岩石集合。
+CR_S003_VIS_001_00981,S003_VIS_001,这里,981,983,resolved,凯蒂的宴客厅 [entity_id=null],null,False,这里被叫做凯蒂的宴客厅为后指，先行证据实际位于代词之后。
+CR_S003_VIS_001_00994,S003_VIS_001,这,994,995,exophoric,null,null,True,这只是一个石洞为现场指示，不能证明与整个珍罗兰洞同边界。
+CR_S003_VIS_001_01094,S003_VIS_001,这,1094,1095,non_anaphoric,null,null,True,这美妙的一天为当前叙事日的指示，不存在明确命名的先行词。
+CR_S003_VIS_005_00298,S003_VIS_005,此处,298,300,resolved,伊丽莎白女王观景台 [S003_POI_034],伊丽莎白女王观景台 [S003_POI_034],True,女王在此处观景，回指同句完整观景台名称。
