@@ -1,0 +1,46 @@
+{
+  "total": 59,
+  "positive": 48,
+  "gold_null": 11,
+  "answered": 47,
+  "correct_links": 32,
+  "correct_nulls": 6,
+  "metrics": {
+    "overall_accuracy": {
+      "numerator": 38,
+      "denominator": 59,
+      "value": 0.6440677966101694
+    },
+    "positive_accuracy": {
+      "numerator": 32,
+      "denominator": 48,
+      "value": 0.6666666666666666
+    },
+    "coverage": {
+      "numerator": 47,
+      "denominator": 59,
+      "value": 0.7966101694915254
+    },
+    "answered_precision": {
+      "numerator": 32,
+      "denominator": 47,
+      "value": 0.6808510638297872
+    },
+    "null_rejection_accuracy": {
+      "numerator": 6,
+      "denominator": 11,
+      "value": 0.5454545454545454
+    },
+    "unresolved_rate": {
+      "numerator": 12,
+      "denominator": 59,
+      "value": 0.2033898305084746
+    }
+  },
+  "status_counts": {
+    "resolved": 48,
+    "non_anaphoric": 4,
+    "exophoric": 5,
+    "ambiguous": 2
+  }
+}

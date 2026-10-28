@@ -1,0 +1,1351 @@
+{
+  "schema_version": "1.0",
+  "corpus_version": "v1",
+  "corpus_sha256": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0",
+  "annotation_provenance": "AI辅助逐例阅读原文并标注，非学生或多名人工标注者独立复核；在运行消解预测前固定此参考。",
+  "selection": "按篇幅适中且覆盖三个景区进行目的选样；5篇全文均扫描；不代表随机总体。",
+  "documents": [
+    "S001_VIS_001",
+    "S001_VIS_003",
+    "S002_VIS_005",
+    "S003_VIS_001",
+    "S003_VIS_005"
+  ],
+  "pronoun_pattern": "(?<!其)(?:他们|她们|它们|这里|那里|此处|这儿|那儿|这位|那位|这个|那个|这些|那些|它|他|她|这(?!么|样)|那(?!么|样))",
+  "status_definitions": {
+    "resolved": "上下文存在可明确对应的实体、群体、路线或事件",
+    "ambiguous": "存在多个合理解释或范围不唯一",
+    "exophoric": "依赖照片、现场或泛指，正文没有唯一先行项",
+    "non_anaphoric": "时间或修辞性指示限定，不进行实体替换"
+  },
+  "cases": [
+    {
+      "case_id": "CR_S001_VIS_001_00068",
+      "doc_id": "S001_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S001_VIS_001",
+        "start": 68,
+        "end": 69,
+        "text": "这"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "ROUTE",
+      "gold_antecedent": {
+        "text": "徒步路线",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_001",
+        "start": 59,
+        "end": 63,
+        "text": "徒步路线"
+      },
+      "annotation_note": "指前句标识牌所标示的徒步路线，不指最近的桃源台站。"
+    },
+    {
+      "case_id": "CR_S001_VIS_001_00264",
+      "doc_id": "S001_VIS_001",
+      "pronoun": "他们",
+      "span": {
+        "doc_id": "S001_VIS_001",
+        "start": 264,
+        "end": 266,
+        "text": "他们"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "PERSON",
+      "gold_antecedent": {
+        "text": "一对夫妇带着三个孩子",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_001",
+        "start": 239,
+        "end": 249,
+        "text": "一对夫妇带着三个孩子"
+      },
+      "annotation_note": "他们指正在游戏的一家五口。"
+    },
+    {
+      "case_id": "CR_S001_VIS_001_00534",
+      "doc_id": "S001_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S001_VIS_001",
+        "start": 534,
+        "end": 535,
+        "text": "这"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "ROUTE",
+      "gold_antecedent": {
+        "text": "离开姥子站继续向大涌谷进发",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_001",
+        "start": 519,
+        "end": 532,
+        "text": "离开姥子站继续向大涌谷进发"
+      },
+      "annotation_note": "这段路是姥子站至大涌谷的当前步行区段。"
+    },
+    {
+      "case_id": "CR_S001_VIS_001_00566",
+      "doc_id": "S001_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S001_VIS_001",
+        "start": 566,
+        "end": 567,
+        "text": "这"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "ROUTE",
+      "gold_antecedent": {
+        "text": "离开姥子站继续向大涌谷进发",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_001",
+        "start": 519,
+        "end": 532,
+        "text": "离开姥子站继续向大涌谷进发"
+      },
+      "annotation_note": "沿用前句同一区段，不能替换成单个大涌谷景点。"
+    },
+    {
+      "case_id": "CR_S001_VIS_001_00660",
+      "doc_id": "S001_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S001_VIS_001",
+        "start": 660,
+        "end": 661,
+        "text": "这"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "ROUTE",
+      "gold_antecedent": {
+        "text": "徒步路线",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_001",
+        "start": 59,
+        "end": 63,
+        "text": "徒步路线"
+      },
+      "annotation_note": "总结整段森林浴徒步道，回指篇首路线。"
+    },
+    {
+      "case_id": "CR_S001_VIS_001_00891",
+      "doc_id": "S001_VIS_001",
+      "pronoun": "她",
+      "span": {
+        "doc_id": "S001_VIS_001",
+        "start": 891,
+        "end": 892,
+        "text": "她"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "PERSON",
+      "gold_antecedent": {
+        "text": "一位能讲英语的大姐",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_001",
+        "start": 872,
+        "end": 881,
+        "text": "一位能讲英语的大姐"
+      },
+      "annotation_note": "施事是刚遇到的大姐。"
+    },
+    {
+      "case_id": "CR_S001_VIS_001_00974",
+      "doc_id": "S001_VIS_001",
+      "pronoun": "这位",
+      "span": {
+        "doc_id": "S001_VIS_001",
+        "start": 974,
+        "end": 976,
+        "text": "这位"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "PERSON",
+      "gold_antecedent": {
+        "text": "一位能讲英语的大姐",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_001",
+        "start": 872,
+        "end": 881,
+        "text": "一位能讲英语的大姐"
+      },
+      "annotation_note": "这位日本大姐与提供帮助的大姐同指。"
+    },
+    {
+      "case_id": "CR_S001_VIS_003_00031",
+      "doc_id": "S001_VIS_003",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S001_VIS_003",
+        "start": 31,
+        "end": 32,
+        "text": "这"
+      },
+      "gold_status": "non_anaphoric",
+      "antecedent_type": "TIME",
+      "gold_antecedent": null,
+      "gold_evidence": null,
+      "annotation_note": "这次日本游是当前叙事行程的指示限定，无可替换的明确先行词。"
+    },
+    {
+      "case_id": "CR_S001_VIS_003_00065",
+      "doc_id": "S001_VIS_003",
+      "pronoun": "这个",
+      "span": {
+        "doc_id": "S001_VIS_003",
+        "start": 65,
+        "end": 67,
+        "text": "这个"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "TICKET",
+      "gold_antecedent": {
+        "text": "小田急线的箱根2日周游券",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_003",
+        "start": 52,
+        "end": 64,
+        "text": "小田急线的箱根2日周游券"
+      },
+      "annotation_note": "票券是物品，不是交通方式或箱根地点。"
+    },
+    {
+      "case_id": "CR_S001_VIS_003_00137",
+      "doc_id": "S001_VIS_003",
+      "pronoun": "这个",
+      "span": {
+        "doc_id": "S001_VIS_003",
+        "start": 137,
+        "end": 139,
+        "text": "这个"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "TICKET",
+      "gold_antecedent": {
+        "text": "小田急线的箱根2日周游券",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_003",
+        "start": 52,
+        "end": 64,
+        "text": "小田急线的箱根2日周游券"
+      },
+      "annotation_note": "仍指同一周游券。"
+    },
+    {
+      "case_id": "CR_S001_VIS_003_00152",
+      "doc_id": "S001_VIS_003",
+      "pronoun": "它",
+      "span": {
+        "doc_id": "S001_VIS_003",
+        "start": 152,
+        "end": 153,
+        "text": "它"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "TICKET",
+      "gold_antecedent": {
+        "text": "小田急线的箱根2日周游券",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_003",
+        "start": 52,
+        "end": 64,
+        "text": "小田急线的箱根2日周游券"
+      },
+      "annotation_note": "它可以用于交通工具，主语为票券。"
+    },
+    {
+      "case_id": "CR_S001_VIS_003_00270",
+      "doc_id": "S001_VIS_003",
+      "pronoun": "那里",
+      "span": {
+        "doc_id": "S001_VIS_003",
+        "start": 270,
+        "end": 272,
+        "text": "那里"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "桃源台",
+        "entity_id": "S001_POI_010"
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_003",
+        "start": 255,
+        "end": 258,
+        "text": "桃源台"
+      },
+      "annotation_note": "出游方向指前文订酒店的桃源台地区。"
+    },
+    {
+      "case_id": "CR_S001_VIS_003_00347",
+      "doc_id": "S001_VIS_003",
+      "pronoun": "那",
+      "span": {
+        "doc_id": "S001_VIS_003",
+        "start": 347,
+        "end": 348,
+        "text": "那"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "EVENT",
+      "gold_antecedent": {
+        "text": "浓烟滚滚,往下看原来是硫磺谷,谷里遍地都是燃烧着浓烟的硫磺洞",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_003",
+        "start": 316,
+        "end": 346,
+        "text": "浓烟滚滚,往下看原来是硫磺谷,谷里遍地都是燃烧着浓烟的硫磺洞"
+      },
+      "annotation_note": "那情景概括前面描写的火山景象。"
+    },
+    {
+      "case_id": "CR_S001_VIS_003_00398",
+      "doc_id": "S001_VIS_003",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S001_VIS_003",
+        "start": 398,
+        "end": 400,
+        "text": "这里"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "大涌谷",
+        "entity_id": "S001_POI_002"
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_003",
+        "start": 377,
+        "end": 380,
+        "text": "大涌谷"
+      },
+      "annotation_note": "硫磺水的地点是当前大涌谷。"
+    },
+    {
+      "case_id": "CR_S001_VIS_003_00559",
+      "doc_id": "S001_VIS_003",
+      "pronoun": "这个",
+      "span": {
+        "doc_id": "S001_VIS_003",
+        "start": 559,
+        "end": 561,
+        "text": "这个"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "水中神社",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S001_VIS_003",
+        "start": 554,
+        "end": 558,
+        "text": "水中神社"
+      },
+      "annotation_note": "这个打卡点指刚参观的水中神社；实验2目录没有此名称，entity_id为null。"
+    },
+    {
+      "case_id": "CR_S002_VIS_005_00113",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "它",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 113,
+        "end": 114,
+        "text": "它"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "优胜美地国家公园",
+        "entity_id": "S002_POI_001"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 74,
+        "end": 82,
+        "text": "优胜美地国家公园"
+      },
+      "annotation_note": "给它三天时间，指游览目标公园。"
+    },
+    {
+      "case_id": "CR_S002_VIS_005_00148",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 148,
+        "end": 149,
+        "text": "这"
+      },
+      "gold_status": "non_anaphoric",
+      "antecedent_type": "TIME",
+      "gold_antecedent": null,
+      "gold_evidence": null,
+      "annotation_note": "这是…时间为当下季节的时间指示，不强行对齐公园。"
+    },
+    {
+      "case_id": "CR_S002_VIS_005_00403",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "那",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 403,
+        "end": 404,
+        "text": "那"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Yosemite Valley",
+        "entity_id": "S002_POI_002"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 397,
+        "end": 403,
+        "text": "优胜美地山谷"
+      },
+      "annotation_note": "那一片指山谷区域。"
+    },
+    {
+      "case_id": "CR_S002_VIS_005_00486",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "那些",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 486,
+        "end": 488,
+        "text": "那些"
+      },
+      "gold_status": "exophoric",
+      "antecedent_type": "OBJECT",
+      "gold_antecedent": null,
+      "gold_evidence": null,
+      "annotation_note": "那些全靠融雪的瀑布为泛指复数，无已明确枚举的单一先行词。"
+    },
+    {
+      "case_id": "CR_S002_VIS_005_00637",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这些",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 637,
+        "end": 639,
+        "text": "这些"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "GROUP",
+      "gold_antecedent": {
+        "text": "酋长岩和半圆顶",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 630,
+        "end": 637,
+        "text": "酋长岩和半圆顶"
+      },
+      "annotation_note": "这些标志性景点是前面的两个景点组成的集合。"
+    },
+    {
+      "case_id": "CR_S002_VIS_005_00695",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "那里",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 695,
+        "end": 697,
+        "text": "那里"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Tunnel View",
+        "entity_id": "S002_POI_006"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 613,
+        "end": 624,
+        "text": "Tunnel View"
+      },
+      "annotation_note": "现场作画地点沿用本段主题观景点；最近瀑布是拍摄对象。"
+    },
+    {
+      "case_id": "CR_S002_VIS_005_00719",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 719,
+        "end": 721,
+        "text": "这里"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Tunnel View",
+        "entity_id": "S002_POI_006"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 613,
+        "end": 624,
+        "text": "Tunnel View"
+      },
+      "annotation_note": "拍标准照的地点仍为Tunnel View。"
+    },
+    {
+      "case_id": "CR_S002_VIS_005_00755",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 755,
+        "end": 757,
+        "text": "这里"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Tunnel View",
+        "entity_id": "S002_POI_006"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 744,
+        "end": 755,
+        "text": "Tunnel View"
+      },
+      "annotation_note": "同句Tunnel View这里，局部复指观景点。"
+    },
+    {
+      "case_id": "CR_S002_VIS_005_00856",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 856,
+        "end": 857,
+        "text": "这"
+      },
+      "gold_status": "non_anaphoric",
+      "antecedent_type": "POI",
+      "gold_antecedent": null,
+      "gold_evidence": null,
+      "annotation_note": "这美丽国是对美国的口语指示称呼，前文没有同指明确名词。"
+    },
+    {
+      "case_id": "CR_S002_VIS_005_00910",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "它",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 910,
+        "end": 911,
+        "text": "它"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Horsetail Fall",
+        "entity_id": "S002_POI_037"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 886,
+        "end": 890,
+        "text": "马尾瀑布"
+      },
+      "annotation_note": "它的侧面指刚介绍的马尾瀑布。"
+    },
+    {
+      "case_id": "CR_S002_VIS_005_00991",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "那",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 991,
+        "end": 992,
+        "text": "那"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "EVENT",
+      "gold_antecedent": {
+        "text": "2月间",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 953,
+        "end": 956,
+        "text": "2月间"
+      },
+      "annotation_note": "那时候回指前述二月火瀑拍摄时段。"
+    },
+    {
+      "case_id": "CR_S002_VIS_005_01024",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 1024,
+        "end": 1025,
+        "text": "这"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Yosemite Falls",
+        "entity_id": "S002_POI_008"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1013,
+        "end": 1019,
+        "text": "优胜美地瀑布"
+      },
+      "annotation_note": "这是园内最长的瀑布，回指前句游览对象。"
+    },
+    {
+      "case_id": "CR_S002_VIS_005_01430",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 1430,
+        "end": 1431,
+        "text": "这"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "OBJECT",
+      "gold_antecedent": {
+        "text": "一个通道",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1387,
+        "end": 1391,
+        "text": "一个通道"
+      },
+      "annotation_note": "这通道指在树底部挖出的通道，不能对齐红杉公园。"
+    },
+    {
+      "case_id": "CR_S002_VIS_005_01479",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 1479,
+        "end": 1481,
+        "text": "这里"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Mariposa Grove",
+        "entity_id": "S002_POI_068"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1240,
+        "end": 1252,
+        "text": "Mariposa红杉公园"
+      },
+      "annotation_note": "生态滋养这里所有生物，范围是当前红杉公园。"
+    },
+    {
+      "case_id": "CR_S002_VIS_005_01539",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 1539,
+        "end": 1541,
+        "text": "这里"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Hetch Hetchy",
+        "entity_id": "S002_POI_069"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1525,
+        "end": 1537,
+        "text": "Hetch Hetchy"
+      },
+      "annotation_note": "Hetch Hetchy后的破折号引出同指地点。"
+    },
+    {
+      "case_id": "CR_S002_VIS_005_01579",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 1579,
+        "end": 1581,
+        "text": "这里"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Hetch Hetchy",
+        "entity_id": "S002_POI_069"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1525,
+        "end": 1537,
+        "text": "Hetch Hetchy"
+      },
+      "annotation_note": "改造为水库的是Hetch Hetchy，优胜美地谷为比较对象。"
+    },
+    {
+      "case_id": "CR_S002_VIS_005_01641",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 1641,
+        "end": 1643,
+        "text": "这里"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Hetch Hetchy",
+        "entity_id": "S002_POI_069"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1525,
+        "end": 1537,
+        "text": "Hetch Hetchy"
+      },
+      "annotation_note": "这里有278英里步道仍是水库游览区。"
+    },
+    {
+      "case_id": "CR_S002_VIS_005_01675",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 1675,
+        "end": 1677,
+        "text": "这里"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Hetch Hetchy",
+        "entity_id": "S002_POI_069"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1525,
+        "end": 1537,
+        "text": "Hetch Hetchy"
+      },
+      "annotation_note": "救援人数对应同一游览区。"
+    },
+    {
+      "case_id": "CR_S002_VIS_005_01725",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "那里",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 1725,
+        "end": 1727,
+        "text": "那里"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Tioga Road",
+        "entity_id": "S002_POI_038"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1715,
+        "end": 1725,
+        "text": "Tioga Road"
+      },
+      "annotation_note": "那里是Tioga Road所指的另一出游区域。"
+    },
+    {
+      "case_id": "CR_S002_VIS_005_01740",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这个",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 1740,
+        "end": 1742,
+        "text": "这个"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Hetch Hetchy",
+        "entity_id": "S002_POI_069"
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1525,
+        "end": 1537,
+        "text": "Hetch Hetchy"
+      },
+      "annotation_note": "这个水库返回当前Hetch Hetchy；插入的Tioga Road不是水库。"
+    },
+    {
+      "case_id": "CR_S002_VIS_005_01752",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 1752,
+        "end": 1753,
+        "text": "这"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "EVENT",
+      "gold_antecedent": {
+        "text": "去了一小时车程需要翻山的Hetch Hetchy",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1513,
+        "end": 1537,
+        "text": "去了一小时车程需要翻山的Hetch Hetchy"
+      },
+      "annotation_note": "这一程指到Hetch Hetchy的整段行程。"
+    },
+    {
+      "case_id": "CR_S002_VIS_005_01809",
+      "doc_id": "S002_VIS_005",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 1809,
+        "end": 1810,
+        "text": "这"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "EVENT",
+      "gold_antecedent": {
+        "text": "途中盘旋山路上的积雪",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 1761,
+        "end": 1771,
+        "text": "途中盘旋山路上的积雪"
+      },
+      "annotation_note": "这机会指途中停车玩雪的机会，以前句积雪表述为证据。"
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00101",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这个",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 101,
+        "end": 103,
+        "text": "这个"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "枫林",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 99,
+        "end": 101,
+        "text": "枫林"
+      },
+      "annotation_note": "这个中国餐馆复指同句紧邻的枫林，未登记实体ID。"
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00113",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 113,
+        "end": 114,
+        "text": "这"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "枫林",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 99,
+        "end": 101,
+        "text": "枫林"
+      },
+      "annotation_note": "这是当地最好的中国餐馆，仍指枫林餐馆。"
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00127",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 127,
+        "end": 129,
+        "text": "这里"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "枫林",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 99,
+        "end": 101,
+        "text": "枫林"
+      },
+      "annotation_note": "这里上了袋鼠肉，指用餐地点。"
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00191",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 191,
+        "end": 192,
+        "text": "这"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "三姐妹峰",
+        "entity_id": "S003_POI_002"
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 186,
+        "end": 190,
+        "text": "三姐妹峰"
+      },
+      "annotation_note": "这就是蓝山大门标志，指刚抵达的三姐妹峰。"
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00227",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这个",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 227,
+        "end": 229,
+        "text": "这个"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "三姐妹峰",
+        "entity_id": "S003_POI_002"
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 186,
+        "end": 190,
+        "text": "三姐妹峰"
+      },
+      "annotation_note": "这个景观指三姐妹峰，蓝山是修饰性的父区域。"
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00268",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 268,
+        "end": 270,
+        "text": "这里"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "蓝山国家公园",
+        "entity_id": "S003_POI_001"
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 263,
+        "end": 265,
+        "text": "蓝山"
+      },
+      "annotation_note": "这里的桉树，是解释蓝山得名的区域。"
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00353",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 353,
+        "end": 354,
+        "text": "这"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "三姐妹峰",
+        "entity_id": "S003_POI_002"
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 186,
+        "end": 190,
+        "text": "三姐妹峰"
+      },
+      "annotation_note": "这3个标志上的山峰回指前面三姐妹峰。"
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00404",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 404,
+        "end": 405,
+        "text": "这"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "PERSON",
+      "gold_antecedent": {
+        "text": "三位美貌的姐妹",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 372,
+        "end": 379,
+        "text": "三位美貌的姐妹"
+      },
+      "annotation_note": "这三位姐妹指前句引出的三姐妹人物。"
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00428",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "他们",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 428,
+        "end": 430,
+        "text": "他们"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "PERSON",
+      "gold_antecedent": {
+        "text": "三位美貌的姐妹",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 372,
+        "end": 379,
+        "text": "三位美貌的姐妹"
+      },
+      "annotation_note": "原文误用他们，但语义主语仍为三姐妹，不能指部落。"
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00451",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 451,
+        "end": 452,
+        "text": "这"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "EVENT",
+      "gold_antecedent": {
+        "text": "他们三人同时爱上了山下Nepean族兄弟三人",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 428,
+        "end": 450,
+        "text": "他们三人同时爱上了山下Nepean族兄弟三人"
+      },
+      "annotation_note": "这是有违规矩，概括前一句跨族恋爱事件。"
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00474",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "他们",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 474,
+        "end": 476,
+        "text": "他们"
+      },
+      "gold_status": "ambiguous",
+      "antecedent_type": "PERSON",
+      "gold_antecedent": null,
+      "gold_evidence": null,
+      "annotation_note": "他们的恋情可指三姐妹或三对恋人，群体边界无法唯一判断；保留歧义。"
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00512",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "她们",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 512,
+        "end": 514,
+        "text": "她们"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "PERSON",
+      "gold_antecedent": {
+        "text": "三位美貌的姐妹",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 372,
+        "end": 379,
+        "text": "三位美貌的姐妹"
+      },
+      "annotation_note": "巫师把她们变石头，受事是人物三姐妹，不能与岩石POI混合。"
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00587",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 587,
+        "end": 589,
+        "text": "这里"
+      },
+      "gold_status": "ambiguous",
+      "antecedent_type": "POI",
+      "gold_antecedent": null,
+      "gold_evidence": null,
+      "annotation_note": "此处已进入缆车售票点叙述，但没有明确售票地点名称，不能只凭最近蓝山强填。"
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00700",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这个",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 700,
+        "end": 702,
+        "text": "这个"
+      },
+      "gold_status": "exophoric",
+      "antecedent_type": "POI",
+      "gold_antecedent": null,
+      "gold_evidence": null,
+      "annotation_note": "这个地底下依赖照片或现场视角，文本中无明确地点边界。"
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00858",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 858,
+        "end": 859,
+        "text": "这"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Jenolan Caves",
+        "entity_id": "S003_POI_037"
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 790,
+        "end": 794,
+        "text": "珍罗兰洞"
+      },
+      "annotation_note": "这是世界上最早发现的洞穴之一，回指当前洞穴。"
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00904",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这个",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 904,
+        "end": 906,
+        "text": "这个"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "Jenolan Caves",
+        "entity_id": "S003_POI_037"
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 790,
+        "end": 794,
+        "text": "珍罗兰洞"
+      },
+      "annotation_note": "这个地下世界指珍罗兰洞整体。"
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00952",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 952,
+        "end": 953,
+        "text": "这"
+      },
+      "gold_status": "exophoric",
+      "antecedent_type": "OBJECT",
+      "gold_antecedent": null,
+      "gold_evidence": null,
+      "annotation_note": "这是一汪水依赖现场或图片，文本无明确的水体先行词。"
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00966",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这些",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 966,
+        "end": 968,
+        "text": "这些"
+      },
+      "gold_status": "exophoric",
+      "antecedent_type": "OBJECT",
+      "gold_antecedent": null,
+      "gold_evidence": null,
+      "annotation_note": "这些岩石为照片指示，前文没有可唯一对应的具体岩石集合。"
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00981",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这里",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 981,
+        "end": 983,
+        "text": "这里"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "凯蒂的宴客厅",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 986,
+        "end": 992,
+        "text": "凯蒂的宴客厅"
+      },
+      "annotation_note": "这里被叫做凯蒂的宴客厅为后指，先行证据实际位于代词之后。"
+    },
+    {
+      "case_id": "CR_S003_VIS_001_00994",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 994,
+        "end": 995,
+        "text": "这"
+      },
+      "gold_status": "exophoric",
+      "antecedent_type": "POI",
+      "gold_antecedent": null,
+      "gold_evidence": null,
+      "annotation_note": "这只是一个石洞为现场指示，不能证明与整个珍罗兰洞同边界。"
+    },
+    {
+      "case_id": "CR_S003_VIS_001_01094",
+      "doc_id": "S003_VIS_001",
+      "pronoun": "这",
+      "span": {
+        "doc_id": "S003_VIS_001",
+        "start": 1094,
+        "end": 1095,
+        "text": "这"
+      },
+      "gold_status": "non_anaphoric",
+      "antecedent_type": "TIME",
+      "gold_antecedent": null,
+      "gold_evidence": null,
+      "annotation_note": "这美妙的一天为当前叙事日的指示，不存在明确命名的先行词。"
+    },
+    {
+      "case_id": "CR_S003_VIS_005_00298",
+      "doc_id": "S003_VIS_005",
+      "pronoun": "此处",
+      "span": {
+        "doc_id": "S003_VIS_005",
+        "start": 298,
+        "end": 300,
+        "text": "此处"
+      },
+      "gold_status": "resolved",
+      "antecedent_type": "POI",
+      "gold_antecedent": {
+        "text": "伊丽莎白女王观景台",
+        "entity_id": "S003_POI_034"
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_005",
+        "start": 248,
+        "end": 257,
+        "text": "伊丽莎白女王观景台"
+      },
+      "annotation_note": "女王在此处观景，回指同句完整观景台名称。"
+    }
+  ]
+}
