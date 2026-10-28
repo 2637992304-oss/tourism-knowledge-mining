@@ -1,0 +1,245 @@
+{
+  "corpus_version": "v1",
+  "documents": [
+    {
+      "doc_id": "S001_OFF_001",
+      "corpus_version": "v1",
+      "ranges": [
+        {
+          "start": 0,
+          "end": 2948,
+          "start_marker": null,
+          "end_marker": "\n新浪微博"
+        }
+      ],
+      "reason": "保留目标景区游览及接驳段，排除其他城市章节、网页推荐和视频信息；未做路线推断"
+    },
+    {
+      "doc_id": "S001_VIS_001",
+      "corpus_version": "v1",
+      "ranges": [
+        {
+          "start": 0,
+          "end": 993,
+          "start_marker": null,
+          "end_marker": null
+        }
+      ],
+      "reason": "保留目标景区游览及接驳段，排除其他城市章节、网页推荐和视频信息；未做路线推断"
+    },
+    {
+      "doc_id": "S001_VIS_002",
+      "corpus_version": "v1",
+      "ranges": [
+        {
+          "start": 0,
+          "end": 1609,
+          "start_marker": null,
+          "end_marker": "\n我们在芦之湖的饭店里面"
+        }
+      ],
+      "reason": "保留目标景区游览及接驳段，排除其他城市章节、网页推荐和视频信息；未做路线推断"
+    },
+    {
+      "doc_id": "S001_VIS_003",
+      "corpus_version": "v1",
+      "ranges": [
+        {
+          "start": 0,
+          "end": 972,
+          "start_marker": null,
+          "end_marker": null
+        }
+      ],
+      "reason": "保留目标景区游览及接驳段，排除其他城市章节、网页推荐和视频信息；未做路线推断"
+    },
+    {
+      "doc_id": "S001_VIS_004",
+      "corpus_version": "v1",
+      "ranges": [
+        {
+          "start": 4797,
+          "end": 7547,
+          "start_marker": "\n箱根\n",
+          "end_marker": "\n、名古屋"
+        }
+      ],
+      "reason": "保留目标景区游览及接驳段，排除其他城市章节、网页推荐和视频信息；未做路线推断"
+    },
+    {
+      "doc_id": "S001_VIS_005",
+      "corpus_version": "v1",
+      "ranges": [
+        {
+          "start": 5749,
+          "end": 6559,
+          "start_marker": "Day 10 箱根",
+          "end_marker": "\n下北泽----"
+        }
+      ],
+      "reason": "保留目标景区游览及接驳段，排除其他城市章节、网页推荐和视频信息；未做路线推断"
+    },
+    {
+      "doc_id": "S002_OFF_001",
+      "corpus_version": "v1",
+      "ranges": [
+        {
+          "start": 0,
+          "end": 5719,
+          "start_marker": null,
+          "end_marker": "\nHiking Videos"
+        }
+      ],
+      "reason": "保留目标景区游览及接驳段，排除其他城市章节、网页推荐和视频信息；未做路线推断"
+    },
+    {
+      "doc_id": "S002_VIS_001",
+      "corpus_version": "v1",
+      "ranges": [
+        {
+          "start": 0,
+          "end": 6529,
+          "start_marker": null,
+          "end_marker": null
+        }
+      ],
+      "reason": "保留目标景区游览及接驳段，排除其他城市章节、网页推荐和视频信息；未做路线推断"
+    },
+    {
+      "doc_id": "S002_VIS_002",
+      "corpus_version": "v1",
+      "ranges": [
+        {
+          "start": 40666,
+          "end": 43027,
+          "start_marker": "优胜美地,游戏中的磅礴场景",
+          "end_marker": "\n下了山后,在这里会偶遇一片草原"
+        }
+      ],
+      "reason": "保留目标景区游览及接驳段，排除其他城市章节、网页推荐和视频信息；未做路线推断"
+    },
+    {
+      "doc_id": "S002_VIS_003",
+      "corpus_version": "v1",
+      "ranges": [
+        {
+          "start": 264,
+          "end": 4736,
+          "start_marker": "1.1. Yosemite",
+          "end_marker": "\n1.2 Mammoth"
+        }
+      ],
+      "reason": "保留目标景区游览及接驳段，排除其他城市章节、网页推荐和视频信息；未做路线推断"
+    },
+    {
+      "doc_id": "S002_VIS_004",
+      "corpus_version": "v1",
+      "ranges": [
+        {
+          "start": 0,
+          "end": 3385,
+          "start_marker": null,
+          "end_marker": null
+        }
+      ],
+      "reason": "保留目标景区游览及接驳段，排除其他城市章节、网页推荐和视频信息；未做路线推断"
+    },
+    {
+      "doc_id": "S002_VIS_005",
+      "corpus_version": "v1",
+      "ranges": [
+        {
+          "start": 0,
+          "end": 2028,
+          "start_marker": null,
+          "end_marker": null
+        }
+      ],
+      "reason": "保留目标景区游览及接驳段，排除其他城市章节、网页推荐和视频信息；未做路线推断"
+    },
+    {
+      "doc_id": "S003_OFF_001",
+      "corpus_version": "v1",
+      "ranges": [
+        {
+          "start": 0,
+          "end": 5132,
+          "start_marker": null,
+          "end_marker": "\n您可能也喜欢"
+        }
+      ],
+      "reason": "保留目标景区游览及接驳段，排除其他城市章节、网页推荐和视频信息；未做路线推断"
+    },
+    {
+      "doc_id": "S003_VIS_001",
+      "corpus_version": "v1",
+      "ranges": [
+        {
+          "start": 0,
+          "end": 1608,
+          "start_marker": null,
+          "end_marker": null
+        }
+      ],
+      "reason": "保留目标景区游览及接驳段，排除其他城市章节、网页推荐和视频信息；未做路线推断"
+    },
+    {
+      "doc_id": "S003_VIS_002",
+      "corpus_version": "v1",
+      "ranges": [
+        {
+          "start": 1850,
+          "end": 2292,
+          "start_marker": "DAY 5 ,",
+          "end_marker": "\nDay 6 ,"
+        }
+      ],
+      "reason": "保留目标景区游览及接驳段，排除其他城市章节、网页推荐和视频信息；未做路线推断"
+    },
+    {
+      "doc_id": "S003_VIS_003",
+      "corpus_version": "v1",
+      "ranges": [
+        {
+          "start": 4461,
+          "end": 4728,
+          "start_marker": "4.1 蓝山的魔咒",
+          "end_marker": "\n4.2 悉尼歌剧院"
+        }
+      ],
+      "reason": "保留目标景区游览及接驳段，排除其他城市章节、网页推荐和视频信息；未做路线推断"
+    },
+    {
+      "doc_id": "S003_VIS_004",
+      "corpus_version": "v1",
+      "ranges": [
+        {
+          "start": 2684,
+          "end": 2895,
+          "start_marker": "【直升机体验】",
+          "end_marker": "\n最划算的是Sydney Harbour Heli Flight"
+        },
+        {
+          "start": 6195,
+          "end": 6418,
+          "start_marker": "Megalong Creek Estate\n",
+          "end_marker": "\nCoolangatta Estate"
+        }
+      ],
+      "reason": "保留目标景区游览及接驳段，排除其他城市章节、网页推荐和视频信息；未做路线推断"
+    },
+    {
+      "doc_id": "S003_VIS_005",
+      "corpus_version": "v1",
+      "ranges": [
+        {
+          "start": 0,
+          "end": 452,
+          "start_marker": null,
+          "end_marker": null
+        }
+      ],
+      "reason": "保留目标景区游览及接驳段，排除其他城市章节、网页推荐和视频信息；未做路线推断"
+    }
+  ]
+}

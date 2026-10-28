@@ -1,0 +1,100 @@
+[
+  {
+    "surface": "Half Doom",
+    "suggested": "Half Dome",
+    "reason": "游记拼写疑似错误，待成员确认，未自动合并",
+    "evidence": [
+      {
+        "doc_id": "S002_VIS_001",
+        "start": 3525,
+        "end": 3534,
+        "text": "Half Doom",
+        "context": "阔的观景台,向山谷望去近在眼前的是酋长岩,山谷尽头是标志性的Half Doom,大约20分钟后我们就离开景区前往Yosemite view"
+      },
+      {
+        "doc_id": "S002_VIS_001",
+        "start": 3852,
+        "end": 3861,
+        "text": "Half Doom",
+        "context": "sta Point,这里是拍日出的好地方,可以从正西方向看到Half Doom,我们到的时间刚刚好,不到10分钟太阳就升起来了。\nYose"
+      },
+      {
+        "doc_id": "S002_VIS_001",
+        "start": 4229,
+        "end": 4238,
+        "text": "Half Doom",
+        "context": "f Dome。\n路边静谧的小湖泊Olmsted Point看Half Doom\n继续前行几英里远,在大约9:00我们就来到了Tenaya "
+      },
+      {
+        "doc_id": "S002_VIS_001",
+        "start": 5751,
+        "end": 5760,
+        "text": "Half Doom",
+        "context": "观景平台,有金属栏杆保护视野开阔,河谷的景色一览无余,远处的Half Doom十分醒目。\n在Columbia Rock平台上观看山谷美景\n"
+      }
+    ]
+  },
+  {
+    "surface": "Glacie Point",
+    "suggested": "Glacier Point",
+    "reason": "拼写疑似错误，未自动合并",
+    "evidence": [
+      {
+        "doc_id": "S002_VIS_005",
+        "start": 199,
+        "end": 211,
+        "text": "Glacie Point",
+        "context": ",否则稍微高处些的路线就尚有积雪不适宜徒步,同时风景很好的的Glacie Point和Tioga Road都尚未开放。此时开车+主要观景点打卡拍"
+      }
+    ]
+  },
+  {
+    "surface": "硫磺谷",
+    "suggested": "大涌谷",
+    "reason": "作者描述性称呼，不能仅据相似语义自动合并",
+    "evidence": [
+      {
+        "doc_id": "S001_VIS_003",
+        "start": 327,
+        "end": 330,
+        "text": "硫磺谷",
+        "context": "突然就可以看到左手方向的地貌陡然改变,浓烟滚滚,往下看原来是硫磺谷,谷里遍地都是燃烧着浓烟的硫磺洞,那情景恍惚让人置身于人间地"
+      }
+    ]
+  },
+  {
+    "surface": "水中神社",
+    "suggested": "和平鸟居 / 箱根神社",
+    "reason": "建筑与神社整体有边界歧义，待确认",
+    "evidence": [
+      {
+        "doc_id": "S001_VIS_003",
+        "start": 554,
+        "end": 558,
+        "text": "水中神社",
+        "context": "景,当天天气不太好,在箱根町港没能看到富士山.在元箱根港看了水中神社,这个拍照打卡点人气太旺,排队排到半山腰.\n回 回程到桃源台"
+      },
+      {
+        "doc_id": "S001_VIS_003",
+        "start": 953,
+        "end": 957,
+        "text": "水中神社",
+        "context": "美,无遮挡看起来就格外壮观.在快到元箱根港时,拍到了富士山和水中神社的二合一完美组合!不虚此行啊!"
+      }
+    ]
+  },
+  {
+    "surface": "卡图姆巴",
+    "suggested": "Katoomba",
+    "reason": "疑似异译名，保留在待确认清单",
+    "evidence": [
+      {
+        "doc_id": "S003_OFF_001",
+        "start": 4668,
+        "end": 4672,
+        "text": "卡图姆巴",
+        "context": "?\n是的,您可以从中央车站乘坐两小时的特快列车前往卡通巴。从卡图姆巴出发,您可以搭乘公共巴士前往各个热门景点。或者,您也可以购买"
+      }
+    ]
+  }
+]
