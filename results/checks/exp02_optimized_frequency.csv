@@ -1,0 +1,382 @@
+﻿entity_id,scenic_id,entity_type,canonical_name,scope,text_type,count
+S001_POI_001,S001,POI,箱根,regional,official_route,20
+S001_POI_001,S001,POI,箱根,regional,visitor_diary,40
+S001_POI_002,S001,POI,大涌谷,inside,official_route,16
+S001_POI_002,S001,POI,大涌谷,inside,visitor_diary,36
+S001_POI_003,S001,POI,芦之湖,inside,official_route,6
+S001_POI_003,S001,POI,芦之湖,inside,visitor_diary,20
+S001_POI_004,S001,POI,富士山,external,official_route,6
+S001_POI_004,S001,POI,富士山,external,visitor_diary,22
+S001_POI_005,S001,POI,箱根汤本,inside,official_route,9
+S001_POI_005,S001,POI,箱根汤本,inside,visitor_diary,7
+S001_POI_006,S001,POI,新宿,external,official_route,3
+S001_POI_006,S001,POI,新宿,external,visitor_diary,2
+S001_POI_007,S001,POI,箱根雕刻森林美术馆,inside,official_route,5
+S001_POI_008,S001,POI,强罗,inside,official_route,3
+S001_POI_008,S001,POI,强罗,inside,visitor_diary,2
+S001_POI_009,S001,POI,早云山,inside,official_route,1
+S001_POI_009,S001,POI,早云山,inside,visitor_diary,2
+S001_POI_010,S001,POI,桃源台,inside,official_route,1
+S001_POI_010,S001,POI,桃源台,inside,visitor_diary,7
+S001_POI_011,S001,POI,桃源台港,inside,official_route,1
+S001_POI_011,S001,POI,桃源台港,inside,visitor_diary,1
+S001_POI_012,S001,POI,箱根町港,inside,official_route,1
+S001_POI_012,S001,POI,箱根町港,inside,visitor_diary,3
+S001_POI_013,S001,POI,元箱根港,inside,official_route,3
+S001_POI_013,S001,POI,元箱根港,inside,visitor_diary,7
+S001_POI_014,S001,POI,箱根神社,inside,official_route,4
+S001_POI_014,S001,POI,箱根神社,inside,visitor_diary,1
+S001_POI_015,S001,POI,和平鸟居,inside,official_route,1
+S001_POI_015,S001,POI,和平鸟居,inside,visitor_diary,1
+S001_POI_016,S001,POI,小田原,surrounding,official_route,2
+S001_POI_016,S001,POI,小田原,surrounding,visitor_diary,7
+S001_POI_017,S001,POI,雕刻森林站,inside,official_route,1
+S001_POI_018,S001,POI,箱根汤本站前商店街,inside,official_route,1
+S001_POI_019,S001,POI,毕加索馆,inside,official_route,1
+S001_POI_020,S001,POI,泡泡城堡,inside,official_route,1
+S001_POI_021,S001,POI,网之森林,inside,official_route,1
+S001_POI_022,S001,POI,大涌谷厨房,inside,official_route,2
+S001_POI_023,S001,POI,黑蛋馆,inside,official_route,2
+S001_POI_023,S001,POI,黑蛋馆,inside,visitor_diary,1
+S001_POI_024,S001,POI,箱根地质博物馆,inside,official_route,3
+S001_POI_025,S001,POI,箱根登山名产店 汤本店,inside,official_route,3
+S001_POI_026,S001,POI,姥子站,inside,visitor_diary,1
+S001_POI_027,S001,POI,金太郎展望台,inside,visitor_diary,1
+S001_POI_028,S001,POI,仙石原,inside,visitor_diary,2
+S001_POI_029,S001,POI,宫之下,inside,visitor_diary,1
+S001_POI_030,S001,POI,芦之湖花织酒店,inside,visitor_diary,1
+S001_POI_031,S001,POI,忍野八海,external,visitor_diary,9
+S001_POI_032,S001,POI,早云寺,inside,visitor_diary,1
+S001_POI_033,S001,POI,千条瀑,inside,visitor_diary,1
+S001_POI_034,S001,POI,九头龙神社,inside,visitor_diary,1
+S001_POI_035,S001,POI,箱根汤本温泉,inside,visitor_diary,1
+S001_POI_036,S001,POI,箱根平和公园,external,visitor_diary,11
+S001_POI_037,S001,POI,阎魔台,inside,visitor_diary,1
+S001_POI_038,S001,POI,奥之院,external,visitor_diary,1
+S001_POI_039,S001,POI,三十三观音堂,external,visitor_diary,2
+S001_POI_040,S001,POI,桃源台展观餐厅,inside,visitor_diary,1
+S001_POI_041,S001,POI,箱根町,inside,visitor_diary,2
+S001_POI_042,S001,POI,元箱根,inside,official_route,1
+S001_POI_042,S001,POI,元箱根,inside,visitor_diary,1
+S001_TIME_001,S001,TIME,1.5小时,not_applicable,official_route,2
+S001_TIME_002,S001,TIME,1日,not_applicable,official_route,1
+S001_TIME_003,S001,TIME,7:30,not_applicable,official_route,1
+S001_TIME_004,S001,TIME,9:20,not_applicable,official_route,1
+S001_TIME_005,S001,TIME,9:25,not_applicable,official_route,1
+S001_TIME_006,S001,TIME,10:00,not_applicable,official_route,1
+S001_TIME_007,S001,TIME,11:20,not_applicable,official_route,1
+S001_TIME_008,S001,TIME,11:45,not_applicable,official_route,1
+S001_TIME_009,S001,TIME,1分钟,not_applicable,official_route,2
+S001_TIME_010,S001,TIME,10分钟,not_applicable,official_route,2
+S001_TIME_011,S001,TIME,12:55,not_applicable,official_route,1
+S001_TIME_012,S001,TIME,14:20,not_applicable,official_route,1
+S001_TIME_013,S001,TIME,15:40,not_applicable,official_route,1
+S001_TIME_014,S001,TIME,40分钟,not_applicable,official_route,1
+S001_TIME_015,S001,TIME,傍晚,not_applicable,official_route,1
+S001_TIME_016,S001,TIME,17:00,not_applicable,official_route,1
+S001_TIME_017,S001,TIME,21:00,not_applicable,official_route,1
+S001_TIME_018,S001,TIME,1天,not_applicable,official_route,1
+S001_TIME_019,S001,TIME,一天,not_applicable,official_route,1
+S001_TIME_019,S001,TIME,一天,not_applicable,visitor_diary,1
+S001_TIME_020,S001,TIME,第1天,not_applicable,visitor_diary,1
+S001_TIME_021,S001,TIME,1小时,not_applicable,visitor_diary,1
+S001_TIME_022,S001,TIME,一小时,not_applicable,visitor_diary,1
+S001_TIME_023,S001,TIME,下午3点,not_applicable,visitor_diary,1
+S001_TIME_024,S001,TIME,3分钟,not_applicable,visitor_diary,1
+S001_TIME_025,S001,TIME,第二天,not_applicable,visitor_diary,2
+S001_TIME_026,S001,TIME,晚上6点,not_applicable,visitor_diary,1
+S001_TIME_027,S001,TIME,早上,not_applicable,visitor_diary,1
+S001_TIME_028,S001,TIME,Day 10,not_applicable,visitor_diary,1
+S001_TIME_029,S001,TIME,8:00,not_applicable,visitor_diary,1
+S001_TIME_030,S001,TIME,20分钟,not_applicable,visitor_diary,1
+S001_TIME_031,S001,TIME,25-40分钟,not_applicable,visitor_diary,1
+S001_TIME_032,S001,TIME,一个小时,not_applicable,visitor_diary,1
+S001_TIME_033,S001,TIME,30分钟,not_applicable,visitor_diary,1
+S001_TIME_034,S001,TIME,三四点,not_applicable,visitor_diary,1
+S001_TIME_035,S001,TIME,50分钟,not_applicable,visitor_diary,1
+S001_TIME_036,S001,TIME,一个半小时,not_applicable,visitor_diary,1
+S001_TRANSPORT_001,S001,TRANSPORT,步行,not_applicable,official_route,4
+S001_TRANSPORT_001,S001,TRANSPORT,步行,not_applicable,visitor_diary,4
+S001_TRANSPORT_002,S001,TRANSPORT,巴士,not_applicable,official_route,1
+S001_TRANSPORT_002,S001,TRANSPORT,巴士,not_applicable,visitor_diary,3
+S001_TRANSPORT_003,S001,TRANSPORT,列车,not_applicable,official_route,4
+S001_TRANSPORT_003,S001,TRANSPORT,列车,not_applicable,visitor_diary,1
+S001_TRANSPORT_004,S001,TRANSPORT,自驾,not_applicable,visitor_diary,2
+S001_TRANSPORT_005,S001,TRANSPORT,缆车,not_applicable,official_route,3
+S001_TRANSPORT_005,S001,TRANSPORT,缆车,not_applicable,visitor_diary,9
+S001_TRANSPORT_006,S001,TRANSPORT,游船,not_applicable,official_route,1
+S001_TRANSPORT_006,S001,TRANSPORT,游船,not_applicable,visitor_diary,6
+S001_TRANSPORT_007,S001,TRANSPORT,出租车,not_applicable,visitor_diary,1
+S001_TRANSPORT_010,S001,TRANSPORT,箱根登山电车,not_applicable,official_route,6
+S001_TRANSPORT_010,S001,TRANSPORT,箱根登山电车,not_applicable,visitor_diary,3
+S001_TRANSPORT_011,S001,TRANSPORT,箱根登山缆车,not_applicable,official_route,2
+S001_TRANSPORT_011,S001,TRANSPORT,箱根登山缆车,not_applicable,visitor_diary,1
+S001_TRANSPORT_012,S001,TRANSPORT,箱根空中缆车,not_applicable,official_route,5
+S001_TRANSPORT_012,S001,TRANSPORT,箱根空中缆车,not_applicable,visitor_diary,3
+S001_TRANSPORT_013,S001,TRANSPORT,箱根登山巴士,not_applicable,official_route,2
+S001_TRANSPORT_014,S001,TRANSPORT,箱根海贼观光船,not_applicable,official_route,5
+S001_TRANSPORT_014,S001,TRANSPORT,箱根海贼观光船,not_applicable,visitor_diary,15
+S001_TRANSPORT_015,S001,TRANSPORT,浪漫特快,not_applicable,official_route,5
+S001_TRANSPORT_015,S001,TRANSPORT,浪漫特快,not_applicable,visitor_diary,2
+S001_TRANSPORT_016,S001,TRANSPORT,小田急线,not_applicable,visitor_diary,7
+S002_POI_001,S002,POI,优胜美地国家公园,regional,official_route,2
+S002_POI_001,S002,POI,优胜美地国家公园,regional,visitor_diary,82
+S002_POI_002,S002,POI,Yosemite Valley,inside,official_route,10
+S002_POI_002,S002,POI,Yosemite Valley,inside,visitor_diary,22
+S002_POI_003,S002,POI,El Capitan,inside,official_route,4
+S002_POI_003,S002,POI,El Capitan,inside,visitor_diary,8
+S002_POI_004,S002,POI,Half Dome,inside,visitor_diary,43
+S002_POI_005,S002,POI,Glacier Point,inside,visitor_diary,9
+S002_POI_006,S002,POI,Tunnel View,inside,visitor_diary,13
+S002_POI_007,S002,POI,Bridalveil Fall,inside,official_route,3
+S002_POI_007,S002,POI,Bridalveil Fall,inside,visitor_diary,14
+S002_POI_008,S002,POI,Yosemite Falls,inside,official_route,2
+S002_POI_008,S002,POI,Yosemite Falls,inside,visitor_diary,6
+S002_POI_009,S002,POI,Lower Yosemite Fall,inside,official_route,3
+S002_POI_009,S002,POI,Lower Yosemite Fall,inside,visitor_diary,2
+S002_POI_010,S002,POI,Upper Yosemite Fall,inside,visitor_diary,6
+S002_POI_011,S002,POI,Valley Loop Trail,inside,official_route,7
+S002_POI_012,S002,POI,El Capitan Bridge,inside,official_route,4
+S002_POI_012,S002,POI,El Capitan Bridge,inside,visitor_diary,1
+S002_POI_013,S002,POI,Merced River,inside,official_route,4
+S002_POI_013,S002,POI,Merced River,inside,visitor_diary,2
+S002_POI_014,S002,POI,Sentinel Rock,inside,official_route,1
+S002_POI_015,S002,POI,Cathedral Rocks,inside,official_route,1
+S002_POI_016,S002,POI,Three Brothers,inside,official_route,2
+S002_POI_017,S002,POI,Camp 4,inside,official_route,1
+S002_POI_018,S002,POI,Yosemite Village,inside,official_route,3
+S002_POI_018,S002,POI,Yosemite Village,inside,visitor_diary,1
+S002_POI_019,S002,POI,Lower Yosemite Fall Trail,inside,official_route,4
+S002_POI_019,S002,POI,Lower Yosemite Fall Trail,inside,visitor_diary,2
+S002_POI_020,S002,POI,Bridalveil Fall Trail,inside,official_route,1
+S002_POI_021,S002,POI,El Capitan Meadow,inside,official_route,1
+S002_POI_022,S002,POI,Four Mile Trail,inside,official_route,3
+S002_POI_022,S002,POI,Four Mile Trail,inside,visitor_diary,1
+S002_POI_023,S002,POI,Snow Creek Trail,inside,official_route,2
+S002_POI_024,S002,POI,Half Dome Trail,inside,official_route,2
+S002_POI_025,S002,POI,Mirror Lake,inside,visitor_diary,13
+S002_POI_026,S002,POI,Mirror Lake Loop,inside,official_route,1
+S002_POI_026,S002,POI,Mirror Lake Loop,inside,visitor_diary,1
+S002_POI_027,S002,POI,Cook's Meadow Loop,inside,official_route,1
+S002_POI_028,S002,POI,Vernal Fall,inside,visitor_diary,1
+S002_POI_029,S002,POI,Nevada Fall,inside,visitor_diary,3
+S002_POI_030,S002,POI,Vernal Fall and Nevada Fall Trails,inside,official_route,2
+S002_POI_031,S002,POI,Yosemite Falls Trail,inside,official_route,1
+S002_POI_032,S002,POI,Mist Trail,inside,visitor_diary,9
+S002_POI_033,S002,POI,John Muir Trail,inside,visitor_diary,6
+S002_POI_035,S002,POI,Vernal Fall Footbridge,inside,visitor_diary,1
+S002_POI_036,S002,POI,Columbia Rock,inside,visitor_diary,2
+S002_POI_037,S002,POI,Horsetail Fall,inside,visitor_diary,6
+S002_POI_038,S002,POI,Tioga Road,inside,visitor_diary,9
+S002_POI_039,S002,POI,Glacier Point Road,inside,visitor_diary,3
+S002_POI_040,S002,POI,Tenaya Lake,inside,visitor_diary,7
+S002_POI_041,S002,POI,Olmsted Point,inside,visitor_diary,4
+S002_POI_042,S002,POI,Valley View,inside,visitor_diary,1
+S002_POI_043,S002,POI,Cathedral Beach,inside,visitor_diary,2
+S002_POI_044,S002,POI,Sentinel Beach,inside,visitor_diary,5
+S002_POI_045,S002,POI,Swinging Bridge,inside,visitor_diary,4
+S002_POI_046,S002,POI,Wawona Road,inside,visitor_diary,1
+S002_POI_047,S002,POI,Southside Drive,inside,visitor_diary,1
+S002_POI_048,S002,POI,Yosemite Valley Vista Point,inside,visitor_diary,2
+S002_POI_049,S002,POI,Big Oak Flat Road,inside,visitor_diary,1
+S002_POI_050,S002,POI,May Lake,inside,visitor_diary,1
+S002_POI_051,S002,POI,Yosemite Creek Picnic Area,inside,visitor_diary,1
+S002_POI_052,S002,POI,Curry Village,inside,visitor_diary,2
+S002_POI_053,S002,POI,Yosemite Valley Lodge,inside,visitor_diary,2
+S002_POI_054,S002,POI,The Ahwahnee,inside,visitor_diary,2
+S002_POI_055,S002,POI,Wawona Hotel,inside,visitor_diary,1
+S002_POI_056,S002,POI,High Sierra Camps,inside,visitor_diary,1
+S002_POI_057,S002,POI,Tuolumne Meadows Lodge,inside,visitor_diary,1
+S002_POI_058,S002,POI,White Wolf Lodge,inside,visitor_diary,1
+S002_POI_059,S002,POI,Clouds Rest,inside,visitor_diary,4
+S002_POI_060,S002,POI,Clark Point,inside,visitor_diary,1
+S002_POI_061,S002,POI,Little Yosemite Valley,inside,visitor_diary,1
+S002_POI_062,S002,POI,Sub Dome,inside,visitor_diary,3
+S002_POI_063,S002,POI,Sunrise Trail,inside,visitor_diary,1
+S002_POI_064,S002,POI,Cathedral Lake,inside,visitor_diary,1
+S002_POI_065,S002,POI,Upper Cathedral Lake,inside,visitor_diary,3
+S002_POI_066,S002,POI,Lower Cathedral Lake,inside,visitor_diary,3
+S002_POI_067,S002,POI,Cathedral Peak,inside,visitor_diary,2
+S002_POI_068,S002,POI,Mariposa Grove,inside,visitor_diary,3
+S002_POI_069,S002,POI,Hetch Hetchy,inside,visitor_diary,1
+S002_POI_070,S002,POI,El Portal,surrounding,visitor_diary,2
+S002_POI_071,S002,POI,Yosemite View Lodge,surrounding,visitor_diary,5
+S002_POI_072,S002,POI,Yosemite Valley Chapel,inside,visitor_diary,1
+S002_POI_073,S002,POI,弗雷斯诺,external,visitor_diary,2
+S002_POI_074,S002,POI,旧金山,external,visitor_diary,5
+S002_POI_075,S002,POI,洛杉矶,external,visitor_diary,4
+S002_POI_076,S002,POI,Merced,external,visitor_diary,11
+S002_TIME_001,S002,TIME,5-7小时,not_applicable,official_route,1
+S002_TIME_002,S002,TIME,2.5-3.5小时,not_applicable,official_route,1
+S002_TIME_003,S002,TIME,6个半小时,not_applicable,visitor_diary,1
+S002_TIME_004,S002,TIME,7个半小时,not_applicable,visitor_diary,1
+S002_TIME_005,S002,TIME,6点,not_applicable,visitor_diary,6
+S002_TIME_006,S002,TIME,下午3点,not_applicable,visitor_diary,2
+S002_TIME_007,S002,TIME,第一天,not_applicable,visitor_diary,4
+S002_TIME_008,S002,TIME,一天,not_applicable,visitor_diary,6
+S002_TIME_009,S002,TIME,三天,not_applicable,visitor_diary,1
+S002_TIME_010,S002,TIME,晚上,not_applicable,visitor_diary,6
+S002_TIME_011,S002,TIME,下午,not_applicable,visitor_diary,5
+S002_TIME_012,S002,TIME,两天,not_applicable,visitor_diary,4
+S002_TIME_013,S002,TIME,24小时,not_applicable,visitor_diary,2
+S002_TIME_014,S002,TIME,三两天,not_applicable,visitor_diary,1
+S002_TIME_015,S002,TIME,6:00,not_applicable,visitor_diary,1
+S002_TIME_016,S002,TIME,16点,not_applicable,visitor_diary,1
+S002_TIME_017,S002,TIME,7月18日,not_applicable,visitor_diary,1
+S002_TIME_018,S002,TIME,早晨8:45,not_applicable,visitor_diary,1
+S002_TIME_019,S002,TIME,下午2点半,not_applicable,visitor_diary,1
+S002_TIME_020,S002,TIME,傍晚,not_applicable,visitor_diary,2
+S002_TIME_021,S002,TIME,7月19日,not_applicable,visitor_diary,1
+S002_TIME_022,S002,TIME,早晨3:30,not_applicable,visitor_diary,1
+S002_TIME_023,S002,TIME,4:00,not_applicable,visitor_diary,1
+S002_TIME_024,S002,TIME,5:45,not_applicable,visitor_diary,1
+S002_TIME_025,S002,TIME,10分钟,not_applicable,visitor_diary,3
+S002_TIME_026,S002,TIME,6点半,not_applicable,visitor_diary,1
+S002_TIME_027,S002,TIME,早上,not_applicable,visitor_diary,2
+S002_TIME_028,S002,TIME,7点,not_applicable,visitor_diary,1
+S002_TIME_029,S002,TIME,5个半小时,not_applicable,visitor_diary,1
+S002_TIME_030,S002,TIME,12:30,not_applicable,visitor_diary,1
+S002_TIME_031,S002,TIME,14:40,not_applicable,visitor_diary,1
+S002_TIME_032,S002,TIME,20分钟,not_applicable,visitor_diary,1
+S002_TIME_033,S002,TIME,7月20日,not_applicable,visitor_diary,1
+S002_TIME_034,S002,TIME,上午,not_applicable,visitor_diary,4
+S002_TIME_035,S002,TIME,早晨5:20,not_applicable,visitor_diary,1
+S002_TIME_036,S002,TIME,5:40,not_applicable,visitor_diary,1
+S002_TIME_037,S002,TIME,9:00,not_applicable,visitor_diary,1
+S002_TIME_038,S002,TIME,3个小时,not_applicable,visitor_diary,1
+S002_TIME_039,S002,TIME,中午12点,not_applicable,visitor_diary,1
+S002_TIME_040,S002,TIME,12:40,not_applicable,visitor_diary,1
+S002_TIME_041,S002,TIME,13:40,not_applicable,visitor_diary,1
+S002_TIME_042,S002,TIME,下午4点,not_applicable,visitor_diary,3
+S002_TIME_043,S002,TIME,7月21日,not_applicable,visitor_diary,1
+S002_TIME_044,S002,TIME,早晨5:30,not_applicable,visitor_diary,1
+S002_TIME_045,S002,TIME,6:30,not_applicable,visitor_diary,1
+S002_TIME_046,S002,TIME,8:40,not_applicable,visitor_diary,1
+S002_TIME_047,S002,TIME,9:20,not_applicable,visitor_diary,1
+S002_TIME_048,S002,TIME,11:15,not_applicable,visitor_diary,1
+S002_TIME_049,S002,TIME,4:40,not_applicable,visitor_diary,1
+S002_TIME_050,S002,TIME,晚上6点,not_applicable,visitor_diary,1
+S002_TIME_051,S002,TIME,7月22日,not_applicable,visitor_diary,1
+S002_TIME_052,S002,TIME,早晨7:30,not_applicable,visitor_diary,1
+S002_TIME_053,S002,TIME,8:00,not_applicable,visitor_diary,1
+S002_TIME_054,S002,TIME,8:30,not_applicable,visitor_diary,1
+S002_TIME_055,S002,TIME,下午1点,not_applicable,visitor_diary,1
+S002_TIME_056,S002,TIME,2-3小时,not_applicable,visitor_diary,1
+S002_TIME_057,S002,TIME,30分钟,not_applicable,visitor_diary,1
+S002_TIME_058,S002,TIME,4月10日,not_applicable,visitor_diary,1
+S002_TIME_059,S002,TIME,4月25日,not_applicable,visitor_diary,1
+S002_TIME_060,S002,TIME,2天,not_applicable,visitor_diary,2
+S002_TIME_061,S002,TIME,10天,not_applicable,visitor_diary,1
+S002_TIME_062,S002,TIME,五到十分钟,not_applicable,visitor_diary,1
+S002_TIME_063,S002,TIME,3.5小时,not_applicable,visitor_diary,1
+S002_TIME_064,S002,TIME,3天,not_applicable,visitor_diary,2
+S002_TIME_065,S002,TIME,1.5天,not_applicable,visitor_diary,1
+S002_TIME_066,S002,TIME,0.5天,not_applicable,visitor_diary,1
+S002_TIME_067,S002,TIME,四点,not_applicable,visitor_diary,1
+S002_TIME_068,S002,TIME,2小时,not_applicable,visitor_diary,1
+S002_TIME_069,S002,TIME,一小时,not_applicable,visitor_diary,1
+S002_TRANSPORT_001,S002,TRANSPORT,步行,not_applicable,official_route,10
+S002_TRANSPORT_001,S002,TRANSPORT,步行,not_applicable,visitor_diary,27
+S002_TRANSPORT_002,S002,TRANSPORT,巴士,not_applicable,official_route,5
+S002_TRANSPORT_002,S002,TRANSPORT,巴士,not_applicable,visitor_diary,3
+S002_TRANSPORT_004,S002,TRANSPORT,自驾,not_applicable,official_route,1
+S002_TRANSPORT_004,S002,TRANSPORT,自驾,not_applicable,visitor_diary,14
+S002_TRANSPORT_008,S002,TRANSPORT,自行车,not_applicable,official_route,3
+S002_TRANSPORT_008,S002,TRANSPORT,自行车,not_applicable,visitor_diary,1
+S003_POI_001,S003,POI,蓝山国家公园,regional,official_route,28
+S003_POI_001,S003,POI,蓝山国家公园,regional,visitor_diary,32
+S003_POI_002,S003,POI,三姐妹峰,inside,official_route,5
+S003_POI_002,S003,POI,三姐妹峰,inside,visitor_diary,5
+S003_POI_003,S003,POI,Scenic World,surrounding,official_route,10
+S003_POI_004,S003,POI,Katoomba,surrounding,official_route,20
+S003_POI_004,S003,POI,Katoomba,surrounding,visitor_diary,1
+S003_POI_005,S003,POI,Leura,surrounding,official_route,32
+S003_POI_006,S003,POI,Wentworth Falls,surrounding,official_route,4
+S003_POI_007,S003,POI,温特沃斯瀑布,inside,official_route,4
+S003_POI_008,S003,POI,Grand Cliff Top Walk,inside,official_route,3
+S003_POI_009,S003,POI,悉尼,external,official_route,12
+S003_POI_009,S003,POI,悉尼,external,visitor_diary,14
+S003_POI_010,S003,POI,Gordon Falls,inside,official_route,1
+S003_POI_011,S003,POI,Buttenshaw Bridge,inside,official_route,1
+S003_POI_012,S003,POI,Jamison Lookout,inside,official_route,2
+S003_POI_013,S003,POI,Jamison Valley,inside,official_route,4
+S003_POI_014,S003,POI,Wentworth Falls Track,inside,official_route,2
+S003_POI_015,S003,POI,Fletchers Lookout,inside,official_route,2
+S003_POI_016,S003,POI,Blackheath,surrounding,official_route,10
+S003_POI_017,S003,POI,埃文斯瞭望台,inside,official_route,3
+S003_POI_018,S003,POI,格罗斯谷,inside,official_route,1
+S003_POI_019,S003,POI,大峡谷步道,inside,official_route,4
+S003_POI_020,S003,POI,戈维茨跳跃瞭望台,inside,official_route,3
+S003_POI_021,S003,POI,新娘面纱瀑布,inside,official_route,1
+S003_POI_022,S003,POI,布道石,inside,official_route,1
+S003_POI_023,S003,POI,Beyond Skyway,surrounding,official_route,4
+S003_POI_024,S003,POI,卡通巴瀑布自然保护区夜间灯光步道,surrounding,official_route,3
+S003_POI_025,S003,POI,孤儿岩,inside,official_route,1
+S003_POI_026,S003,POI,山地文化啤酒公司,surrounding,official_route,4
+S003_POI_027,S003,POI,黑凤头鹦鹉面包店,surrounding,official_route,4
+S003_POI_028,S003,POI,Josophan's Fine Chocolates,surrounding,official_route,2
+S003_POI_029,S003,POI,Kate Soady Gallery,surrounding,official_route,2
+S003_POI_030,S003,POI,劳森,surrounding,official_route,1
+S003_POI_031,S003,POI,斯普林伍德,surrounding,official_route,1
+S003_POI_032,S003,POI,Faulconbridge,surrounding,official_route,2
+S003_POI_033,S003,POI,悉尼中央火车站,external,official_route,4
+S003_POI_033,S003,POI,悉尼中央火车站,external,visitor_diary,2
+S003_POI_034,S003,POI,伊丽莎白女王观景台,surrounding,visitor_diary,4
+S003_POI_035,S003,POI,Prince Henry Cliff Walk,inside,visitor_diary,2
+S003_POI_036,S003,POI,亨利王子悬崖,inside,visitor_diary,1
+S003_POI_037,S003,POI,Jenolan Caves,surrounding,visitor_diary,4
+S003_POI_038,S003,POI,Megalong Valley,surrounding,visitor_diary,1
+S003_POI_039,S003,POI,Megalong Creek Estate,surrounding,visitor_diary,1
+S003_POI_040,S003,POI,帕拉马塔,external,official_route,2
+S003_POI_041,S003,POI,悉尼黑镇,external,official_route,2
+S003_POI_042,S003,POI,彭里斯,external,official_route,1
+S003_POI_043,S003,POI,埃姆平原,external,official_route,1
+S003_POI_044,S003,POI,斯特拉斯菲尔德,external,official_route,1
+S003_POI_045,S003,POI,蓝山文化中心,surrounding,official_route,1
+S003_POI_046,S003,POI,诺曼·林赛画廊及博物馆,surrounding,official_route,1
+S003_POI_047,S003,POI,维多利亚山博物馆,surrounding,official_route,1
+S003_POI_048,S003,POI,伍德福德学院,surrounding,official_route,1
+S003_POI_049,S003,POI,莉莲菲尔斯日间水疗中心,surrounding,official_route,1
+S003_POI_050,S003,POI,昔日美人珍藏茶壶博物馆和茶室,surrounding,official_route,1
+S003_POI_051,S003,POI,梅加隆谷茶室,surrounding,official_route,1
+S003_TIME_001,S003,TIME,2天,not_applicable,official_route,5
+S003_TIME_002,S003,TIME,2小时,not_applicable,official_route,1
+S003_TIME_003,S003,TIME,Day 1,not_applicable,official_route,1
+S003_TIME_004,S003,TIME,Day 2,not_applicable,official_route,1
+S003_TIME_005,S003,TIME,2晚,not_applicable,official_route,1
+S003_TIME_006,S003,TIME,一日,not_applicable,official_route,6
+S003_TIME_006,S003,TIME,一日,not_applicable,visitor_diary,1
+S003_TIME_007,S003,TIME,90分钟,not_applicable,official_route,4
+S003_TIME_008,S003,TIME,两小时,not_applicable,official_route,4
+S003_TIME_009,S003,TIME,夜间,not_applicable,official_route,2
+S003_TIME_010,S003,TIME,一天,not_applicable,official_route,4
+S003_TIME_010,S003,TIME,一天,not_applicable,visitor_diary,3
+S003_TIME_011,S003,TIME,黄昏,not_applicable,official_route,2
+S003_TIME_012,S003,TIME,早上,not_applicable,official_route,2
+S003_TIME_013,S003,TIME,10分钟,not_applicable,official_route,1
+S003_TIME_014,S003,TIME,下午,not_applicable,official_route,1
+S003_TIME_015,S003,TIME,晚上,not_applicable,official_route,1
+S003_TIME_016,S003,TIME,上午9点,not_applicable,official_route,2
+S003_TIME_017,S003,TIME,下午5点,not_applicable,official_route,2
+S003_TIME_018,S003,TIME,两天,not_applicable,official_route,1
+S003_TIME_019,S003,TIME,三天,not_applicable,official_route,2
+S003_TIME_020,S003,TIME,四小时,not_applicable,official_route,1
+S003_TIME_021,S003,TIME,第二天,not_applicable,visitor_diary,1
+S003_TIME_022,S003,TIME,中午,not_applicable,visitor_diary,1
+S003_TIME_024,S003,TIME,3个小时,not_applicable,visitor_diary,1
+S003_TIME_025,S003,TIME,Day 5,not_applicable,visitor_diary,1
+S003_TIME_026,S003,TIME,45分钟,not_applicable,visitor_diary,1
+S003_TRANSPORT_001,S003,TRANSPORT,步行,not_applicable,official_route,11
+S003_TRANSPORT_001,S003,TRANSPORT,步行,not_applicable,visitor_diary,1
+S003_TRANSPORT_002,S003,TRANSPORT,巴士,not_applicable,official_route,7
+S003_TRANSPORT_002,S003,TRANSPORT,巴士,not_applicable,visitor_diary,2
+S003_TRANSPORT_003,S003,TRANSPORT,列车,not_applicable,official_route,6
+S003_TRANSPORT_004,S003,TRANSPORT,自驾,not_applicable,official_route,13
+S003_TRANSPORT_004,S003,TRANSPORT,自驾,not_applicable,visitor_diary,4
+S003_TRANSPORT_005,S003,TRANSPORT,缆车,not_applicable,official_route,3
+S003_TRANSPORT_005,S003,TRANSPORT,缆车,not_applicable,visitor_diary,6
+S003_TRANSPORT_008,S003,TRANSPORT,自行车,not_applicable,official_route,3
+S003_TRANSPORT_009,S003,TRANSPORT,直升机,not_applicable,visitor_diary,2
+S003_TRANSPORT_017,S003,TRANSPORT,高空缆车,not_applicable,official_route,1
+S003_TRANSPORT_018,S003,TRANSPORT,蓝山探索巴士,not_applicable,official_route,2
+S003_TRANSPORT_019,S003,TRANSPORT,Blue Mountains Line,not_applicable,visitor_diary,1

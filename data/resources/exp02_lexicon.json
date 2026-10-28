@@ -1,0 +1,2199 @@
+{
+  "resource_version": "exp02-v1",
+  "annotation_origin": "基于v1语料逐篇阅读，AI辅助整理，组员独立复核待完成",
+  "poi_entries": [
+    {
+      "entity_id": "S001_POI_001",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "箱根",
+      "aliases": [
+        "Hakone"
+      ],
+      "scope": "regional",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_002",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "大涌谷",
+      "aliases": [
+        "箱根大涌谷",
+        "大地狱"
+      ],
+      "scope": "inside",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_003",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "芦之湖",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_004",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "富士山",
+      "aliases": [],
+      "scope": "external",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_005",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "箱根汤本",
+      "aliases": [
+        "箱根汤本站",
+        "箱根 汤本",
+        "Hakone-Yomoto"
+      ],
+      "scope": "inside",
+      "baseline": true,
+      "note": "箱根汤本区域与车站暂共用入口节点；精细站区粒度可后续拆分，拆分时须保留ID映射。"
+    },
+    {
+      "entity_id": "S001_POI_006",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "新宿",
+      "aliases": [
+        "新宿站"
+      ],
+      "scope": "external",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_007",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "箱根雕刻森林美术馆",
+      "aliases": [
+        "雕刻森林美术馆"
+      ],
+      "scope": "inside",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_008",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "强罗",
+      "aliases": [
+        "强罗站"
+      ],
+      "scope": "inside",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_009",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "早云山",
+      "aliases": [
+        "早云山站"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_010",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "桃源台",
+      "aliases": [
+        "桃源台站"
+      ],
+      "scope": "inside",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_011",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "桃源台港",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_012",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "箱根町港",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_013",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "元箱根港",
+      "aliases": [
+        "Motohakone-ko"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_014",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "箱根神社",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_015",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "和平鸟居",
+      "aliases": [
+        "海上鸟居"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_016",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "小田原",
+      "aliases": [
+        "小田原站",
+        "Odawara"
+      ],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_017",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "雕刻森林站",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_018",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "箱根汤本站前商店街",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_019",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "毕加索馆",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_020",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "泡泡城堡",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_021",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "网之森林",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_022",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "大涌谷厨房",
+      "aliases": [
+        "大涌谷 车站食堂"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_023",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "黑蛋馆",
+      "aliases": [
+        "黑玉子馆"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_024",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "箱根地质博物馆",
+      "aliases": [
+        "箱根GEO博物馆"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_025",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "箱根登山名产店 汤本店",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_026",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "姥子站",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_027",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "金太郎展望台",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_028",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "仙石原",
+      "aliases": [
+        "仙石"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_029",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "宫之下",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_030",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "芦之湖花织酒店",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_031",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "忍野八海",
+      "aliases": [],
+      "scope": "external",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_032",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "早云寺",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_033",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "千条瀑",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_034",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "九头龙神社",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_035",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "箱根汤本温泉",
+      "aliases": [
+        "箱根 汤本温泉"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_036",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "箱根平和公园",
+      "aliases": [
+        "平和公园",
+        "平和 公园",
+        "箱根 平和 公园",
+        "和平 公园"
+      ],
+      "scope": "external",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_037",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "阎魔台",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_038",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "奥之院",
+      "aliases": [],
+      "scope": "external",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_039",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "三十三观音堂",
+      "aliases": [
+        "33观音殿"
+      ],
+      "scope": "external",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_040",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "桃源台展观餐厅",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_041",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "箱根町",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S001_POI_042",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "元箱根",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_001",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "优胜美地国家公园",
+      "aliases": [
+        "优胜美地",
+        "Yosemite",
+        "Yosemite National Park"
+      ],
+      "scope": "regional",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_002",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Yosemite Valley",
+      "aliases": [
+        "优胜美地山谷",
+        "优胜美地谷"
+      ],
+      "scope": "inside",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_003",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "El Capitan",
+      "aliases": [
+        "酋长岩"
+      ],
+      "scope": "inside",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_004",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Half Dome",
+      "aliases": [
+        "半穹",
+        "半圆顶",
+        "半圓頂"
+      ],
+      "scope": "inside",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_005",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Glacier Point",
+      "aliases": [
+        "冰川点",
+        "冰川觀景點"
+      ],
+      "scope": "inside",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_006",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Tunnel View",
+      "aliases": [
+        "Tunnel View观景台",
+        "Tunnel View观景平台"
+      ],
+      "scope": "inside",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_007",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Bridalveil Fall",
+      "aliases": [
+        "Bridalveil Falls",
+        "新娘面纱瀑布"
+      ],
+      "scope": "inside",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_008",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Yosemite Falls",
+      "aliases": [
+        "Yosemite Fall",
+        "优胜美地瀑布"
+      ],
+      "scope": "inside",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_009",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Lower Yosemite Fall",
+      "aliases": [
+        "Lower Yosemite Falls",
+        "Lower Fall"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_010",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Upper Yosemite Fall",
+      "aliases": [
+        "Upper Yosemite Falls",
+        "Upper Fall"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_011",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Valley Loop Trail",
+      "aliases": [
+        "Yosemite Valley Loop Trail"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_012",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "El Capitan Bridge",
+      "aliases": [
+        "El Capitan bridge"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_013",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Merced River",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_014",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Sentinel Rock",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_015",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Cathedral Rocks",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_016",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Three Brothers",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_017",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Camp 4",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_018",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Yosemite Village",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_019",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Lower Yosemite Fall Trail",
+      "aliases": [
+        "Lower Yosemite Fall Trailhead"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_020",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Bridalveil Fall Trail",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_021",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "El Capitan Meadow",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_022",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Four Mile Trail",
+      "aliases": [
+        "Four Mile Trailhead"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_023",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Snow Creek Trail",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_024",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Half Dome Trail",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_025",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Mirror Lake",
+      "aliases": [
+        "镜湖"
+      ],
+      "scope": "inside",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_026",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Mirror Lake Loop",
+      "aliases": [
+        "Mirror Lake via Valley Loop"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_027",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Cook's Meadow Loop",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_028",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Vernal Fall",
+      "aliases": [
+        "Vernal Falls"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_029",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Nevada Fall",
+      "aliases": [
+        "Nevada Falls"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_030",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Vernal Fall and Nevada Fall Trails",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_031",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Yosemite Falls Trail",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_032",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Mist Trail",
+      "aliases": [
+        "MT"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_033",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "John Muir Trail",
+      "aliases": [
+        "JMT"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_034",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Panorama Trail",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_035",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Vernal Fall Footbridge",
+      "aliases": [
+        "Vernal Falls Footbridge"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_036",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Columbia Rock",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_037",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Horsetail Fall",
+      "aliases": [
+        "Horsetail Falls",
+        "马尾瀑布"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_038",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Tioga Road",
+      "aliases": [
+        "Tioga Rd"
+      ],
+      "scope": "inside",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_039",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Glacier Point Road",
+      "aliases": [
+        "Glacier Point Rd"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_040",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Tenaya Lake",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_041",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Olmsted Point",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_042",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Valley View",
+      "aliases": [
+        "valley view谷内观景台"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_043",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Cathedral Beach",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_044",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Sentinel Beach",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_045",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Swinging Bridge",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_046",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Wawona Road",
+      "aliases": [
+        "Wawona Rd"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_047",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Southside Drive",
+      "aliases": [
+        "Southside Dr"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_048",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Yosemite Valley Vista Point",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_049",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Big Oak Flat Road",
+      "aliases": [
+        "Big Oak Flat Rd"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_050",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "May Lake",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_051",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Yosemite Creek Picnic Area",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_052",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Curry Village",
+      "aliases": [
+        "Curry Village Parking Lots"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_053",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Yosemite Valley Lodge",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_054",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "The Ahwahnee",
+      "aliases": [
+        "Ahwahnee"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_055",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Wawona Hotel",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_056",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "High Sierra Camps",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_057",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Tuolumne Meadows Lodge",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_058",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "White Wolf Lodge",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_059",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Clouds Rest",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_060",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Clark Point",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_061",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Little Yosemite Valley",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_062",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Sub Dome",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_063",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Sunrise Trail",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_064",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Cathedral Lake",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_065",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Upper Cathedral Lake",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_066",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Lower Cathedral Lake",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_067",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Cathedral Peak",
+      "aliases": [
+        "大教堂峰"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_068",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Mariposa Grove",
+      "aliases": [
+        "Mariposa红杉公园",
+        "巨大红杉林"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_069",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Hetch Hetchy",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_070",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "El Portal",
+      "aliases": [],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_071",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Yosemite View Lodge",
+      "aliases": [],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_072",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Yosemite Valley Chapel",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_073",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "弗雷斯诺",
+      "aliases": [
+        "Fresno"
+      ],
+      "scope": "external",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_074",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "旧金山",
+      "aliases": [],
+      "scope": "external",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_075",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "洛杉矶",
+      "aliases": [],
+      "scope": "external",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S002_POI_076",
+      "scenic_id": "S002",
+      "entity_type": "POI",
+      "canonical_name": "Merced",
+      "aliases": [],
+      "scope": "external",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_001",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "蓝山国家公园",
+      "aliases": [
+        "Blue Mountains National Park",
+        "蓝山公园",
+        "蓝山山脉国家公园",
+        "蓝山"
+      ],
+      "scope": "regional",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_002",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "三姐妹峰",
+      "aliases": [
+        "三姊妹峰",
+        "三姐妹岩",
+        "Three Sisters"
+      ],
+      "scope": "inside",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_003",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "Scenic World",
+      "aliases": [
+        "风景世界"
+      ],
+      "scope": "surrounding",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_004",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "Katoomba",
+      "aliases": [
+        "卡通巴"
+      ],
+      "scope": "surrounding",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_005",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "Leura",
+      "aliases": [
+        "罗拉"
+      ],
+      "scope": "surrounding",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_006",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "Wentworth Falls",
+      "aliases": [],
+      "scope": "surrounding",
+      "baseline": true,
+      "note": "本目录按接驳镇区使用；单独英文名也可能指瀑布，需结合上下文复核，不自动与中文瀑布实体合并。"
+    },
+    {
+      "entity_id": "S003_POI_007",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "温特沃斯瀑布",
+      "aliases": [
+        "温特沃斯(Wentworth)瀑布"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_008",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "Grand Cliff Top Walk",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_009",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "悉尼",
+      "aliases": [
+        "Sydney"
+      ],
+      "scope": "external",
+      "baseline": true,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_010",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "Gordon Falls",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_011",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "Buttenshaw Bridge",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_012",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "Jamison Lookout",
+      "aliases": [
+        "杰米森瞭望台"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_013",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "Jamison Valley",
+      "aliases": [
+        "杰米森山谷"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_014",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "Wentworth Falls Track",
+      "aliases": [
+        "温特沃斯(Wentworth)瀑布步道"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_015",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "Fletchers Lookout",
+      "aliases": [
+        "弗莱彻瞭望台"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_016",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "Blackheath",
+      "aliases": [
+        "布莱克希思"
+      ],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_017",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "埃文斯瞭望台",
+      "aliases": [
+        "埃文斯观景台"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_018",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "格罗斯谷",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_019",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "大峡谷步道",
+      "aliases": [
+        "大峡谷步行道"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_020",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "戈维茨跳跃瞭望台",
+      "aliases": [
+        "戈维茨利普瞭望台"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_021",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "新娘面纱瀑布",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_022",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "布道石",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_023",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "Beyond Skyway",
+      "aliases": [
+        "超越天空之路"
+      ],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_024",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "卡通巴瀑布自然保护区夜间灯光步道",
+      "aliases": [
+        "卡通巴瀑布自然保护区夜间照明步道"
+      ],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_025",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "孤儿岩",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_026",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "山地文化啤酒公司",
+      "aliases": [
+        "山地文化啤酒"
+      ],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_027",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "黑凤头鹦鹉面包店",
+      "aliases": [
+        "Lawson's Black Cockatoo Bakery",
+        "Black Cockatoo Bakery",
+        "劳森黑凤头鹦鹉面包店"
+      ],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_028",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "Josophan's Fine Chocolates",
+      "aliases": [
+        "Josophan的巧克力店"
+      ],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_029",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "Kate Soady Gallery",
+      "aliases": [
+        "凯特·索迪画廊"
+      ],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_030",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "劳森",
+      "aliases": [],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_031",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "斯普林伍德",
+      "aliases": [],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_032",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "Faulconbridge",
+      "aliases": [
+        "佛肯桥"
+      ],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_033",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "悉尼中央火车站",
+      "aliases": [
+        "中央车站"
+      ],
+      "scope": "external",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_034",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "伊丽莎白女王观景台",
+      "aliases": [
+        "Queen Elizabeth Lookout"
+      ],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_035",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "Prince Henry Cliff Walk",
+      "aliases": [
+        "亨利王子悬崖步道"
+      ],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_036",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "亨利王子悬崖",
+      "aliases": [],
+      "scope": "inside",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_037",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "Jenolan Caves",
+      "aliases": [
+        "珍罗兰洞"
+      ],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_038",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "Megalong Valley",
+      "aliases": [],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_039",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "Megalong Creek Estate",
+      "aliases": [],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_040",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "帕拉马塔",
+      "aliases": [
+        "Parramatta"
+      ],
+      "scope": "external",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_041",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "悉尼黑镇",
+      "aliases": [
+        "Blacktown"
+      ],
+      "scope": "external",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_042",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "彭里斯",
+      "aliases": [],
+      "scope": "external",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_043",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "埃姆平原",
+      "aliases": [],
+      "scope": "external",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_044",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "斯特拉斯菲尔德",
+      "aliases": [],
+      "scope": "external",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_045",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "蓝山文化中心",
+      "aliases": [],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_046",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "诺曼·林赛画廊及博物馆",
+      "aliases": [],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_047",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "维多利亚山博物馆",
+      "aliases": [],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_048",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "伍德福德学院",
+      "aliases": [],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_049",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "莉莲菲尔斯日间水疗中心",
+      "aliases": [],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_050",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "昔日美人珍藏茶壶博物馆和茶室",
+      "aliases": [],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    },
+    {
+      "entity_id": "S003_POI_051",
+      "scenic_id": "S003",
+      "entity_type": "POI",
+      "canonical_name": "梅加隆谷茶室",
+      "aliases": [],
+      "scope": "surrounding",
+      "baseline": false,
+      "note": ""
+    }
+  ],
+  "transport_entries": [
+    {
+      "index": 1,
+      "canonical_name": "步行",
+      "aliases": [
+        "徒步",
+        "漫步",
+        "Hike",
+        "hike",
+        "Hiking",
+        "hiking",
+        "walk",
+        "walking",
+        "trekking"
+      ],
+      "baseline": true,
+      "scenic_ids": [
+        "S001",
+        "S002",
+        "S003"
+      ]
+    },
+    {
+      "index": 2,
+      "canonical_name": "巴士",
+      "aliases": [
+        "公交",
+        "公交车",
+        "公共巴士",
+        "公共汽车",
+        "穿梭巴士",
+        "环线巴士",
+        "小巴",
+        "BUS",
+        "bus",
+        "shuttle",
+        "Valleywide Shuttle",
+        "Valley Shuttles"
+      ],
+      "baseline": true,
+      "scenic_ids": [
+        "S001",
+        "S002",
+        "S003"
+      ]
+    },
+    {
+      "index": 3,
+      "canonical_name": "列车",
+      "aliases": [
+        "火车",
+        "电车",
+        "普通列车",
+        "特快列车",
+        "train",
+        "trains"
+      ],
+      "baseline": true,
+      "scenic_ids": [
+        "S001",
+        "S002",
+        "S003"
+      ]
+    },
+    {
+      "index": 4,
+      "canonical_name": "自驾",
+      "aliases": [
+        "开车",
+        "驾车",
+        "驱车",
+        "驾驶",
+        "drive",
+        "Driving",
+        "vehicle"
+      ],
+      "baseline": true,
+      "scenic_ids": [
+        "S001",
+        "S002",
+        "S003"
+      ]
+    },
+    {
+      "index": 5,
+      "canonical_name": "缆车",
+      "aliases": [
+        "箱根缆车"
+      ],
+      "baseline": true,
+      "scenic_ids": [
+        "S001",
+        "S002",
+        "S003"
+      ]
+    },
+    {
+      "index": 6,
+      "canonical_name": "游船",
+      "aliases": [
+        "观光船",
+        "渡轮",
+        "乘船",
+        "天鹅船"
+      ],
+      "baseline": true,
+      "scenic_ids": [
+        "S001",
+        "S002",
+        "S003"
+      ]
+    },
+    {
+      "index": 7,
+      "canonical_name": "出租车",
+      "aliases": [
+        "打车"
+      ],
+      "baseline": true,
+      "scenic_ids": [
+        "S001",
+        "S002",
+        "S003"
+      ]
+    },
+    {
+      "index": 8,
+      "canonical_name": "自行车",
+      "aliases": [
+        "骑车",
+        "骑自行车",
+        "单车",
+        "bicycle",
+        "bicycles"
+      ],
+      "baseline": false,
+      "scenic_ids": [
+        "S001",
+        "S002",
+        "S003"
+      ]
+    },
+    {
+      "index": 9,
+      "canonical_name": "直升机",
+      "aliases": [
+        "直升飞机"
+      ],
+      "baseline": false,
+      "scenic_ids": [
+        "S001",
+        "S002",
+        "S003"
+      ]
+    },
+    {
+      "index": 10,
+      "canonical_name": "箱根登山电车",
+      "aliases": [
+        "登山电车",
+        "登山列车"
+      ],
+      "baseline": false,
+      "scenic_ids": [
+        "S001"
+      ]
+    },
+    {
+      "index": 11,
+      "canonical_name": "箱根登山缆车",
+      "aliases": [],
+      "baseline": false,
+      "scenic_ids": [
+        "S001"
+      ]
+    },
+    {
+      "index": 12,
+      "canonical_name": "箱根空中缆车",
+      "aliases": [
+        "箱根登山吊舱",
+        "rope way"
+      ],
+      "baseline": false,
+      "scenic_ids": [
+        "S001"
+      ]
+    },
+    {
+      "index": 13,
+      "canonical_name": "箱根登山巴士",
+      "aliases": [],
+      "baseline": false,
+      "scenic_ids": [
+        "S001"
+      ]
+    },
+    {
+      "index": 14,
+      "canonical_name": "箱根海贼观光船",
+      "aliases": [
+        "箱根海贼船",
+        "海贼船",
+        "海盗船",
+        "海贼观光船"
+      ],
+      "baseline": false,
+      "scenic_ids": [
+        "S001"
+      ]
+    },
+    {
+      "index": 15,
+      "canonical_name": "浪漫特快",
+      "aliases": [
+        "“浪漫”特快",
+        "小田急浪漫特快"
+      ],
+      "baseline": false,
+      "scenic_ids": [
+        "S001"
+      ]
+    },
+    {
+      "index": 16,
+      "canonical_name": "小田急线",
+      "aliases": [
+        "Odakyu Line",
+        "小田原线"
+      ],
+      "baseline": false,
+      "scenic_ids": [
+        "S001"
+      ]
+    },
+    {
+      "index": 17,
+      "canonical_name": "高空缆车",
+      "aliases": [],
+      "baseline": false,
+      "scenic_ids": [
+        "S003"
+      ]
+    },
+    {
+      "index": 18,
+      "canonical_name": "蓝山探索巴士",
+      "aliases": [],
+      "baseline": false,
+      "scenic_ids": [
+        "S003"
+      ]
+    },
+    {
+      "index": 19,
+      "canonical_name": "Blue Mountains Line",
+      "aliases": [],
+      "baseline": false,
+      "scenic_ids": [
+        "S003"
+      ]
+    }
+  ],
+  "stopwords": {
+    "POI": [
+      "景区",
+      "景点",
+      "公园",
+      "瀑布",
+      "观景台",
+      "游客中心",
+      "温泉"
+    ],
+    "TRANSPORT": [
+      "车",
+      "船",
+      "交通工具",
+      "交通"
+    ],
+    "TIME": [
+      "时间"
+    ]
+  },
+  "ambiguous_names": [
+    {
+      "surface": "Half Doom",
+      "suggested": "Half Dome",
+      "reason": "游记拼写疑似错误，待成员确认，未自动合并"
+    },
+    {
+      "surface": "Glacie Point",
+      "suggested": "Glacier Point",
+      "reason": "拼写疑似错误，未自动合并"
+    },
+    {
+      "surface": "硫磺谷",
+      "suggested": "大涌谷",
+      "reason": "作者描述性称呼，不能仅据相似语义自动合并"
+    },
+    {
+      "surface": "水中神社",
+      "suggested": "和平鸟居 / 箱根神社",
+      "reason": "建筑与神社整体有边界歧义，待确认"
+    },
+    {
+      "surface": "卡图姆巴",
+      "suggested": "Katoomba",
+      "reason": "疑似异译名，保留在待确认清单"
+    }
+  ],
+  "context_exclusions": [
+    "Half Dome Pizza",
+    "Half Dome View",
+    "Sydney HeliTours",
+    "一点（程度）",
+    "下午茶（餐饮）",
+    "箱根周游券／箱根2日周游券（票券名称）"
+  ]
+}

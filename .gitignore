@@ -44,3 +44,5 @@ models/
 *（实验1已填写）.docx
 results/checks/exp01_document_fidelity.json
 .deps/
+/实验2报告.docx
+results/checks/exp02_document_fidelity.json

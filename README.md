@@ -10,7 +10,7 @@
 
 ## 当前状态
 
-**实验1已完成并合并到main，可直接更新main取得交付资料。** 正式语料为日本箱根（主展示）、美国优胜美地国家公园、澳大利亚蓝山国家公园，每个景区1份官方路线文档和5篇游客游记，共18篇、20个原始网页快照。实验2—7仍为待实现骨架。原任务书PDF和报告模板DOCX保留不变；填写后的Word报告仅留本地，不在本次提交中。
+**实验1、实验2已完成，代码和结构化成果由main统一交付。** 正式语料为日本箱根（主展示）、美国优胜美地国家公园、澳大利亚蓝山国家公园，每个景区1份官方路线文档和5篇游客游记，共18篇、20个原始网页快照。实验2输出326条活跃实体、1403次提及，包含实体定义、原文偏移、24例逐例核验及三张彩色图。实验3—7仍为待实现骨架。原任务书PDF和报告模板DOCX保留不变；填写后的实验2 Word报告及完整报告文字稿仅留本地，本次不上传。
 
 从项目根目录运行：
 
@@ -42,7 +42,7 @@ python src/exp01_verify.py
 项目根目录/
 ├─ README.md                         # 项目入口与运行说明
 ├─ 三人分工.md                       # 职责、字段规范、交接检查
-├─ requirements.txt                  # 依赖清单，当前为待确认模板
+├─ requirements.txt                  # 已记录实验1、2依赖，其余实验后续补充
 ├─ .env.example                      # 模型配置示例，不含真实密钥
 ├─ .gitignore                        # 排除本地环境、密钥与缓存
 ├─ .gitattributes                     # 统一文本换行
@@ -51,7 +51,7 @@ python src/exp01_verify.py
 │  ├─ raw/                           # 原文与来源记录
 │  ├─ processed/                     # 景区登记表与清洗语料
 │  └─ outputs/                       # 实验 2—7 的正式结果
-├─ src/                              # 七个实验的待实现入口
+├─ src/                              # 实验1、2已实现，其余实验为入口骨架
 ├─ reports/                          # 各实验章节和总结反思模板
 └─ results/
    ├─ figures/                       # 图表与运行截图
@@ -71,7 +71,7 @@ py -3.11 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
-当前`requirements.txt`已记录实验1实际依赖lxml；其他模块负责人后续补充各自依赖，DHT汇总兼容性。
+当前`requirements.txt`已记录实验1依赖lxml和实验2绘图依赖Pillow；实验2识别与检查仅需标准库。其他模块负责人后续补充各自依赖，DHT汇总兼容性。
 
 需要模型配置时，在本地复制示例，再填写自己的值：
 
@@ -89,7 +89,18 @@ Copy-Item .env.example .env
 .\.venv\Scripts\python.exe src/exp01_preprocess.py --help
 ```
 
-实验1不带参数即可离线生成结果；实验2—7当前仅支持职责说明，运行会提示“尚未实现”。各人实现后应同步更新实际运行命令、必要参数、依赖和检查方法。
+实验1不带参数即可离线生成结果。实验2从根目录执行：
+
+```powershell
+python src/exp02_entities.py --variant baseline
+python src/exp02_entities.py
+python src/exp02_verify.py
+python src/exp02_visualize.py
+```
+
+实验2采用离线领域词典和时间规则，在18篇文档的42911字符相关范围内处理，位置始终对应v1完整正文。正常复跑读取既有实体目录维持ID，请勿删除正式输出后重新编号。实测Python 3.12.14、Pillow 12.3.0；绘图默认用Windows宋体，其他系统可通过`EXP02_FONT`设置中文字体。完整数据接口、范围、24例核验和局限见[实验2交接说明](results/checks/exp02_handoff.md)，三类实体规范见[定义表](reports/exp02_entity_definitions.md)。核验由AI辅助完成，抽样诊断指标不代表全语料准确率。
+
+实验3—7仍为待实现骨架，运行会明确提示。各人实现后应同步更新实际运行命令、必要参数、依赖和检查方法。
 
 ## 三人协作
 

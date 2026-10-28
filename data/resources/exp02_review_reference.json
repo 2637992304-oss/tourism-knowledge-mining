@@ -1,0 +1,883 @@
+{
+  "schema_version": "1.0",
+  "corpus_version": "v1",
+  "corpus_sha256": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0",
+  "review_method": "AI辅助逐例语义核验；参考标签由阅读原句编写，非随机独立测试集，未声称学生本人或组员已复核",
+  "selection": "目的抽样：三个景区各8例，覆盖官方及游记、三类实体、重复、边界、歧义和负例；用于开发诊断",
+  "cases": [
+    {
+      "case_id": "C01",
+      "doc_id": "S001_OFF_001",
+      "scenic_id": "S001",
+      "text_type": "official_route",
+      "start": 222,
+      "end": 246,
+      "text": "7:30 ~ 从新宿乘坐“浪漫”特快前往箱根汤本",
+      "expected": [
+        {
+          "start": 222,
+          "end": 226,
+          "text": "7:30",
+          "entity_type": "TIME",
+          "canonical_name": "7:30"
+        },
+        {
+          "start": 230,
+          "end": 232,
+          "text": "新宿",
+          "entity_type": "POI",
+          "canonical_name": "新宿"
+        },
+        {
+          "start": 234,
+          "end": 240,
+          "text": "“浪漫”特快",
+          "entity_type": "TRANSPORT",
+          "canonical_name": "浪漫特快"
+        },
+        {
+          "start": 242,
+          "end": 246,
+          "text": "箱根汤本",
+          "entity_type": "POI",
+          "canonical_name": "箱根汤本"
+        }
+      ],
+      "judgment": "接驳起点新宿标记external；票券不属于交通方式。"
+    },
+    {
+      "case_id": "C02",
+      "doc_id": "S001_OFF_001",
+      "scenic_id": "S001",
+      "text_type": "official_route",
+      "start": 1342,
+      "end": 1389,
+      "text": "首先,从箱根登山电车强罗站(OH57)换乘箱根登山缆车,乘坐洋溢复古风情的缆车咣当咣当地爬坡。",
+      "expected": [
+        {
+          "start": 1346,
+          "end": 1352,
+          "text": "箱根登山电车",
+          "entity_type": "TRANSPORT",
+          "canonical_name": "箱根登山电车"
+        },
+        {
+          "start": 1352,
+          "end": 1355,
+          "text": "强罗站",
+          "entity_type": "POI",
+          "canonical_name": "强罗"
+        },
+        {
+          "start": 1363,
+          "end": 1369,
+          "text": "箱根登山缆车",
+          "entity_type": "TRANSPORT",
+          "canonical_name": "箱根登山缆车"
+        },
+        {
+          "start": 1379,
+          "end": 1381,
+          "text": "缆车",
+          "entity_type": "TRANSPORT",
+          "canonical_name": "缆车"
+        }
+      ],
+      "judgment": "专名取完整边界，末尾泛称缆车保留为未知具体制式，不与空中缆车合并。"
+    },
+    {
+      "case_id": "C03",
+      "doc_id": "S001_OFF_001",
+      "scenic_id": "S001",
+      "text_type": "official_route",
+      "start": 1419,
+      "end": 1458,
+      "text": "到达缆车终点站—早云山站(OH62)后,再换乘箱根空中缆车。发车间隔约1分钟。",
+      "expected": [
+        {
+          "start": 1421,
+          "end": 1423,
+          "text": "缆车",
+          "entity_type": "TRANSPORT",
+          "canonical_name": "缆车"
+        },
+        {
+          "start": 1427,
+          "end": 1431,
+          "text": "早云山站",
+          "entity_type": "POI",
+          "canonical_name": "早云山"
+        },
+        {
+          "start": 1442,
+          "end": 1448,
+          "text": "箱根空中缆车",
+          "entity_type": "TRANSPORT",
+          "canonical_name": "箱根空中缆车"
+        },
+        {
+          "start": 1454,
+          "end": 1457,
+          "text": "1分钟",
+          "entity_type": "TIME",
+          "canonical_name": "1分钟"
+        }
+      ],
+      "judgment": "区分登山缆车和空中缆车；时间为发车间隔，不是停留时间。"
+    },
+    {
+      "case_id": "C04",
+      "doc_id": "S001_OFF_001",
+      "scenic_id": "S001",
+      "text_type": "official_route",
+      "start": 1875,
+      "end": 1895,
+      "text": "据说“吃一枚大涌谷的黑鸡蛋能延寿7年”。",
+      "expected": [
+        {
+          "start": 1881,
+          "end": 1884,
+          "text": "大涌谷",
+          "entity_type": "POI",
+          "canonical_name": "大涌谷"
+        }
+      ],
+      "judgment": "延寿7年是传说中的寿命，不是行程时间。"
+    },
+    {
+      "case_id": "C05",
+      "doc_id": "S001_VIS_001",
+      "scenic_id": "S001",
+      "text_type": "visitor_diary",
+      "start": 15,
+      "end": 68,
+      "text": "从早云山乘坐箱根登山吊舱(rope way)到终点桃源台下车,走出站外的湖边即能看见一个徒步路线的标识牌。",
+      "expected": [
+        {
+          "start": 16,
+          "end": 19,
+          "text": "早云山",
+          "entity_type": "POI",
+          "canonical_name": "早云山"
+        },
+        {
+          "start": 21,
+          "end": 27,
+          "text": "箱根登山吊舱",
+          "entity_type": "TRANSPORT",
+          "canonical_name": "箱根空中缆车"
+        },
+        {
+          "start": 28,
+          "end": 36,
+          "text": "rope way",
+          "entity_type": "TRANSPORT",
+          "canonical_name": "箱根空中缆车"
+        },
+        {
+          "start": 40,
+          "end": 43,
+          "text": "桃源台",
+          "entity_type": "POI",
+          "canonical_name": "桃源台"
+        },
+        {
+          "start": 59,
+          "end": 61,
+          "text": "徒步",
+          "entity_type": "TRANSPORT",
+          "canonical_name": "步行"
+        }
+      ],
+      "judgment": "中英文同义表述有两处提及，均保留，不能按相同实体ID去重。"
+    },
+    {
+      "case_id": "C06",
+      "doc_id": "S001_VIS_003",
+      "scenic_id": "S001",
+      "text_type": "visitor_diary",
+      "start": 448,
+      "end": 501,
+      "text": "再乘缆车就可以到桃源台了,因为时间尚早,我们的酒店下午3点才能办入住,所以在桃源台乘海贼船游览芦之湖全景.",
+      "expected": [
+        {
+          "start": 450,
+          "end": 452,
+          "text": "缆车",
+          "entity_type": "TRANSPORT",
+          "canonical_name": "缆车"
+        },
+        {
+          "start": 456,
+          "end": 459,
+          "text": "桃源台",
+          "entity_type": "POI",
+          "canonical_name": "桃源台"
+        },
+        {
+          "start": 473,
+          "end": 477,
+          "text": "下午3点",
+          "entity_type": "TIME",
+          "canonical_name": "下午3点"
+        },
+        {
+          "start": 486,
+          "end": 489,
+          "text": "桃源台",
+          "entity_type": "POI",
+          "canonical_name": "桃源台"
+        },
+        {
+          "start": 490,
+          "end": 493,
+          "text": "海贼船",
+          "entity_type": "TRANSPORT",
+          "canonical_name": "箱根海贼观光船"
+        },
+        {
+          "start": 495,
+          "end": 498,
+          "text": "芦之湖",
+          "entity_type": "POI",
+          "canonical_name": "芦之湖"
+        }
+      ],
+      "judgment": "同句两次桃源台分别定位；下午3点取完整时刻。"
+    },
+    {
+      "case_id": "C07",
+      "doc_id": "S001_VIS_005",
+      "scenic_id": "S001",
+      "text_type": "visitor_diary",
+      "start": 6393,
+      "end": 6441,
+      "text": "【路线1】元箱根港Motohakone-ko--箱根汤本Hakone-Yomoto(30min)",
+      "expected": [
+        {
+          "start": 6398,
+          "end": 6402,
+          "text": "元箱根港",
+          "entity_type": "POI",
+          "canonical_name": "元箱根港"
+        },
+        {
+          "start": 6402,
+          "end": 6415,
+          "text": "Motohakone-ko",
+          "entity_type": "POI",
+          "canonical_name": "元箱根港"
+        },
+        {
+          "start": 6417,
+          "end": 6421,
+          "text": "箱根汤本",
+          "entity_type": "POI",
+          "canonical_name": "箱根汤本"
+        },
+        {
+          "start": 6421,
+          "end": 6434,
+          "text": "Hakone-Yomoto",
+          "entity_type": "POI",
+          "canonical_name": "箱根汤本"
+        },
+        {
+          "start": 6435,
+          "end": 6440,
+          "text": "30min",
+          "entity_type": "TIME",
+          "canonical_name": "30分钟"
+        }
+      ],
+      "judgment": "中文与英文连续出现均为独立提及；仅按语料原样登记其拼写。"
+    },
+    {
+      "case_id": "C08",
+      "doc_id": "S001_VIS_003",
+      "scenic_id": "S001",
+      "text_type": "visitor_diary",
+      "start": 285,
+      "end": 368,
+      "text": "缆车先是在树林上方前行,突然就可以看到左手方向的地貌陡然改变,浓烟滚滚,往下看原来是硫磺谷,谷里遍地都是燃烧着浓烟的硫磺洞,那情景恍惚让人置身于人间地狱一般,很震撼.",
+      "expected": [
+        {
+          "start": 285,
+          "end": 287,
+          "text": "缆车",
+          "entity_type": "TRANSPORT",
+          "canonical_name": "缆车"
+        },
+        {
+          "start": 327,
+          "end": 330,
+          "text": "硫磺谷",
+          "entity_type": "POI",
+          "canonical_name": "硫磺谷"
+        }
+      ],
+      "judgment": "硫磺谷是描述性地点提及，但尚无已确认目录项；保留漏识别，不能擅自合并大涌谷。"
+    },
+    {
+      "case_id": "C09",
+      "doc_id": "S002_OFF_001",
+      "scenic_id": "S002",
+      "text_type": "official_route",
+      "start": 737,
+      "end": 787,
+      "text": "Time: 5-7 hours full loop, 2.5-3.5 hours half loop",
+      "expected": [
+        {
+          "start": 743,
+          "end": 752,
+          "text": "5-7 hours",
+          "entity_type": "TIME",
+          "canonical_name": "5-7小时"
+        },
+        {
+          "start": 764,
+          "end": 777,
+          "text": "2.5-3.5 hours",
+          "entity_type": "TIME",
+          "canonical_name": "2.5-3.5小时"
+        }
+      ],
+      "judgment": "英文时长范围完整保留；两条备选线路时长不能合并。"
+    },
+    {
+      "case_id": "C10",
+      "doc_id": "S002_OFF_001",
+      "scenic_id": "S002",
+      "text_type": "official_route",
+      "start": 788,
+      "end": 835,
+      "text": "Begin at: Lower Yosemite Fall (shuttle stop #6)",
+      "expected": [
+        {
+          "start": 798,
+          "end": 817,
+          "text": "Lower Yosemite Fall",
+          "entity_type": "POI",
+          "canonical_name": "Lower Yosemite Fall"
+        },
+        {
+          "start": 819,
+          "end": 826,
+          "text": "shuttle",
+          "entity_type": "TRANSPORT",
+          "canonical_name": "巴士"
+        }
+      ],
+      "judgment": "Lower Yosemite Fall是下瀑，不合并父级Yosemite Falls；站点号不是时间。"
+    },
+    {
+      "case_id": "C11",
+      "doc_id": "S002_OFF_001",
+      "scenic_id": "S002",
+      "text_type": "official_route",
+      "start": 1702,
+      "end": 1879,
+      "text": "From the Lower Yosemite Fall area, head west along the base of the Three Brothers rock formation, past Camp 4, eventually working your way through Yosemite Valley to El Capitan.",
+      "expected": [
+        {
+          "start": 1711,
+          "end": 1730,
+          "text": "Lower Yosemite Fall",
+          "entity_type": "POI",
+          "canonical_name": "Lower Yosemite Fall"
+        },
+        {
+          "start": 1769,
+          "end": 1783,
+          "text": "Three Brothers",
+          "entity_type": "POI",
+          "canonical_name": "Three Brothers"
+        },
+        {
+          "start": 1805,
+          "end": 1811,
+          "text": "Camp 4",
+          "entity_type": "POI",
+          "canonical_name": "Camp 4"
+        },
+        {
+          "start": 1849,
+          "end": 1864,
+          "text": "Yosemite Valley",
+          "entity_type": "POI",
+          "canonical_name": "Yosemite Valley"
+        },
+        {
+          "start": 1868,
+          "end": 1878,
+          "text": "El Capitan",
+          "entity_type": "POI",
+          "canonical_name": "El Capitan"
+        }
+      ],
+      "judgment": "多个相邻景点和父子区域分别建实体，不以相似名称合并。"
+    },
+    {
+      "case_id": "C12",
+      "doc_id": "S002_OFF_001",
+      "scenic_id": "S002",
+      "text_type": "official_route",
+      "start": 3972,
+      "end": 4017,
+      "text": "Pets, bicycles, and strollers are prohibited.",
+      "expected": [
+        {
+          "start": 3978,
+          "end": 3986,
+          "text": "bicycles",
+          "entity_type": "TRANSPORT",
+          "canonical_name": "自行车"
+        }
+      ],
+      "judgment": "禁止自行车仍为交通提及，不能据此推导可使用；strollers为婴儿推车，当前体系不纳入主要交通方式。"
+    },
+    {
+      "case_id": "C13",
+      "doc_id": "S002_VIS_001",
+      "scenic_id": "S002",
+      "text_type": "visitor_diary",
+      "start": 3482,
+      "end": 3587,
+      "text": "这里有充裕的停车位,视野宽阔的观景台,向山谷望去近在眼前的是酋长岩,山谷尽头是标志性的Half Doom,大约20分钟后我们就离开景区前往Yosemite view lodge办理入住,结束了第一天的景区游览。",
+      "expected": [
+        {
+          "start": 3512,
+          "end": 3515,
+          "text": "酋长岩",
+          "entity_type": "POI",
+          "canonical_name": "El Capitan"
+        },
+        {
+          "start": 3525,
+          "end": 3534,
+          "text": "Half Doom",
+          "entity_type": "POI",
+          "canonical_name": "Half Dome"
+        },
+        {
+          "start": 3537,
+          "end": 3541,
+          "text": "20分钟",
+          "entity_type": "TIME",
+          "canonical_name": "20分钟"
+        },
+        {
+          "start": 3551,
+          "end": 3570,
+          "text": "Yosemite view lodge",
+          "entity_type": "POI",
+          "canonical_name": "Yosemite View Lodge"
+        },
+        {
+          "start": 3578,
+          "end": 3581,
+          "text": "第一天",
+          "entity_type": "TIME",
+          "canonical_name": "第一天"
+        }
+      ],
+      "judgment": "Half Doom疑似错拼，需要语义核验；当前自动程序不擅自纠错，预期保留漏识别。"
+    },
+    {
+      "case_id": "C14",
+      "doc_id": "S002_VIS_003",
+      "scenic_id": "S002",
+      "text_type": "visitor_diary",
+      "start": 2331,
+      "end": 2523,
+      "text": "登顶Half Dome的15 miles,除了最后的绳索以及登顶的喜悦,沿途的景色也是非常可圈可点,我们按官方建议沿Mist Trail上,John Muir Trail下,经过了Nevada Falls,Vernal Falls,Clark Point、Little Yosemite Valley等多个景点,即使不去Half Dome,徒步到这几个景点也是国家公园重点推荐的线路。",
+      "expected": [
+        {
+          "start": 2333,
+          "end": 2342,
+          "text": "Half Dome",
+          "entity_type": "POI",
+          "canonical_name": "Half Dome"
+        },
+        {
+          "start": 2389,
+          "end": 2399,
+          "text": "Mist Trail",
+          "entity_type": "POI",
+          "canonical_name": "Mist Trail"
+        },
+        {
+          "start": 2401,
+          "end": 2416,
+          "text": "John Muir Trail",
+          "entity_type": "POI",
+          "canonical_name": "John Muir Trail"
+        },
+        {
+          "start": 2421,
+          "end": 2433,
+          "text": "Nevada Falls",
+          "entity_type": "POI",
+          "canonical_name": "Nevada Fall"
+        },
+        {
+          "start": 2434,
+          "end": 2446,
+          "text": "Vernal Falls",
+          "entity_type": "POI",
+          "canonical_name": "Vernal Fall"
+        },
+        {
+          "start": 2447,
+          "end": 2458,
+          "text": "Clark Point",
+          "entity_type": "POI",
+          "canonical_name": "Clark Point"
+        },
+        {
+          "start": 2459,
+          "end": 2481,
+          "text": "Little Yosemite Valley",
+          "entity_type": "POI",
+          "canonical_name": "Little Yosemite Valley"
+        },
+        {
+          "start": 2491,
+          "end": 2500,
+          "text": "Half Dome",
+          "entity_type": "POI",
+          "canonical_name": "Half Dome"
+        },
+        {
+          "start": 2501,
+          "end": 2503,
+          "text": "徒步",
+          "entity_type": "TRANSPORT",
+          "canonical_name": "步行"
+        }
+      ],
+      "judgment": "距离15 miles排除；多个步道与瀑布分别登记，保留两次Half Dome。"
+    },
+    {
+      "case_id": "C15",
+      "doc_id": "S002_VIS_005",
+      "scenic_id": "S002",
+      "text_type": "visitor_diary",
+      "start": 191,
+      "end": 228,
+      "text": "同时风景很好的的Glacie Point和Tioga Road都尚未开放。",
+      "expected": [
+        {
+          "start": 199,
+          "end": 211,
+          "text": "Glacie Point",
+          "entity_type": "POI",
+          "canonical_name": "Glacier Point"
+        },
+        {
+          "start": 212,
+          "end": 222,
+          "text": "Tioga Road",
+          "entity_type": "POI",
+          "canonical_name": "Tioga Road"
+        }
+      ],
+      "judgment": "Glacie Point疑似错拼，当前不自动合并；不能因道路未开放就删除实体。"
+    },
+    {
+      "case_id": "C16",
+      "doc_id": "S002_VIS_005",
+      "scenic_id": "S002",
+      "text_type": "visitor_diary",
+      "start": 872,
+      "end": 900,
+      "text": "另一个惊喜来自于酋长岩东壁的马尾瀑布horsetail。",
+      "expected": [
+        {
+          "start": 880,
+          "end": 883,
+          "text": "酋长岩",
+          "entity_type": "POI",
+          "canonical_name": "El Capitan"
+        },
+        {
+          "start": 886,
+          "end": 890,
+          "text": "马尾瀑布",
+          "entity_type": "POI",
+          "canonical_name": "Horsetail Fall"
+        },
+        {
+          "start": 890,
+          "end": 899,
+          "text": "horsetail",
+          "entity_type": "POI",
+          "canonical_name": "Horsetail Fall"
+        }
+      ],
+      "judgment": "horsetail作为已给中文名后的英文简称，词典未覆盖，记录漏识别。"
+    },
+    {
+      "case_id": "C17",
+      "doc_id": "S003_OFF_001",
+      "scenic_id": "S003",
+      "text_type": "official_route",
+      "start": 31,
+      "end": 139,
+      "text": "Hike 19km in 2 days along Grand Cliff Top Walk, which seamlessly links Wentworth Falls, Leura, and Katoomba.",
+      "expected": [
+        {
+          "start": 31,
+          "end": 35,
+          "text": "Hike",
+          "entity_type": "TRANSPORT",
+          "canonical_name": "步行"
+        },
+        {
+          "start": 44,
+          "end": 50,
+          "text": "2 days",
+          "entity_type": "TIME",
+          "canonical_name": "2天"
+        },
+        {
+          "start": 57,
+          "end": 77,
+          "text": "Grand Cliff Top Walk",
+          "entity_type": "POI",
+          "canonical_name": "Grand Cliff Top Walk"
+        },
+        {
+          "start": 102,
+          "end": 117,
+          "text": "Wentworth Falls",
+          "entity_type": "POI",
+          "canonical_name": "Wentworth Falls"
+        },
+        {
+          "start": 119,
+          "end": 124,
+          "text": "Leura",
+          "entity_type": "POI",
+          "canonical_name": "Leura"
+        },
+        {
+          "start": 130,
+          "end": 138,
+          "text": "Katoomba",
+          "entity_type": "POI",
+          "canonical_name": "Katoomba"
+        }
+      ],
+      "judgment": "19km是距离；Wentworth Falls在本句为接驳镇区，不直接合并瀑布景点。"
+    },
+    {
+      "case_id": "C18",
+      "doc_id": "S003_OFF_001",
+      "scenic_id": "S003",
+      "text_type": "official_route",
+      "start": 3787,
+      "end": 3806,
+      "text": "巴士每天上午9点至下午5点每小时一班。",
+      "expected": [
+        {
+          "start": 3787,
+          "end": 3789,
+          "text": "巴士",
+          "entity_type": "TRANSPORT",
+          "canonical_name": "巴士"
+        },
+        {
+          "start": 3791,
+          "end": 3795,
+          "text": "上午9点",
+          "entity_type": "TIME",
+          "canonical_name": "上午9点"
+        },
+        {
+          "start": 3796,
+          "end": 3800,
+          "text": "下午5点",
+          "entity_type": "TIME",
+          "canonical_name": "下午5点"
+        },
+        {
+          "start": 3800,
+          "end": 3803,
+          "text": "每小时",
+          "entity_type": "TIME",
+          "canonical_name": "每小时"
+        }
+      ],
+      "judgment": "两端时刻独立提及；每小时是班次间隔，当前规则缺少该表达。"
+    },
+    {
+      "case_id": "C19",
+      "doc_id": "S003_OFF_001",
+      "scenic_id": "S003",
+      "text_type": "official_route",
+      "start": 3430,
+      "end": 3455,
+      "text": "从特定的有利位置,您可以看到三姐妹峰在夜空下亮起。",
+      "expected": [
+        {
+          "start": 3444,
+          "end": 3448,
+          "text": "三姐妹峰",
+          "entity_type": "POI",
+          "canonical_name": "三姐妹峰"
+        }
+      ],
+      "judgment": "夜空是环境描述，不标为明确时间节点。"
+    },
+    {
+      "case_id": "C20",
+      "doc_id": "S003_VIS_005",
+      "scenic_id": "S003",
+      "text_type": "visitor_diary",
+      "start": 198,
+      "end": 247,
+      "text": "我们从悉尼驱车来到蓝山公园的伊丽莎白女王观景台(Queen Elizabeth Lookout)。",
+      "expected": [
+        {
+          "start": 201,
+          "end": 203,
+          "text": "悉尼",
+          "entity_type": "POI",
+          "canonical_name": "悉尼"
+        },
+        {
+          "start": 203,
+          "end": 205,
+          "text": "驱车",
+          "entity_type": "TRANSPORT",
+          "canonical_name": "自驾"
+        },
+        {
+          "start": 207,
+          "end": 211,
+          "text": "蓝山公园",
+          "entity_type": "POI",
+          "canonical_name": "蓝山国家公园"
+        },
+        {
+          "start": 212,
+          "end": 221,
+          "text": "伊丽莎白女王观景台",
+          "entity_type": "POI",
+          "canonical_name": "伊丽莎白女王观景台"
+        },
+        {
+          "start": 222,
+          "end": 245,
+          "text": "Queen Elizabeth Lookout",
+          "entity_type": "POI",
+          "canonical_name": "伊丽莎白女王观景台"
+        }
+      ],
+      "judgment": "中英文同名观景台合并目录ID，两次提及保留。"
+    },
+    {
+      "case_id": "C21",
+      "doc_id": "S003_VIS_002",
+      "scenic_id": "S003",
+      "text_type": "visitor_diary",
+      "start": 1957,
+      "end": 2029,
+      "text": "这几天我们坐车都是从悉尼中央火车站中转的,这次一样,先坐BUS到悉尼中央火车站,然后乘坐Blue Mountains Line铁路线到达蓝山公园",
+      "expected": [
+        {
+          "start": 1967,
+          "end": 1974,
+          "text": "悉尼中央火车站",
+          "entity_type": "POI",
+          "canonical_name": "悉尼中央火车站"
+        },
+        {
+          "start": 1985,
+          "end": 1988,
+          "text": "BUS",
+          "entity_type": "TRANSPORT",
+          "canonical_name": "巴士"
+        },
+        {
+          "start": 1989,
+          "end": 1996,
+          "text": "悉尼中央火车站",
+          "entity_type": "POI",
+          "canonical_name": "悉尼中央火车站"
+        },
+        {
+          "start": 2001,
+          "end": 2020,
+          "text": "Blue Mountains Line",
+          "entity_type": "TRANSPORT",
+          "canonical_name": "Blue Mountains Line"
+        },
+        {
+          "start": 2025,
+          "end": 2029,
+          "text": "蓝山公园",
+          "entity_type": "POI",
+          "canonical_name": "蓝山国家公园"
+        }
+      ],
+      "judgment": "坐车没有明确交通制式，不强制标为自驾；火车站中的火车不重复标为交通方式。"
+    },
+    {
+      "case_id": "C22",
+      "doc_id": "S003_VIS_004",
+      "scenic_id": "S003",
+      "text_type": "visitor_diary",
+      "start": 2790,
+      "end": 2855,
+      "text": "我们选择了Sydney HeliTours,这家公司提供很多行程,我们选择了悉尼 - 蓝山的单程行程,飞行时间大概在45分钟左右。",
+      "expected": [
+        {
+          "start": 2828,
+          "end": 2830,
+          "text": "悉尼",
+          "entity_type": "POI",
+          "canonical_name": "悉尼"
+        },
+        {
+          "start": 2833,
+          "end": 2835,
+          "text": "蓝山",
+          "entity_type": "POI",
+          "canonical_name": "蓝山国家公园"
+        },
+        {
+          "start": 2848,
+          "end": 2852,
+          "text": "45分钟",
+          "entity_type": "TIME",
+          "canonical_name": "45分钟"
+        }
+      ],
+      "judgment": "Sydney HeliTours是运营商名称，不是悉尼地点提及；检查英文词边界仍可能不够。"
+    },
+    {
+      "case_id": "C23",
+      "doc_id": "S003_VIS_004",
+      "scenic_id": "S003",
+      "text_type": "visitor_diary",
+      "start": 6354,
+      "end": 6418,
+      "text": "另一款The Lost Shiraz更有趣一点,单宁味更重,红宝石颜色的酒液带有很复杂的黑加仑、黑莓和香草的气味,层次非常丰富。",
+      "expected": [],
+      "judgment": "一点表示程度，不能识别为凌晨或下午1点。"
+    },
+    {
+      "case_id": "C24",
+      "doc_id": "S003_OFF_001",
+      "scenic_id": "S003",
+      "text_type": "official_route",
+      "start": 5105,
+      "end": 5112,
+      "text": "水疗盛宴下午茶",
+      "expected": [],
+      "judgment": "下午茶为餐饮名称，不能把下午切出作时间。"
+    }
+  ]
+}

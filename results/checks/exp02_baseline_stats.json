@@ -1,0 +1,285 @@
+{
+  "variant": "baseline",
+  "documents": 18,
+  "mentions": 1420,
+  "active_entities": 166,
+  "by_type": {
+    "POI": 822,
+    "TRANSPORT": 418,
+    "TIME": 180
+  },
+  "per_scenic": [
+    {
+      "scenic_id": "S001",
+      "scenic_name": "日本箱根",
+      "docs": 6,
+      "scoped_chars": 10082,
+      "mentions_by_type": {
+        "POI": 366,
+        "TRANSPORT": 160,
+        "TIME": 37
+      },
+      "entities_by_type": {
+        "POI": 14,
+        "TRANSPORT": 11,
+        "TIME": 31
+      }
+    },
+    {
+      "scenic_id": "S002",
+      "scenic_name": "美国优胜美地国家公园",
+      "docs": 6,
+      "scoped_chars": 24494,
+      "mentions_by_type": {
+        "POI": 331,
+        "TRANSPORT": 134,
+        "TIME": 93
+      },
+      "entities_by_type": {
+        "POI": 16,
+        "TRANSPORT": 6,
+        "TIME": 49
+      }
+    },
+    {
+      "scenic_id": "S003",
+      "scenic_name": "澳大利亚蓝山国家公园",
+      "docs": 6,
+      "scoped_chars": 8335,
+      "mentions_by_type": {
+        "POI": 125,
+        "TRANSPORT": 124,
+        "TIME": 50
+      },
+      "entities_by_type": {
+        "POI": 13,
+        "TRANSPORT": 8,
+        "TIME": 18
+      }
+    }
+  ],
+  "top_entities": {
+    "POI": [
+      {
+        "entity_id": "S001_POI_001",
+        "canonical_name": "箱根",
+        "scenic_id": "S001",
+        "count": 144
+      },
+      {
+        "entity_id": "S002_POI_NOISE_瀑布",
+        "canonical_name": "瀑布",
+        "scenic_id": "S002",
+        "count": 80
+      },
+      {
+        "entity_id": "S001_POI_002",
+        "canonical_name": "大涌谷",
+        "scenic_id": "S001",
+        "count": 52
+      },
+      {
+        "entity_id": "S002_POI_004",
+        "canonical_name": "Half Dome",
+        "scenic_id": "S002",
+        "count": 43
+      },
+      {
+        "entity_id": "S002_POI_NOISE_公园",
+        "canonical_name": "公园",
+        "scenic_id": "S002",
+        "count": 35
+      },
+      {
+        "entity_id": "S002_POI_NOISE_景区",
+        "canonical_name": "景区",
+        "scenic_id": "S002",
+        "count": 34
+      },
+      {
+        "entity_id": "S002_POI_002",
+        "canonical_name": "Yosemite Valley",
+        "scenic_id": "S002",
+        "count": 32
+      },
+      {
+        "entity_id": "S001_POI_NOISE_温泉",
+        "canonical_name": "温泉",
+        "scenic_id": "S001",
+        "count": 31
+      },
+      {
+        "entity_id": "S001_POI_004",
+        "canonical_name": "富士山",
+        "scenic_id": "S001",
+        "count": 28
+      },
+      {
+        "entity_id": "S003_POI_009",
+        "canonical_name": "悉尼",
+        "scenic_id": "S003",
+        "count": 28
+      },
+      {
+        "entity_id": "S001_POI_003",
+        "canonical_name": "芦之湖",
+        "scenic_id": "S001",
+        "count": 27
+      },
+      {
+        "entity_id": "S001_POI_NOISE_公园",
+        "canonical_name": "公园",
+        "scenic_id": "S001",
+        "count": 19
+      }
+    ],
+    "TRANSPORT": [
+      {
+        "entity_id": "S002_TRANSPORT_NOISE_车",
+        "canonical_name": "车",
+        "scenic_id": "S002",
+        "count": 67
+      },
+      {
+        "entity_id": "S003_TRANSPORT_NOISE_车",
+        "canonical_name": "车",
+        "scenic_id": "S003",
+        "count": 52
+      },
+      {
+        "entity_id": "S001_TRANSPORT_NOISE_车",
+        "canonical_name": "车",
+        "scenic_id": "S001",
+        "count": 49
+      },
+      {
+        "entity_id": "S002_TRANSPORT_001",
+        "canonical_name": "步行",
+        "scenic_id": "S002",
+        "count": 37
+      },
+      {
+        "entity_id": "S001_TRANSPORT_NOISE_船",
+        "canonical_name": "船",
+        "scenic_id": "S001",
+        "count": 35
+      },
+      {
+        "entity_id": "S001_TRANSPORT_005",
+        "canonical_name": "缆车",
+        "scenic_id": "S001",
+        "count": 22
+      },
+      {
+        "entity_id": "S003_TRANSPORT_001",
+        "canonical_name": "步行",
+        "scenic_id": "S003",
+        "count": 17
+      },
+      {
+        "entity_id": "S003_TRANSPORT_004",
+        "canonical_name": "自驾",
+        "scenic_id": "S003",
+        "count": 17
+      },
+      {
+        "entity_id": "S002_TRANSPORT_004",
+        "canonical_name": "自驾",
+        "scenic_id": "S002",
+        "count": 15
+      },
+      {
+        "entity_id": "S001_TRANSPORT_003",
+        "canonical_name": "列车",
+        "scenic_id": "S001",
+        "count": 14
+      },
+      {
+        "entity_id": "S001_TRANSPORT_006",
+        "canonical_name": "游船",
+        "scenic_id": "S001",
+        "count": 14
+      },
+      {
+        "entity_id": "S003_TRANSPORT_002",
+        "canonical_name": "巴士",
+        "scenic_id": "S003",
+        "count": 13
+      }
+    ],
+    "TIME": [
+      {
+        "entity_id": "S002_TIME_003",
+        "canonical_name": "下午",
+        "scenic_id": "S002",
+        "count": 12
+      },
+      {
+        "entity_id": "S002_TIME_004",
+        "canonical_name": "一天",
+        "scenic_id": "S002",
+        "count": 10
+      },
+      {
+        "entity_id": "S002_TIME_006",
+        "canonical_name": "晚上",
+        "scenic_id": "S002",
+        "count": 7
+      },
+      {
+        "entity_id": "S002_TIME_011",
+        "canonical_name": "早上",
+        "scenic_id": "S002",
+        "count": 7
+      },
+      {
+        "entity_id": "S003_TIME_001",
+        "canonical_name": "一日",
+        "scenic_id": "S003",
+        "count": 7
+      },
+      {
+        "entity_id": "S003_TIME_005",
+        "canonical_name": "一天",
+        "scenic_id": "S003",
+        "count": 7
+      },
+      {
+        "entity_id": "S003_TIME_009",
+        "canonical_name": "下午",
+        "scenic_id": "S003",
+        "count": 7
+      },
+      {
+        "entity_id": "S003_TIME_004",
+        "canonical_name": "夜间",
+        "scenic_id": "S003",
+        "count": 5
+      },
+      {
+        "entity_id": "S002_TIME_007",
+        "canonical_name": "两天",
+        "scenic_id": "S002",
+        "count": 4
+      },
+      {
+        "entity_id": "S002_TIME_022",
+        "canonical_name": "上午",
+        "scenic_id": "S002",
+        "count": 4
+      },
+      {
+        "entity_id": "S003_TIME_002",
+        "canonical_name": "90分钟",
+        "scenic_id": "S003",
+        "count": 4
+      },
+      {
+        "entity_id": "S003_TIME_003",
+        "canonical_name": "两小时",
+        "scenic_id": "S003",
+        "count": 4
+      }
+    ]
+  }
+}
