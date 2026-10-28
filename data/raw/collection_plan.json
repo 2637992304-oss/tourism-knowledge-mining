@@ -1,0 +1,324 @@
+{
+  "schema_version": "1.0",
+  "corpus_version": "v1",
+  "sources": [
+    {
+      "doc_id": "S001_OFF_001",
+      "scenic_id": "S001",
+      "scenic_name": "日本箱根",
+      "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+      "text_type": "official_route",
+      "language": "zh",
+      "scope_note": "小田急箱根运营方官网示范行程；7:30新宿出发至17:00汤本购物；景区外接驳起点仍保留。",
+      "pages": [
+        {
+          "url": "https://www.hakonenavi.jp/international/cn/course/515",
+          "xpath": "//div[@id=\"content\"]",
+          "encoding": "utf-8",
+          "expected_nodes": 1
+        }
+      ]
+    },
+    {
+      "doc_id": "S001_VIS_001",
+      "scenic_id": "S001",
+      "scenic_name": "日本箱根",
+      "source_title": "第三次日本行：3湖尻〜大涌谷徒步",
+      "text_type": "visitor_diary",
+      "language": "zh",
+      "scope_note": "真实游客综合游记；保留园外行程和历史陈述，下游按景区范围筛选，价格、路况不作为当前事实。",
+      "pages": [
+        {
+          "url": "https://you.ctrip.com/travels/Hakone60571/1826441.html",
+          "xpath": "//div[contains(@class,\"rich-text-container\")]",
+          "encoding": "utf-8",
+          "expected_nodes": 1
+        }
+      ]
+    },
+    {
+      "doc_id": "S001_VIS_002",
+      "scenic_id": "S001",
+      "scenic_name": "日本箱根",
+      "source_title": "日本，山梨县的忍野八海。箱跟县的芦之湖，大涌谷。",
+      "text_type": "visitor_diary",
+      "language": "zh",
+      "scope_note": "真实游客综合游记；保留园外行程和历史陈述，下游按景区范围筛选，价格、路况不作为当前事实。",
+      "pages": [
+        {
+          "url": "https://you.ctrip.com/travels/Hakone60571/2238115.html",
+          "xpath": "//div[contains(@class,\"rich-text-container\")]",
+          "encoding": "utf-8",
+          "expected_nodes": 1
+        }
+      ]
+    },
+    {
+      "doc_id": "S001_VIS_003",
+      "scenic_id": "S001",
+      "scenic_name": "日本箱根",
+      "source_title": "箱根温泉2日之旅",
+      "text_type": "visitor_diary",
+      "language": "zh",
+      "scope_note": "真实游客综合游记；保留园外行程和历史陈述，下游按景区范围筛选，价格、路况不作为当前事实。",
+      "pages": [
+        {
+          "url": "https://you.ctrip.com/travels/Japan100041/4120600.html",
+          "xpath": "//div[contains(@class,\"rich-text-container\")]",
+          "encoding": "utf-8",
+          "expected_nodes": 1
+        }
+      ]
+    },
+    {
+      "doc_id": "S001_VIS_004",
+      "scenic_id": "S001",
+      "scenic_name": "日本箱根",
+      "source_title": "九天八晚日本游",
+      "text_type": "visitor_diary",
+      "language": "zh",
+      "scope_note": "真实游客综合游记；保留园外行程和历史陈述，下游按景区范围筛选，价格、路况不作为当前事实。",
+      "pages": [
+        {
+          "url": "https://you.ctrip.com/travels/Tokyo294/3968014.html",
+          "xpath": "//div[contains(@class,\"rich-text-container\")]",
+          "encoding": "utf-8",
+          "expected_nodes": 1
+        }
+      ]
+    },
+    {
+      "doc_id": "S001_VIS_005",
+      "scenic_id": "S001",
+      "scenic_name": "日本箱根",
+      "source_title": "#2023年国庆#北海道登别函馆+东京富士山箱根横滨十日游",
+      "text_type": "visitor_diary",
+      "language": "zh",
+      "scope_note": "真实游客综合游记；保留园外行程和历史陈述，下游按景区范围筛选，价格、路况不作为当前事实。",
+      "pages": [
+        {
+          "url": "https://you.ctrip.com/travels/Japan100041/4114114.html",
+          "xpath": "//div[contains(@class,\"rich-text-container\")]",
+          "encoding": "utf-8",
+          "expected_nodes": 1
+        }
+      ]
+    },
+    {
+      "doc_id": "S002_OFF_001",
+      "scenic_id": "S002",
+      "scenic_name": "美国优胜美地国家公园",
+      "source_title": "Yosemite Valley Loop Trail 与谷地日间步道指南",
+      "text_type": "official_route",
+      "language": "en",
+      "scope_note": "美国国家公园管理局(NPS)官网谷地环线及可选步道；主路线与备选步道不拼成一条实际行程。",
+      "pages": [
+        {
+          "url": "https://www.nps.gov/yose/planyourvisit/valleylooptrail.htm",
+          "xpath": "(//div[contains(@class,\"ColumnMain\")])[1]",
+          "encoding": "utf-8",
+          "expected_nodes": 1
+        },
+        {
+          "url": "https://www.nps.gov/yose/planyourvisit/valleyhikes.htm",
+          "xpath": "(//div[contains(@class,\"ColumnMain\")])[1]",
+          "encoding": "utf-8",
+          "expected_nodes": 1
+        }
+      ]
+    },
+    {
+      "doc_id": "S002_VIS_001",
+      "scenic_id": "S002",
+      "scenic_name": "美国优胜美地国家公园",
+      "source_title": "22年7月优胜美地三日自驾",
+      "text_type": "visitor_diary",
+      "language": "zh",
+      "scope_note": "真实游客综合游记；保留园外行程和历史陈述，下游按景区范围筛选，价格、路况不作为当前事实。",
+      "pages": [
+        {
+          "url": "https://you.ctrip.com/travels/unitedstates100047/4075943.html",
+          "xpath": "//div[contains(@class,\"rich-text-container\")]",
+          "encoding": "utf-8",
+          "expected_nodes": 1
+        }
+      ]
+    },
+    {
+      "doc_id": "S002_VIS_002",
+      "scenic_id": "S002",
+      "scenic_name": "美国优胜美地国家公园",
+      "source_title": "【带着爸爸去旅行】驰聘美西18日，新手女司机的第一个5600公里",
+      "text_type": "visitor_diary",
+      "language": "zh",
+      "scope_note": "真实游客综合游记；保留园外行程和历史陈述，下游按景区范围筛选，价格、路况不作为当前事实。",
+      "pages": [
+        {
+          "url": "https://you.ctrip.com/travels/westcoastoftheunitedstates1446740/3948721.html",
+          "xpath": "//div[contains(@class,\"rich-text-container\")]",
+          "encoding": "utf-8",
+          "expected_nodes": 1
+        }
+      ]
+    },
+    {
+      "doc_id": "S002_VIS_003",
+      "scenic_id": "S002",
+      "scenic_name": "美国优胜美地国家公园",
+      "source_title": "群山在呼唤 – 优胜美地、猛犸湖游记及住宿体验",
+      "text_type": "visitor_diary",
+      "language": "zh",
+      "scope_note": "游客一手亲历文章；保留个人观点、历史条件和园外行程，不视为当前官方事实。",
+      "pages": [
+        {
+          "url": "https://www.uscreditcardguide.com/qunshanzaihuhuan-youshengmeidimengmahuyoujijizhusutiyan/",
+          "xpath": "//div[@class=\"entry-content-inner\"]",
+          "encoding": "utf-8",
+          "expected_nodes": 1
+        }
+      ]
+    },
+    {
+      "doc_id": "S002_VIS_004",
+      "scenic_id": "S002",
+      "scenic_name": "美国优胜美地国家公园",
+      "source_title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则",
+      "text_type": "visitor_diary",
+      "language": "zh",
+      "scope_note": "游客一手亲历文章；保留个人观点、历史条件和园外行程，不视为当前官方事实。",
+      "pages": [
+        {
+          "url": "https://www.uscreditcardguide.com/yosemite-firefall-2021/",
+          "xpath": "//div[@class=\"entry-content-inner\"]",
+          "encoding": "utf-8",
+          "expected_nodes": 1
+        }
+      ]
+    },
+    {
+      "doc_id": "S002_VIS_005",
+      "scenic_id": "S002",
+      "scenic_name": "美国优胜美地国家公园",
+      "source_title": "北美 ｜ 国家公园(1)：Yosemite优胜美地",
+      "text_type": "visitor_diary",
+      "language": "zh",
+      "scope_note": "游客一手亲历文章；保留个人观点、历史条件和园外行程，不视为当前官方事实。",
+      "pages": [
+        {
+          "url": "https://www.8264.com/youji/5722172.html",
+          "xpath": "//div[contains(@class,\"art-content-old\")]",
+          "encoding": "gb18030",
+          "expected_nodes": 1
+        }
+      ]
+    },
+    {
+      "doc_id": "S003_OFF_001",
+      "scenic_id": "S003",
+      "scenic_name": "澳大利亚蓝山国家公园",
+      "source_title": "Grand Cliff Top Walk 与蓝山一日游指南",
+      "text_type": "official_route",
+      "language": "en",
+      "scope_note": "NSW国家公园部门19km两日步道及旅游局中文一日游；二者为备选路线，不强制拼接。",
+      "pages": [
+        {
+          "url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+          "xpath": "//div[@id=\"tagline-and-intro-text-item\"] | //section[@id=\"packages-carousel-advanced\"] | /html/body/div[contains(@class,\"container-xl p-5\")][position()<=2]",
+          "encoding": "utf-8",
+          "expected_nodes": 4
+        },
+        {
+          "url": "https://www.visitnsw.com/cn/articles/blue-mountains-scenic-day-trip",
+          "xpath": "//article[contains(@class,\"article full\")]",
+          "encoding": "utf-8",
+          "expected_nodes": 1
+        }
+      ]
+    },
+    {
+      "doc_id": "S003_VIS_001",
+      "scenic_id": "S003",
+      "scenic_name": "澳大利亚蓝山国家公园",
+      "source_title": "独行澳大利亚之二十悉尼蓝山",
+      "text_type": "visitor_diary",
+      "language": "zh",
+      "scope_note": "真实游客综合游记；保留园外行程和历史陈述，下游按景区范围筛选，价格、路况不作为当前事实。",
+      "pages": [
+        {
+          "url": "https://you.ctrip.com/travels/Australia100048/1884682.html",
+          "xpath": "//div[contains(@class,\"rich-text-container\")]",
+          "encoding": "utf-8",
+          "expected_nodes": 1
+        }
+      ]
+    },
+    {
+      "doc_id": "S003_VIS_002",
+      "scenic_id": "S003",
+      "scenic_name": "澳大利亚蓝山国家公园",
+      "source_title": "寻找他乡的故事之澳大利亚篇（悉尼+大洋路十二使徒岩+墨尔本）",
+      "text_type": "visitor_diary",
+      "language": "zh",
+      "scope_note": "真实游客综合游记；保留园外行程和历史陈述，下游按景区范围筛选，价格、路况不作为当前事实。",
+      "pages": [
+        {
+          "url": "https://you.ctrip.com/travels/2025149/4147315.html",
+          "xpath": "//div[contains(@class,\"rich-text-container\")]",
+          "encoding": "utf-8",
+          "expected_nodes": 1
+        }
+      ]
+    },
+    {
+      "doc_id": "S003_VIS_003",
+      "scenic_id": "S003",
+      "scenic_name": "澳大利亚蓝山国家公园",
+      "source_title": "澳大利亚：城市繁华与原始自然的奇幻邂逅",
+      "text_type": "visitor_diary",
+      "language": "zh",
+      "scope_note": "真实游客综合游记；保留园外行程和历史陈述，下游按景区范围筛选，价格、路况不作为当前事实。",
+      "pages": [
+        {
+          "url": "https://you.ctrip.com/travels/australia100048/4157580.html",
+          "xpath": "//div[contains(@class,\"rich-text-container\")]",
+          "encoding": "utf-8",
+          "expected_nodes": 1
+        }
+      ]
+    },
+    {
+      "doc_id": "S003_VIS_004",
+      "scenic_id": "S003",
+      "scenic_name": "澳大利亚蓝山国家公园",
+      "source_title": "澳大利亚 | 20度过夏天，感受属于新南威尔士州的宁静与缤纷",
+      "text_type": "visitor_diary",
+      "language": "zh",
+      "scope_note": "真实游客综合游记；保留园外行程和历史陈述，下游按景区范围筛选，价格、路况不作为当前事实。",
+      "pages": [
+        {
+          "url": "https://you.ctrip.com/travels/australia100048/4106559.html",
+          "xpath": "//div[contains(@class,\"rich-text-container\")]",
+          "encoding": "utf-8",
+          "expected_nodes": 1
+        }
+      ]
+    },
+    {
+      "doc_id": "S003_VIS_005",
+      "scenic_id": "S003",
+      "scenic_name": "澳大利亚蓝山国家公园",
+      "source_title": "蓝山公园（Blue Mountains National Park）——澳大利亚悉尼游记（3）",
+      "text_type": "visitor_diary",
+      "language": "zh",
+      "scope_note": "游客一手亲历文章；保留个人观点、历史条件和园外行程，不视为当前官方事实。",
+      "pages": [
+        {
+          "url": "https://www.meipian.cn/4012kleg",
+          "xpath": "//article",
+          "encoding": "utf-8",
+          "expected_nodes": 1
+        }
+      ]
+    }
+  ]
+}

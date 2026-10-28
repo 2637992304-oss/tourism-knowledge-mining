@@ -1,0 +1,261 @@
+{
+  "schema_version": "1.0",
+  "corpus_version": "v1",
+  "review_scope": "逐篇检查18篇正文、景区相关性及官方步骤；由本次实验辅助整理完成，未冒称组员已验收。",
+  "regression_tests": 8,
+  "regression_passed": true,
+  "documents": [
+    {
+      "doc_id": "S001_OFF_001",
+      "title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+      "text_type": "official_route",
+      "clean_chars": 3339,
+      "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+      "evidence": {
+        "doc_id": "S001_OFF_001",
+        "start": 7,
+        "end": 87,
+        "text": "箱根!推荐当日往返的标准路线—特定景点环游之旅\n2024.06.25\n精品路线\n观光\n食物\n体验\n购物\n距离东京都约1.5小时车程,可以充分享受优美的自然环境和"
+      },
+      "review": "正文和来源可读，存在本景区的一手游览或官方路线内容；综合游记保留景区外信息并在scope_note标明。"
+    },
+    {
+      "doc_id": "S001_VIS_001",
+      "title": "第三次日本行：3湖尻〜大涌谷徒步",
+      "text_type": "visitor_diary",
+      "clean_chars": 993,
+      "source_url": "https://you.ctrip.com/travels/Hakone60571/1826441.html",
+      "evidence": {
+        "doc_id": "S001_VIS_001",
+        "start": 21,
+        "end": 101,
+        "text": "箱根登山吊舱(rope way)到终点桃源台下车,走出站外的湖边即能看见一个徒步路线的标识牌。这是一条享受森林浴的徒步线路,而且难度不大、老少皆宜。\n黑石渣铺成"
+      },
+      "review": "正文和来源可读，存在本景区的一手游览或官方路线内容；综合游记保留景区外信息并在scope_note标明。"
+    },
+    {
+      "doc_id": "S001_VIS_002",
+      "title": "日本，山梨县的忍野八海。箱跟县的芦之湖，大涌谷。",
+      "text_type": "visitor_diary",
+      "clean_chars": 2070,
+      "source_url": "https://you.ctrip.com/travels/Hakone60571/2238115.html",
+      "evidence": {
+        "doc_id": "S001_VIS_002",
+        "start": 998,
+        "end": 1078,
+        "text": "箱根市境内,是富士箱根著名的观光景点。日本旅游胜地大涌谷是大约40万年前箱根火山活动的末期,神山的北山腹发生的火山大喷发形成的火山口遗迹。又称“大地狱”。大涌谷"
+      },
+      "review": "正文和来源可读，存在本景区的一手游览或官方路线内容；综合游记保留景区外信息并在scope_note标明。"
+    },
+    {
+      "doc_id": "S001_VIS_003",
+      "title": "箱根温泉2日之旅",
+      "text_type": "visitor_diary",
+      "clean_chars": 972,
+      "source_url": "https://you.ctrip.com/travels/Japan100041/4120600.html",
+      "evidence": {
+        "doc_id": "S001_VIS_003",
+        "start": 0,
+        "end": 80,
+        "text": "箱根是日本泡温泉比较有名的地方,也是当地人喜欢的温泉之乡.所以这次日本游就规划了箱根泡温泉之旅.首先买了小田急线的箱根2日周游券,这个券用下来实在是太方便了!我"
+      },
+      "review": "正文和来源可读，存在本景区的一手游览或官方路线内容；综合游记保留景区外信息并在scope_note标明。"
+    },
+    {
+      "doc_id": "S001_VIS_004",
+      "title": "九天八晚日本游",
+      "text_type": "visitor_diary",
+      "clean_chars": 15297,
+      "source_url": "https://you.ctrip.com/travels/Tokyo294/3968014.html",
+      "evidence": {
+        "doc_id": "S001_VIS_004",
+        "start": 279,
+        "end": 359,
+        "text": "箱根,游览箱根大涌谷,宿箱根第五天:游览箱根平和公园、芦之湖,下午赴名古屋,游览名古屋,宿名古屋。第六天:赴京都,游览金阁寺,平安神宫、岚山等,宿京都第七天:飞"
+      },
+      "review": "正文和来源可读，存在本景区的一手游览或官方路线内容；综合游记保留景区外信息并在scope_note标明。"
+    },
+    {
+      "doc_id": "S001_VIS_005",
+      "title": "#2023年国庆#北海道登别函馆+东京富士山箱根横滨十日游",
+      "text_type": "visitor_diary",
+      "clean_chars": 7124,
+      "source_url": "https://you.ctrip.com/travels/Japan100041/4114114.html",
+      "evidence": {
+        "doc_id": "S001_VIS_005",
+        "start": 5756,
+        "end": 5836,
+        "text": "箱根-下北泽-秋叶原\n✅购买箱根周游券6100日元/人\n箱根周游券购买地点\n1️⃣新宿西口小田急服务中心(8:00营业)\n2️⃣自助售票机(!!️只能买当天)\n"
+      },
+      "review": "正文和来源可读，存在本景区的一手游览或官方路线内容；综合游记保留景区外信息并在scope_note标明。"
+    },
+    {
+      "doc_id": "S002_OFF_001",
+      "title": "Yosemite Valley Loop Trail 与谷地日间步道指南",
+      "text_type": "official_route",
+      "clean_chars": 6556,
+      "source_url": "https://www.nps.gov/yose/planyourvisit/valleylooptrail.htm",
+      "evidence": {
+        "doc_id": "S002_OFF_001",
+        "start": 0,
+        "end": 80,
+        "text": "Yosemite Valley Loop Trail\nValley Loop Trail Closure Across El Capitan Bridge\nTh"
+      },
+      "review": "正文和来源可读，存在本景区的一手游览或官方路线内容；综合游记保留景区外信息并在scope_note标明。"
+    },
+    {
+      "doc_id": "S002_VIS_001",
+      "title": "22年7月优胜美地三日自驾",
+      "text_type": "visitor_diary",
+      "clean_chars": 6529,
+      "source_url": "https://you.ctrip.com/travels/unitedstates100047/4075943.html",
+      "evidence": {
+        "doc_id": "S002_VIS_001",
+        "start": 2,
+        "end": 82,
+        "text": "优胜美地2022年7月游记\n引子:早在2020年就计划好来美国游览优胜美地,而且打算选在5月份瀑布水最多时前往,但是正赶上年初的新冠疫情爆发,所有的旅行计划都泡"
+      },
+      "review": "正文和来源可读，存在本景区的一手游览或官方路线内容；综合游记保留景区外信息并在scope_note标明。"
+    },
+    {
+      "doc_id": "S002_VIS_002",
+      "title": "【带着爸爸去旅行】驰聘美西18日，新手女司机的第一个5600公里",
+      "text_type": "visitor_diary",
+      "clean_chars": 65872,
+      "source_url": "https://you.ctrip.com/travels/westcoastoftheunitedstates1446740/3948721.html",
+      "evidence": {
+        "doc_id": "S002_VIS_002",
+        "start": 788,
+        "end": 868,
+        "text": "优胜美地〗\n〖旧金山艺术宫〗\n〖雾锁金门〗\n〖一号公路〗\n〖索尔万〗\n〖好莱坞环球影城〗\n〖圣莫妮卡海滩〗\n〖约书亚树国家公园〗\n〖救赎山〗\n【行程】\n我从哥斯"
+      },
+      "review": "正文和来源可读，存在本景区的一手游览或官方路线内容；综合游记保留景区外信息并在scope_note标明。"
+    },
+    {
+      "doc_id": "S002_VIS_003",
+      "title": "群山在呼唤 – 优胜美地、猛犸湖游记及住宿体验",
+      "text_type": "visitor_diary",
+      "clean_chars": 8715,
+      "source_url": "https://www.uscreditcardguide.com/qunshanzaihuhuan-youshengmeidimengmahuyoujijizhusutiyan/",
+      "evidence": {
+        "doc_id": "S002_VIS_003",
+        "start": 278,
+        "end": 358,
+        "text": "优胜美地国家公园\nYosemite,优胜美地,一个信达雅的中文翻译,让这个国家公园中文听上去比英文更美。Yosemite 好多季节性小秘密都深受游客们喜爱,比如"
+      },
+      "review": "正文和来源可读，存在本景区的一手游览或官方路线内容；综合游记保留景区外信息并在scope_note标明。"
+    },
+    {
+      "doc_id": "S002_VIS_004",
+      "title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则",
+      "text_type": "visitor_diary",
+      "clean_chars": 3385,
+      "source_url": "https://www.uscreditcardguide.com/yosemite-firefall-2021/",
+      "evidence": {
+        "doc_id": "S002_VIS_004",
+        "start": 14,
+        "end": 94,
+        "text": "优胜美地,是我觉得所有美国国家公园里翻译得最“信、达、雅”的一家,光看名字就给人无限遐想。最早知道Yosemite是因为被冰川作用削掉一半的花岗岩穹(名字也很容"
+      },
+      "review": "正文和来源可读，存在本景区的一手游览或官方路线内容；综合游记保留景区外信息并在scope_note标明。"
+    },
+    {
+      "doc_id": "S002_VIS_005",
+      "title": "北美 ｜ 国家公园(1)：Yosemite优胜美地",
+      "text_type": "visitor_diary",
+      "clean_chars": 2028,
+      "source_url": "https://www.8264.com/youji/5722172.html",
+      "evidence": {
+        "doc_id": "S002_VIS_005",
+        "start": 0,
+        "end": 80,
+        "text": "优胜美地离旧金山3.5小时车程,是户外活动的大本营,比如前几年爆火的《Free Solo》就是酋长岩攀登的纪录片,屏息凝神中的惊心动魄。网上的信息说优胜美地国家"
+      },
+      "review": "正文和来源可读，存在本景区的一手游览或官方路线内容；综合游记保留景区外信息并在scope_note标明。"
+    },
+    {
+      "doc_id": "S003_OFF_001",
+      "title": "Grand Cliff Top Walk 与蓝山一日游指南",
+      "text_type": "official_route",
+      "clean_chars": 5322,
+      "source_url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+      "evidence": {
+        "doc_id": "S003_OFF_001",
+        "start": 1388,
+        "end": 1468,
+        "text": "蓝山距离悉尼仅一小段车程,拥有您完美一日游所需的一切:清新的空气、美味的食物和壮丽的景色。跟随我们的指南,开启完美的一日游。\n一日游概览\n| 从悉尼中央商务区 "
+      },
+      "review": "正文和来源可读，存在本景区的一手游览或官方路线内容；综合游记保留景区外信息并在scope_note标明。"
+    },
+    {
+      "doc_id": "S003_VIS_001",
+      "title": "独行澳大利亚之二十悉尼蓝山",
+      "text_type": "visitor_diary",
+      "clean_chars": 1608,
+      "source_url": "https://you.ctrip.com/travels/Australia100048/1884682.html",
+      "evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 19,
+        "end": 99,
+        "text": "蓝山一日游,20元澳币的优惠价格仅包含了车费。澳大利亚的动物园很多,去蓝山的路上又路过一个动物园,门票25澳币。\n从动物园出来,临近中午,导游就安排我们在半路的"
+      },
+      "review": "正文和来源可读，存在本景区的一手游览或官方路线内容；综合游记保留景区外信息并在scope_note标明。"
+    },
+    {
+      "doc_id": "S003_VIS_002",
+      "title": "寻找他乡的故事之澳大利亚篇（悉尼+大洋路十二使徒岩+墨尔本）",
+      "text_type": "visitor_diary",
+      "clean_chars": 4632,
+      "source_url": "https://you.ctrip.com/travels/2025149/4147315.html",
+      "evidence": {
+        "doc_id": "S003_VIS_002",
+        "start": 1864,
+        "end": 1944,
+        "text": "蓝山国家公园\n有朋友推荐我们去蓝山国家公园,我们出发之前也并没有想到去这个公园,总觉得公园都是人造的,哪里都有,但是经不住同事的热烈推荐,临时做了一下攻略,然后"
+      },
+      "review": "正文和来源可读，存在本景区的一手游览或官方路线内容；综合游记保留景区外信息并在scope_note标明。"
+    },
+    {
+      "doc_id": "S003_VIS_003",
+      "title": "澳大利亚：城市繁华与原始自然的奇幻邂逅",
+      "text_type": "visitor_diary",
+      "clean_chars": 12008,
+      "source_url": "https://you.ctrip.com/travels/australia100048/4157580.html",
+      "evidence": {
+        "doc_id": "S003_VIS_003",
+        "start": 4465,
+        "end": 4545,
+        "text": "蓝山的魔咒\n悉尼郊外的蓝山国家公园(Blue Mountains National Park),2000年被列入世界自然遗产,是此次悉尼之行的重要一站。不巧的是"
+      },
+      "review": "正文和来源可读，存在本景区的一手游览或官方路线内容；综合游记保留景区外信息并在scope_note标明。"
+    },
+    {
+      "doc_id": "S003_VIS_004",
+      "title": "澳大利亚 | 20度过夏天，感受属于新南威尔士州的宁静与缤纷",
+      "text_type": "visitor_diary",
+      "clean_chars": 8028,
+      "source_url": "https://you.ctrip.com/travels/australia100048/4106559.html",
+      "evidence": {
+        "doc_id": "S003_VIS_004",
+        "start": 734,
+        "end": 814,
+        "text": "蓝山Megalong Creek Estate酒庄品酒 - 回到悉尼 - Nobu晚餐\n【Day 5 ~ Day 7 新州南部海岸】\nDay 5 The Gro"
+      },
+      "review": "正文和来源可读，存在本景区的一手游览或官方路线内容；综合游记保留景区外信息并在scope_note标明。"
+    },
+    {
+      "doc_id": "S003_VIS_005",
+      "title": "蓝山公园（Blue Mountains National Park）——澳大利亚悉尼游记（3）",
+      "text_type": "visitor_diary",
+      "clean_chars": 452,
+      "source_url": "https://www.meipian.cn/4012kleg",
+      "evidence": {
+        "doc_id": "S003_VIS_005",
+        "start": 0,
+        "end": 80,
+        "text": "蓝山公园(Blue Mountains National Park)——澳大利亚悉尼游记(3)\n长春(上海)\n蓝山山脉国家公园(Blue Mountains N"
+      },
+      "review": "正文和来源可读，存在本景区的一手游览或官方路线内容；综合游记保留景区外信息并在scope_note标明。"
+    }
+  ]
+}

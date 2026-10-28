@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "scenics": [
+    {
+      "scenic_id": "S001",
+      "scenic_name": "日本箱根",
+      "country": "日本",
+      "is_main": true,
+      "scope": "箱根主要游览区，保留新宿等接驳起点并标记景区外地点"
+    },
+    {
+      "scenic_id": "S002",
+      "scenic_name": "美国优胜美地国家公园",
+      "country": "美国",
+      "is_main": false,
+      "scope": "以Yosemite Valley为主要可比区域，其他园区路线保留原文范围"
+    },
+    {
+      "scenic_id": "S003",
+      "scenic_name": "澳大利亚蓝山国家公园",
+      "country": "澳大利亚",
+      "is_main": false,
+      "scope": "以Wentworth Falls、Leura、Katoomba及相邻接驳镇区为语料范围，镇区不视为公园内部景点"
+    }
+  ]
+}
