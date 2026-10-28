@@ -13,7 +13,8 @@
     "no_exact_stopwords": true,
     "deterministic_rerun": true,
     "ids_stable_after_document_reordering": true,
-    "review_reference_source_spans": true
+    "review_reference_source_spans": true,
+    "confirmed_poi_mappings": 2
   },
   "corpus_sha256": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0",
   "review_metrics": {

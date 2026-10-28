@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "python": "3.12.14",
+  "python": "3.13.9",
   "documents": 5,
   "characters": 6053,
   "cases": 59,
@@ -8,7 +8,7 @@
   "ids_unique": true,
   "input_hashes_unchanged": {
     "data/processed/corpus.jsonl": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0",
-    "data/outputs/entities.json": "a61b4ae87293d04896e9bca218acc15a9eeb622f326954908eab62fe3486ddb2",
+    "data/outputs/entities.json": "71598abfdec68cd99d3983cd5099ee07c653d41438968d14d7c9ee46ea6caac9",
     "data/resources/exp04_reference.json": "a24ca1764030d08ee294e4904a46d74fc6d9ae7bcae0b995a7082f3df18dd642"
   },
   "deterministic_rerun": true,

@@ -21,7 +21,7 @@ def load_json(path):
 
 def write_json(path,obj):
     path=Path(path);path.parent.mkdir(parents=True,exist_ok=True)
-    path.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    path.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
 
 def sha256(path):
     # 仓库将文本归一为LF；Windows工作区中已有JSON可能为CRLF。
