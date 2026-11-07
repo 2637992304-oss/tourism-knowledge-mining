@@ -1,0 +1,12 @@
+{
+  "schema_version":"1.0",
+  "cases":[
+    {"case_id":"AG_001","user_request":"我想带孩子在箱根玩一天，请基于图谱安排路线，并找明确适合亲子的建议。","expected_checks":["S001","family","duration_days=1","实际查询路线与family建议","缺整体适用性和耗时证据时partial"]},
+    {"case_id":"AG_002","user_request":"带老人去箱根，只看上午路线，有适合老人的建议吗？","expected_checks":["S001","elderly","morning","老人建议无匹配不能改成family或general","partial"]},
+    {"case_id":"AG_003","user_request":"情侣去蓝山两天，如果下雨，有哪些建议和可参考路线？","expected_checks":["S003","couple","duration_days=2","分别查询couple和weather建议","不声称已有两天完整路线","partial"]},
+    {"case_id":"AG_004","user_request":"请给我优胜美地的路线和避免拥挤的建议。","expected_checks":["S002","crowding","路线no_match但条件建议可查询","partial"]},
+    {"case_id":"AG_005","user_request":"带孩子玩一天，帮我规划。","expected_checks":["景区信息不足","请求澄清","不猜景区"]},
+    {"case_id":"AG_006","user_request":"去箱根，必须总共一天完成，但同时总共必须两天完成，不接受放宽。","expected_checks":["时间约束冲突","请求澄清","不伪造满足"]},
+    {"case_id":"AG_007","user_request":"给我黄山的游览路线。","expected_checks":["未知景区","不替换成箱根或蓝山","说明覆盖不足"]}
+  ]
+}

@@ -1,5 +1,7 @@
 # YZH 实验 3/6 运行与验收
 
+> 本文为YZH在提交60a7dda时的历史验收记录。FYH现接管实验6，当前v2完整融合与真实Agent联调见exp06_graph.md、exp07_agent.md和对应handoff。保留以下历史数量及署名，不把它们当作当前图谱数量。
+
 ## 环境与顺序
 
 代码使用 Python 3.11+ 语法；本次实际验证环境为 Python 3.12.14、NetworkX 3.4.2、Pillow 12.3.0，尚未在 Python 3.11 环境另行验证。入口均从项目根目录运行。

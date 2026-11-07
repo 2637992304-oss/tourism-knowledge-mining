@@ -70,41 +70,10 @@ def main():
             box(draw, (x, y), label, f, bucket_colors[step["time_bucket"]], width=540, height=82)
     im.save(output / "exp03_time_hierarchy.png")
 
-    graph = json.loads(Path("data/outputs/graph.json").read_text(encoding="utf-8"))
-    nodes = {n["node_id"]: n for n in graph["nodes"] if n["scenic_id"] == "S001"}
-    im = Image.new("RGB", (2700, 2100), "#f8fafc")
-    draw = ImageDraw.Draw(im)
-    draw.text((55, 30), "实验 6 · 箱根路线知识图谱", font=title, fill="#183344")
-    draw.text((55, 95), graph["completion_status"] + " / 已对齐实体按标准名称显示；条件建议输入状态见 graph.json", font=f, fill="#8b4a27")
-    draw.text((55, 145), "景区 → HAS_ROUTE → 路线 → HAS_STEP → 步骤 → VISITS → 地点；纵向箭头为 NEXT_STEP", font=f, fill="#486475")
-    positions = {}
-    kinds = [("SCENIC",), ("ROUTE",), ("STEP",), ("POI",), ("TIME", "TRANSPORT")]
-    for layer, group in enumerate(kinds):
-        ids = [key for key, node in nodes.items() if node["node_type"] in group]
-        for i, key in enumerate(ids):
-            positions[key] = (220 + layer*545, 280 + (i+0.5)*1600/max(len(ids), 1))
-    for edge in graph["edges"]:
-        if edge["source"] not in nodes or edge["target"] not in nodes:
-            continue
-        a, b = positions[edge["source"]], positions[edge["target"]]
-        if edge["relation"] == "NEXT_STEP":
-            arrow(draw, (a[0]-175, a[1]), (b[0]-175, b[1]), "#d19038", 3)
-        else:
-            arrow(draw, (a[0]+170, a[1]), (b[0]-170, b[1]))
-    for key, node in nodes.items():
-        kind = node["node_type"]
-        text = node["name"]
-        if kind == "ROUTE":
-            text = node["attributes"]["route_id"].replace("R_S001_", "")
-        if kind == "STEP":
-            at = node["attributes"]
-            text = f"{'官方' if 'OFF' in at['route_id'] else '游客'} 步骤 {at['step_no']} / {at['time_text'] or 'unknown'}"
-        if kind in ("TIME", "TRANSPORT"):
-            text = ("时间 " if kind == "TIME" else "交通 ") + text
-        box(draw, positions[key], text, f, PALETTE[kind], dark=kind in ("SCENIC", "ROUTE"))
-    draw.text((55, 2020), "数据源：graph.json；右列为 AT_TIME / USES_TRANSPORT 目标；已过滤未关联实体", font=f, fill="#486475")
-    im.save(output / "exp06_hakone_graph.png")
-    print("saved exp03_time_hierarchy.png and exp06_hakone_graph.png")
+    # FYH接管后的v2含CONDITION/ADVICE；统一使用完整布局，避免旧绘图漏节点。
+    from exp06_visualize import main as graph_figure
+    graph_figure()
+    print("saved exp03_time_hierarchy.png and complete exp06_hakone_graph.png")
 
 
 if __name__ == "__main__":

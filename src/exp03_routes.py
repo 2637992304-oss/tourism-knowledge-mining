@@ -128,7 +128,7 @@ def main():
                         raise ValueError(f"原文位置错误：{route['route_id']} 第 {no} 步")
         result = {"schema_version": "1.0", "corpus_version": version, "routes": routes}
         args.output.parent.mkdir(parents=True, exist_ok=True)
-        args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
         print(json.dumps({"routes": len(routes), "steps": [len(r["steps"]) for r in routes],
                           "output": str(args.output)}, ensure_ascii=False))
     except (OSError, ValueError, KeyError, json.JSONDecodeError) as exc:

@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "run_at": "2026-11-05T12:36:19+08:00",
+  "python": "3.12.6",
+  "checks": {
+    "protected_files_unchanged": true,
+    "exp05_passed": true,
+    "exp06_passed": true,
+    "exp07_live_passed": true,
+    "unit_tests_passed": true,
+    "all_artifacts_present": true,
+    "local_key_absent_from_shareable_files": true,
+    "all_s001_nodes_visualized": true
+  },
+  "passed": true,
+  "protected_files": {
+    "data/processed/corpus.jsonl": true,
+    "data/processed/scenic_registry.json": true,
+    "data/outputs/entities.json": true,
+    "data/outputs/coreference.json": true,
+    "data/outputs/coreference_resolved_documents.json": true,
+    "《数据挖掘》探索性实验任务书及评分细则【Final】.pdf": true,
+    "第X组_组长姓名_《数据挖掘》探索性实验报告（模板）.docx": true
+  },
+  "artifacts": {
+    "data/outputs/advice.json": true,
+    "data/outputs/graph.json": true,
+    "data/outputs/graph_nodes.csv": true,
+    "data/outputs/graph_edges.csv": true,
+    "data/outputs/agent_cases.json": true,
+    "reports/exp05_advice.md": true,
+    "reports/exp06_graph.md": true,
+    "reports/exp07_agent.md": true,
+    "reports/summary.md": true,
+    "results/checks/exp05_handoff.md": true,
+    "results/checks/exp06_handoff.md": true,
+    "results/checks/exp07_handoff.md": true
+  },
+  "figures": {
+    "exp03_time_hierarchy.png": {
+      "size": [
+        2400,
+        1600
+      ],
+      "format": "PNG",
+      "sha256": "b3cdf10e6c3e871f3c0fd4c35cd877946ce1a53de8000efc5ebc3877007ffe86"
+    },
+    "exp05_advice_statistics.png": {
+      "size": [
+        1600,
+        1000
+      ],
+      "format": "PNG",
+      "sha256": "955a4d084d2779578e42ac10930b6ef7beaae2ec49a87f911c430151a9b71e01"
+    },
+    "exp06_hakone_graph.png": {
+      "size": [
+        4500,
+        2684
+      ],
+      "format": "PNG",
+      "sha256": "549ffc6eb15c322beb4fe081b3bc6adf3c80bb87886788bc4c74e8cd97336702"
+    }
+  },
+  "graph_sha256": "d18c388356312dd762602795e0af9c5bba8d4468c920d74065bf6bd7730bd0df",
+  "metrics": {
+    "advice": 20,
+    "graph_nodes": 151,
+    "graph_edges": 205,
+    "live_cases": 7,
+    "api_requests": 20
+  },
+  "limitations": [
+    "程序核验与AI语义核验，未代替组员独立验收",
+    "图谱是有限历史语料，无完整时长/人群适用性/实时状态"
+  ]
+}

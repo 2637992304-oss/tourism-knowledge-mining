@@ -1,0 +1,22 @@
+{
+  "graph_sha256": "d18c388356312dd762602795e0af9c5bba8d4468c920d74065bf6bd7730bd0df",
+  "scenic_id": "S001",
+  "nodes": 69,
+  "edges": 103,
+  "node_types": {
+    "POI": 13,
+    "TIME": 12,
+    "TRANSPORT": 7,
+    "SCENIC": 1,
+    "ROUTE": 2,
+    "STEP": 16,
+    "CONDITION": 9,
+    "ADVICE": 9
+  },
+  "all_nodes_positioned": true,
+  "image_size": [
+    4500,
+    2684
+  ],
+  "labels_truncated": false
+}

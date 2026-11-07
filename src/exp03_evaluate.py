@@ -50,7 +50,7 @@ def main():
                             "visitor_steps": len(vis["steps"])})
     result = {"dataset_role": "development", "annotation_note": gold["annotation_note"],
               "routes": metrics, "evidence_checked": refs, "comparisons": comparisons}
-    Path("results/checks/exp03_metrics.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    Path("results/checks/exp03_metrics.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps({"routes": len(metrics), "matched": sum(m["matched"] for m in metrics),
                       "gold": sum(m["gold"] for m in metrics), "evidence_checked": refs}))
 

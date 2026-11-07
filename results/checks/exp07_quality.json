@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "cases": 7,
+  "api_requests": 20,
+  "model": "qwen3.8-flash",
+  "graph_sha256": "d18c388356312dd762602795e0af9c5bba8d4468c920d74065bf6bd7730bd0df",
+  "status_counts": {
+    "partial": 7
+  },
+  "checks": [
+    {
+      "case_id": "AG_001",
+      "passed": true,
+      "notes": [
+        "约束、真实工具结果、来源与部分满足状态通过程序核验"
+      ],
+      "semantic_review": "AI辅助检查；未由组员独立验收"
+    },
+    {
+      "case_id": "AG_002",
+      "passed": true,
+      "notes": [
+        "约束、真实工具结果、来源与部分满足状态通过程序核验"
+      ],
+      "semantic_review": "AI辅助检查；未由组员独立验收"
+    },
+    {
+      "case_id": "AG_003",
+      "passed": true,
+      "notes": [
+        "约束、真实工具结果、来源与部分满足状态通过程序核验"
+      ],
+      "semantic_review": "AI辅助检查；未由组员独立验收"
+    },
+    {
+      "case_id": "AG_004",
+      "passed": true,
+      "notes": [
+        "约束、真实工具结果、来源与部分满足状态通过程序核验"
+      ],
+      "semantic_review": "AI辅助检查；未由组员独立验收"
+    },
+    {
+      "case_id": "AG_005",
+      "passed": true,
+      "notes": [
+        "信息不足/未知景区/冲突：追问且未生成无证据行程"
+      ],
+      "semantic_review": "AI辅助检查；未由组员独立验收"
+    },
+    {
+      "case_id": "AG_006",
+      "passed": true,
+      "notes": [
+        "信息不足/未知景区/冲突：追问且未生成无证据行程"
+      ],
+      "semantic_review": "AI辅助检查；未由组员独立验收"
+    },
+    {
+      "case_id": "AG_007",
+      "passed": true,
+      "notes": [
+        "信息不足/未知景区/冲突：追问且未生成无证据行程"
+      ],
+      "semantic_review": "AI辅助检查；未由组员独立验收"
+    }
+  ]
+}

@@ -5,6 +5,8 @@ import csv
 import hashlib
 import json
 from pathlib import Path
+from mining_io import check_span, corpus, sha256
+from exp05_verify import validate as validate_advice
 
 
 def load(path, field, version):
@@ -25,11 +27,20 @@ def name_id(scenic_id, name):
     return f"N_POI_{scenic_id}_{digest}"
 
 
-def build(routes_data, registry, entities=None, advice=None):
+def build(routes_data, registry, entities=None, advice=None, docs=None):
     version = routes_data["corpus_version"]
     if routes_data.get("schema_version") != "1.0" or not isinstance(routes_data.get("routes"), list):
         raise ValueError("路线文件结构错误")
     nodes, edges = {}, {}
+    if docs is not None:
+        if {d['corpus_version'] for d in docs.values()} != {version}:raise ValueError('语料版本不一致')
+        if advice is not None:
+            if entities is None:raise ValueError('建议融合需正式实体目录')
+            validate_advice(advice,docs,entities)
+        for route in routes_data['routes']:
+            if route['doc_id'] not in docs or docs[route['doc_id']]['scenic_id']!=route['scenic_id']:raise ValueError('路线文档景区不一致')
+            for step in route['steps']:
+                for ref in step['evidence']:check_span(ref,docs)
 
     def node(node_id, kind, name, scenic_id, refs, attrs):
         if node_id in nodes:
@@ -55,6 +66,10 @@ def build(routes_data, registry, entities=None, advice=None):
     inactive = {item["entity_id"] for item in full_catalog if not item.get("active", True)}
     catalog = {item["entity_id"]: item for item in full_catalog if item["entity_id"] not in inactive}
     mentions = [m for m in (entities or {}).get("mentions", []) if m["entity_id"] not in inactive]
+    if docs is not None:
+        for mention in mentions:
+            ref=mention['span'];check_span(ref,docs)
+            if mention['entity_id'] not in catalog or catalog[mention['entity_id']]['scenic_id']!=docs[ref['doc_id']]['scenic_id']:raise ValueError('实体提及引用无效或跨景区')
     entity_nodes = {}
     for entity_id, item in catalog.items():
         scenic_id, kind = item["scenic_id"], item["entity_type"]
@@ -150,7 +165,10 @@ def build(routes_data, registry, entities=None, advice=None):
              {"advice_id": advice_id, "condition_type": item["condition_type"],
               "visitor_types": item.get("visitor_types", []), "evidence": item["evidence"]})
         node(advice_node_id, "ADVICE", item["suggestion_text"], scenic_id, [doc_id],
-             {"advice_id": advice_id, "method": item.get("method"), "evidence": item["evidence"]})
+             {"advice_id": advice_id, "method": item.get("method"), "evidence": item["evidence"],
+              "condition_span":item.get('condition_span'),"suggestion_span":item.get('suggestion_span'),
+              "source_text_type":item.get('source_text_type'),"temporal_note":item.get('temporal_note'),
+              "duplicate_group":item.get('duplicate_group'),"review_correction":item.get('review_correction')})
         edge(f"EDGE_HAS_ADVICE_{advice_id}", sid, advice_node_id, "HAS_ADVICE", [doc_id])
         edge(f"EDGE_TRIGGERS_{advice_id}", condition_id, advice_node_id, "TRIGGERS", [doc_id])
         for entity_id in item.get("related_entity_ids", []):
@@ -159,13 +177,12 @@ def build(routes_data, registry, entities=None, advice=None):
             entity = catalog[entity_id]
             if entity["scenic_id"] != scenic_id:
                 raise ValueError(f"建议实体跨景区：{entity_id}")
-            if entity["entity_type"] != "POI":
-                continue
+            # v2: APPLIES_TO denotes an entity mentioned in this conditional context, not a mandatory destination.
             poi_id = entity_nodes[entity_id]
-            node(poi_id, "POI", entity["canonical_name"], scenic_id, [doc_id],
+            node(poi_id, entity['entity_type'], entity["canonical_name"], scenic_id, [doc_id],
                  {"entity_id": entity_id, "alignment_status": "aligned"})
             edge(f"EDGE_APPLIES_TO_{advice_id}_{entity_id}", advice_node_id, poi_id,
-                 "APPLIES_TO", [doc_id])
+                 "APPLIES_TO", [doc_id], {'semantic_role':'related_context','evidence':item['evidence']})
 
     if any(e["source"] not in nodes or e["target"] not in nodes for e in edges.values()):
         raise ValueError("存在悬空边")
@@ -174,7 +191,11 @@ def build(routes_data, registry, entities=None, advice=None):
     for nid in unused:
         del nodes[nid]
     missing = [name for name, value in (("entities.json", entities), ("advice.json", advice)) if value is None]
-    return {"schema_version": "1.0", "corpus_version": version, "graph_version": "v1",
+    return {"schema_version": "1.0", "corpus_version": version, "graph_version": "v2",
+            "builder_provenance":"YZH 60a7dda路线实体融合；FYH接管建议融合与验证",
+            "advice_availability":"missing_upstream" if advice is None else "available" if advice['advice'] else "available_empty",
+            "advice_count":len((advice or {}).get('advice',[])),
+            "relation_semantics":{"APPLIES_TO":"ADVICE -> POI/TRANSPORT/TIME：证据涉及的实体，非必访、许可或人群适用证明"},
             "entity_resource_version": (entities or {}).get("resource_version"),
             "completion_status": "route_stage" if entities is None else "entity_route_fused" if advice is None else "fused",
             "inactive_entities_skipped": sorted(inactive),
@@ -195,18 +216,19 @@ def main():
         registry = json.loads(args.registry.read_text(encoding="utf-8"))
         entities = load(args.outputs_dir / "entities.json", "entity_catalog", routes["corpus_version"])
         advice = load(args.outputs_dir / "advice.json", "advice", routes["corpus_version"])
-        graph = build(routes, registry, entities, advice)
+        graph = build(routes, registry, entities, advice,corpus())
+        graph['input_sha256']={p.name:sha256(p) for p in [args.outputs_dir/'routes.json',args.outputs_dir/'entities.json',args.outputs_dir/'advice.json',Path('data/processed/corpus.jsonl')] if p.exists()}
         if args.require_entities and entities is None:
             raise ValueError("核心融合缺少 entities.json")
         if args.require_complete and graph["missing_inputs"]:
             raise ValueError("正式融合缺少输入：" + ", ".join(graph["missing_inputs"]))
         args.output.parent.mkdir(parents=True, exist_ok=True)
-        args.output.write_text(json.dumps(graph, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        args.output.write_text(json.dumps(graph, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
         for key in ("nodes", "edges"):
             path = args.output.with_name(f"{args.output.stem}_{key}.csv")
             if graph[key]:
                 with path.open("w", encoding="utf-8-sig", newline="") as stream:
-                    writer = csv.DictWriter(stream, fieldnames=list(graph[key][0]))
+                    writer = csv.DictWriter(stream, fieldnames=list(graph[key][0]),lineterminator='\n')
                     writer.writeheader()
                     for item in graph[key]:
                         writer.writerow({k: json.dumps(v, ensure_ascii=False) if isinstance(v, (list, dict)) else v

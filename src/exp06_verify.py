@@ -3,6 +3,8 @@ import json
 from collections import Counter
 from pathlib import Path
 import networkx as nx
+from mining_io import ROOT,sha256,read_json,check_span
+from graph_tools import GraphTools
 
 
 def main():
@@ -11,21 +13,54 @@ def main():
     docs = {d["doc_id"]: d for d in map(json.loads, Path("data/processed/corpus.jsonl").read_text(encoding="utf-8").splitlines())}
     assert {d["corpus_version"] for d in docs.values()} == {data["corpus_version"]}, "图谱与语料版本不同"
     graph = nx.MultiDiGraph()
+    assert data['schema_version']=='1.0'
+    for name,digest in data.get('input_sha256',{}).items():
+        path=ROOT/('data/processed' if name=='corpus.jsonl' else 'data/outputs')/name
+        assert sha256(path)==digest,'构图后输入变化'
+    catalog={e['entity_id']:e for e in read_json(ROOT/'data/outputs/entities.json')['entity_catalog'] if e.get('active',True)}
     for node in data["nodes"]:
         assert node["node_id"] not in graph, "重复节点"
         graph.add_node(node["node_id"], **node)
+        assert node['scenic_id'] in {'S001','S002','S003'}
+        if node['attributes'].get('entity_id'):
+            entity=catalog[node['attributes']['entity_id']]
+            assert entity['scenic_id']==node['scenic_id'] and entity['entity_type']==node['node_type']
         for ref in node["source_refs"]:
             assert ref in docs, "节点来源不存在"
         for ref in node["attributes"].get("evidence", []):
+            check_span(ref,docs)
             assert docs[ref["doc_id"]]["text"][ref["start"]:ref["end"]] == ref["text"]
+    edge_ids=set()
+    directions={'HAS_ROUTE':({'SCENIC'},{'ROUTE'}),'HAS_STEP':({'ROUTE'},{'STEP'}),
+                'NEXT_STEP':({'STEP'},{'STEP'}),'VISITS':({'STEP'},{'POI'}),
+                'AT_TIME':({'STEP'},{'TIME'}),'USES_TRANSPORT':({'STEP'},{'TRANSPORT'}),
+                'HAS_ADVICE':({'SCENIC'},{'ADVICE'}),'TRIGGERS':({'CONDITION'},{'ADVICE'}),
+                'APPLIES_TO':({'ADVICE'},{'POI','TIME','TRANSPORT'})}
     for edge in data["edges"]:
+        assert edge['edge_id'] not in edge_ids,'重复边ID'
+        edge_ids.add(edge['edge_id'])
         assert edge["source"] in graph and edge["target"] in graph, "悬空边"
+        a,b=graph.nodes[edge['source']],graph.nodes[edge['target']]
+        assert a['scenic_id']==b['scenic_id'],'跨景区边'
+        assert edge['relation'] in directions
+        source_types,target_types=directions[edge['relation']]
+        assert a['node_type'] in source_types and b['node_type'] in target_types,'关系方向或类型错误'
         assert all(ref in docs for ref in edge["source_refs"]), "边来源不存在"
         graph.add_edge(edge["source"], edge["target"], key=edge["edge_id"], **edge)
         for ref in edge["attributes"].get("evidence", []):
+            check_span(ref,docs)
             assert docs[ref["doc_id"]]["text"][ref["start"]:ref["end"]] == ref["text"]
     assert not list(nx.isolates(graph)), "存在未关联节点"
     assert all("N_ENTITY_" + eid not in graph for eid in data.get("inactive_entities_skipped", [])), "停用实体被导入"
+    delivered=read_json(ROOT/'data/outputs/advice.json')['advice']
+    for item in delivered:
+        aid=item['advice_id'];cid='N_CONDITION_'+aid;nid='N_ADVICE_'+aid
+        assert graph.nodes[cid]['name']==item['condition_text'] and graph.nodes[nid]['name']==item['suggestion_text']
+        assert [(e['source'],e['target']) for e in data['edges'] if e['relation']=='TRIGGERS' and e['target']==nid]==[(cid,nid)]
+        actual={graph.nodes[e['target']]['attributes']['entity_id'] for e in data['edges'] if e['relation']=='APPLIES_TO' and e['source']==nid}
+        assert actual==set(item['related_entity_ids']),'建议关联实体丢失'
+    assert data['advice_count']==len(delivered)
+    assert data['advice_availability']==('available' if delivered else 'available_empty')
     next_edges = [e for e in data["edges"] if e["relation"] == "NEXT_STEP"]
     chain_results = []
     for route in routes:
@@ -37,6 +72,8 @@ def main():
         assert nx.is_directed_acyclic_graph(chain)
         assert list(nx.topological_sort(chain)) == ids, "步骤顺序错误"
         assert chain.number_of_edges() == len(ids) - 1
+        actual={(e['source'],e['target']) for e in next_edges if e['attributes']['route_id']==rid}
+        assert actual==set(zip(ids,ids[1:])),'步骤链不是原路线相邻顺序'
         assert len(ids) == 1 or nx.is_weakly_connected(chain)
         chain_results.append({"route_id": rid, "steps": len(ids), "next_edges": chain.number_of_edges()})
     route_nodes = [target for _, target, attr in graph.out_edges("N_SCENIC_S001", data=True)
@@ -54,6 +91,13 @@ def main():
         {"query": "条件建议", "result": [n["node_id"] for n in data["nodes"] if n["node_type"] == "ADVICE"],
          "availability": "missing_upstream" if "advice.json" in data["missing_inputs"] else "available"},
     ]
+    tools=GraphTools()
+    queries += [{'query':'真实工具 '+name,'parameters':params,'result':tools.dispatch(name,params)} for name,params in [
+        ('query_routes',{'scenic_id':'S001','time_bucket':'morning'}),
+        ('query_advice',{'scenic_id':'S001','visitor_type':'family'}),
+        ('query_advice',{'scenic_id':'S003','condition_type':'weather'}),
+        ('query_advice',{'scenic_id':'S001','visitor_type':'elderly'}),
+        ('query_routes',{'scenic_id':'S002'})]]
     result = {"graph_status": data["completion_status"], "missing_inputs": data["missing_inputs"],
               "nodes": graph.number_of_nodes(), "edges": graph.number_of_edges(),
               "node_types": dict(Counter(n["node_type"] for n in data["nodes"])),
@@ -61,7 +105,11 @@ def main():
               "isolated_nodes": list(nx.isolates(graph)),
               "weak_components": nx.number_weakly_connected_components(graph),
               "route_checks": chain_results, "queries": queries, "checks_passed": True}
-    Path("results/checks/exp06_quality.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    result['advice_checked']=len(delivered)
+    result['relation_directions_checked']=len(edge_ids)
+    result['graph_sha256']=sha256(ROOT/'data/outputs/graph.json')
+    result['input_sha256']=data['input_sha256']
+    Path("results/checks/exp06_quality.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     alignment = [{"route_id": r["route_id"], "step_no": s["step_no"],
                   "raw_poi_name": s.get("raw_poi_name", s["poi_name"]), "poi_name": s["poi_name"],
                   "entity_id": s["poi_entity_id"], "alignment_method": s.get("alignment_method", "pending"),
@@ -93,7 +141,7 @@ def main():
                                               for s in matched], "passed": True})
         alignment_result["entity_resource_version"] = confirmations["resource_version"]
         alignment_result["confirmed_updates"] = confirmed
-    Path("results/checks/exp06_alignment.json").write_text(json.dumps(alignment_result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    Path("results/checks/exp06_alignment.json").write_text(json.dumps(alignment_result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps({"nodes": graph.number_of_nodes(), "edges": graph.number_of_edges(),
                       "route_checks": len(chain_results), "checks_passed": True}))
 

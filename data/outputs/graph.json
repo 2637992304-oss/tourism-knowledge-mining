@@ -1,9 +1,15 @@
 {
   "schema_version": "1.0",
   "corpus_version": "v1",
-  "graph_version": "v1",
+  "graph_version": "v2",
+  "builder_provenance": "YZH 60a7dda路线实体融合；FYH接管建议融合与验证",
+  "advice_availability": "available",
+  "advice_count": 20,
+  "relation_semantics": {
+    "APPLIES_TO": "ADVICE -> POI/TRANSPORT/TIME：证据涉及的实体，非必访、许可或人群适用证明"
+  },
   "entity_resource_version": "exp02-v1.1",
-  "completion_status": "entity_route_fused",
+  "completion_status": "fused",
   "inactive_entities_skipped": [
     "S003_TIME_023"
   ],
@@ -16,12 +22,9 @@
     "N_ENTITY_S001_POI_012",
     "N_ENTITY_S001_POI_013",
     "N_ENTITY_S001_POI_015",
-    "N_ENTITY_S001_POI_016",
     "N_ENTITY_S001_POI_017",
     "N_ENTITY_S001_POI_018",
     "N_ENTITY_S001_POI_019",
-    "N_ENTITY_S001_POI_020",
-    "N_ENTITY_S001_POI_021",
     "N_ENTITY_S001_POI_022",
     "N_ENTITY_S001_POI_023",
     "N_ENTITY_S001_POI_024",
@@ -58,7 +61,6 @@
     "N_ENTITY_S001_TIME_027",
     "N_ENTITY_S001_TIME_028",
     "N_ENTITY_S001_TIME_029",
-    "N_ENTITY_S001_TIME_030",
     "N_ENTITY_S001_TIME_031",
     "N_ENTITY_S001_TIME_032",
     "N_ENTITY_S001_TIME_033",
@@ -72,25 +74,17 @@
     "N_ENTITY_S001_TRANSPORT_006",
     "N_ENTITY_S001_TRANSPORT_007",
     "N_ENTITY_S001_TRANSPORT_013",
-    "N_ENTITY_S001_TRANSPORT_016",
-    "N_ENTITY_S002_POI_001",
-    "N_ENTITY_S002_POI_002",
-    "N_ENTITY_S002_POI_003",
     "N_ENTITY_S002_POI_004",
     "N_ENTITY_S002_POI_005",
     "N_ENTITY_S002_POI_006",
-    "N_ENTITY_S002_POI_007",
     "N_ENTITY_S002_POI_008",
     "N_ENTITY_S002_POI_009",
     "N_ENTITY_S002_POI_010",
     "N_ENTITY_S002_POI_011",
-    "N_ENTITY_S002_POI_012",
-    "N_ENTITY_S002_POI_013",
     "N_ENTITY_S002_POI_014",
     "N_ENTITY_S002_POI_015",
     "N_ENTITY_S002_POI_016",
     "N_ENTITY_S002_POI_017",
-    "N_ENTITY_S002_POI_018",
     "N_ENTITY_S002_POI_019",
     "N_ENTITY_S002_POI_020",
     "N_ENTITY_S002_POI_021",
@@ -139,7 +133,6 @@
     "N_ENTITY_S002_POI_065",
     "N_ENTITY_S002_POI_066",
     "N_ENTITY_S002_POI_067",
-    "N_ENTITY_S002_POI_068",
     "N_ENTITY_S002_POI_069",
     "N_ENTITY_S002_POI_070",
     "N_ENTITY_S002_POI_071",
@@ -217,13 +210,9 @@
     "N_ENTITY_S002_TIME_067",
     "N_ENTITY_S002_TIME_068",
     "N_ENTITY_S002_TIME_069",
-    "N_ENTITY_S002_TRANSPORT_001",
     "N_ENTITY_S002_TRANSPORT_002",
     "N_ENTITY_S002_TRANSPORT_004",
     "N_ENTITY_S002_TRANSPORT_008",
-    "N_ENTITY_S003_POI_001",
-    "N_ENTITY_S003_POI_004",
-    "N_ENTITY_S003_POI_005",
     "N_ENTITY_S003_POI_006",
     "N_ENTITY_S003_POI_007",
     "N_ENTITY_S003_POI_008",
@@ -231,9 +220,7 @@
     "N_ENTITY_S003_POI_010",
     "N_ENTITY_S003_POI_011",
     "N_ENTITY_S003_POI_013",
-    "N_ENTITY_S003_POI_015",
     "N_ENTITY_S003_POI_018",
-    "N_ENTITY_S003_POI_020",
     "N_ENTITY_S003_POI_021",
     "N_ENTITY_S003_POI_022",
     "N_ENTITY_S003_POI_023",
@@ -252,13 +239,6 @@
     "N_ENTITY_S003_POI_042",
     "N_ENTITY_S003_POI_043",
     "N_ENTITY_S003_POI_044",
-    "N_ENTITY_S003_POI_045",
-    "N_ENTITY_S003_POI_046",
-    "N_ENTITY_S003_POI_047",
-    "N_ENTITY_S003_POI_048",
-    "N_ENTITY_S003_POI_049",
-    "N_ENTITY_S003_POI_050",
-    "N_ENTITY_S003_POI_051",
     "N_ENTITY_S003_TIME_001",
     "N_ENTITY_S003_TIME_002",
     "N_ENTITY_S003_TIME_003",
@@ -281,18 +261,14 @@
     "N_ENTITY_S003_TIME_024",
     "N_ENTITY_S003_TIME_025",
     "N_ENTITY_S003_TIME_026",
-    "N_ENTITY_S003_TRANSPORT_001",
     "N_ENTITY_S003_TRANSPORT_002",
     "N_ENTITY_S003_TRANSPORT_003",
-    "N_ENTITY_S003_TRANSPORT_008",
     "N_ENTITY_S003_TRANSPORT_009",
     "N_ENTITY_S003_TRANSPORT_017",
     "N_ENTITY_S003_TRANSPORT_018",
     "N_ENTITY_S003_TRANSPORT_019"
   ],
-  "missing_inputs": [
-    "advice.json"
-  ],
+  "missing_inputs": [],
   "nodes": [
     {
       "node_id": "N_ENTITY_S001_POI_002",
@@ -1142,6 +1118,131 @@
       }
     },
     {
+      "node_id": "N_ENTITY_S001_POI_016",
+      "node_type": "POI",
+      "name": "小田原",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001",
+        "S001_VIS_003",
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S001_POI_016",
+        "aliases": [
+          "Odawara",
+          "小田原站"
+        ],
+        "alignment_status": "aligned",
+        "scope": "surrounding",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 794,
+            "end": 798,
+            "text": "小田原站"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2461,
+            "end": 2464,
+            "text": "小田原"
+          },
+          {
+            "doc_id": "S001_VIS_003",
+            "start": 187,
+            "end": 190,
+            "text": "小田原"
+          },
+          {
+            "doc_id": "S001_VIS_003",
+            "start": 835,
+            "end": 838,
+            "text": "小田原"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5916,
+            "end": 5919,
+            "text": "小田原"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5922,
+            "end": 5925,
+            "text": "小田原"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6488,
+            "end": 6492,
+            "text": "小田原站"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6492,
+            "end": 6499,
+            "text": "Odawara"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6522,
+            "end": 6525,
+            "text": "小田原"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_POI_020",
+      "node_type": "POI",
+      "name": "泡泡城堡",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S001_POI_020",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1121,
+            "end": 1125,
+            "text": "泡泡城堡"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_POI_021",
+      "node_type": "POI",
+      "name": "网之森林",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S001_POI_021",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1128,
+            "end": 1132,
+            "text": "网之森林"
+          }
+        ]
+      }
+    },
+    {
       "node_id": "N_ENTITY_S001_POI_025",
       "node_type": "POI",
       "name": "箱根登山名产店 汤本店",
@@ -1493,6 +1594,30 @@
             "start": 477,
             "end": 480,
             "text": "1小时"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S001_TIME_030",
+      "node_type": "TIME",
+      "name": "20分钟",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S001_TIME_030",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5949,
+            "end": 5953,
+            "text": "20分钟"
           }
         ]
       }
@@ -1972,6 +2097,1874 @@
       }
     },
     {
+      "node_id": "N_ENTITY_S001_TRANSPORT_016",
+      "node_type": "TRANSPORT",
+      "name": "小田急线",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_VIS_003",
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S001_TRANSPORT_016",
+        "aliases": [
+          "Odakyu Line",
+          "小田原线"
+        ],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_003",
+            "start": 52,
+            "end": 56,
+            "text": "小田急线"
+          },
+          {
+            "doc_id": "S001_VIS_003",
+            "start": 157,
+            "end": 161,
+            "text": "小田急线"
+          },
+          {
+            "doc_id": "S001_VIS_003",
+            "start": 181,
+            "end": 185,
+            "text": "小田急线"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5893,
+            "end": 5897,
+            "text": "小田急线"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5898,
+            "end": 5902,
+            "text": "小田急线"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6527,
+            "end": 6531,
+            "text": "小田原线"
+          },
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6531,
+            "end": 6542,
+            "text": "Odakyu Line"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S002_POI_001",
+      "node_type": "POI",
+      "name": "优胜美地国家公园",
+      "scenic_id": "S002",
+      "source_refs": [
+        "S002_OFF_001",
+        "S002_VIS_001",
+        "S002_VIS_002",
+        "S002_VIS_003",
+        "S002_VIS_004",
+        "S002_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S002_POI_001",
+        "aliases": [
+          "Yosemite",
+          "Yosemite National Park",
+          "优胜美地"
+        ],
+        "alignment_status": "aligned",
+        "scope": "regional",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 5389,
+            "end": 5397,
+            "text": "Yosemite"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 5710,
+            "end": 5718,
+            "text": "Yosemite"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 2,
+            "end": 6,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 35,
+            "end": 39,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 144,
+            "end": 148,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 205,
+            "end": 209,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 603,
+            "end": 607,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 766,
+            "end": 770,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 942,
+            "end": 946,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 958,
+            "end": 962,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 1011,
+            "end": 1019,
+            "text": "Yosemite"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 1745,
+            "end": 1753,
+            "text": "Yosemite"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 2223,
+            "end": 2227,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 2333,
+            "end": 2341,
+            "text": "Yosemite"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 5103,
+            "end": 5111,
+            "text": "Yosemite"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 6421,
+            "end": 6429,
+            "text": "Yosemite"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 40666,
+            "end": 40670,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 40701,
+            "end": 40705,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 40706,
+            "end": 40710,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 40850,
+            "end": 40854,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 40961,
+            "end": 40965,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 40981,
+            "end": 40985,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 40992,
+            "end": 40996,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 41138,
+            "end": 41142,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 41247,
+            "end": 41251,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 41271,
+            "end": 41275,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 41797,
+            "end": 41801,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 41925,
+            "end": 41929,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 42021,
+            "end": 42025,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 42109,
+            "end": 42113,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 42193,
+            "end": 42197,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 42431,
+            "end": 42435,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 42576,
+            "end": 42580,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 42662,
+            "end": 42666,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 42673,
+            "end": 42677,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 42878,
+            "end": 42882,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 42909,
+            "end": 42913,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 269,
+            "end": 277,
+            "text": "Yosemite"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 278,
+            "end": 286,
+            "text": "优胜美地国家公园"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 287,
+            "end": 295,
+            "text": "Yosemite"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 296,
+            "end": 300,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 330,
+            "end": 338,
+            "text": "Yosemite"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 416,
+            "end": 420,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 821,
+            "end": 829,
+            "text": "Yosemite"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 845,
+            "end": 849,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 863,
+            "end": 871,
+            "text": "Yosemite"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 914,
+            "end": 918,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 945,
+            "end": 949,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 1093,
+            "end": 1097,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 1133,
+            "end": 1137,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 1284,
+            "end": 1292,
+            "text": "优胜美地国家公园"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 2869,
+            "end": 2873,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 3903,
+            "end": 3907,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 3953,
+            "end": 3957,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 4172,
+            "end": 4176,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 4228,
+            "end": 4232,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 0,
+            "end": 8,
+            "text": "Yosemite"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 14,
+            "end": 18,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 63,
+            "end": 71,
+            "text": "Yosemite"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 145,
+            "end": 153,
+            "text": "Yosemite"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 693,
+            "end": 701,
+            "text": "Yosemite"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 811,
+            "end": 819,
+            "text": "Yosemite"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 968,
+            "end": 972,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 1552,
+            "end": 1560,
+            "text": "Yosemite"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 1629,
+            "end": 1633,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 1771,
+            "end": 1779,
+            "text": "Yosemite"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 1928,
+            "end": 1936,
+            "text": "Yosemite"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 2104,
+            "end": 2108,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 2225,
+            "end": 2233,
+            "text": "Yosemite"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 2397,
+            "end": 2401,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 2721,
+            "end": 2725,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 3148,
+            "end": 3156,
+            "text": "Yosemite"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 3230,
+            "end": 3234,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 3257,
+            "end": 3265,
+            "text": "Yosemite"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 0,
+            "end": 4,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 74,
+            "end": 82,
+            "text": "优胜美地国家公园"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 150,
+            "end": 154,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 305,
+            "end": 309,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 540,
+            "end": 548,
+            "text": "优胜美地国家公园"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 710,
+            "end": 714,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 1189,
+            "end": 1193,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 1235,
+            "end": 1239,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 1918,
+            "end": 1922,
+            "text": "优胜美地"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 1998,
+            "end": 2002,
+            "text": "优胜美地"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S002_POI_002",
+      "node_type": "POI",
+      "name": "Yosemite Valley",
+      "scenic_id": "S002",
+      "source_refs": [
+        "S002_OFF_001",
+        "S002_VIS_001",
+        "S002_VIS_003",
+        "S002_VIS_004",
+        "S002_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S002_POI_002",
+        "aliases": [
+          "优胜美地山谷",
+          "优胜美地谷"
+        ],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 342,
+            "end": 357,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 1029,
+            "end": 1044,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 1849,
+            "end": 1864,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 2517,
+            "end": 2532,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 3553,
+            "end": 3568,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 4197,
+            "end": 4212,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 4308,
+            "end": 4323,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 4334,
+            "end": 4349,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 5503,
+            "end": 5518,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 5582,
+            "end": 5597,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 709,
+            "end": 724,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 2673,
+            "end": 2688,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 2928,
+            "end": 2943,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 3117,
+            "end": 3132,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 3458,
+            "end": 3464,
+            "text": "优胜美地山谷"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 3672,
+            "end": 3687,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 3958,
+            "end": 3973,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 5182,
+            "end": 5197,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 5636,
+            "end": 5642,
+            "text": "优胜美地山谷"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 5667,
+            "end": 5673,
+            "text": "优胜美地山谷"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 6119,
+            "end": 6125,
+            "text": "优胜美地山谷"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 457,
+            "end": 472,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 1023,
+            "end": 1038,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 1864,
+            "end": 1879,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 3060,
+            "end": 3075,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 3966,
+            "end": 3981,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 2154,
+            "end": 2169,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 2732,
+            "end": 2747,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 2961,
+            "end": 2976,
+            "text": "Yosemite Valley"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 397,
+            "end": 403,
+            "text": "优胜美地山谷"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 1545,
+            "end": 1550,
+            "text": "优胜美地谷"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 1992,
+            "end": 1997,
+            "text": "优胜美地谷"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S002_POI_003",
+      "node_type": "POI",
+      "name": "El Capitan",
+      "scenic_id": "S002",
+      "source_refs": [
+        "S002_OFF_001",
+        "S002_VIS_001",
+        "S002_VIS_003",
+        "S002_VIS_004",
+        "S002_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S002_POI_003",
+        "aliases": [
+          "酋长岩"
+        ],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 507,
+            "end": 517,
+            "text": "El Capitan"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 561,
+            "end": 571,
+            "text": "El Capitan"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 1868,
+            "end": 1878,
+            "text": "El Capitan"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 2088,
+            "end": 2098,
+            "text": "El Capitan"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 3512,
+            "end": 3515,
+            "text": "酋长岩"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 960,
+            "end": 970,
+            "text": "El Capitan"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 1963,
+            "end": 1973,
+            "text": "El Capitan"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 1973,
+            "end": 1976,
+            "text": "酋长岩"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 47,
+            "end": 50,
+            "text": "酋长岩"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 630,
+            "end": 633,
+            "text": "酋长岩"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 783,
+            "end": 786,
+            "text": "酋长岩"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 880,
+            "end": 883,
+            "text": "酋长岩"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S002_POI_007",
+      "node_type": "POI",
+      "name": "Bridalveil Fall",
+      "scenic_id": "S002",
+      "source_refs": [
+        "S002_OFF_001",
+        "S002_VIS_001",
+        "S002_VIS_002",
+        "S002_VIS_003",
+        "S002_VIS_004",
+        "S002_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S002_POI_007",
+        "aliases": [
+          "Bridalveil Falls",
+          "新娘面纱瀑布"
+        ],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 490,
+            "end": 505,
+            "text": "Bridalveil Fall"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 2106,
+            "end": 2121,
+            "text": "Bridalveil Fall"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 3169,
+            "end": 3184,
+            "text": "Bridalveil Fall"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 2633,
+            "end": 2648,
+            "text": "Bridalveil Fall"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 2649,
+            "end": 2655,
+            "text": "新娘面纱瀑布"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 3245,
+            "end": 3251,
+            "text": "新娘面纱瀑布"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 3272,
+            "end": 3287,
+            "text": "Bridalveil Fall"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 3288,
+            "end": 3294,
+            "text": "新娘面纱瀑布"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 3322,
+            "end": 3328,
+            "text": "新娘面纱瀑布"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 5203,
+            "end": 5209,
+            "text": "新娘面纱瀑布"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 41413,
+            "end": 41419,
+            "text": "新娘面纱瀑布"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 41470,
+            "end": 41476,
+            "text": "新娘面纱瀑布"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 1007,
+            "end": 1022,
+            "text": "Bridalveil Fall"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 895,
+            "end": 910,
+            "text": "Bridalveil Fall"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 1989,
+            "end": 2004,
+            "text": "Bridalveil Fall"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 652,
+            "end": 658,
+            "text": "新娘面纱瀑布"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 1929,
+            "end": 1935,
+            "text": "新娘面纱瀑布"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S002_POI_012",
+      "node_type": "POI",
+      "name": "El Capitan Bridge",
+      "scenic_id": "S002",
+      "source_refs": [
+        "S002_OFF_001",
+        "S002_VIS_004"
+      ],
+      "attributes": {
+        "entity_id": "S002_POI_012",
+        "aliases": [
+          "El Capitan bridge"
+        ],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 60,
+            "end": 77,
+            "text": "El Capitan Bridge"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 93,
+            "end": 110,
+            "text": "El Capitan Bridge"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 588,
+            "end": 605,
+            "text": "El Capitan bridge"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 1949,
+            "end": 1966,
+            "text": "El Capitan Bridge"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 1704,
+            "end": 1721,
+            "text": "El Capitan Bridge"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S002_POI_013",
+      "node_type": "POI",
+      "name": "Merced River",
+      "scenic_id": "S002",
+      "source_refs": [
+        "S002_OFF_001",
+        "S002_VIS_001"
+      ],
+      "attributes": {
+        "entity_id": "S002_POI_013",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 189,
+            "end": 201,
+            "text": "Merced River"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 405,
+            "end": 417,
+            "text": "Merced River"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 1240,
+            "end": 1252,
+            "text": "Merced River"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 1933,
+            "end": 1945,
+            "text": "Merced River"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 2545,
+            "end": 2557,
+            "text": "Merced River"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 6105,
+            "end": 6117,
+            "text": "Merced River"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S002_POI_018",
+      "node_type": "POI",
+      "name": "Yosemite Village",
+      "scenic_id": "S002",
+      "source_refs": [
+        "S002_OFF_001",
+        "S002_VIS_001"
+      ],
+      "attributes": {
+        "entity_id": "S002_POI_018",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 2008,
+            "end": 2024,
+            "text": "Yosemite Village"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 3425,
+            "end": 3441,
+            "text": "Yosemite Village"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 3668,
+            "end": 3684,
+            "text": "Yosemite Village"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 3139,
+            "end": 3155,
+            "text": "Yosemite Village"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S002_POI_068",
+      "node_type": "POI",
+      "name": "Mariposa Grove",
+      "scenic_id": "S002",
+      "source_refs": [
+        "S002_VIS_004",
+        "S002_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S002_POI_068",
+        "aliases": [
+          "Mariposa红杉公园",
+          "巨大红杉林"
+        ],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 2123,
+            "end": 2137,
+            "text": "Mariposa Grove"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 288,
+            "end": 293,
+            "text": "巨大红杉林"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 1240,
+            "end": 1252,
+            "text": "Mariposa红杉公园"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S002_TRANSPORT_001",
+      "node_type": "TRANSPORT",
+      "name": "步行",
+      "scenic_id": "S002",
+      "source_refs": [
+        "S002_OFF_001",
+        "S002_VIS_001",
+        "S002_VIS_002",
+        "S002_VIS_003",
+        "S002_VIS_004",
+        "S002_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S002_TRANSPORT_001",
+        "aliases": [
+          "Hike",
+          "Hiking",
+          "hike",
+          "hiking",
+          "trekking",
+          "walk",
+          "walking",
+          "徒步",
+          "漫步"
+        ],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 359,
+            "end": 363,
+            "text": "Hike"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 1049,
+            "end": 1053,
+            "text": "hike"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 1542,
+            "end": 1548,
+            "text": "hiking"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 1903,
+            "end": 1907,
+            "text": "hike"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 2049,
+            "end": 2053,
+            "text": "hike"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 2201,
+            "end": 2205,
+            "text": "hike"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 2882,
+            "end": 2886,
+            "text": "hike"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 3654,
+            "end": 3658,
+            "text": "walk"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 3788,
+            "end": 3792,
+            "text": "hike"
+          },
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 5647,
+            "end": 5655,
+            "text": "trekking"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 2738,
+            "end": 2740,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 2871,
+            "end": 2873,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 2976,
+            "end": 2978,
+            "text": "步行"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 3102,
+            "end": 3104,
+            "text": "步行"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 4336,
+            "end": 4338,
+            "text": "步行"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 4601,
+            "end": 4607,
+            "text": "Hiking"
+          },
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 4903,
+            "end": 4905,
+            "text": "步行"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 40756,
+            "end": 40758,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 42219,
+            "end": 42221,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 42276,
+            "end": 42278,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 42365,
+            "end": 42367,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 42421,
+            "end": 42423,
+            "text": "步行"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 42598,
+            "end": 42600,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 42620,
+            "end": 42622,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 42628,
+            "end": 42630,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S002_VIS_002",
+            "start": 42721,
+            "end": 42723,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 724,
+            "end": 726,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 2501,
+            "end": 2503,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 3873,
+            "end": 3875,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S002_VIS_003",
+            "start": 4598,
+            "end": 4600,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 1669,
+            "end": 1671,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 3221,
+            "end": 3223,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 83,
+            "end": 85,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 188,
+            "end": 190,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 424,
+            "end": 426,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 1269,
+            "end": 1271,
+            "text": "步行"
+          },
+          {
+            "doc_id": "S002_VIS_005",
+            "start": 1654,
+            "end": 1656,
+            "text": "徒步"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_POI_001",
+      "node_type": "POI",
+      "name": "蓝山国家公园",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001",
+        "S003_VIS_001",
+        "S003_VIS_002",
+        "S003_VIS_003",
+        "S003_VIS_004",
+        "S003_VIS_005"
+      ],
+      "attributes": {
+        "entity_id": "S003_POI_001",
+        "aliases": [
+          "Blue Mountains National Park",
+          "蓝山",
+          "蓝山公园",
+          "蓝山山脉国家公园"
+        ],
+        "alignment_status": "aligned",
+        "scope": "regional",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 537,
+            "end": 565,
+            "text": "Blue Mountains National Park"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 1388,
+            "end": 1390,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 1797,
+            "end": 1799,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2897,
+            "end": 2899,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3016,
+            "end": 3018,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3301,
+            "end": 3303,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3544,
+            "end": 3546,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3585,
+            "end": 3587,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3604,
+            "end": 3606,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3609,
+            "end": 3611,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3829,
+            "end": 3831,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3853,
+            "end": 3855,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3999,
+            "end": 4001,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4020,
+            "end": 4022,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4469,
+            "end": 4471,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4523,
+            "end": 4525,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4574,
+            "end": 4576,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4635,
+            "end": 4637,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4767,
+            "end": 4769,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4794,
+            "end": 4796,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4829,
+            "end": 4831,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4833,
+            "end": 4835,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4848,
+            "end": 4850,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4908,
+            "end": 4910,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4914,
+            "end": 4916,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 5001,
+            "end": 5003,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 5004,
+            "end": 5006,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 5130,
+            "end": 5132,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 19,
+            "end": 21,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 54,
+            "end": 56,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 184,
+            "end": 186,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 194,
+            "end": 196,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 263,
+            "end": 265,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 294,
+            "end": 296,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 548,
+            "end": 550,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 557,
+            "end": 559,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 1296,
+            "end": 1298,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_VIS_002",
+            "start": 1864,
+            "end": 1870,
+            "text": "蓝山国家公园"
+          },
+          {
+            "doc_id": "S003_VIS_002",
+            "start": 1879,
+            "end": 1885,
+            "text": "蓝山国家公园"
+          },
+          {
+            "doc_id": "S003_VIS_002",
+            "start": 1949,
+            "end": 1955,
+            "text": "蓝山国家公园"
+          },
+          {
+            "doc_id": "S003_VIS_002",
+            "start": 2025,
+            "end": 2029,
+            "text": "蓝山公园"
+          },
+          {
+            "doc_id": "S003_VIS_002",
+            "start": 2043,
+            "end": 2047,
+            "text": "蓝山公园"
+          },
+          {
+            "doc_id": "S003_VIS_002",
+            "start": 2114,
+            "end": 2120,
+            "text": "蓝山国家公园"
+          },
+          {
+            "doc_id": "S003_VIS_003",
+            "start": 4465,
+            "end": 4467,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_VIS_003",
+            "start": 4476,
+            "end": 4482,
+            "text": "蓝山国家公园"
+          },
+          {
+            "doc_id": "S003_VIS_003",
+            "start": 4483,
+            "end": 4511,
+            "text": "Blue Mountains National Park"
+          },
+          {
+            "doc_id": "S003_VIS_003",
+            "start": 4677,
+            "end": 4679,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_VIS_004",
+            "start": 2702,
+            "end": 2704,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_VIS_004",
+            "start": 2833,
+            "end": 2835,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_VIS_004",
+            "start": 2863,
+            "end": 2865,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_VIS_004",
+            "start": 2893,
+            "end": 2895,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_VIS_004",
+            "start": 6223,
+            "end": 6225,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_VIS_005",
+            "start": 0,
+            "end": 4,
+            "text": "蓝山公园"
+          },
+          {
+            "doc_id": "S003_VIS_005",
+            "start": 5,
+            "end": 33,
+            "text": "Blue Mountains National Park"
+          },
+          {
+            "doc_id": "S003_VIS_005",
+            "start": 55,
+            "end": 63,
+            "text": "蓝山山脉国家公园"
+          },
+          {
+            "doc_id": "S003_VIS_005",
+            "start": 64,
+            "end": 92,
+            "text": "Blue Mountains National Park"
+          },
+          {
+            "doc_id": "S003_VIS_005",
+            "start": 169,
+            "end": 171,
+            "text": "蓝山"
+          },
+          {
+            "doc_id": "S003_VIS_005",
+            "start": 207,
+            "end": 211,
+            "text": "蓝山公园"
+          },
+          {
+            "doc_id": "S003_VIS_005",
+            "start": 324,
+            "end": 328,
+            "text": "蓝山公园"
+          },
+          {
+            "doc_id": "S003_VIS_005",
+            "start": 338,
+            "end": 342,
+            "text": "蓝山公园"
+          }
+        ]
+      }
+    },
+    {
       "node_id": "N_ENTITY_S003_POI_002",
       "node_type": "POI",
       "name": "三姐妹峰",
@@ -2136,6 +4129,365 @@
       }
     },
     {
+      "node_id": "N_ENTITY_S003_POI_004",
+      "node_type": "POI",
+      "name": "Katoomba",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001",
+        "S003_VIS_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_POI_004",
+        "aliases": [
+          "卡通巴"
+        ],
+        "alignment_status": "aligned",
+        "scope": "surrounding",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 130,
+            "end": 138,
+            "text": "Katoomba"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 663,
+            "end": 671,
+            "text": "Katoomba"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 915,
+            "end": 923,
+            "text": "Katoomba"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 1112,
+            "end": 1120,
+            "text": "Katoomba"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2311,
+            "end": 2314,
+            "text": "卡通巴"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3057,
+            "end": 3060,
+            "text": "卡通巴"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3152,
+            "end": 3155,
+            "text": "卡通巴"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3156,
+            "end": 3159,
+            "text": "卡通巴"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3356,
+            "end": 3359,
+            "text": "卡通巴"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3504,
+            "end": 3507,
+            "text": "卡通巴"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3538,
+            "end": 3541,
+            "text": "卡通巴"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3711,
+            "end": 3714,
+            "text": "卡通巴"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3724,
+            "end": 3727,
+            "text": "卡通巴"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3773,
+            "end": 3776,
+            "text": "卡通巴"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4251,
+            "end": 4254,
+            "text": "卡通巴"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4311,
+            "end": 4314,
+            "text": "卡通巴"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4663,
+            "end": 4666,
+            "text": "卡通巴"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4719,
+            "end": 4722,
+            "text": "卡通巴"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4948,
+            "end": 4951,
+            "text": "卡通巴"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 5100,
+            "end": 5103,
+            "text": "卡通巴"
+          },
+          {
+            "doc_id": "S003_VIS_001",
+            "start": 412,
+            "end": 420,
+            "text": "Katoomba"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_POI_005",
+      "node_type": "POI",
+      "name": "Leura",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_POI_005",
+        "aliases": [
+          "罗拉"
+        ],
+        "alignment_status": "aligned",
+        "scope": "surrounding",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 119,
+            "end": 124,
+            "text": "Leura"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 1073,
+            "end": 1078,
+            "text": "Leura"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 1613,
+            "end": 1615,
+            "text": "罗拉"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 1616,
+            "end": 1621,
+            "text": "Leura"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 1698,
+            "end": 1700,
+            "text": "罗拉"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 1701,
+            "end": 1706,
+            "text": "Leura"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 1858,
+            "end": 1860,
+            "text": "罗拉"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 1861,
+            "end": 1866,
+            "text": "Leura"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2318,
+            "end": 2320,
+            "text": "罗拉"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2321,
+            "end": 2326,
+            "text": "Leura"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2421,
+            "end": 2423,
+            "text": "罗拉"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2424,
+            "end": 2429,
+            "text": "Leura"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2510,
+            "end": 2512,
+            "text": "罗拉"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2513,
+            "end": 2518,
+            "text": "Leura"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2570,
+            "end": 2572,
+            "text": "罗拉"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2573,
+            "end": 2578,
+            "text": "Leura"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2606,
+            "end": 2608,
+            "text": "罗拉"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2609,
+            "end": 2614,
+            "text": "Leura"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3777,
+            "end": 3779,
+            "text": "罗拉"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 3780,
+            "end": 3785,
+            "text": "Leura"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4077,
+            "end": 4079,
+            "text": "罗拉"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4080,
+            "end": 4085,
+            "text": "Leura"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4228,
+            "end": 4230,
+            "text": "罗拉"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4231,
+            "end": 4236,
+            "text": "Leura"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4723,
+            "end": 4725,
+            "text": "罗拉"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4726,
+            "end": 4731,
+            "text": "Leura"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4959,
+            "end": 4961,
+            "text": "罗拉"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4962,
+            "end": 4967,
+            "text": "Leura"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4982,
+            "end": 4984,
+            "text": "罗拉"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4985,
+            "end": 4990,
+            "text": "Leura"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 5024,
+            "end": 5026,
+            "text": "罗拉"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 5027,
+            "end": 5032,
+            "text": "Leura"
+          }
+        ]
+      }
+    },
+    {
       "node_id": "N_ENTITY_S003_POI_012",
       "node_type": "POI",
       "name": "Jamison Lookout",
@@ -2195,6 +4547,38 @@
             "start": 2157,
             "end": 2178,
             "text": "Wentworth Falls Track"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_POI_015",
+      "node_type": "POI",
+      "name": "Fletchers Lookout",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_POI_015",
+        "aliases": [
+          "弗莱彻瞭望台"
+        ],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2242,
+            "end": 2248,
+            "text": "弗莱彻瞭望台"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2250,
+            "end": 2267,
+            "text": "Fletchers Lookout"
           }
         ]
       }
@@ -2357,6 +4741,44 @@
             "start": 4401,
             "end": 4406,
             "text": "大峡谷步道"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_POI_020",
+      "node_type": "POI",
+      "name": "戈维茨跳跃瞭望台",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_POI_020",
+        "aliases": [
+          "戈维茨利普瞭望台"
+        ],
+        "alignment_status": "aligned",
+        "scope": "inside",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2869,
+            "end": 2877,
+            "text": "戈维茨跳跃瞭望台"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2977,
+            "end": 2985,
+            "text": "戈维茨跳跃瞭望台"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4447,
+            "end": 4455,
+            "text": "戈维茨利普瞭望台"
           }
         ]
       }
@@ -2598,6 +5020,174 @@
       }
     },
     {
+      "node_id": "N_ENTITY_S003_POI_045",
+      "node_type": "POI",
+      "name": "蓝山文化中心",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_POI_045",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "surrounding",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 5058,
+            "end": 5064,
+            "text": "蓝山文化中心"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_POI_046",
+      "node_type": "POI",
+      "name": "诺曼·林赛画廊及博物馆",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_POI_046",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "surrounding",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 5046,
+            "end": 5057,
+            "text": "诺曼·林赛画廊及博物馆"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_POI_047",
+      "node_type": "POI",
+      "name": "维多利亚山博物馆",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_POI_047",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "surrounding",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 5065,
+            "end": 5073,
+            "text": "维多利亚山博物馆"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_POI_048",
+      "node_type": "POI",
+      "name": "伍德福德学院",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_POI_048",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "surrounding",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 5074,
+            "end": 5080,
+            "text": "伍德福德学院"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_POI_049",
+      "node_type": "POI",
+      "name": "莉莲菲尔斯日间水疗中心",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_POI_049",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "surrounding",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 5034,
+            "end": 5045,
+            "text": "莉莲菲尔斯日间水疗中心"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_POI_050",
+      "node_type": "POI",
+      "name": "昔日美人珍藏茶壶博物馆和茶室",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_POI_050",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "surrounding",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 5009,
+            "end": 5023,
+            "text": "昔日美人珍藏茶壶博物馆和茶室"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_POI_051",
+      "node_type": "POI",
+      "name": "梅加隆谷茶室",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_POI_051",
+        "aliases": [],
+        "alignment_status": "aligned",
+        "scope": "surrounding",
+        "note": "",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 5113,
+            "end": 5119,
+            "text": "梅加隆谷茶室"
+          }
+        ]
+      }
+    },
+    {
       "node_id": "N_ENTITY_S003_POI_052",
       "node_type": "POI",
       "name": "温特沃斯瀑布野餐区",
@@ -2719,6 +5309,108 @@
             "start": 2024,
             "end": 2029,
             "text": "10 分钟"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_TRANSPORT_001",
+      "node_type": "TRANSPORT",
+      "name": "步行",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001",
+        "S003_VIS_002"
+      ],
+      "attributes": {
+        "entity_id": "S003_TRANSPORT_001",
+        "aliases": [
+          "Hike",
+          "Hiking",
+          "Walk",
+          "hike",
+          "hiking",
+          "trekking",
+          "walk",
+          "walking",
+          "徒步",
+          "漫步"
+        ],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 31,
+            "end": 35,
+            "text": "Hike"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 395,
+            "end": 399,
+            "text": "walk"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 607,
+            "end": 611,
+            "text": "Walk"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 739,
+            "end": 743,
+            "text": "walk"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 1640,
+            "end": 1642,
+            "text": "漫步"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 1758,
+            "end": 1760,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2065,
+            "end": 2067,
+            "text": "步行"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2602,
+            "end": 2604,
+            "text": "漫步"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4109,
+            "end": 4111,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4420,
+            "end": 4422,
+            "text": "漫步"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4876,
+            "end": 4878,
+            "text": "徒步"
+          },
+          {
+            "doc_id": "S003_VIS_002",
+            "start": 2129,
+            "end": 2131,
+            "text": "徒步"
           }
         ]
       }
@@ -2924,6 +5616,48 @@
             "start": 725,
             "end": 727,
             "text": "缆车"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ENTITY_S003_TRANSPORT_008",
+      "node_type": "TRANSPORT",
+      "name": "自行车",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "entity_id": "S003_TRANSPORT_008",
+        "aliases": [
+          "bicycle",
+          "bicycles",
+          "单车",
+          "骑自行车",
+          "骑车"
+        ],
+        "alignment_status": "aligned",
+        "scope": "not_applicable",
+        "note": null,
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4565,
+            "end": 4567,
+            "text": "骑车"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4576,
+            "end": 4579,
+            "text": "自行车"
+          },
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4868,
+            "end": 4872,
+            "text": "骑自行车"
           }
         ]
       }
@@ -3724,6 +6458,1210 @@
             "text": "而是驱车前往Jenolan Caves珍罗兰洞"
           }
         ]
+      }
+    },
+    {
+      "node_id": "N_CONDITION_A_S001_OFF_001_255828790194615",
+      "node_type": "CONDITION",
+      "name": "如果使用“箱根周游券”乘坐“浪漫”特快",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S001_OFF_001_255828790194615",
+        "condition_type": "other",
+        "visitor_types": [],
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 504,
+            "end": 542,
+            "text": "如果使用“箱根周游券”乘坐“浪漫”特快,则需另外支付特快费(1,200日币)"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ADVICE_A_S001_OFF_001_255828790194615",
+      "node_type": "ADVICE",
+      "name": "则需另外支付特快费(1,200日币)",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S001_OFF_001_255828790194615",
+        "method": "rule:conditional_action",
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 504,
+            "end": 542,
+            "text": "如果使用“箱根周游券”乘坐“浪漫”特快,则需另外支付特快费(1,200日币)"
+          }
+        ],
+        "condition_span": {
+          "doc_id": "S001_OFF_001",
+          "start": 504,
+          "end": 523,
+          "text": "如果使用“箱根周游券”乘坐“浪漫”特快"
+        },
+        "suggestion_span": {
+          "doc_id": "S001_OFF_001",
+          "start": 524,
+          "end": 542,
+          "text": "则需另外支付特快费(1,200日币)"
+        },
+        "source_text_type": "official_route",
+        "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+        "duplicate_group": "e3d0c4caa07e",
+        "review_correction": null
+      }
+    },
+    {
+      "node_id": "N_CONDITION_A_S001_OFF_001_171123485310695",
+      "node_type": "CONDITION",
+      "name": "如果在车站内部的服务柜台寄存包裹",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S001_OFF_001_171123485310695",
+        "condition_type": "other",
+        "visitor_types": [],
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 639,
+            "end": 691,
+            "text": "如果在车站内部的服务柜台寄存包裹,则可以帮您运送到住处,因此您可以轻松地享受观光之旅(含税900日币~)"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ADVICE_A_S001_OFF_001_171123485310695",
+      "node_type": "ADVICE",
+      "name": "则可以帮您运送到住处,因此您可以轻松地享受观光之旅(含税900日币~)",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S001_OFF_001_171123485310695",
+        "method": "rule:conditional_action",
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 639,
+            "end": 691,
+            "text": "如果在车站内部的服务柜台寄存包裹,则可以帮您运送到住处,因此您可以轻松地享受观光之旅(含税900日币~)"
+          }
+        ],
+        "condition_span": {
+          "doc_id": "S001_OFF_001",
+          "start": 639,
+          "end": 655,
+          "text": "如果在车站内部的服务柜台寄存包裹"
+        },
+        "suggestion_span": {
+          "doc_id": "S001_OFF_001",
+          "start": 656,
+          "end": 691,
+          "text": "则可以帮您运送到住处,因此您可以轻松地享受观光之旅(含税900日币~)"
+        },
+        "source_text_type": "official_route",
+        "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+        "duplicate_group": "c2de00c5275d",
+        "review_correction": null
+      }
+    },
+    {
+      "node_id": "N_CONDITION_A_S001_OFF_001_247169266140315",
+      "node_type": "CONDITION",
+      "name": "对于带儿童的家庭",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S001_OFF_001_247169266140315",
+        "condition_type": "visitor_type",
+        "visitor_types": [
+          "family"
+        ],
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1084,
+            "end": 1134,
+            "text": "对于带儿童的家庭,推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ADVICE_A_S001_OFF_001_247169266140315",
+      "node_type": "ADVICE",
+      "name": "推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S001_OFF_001_247169266140315",
+        "method": "rule:conditional_action",
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1084,
+            "end": 1134,
+            "text": "对于带儿童的家庭,推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等"
+          }
+        ],
+        "condition_span": {
+          "doc_id": "S001_OFF_001",
+          "start": 1084,
+          "end": 1092,
+          "text": "对于带儿童的家庭"
+        },
+        "suggestion_span": {
+          "doc_id": "S001_OFF_001",
+          "start": 1093,
+          "end": 1134,
+          "text": "推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等"
+        },
+        "source_text_type": "official_route",
+        "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+        "duplicate_group": "d4fa25978087",
+        "review_correction": null
+      }
+    },
+    {
+      "node_id": "N_CONDITION_A_S001_OFF_001_177547618944147",
+      "node_type": "CONDITION",
+      "name": "如果您感到疲劳",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S001_OFF_001_177547618944147",
+        "condition_type": "other",
+        "visitor_types": [],
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1135,
+            "end": 1155,
+            "text": "如果您感到疲劳,还可以在馆区内泡足汤小憩"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 967,
+            "end": 976,
+            "text": "箱根雕刻森林美术馆"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ADVICE_A_S001_OFF_001_177547618944147",
+      "node_type": "ADVICE",
+      "name": "还可以在馆区内泡足汤小憩",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S001_OFF_001_177547618944147",
+        "method": "rule:conditional_action",
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1135,
+            "end": 1155,
+            "text": "如果您感到疲劳,还可以在馆区内泡足汤小憩"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 967,
+            "end": 976,
+            "text": "箱根雕刻森林美术馆"
+          }
+        ],
+        "condition_span": {
+          "doc_id": "S001_OFF_001",
+          "start": 1135,
+          "end": 1142,
+          "text": "如果您感到疲劳"
+        },
+        "suggestion_span": {
+          "doc_id": "S001_OFF_001",
+          "start": 1143,
+          "end": 1155,
+          "text": "还可以在馆区内泡足汤小憩"
+        },
+        "source_text_type": "official_route",
+        "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+        "duplicate_group": "9af153c403f3",
+        "review_correction": null
+      }
+    },
+    {
+      "node_id": "N_CONDITION_A_S001_OFF_001_147046239503370",
+      "node_type": "CONDITION",
+      "name": "如果出示“箱根周游券”",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S001_OFF_001_147046239503370",
+        "condition_type": "other",
+        "visitor_types": [],
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1195,
+            "end": 1250,
+            "text": "如果出示“箱根周游券”,可享优惠价成人1,900日币、高中生大学生1,500日币、中小学生700日币(均含税)"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ADVICE_A_S001_OFF_001_147046239503370",
+      "node_type": "ADVICE",
+      "name": "可享优惠价成人1,900日币、高中生大学生1,500日币、中小学生700日币(均含税)",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S001_OFF_001_147046239503370",
+        "method": "rule:conditional_action",
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1195,
+            "end": 1250,
+            "text": "如果出示“箱根周游券”,可享优惠价成人1,900日币、高中生大学生1,500日币、中小学生700日币(均含税)"
+          }
+        ],
+        "condition_span": {
+          "doc_id": "S001_OFF_001",
+          "start": 1195,
+          "end": 1206,
+          "text": "如果出示“箱根周游券”"
+        },
+        "suggestion_span": {
+          "doc_id": "S001_OFF_001",
+          "start": 1207,
+          "end": 1250,
+          "text": "可享优惠价成人1,900日币、高中生大学生1,500日币、中小学生700日币(均含税)"
+        },
+        "source_text_type": "official_route",
+        "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+        "duplicate_group": "e116212bd38f",
+        "review_correction": null
+      }
+    },
+    {
+      "node_id": "N_CONDITION_A_S001_OFF_001_250646070388022",
+      "node_type": "CONDITION",
+      "name": "如果购买伴手礼",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S001_OFF_001_250646070388022",
+        "condition_type": "other",
+        "visitor_types": [],
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2719,
+            "end": 2752,
+            "text": "如果购买伴手礼,可以前往位于箱根汤本站的“箱根登山名产店 汤本店”"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ADVICE_A_S001_OFF_001_250646070388022",
+      "node_type": "ADVICE",
+      "name": "可以前往位于箱根汤本站的“箱根登山名产店 汤本店”",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S001_OFF_001_250646070388022",
+        "method": "rule:conditional_action",
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2719,
+            "end": 2752,
+            "text": "如果购买伴手礼,可以前往位于箱根汤本站的“箱根登山名产店 汤本店”"
+          }
+        ],
+        "condition_span": {
+          "doc_id": "S001_OFF_001",
+          "start": 2719,
+          "end": 2726,
+          "text": "如果购买伴手礼"
+        },
+        "suggestion_span": {
+          "doc_id": "S001_OFF_001",
+          "start": 2727,
+          "end": 2752,
+          "text": "可以前往位于箱根汤本站的“箱根登山名产店 汤本店”"
+        },
+        "source_text_type": "official_route",
+        "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+        "duplicate_group": "3112c7ca5e4b",
+        "review_correction": null
+      }
+    },
+    {
+      "node_id": "N_CONDITION_A_S001_VIS_005_134550840182935",
+      "node_type": "CONDITION",
+      "name": "如果乘坐小田急浪漫特快前往箱根汤本",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "advice_id": "A_S001_VIS_005_134550840182935",
+        "condition_type": "other",
+        "visitor_types": [],
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5836,
+            "end": 5876,
+            "text": "如果乘坐小田急浪漫特快前往箱根汤本,则需另外购买特快车票,1200日元/人/单程"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ADVICE_A_S001_VIS_005_134550840182935",
+      "node_type": "ADVICE",
+      "name": "则需另外购买特快车票,1200日元/人/单程",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "advice_id": "A_S001_VIS_005_134550840182935",
+        "method": "rule:conditional_action",
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5836,
+            "end": 5876,
+            "text": "如果乘坐小田急浪漫特快前往箱根汤本,则需另外购买特快车票,1200日元/人/单程"
+          }
+        ],
+        "condition_span": {
+          "doc_id": "S001_VIS_005",
+          "start": 5836,
+          "end": 5853,
+          "text": "如果乘坐小田急浪漫特快前往箱根汤本"
+        },
+        "suggestion_span": {
+          "doc_id": "S001_VIS_005",
+          "start": 5854,
+          "end": 5876,
+          "text": "则需另外购买特快车票,1200日元/人/单程"
+        },
+        "source_text_type": "visitor_diary",
+        "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+        "duplicate_group": "dafc85cacbf3",
+        "review_correction": null
+      }
+    },
+    {
+      "node_id": "N_CONDITION_A_S001_VIS_005_228267617104810",
+      "node_type": "CONDITION",
+      "name": "如果不想另外付费",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "advice_id": "A_S001_VIS_005_228267617104810",
+        "condition_type": "other",
+        "visitor_types": [],
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5877,
+            "end": 5955,
+            "text": "如果不想另外付费,则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ADVICE_A_S001_VIS_005_228267617104810",
+      "node_type": "ADVICE",
+      "name": "则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "advice_id": "A_S001_VIS_005_228267617104810",
+        "method": "rule:conditional_action",
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5877,
+            "end": 5955,
+            "text": "如果不想另外付费,则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右"
+          }
+        ],
+        "condition_span": {
+          "doc_id": "S001_VIS_005",
+          "start": 5877,
+          "end": 5885,
+          "text": "如果不想另外付费"
+        },
+        "suggestion_span": {
+          "doc_id": "S001_VIS_005",
+          "start": 5886,
+          "end": 5955,
+          "text": "则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右"
+        },
+        "source_text_type": "visitor_diary",
+        "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+        "duplicate_group": "ed503e8d3170",
+        "review_correction": null
+      }
+    },
+    {
+      "node_id": "N_CONDITION_A_S001_VIS_005_117040616929219",
+      "node_type": "CONDITION",
+      "name": "如果座位有空的话",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "advice_id": "A_S001_VIS_005_117040616929219",
+        "condition_type": "other",
+        "visitor_types": [],
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6130,
+            "end": 6184,
+            "text": "如果座位有空的话,一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ADVICE_A_S001_VIS_005_117040616929219",
+      "node_type": "ADVICE",
+      "name": "一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食",
+      "scenic_id": "S001",
+      "source_refs": [
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "advice_id": "A_S001_VIS_005_117040616929219",
+        "method": "rule:conditional_action",
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6130,
+            "end": 6184,
+            "text": "如果座位有空的话,一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食"
+          }
+        ],
+        "condition_span": {
+          "doc_id": "S001_VIS_005",
+          "start": 6130,
+          "end": 6138,
+          "text": "如果座位有空的话"
+        },
+        "suggestion_span": {
+          "doc_id": "S001_VIS_005",
+          "start": 6139,
+          "end": 6184,
+          "text": "一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食"
+        },
+        "source_text_type": "visitor_diary",
+        "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+        "duplicate_group": "38744ca068e8",
+        "review_correction": null
+      }
+    },
+    {
+      "node_id": "N_SCENIC_S002",
+      "node_type": "SCENIC",
+      "name": "美国优胜美地国家公园",
+      "scenic_id": "S002",
+      "source_refs": [],
+      "attributes": {}
+    },
+    {
+      "node_id": "N_CONDITION_A_S002_OFF_001_088248811662268",
+      "node_type": "CONDITION",
+      "name": "If you are planning to hike the half loop",
+      "scenic_id": "S002",
+      "source_refs": [
+        "S002_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S002_OFF_001_088248811662268",
+        "condition_type": "other",
+        "visitor_types": [],
+        "evidence": [
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 1880,
+            "end": 2024,
+            "text": "If you are planning to hike the half loop, cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ADVICE_A_S002_OFF_001_088248811662268",
+      "node_type": "ADVICE",
+      "name": "cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village",
+      "scenic_id": "S002",
+      "source_refs": [
+        "S002_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S002_OFF_001_088248811662268",
+        "method": "rule:english_if",
+        "evidence": [
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 1880,
+            "end": 2024,
+            "text": "If you are planning to hike the half loop, cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village"
+          }
+        ],
+        "condition_span": {
+          "doc_id": "S002_OFF_001",
+          "start": 1880,
+          "end": 1921,
+          "text": "If you are planning to hike the half loop"
+        },
+        "suggestion_span": {
+          "doc_id": "S002_OFF_001",
+          "start": 1923,
+          "end": 2024,
+          "text": "cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village"
+        },
+        "source_text_type": "official_route",
+        "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+        "duplicate_group": "6be2256397ab",
+        "review_correction": null
+      }
+    },
+    {
+      "node_id": "N_CONDITION_A_S002_OFF_001_257761964045209",
+      "node_type": "CONDITION",
+      "name": "If you are planning to hike the full loop",
+      "scenic_id": "S002",
+      "source_refs": [
+        "S002_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S002_OFF_001_257761964045209",
+        "condition_type": "other",
+        "visitor_types": [],
+        "evidence": [
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 2026,
+            "end": 2121,
+            "text": "If you are planning to hike the full loop, continue west past El Capitan toward Bridalveil Fall"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ADVICE_A_S002_OFF_001_257761964045209",
+      "node_type": "ADVICE",
+      "name": "continue west past El Capitan toward Bridalveil Fall",
+      "scenic_id": "S002",
+      "source_refs": [
+        "S002_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S002_OFF_001_257761964045209",
+        "method": "rule:english_if",
+        "evidence": [
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 2026,
+            "end": 2121,
+            "text": "If you are planning to hike the full loop, continue west past El Capitan toward Bridalveil Fall"
+          }
+        ],
+        "condition_span": {
+          "doc_id": "S002_OFF_001",
+          "start": 2026,
+          "end": 2067,
+          "text": "If you are planning to hike the full loop"
+        },
+        "suggestion_span": {
+          "doc_id": "S002_OFF_001",
+          "start": 2069,
+          "end": 2121,
+          "text": "continue west past El Capitan toward Bridalveil Fall"
+        },
+        "source_text_type": "official_route",
+        "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+        "duplicate_group": "6ac6035ec9f6",
+        "review_correction": null
+      }
+    },
+    {
+      "node_id": "N_CONDITION_A_S002_VIS_004_072958652312044",
+      "node_type": "CONDITION",
+      "name": "如果你不想人挤人、也不想早起抢预约的话",
+      "scenic_id": "S002",
+      "source_refs": [
+        "S002_VIS_004"
+      ],
+      "attributes": {
+        "advice_id": "A_S002_VIS_004_072958652312044",
+        "condition_type": "crowding",
+        "visitor_types": [],
+        "evidence": [
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 1802,
+            "end": 1835,
+            "text": "如果你不想人挤人、也不想早起抢预约的话,建议计划周中去,人会少很多"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ADVICE_A_S002_VIS_004_072958652312044",
+      "node_type": "ADVICE",
+      "name": "建议计划周中去,人会少很多",
+      "scenic_id": "S002",
+      "source_refs": [
+        "S002_VIS_004"
+      ],
+      "attributes": {
+        "advice_id": "A_S002_VIS_004_072958652312044",
+        "method": "rule:conditional_action",
+        "evidence": [
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 1802,
+            "end": 1835,
+            "text": "如果你不想人挤人、也不想早起抢预约的话,建议计划周中去,人会少很多"
+          }
+        ],
+        "condition_span": {
+          "doc_id": "S002_VIS_004",
+          "start": 1802,
+          "end": 1821,
+          "text": "如果你不想人挤人、也不想早起抢预约的话"
+        },
+        "suggestion_span": {
+          "doc_id": "S002_VIS_004",
+          "start": 1822,
+          "end": 1835,
+          "text": "建议计划周中去,人会少很多"
+        },
+        "source_text_type": "visitor_diary",
+        "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+        "duplicate_group": "5e1ba1c73c76",
+        "review_correction": null
+      }
+    },
+    {
+      "node_id": "N_CONDITION_A_S002_VIS_004_017220019902559",
+      "node_type": "CONDITION",
+      "name": "条件允许的话",
+      "scenic_id": "S002",
+      "source_refs": [
+        "S002_VIS_004"
+      ],
+      "attributes": {
+        "advice_id": "A_S002_VIS_004_017220019902559",
+        "condition_type": "other",
+        "visitor_types": [],
+        "evidence": [
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 2073,
+            "end": 2111,
+            "text": "条件允许的话,一定要沿41号路由南往北,从Oakhurst进入优胜美地,路上"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ADVICE_A_S002_VIS_004_017220019902559",
+      "node_type": "ADVICE",
+      "name": "一定要沿41号路由南往北,从Oakhurst进入优胜美地",
+      "scenic_id": "S002",
+      "source_refs": [
+        "S002_VIS_004"
+      ],
+      "attributes": {
+        "advice_id": "A_S002_VIS_004_017220019902559",
+        "method": "rule:conditional_action+ai_review",
+        "evidence": [
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 2073,
+            "end": 2111,
+            "text": "条件允许的话,一定要沿41号路由南往北,从Oakhurst进入优胜美地,路上"
+          }
+        ],
+        "condition_span": {
+          "doc_id": "S002_VIS_004",
+          "start": 2073,
+          "end": 2079,
+          "text": "条件允许的话"
+        },
+        "suggestion_span": {
+          "doc_id": "S002_VIS_004",
+          "start": 2080,
+          "end": 2108,
+          "text": "一定要沿41号路由南往北,从Oakhurst进入优胜美地"
+        },
+        "source_text_type": "visitor_diary",
+        "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+        "duplicate_group": "42891d1b100d",
+        "review_correction": "句尾路上属于下一个条件的引导语"
+      }
+    },
+    {
+      "node_id": "N_CONDITION_A_S002_VIS_004_062256464651836",
+      "node_type": "CONDITION",
+      "name": "如果你感兴趣的话",
+      "scenic_id": "S002",
+      "source_refs": [
+        "S002_VIS_004"
+      ],
+      "attributes": {
+        "advice_id": "A_S002_VIS_004_062256464651836",
+        "condition_type": "other",
+        "visitor_types": [],
+        "evidence": [
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 2111,
+            "end": 2182,
+            "text": "如果你感兴趣的话还可以去Mariposa Grove看看巨大的红杉树,当车从隧道穿出,Yosemite Valley一览无余的感觉非常震撼人心"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ADVICE_A_S002_VIS_004_062256464651836",
+      "node_type": "ADVICE",
+      "name": "还可以去Mariposa Grove看看巨大的红杉树",
+      "scenic_id": "S002",
+      "source_refs": [
+        "S002_VIS_004"
+      ],
+      "attributes": {
+        "advice_id": "A_S002_VIS_004_062256464651836",
+        "method": "rule:conditional_action+ai_review",
+        "evidence": [
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 2111,
+            "end": 2182,
+            "text": "如果你感兴趣的话还可以去Mariposa Grove看看巨大的红杉树,当车从隧道穿出,Yosemite Valley一览无余的感觉非常震撼人心"
+          }
+        ],
+        "condition_span": {
+          "doc_id": "S002_VIS_004",
+          "start": 2111,
+          "end": 2119,
+          "text": "如果你感兴趣的话"
+        },
+        "suggestion_span": {
+          "doc_id": "S002_VIS_004",
+          "start": 2119,
+          "end": 2145,
+          "text": "还可以去Mariposa Grove看看巨大的红杉树"
+        },
+        "source_text_type": "visitor_diary",
+        "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+        "duplicate_group": "81c6c3260751",
+        "review_correction": "后半段为作者观景感受，截去无关建议后缀"
+      }
+    },
+    {
+      "node_id": "N_CONDITION_A_S003_OFF_001_051221032292834",
+      "node_type": "CONDITION",
+      "name": "如果您想近距离观赏",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S003_OFF_001_051221032292834",
+        "condition_type": "other",
+        "visitor_types": [],
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2225,
+            "end": 2276,
+            "text": "如果您想近距离观赏,可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ADVICE_A_S003_OFF_001_051221032292834",
+      "node_type": "ADVICE",
+      "name": "可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S003_OFF_001_051221032292834",
+        "method": "rule:conditional_action",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2225,
+            "end": 2276,
+            "text": "如果您想近距离观赏,可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布"
+          }
+        ],
+        "condition_span": {
+          "doc_id": "S003_OFF_001",
+          "start": 2225,
+          "end": 2234,
+          "text": "如果您想近距离观赏"
+        },
+        "suggestion_span": {
+          "doc_id": "S003_OFF_001",
+          "start": 2235,
+          "end": 2276,
+          "text": "可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布"
+        },
+        "source_text_type": "official_route",
+        "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+        "duplicate_group": "01c531f7c978",
+        "review_correction": null
+      }
+    },
+    {
+      "node_id": "N_CONDITION_A_S003_OFF_001_173909348912377",
+      "node_type": "CONDITION",
+      "name": "如果想在旅途中享用美食",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S003_OFF_001_173909348912377",
+        "condition_type": "other",
+        "visitor_types": [],
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2677,
+            "end": 2719,
+            "text": "如果想在旅途中享用美食,请前往这家小猪熟食店这里有琳琅满目的糕点、沙拉和其他自制美食"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ADVICE_A_S003_OFF_001_173909348912377",
+      "node_type": "ADVICE",
+      "name": "请前往这家小猪熟食店这里有琳琅满目的糕点、沙拉和其他自制美食",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S003_OFF_001_173909348912377",
+        "method": "rule:conditional_action",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2677,
+            "end": 2719,
+            "text": "如果想在旅途中享用美食,请前往这家小猪熟食店这里有琳琅满目的糕点、沙拉和其他自制美食"
+          }
+        ],
+        "condition_span": {
+          "doc_id": "S003_OFF_001",
+          "start": 2677,
+          "end": 2688,
+          "text": "如果想在旅途中享用美食"
+        },
+        "suggestion_span": {
+          "doc_id": "S003_OFF_001",
+          "start": 2689,
+          "end": 2719,
+          "text": "请前往这家小猪熟食店这里有琳琅满目的糕点、沙拉和其他自制美食"
+        },
+        "source_text_type": "official_route",
+        "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+        "duplicate_group": "00602615cdb4",
+        "review_correction": null
+      }
+    },
+    {
+      "node_id": "N_CONDITION_A_S003_OFF_001_260778767605275",
+      "node_type": "CONDITION",
+      "name": "如果你有时间",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S003_OFF_001_260778767605275",
+        "condition_type": "time",
+        "visitor_types": [],
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2853,
+            "end": 2908,
+            "text": "如果你有时间,另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ADVICE_A_S003_OFF_001_260778767605275",
+      "node_type": "ADVICE",
+      "name": "另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S003_OFF_001_260778767605275",
+        "method": "rule:conditional_action",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2853,
+            "end": 2908,
+            "text": "如果你有时间,另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一"
+          }
+        ],
+        "condition_span": {
+          "doc_id": "S003_OFF_001",
+          "start": 2853,
+          "end": 2859,
+          "text": "如果你有时间"
+        },
+        "suggestion_span": {
+          "doc_id": "S003_OFF_001",
+          "start": 2860,
+          "end": 2908,
+          "text": "另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一"
+        },
+        "source_text_type": "official_route",
+        "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+        "duplicate_group": "e00ef5fdc0e8",
+        "review_correction": null
+      }
+    },
+    {
+      "node_id": "N_CONDITION_A_S003_OFF_001_035301096231357",
+      "node_type": "CONDITION",
+      "name": "如果游客想要体验更长的徒步旅行,例如壮观的大峡谷步道,或者想游览其他村庄",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S003_OFF_001_035301096231357",
+        "condition_type": "other",
+        "visitor_types": [],
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4098,
+            "end": 4142,
+            "text": "如果游客想要体验更长的徒步旅行,例如壮观的大峡谷步道,或者想游览其他村庄,则应该在此过夜"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ADVICE_A_S003_OFF_001_035301096231357",
+      "node_type": "ADVICE",
+      "name": "则应该在此过夜",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S003_OFF_001_035301096231357",
+        "method": "rule:conditional_action",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4098,
+            "end": 4142,
+            "text": "如果游客想要体验更长的徒步旅行,例如壮观的大峡谷步道,或者想游览其他村庄,则应该在此过夜"
+          }
+        ],
+        "condition_span": {
+          "doc_id": "S003_OFF_001",
+          "start": 4098,
+          "end": 4134,
+          "text": "如果游客想要体验更长的徒步旅行,例如壮观的大峡谷步道,或者想游览其他村庄"
+        },
+        "suggestion_span": {
+          "doc_id": "S003_OFF_001",
+          "start": 4135,
+          "end": 4142,
+          "text": "则应该在此过夜"
+        },
+        "source_text_type": "official_route",
+        "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+        "duplicate_group": "c0e49c0afa07",
+        "review_correction": null
+      }
+    },
+    {
+      "node_id": "N_CONDITION_A_S003_OFF_001_143350059015598",
+      "node_type": "CONDITION",
+      "name": "蓝山适合儿童游玩吗?",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S003_OFF_001_143350059015598",
+        "condition_type": "visitor_type",
+        "visitor_types": [
+          "family"
+        ],
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4833,
+            "end": 4901,
+            "text": "蓝山适合儿童游玩吗?\n当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)。\n"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ADVICE_A_S003_OFF_001_143350059015598",
+      "node_type": "ADVICE",
+      "name": "当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S003_OFF_001_143350059015598",
+        "method": "rule:faq_condition_block",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4833,
+            "end": 4901,
+            "text": "蓝山适合儿童游玩吗?\n当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)。\n"
+          }
+        ],
+        "condition_span": {
+          "doc_id": "S003_OFF_001",
+          "start": 4833,
+          "end": 4843,
+          "text": "蓝山适合儿童游玩吗?"
+        },
+        "suggestion_span": {
+          "doc_id": "S003_OFF_001",
+          "start": 4844,
+          "end": 4899,
+          "text": "当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)"
+        },
+        "source_text_type": "official_route",
+        "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+        "duplicate_group": "1feb834d7a5f",
+        "review_correction": null
+      }
+    },
+    {
+      "node_id": "N_CONDITION_A_S003_OFF_001_231897423423565",
+      "node_type": "CONDITION",
+      "name": "下雨天还值得去蓝山吗?",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S003_OFF_001_231897423423565",
+        "condition_type": "weather",
+        "visitor_types": [],
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4901,
+            "end": 5132,
+            "text": "下雨天还值得去蓝山吗?\n在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ADVICE_A_S003_OFF_001_231897423423565",
+      "node_type": "ADVICE",
+      "name": "在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山",
+      "scenic_id": "S003",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S003_OFF_001_231897423423565",
+        "method": "rule:faq_condition_block",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4901,
+            "end": 5132,
+            "text": "下雨天还值得去蓝山吗?\n在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山"
+          }
+        ],
+        "condition_span": {
+          "doc_id": "S003_OFF_001",
+          "start": 4901,
+          "end": 4912,
+          "text": "下雨天还值得去蓝山吗?"
+        },
+        "suggestion_span": {
+          "doc_id": "S003_OFF_001",
+          "start": 4913,
+          "end": 5132,
+          "text": "在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山"
+        },
+        "source_text_type": "official_route",
+        "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+        "duplicate_group": "a449d50637e6",
+        "review_correction": null
       }
     }
   ],
@@ -5487,6 +9425,1358 @@
           }
         ]
       }
+    },
+    {
+      "edge_id": "EDGE_HAS_ADVICE_A_S001_OFF_001_255828790194615",
+      "source": "N_SCENIC_S001",
+      "target": "N_ADVICE_A_S001_OFF_001_255828790194615",
+      "relation": "HAS_ADVICE",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_TRIGGERS_A_S001_OFF_001_255828790194615",
+      "source": "N_CONDITION_A_S001_OFF_001_255828790194615",
+      "target": "N_ADVICE_A_S001_OFF_001_255828790194615",
+      "relation": "TRIGGERS",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S001_OFF_001_255828790194615_S001_TRANSPORT_015",
+      "source": "N_ADVICE_A_S001_OFF_001_255828790194615",
+      "target": "N_ENTITY_S001_TRANSPORT_015",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 504,
+            "end": 542,
+            "text": "如果使用“箱根周游券”乘坐“浪漫”特快,则需另外支付特快费(1,200日币)"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_ADVICE_A_S001_OFF_001_171123485310695",
+      "source": "N_SCENIC_S001",
+      "target": "N_ADVICE_A_S001_OFF_001_171123485310695",
+      "relation": "HAS_ADVICE",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_TRIGGERS_A_S001_OFF_001_171123485310695",
+      "source": "N_CONDITION_A_S001_OFF_001_171123485310695",
+      "target": "N_ADVICE_A_S001_OFF_001_171123485310695",
+      "relation": "TRIGGERS",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_HAS_ADVICE_A_S001_OFF_001_247169266140315",
+      "source": "N_SCENIC_S001",
+      "target": "N_ADVICE_A_S001_OFF_001_247169266140315",
+      "relation": "HAS_ADVICE",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_TRIGGERS_A_S001_OFF_001_247169266140315",
+      "source": "N_CONDITION_A_S001_OFF_001_247169266140315",
+      "target": "N_ADVICE_A_S001_OFF_001_247169266140315",
+      "relation": "TRIGGERS",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S001_OFF_001_247169266140315_S001_POI_020",
+      "source": "N_ADVICE_A_S001_OFF_001_247169266140315",
+      "target": "N_ENTITY_S001_POI_020",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1084,
+            "end": 1134,
+            "text": "对于带儿童的家庭,推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S001_OFF_001_247169266140315_S001_POI_021",
+      "source": "N_ADVICE_A_S001_OFF_001_247169266140315",
+      "target": "N_ENTITY_S001_POI_021",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1084,
+            "end": 1134,
+            "text": "对于带儿童的家庭,推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_ADVICE_A_S001_OFF_001_177547618944147",
+      "source": "N_SCENIC_S001",
+      "target": "N_ADVICE_A_S001_OFF_001_177547618944147",
+      "relation": "HAS_ADVICE",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_TRIGGERS_A_S001_OFF_001_177547618944147",
+      "source": "N_CONDITION_A_S001_OFF_001_177547618944147",
+      "target": "N_ADVICE_A_S001_OFF_001_177547618944147",
+      "relation": "TRIGGERS",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S001_OFF_001_177547618944147_S001_POI_007",
+      "source": "N_ADVICE_A_S001_OFF_001_177547618944147",
+      "target": "N_ENTITY_S001_POI_007",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1135,
+            "end": 1155,
+            "text": "如果您感到疲劳,还可以在馆区内泡足汤小憩"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 967,
+            "end": 976,
+            "text": "箱根雕刻森林美术馆"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_ADVICE_A_S001_OFF_001_147046239503370",
+      "source": "N_SCENIC_S001",
+      "target": "N_ADVICE_A_S001_OFF_001_147046239503370",
+      "relation": "HAS_ADVICE",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_TRIGGERS_A_S001_OFF_001_147046239503370",
+      "source": "N_CONDITION_A_S001_OFF_001_147046239503370",
+      "target": "N_ADVICE_A_S001_OFF_001_147046239503370",
+      "relation": "TRIGGERS",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_HAS_ADVICE_A_S001_OFF_001_250646070388022",
+      "source": "N_SCENIC_S001",
+      "target": "N_ADVICE_A_S001_OFF_001_250646070388022",
+      "relation": "HAS_ADVICE",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_TRIGGERS_A_S001_OFF_001_250646070388022",
+      "source": "N_CONDITION_A_S001_OFF_001_250646070388022",
+      "target": "N_ADVICE_A_S001_OFF_001_250646070388022",
+      "relation": "TRIGGERS",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S001_OFF_001_250646070388022_S001_POI_005",
+      "source": "N_ADVICE_A_S001_OFF_001_250646070388022",
+      "target": "N_ENTITY_S001_POI_005",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2719,
+            "end": 2752,
+            "text": "如果购买伴手礼,可以前往位于箱根汤本站的“箱根登山名产店 汤本店”"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S001_OFF_001_250646070388022_S001_POI_025",
+      "source": "N_ADVICE_A_S001_OFF_001_250646070388022",
+      "target": "N_ENTITY_S001_POI_025",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S001_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 2719,
+            "end": 2752,
+            "text": "如果购买伴手礼,可以前往位于箱根汤本站的“箱根登山名产店 汤本店”"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_ADVICE_A_S001_VIS_005_134550840182935",
+      "source": "N_SCENIC_S001",
+      "target": "N_ADVICE_A_S001_VIS_005_134550840182935",
+      "relation": "HAS_ADVICE",
+      "source_refs": [
+        "S001_VIS_005"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_TRIGGERS_A_S001_VIS_005_134550840182935",
+      "source": "N_CONDITION_A_S001_VIS_005_134550840182935",
+      "target": "N_ADVICE_A_S001_VIS_005_134550840182935",
+      "relation": "TRIGGERS",
+      "source_refs": [
+        "S001_VIS_005"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S001_VIS_005_134550840182935_S001_POI_005",
+      "source": "N_ADVICE_A_S001_VIS_005_134550840182935",
+      "target": "N_ENTITY_S001_POI_005",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5836,
+            "end": 5876,
+            "text": "如果乘坐小田急浪漫特快前往箱根汤本,则需另外购买特快车票,1200日元/人/单程"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S001_VIS_005_134550840182935_S001_TRANSPORT_015",
+      "source": "N_ADVICE_A_S001_VIS_005_134550840182935",
+      "target": "N_ENTITY_S001_TRANSPORT_015",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5836,
+            "end": 5876,
+            "text": "如果乘坐小田急浪漫特快前往箱根汤本,则需另外购买特快车票,1200日元/人/单程"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_ADVICE_A_S001_VIS_005_228267617104810",
+      "source": "N_SCENIC_S001",
+      "target": "N_ADVICE_A_S001_VIS_005_228267617104810",
+      "relation": "HAS_ADVICE",
+      "source_refs": [
+        "S001_VIS_005"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_TRIGGERS_A_S001_VIS_005_228267617104810",
+      "source": "N_CONDITION_A_S001_VIS_005_228267617104810",
+      "target": "N_ADVICE_A_S001_VIS_005_228267617104810",
+      "relation": "TRIGGERS",
+      "source_refs": [
+        "S001_VIS_005"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S001_VIS_005_228267617104810_S001_POI_005",
+      "source": "N_ADVICE_A_S001_VIS_005_228267617104810",
+      "target": "N_ENTITY_S001_POI_005",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5877,
+            "end": 5955,
+            "text": "如果不想另外付费,则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S001_VIS_005_228267617104810_S001_POI_016",
+      "source": "N_ADVICE_A_S001_VIS_005_228267617104810",
+      "target": "N_ENTITY_S001_POI_016",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5877,
+            "end": 5955,
+            "text": "如果不想另外付费,则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S001_VIS_005_228267617104810_S001_TIME_030",
+      "source": "N_ADVICE_A_S001_VIS_005_228267617104810",
+      "target": "N_ENTITY_S001_TIME_030",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5877,
+            "end": 5955,
+            "text": "如果不想另外付费,则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S001_VIS_005_228267617104810_S001_TRANSPORT_010",
+      "source": "N_ADVICE_A_S001_VIS_005_228267617104810",
+      "target": "N_ENTITY_S001_TRANSPORT_010",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5877,
+            "end": 5955,
+            "text": "如果不想另外付费,则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S001_VIS_005_228267617104810_S001_TRANSPORT_015",
+      "source": "N_ADVICE_A_S001_VIS_005_228267617104810",
+      "target": "N_ENTITY_S001_TRANSPORT_015",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5877,
+            "end": 5955,
+            "text": "如果不想另外付费,则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S001_VIS_005_228267617104810_S001_TRANSPORT_016",
+      "source": "N_ADVICE_A_S001_VIS_005_228267617104810",
+      "target": "N_ENTITY_S001_TRANSPORT_016",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 5877,
+            "end": 5955,
+            "text": "如果不想另外付费,则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_ADVICE_A_S001_VIS_005_117040616929219",
+      "source": "N_SCENIC_S001",
+      "target": "N_ADVICE_A_S001_VIS_005_117040616929219",
+      "relation": "HAS_ADVICE",
+      "source_refs": [
+        "S001_VIS_005"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_TRIGGERS_A_S001_VIS_005_117040616929219",
+      "source": "N_CONDITION_A_S001_VIS_005_117040616929219",
+      "target": "N_ADVICE_A_S001_VIS_005_117040616929219",
+      "relation": "TRIGGERS",
+      "source_refs": [
+        "S001_VIS_005"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S001_VIS_005_117040616929219_S001_POI_003",
+      "source": "N_ADVICE_A_S001_VIS_005_117040616929219",
+      "target": "N_ENTITY_S001_POI_003",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6130,
+            "end": 6184,
+            "text": "如果座位有空的话,一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S001_VIS_005_117040616929219_S001_TRANSPORT_014",
+      "source": "N_ADVICE_A_S001_VIS_005_117040616929219",
+      "target": "N_ENTITY_S001_TRANSPORT_014",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S001_VIS_005"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S001_VIS_005",
+            "start": 6130,
+            "end": 6184,
+            "text": "如果座位有空的话,一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_ADVICE_A_S002_OFF_001_088248811662268",
+      "source": "N_SCENIC_S002",
+      "target": "N_ADVICE_A_S002_OFF_001_088248811662268",
+      "relation": "HAS_ADVICE",
+      "source_refs": [
+        "S002_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_TRIGGERS_A_S002_OFF_001_088248811662268",
+      "source": "N_CONDITION_A_S002_OFF_001_088248811662268",
+      "target": "N_ADVICE_A_S002_OFF_001_088248811662268",
+      "relation": "TRIGGERS",
+      "source_refs": [
+        "S002_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S002_OFF_001_088248811662268_S002_POI_012",
+      "source": "N_ADVICE_A_S002_OFF_001_088248811662268",
+      "target": "N_ENTITY_S002_POI_012",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S002_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 1880,
+            "end": 2024,
+            "text": "If you are planning to hike the half loop, cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S002_OFF_001_088248811662268_S002_POI_013",
+      "source": "N_ADVICE_A_S002_OFF_001_088248811662268",
+      "target": "N_ENTITY_S002_POI_013",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S002_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 1880,
+            "end": 2024,
+            "text": "If you are planning to hike the half loop, cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S002_OFF_001_088248811662268_S002_POI_018",
+      "source": "N_ADVICE_A_S002_OFF_001_088248811662268",
+      "target": "N_ENTITY_S002_POI_018",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S002_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 1880,
+            "end": 2024,
+            "text": "If you are planning to hike the half loop, cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S002_OFF_001_088248811662268_S002_TRANSPORT_001",
+      "source": "N_ADVICE_A_S002_OFF_001_088248811662268",
+      "target": "N_ENTITY_S002_TRANSPORT_001",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S002_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 1880,
+            "end": 2024,
+            "text": "If you are planning to hike the half loop, cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_ADVICE_A_S002_OFF_001_257761964045209",
+      "source": "N_SCENIC_S002",
+      "target": "N_ADVICE_A_S002_OFF_001_257761964045209",
+      "relation": "HAS_ADVICE",
+      "source_refs": [
+        "S002_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_TRIGGERS_A_S002_OFF_001_257761964045209",
+      "source": "N_CONDITION_A_S002_OFF_001_257761964045209",
+      "target": "N_ADVICE_A_S002_OFF_001_257761964045209",
+      "relation": "TRIGGERS",
+      "source_refs": [
+        "S002_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S002_OFF_001_257761964045209_S002_POI_003",
+      "source": "N_ADVICE_A_S002_OFF_001_257761964045209",
+      "target": "N_ENTITY_S002_POI_003",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S002_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 2026,
+            "end": 2121,
+            "text": "If you are planning to hike the full loop, continue west past El Capitan toward Bridalveil Fall"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S002_OFF_001_257761964045209_S002_POI_007",
+      "source": "N_ADVICE_A_S002_OFF_001_257761964045209",
+      "target": "N_ENTITY_S002_POI_007",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S002_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 2026,
+            "end": 2121,
+            "text": "If you are planning to hike the full loop, continue west past El Capitan toward Bridalveil Fall"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S002_OFF_001_257761964045209_S002_TRANSPORT_001",
+      "source": "N_ADVICE_A_S002_OFF_001_257761964045209",
+      "target": "N_ENTITY_S002_TRANSPORT_001",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S002_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S002_OFF_001",
+            "start": 2026,
+            "end": 2121,
+            "text": "If you are planning to hike the full loop, continue west past El Capitan toward Bridalveil Fall"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_ADVICE_A_S002_VIS_004_072958652312044",
+      "source": "N_SCENIC_S002",
+      "target": "N_ADVICE_A_S002_VIS_004_072958652312044",
+      "relation": "HAS_ADVICE",
+      "source_refs": [
+        "S002_VIS_004"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_TRIGGERS_A_S002_VIS_004_072958652312044",
+      "source": "N_CONDITION_A_S002_VIS_004_072958652312044",
+      "target": "N_ADVICE_A_S002_VIS_004_072958652312044",
+      "relation": "TRIGGERS",
+      "source_refs": [
+        "S002_VIS_004"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_HAS_ADVICE_A_S002_VIS_004_017220019902559",
+      "source": "N_SCENIC_S002",
+      "target": "N_ADVICE_A_S002_VIS_004_017220019902559",
+      "relation": "HAS_ADVICE",
+      "source_refs": [
+        "S002_VIS_004"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_TRIGGERS_A_S002_VIS_004_017220019902559",
+      "source": "N_CONDITION_A_S002_VIS_004_017220019902559",
+      "target": "N_ADVICE_A_S002_VIS_004_017220019902559",
+      "relation": "TRIGGERS",
+      "source_refs": [
+        "S002_VIS_004"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S002_VIS_004_017220019902559_S002_POI_001",
+      "source": "N_ADVICE_A_S002_VIS_004_017220019902559",
+      "target": "N_ENTITY_S002_POI_001",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S002_VIS_004"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 2073,
+            "end": 2111,
+            "text": "条件允许的话,一定要沿41号路由南往北,从Oakhurst进入优胜美地,路上"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_ADVICE_A_S002_VIS_004_062256464651836",
+      "source": "N_SCENIC_S002",
+      "target": "N_ADVICE_A_S002_VIS_004_062256464651836",
+      "relation": "HAS_ADVICE",
+      "source_refs": [
+        "S002_VIS_004"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_TRIGGERS_A_S002_VIS_004_062256464651836",
+      "source": "N_CONDITION_A_S002_VIS_004_062256464651836",
+      "target": "N_ADVICE_A_S002_VIS_004_062256464651836",
+      "relation": "TRIGGERS",
+      "source_refs": [
+        "S002_VIS_004"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S002_VIS_004_062256464651836_S002_POI_002",
+      "source": "N_ADVICE_A_S002_VIS_004_062256464651836",
+      "target": "N_ENTITY_S002_POI_002",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S002_VIS_004"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 2111,
+            "end": 2182,
+            "text": "如果你感兴趣的话还可以去Mariposa Grove看看巨大的红杉树,当车从隧道穿出,Yosemite Valley一览无余的感觉非常震撼人心"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S002_VIS_004_062256464651836_S002_POI_068",
+      "source": "N_ADVICE_A_S002_VIS_004_062256464651836",
+      "target": "N_ENTITY_S002_POI_068",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S002_VIS_004"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S002_VIS_004",
+            "start": 2111,
+            "end": 2182,
+            "text": "如果你感兴趣的话还可以去Mariposa Grove看看巨大的红杉树,当车从隧道穿出,Yosemite Valley一览无余的感觉非常震撼人心"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_ADVICE_A_S003_OFF_001_051221032292834",
+      "source": "N_SCENIC_S003",
+      "target": "N_ADVICE_A_S003_OFF_001_051221032292834",
+      "relation": "HAS_ADVICE",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_TRIGGERS_A_S003_OFF_001_051221032292834",
+      "source": "N_CONDITION_A_S003_OFF_001_051221032292834",
+      "target": "N_ADVICE_A_S003_OFF_001_051221032292834",
+      "relation": "TRIGGERS",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S003_OFF_001_051221032292834_S003_POI_015",
+      "source": "N_ADVICE_A_S003_OFF_001_051221032292834",
+      "target": "N_ENTITY_S003_POI_015",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2225,
+            "end": 2276,
+            "text": "如果您想近距离观赏,可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_ADVICE_A_S003_OFF_001_173909348912377",
+      "source": "N_SCENIC_S003",
+      "target": "N_ADVICE_A_S003_OFF_001_173909348912377",
+      "relation": "HAS_ADVICE",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_TRIGGERS_A_S003_OFF_001_173909348912377",
+      "source": "N_CONDITION_A_S003_OFF_001_173909348912377",
+      "target": "N_ADVICE_A_S003_OFF_001_173909348912377",
+      "relation": "TRIGGERS",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_HAS_ADVICE_A_S003_OFF_001_260778767605275",
+      "source": "N_SCENIC_S003",
+      "target": "N_ADVICE_A_S003_OFF_001_260778767605275",
+      "relation": "HAS_ADVICE",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_TRIGGERS_A_S003_OFF_001_260778767605275",
+      "source": "N_CONDITION_A_S003_OFF_001_260778767605275",
+      "target": "N_ADVICE_A_S003_OFF_001_260778767605275",
+      "relation": "TRIGGERS",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S003_OFF_001_260778767605275_S003_POI_001",
+      "source": "N_ADVICE_A_S003_OFF_001_260778767605275",
+      "target": "N_ENTITY_S003_POI_001",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2853,
+            "end": 2908,
+            "text": "如果你有时间,另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S003_OFF_001_260778767605275_S003_POI_016",
+      "source": "N_ADVICE_A_S003_OFF_001_260778767605275",
+      "target": "N_ENTITY_S003_POI_016",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2853,
+            "end": 2908,
+            "text": "如果你有时间,另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S003_OFF_001_260778767605275_S003_POI_020",
+      "source": "N_ADVICE_A_S003_OFF_001_260778767605275",
+      "target": "N_ENTITY_S003_POI_020",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 2853,
+            "end": 2908,
+            "text": "如果你有时间,另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_ADVICE_A_S003_OFF_001_035301096231357",
+      "source": "N_SCENIC_S003",
+      "target": "N_ADVICE_A_S003_OFF_001_035301096231357",
+      "relation": "HAS_ADVICE",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_TRIGGERS_A_S003_OFF_001_035301096231357",
+      "source": "N_CONDITION_A_S003_OFF_001_035301096231357",
+      "target": "N_ADVICE_A_S003_OFF_001_035301096231357",
+      "relation": "TRIGGERS",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S003_OFF_001_035301096231357_S003_POI_019",
+      "source": "N_ADVICE_A_S003_OFF_001_035301096231357",
+      "target": "N_ENTITY_S003_POI_019",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4098,
+            "end": 4142,
+            "text": "如果游客想要体验更长的徒步旅行,例如壮观的大峡谷步道,或者想游览其他村庄,则应该在此过夜"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S003_OFF_001_035301096231357_S003_TRANSPORT_001",
+      "source": "N_ADVICE_A_S003_OFF_001_035301096231357",
+      "target": "N_ENTITY_S003_TRANSPORT_001",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4098,
+            "end": 4142,
+            "text": "如果游客想要体验更长的徒步旅行,例如壮观的大峡谷步道,或者想游览其他村庄,则应该在此过夜"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_ADVICE_A_S003_OFF_001_143350059015598",
+      "source": "N_SCENIC_S003",
+      "target": "N_ADVICE_A_S003_OFF_001_143350059015598",
+      "relation": "HAS_ADVICE",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_TRIGGERS_A_S003_OFF_001_143350059015598",
+      "source": "N_CONDITION_A_S003_OFF_001_143350059015598",
+      "target": "N_ADVICE_A_S003_OFF_001_143350059015598",
+      "relation": "TRIGGERS",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S003_OFF_001_143350059015598_S003_POI_001",
+      "source": "N_ADVICE_A_S003_OFF_001_143350059015598",
+      "target": "N_ENTITY_S003_POI_001",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4833,
+            "end": 4901,
+            "text": "蓝山适合儿童游玩吗?\n当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)。\n"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S003_OFF_001_143350059015598_S003_POI_003",
+      "source": "N_ADVICE_A_S003_OFF_001_143350059015598",
+      "target": "N_ENTITY_S003_POI_003",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4833,
+            "end": 4901,
+            "text": "蓝山适合儿童游玩吗?\n当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)。\n"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S003_OFF_001_143350059015598_S003_TRANSPORT_001",
+      "source": "N_ADVICE_A_S003_OFF_001_143350059015598",
+      "target": "N_ENTITY_S003_TRANSPORT_001",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4833,
+            "end": 4901,
+            "text": "蓝山适合儿童游玩吗?\n当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)。\n"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S003_OFF_001_143350059015598_S003_TRANSPORT_008",
+      "source": "N_ADVICE_A_S003_OFF_001_143350059015598",
+      "target": "N_ENTITY_S003_TRANSPORT_008",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4833,
+            "end": 4901,
+            "text": "蓝山适合儿童游玩吗?\n当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)。\n"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_HAS_ADVICE_A_S003_OFF_001_231897423423565",
+      "source": "N_SCENIC_S003",
+      "target": "N_ADVICE_A_S003_OFF_001_231897423423565",
+      "relation": "HAS_ADVICE",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_TRIGGERS_A_S003_OFF_001_231897423423565",
+      "source": "N_CONDITION_A_S003_OFF_001_231897423423565",
+      "target": "N_ADVICE_A_S003_OFF_001_231897423423565",
+      "relation": "TRIGGERS",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S003_OFF_001_231897423423565_S003_POI_001",
+      "source": "N_ADVICE_A_S003_OFF_001_231897423423565",
+      "target": "N_ENTITY_S003_POI_001",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4901,
+            "end": 5132,
+            "text": "下雨天还值得去蓝山吗?\n在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S003_OFF_001_231897423423565_S003_POI_004",
+      "source": "N_ADVICE_A_S003_OFF_001_231897423423565",
+      "target": "N_ENTITY_S003_POI_004",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4901,
+            "end": 5132,
+            "text": "下雨天还值得去蓝山吗?\n在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S003_OFF_001_231897423423565_S003_POI_005",
+      "source": "N_ADVICE_A_S003_OFF_001_231897423423565",
+      "target": "N_ENTITY_S003_POI_005",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4901,
+            "end": 5132,
+            "text": "下雨天还值得去蓝山吗?\n在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S003_OFF_001_231897423423565_S003_POI_026",
+      "source": "N_ADVICE_A_S003_OFF_001_231897423423565",
+      "target": "N_ENTITY_S003_POI_026",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4901,
+            "end": 5132,
+            "text": "下雨天还值得去蓝山吗?\n在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S003_OFF_001_231897423423565_S003_POI_045",
+      "source": "N_ADVICE_A_S003_OFF_001_231897423423565",
+      "target": "N_ENTITY_S003_POI_045",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4901,
+            "end": 5132,
+            "text": "下雨天还值得去蓝山吗?\n在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S003_OFF_001_231897423423565_S003_POI_046",
+      "source": "N_ADVICE_A_S003_OFF_001_231897423423565",
+      "target": "N_ENTITY_S003_POI_046",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4901,
+            "end": 5132,
+            "text": "下雨天还值得去蓝山吗?\n在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S003_OFF_001_231897423423565_S003_POI_047",
+      "source": "N_ADVICE_A_S003_OFF_001_231897423423565",
+      "target": "N_ENTITY_S003_POI_047",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4901,
+            "end": 5132,
+            "text": "下雨天还值得去蓝山吗?\n在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S003_OFF_001_231897423423565_S003_POI_048",
+      "source": "N_ADVICE_A_S003_OFF_001_231897423423565",
+      "target": "N_ENTITY_S003_POI_048",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4901,
+            "end": 5132,
+            "text": "下雨天还值得去蓝山吗?\n在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S003_OFF_001_231897423423565_S003_POI_049",
+      "source": "N_ADVICE_A_S003_OFF_001_231897423423565",
+      "target": "N_ENTITY_S003_POI_049",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4901,
+            "end": 5132,
+            "text": "下雨天还值得去蓝山吗?\n在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S003_OFF_001_231897423423565_S003_POI_050",
+      "source": "N_ADVICE_A_S003_OFF_001_231897423423565",
+      "target": "N_ENTITY_S003_POI_050",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4901,
+            "end": 5132,
+            "text": "下雨天还值得去蓝山吗?\n在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "EDGE_APPLIES_TO_A_S003_OFF_001_231897423423565_S003_POI_051",
+      "source": "N_ADVICE_A_S003_OFF_001_231897423423565",
+      "target": "N_ENTITY_S003_POI_051",
+      "relation": "APPLIES_TO",
+      "source_refs": [
+        "S003_OFF_001"
+      ],
+      "attributes": {
+        "semantic_role": "related_context",
+        "evidence": [
+          {
+            "doc_id": "S003_OFF_001",
+            "start": 4901,
+            "end": 5132,
+            "text": "下雨天还值得去蓝山吗?\n在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山"
+          }
+        ]
+      }
     }
-  ]
+  ],
+  "input_sha256": {
+    "routes.json": "634ac6cdc52e9cb408bbd9bf99cb229b91dc6db738078d5d96625cc76416db33",
+    "entities.json": "71598abfdec68cd99d3983cd5099ee07c653d41438968d14d7c9ee46ea6caac9",
+    "advice.json": "114da2a976c0651519514637a497b99aa0f4e80021b26bed0cfc71f8362823c0",
+    "corpus.jsonl": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0"
+  }
 }

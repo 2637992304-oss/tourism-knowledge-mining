@@ -59,7 +59,7 @@
   "inactive_entities_skipped": [
     "S003_TIME_023"
   ],
-  "unused_entity_nodes_filtered": 281,
+  "unused_entity_nodes_filtered": 253,
   "entity_resource_version": "exp02-v1.1",
   "confirmed_updates": [
     {

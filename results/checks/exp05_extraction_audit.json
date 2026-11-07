@@ -1,0 +1,335 @@
+{
+  "documents": [
+    {
+      "doc_id": "S001_OFF_001",
+      "ranges": [
+        {
+          "start": 0,
+          "end": 2948,
+          "start_marker": null,
+          "end_marker": "\n新浪微博"
+        }
+      ],
+      "candidates": 6,
+      "rejected": [
+        {
+          "evidence": {
+            "doc_id": "S001_OFF_001",
+            "start": 454,
+            "end": 488,
+            "text": "如果遇上好天气,还可以从车窗看到富士山,这无疑会增加您对旅行的期待哦"
+          },
+          "reason": "描述/总结/元话语，没有具体条件动作"
+        },
+        {
+          "evidence": {
+            "doc_id": "S001_OFF_001",
+            "start": 2861,
+            "end": 2905,
+            "text": "如果能像这样充分地利用箱根空中缆车和箱根海贼观光船等,您可以在一天内高效地游览很多景点哦"
+          },
+          "reason": "描述/总结/元话语，没有具体条件动作"
+        }
+      ],
+      "scope_note": "复用实验2相关区间；不修改原文"
+    },
+    {
+      "doc_id": "S001_VIS_001",
+      "ranges": [
+        {
+          "start": 0,
+          "end": 993,
+          "start_marker": null,
+          "end_marker": null
+        }
+      ],
+      "candidates": 0,
+      "rejected": [],
+      "scope_note": "复用实验2相关区间；不修改原文"
+    },
+    {
+      "doc_id": "S001_VIS_002",
+      "ranges": [
+        {
+          "start": 0,
+          "end": 1609,
+          "start_marker": null,
+          "end_marker": "\n我们在芦之湖的饭店里面"
+        }
+      ],
+      "candidates": 0,
+      "rejected": [],
+      "scope_note": "复用实验2相关区间；不修改原文"
+    },
+    {
+      "doc_id": "S001_VIS_003",
+      "ranges": [
+        {
+          "start": 0,
+          "end": 972,
+          "start_marker": null,
+          "end_marker": null
+        }
+      ],
+      "candidates": 0,
+      "rejected": [],
+      "scope_note": "复用实验2相关区间；不修改原文"
+    },
+    {
+      "doc_id": "S001_VIS_004",
+      "ranges": [
+        {
+          "start": 4797,
+          "end": 7547,
+          "start_marker": "\n箱根\n",
+          "end_marker": "\n、名古屋"
+        }
+      ],
+      "candidates": 0,
+      "rejected": [],
+      "scope_note": "复用实验2相关区间；不修改原文"
+    },
+    {
+      "doc_id": "S001_VIS_005",
+      "ranges": [
+        {
+          "start": 5749,
+          "end": 6559,
+          "start_marker": "Day 10 箱根",
+          "end_marker": "\n下北泽----"
+        }
+      ],
+      "candidates": 3,
+      "rejected": [],
+      "scope_note": "复用实验2相关区间；不修改原文"
+    },
+    {
+      "doc_id": "S002_OFF_001",
+      "ranges": [
+        {
+          "start": 0,
+          "end": 5719,
+          "start_marker": null,
+          "end_marker": "\nHiking Videos"
+        }
+      ],
+      "candidates": 2,
+      "rejected": [],
+      "scope_note": "复用实验2相关区间；不修改原文"
+    },
+    {
+      "doc_id": "S002_VIS_001",
+      "ranges": [
+        {
+          "start": 0,
+          "end": 6529,
+          "start_marker": null,
+          "end_marker": null
+        }
+      ],
+      "candidates": 0,
+      "rejected": [
+        {
+          "evidence": {
+            "doc_id": "S002_VIS_001",
+            "start": 414,
+            "end": 683,
+            "text": "如果不是起大早6点前出发,就一定会赶上穿过洛杉矶北边210高速的高峰时段,最快也要下午3点才能进入景区,这样除非住在景区内(价格又贵条件也一般,我们是选择在西门外2英里处住宿)否则没有任何意义,因此我们的计划是第一天(周一)和最后一天(周五)并未安排游览而用于路途,中间住在距离公园西门约70英里的Merced小镇,这样一方面行程非常轻松,同时Merced的住宿非常便宜(相对于优胜美地景区内和景区附近),而周二至周四的三天游览时间则得到了充分利用,即周二一大早就进入景区,晚上住宿于西门外,周三亦同,周四下午离开景区仍然回到Merced"
+          },
+          "reason": "未找到支持的建议动作，保留漏抽可能"
+        }
+      ],
+      "scope_note": "复用实验2相关区间；不修改原文"
+    },
+    {
+      "doc_id": "S002_VIS_002",
+      "ranges": [
+        {
+          "start": 40666,
+          "end": 43027,
+          "start_marker": "优胜美地,游戏中的磅礴场景",
+          "end_marker": "\n下了山后,在这里会偶遇一片草原"
+        }
+      ],
+      "candidates": 0,
+      "rejected": [
+        {
+          "evidence": {
+            "doc_id": "S002_VIS_002",
+            "start": 41879,
+            "end": 41917,
+            "text": "如果真的到了瀑布底下就啥也看不到了,所谓的“不止庐山真面目,只因身在此山中”"
+          },
+          "reason": "未找到支持的建议动作，保留漏抽可能"
+        },
+        {
+          "evidence": {
+            "doc_id": "S002_VIS_002",
+            "start": 42168,
+            "end": 42187,
+            "text": "若是在这里举办幸福的婚礼,一定浪漫不已"
+          },
+          "reason": "未找到支持的建议动作，保留漏抽可能"
+        }
+      ],
+      "scope_note": "复用实验2相关区间；不修改原文"
+    },
+    {
+      "doc_id": "S002_VIS_003",
+      "ranges": [
+        {
+          "start": 264,
+          "end": 4736,
+          "start_marker": "1.1. Yosemite",
+          "end_marker": "\n1.2 Mammoth"
+        }
+      ],
+      "candidates": 0,
+      "rejected": [
+        {
+          "evidence": {
+            "doc_id": "S002_VIS_003",
+            "start": 911,
+            "end": 930,
+            "text": "如果来优胜美地只拍一张照片,就是这里了"
+          },
+          "reason": "未找到支持的建议动作，保留漏抽可能"
+        }
+      ],
+      "scope_note": "复用实验2相关区间；不修改原文"
+    },
+    {
+      "doc_id": "S002_VIS_004",
+      "ranges": [
+        {
+          "start": 0,
+          "end": 3385,
+          "start_marker": null,
+          "end_marker": null
+        }
+      ],
+      "candidates": 3,
+      "rejected": [
+        {
+          "evidence": {
+            "doc_id": "S002_VIS_004",
+            "start": 1496,
+            "end": 1529,
+            "text": "如果后者几乎没有水,那么估计Horsetail Fall的水也不大"
+          },
+          "reason": "未找到支持的建议动作，保留漏抽可能"
+        },
+        {
+          "evidence": {
+            "doc_id": "S002_VIS_004",
+            "start": 3241,
+            "end": 3283,
+            "text": "如果你本身就是一个户外爱好者,那Yosemite里头的trail也自然不用我来介绍了"
+          },
+          "reason": "未找到支持的建议动作，保留漏抽可能"
+        }
+      ],
+      "scope_note": "复用实验2相关区间；不修改原文"
+    },
+    {
+      "doc_id": "S002_VIS_005",
+      "ranges": [
+        {
+          "start": 0,
+          "end": 2028,
+          "start_marker": null,
+          "end_marker": null
+        }
+      ],
+      "candidates": 0,
+      "rejected": [],
+      "scope_note": "复用实验2相关区间；不修改原文"
+    },
+    {
+      "doc_id": "S003_OFF_001",
+      "ranges": [
+        {
+          "start": 0,
+          "end": 5132,
+          "start_marker": null,
+          "end_marker": "\n您可能也喜欢"
+        }
+      ],
+      "candidates": 6,
+      "rejected": [],
+      "scope_note": "复用实验2相关区间；不修改原文"
+    },
+    {
+      "doc_id": "S003_VIS_001",
+      "ranges": [
+        {
+          "start": 0,
+          "end": 1608,
+          "start_marker": null,
+          "end_marker": null
+        }
+      ],
+      "candidates": 0,
+      "rejected": [],
+      "scope_note": "复用实验2相关区间；不修改原文"
+    },
+    {
+      "doc_id": "S003_VIS_002",
+      "ranges": [
+        {
+          "start": 1850,
+          "end": 2292,
+          "start_marker": "DAY 5 ,",
+          "end_marker": "\nDay 6 ,"
+        }
+      ],
+      "candidates": 0,
+      "rejected": [],
+      "scope_note": "复用实验2相关区间；不修改原文"
+    },
+    {
+      "doc_id": "S003_VIS_003",
+      "ranges": [
+        {
+          "start": 4461,
+          "end": 4728,
+          "start_marker": "4.1 蓝山的魔咒",
+          "end_marker": "\n4.2 悉尼歌剧院"
+        }
+      ],
+      "candidates": 0,
+      "rejected": [],
+      "scope_note": "复用实验2相关区间；不修改原文"
+    },
+    {
+      "doc_id": "S003_VIS_004",
+      "ranges": [
+        {
+          "start": 2684,
+          "end": 2895,
+          "start_marker": "【直升机体验】",
+          "end_marker": "\n最划算的是Sydney Harbour Heli Flight"
+        }
+      ],
+      "candidates": 0,
+      "rejected": [],
+      "scope_note": "排除[6195,6418)园外酒评"
+    },
+    {
+      "doc_id": "S003_VIS_005",
+      "ranges": [
+        {
+          "start": 0,
+          "end": 452,
+          "start_marker": null,
+          "end_marker": null
+        }
+      ],
+      "candidates": 0,
+      "rejected": [],
+      "scope_note": "复用实验2相关区间；不修改原文"
+    }
+  ],
+  "deduplication": [],
+  "near_duplicates": []
+}

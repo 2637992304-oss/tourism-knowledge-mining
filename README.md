@@ -10,7 +10,7 @@
 
 ## 当前状态
 
-**实验1、实验2、实验4已完成，代码和结构化成果由main统一交付。** 正式语料为日本箱根（主展示）、美国优胜美地国家公园、澳大利亚蓝山国家公园，每个景区1份官方路线文档和5篇游客游记，共18篇、20个原始网页快照。实验2当前资源版本为exp02-v1.1，输出327条活跃实体、1403次提及，包含实体定义、原文偏移、24例逐例核验及三张彩色图；补充姥子缆车站别名及独立的温特沃斯瀑布野餐区，映射见[实验2交接说明](results/checks/exp02_handoff.md)。实验4在5篇游记中检测59处目标指代，保存AI辅助逐例参考标注、预测和原文位置；总体内部核验38/59，覆盖率47/59。main中的实验3、5—7仍为待实现骨架；YZH的实验3、6成果目前在yzh/routes-graph分支。原任务书PDF和报告模板DOCX保留不变；本地Word报告未推送。
+**本工作分支已整合实验3，并由FYH接管实验5、6、7。** 实验1/2/4来自DHT的main交付，路线与原图谱来自YZH提交60a7dda；本分支不自动推送或表示已合入远端main。正式语料为箱根（主展示）、优胜美地、蓝山，每景区1份官方文档和5篇游记，共18篇、20个网页快照。实体exp02-v1.1有327个活跃实体、1403次提及；共指59例内部核验38/59。当前新增20条条件建议，复用4条30步路线，融合图谱v2为151节点/205边。Agent已接入真实模型并提供7类场景，最终运行结果与验证状态见[实验7核验](results/checks/exp07_quality.json)。原任务书、报告模板、冻结语料及实验1/2/4输出保持不变；各模块AI辅助标注尚待组员独立复核。
 
 从项目根目录运行：
 
@@ -31,7 +31,7 @@ python src/exp01_verify.py
 | 3 路线层级结构 | YZH | `src/exp03_routes.py` | `data/outputs/routes.json` |
 | 4 共指消解 | DHT | `src/exp04_coreference.py` | `data/outputs/coreference.json` |
 | 5 条件建议抽取 | FYH | `src/exp05_advice.py` | `data/outputs/advice.json` |
-| 6 图谱融合与可视化 | YZH | `src/exp06_graph.py` | `data/outputs/graph.json` |
+| 6 图谱融合与可视化 | FYH接管，复用YZH基础 | `src/exp06_graph.py` | `data/outputs/graph.json` |
 | 7 旅游规划 Agent | FYH | `src/exp07_agent.py` | `data/outputs/agent_cases.json` |
 
 先完成实验 1 的公共语料；实验 2、3、4、5 可逐步并行；实验 6 汇总实体、路线和条件建议后交给实验 7。实验 4 结果可按需融入。实验 7 可提前验证模型调用并开发工具接口。
@@ -42,7 +42,7 @@ python src/exp01_verify.py
 项目根目录/
 ├─ README.md                         # 项目入口与运行说明
 ├─ 三人分工.md                       # 职责、字段规范、交接检查
-├─ requirements.txt                  # 已记录实验1、2依赖，其余实验后续补充
+├─ requirements.txt                  # lxml、Pillow、NetworkX实际依赖
 ├─ .env.example                      # 模型配置示例，不含真实密钥
 ├─ .gitignore                        # 排除本地环境、密钥与缓存
 ├─ .gitattributes                     # 统一文本换行
@@ -51,7 +51,7 @@ python src/exp01_verify.py
 │  ├─ raw/                           # 原文与来源记录
 │  ├─ processed/                     # 景区登记表与清洗语料
 │  └─ outputs/                       # 实验 2—7 的正式结果
-├─ src/                              # 实验1、2、4已实现，其余实验为入口骨架
+├─ src/                              # 实验1—7入口、图谱工具和全链路验证
 ├─ reports/                          # 各实验章节和总结反思模板
 └─ results/
    ├─ figures/                       # 图表与运行截图
@@ -71,7 +71,7 @@ py -3.11 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
-当前`requirements.txt`已记录实验1依赖lxml和实验2绘图依赖Pillow；实验2识别与检查仅需标准库。其他模块负责人后续补充各自依赖，DHT汇总兼容性。
+当前requirements.txt汇总lxml 6.1.1、Pillow 12.3.0、NetworkX 3.4.2。实验5抽取和实验7 HTTP/配置加载只使用标准库。此次接管实际验证Python 3.12.6；本机可使用`py -3.12`，Python 3.11尚未另行实测。
 
 需要模型配置时，在本地复制示例，再填写自己的值：
 
@@ -79,7 +79,7 @@ py -3.11 -m venv .venv
 Copy-Item .env.example .env
 ```
 
-`.env` 已被 Git 忽略。示例变量名为本组约定，具体 SDK 由 FYH 在实现时适配；Python 不会自动读取 `.env`，需由 FYH 明确实现加载方式。密钥通过本地配置提供，不写入源码或报告。
+`.env`被Git忽略，已有配置不要覆盖；只在本地.env填写密钥，不在.env.example填写。Agent已明确实现根目录.env加载，进程环境变量优先。需要LLM_API_KEY、LLM_BASE_URL、LLM_MODEL，base_url填兼容API根路径（如/v1），不要填/models。模型支持Chat Completions函数工具和JSON输出后才能运行；已验证本地配置的qwen3.8-flash，换模型应重新验收。
 
 ## 实验入口
 
@@ -108,7 +108,22 @@ python src/exp04_coreference.py
 python src/exp04_verify.py
 ```
 
-实验4只使用Python标准库，实测Python 3.12.14。参考标签由AI辅助逐例阅读原文形成，未由组员独立复核；59例准确率只代表这5篇目的选样的内部结果。完整字段、分母口径、失败案例、接收检查见[实验4交接说明](results/checks/exp04_handoff.md)和[逐例核验](results/checks/exp04_review.md)。按原模板填写的`实验4报告.docx`保存在本地。实验3、5—7仍为待实现骨架，运行会明确提示。
+实验4只使用Python标准库，原交付实测Python 3.12.14。参考标签由AI辅助逐例阅读原文形成，未由组员独立复核；59例准确率只代表这5篇目的选样内部结果。完整字段与局限见[实验4交接说明](results/checks/exp04_handoff.md)。本次接管不重写实验4结果。
+
+实验5—7从项目根目录运行：
+
+```powershell
+py -3.12 -m pip install -r requirements.txt
+py -3.12 src/exp05_07_verify.py
+py -3.12 src/exp07_agent.py --request "带孩子在箱根玩一天，给我路线和明确亲子建议"
+py -3.12 src/exp07_agent.py
+```
+
+默认全链路脚本离线重建实验3/5/6、运行测试，并核对已有真实Agent案例；图谱或来源变化使旧案例过期时会明确失败。需要重新真实调用模型并覆盖正式案例时运行`py -3.12 src/exp05_07_verify.py --live`；只有核验现状可使用`--audit-only`。真实API调用有接口费用，7场景可能运行数分钟。各模块单独命令及已知局限见[实验5交接](results/checks/exp05_handoff.md)、[实验6交接](results/checks/exp06_handoff.md)、[实验7交接](results/checks/exp07_handoff.md)。
+
+图表使用Windows微软雅黑，可用MINING_FONT或绘图入口--font指定中文字体。完整箱根图及节点边检索在results/figures/exp06_hakone_graph.png/html。Agent的partial表示数据无法保证全部约束，不能把普通路线当成已证实适合老人或亲子；估计和一般补充建议单独标记，历史资料不代表实时开放或价格。
+
+同一图谱下仅有个别error案例，可使用`py -3.12 src/exp07_agent.py --cases --retry-errors`继续；失败尝试和累计调用数会保留，图谱或场景变更时拒绝复用。当前正式7例、累计20次API请求（含一次失败案例重跑），43项测试通过；详细门禁见results/checks/exp05_07_acceptance.json。
 
 ## 三人协作
 

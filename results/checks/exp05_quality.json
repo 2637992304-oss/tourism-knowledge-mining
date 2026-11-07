@@ -1,0 +1,143 @@
+{
+  "passed": true,
+  "checked_evidence_spans": 61,
+  "advice": 20,
+  "statistics": {
+    "documents_scanned": 18,
+    "advice": 20,
+    "condition_types": {
+      "other": 15,
+      "visitor_type": 2,
+      "crowding": 1,
+      "time": 1,
+      "weather": 1
+    },
+    "visitor_types": {
+      "unspecified": 18,
+      "family": 2
+    },
+    "scenics": {
+      "S001": 9,
+      "S002": 5,
+      "S003": 6
+    }
+  },
+  "corpus_sha256": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0",
+  "entities_sha256": "71598abfdec68cd99d3983cd5099ee07c653d41438968d14d7c9ee46ea6caac9",
+  "deterministic_rerun": true,
+  "reference_provenance": "AI辅助阅读原文后、抽取器实现与预测前形成；未由组员独立复核。",
+  "selection": "32例目的选样诊断集；两个文档留出于调参，文本此前已浏览，不是随机样本或独立盲测。雨天列表用最小前缀语义匹配，另做结构完整性检查。",
+  "review_metrics": {
+    "baseline": {
+      "development": {
+        "tp": 11,
+        "fp": 4,
+        "fn": 3,
+        "cases": 23,
+        "positive_relations": 14,
+        "precision": 0.7333333333333333,
+        "recall": 0.7857142857142857,
+        "f1": 0.7586206896551724,
+        "correct_negative_cases": 6
+      },
+      "document_holdout": {
+        "tp": 4,
+        "fp": 3,
+        "fn": 2,
+        "cases": 9,
+        "positive_relations": 6,
+        "precision": 0.5714285714285714,
+        "recall": 0.6666666666666666,
+        "f1": 0.6153846153846154,
+        "correct_negative_cases": 2
+      },
+      "all": {
+        "tp": 15,
+        "fp": 7,
+        "fn": 5,
+        "cases": 32,
+        "positive_relations": 20,
+        "precision": 0.6818181818181818,
+        "recall": 0.75,
+        "f1": 0.7142857142857143,
+        "correct_negative_cases": 8
+      }
+    },
+    "optimized": {
+      "development": {
+        "tp": 14,
+        "fp": 0,
+        "fn": 0,
+        "cases": 23,
+        "positive_relations": 14,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "correct_negative_cases": 9
+      },
+      "document_holdout": {
+        "tp": 4,
+        "fp": 2,
+        "fn": 2,
+        "cases": 9,
+        "positive_relations": 6,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "correct_negative_cases": 3
+      },
+      "all": {
+        "tp": 18,
+        "fp": 2,
+        "fn": 2,
+        "cases": 32,
+        "positive_relations": 20,
+        "precision": 0.9,
+        "recall": 0.9,
+        "f1": 0.9,
+        "correct_negative_cases": 12
+      }
+    },
+    "reviewed_delivery": {
+      "development": {
+        "tp": 14,
+        "fp": 0,
+        "fn": 0,
+        "cases": 23,
+        "positive_relations": 14,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "correct_negative_cases": 9
+      },
+      "document_holdout": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "cases": 9,
+        "positive_relations": 6,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "correct_negative_cases": 3
+      },
+      "all": {
+        "tp": 20,
+        "fp": 0,
+        "fn": 0,
+        "cases": 32,
+        "positive_relations": 20,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "correct_negative_cases": 12
+      }
+    }
+  },
+  "without_entity_alignment": [
+    "A_S001_OFF_001_171123485310695",
+    "A_S001_OFF_001_147046239503370",
+    "A_S002_VIS_004_072958652312044",
+    "A_S003_OFF_001_173909348912377"
+  ]
+}

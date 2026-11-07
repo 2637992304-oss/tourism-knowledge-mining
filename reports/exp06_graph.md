@@ -1,66 +1,71 @@
-# 实验 6：多源程序性知识融合与图谱可视化
+# 实验6：多源程序性知识融合与图谱可视化
 
-负责人：YZH。已接入 DHT 实验 2 的正式实体，完成路线、景点、交通、时间的真实融合、可视化与质量检查。条件建议等待 FYH 实验 5，当前不宣称已完成建议融合。合成测试不计为正式实验数据。
+负责人：FYH接管。路线抽取、实体对齐、原图谱构建和原12项测试来自YZH分支提交60a7dda；公共语料与实体来自DHT。本次继续已有实现，增加条件建议融合、验证、查询工具及完整展示，不把原成果记为从零重写。
 
-## 1. 输入与版本
+## 输入、版本和融合
 
-正式运行读取景区登记、routes.json 和 DHT 的 entities.json（resource_version=exp02-v1.1），版本为 schema_version=1.0、corpus_version=v1、graph_version=v1。状态 route_stage 表示没有实体，entity_route_fused 表示已有实体但建议未到，fused 表示实体与建议均到位。当前状态为 entity_route_fused，missing_inputs 仅包含 advice.json；状态字段不替代质量验收。
+读取v1景区登记、DHT exp02-v1.1实体、YZH 4条30步路线和FYH 20条正式建议。schema_version=1.0、corpus_version=v1、graph_version=v2。图谱状态fused、missing_inputs=[]、advice_availability=available。v2增加了APPLIES_TO对TRANSPORT/TIME的支持；已有实体、路线和步骤节点ID保持不变，输入文件指纹保存在input_sha256。
 
-当前路线来自箱根、蓝山的 4 篇文本；实体目录来自 DHT 的全 18 篇语料，关联实体保留其全部提及来源。官网和游客的来源差异持续保留。知识是各篇文本中的历史行程描述，不宣称其中价格、开放状态或交通状况是当前事实。
+状态route_stage/ entity_route_fused/ fused表示输入接入程度；advice_availability明确区分missing_upstream、available_empty、available，不能把“输入齐备”当成语义覆盖完整。
 
-## 2. Schema 与融合规则
+## Schema与语义
 
-| 节点类型 | 含义和来源 |
+节点类型为SCENIC、ROUTE、STEP、POI、TIME、TRANSPORT、CONDITION、ADVICE。节点含node_id、node_type、name、scenic_id、source_refs、attributes。实体保留entity_id；路线、步骤、建议分别保留route_id、step_no、advice_id。来源文档ID可追溯标题、网址及采集时间，提取型内容保留原文证据。
+
+| 关系 | 方向与含义 |
 | --- | --- |
-| SCENIC | 景区登记表中的景区；只为实际有路线或建议的景区建节点 |
-| ROUTE | 一条来源明确的路线，保存 route_id、text_type 和 scope_note |
-| STEP | 路线内的具体步骤，保存 step_no、时间段、活动和原文证据 |
-| POI | 景点或路线地点；未对齐时 entity_id=null、alignment_status=pending |
-| TRANSPORT / TIME | 由实体目录导入的交通、时间实体，不凭空生成 |
-| CONDITION / ADVICE | 条件与建议；只来自正式 advice.json |
+| HAS_ROUTE | 景区→来源明确的路线 |
+| HAS_STEP | 路线→具体步骤 |
+| NEXT_STEP | 同一路线前一步→后一步；不混合官方与游客链 |
+| VISITS | 步骤→地点；交通目的地不自动意味着已经停留 |
+| AT_TIME / USES_TRANSPORT | 步骤→原文时间/交通，提及必须落在步骤证据内 |
+| HAS_ADVICE | 景区→建议 |
+| TRIGGERS | 条件→建议 |
+| APPLIES_TO | 建议→POI/TRANSPORT/TIME；只表示条件证据涉及的实体，不证明必访、许可或人群适用 |
 
-| 关系 | 方向与建立条件 |
-| --- | --- |
-| HAS_ROUTE | 景区 → 路线 |
-| HAS_STEP | 路线 → 步骤 |
-| NEXT_STEP | 同一路线前一步 → 后一步，绝不把不同路线顺序混成单条链 |
-| VISITS | 步骤 → 地点；交通步骤的地点可能是目的地，不能视为已经停留 |
-| AT_TIME / USES_TRANSPORT | 步骤 → 时间/交通实体；要求实体提及完全落在该步的证据区间内 |
-| HAS_ADVICE | 景区 → 建议 |
-| TRIGGERS | 条件 → 建议 |
-| APPLIES_TO | 建议 → 已确认的景点实体 |
+实体按正式ID合并，过滤active:false，同名跨景区不合并。别名唯一匹配才对齐，歧义保留pending。相同地点跨路线共享实体，来源取并集，步骤和链独立。建议不同来源不互相覆盖，保留分类、历史属性和审校标记。不为凑数保留未关联实体，过滤清单写入JSON；同景区建议的来源矛盾不覆盖，分别留存条件和证据。
 
-实体目录节点使用 N_ENTITY_实体ID，过滤 active:false；未对齐地点使用景区和字面名称的确定性摘要 ID，不跨景区合并。目录正式名/别名唯一匹配才对齐，多义别名不自动合并。实体、路线、建议和边 ID 重复、引用无效、跨景区实体关联、步骤不连续等报错。相同地点在多条路线出现时合并地点节点并合并来源列表，各来源步骤和先后关系独立保留。重复活动不简单删除。未与本次路线或建议发生关联的目录实体不纳入输出图，过滤清单保存在 graph.json，避免用无关节点增加图谱规模。
+## 实际结果
 
-节点及边保存 source_refs；步骤和提取型边还保存 attributes.evidence。未对齐节点在正式实体到位后可能替换为实体节点，因此正式接入时应按 entity_id/route_id 查询并重新生成，不把阶段性地点节点 ID 当作稳定的外部接口。
+151节点、205边。节点为POI 47、TIME 15、TRANSPORT 12、SCENIC 3、ROUTE 4、STEP 30、CONDITION 20、ADVICE 20。关系为HAS_ROUTE 4、HAS_STEP 30、NEXT_STEP 26、VISITS 30、AT_TIME 14、USES_TRANSPORT 14、HAS_ADVICE 20、TRIGGERS 20、APPLIES_TO 47。
 
-## 3. 正式结果与可视化
+相比原82节点/118边阶段图，新增条件建议及其涉及实体；路线仍4条30步，四条链分别10/6/12/2步，原30/30实体映射不变。优胜美地新增建议网络，但没有新增未实现的路线。
 
-当前 graph.json 共 82 节点、118 边：2 景区、4 路线、30 步骤、24 地点、14 时间、8 交通；边为 HAS_ROUTE 4、HAS_STEP 30、NEXT_STEP 26、VISITS 30、AT_TIME 14、USES_TRANSPORT 14。30/30 步已对齐正式实体，无待确认名称。另导出 graph_nodes.csv、graph_edges.csv，列表和属性以 JSON 字符串存于 CSV 单元格。条件建议尚无正式输入。
+![箱根完整知识图谱](../results/figures/exp06_hakone_graph.png)
 
-与上一版 83 节点、119 边相比，DHT 将“姥子缆车站”内部的“缆车”提及改为完整站点提及，移除一条交通关联及相应未关联交通节点。这是实体边界修正，不是路线步骤丢失；原有 30 步和两条来源路线的顺序均保留。
+箱根展示69节点/103边，全部箱根节点均有位置、标签不截断。色彩区分8类节点和9类关系。HTML副本提供所有节点ID、边及来源检索，便于检查密集交叉关系；大图适合放大查看，报告截图可局部展示但应注明子图。
 
-![箱根路线知识图谱](../results/figures/exp06_hakone_graph.png)
+## 查询与质量验证
 
-图由实际 JSON 生成，展示箱根两条路线的全部步骤、关联地点及时间和交通实体；色彩及右列标签区分节点类型，橙色纵向箭头表示 NEXT_STEP。这是已融合实体的路线子图，尚未包含条件建议。
+src/exp06_verify.py实际构建NetworkX MultiDiGraph，检查输入指纹、唯一ID、端点、同景区关系、实体活跃和类型、来源存在、证据位置、关系方向、孤立节点、建议完整覆盖与NEXT_STEP精确相邻链。src/graph_tools.py从真实图谱封装两个工具，查询不读取advice.json替代图谱；corpus仅用于来源元信息。查询示例及完整实际返回见exp06_quality.json：
 
-箱根的“大涌谷”被官方两步、游客一步访问，是两条路线的共享地点；官网包括“前往”与“游览”两个活动，保留这一差别。典型路径为游客“早云山 → 桃源台 → 芦之湖 → 金太郎展望台 → 姥子缆车站 → 大涌谷”。依据 DHT 的正式别名，早云山/早云山站和箱根汤本/箱根汤本站现已指向相同实体节点，保留目录对站区粒度的 note。
+1. 箱根全部路线：2条；上午筛选返回官方路线前4步，保持原序号。
+2. 箱根family建议：1条官方儿童家庭建议，关联泡泡城堡、网之森林。
+3. 蓝山weather建议：1条完整雨天活动回答块。
+4. 箱根elderly建议：no_match；原文人群未标注不自动映射general。
+5. 优胜美地路线：no_match；其crowding建议仍可查询，不能说整个景区没有数据。
 
-## 4. 质量与查询验证
+图的3个弱连通分量分别对应3景区，景区隔离是预期结构。箱根实体中，箱根汤本和箱根空中缆车的入/出边总度数各为5，浪漫特快为4，反映入口与交通在路线和建议中的共同出现，不等于旅游价值或推荐强度。大涌谷有3条VISITS，来自官方不同活动和游客路线；不能去重成一次到访。典型游客有序路径为早云山→桃源台→芦之湖→金太郎展望台→姥子站→大涌谷，与官方钟点路线分别保存，可解释来源差异。
 
-src/exp06_verify.py 将正式 JSON 读为 NetworkX MultiDiGraph，检查节点唯一、来源文档存在、证据区间准确、边端点有效，以及每条路线的步骤链连通、无环且顺序一致。当前四条链分别为 10/6/12/2 步，NEXT_STEP 为 9/5/11/1。检查结果与实际图谱查询保存 results/checks/exp06_quality.json，包括：
+调用结果统一status/data/message。未知景区、参数非法、上游缺失返回error并给不同原因；输入已接入而未匹配为no_match。
 
-1. 从 N_SCENIC_S001 沿 HAS_ROUTE 得到 2 条路线。
-2. 从官方路线沿 HAS_STEP 取步骤、按 step_no 排序、沿 VISITS 取地点，得到 10 步。
-3. 查询名称“大涌谷”的入向 VISITS，得到 3 个具体步骤。
-4. 条件建议返回空结果，同时标记 missing_upstream，明确与“已接入但无匹配”不同。
+## 真实失败与改进
 
-12 项合成接口测试覆盖全类型融合、缺失输入、重复路线、不连续步骤、建议无效引用、跨景区引用、歧义别名、否定/纯眺望过滤和短推荐句保留。合成数据只在 tests/test_yzh.py 的内存中构造，未写入 data/outputs。这些测试证明代码分支能运行，不能替代真实数据抽查，也不能证明尚未交付的建议质量。
+接管时原构建器遇到非POI建议关联直接continue：S001_VIS_005“不想另外付费”涉及交通、20分钟和地点，旧策略会丢弃交通/时间关联；原yzh_figures布局也没有CONDITION/ADVICE，融合后会因未定位节点失败。本次通过全类型关联及完整布局解决，验证器要求每条建议的APPLIES_TO集合与输入完全一致，并有相关回归测试。这是从原代码与真实建议输入确认的工程边界，不把原阶段图称为已完成条件融合。
 
-## 5. 局限与后续验收
+仍有局限：APPLIES_TO只表示相关，不区分条件中的原交通与建议中的替代交通；AT_TIME/USES_TRANSPORT采用证据包含规则，会漏掉标题外或跨句提及。图谱只覆盖选定路线，不提供距离、无障碍、实时开放或完整总时长。图的规模不是质量成绩；独立语义验收仍需组员完成。
 
-真实失败案例：前版“早云山/早云山站”未合并，导致地点节点分裂；接入 DHT 确认的别名后已指向 S001_POI_009。中英文复合名称只有在两个组成部分各自唯一匹配相同 DHT 实体 ID 时才可对齐；据此解决 Blackheath、Scenic World、Jenolan Caves 的三个复合名称。最后两处暂停项已由 DHT exp02-v1.1 解决：姥子缆车站→S001_POI_026，野餐区→S003_POI_052。野餐区与镇区、瀑布、步道独立，未通过删后缀强行映射；两处路线和图谱验收记录见 exp06_alignment.json。
+## 复现
 
-交通、时间关系采用证据区间包含规则，可能遗漏跨句指代或标题外描述。建议只在关联实体 ID 已确认时连接，不靠字符串猜测；这提高可核查性，也可能降低关系覆盖率。后续应抽样检查这些漏连，并与更宽的上下文窗口作对照。
+Python 3.12.6、NetworkX 3.4.2、Pillow 12.3.0。从根目录运行：
 
-核心验收使用 --require-entities，要求正式实体到位并运行图谱质量检查；已通过。任务书把条件建议作为可选融入内容，当前可提交核心实验成果；按组内约定，FYH 的 advice.json 到位后仍需补做建议融合，届时使用 --require-complete 并更新图表和查询。接收成员独立复核尚待完成。复现流程见 reports/YZH_运行与验收.md。
+```powershell
+py -3.12 src/exp03_routes.py
+py -3.12 src/exp03_evaluate.py
+py -3.12 src/exp06_graph.py --require-complete
+py -3.12 src/exp06_verify.py
+py -3.12 src/yzh_figures.py
+py -3.12 -m unittest discover -s tests -v
+```
+
+yzh_figures保留YZH路线层级绘图，图谱部分转到exp06_visualize完整布局。交接见results/checks/exp06_handoff.md；历史YZH报告记录保留，接管说明优先描述本次v2状态。

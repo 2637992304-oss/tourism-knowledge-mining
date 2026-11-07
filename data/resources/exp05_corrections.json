@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "corpus_version": "v1",
+  "provenance": "规则冻结后AI辅助逐例审校，不是独立测试；仅修正建议边界，不修改原文或实体。",
+  "corrections": [
+    {"doc_id": "S002_VIS_004", "condition_text": "条件允许的话", "old_suggestion": "一定要沿41号路由南往北,从Oakhurst进入优胜美地,路上", "suggestion_text": "一定要沿41号路由南往北,从Oakhurst进入优胜美地", "reason": "句尾路上属于下一个条件的引导语"},
+    {"doc_id": "S002_VIS_004", "condition_text": "如果你感兴趣的话", "old_suggestion": "还可以去Mariposa Grove看看巨大的红杉树,当车从隧道穿出,Yosemite Valley一览无余的感觉非常震撼人心", "suggestion_text": "还可以去Mariposa Grove看看巨大的红杉树", "reason": "后半段为作者观景感受，截去无关建议后缀"}
+  ]
+}

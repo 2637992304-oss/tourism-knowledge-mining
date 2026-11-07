@@ -1,0 +1,12 @@
+{
+  "baseline_commit": "60a7dda",
+  "sha256": {
+    "data/processed/corpus.jsonl": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0",
+    "data/processed/scenic_registry.json": "cd2542944c07fd6b6758a28ee684f159bd64fd65c1b7c3f30da53f63b2ea5651",
+    "data/outputs/entities.json": "71598abfdec68cd99d3983cd5099ee07c653d41438968d14d7c9ee46ea6caac9",
+    "data/outputs/coreference.json": "0da68168749a9533286b3bc3ddf3f3f4f8c580ae68daade1e12d8a8ad0dab400",
+    "data/outputs/coreference_resolved_documents.json": "a519cf1d6544b129a1ace0444aa4caa5c385b784f6602e29aa814463b9a8b998",
+    "《数据挖掘》探索性实验任务书及评分细则【Final】.pdf": "de491a13b2abc69c526f99a7dc0b234c60539ba38571cc3acea963fb7b42636e",
+    "第X组_组长姓名_《数据挖掘》探索性实验报告（模板）.docx": "7d713b5cf9d070589eb4dc80a93b34e8d98e630d0534a170f2b9e62b2aedede4"
+  }
+}

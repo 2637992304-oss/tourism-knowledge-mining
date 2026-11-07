@@ -1,0 +1,5371 @@
+{
+  "baseline": {
+    "metrics": {
+      "development": {
+        "tp": 11,
+        "fp": 4,
+        "fn": 3,
+        "cases": 23,
+        "positive_relations": 14,
+        "precision": 0.7333333333333333,
+        "recall": 0.7857142857142857,
+        "f1": 0.7586206896551724,
+        "correct_negative_cases": 6
+      },
+      "document_holdout": {
+        "tp": 4,
+        "fp": 3,
+        "fn": 2,
+        "cases": 9,
+        "positive_relations": 6,
+        "precision": 0.5714285714285714,
+        "recall": 0.6666666666666666,
+        "f1": 0.6153846153846154,
+        "correct_negative_cases": 2
+      },
+      "all": {
+        "tp": 15,
+        "fp": 7,
+        "fn": 5,
+        "cases": 32,
+        "positive_relations": 20,
+        "precision": 0.6818181818181818,
+        "recall": 0.75,
+        "f1": 0.7142857142857143,
+        "correct_negative_cases": 8
+      }
+    },
+    "cases": [
+      {
+        "case_id": "E5_001",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 454,
+          "end": 489,
+          "text": "如果遇上好天气,还可以从车窗看到富士山,这无疑会增加您对旅行的期待哦。"
+        },
+        "expected": [],
+        "predicted": [
+          {
+            "condition_type": "weather",
+            "condition_text": "如果遇上好天气",
+            "visitor_types": [],
+            "suggestion_text": "还可以从车窗看到富士山,这无疑会增加您对旅行的期待哦",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 454,
+              "end": 461,
+              "text": "如果遇上好天气"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 462,
+              "end": 488,
+              "text": "还可以从车窗看到富士山,这无疑会增加您对旅行的期待哦"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 454,
+                "end": 488,
+                "text": "如果遇上好天气,还可以从车窗看到富士山,这无疑会增加您对旅行的期待哦"
+              }
+            ],
+            "advice_id": "A_S001_OFF_001_071387608611217",
+            "scenic_id": "S001",
+            "doc_id": "S001_OFF_001",
+            "related_entity_ids": [
+              "S001_POI_004"
+            ],
+            "alignment_notes": [],
+            "method": "rule:first_comma_baseline",
+            "source_text_type": "official_route",
+            "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+            "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "200d56cd3994"
+          }
+        ],
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "annotation_note": "描述可见景色，未给出游览动作"
+      },
+      {
+        "case_id": "E5_002",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 490,
+          "end": 543,
+          "text": "※1:从新宿站到箱根汤本站,如果使用“箱根周游券”乘坐“浪漫”特快,则需另外支付特快费(1,200日币)。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果使用“箱根周游券”乘坐“浪漫”特快",
+            "suggestion_text": "则需另外支付特快费(1,200日币)",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 504,
+              "end": 523,
+              "text": "如果使用“箱根周游券”乘坐“浪漫”特快"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 524,
+              "end": 542,
+              "text": "则需另外支付特快费(1,200日币)"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果使用“箱根周游券”乘坐“浪漫”特快",
+            "visitor_types": [],
+            "suggestion_text": "则需另外支付特快费(1,200日币)",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 504,
+              "end": 523,
+              "text": "如果使用“箱根周游券”乘坐“浪漫”特快"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 524,
+              "end": 542,
+              "text": "则需另外支付特快费(1,200日币)"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 504,
+                "end": 542,
+                "text": "如果使用“箱根周游券”乘坐“浪漫”特快,则需另外支付特快费(1,200日币)"
+              }
+            ],
+            "advice_id": "A_S001_OFF_001_255828790194615",
+            "scenic_id": "S001",
+            "doc_id": "S001_OFF_001",
+            "related_entity_ids": [
+              "S001_TRANSPORT_015"
+            ],
+            "alignment_notes": [],
+            "method": "rule:first_comma_baseline",
+            "source_text_type": "official_route",
+            "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+            "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "e3d0c4caa07e"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "带条件的票务操作；历史价格需标记"
+      },
+      {
+        "case_id": "E5_003",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 639,
+          "end": 692,
+          "text": "如果在车站内部的服务柜台寄存包裹,则可以帮您运送到住处,因此您可以轻松地享受观光之旅(含税900日币~)。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果在车站内部的服务柜台寄存包裹",
+            "suggestion_text": "则可以帮您运送到住处,因此您可以轻松地享受观光之旅(含税900日币~)",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 639,
+              "end": 655,
+              "text": "如果在车站内部的服务柜台寄存包裹"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 656,
+              "end": 691,
+              "text": "则可以帮您运送到住处,因此您可以轻松地享受观光之旅(含税900日币~)"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果在车站内部的服务柜台寄存包裹",
+            "visitor_types": [],
+            "suggestion_text": "则可以帮您运送到住处,因此您可以轻松地享受观光之旅(含税900日币~)",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 639,
+              "end": 655,
+              "text": "如果在车站内部的服务柜台寄存包裹"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 656,
+              "end": 691,
+              "text": "则可以帮您运送到住处,因此您可以轻松地享受观光之旅(含税900日币~)"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 639,
+                "end": 691,
+                "text": "如果在车站内部的服务柜台寄存包裹,则可以帮您运送到住处,因此您可以轻松地享受观光之旅(含税900日币~)"
+              }
+            ],
+            "advice_id": "A_S001_OFF_001_171123485310695",
+            "scenic_id": "S001",
+            "doc_id": "S001_OFF_001",
+            "related_entity_ids": [],
+            "alignment_notes": [],
+            "method": "rule:first_comma_baseline",
+            "source_text_type": "official_route",
+            "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+            "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "c2de00c5275d"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "寄存条件与服务"
+      },
+      {
+        "case_id": "E5_004",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 1084,
+          "end": 1135,
+          "text": "对于带儿童的家庭,推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等。"
+        },
+        "expected": [
+          {
+            "condition_text": "对于带儿童的家庭",
+            "suggestion_text": "推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1084,
+              "end": 1092,
+              "text": "对于带儿童的家庭"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1093,
+              "end": 1134,
+              "text": "推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "visitor_type",
+            "condition_text": "对于带儿童的家庭",
+            "visitor_types": [
+              "family"
+            ],
+            "suggestion_text": "推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1084,
+              "end": 1092,
+              "text": "对于带儿童的家庭"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1093,
+              "end": 1134,
+              "text": "推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 1084,
+                "end": 1134,
+                "text": "对于带儿童的家庭,推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等"
+              }
+            ],
+            "advice_id": "A_S001_OFF_001_247169266140315",
+            "scenic_id": "S001",
+            "doc_id": "S001_OFF_001",
+            "related_entity_ids": [
+              "S001_POI_020",
+              "S001_POI_021"
+            ],
+            "alignment_notes": [],
+            "method": "rule:first_comma_baseline",
+            "source_text_type": "official_route",
+            "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+            "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "d4fa25978087"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "同条件多活动整体保留"
+      },
+      {
+        "case_id": "E5_005",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 1135,
+          "end": 1156,
+          "text": "如果您感到疲劳,还可以在馆区内泡足汤小憩。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果您感到疲劳",
+            "suggestion_text": "还可以在馆区内泡足汤小憩",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1135,
+              "end": 1142,
+              "text": "如果您感到疲劳"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1143,
+              "end": 1155,
+              "text": "还可以在馆区内泡足汤小憩"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果您感到疲劳",
+            "visitor_types": [],
+            "suggestion_text": "还可以在馆区内泡足汤小憩",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1135,
+              "end": 1142,
+              "text": "如果您感到疲劳"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1143,
+              "end": 1155,
+              "text": "还可以在馆区内泡足汤小憩"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 1135,
+                "end": 1155,
+                "text": "如果您感到疲劳,还可以在馆区内泡足汤小憩"
+              },
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 967,
+                "end": 976,
+                "text": "箱根雕刻森林美术馆"
+              }
+            ],
+            "advice_id": "A_S001_OFF_001_177547618944147",
+            "scenic_id": "S001",
+            "doc_id": "S001_OFF_001",
+            "related_entity_ids": [
+              "S001_POI_007"
+            ],
+            "alignment_notes": [
+              "馆区由前800字符唯一具名美术馆回指；保留名称证据"
+            ],
+            "method": "rule:first_comma_baseline",
+            "source_text_type": "official_route",
+            "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+            "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "9af153c403f3"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "馆区具体关联需上下文"
+      },
+      {
+        "case_id": "E5_006",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 1195,
+          "end": 1251,
+          "text": "如果出示“箱根周游券”,可享优惠价成人1,900日币、高中生大学生1,500日币、中小学生700日币(均含税)。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果出示“箱根周游券”",
+            "suggestion_text": "可享优惠价成人1,900日币、高中生大学生1,500日币、中小学生700日币(均含税)",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1195,
+              "end": 1206,
+              "text": "如果出示“箱根周游券”"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1207,
+              "end": 1250,
+              "text": "可享优惠价成人1,900日币、高中生大学生1,500日币、中小学生700日币(均含税)"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果出示“箱根周游券”",
+            "visitor_types": [],
+            "suggestion_text": "可享优惠价成人1,900日币、高中生大学生1,500日币、中小学生700日币(均含税)",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1195,
+              "end": 1206,
+              "text": "如果出示“箱根周游券”"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1207,
+              "end": 1250,
+              "text": "可享优惠价成人1,900日币、高中生大学生1,500日币、中小学生700日币(均含税)"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 1195,
+                "end": 1250,
+                "text": "如果出示“箱根周游券”,可享优惠价成人1,900日币、高中生大学生1,500日币、中小学生700日币(均含税)"
+              }
+            ],
+            "advice_id": "A_S001_OFF_001_147046239503370",
+            "scenic_id": "S001",
+            "doc_id": "S001_OFF_001",
+            "related_entity_ids": [],
+            "alignment_notes": [],
+            "method": "rule:first_comma_baseline",
+            "source_text_type": "official_route",
+            "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+            "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "e116212bd38f"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "票券条件优惠，不作现价保证"
+      },
+      {
+        "case_id": "E5_007",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 2716,
+          "end": 2753,
+          "text": "最后,如果购买伴手礼,可以前往位于箱根汤本站的“箱根登山名产店 汤本店”。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果购买伴手礼",
+            "suggestion_text": "可以前往位于箱根汤本站的“箱根登山名产店 汤本店”",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 2719,
+              "end": 2726,
+              "text": "如果购买伴手礼"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 2727,
+              "end": 2752,
+              "text": "可以前往位于箱根汤本站的“箱根登山名产店 汤本店”"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果购买伴手礼",
+            "visitor_types": [],
+            "suggestion_text": "可以前往位于箱根汤本站的“箱根登山名产店 汤本店”",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 2719,
+              "end": 2726,
+              "text": "如果购买伴手礼"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 2727,
+              "end": 2752,
+              "text": "可以前往位于箱根汤本站的“箱根登山名产店 汤本店”"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 2719,
+                "end": 2752,
+                "text": "如果购买伴手礼,可以前往位于箱根汤本站的“箱根登山名产店 汤本店”"
+              }
+            ],
+            "advice_id": "A_S001_OFF_001_250646070388022",
+            "scenic_id": "S001",
+            "doc_id": "S001_OFF_001",
+            "related_entity_ids": [
+              "S001_POI_005",
+              "S001_POI_025"
+            ],
+            "alignment_notes": [],
+            "method": "rule:first_comma_baseline",
+            "source_text_type": "official_route",
+            "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+            "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "3112c7ca5e4b"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "购买目的对应建议"
+      },
+      {
+        "case_id": "E5_008",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 2861,
+          "end": 2906,
+          "text": "如果能像这样充分地利用箱根空中缆车和箱根海贼观光船等,您可以在一天内高效地游览很多景点哦。"
+        },
+        "expected": [],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果能像这样充分地利用箱根空中缆车和箱根海贼观光船等",
+            "visitor_types": [],
+            "suggestion_text": "您可以在一天内高效地游览很多景点哦",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 2861,
+              "end": 2887,
+              "text": "如果能像这样充分地利用箱根空中缆车和箱根海贼观光船等"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 2888,
+              "end": 2905,
+              "text": "您可以在一天内高效地游览很多景点哦"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 2861,
+                "end": 2905,
+                "text": "如果能像这样充分地利用箱根空中缆车和箱根海贼观光船等,您可以在一天内高效地游览很多景点哦"
+              }
+            ],
+            "advice_id": "A_S001_OFF_001_023222802498422",
+            "scenic_id": "S001",
+            "doc_id": "S001_OFF_001",
+            "related_entity_ids": [
+              "S001_TIME_019",
+              "S001_TRANSPORT_012",
+              "S001_TRANSPORT_014"
+            ],
+            "alignment_notes": [],
+            "method": "rule:first_comma_baseline",
+            "source_text_type": "official_route",
+            "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+            "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "734de214b63e"
+          }
+        ],
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "annotation_note": "总结效率，不是具体条件建议"
+      },
+      {
+        "case_id": "E5_009",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_VIS_001",
+          "start": 222,
+          "end": 267,
+          "text": "走过小花园看见一片草坪运动场,看见一对夫妇带着三个孩子在玩类似棒球的游戏,真得好羡慕他们。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "游客观察儿童不等于亲子推荐"
+      },
+      {
+        "case_id": "E5_010",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_VIS_003",
+          "start": 448,
+          "end": 580,
+          "text": "再乘缆车就可以到桃源台了,因为时间尚早,我们的酒店下午3点才能办入住,所以在桃源台乘海贼船游览芦之湖全景.因为有周游券,所以每个停靠点都随意下来,看看美景,当天天气不太好,在箱根町港没能看到富士山.在元箱根港看了水中神社,这个拍照打卡点人气太旺,排队排到半山腰.\n"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "作者经历，不应由排队描述推断避峰建议"
+      },
+      {
+        "case_id": "E5_011",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S002_OFF_001",
+          "start": 1702,
+          "end": 2294,
+          "text": "From the Lower Yosemite Fall area, head west along the base of the Three Brothers rock formation, past Camp 4, eventually working your way through Yosemite Valley to El Capitan. If you are planning to hike the half loop, cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village. If you are planning to hike the full loop, continue west past El Capitan toward Bridalveil Fall. While most of the trail is flat, there are some hilly sections throughout the hike. Additionally, you will find mixed trail surfaces: dirt, rocks, sand, and old pavement.\n"
+        },
+        "expected": [
+          {
+            "condition_text": "If you are planning to hike the half loop",
+            "suggestion_text": "cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village",
+            "condition_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 1880,
+              "end": 1921,
+              "text": "If you are planning to hike the half loop"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 1923,
+              "end": 2024,
+              "text": "cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "If you are planning to hike the half loop",
+            "visitor_types": [],
+            "suggestion_text": "cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village",
+            "condition_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 1880,
+              "end": 1921,
+              "text": "If you are planning to hike the half loop"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 1923,
+              "end": 2024,
+              "text": "cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village"
+            },
+            "evidence": [
+              {
+                "doc_id": "S002_OFF_001",
+                "start": 1880,
+                "end": 2024,
+                "text": "If you are planning to hike the half loop, cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village"
+              }
+            ],
+            "advice_id": "A_S002_OFF_001_088248811662268",
+            "scenic_id": "S002",
+            "doc_id": "S002_OFF_001",
+            "related_entity_ids": [
+              "S002_POI_012",
+              "S002_POI_013",
+              "S002_POI_018",
+              "S002_TRANSPORT_001"
+            ],
+            "alignment_notes": [],
+            "method": "rule:english_if",
+            "source_text_type": "official_route",
+            "source_title": "Yosemite Valley Loop Trail 与谷地日间步道指南",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/valleylooptrail.htm",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "6be2256397ab"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "英文条件路线"
+      },
+      {
+        "case_id": "E5_012",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S002_OFF_001",
+          "start": 1702,
+          "end": 2294,
+          "text": "From the Lower Yosemite Fall area, head west along the base of the Three Brothers rock formation, past Camp 4, eventually working your way through Yosemite Valley to El Capitan. If you are planning to hike the half loop, cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village. If you are planning to hike the full loop, continue west past El Capitan toward Bridalveil Fall. While most of the trail is flat, there are some hilly sections throughout the hike. Additionally, you will find mixed trail surfaces: dirt, rocks, sand, and old pavement.\n"
+        },
+        "expected": [
+          {
+            "condition_text": "If you are planning to hike the full loop",
+            "suggestion_text": "continue west past El Capitan toward Bridalveil Fall",
+            "condition_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 2026,
+              "end": 2067,
+              "text": "If you are planning to hike the full loop"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 2069,
+              "end": 2121,
+              "text": "continue west past El Capitan toward Bridalveil Fall"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "If you are planning to hike the full loop",
+            "visitor_types": [],
+            "suggestion_text": "continue west past El Capitan toward Bridalveil Fall",
+            "condition_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 2026,
+              "end": 2067,
+              "text": "If you are planning to hike the full loop"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 2069,
+              "end": 2121,
+              "text": "continue west past El Capitan toward Bridalveil Fall"
+            },
+            "evidence": [
+              {
+                "doc_id": "S002_OFF_001",
+                "start": 2026,
+                "end": 2121,
+                "text": "If you are planning to hike the full loop, continue west past El Capitan toward Bridalveil Fall"
+              }
+            ],
+            "advice_id": "A_S002_OFF_001_257761964045209",
+            "scenic_id": "S002",
+            "doc_id": "S002_OFF_001",
+            "related_entity_ids": [
+              "S002_POI_003",
+              "S002_POI_007",
+              "S002_TRANSPORT_001"
+            ],
+            "alignment_notes": [],
+            "method": "rule:english_if",
+            "source_text_type": "official_route",
+            "source_title": "Yosemite Valley Loop Trail 与谷地日间步道指南",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/valleylooptrail.htm",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "6ac6035ec9f6"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "两个备选不可拼接"
+      },
+      {
+        "case_id": "E5_013",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S002_VIS_001",
+          "start": 2828,
+          "end": 2916,
+          "text": "趁着时间还早(早晨也很冷,大约10摄氏度左右)在车上吃了早餐,大约7点换好了登山鞋我们徒步出发,虽然刚出发穿着短裤、T恤稍有些冷,但建议还是不要增加衣服,因为很快就会感到热了。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "上下文冷暖为经历，未显式匹配通用条件句；记录边界局限"
+      },
+      {
+        "case_id": "E5_014",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S002_VIS_002",
+          "start": 41326,
+          "end": 41345,
+          "text": "不过停车场不大,感觉旺季会比较难停车。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "预测停车困难而非建议动作"
+      },
+      {
+        "case_id": "E5_015",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S002_VIS_002",
+          "start": 42151,
+          "end": 42188,
+          "text": "教堂很小,却在阳光的照射下很温馨,若是在这里举办幸福的婚礼,一定浪漫不已。"
+        },
+        "expected": [],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "若是在这里举办幸福的婚礼",
+            "visitor_types": [],
+            "suggestion_text": "一定浪漫不已",
+            "condition_span": {
+              "doc_id": "S002_VIS_002",
+              "start": 42168,
+              "end": 42180,
+              "text": "若是在这里举办幸福的婚礼"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_VIS_002",
+              "start": 42181,
+              "end": 42187,
+              "text": "一定浪漫不已"
+            },
+            "evidence": [
+              {
+                "doc_id": "S002_VIS_002",
+                "start": 42168,
+                "end": 42187,
+                "text": "若是在这里举办幸福的婚礼,一定浪漫不已"
+              }
+            ],
+            "advice_id": "A_S002_VIS_002_091190086774996",
+            "scenic_id": "S002",
+            "doc_id": "S002_VIS_002",
+            "related_entity_ids": [],
+            "alignment_notes": [],
+            "method": "rule:first_comma_baseline",
+            "source_text_type": "visitor_diary",
+            "source_title": "【带着爸爸去旅行】驰聘美西18日，新手女司机的第一个5600公里",
+            "source_url": "https://you.ctrip.com/travels/westcoastoftheunitedstates1446740/3948721.html",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "96b77c2a2d20"
+          }
+        ],
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "annotation_note": "主观想象婚礼不等于情侣适用性"
+      },
+      {
+        "case_id": "E5_016",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S002_VIS_003",
+          "start": 3105,
+          "end": 3165,
+          "text": "我们按照官方建议每人带了4L水,爬cable那天不算特别热还基本全喝完了,现在想想有些后怕,所以应该建议没人带5-6L。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "普通补水建议，未显式条件，不强填条件"
+      },
+      {
+        "case_id": "E5_017",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S003_OFF_001",
+          "start": 2225,
+          "end": 2277,
+          "text": "如果您想近距离观赏,可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果您想近距离观赏",
+            "suggestion_text": "可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2225,
+              "end": 2234,
+              "text": "如果您想近距离观赏"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2235,
+              "end": 2276,
+              "text": "可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果您想近距离观赏",
+            "visitor_types": [],
+            "suggestion_text": "可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2225,
+              "end": 2234,
+              "text": "如果您想近距离观赏"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2235,
+              "end": 2276,
+              "text": "可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布"
+            },
+            "evidence": [
+              {
+                "doc_id": "S003_OFF_001",
+                "start": 2225,
+                "end": 2276,
+                "text": "如果您想近距离观赏,可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布"
+              }
+            ],
+            "advice_id": "A_S003_OFF_001_051221032292834",
+            "scenic_id": "S003",
+            "doc_id": "S003_OFF_001",
+            "related_entity_ids": [
+              "S003_POI_015"
+            ],
+            "alignment_notes": [],
+            "method": "rule:first_comma_baseline",
+            "source_text_type": "official_route",
+            "source_title": "Grand Cliff Top Walk 与蓝山一日游指南",
+            "source_url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "01c531f7c978"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "目的条件"
+      },
+      {
+        "case_id": "E5_018",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S003_OFF_001",
+          "start": 2674,
+          "end": 2720,
+          "text": "或者,如果想在旅途中享用美食,请前往这家小猪熟食店这里有琳琅满目的糕点、沙拉和其他自制美食。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果想在旅途中享用美食",
+            "suggestion_text": "请前往这家小猪熟食店这里有琳琅满目的糕点、沙拉和其他自制美食",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2677,
+              "end": 2688,
+              "text": "如果想在旅途中享用美食"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2689,
+              "end": 2719,
+              "text": "请前往这家小猪熟食店这里有琳琅满目的糕点、沙拉和其他自制美食"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果想在旅途中享用美食",
+            "visitor_types": [],
+            "suggestion_text": "请前往这家小猪熟食店这里有琳琅满目的糕点、沙拉和其他自制美食",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2677,
+              "end": 2688,
+              "text": "如果想在旅途中享用美食"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2689,
+              "end": 2719,
+              "text": "请前往这家小猪熟食店这里有琳琅满目的糕点、沙拉和其他自制美食"
+            },
+            "evidence": [
+              {
+                "doc_id": "S003_OFF_001",
+                "start": 2677,
+                "end": 2719,
+                "text": "如果想在旅途中享用美食,请前往这家小猪熟食店这里有琳琅满目的糕点、沙拉和其他自制美食"
+              }
+            ],
+            "advice_id": "A_S003_OFF_001_173909348912377",
+            "scenic_id": "S003",
+            "doc_id": "S003_OFF_001",
+            "related_entity_ids": [],
+            "alignment_notes": [],
+            "method": "rule:first_comma_baseline",
+            "source_text_type": "official_route",
+            "source_title": "Grand Cliff Top Walk 与蓝山一日游指南",
+            "source_url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "00602615cdb4"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "原文转写不顺保留原貌"
+      },
+      {
+        "case_id": "E5_019",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S003_OFF_001",
+          "start": 2853,
+          "end": 2909,
+          "text": "如果你有时间,另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果你有时间",
+            "suggestion_text": "另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2853,
+              "end": 2859,
+              "text": "如果你有时间"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2860,
+              "end": 2908,
+              "text": "另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "time",
+            "condition_text": "如果你有时间",
+            "visitor_types": [],
+            "suggestion_text": "另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2853,
+              "end": 2859,
+              "text": "如果你有时间"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2860,
+              "end": 2908,
+              "text": "另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一"
+            },
+            "evidence": [
+              {
+                "doc_id": "S003_OFF_001",
+                "start": 2853,
+                "end": 2908,
+                "text": "如果你有时间,另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一"
+              }
+            ],
+            "advice_id": "A_S003_OFF_001_260778767605275",
+            "scenic_id": "S003",
+            "doc_id": "S003_OFF_001",
+            "related_entity_ids": [
+              "S003_POI_001",
+              "S003_POI_016",
+              "S003_POI_020"
+            ],
+            "alignment_notes": [],
+            "method": "rule:first_comma_baseline",
+            "source_text_type": "official_route",
+            "source_title": "Grand Cliff Top Walk 与蓝山一日游指南",
+            "source_url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "e00ef5fdc0e8"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "没有可以/建议词但语义为条件推荐"
+      },
+      {
+        "case_id": "E5_020",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S003_OFF_001",
+          "start": 4095,
+          "end": 4143,
+          "text": "不过,如果游客想要体验更长的徒步旅行,例如壮观的大峡谷步道,或者想游览其他村庄,则应该在此过夜。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果游客想要体验更长的徒步旅行,例如壮观的大峡谷步道,或者想游览其他村庄",
+            "suggestion_text": "则应该在此过夜",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4098,
+              "end": 4134,
+              "text": "如果游客想要体验更长的徒步旅行,例如壮观的大峡谷步道,或者想游览其他村庄"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4135,
+              "end": 4142,
+              "text": "则应该在此过夜"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果游客想要体验更长的徒步旅行",
+            "visitor_types": [],
+            "suggestion_text": "例如壮观的大峡谷步道,或者想游览其他村庄,则应该在此过夜",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4098,
+              "end": 4113,
+              "text": "如果游客想要体验更长的徒步旅行"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4114,
+              "end": 4142,
+              "text": "例如壮观的大峡谷步道,或者想游览其他村庄,则应该在此过夜"
+            },
+            "evidence": [
+              {
+                "doc_id": "S003_OFF_001",
+                "start": 4098,
+                "end": 4142,
+                "text": "如果游客想要体验更长的徒步旅行,例如壮观的大峡谷步道,或者想游览其他村庄,则应该在此过夜"
+              }
+            ],
+            "advice_id": "A_S003_OFF_001_002128788543254",
+            "scenic_id": "S003",
+            "doc_id": "S003_OFF_001",
+            "related_entity_ids": [
+              "S003_POI_019",
+              "S003_TRANSPORT_001"
+            ],
+            "alignment_notes": [],
+            "method": "rule:first_comma_baseline",
+            "source_text_type": "official_route",
+            "source_title": "Grand Cliff Top Walk 与蓝山一日游指南",
+            "source_url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "8d11a4653c4f"
+          }
+        ],
+        "tp": 0,
+        "fp": 1,
+        "fn": 1,
+        "annotation_note": "条件跨多个逗号；不可截成第一个分句"
+      },
+      {
+        "case_id": "E5_021",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S003_OFF_001",
+          "start": 4833,
+          "end": 4901,
+          "text": "蓝山适合儿童游玩吗?\n当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)。\n"
+        },
+        "expected": [
+          {
+            "condition_text": "蓝山适合儿童游玩吗?",
+            "suggestion_text": "当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)。",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4833,
+              "end": 4843,
+              "text": "蓝山适合儿童游玩吗?"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4844,
+              "end": 4900,
+              "text": "当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)。"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "annotation_note": "问答跨句，含家庭适用信息"
+      },
+      {
+        "case_id": "E5_022",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S003_OFF_001",
+          "start": 4901,
+          "end": 5133,
+          "text": "下雨天还值得去蓝山吗?\n在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山\n"
+        },
+        "expected": [
+          {
+            "condition_text": "下雨天还值得去蓝山吗?",
+            "suggestion_text": "在蓝山,即使下雨天也有很多室内活动可以参加,包括:",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4901,
+              "end": 4912,
+              "text": "下雨天还值得去蓝山吗?"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4913,
+              "end": 4938,
+              "text": "在蓝山,即使下雨天也有很多室内活动可以参加,包括:"
+            },
+            "match": "prefix"
+          }
+        ],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "annotation_note": "问答列表应保留后续活动；此处仅标注最小建议前缀以作语义匹配"
+      },
+      {
+        "case_id": "E5_023",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S003_VIS_004",
+          "start": 6301,
+          "end": 6354,
+          "text": "很喜欢酒单上的Pinot Grigio,是非常清爽的开胃酒,入口很柔滑,有梨子和柑橘的香气,很适合女孩子。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "园外餐厅酒评，不能误归蓝山亲子建议"
+      },
+      {
+        "case_id": "E5_024",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S001_VIS_005",
+          "start": 5836,
+          "end": 5877,
+          "text": "如果乘坐小田急浪漫特快前往箱根汤本,则需另外购买特快车票,1200日元/人/单程\n"
+        },
+        "expected": [
+          {
+            "condition_text": "如果乘坐小田急浪漫特快前往箱根汤本",
+            "suggestion_text": "则需另外购买特快车票,1200日元/人/单程",
+            "condition_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5836,
+              "end": 5853,
+              "text": "如果乘坐小田急浪漫特快前往箱根汤本"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5854,
+              "end": 5876,
+              "text": "则需另外购买特快车票,1200日元/人/单程"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果乘坐小田急浪漫特快前往箱根汤本",
+            "visitor_types": [],
+            "suggestion_text": "则需另外购买特快车票,1200日元/人/单程",
+            "condition_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5836,
+              "end": 5853,
+              "text": "如果乘坐小田急浪漫特快前往箱根汤本"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5854,
+              "end": 5876,
+              "text": "则需另外购买特快车票,1200日元/人/单程"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_VIS_005",
+                "start": 5836,
+                "end": 5876,
+                "text": "如果乘坐小田急浪漫特快前往箱根汤本,则需另外购买特快车票,1200日元/人/单程"
+              }
+            ],
+            "advice_id": "A_S001_VIS_005_134550840182935",
+            "scenic_id": "S001",
+            "doc_id": "S001_VIS_005",
+            "related_entity_ids": [
+              "S001_POI_005",
+              "S001_TRANSPORT_015"
+            ],
+            "alignment_notes": [],
+            "method": "rule:first_comma_baseline",
+            "source_text_type": "visitor_diary",
+            "source_title": "#2023年国庆#北海道登别函馆+东京富士山箱根横滨十日游",
+            "source_url": "https://you.ctrip.com/travels/Japan100041/4114114.html",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "dafc85cacbf3"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "交通票务"
+      },
+      {
+        "case_id": "E5_025",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S001_VIS_005",
+          "start": 5877,
+          "end": 5956,
+          "text": "如果不想另外付费,则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右\n"
+        },
+        "expected": [
+          {
+            "condition_text": "如果不想另外付费",
+            "suggestion_text": "则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右",
+            "condition_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5877,
+              "end": 5885,
+              "text": "如果不想另外付费"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5886,
+              "end": 5955,
+              "text": "则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果不想另外付费",
+            "visitor_types": [],
+            "suggestion_text": "则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右",
+            "condition_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5877,
+              "end": 5885,
+              "text": "如果不想另外付费"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5886,
+              "end": 5955,
+              "text": "则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_VIS_005",
+                "start": 5877,
+                "end": 5955,
+                "text": "如果不想另外付费,则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右"
+              }
+            ],
+            "advice_id": "A_S001_VIS_005_228267617104810",
+            "scenic_id": "S001",
+            "doc_id": "S001_VIS_005",
+            "related_entity_ids": [
+              "S001_POI_005",
+              "S001_POI_016",
+              "S001_TIME_030",
+              "S001_TRANSPORT_010",
+              "S001_TRANSPORT_015",
+              "S001_TRANSPORT_016"
+            ],
+            "alignment_notes": [],
+            "method": "rule:first_comma_baseline",
+            "source_text_type": "visitor_diary",
+            "source_title": "#2023年国庆#北海道登别函馆+东京富士山箱根横滨十日游",
+            "source_url": "https://you.ctrip.com/travels/Japan100041/4114114.html",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "ed503e8d3170"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "条件后的多步骤完整保留"
+      },
+      {
+        "case_id": "E5_026",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S001_VIS_005",
+          "start": 6130,
+          "end": 6185,
+          "text": "如果座位有空的话,一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果座位有空的话",
+            "suggestion_text": "一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食",
+            "condition_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 6130,
+              "end": 6138,
+              "text": "如果座位有空的话"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 6139,
+              "end": 6184,
+              "text": "一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果座位有空的话",
+            "visitor_types": [],
+            "suggestion_text": "一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食",
+            "condition_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 6130,
+              "end": 6138,
+              "text": "如果座位有空的话"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 6139,
+              "end": 6184,
+              "text": "一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_VIS_005",
+                "start": 6130,
+                "end": 6184,
+                "text": "如果座位有空的话,一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食"
+              }
+            ],
+            "advice_id": "A_S001_VIS_005_117040616929219",
+            "scenic_id": "S001",
+            "doc_id": "S001_VIS_005",
+            "related_entity_ids": [
+              "S001_POI_003",
+              "S001_TRANSPORT_014"
+            ],
+            "alignment_notes": [],
+            "method": "rule:first_comma_baseline",
+            "source_text_type": "visitor_diary",
+            "source_title": "#2023年国庆#北海道登别函馆+东京富士山箱根横滨十日游",
+            "source_url": "https://you.ctrip.com/travels/Japan100041/4114114.html",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "38744ca068e8"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "座位条件建议"
+      },
+      {
+        "case_id": "E5_027",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S002_VIS_004",
+          "start": 1430,
+          "end": 1530,
+          "text": "瀑布的水流量可以根据最近Sierra Nevada的降雪推算,你也可以通过国家公园的在线摄像头查看Yosemite Fall的情况,如果后者几乎没有水,那么估计Horsetail Fall的水也不大。"
+        },
+        "expected": [],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果后者几乎没有水",
+            "visitor_types": [],
+            "suggestion_text": "那么估计Horsetail Fall的水也不大",
+            "condition_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 1496,
+              "end": 1505,
+              "text": "如果后者几乎没有水"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 1506,
+              "end": 1529,
+              "text": "那么估计Horsetail Fall的水也不大"
+            },
+            "evidence": [
+              {
+                "doc_id": "S002_VIS_004",
+                "start": 1496,
+                "end": 1529,
+                "text": "如果后者几乎没有水,那么估计Horsetail Fall的水也不大"
+              }
+            ],
+            "advice_id": "A_S002_VIS_004_148973246829271",
+            "scenic_id": "S002",
+            "doc_id": "S002_VIS_004",
+            "related_entity_ids": [
+              "S002_POI_037"
+            ],
+            "alignment_notes": [],
+            "method": "rule:first_comma_baseline",
+            "source_text_type": "visitor_diary",
+            "source_title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则",
+            "source_url": "https://www.uscreditcardguide.com/yosemite-firefall-2021/",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "573fcd6fa558"
+          }
+        ],
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "annotation_note": "水量推断，无建议动作"
+      },
+      {
+        "case_id": "E5_028",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S002_VIS_004",
+          "start": 1802,
+          "end": 1836,
+          "text": "如果你不想人挤人、也不想早起抢预约的话,建议计划周中去,人会少很多。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果你不想人挤人、也不想早起抢预约的话",
+            "suggestion_text": "建议计划周中去,人会少很多",
+            "condition_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 1802,
+              "end": 1821,
+              "text": "如果你不想人挤人、也不想早起抢预约的话"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 1822,
+              "end": 1835,
+              "text": "建议计划周中去,人会少很多"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "crowding",
+            "condition_text": "如果你不想人挤人、也不想早起抢预约的话",
+            "visitor_types": [],
+            "suggestion_text": "建议计划周中去,人会少很多",
+            "condition_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 1802,
+              "end": 1821,
+              "text": "如果你不想人挤人、也不想早起抢预约的话"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 1822,
+              "end": 1835,
+              "text": "建议计划周中去,人会少很多"
+            },
+            "evidence": [
+              {
+                "doc_id": "S002_VIS_004",
+                "start": 1802,
+                "end": 1835,
+                "text": "如果你不想人挤人、也不想早起抢预约的话,建议计划周中去,人会少很多"
+              }
+            ],
+            "advice_id": "A_S002_VIS_004_072958652312044",
+            "scenic_id": "S002",
+            "doc_id": "S002_VIS_004",
+            "related_entity_ids": [],
+            "alignment_notes": [],
+            "method": "rule:first_comma_baseline",
+            "source_text_type": "visitor_diary",
+            "source_title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则",
+            "source_url": "https://www.uscreditcardguide.com/yosemite-firefall-2021/",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "5e1ba1c73c76"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "避人群条件"
+      },
+      {
+        "case_id": "E5_029",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S002_VIS_004",
+          "start": 2010,
+          "end": 2183,
+          "text": "更妙的是Tunnel View就在CA 41号路旁,路边有两个停车场,你不需要走trail就可以饱览美景,何乐而不为?建议大家条件允许的话,一定要沿41号路由南往北,从Oakhurst进入优胜美地,路上如果你感兴趣的话还可以去Mariposa Grove看看巨大的红杉树,当车从隧道穿出,Yosemite Valley一览无余的感觉非常震撼人心。"
+        },
+        "expected": [
+          {
+            "condition_text": "条件允许的话",
+            "suggestion_text": "一定要沿41号路由南往北,从Oakhurst进入优胜美地",
+            "condition_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2073,
+              "end": 2079,
+              "text": "条件允许的话"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2080,
+              "end": 2108,
+              "text": "一定要沿41号路由南往北,从Oakhurst进入优胜美地"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "条件允许的话",
+            "visitor_types": [],
+            "suggestion_text": "一定要沿41号路由南往北,从Oakhurst进入优胜美地,路上",
+            "condition_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2073,
+              "end": 2079,
+              "text": "条件允许的话"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2080,
+              "end": 2111,
+              "text": "一定要沿41号路由南往北,从Oakhurst进入优胜美地,路上"
+            },
+            "evidence": [
+              {
+                "doc_id": "S002_VIS_004",
+                "start": 2073,
+                "end": 2111,
+                "text": "条件允许的话,一定要沿41号路由南往北,从Oakhurst进入优胜美地,路上"
+              }
+            ],
+            "advice_id": "A_S002_VIS_004_021279618643253",
+            "scenic_id": "S002",
+            "doc_id": "S002_VIS_004",
+            "related_entity_ids": [
+              "S002_POI_001"
+            ],
+            "alignment_notes": [],
+            "method": "rule:first_comma_baseline",
+            "source_text_type": "visitor_diary",
+            "source_title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则",
+            "source_url": "https://www.uscreditcardguide.com/yosemite-firefall-2021/",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "4bfde5615e90"
+          }
+        ],
+        "tp": 0,
+        "fp": 1,
+        "fn": 1,
+        "annotation_note": "前置建议与内嵌条件，另一个条件需拆开"
+      },
+      {
+        "case_id": "E5_030",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S002_VIS_004",
+          "start": 2010,
+          "end": 2183,
+          "text": "更妙的是Tunnel View就在CA 41号路旁,路边有两个停车场,你不需要走trail就可以饱览美景,何乐而不为?建议大家条件允许的话,一定要沿41号路由南往北,从Oakhurst进入优胜美地,路上如果你感兴趣的话还可以去Mariposa Grove看看巨大的红杉树,当车从隧道穿出,Yosemite Valley一览无余的感觉非常震撼人心。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果你感兴趣的话",
+            "suggestion_text": "还可以去Mariposa Grove看看巨大的红杉树",
+            "condition_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2111,
+              "end": 2119,
+              "text": "如果你感兴趣的话"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2119,
+              "end": 2145,
+              "text": "还可以去Mariposa Grove看看巨大的红杉树"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果你感兴趣的话还可以去Mariposa Grove看看巨大的红杉树",
+            "visitor_types": [],
+            "suggestion_text": "当车从隧道穿出,Yosemite Valley一览无余的感觉非常震撼人心",
+            "condition_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2111,
+              "end": 2145,
+              "text": "如果你感兴趣的话还可以去Mariposa Grove看看巨大的红杉树"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2146,
+              "end": 2182,
+              "text": "当车从隧道穿出,Yosemite Valley一览无余的感觉非常震撼人心"
+            },
+            "evidence": [
+              {
+                "doc_id": "S002_VIS_004",
+                "start": 2111,
+                "end": 2182,
+                "text": "如果你感兴趣的话还可以去Mariposa Grove看看巨大的红杉树,当车从隧道穿出,Yosemite Valley一览无余的感觉非常震撼人心"
+              }
+            ],
+            "advice_id": "A_S002_VIS_004_181087229193085",
+            "scenic_id": "S002",
+            "doc_id": "S002_VIS_004",
+            "related_entity_ids": [
+              "S002_POI_002",
+              "S002_POI_068"
+            ],
+            "alignment_notes": [],
+            "method": "rule:first_comma_baseline",
+            "source_text_type": "visitor_diary",
+            "source_title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则",
+            "source_url": "https://www.uscreditcardguide.com/yosemite-firefall-2021/",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "4910747bb5e2"
+          }
+        ],
+        "tp": 0,
+        "fp": 1,
+        "fn": 1,
+        "annotation_note": "同句第二个条件建议"
+      },
+      {
+        "case_id": "E5_031",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S002_VIS_004",
+          "start": 2301,
+          "end": 2384,
+          "text": "如果说Tunnel View是从峡谷的谷底平视的话,那么另一个不得不去的观景点就是位于峭壁之上的Glacier Point了,这里有观看Half Dome的绝佳视角。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "比喻比较不是条件"
+      },
+      {
+        "case_id": "E5_032",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S002_VIS_004",
+          "start": 3340,
+          "end": 3358,
+          "text": "若喜欢本文,别忘了给个五星好评哦!\n"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "站点求好评无关旅游建议"
+      }
+    ]
+  },
+  "optimized": {
+    "metrics": {
+      "development": {
+        "tp": 14,
+        "fp": 0,
+        "fn": 0,
+        "cases": 23,
+        "positive_relations": 14,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "correct_negative_cases": 9
+      },
+      "document_holdout": {
+        "tp": 4,
+        "fp": 2,
+        "fn": 2,
+        "cases": 9,
+        "positive_relations": 6,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "correct_negative_cases": 3
+      },
+      "all": {
+        "tp": 18,
+        "fp": 2,
+        "fn": 2,
+        "cases": 32,
+        "positive_relations": 20,
+        "precision": 0.9,
+        "recall": 0.9,
+        "f1": 0.9,
+        "correct_negative_cases": 12
+      }
+    },
+    "cases": [
+      {
+        "case_id": "E5_001",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 454,
+          "end": 489,
+          "text": "如果遇上好天气,还可以从车窗看到富士山,这无疑会增加您对旅行的期待哦。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "描述可见景色，未给出游览动作"
+      },
+      {
+        "case_id": "E5_002",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 490,
+          "end": 543,
+          "text": "※1:从新宿站到箱根汤本站,如果使用“箱根周游券”乘坐“浪漫”特快,则需另外支付特快费(1,200日币)。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果使用“箱根周游券”乘坐“浪漫”特快",
+            "suggestion_text": "则需另外支付特快费(1,200日币)",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 504,
+              "end": 523,
+              "text": "如果使用“箱根周游券”乘坐“浪漫”特快"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 524,
+              "end": 542,
+              "text": "则需另外支付特快费(1,200日币)"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果使用“箱根周游券”乘坐“浪漫”特快",
+            "visitor_types": [],
+            "suggestion_text": "则需另外支付特快费(1,200日币)",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 504,
+              "end": 523,
+              "text": "如果使用“箱根周游券”乘坐“浪漫”特快"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 524,
+              "end": 542,
+              "text": "则需另外支付特快费(1,200日币)"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 504,
+                "end": 542,
+                "text": "如果使用“箱根周游券”乘坐“浪漫”特快,则需另外支付特快费(1,200日币)"
+              }
+            ],
+            "advice_id": "A_S001_OFF_001_255828790194615",
+            "scenic_id": "S001",
+            "doc_id": "S001_OFF_001",
+            "related_entity_ids": [
+              "S001_TRANSPORT_015"
+            ],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "official_route",
+            "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+            "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "e3d0c4caa07e"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "带条件的票务操作；历史价格需标记"
+      },
+      {
+        "case_id": "E5_003",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 639,
+          "end": 692,
+          "text": "如果在车站内部的服务柜台寄存包裹,则可以帮您运送到住处,因此您可以轻松地享受观光之旅(含税900日币~)。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果在车站内部的服务柜台寄存包裹",
+            "suggestion_text": "则可以帮您运送到住处,因此您可以轻松地享受观光之旅(含税900日币~)",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 639,
+              "end": 655,
+              "text": "如果在车站内部的服务柜台寄存包裹"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 656,
+              "end": 691,
+              "text": "则可以帮您运送到住处,因此您可以轻松地享受观光之旅(含税900日币~)"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果在车站内部的服务柜台寄存包裹",
+            "visitor_types": [],
+            "suggestion_text": "则可以帮您运送到住处,因此您可以轻松地享受观光之旅(含税900日币~)",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 639,
+              "end": 655,
+              "text": "如果在车站内部的服务柜台寄存包裹"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 656,
+              "end": 691,
+              "text": "则可以帮您运送到住处,因此您可以轻松地享受观光之旅(含税900日币~)"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 639,
+                "end": 691,
+                "text": "如果在车站内部的服务柜台寄存包裹,则可以帮您运送到住处,因此您可以轻松地享受观光之旅(含税900日币~)"
+              }
+            ],
+            "advice_id": "A_S001_OFF_001_171123485310695",
+            "scenic_id": "S001",
+            "doc_id": "S001_OFF_001",
+            "related_entity_ids": [],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "official_route",
+            "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+            "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "c2de00c5275d"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "寄存条件与服务"
+      },
+      {
+        "case_id": "E5_004",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 1084,
+          "end": 1135,
+          "text": "对于带儿童的家庭,推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等。"
+        },
+        "expected": [
+          {
+            "condition_text": "对于带儿童的家庭",
+            "suggestion_text": "推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1084,
+              "end": 1092,
+              "text": "对于带儿童的家庭"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1093,
+              "end": 1134,
+              "text": "推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "visitor_type",
+            "condition_text": "对于带儿童的家庭",
+            "visitor_types": [
+              "family"
+            ],
+            "suggestion_text": "推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1084,
+              "end": 1092,
+              "text": "对于带儿童的家庭"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1093,
+              "end": 1134,
+              "text": "推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 1084,
+                "end": 1134,
+                "text": "对于带儿童的家庭,推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等"
+              }
+            ],
+            "advice_id": "A_S001_OFF_001_247169266140315",
+            "scenic_id": "S001",
+            "doc_id": "S001_OFF_001",
+            "related_entity_ids": [
+              "S001_POI_020",
+              "S001_POI_021"
+            ],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "official_route",
+            "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+            "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "d4fa25978087"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "同条件多活动整体保留"
+      },
+      {
+        "case_id": "E5_005",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 1135,
+          "end": 1156,
+          "text": "如果您感到疲劳,还可以在馆区内泡足汤小憩。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果您感到疲劳",
+            "suggestion_text": "还可以在馆区内泡足汤小憩",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1135,
+              "end": 1142,
+              "text": "如果您感到疲劳"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1143,
+              "end": 1155,
+              "text": "还可以在馆区内泡足汤小憩"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果您感到疲劳",
+            "visitor_types": [],
+            "suggestion_text": "还可以在馆区内泡足汤小憩",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1135,
+              "end": 1142,
+              "text": "如果您感到疲劳"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1143,
+              "end": 1155,
+              "text": "还可以在馆区内泡足汤小憩"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 1135,
+                "end": 1155,
+                "text": "如果您感到疲劳,还可以在馆区内泡足汤小憩"
+              },
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 967,
+                "end": 976,
+                "text": "箱根雕刻森林美术馆"
+              }
+            ],
+            "advice_id": "A_S001_OFF_001_177547618944147",
+            "scenic_id": "S001",
+            "doc_id": "S001_OFF_001",
+            "related_entity_ids": [
+              "S001_POI_007"
+            ],
+            "alignment_notes": [
+              "馆区由前800字符唯一具名美术馆回指；保留名称证据"
+            ],
+            "method": "rule:conditional_action",
+            "source_text_type": "official_route",
+            "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+            "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "9af153c403f3"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "馆区具体关联需上下文"
+      },
+      {
+        "case_id": "E5_006",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 1195,
+          "end": 1251,
+          "text": "如果出示“箱根周游券”,可享优惠价成人1,900日币、高中生大学生1,500日币、中小学生700日币(均含税)。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果出示“箱根周游券”",
+            "suggestion_text": "可享优惠价成人1,900日币、高中生大学生1,500日币、中小学生700日币(均含税)",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1195,
+              "end": 1206,
+              "text": "如果出示“箱根周游券”"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1207,
+              "end": 1250,
+              "text": "可享优惠价成人1,900日币、高中生大学生1,500日币、中小学生700日币(均含税)"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果出示“箱根周游券”",
+            "visitor_types": [],
+            "suggestion_text": "可享优惠价成人1,900日币、高中生大学生1,500日币、中小学生700日币(均含税)",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1195,
+              "end": 1206,
+              "text": "如果出示“箱根周游券”"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1207,
+              "end": 1250,
+              "text": "可享优惠价成人1,900日币、高中生大学生1,500日币、中小学生700日币(均含税)"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 1195,
+                "end": 1250,
+                "text": "如果出示“箱根周游券”,可享优惠价成人1,900日币、高中生大学生1,500日币、中小学生700日币(均含税)"
+              }
+            ],
+            "advice_id": "A_S001_OFF_001_147046239503370",
+            "scenic_id": "S001",
+            "doc_id": "S001_OFF_001",
+            "related_entity_ids": [],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "official_route",
+            "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+            "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "e116212bd38f"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "票券条件优惠，不作现价保证"
+      },
+      {
+        "case_id": "E5_007",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 2716,
+          "end": 2753,
+          "text": "最后,如果购买伴手礼,可以前往位于箱根汤本站的“箱根登山名产店 汤本店”。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果购买伴手礼",
+            "suggestion_text": "可以前往位于箱根汤本站的“箱根登山名产店 汤本店”",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 2719,
+              "end": 2726,
+              "text": "如果购买伴手礼"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 2727,
+              "end": 2752,
+              "text": "可以前往位于箱根汤本站的“箱根登山名产店 汤本店”"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果购买伴手礼",
+            "visitor_types": [],
+            "suggestion_text": "可以前往位于箱根汤本站的“箱根登山名产店 汤本店”",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 2719,
+              "end": 2726,
+              "text": "如果购买伴手礼"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 2727,
+              "end": 2752,
+              "text": "可以前往位于箱根汤本站的“箱根登山名产店 汤本店”"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 2719,
+                "end": 2752,
+                "text": "如果购买伴手礼,可以前往位于箱根汤本站的“箱根登山名产店 汤本店”"
+              }
+            ],
+            "advice_id": "A_S001_OFF_001_250646070388022",
+            "scenic_id": "S001",
+            "doc_id": "S001_OFF_001",
+            "related_entity_ids": [
+              "S001_POI_005",
+              "S001_POI_025"
+            ],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "official_route",
+            "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+            "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "3112c7ca5e4b"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "购买目的对应建议"
+      },
+      {
+        "case_id": "E5_008",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 2861,
+          "end": 2906,
+          "text": "如果能像这样充分地利用箱根空中缆车和箱根海贼观光船等,您可以在一天内高效地游览很多景点哦。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "总结效率，不是具体条件建议"
+      },
+      {
+        "case_id": "E5_009",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_VIS_001",
+          "start": 222,
+          "end": 267,
+          "text": "走过小花园看见一片草坪运动场,看见一对夫妇带着三个孩子在玩类似棒球的游戏,真得好羡慕他们。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "游客观察儿童不等于亲子推荐"
+      },
+      {
+        "case_id": "E5_010",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_VIS_003",
+          "start": 448,
+          "end": 580,
+          "text": "再乘缆车就可以到桃源台了,因为时间尚早,我们的酒店下午3点才能办入住,所以在桃源台乘海贼船游览芦之湖全景.因为有周游券,所以每个停靠点都随意下来,看看美景,当天天气不太好,在箱根町港没能看到富士山.在元箱根港看了水中神社,这个拍照打卡点人气太旺,排队排到半山腰.\n"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "作者经历，不应由排队描述推断避峰建议"
+      },
+      {
+        "case_id": "E5_011",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S002_OFF_001",
+          "start": 1702,
+          "end": 2294,
+          "text": "From the Lower Yosemite Fall area, head west along the base of the Three Brothers rock formation, past Camp 4, eventually working your way through Yosemite Valley to El Capitan. If you are planning to hike the half loop, cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village. If you are planning to hike the full loop, continue west past El Capitan toward Bridalveil Fall. While most of the trail is flat, there are some hilly sections throughout the hike. Additionally, you will find mixed trail surfaces: dirt, rocks, sand, and old pavement.\n"
+        },
+        "expected": [
+          {
+            "condition_text": "If you are planning to hike the half loop",
+            "suggestion_text": "cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village",
+            "condition_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 1880,
+              "end": 1921,
+              "text": "If you are planning to hike the half loop"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 1923,
+              "end": 2024,
+              "text": "cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "If you are planning to hike the half loop",
+            "visitor_types": [],
+            "suggestion_text": "cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village",
+            "condition_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 1880,
+              "end": 1921,
+              "text": "If you are planning to hike the half loop"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 1923,
+              "end": 2024,
+              "text": "cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village"
+            },
+            "evidence": [
+              {
+                "doc_id": "S002_OFF_001",
+                "start": 1880,
+                "end": 2024,
+                "text": "If you are planning to hike the half loop, cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village"
+              }
+            ],
+            "advice_id": "A_S002_OFF_001_088248811662268",
+            "scenic_id": "S002",
+            "doc_id": "S002_OFF_001",
+            "related_entity_ids": [
+              "S002_POI_012",
+              "S002_POI_013",
+              "S002_POI_018",
+              "S002_TRANSPORT_001"
+            ],
+            "alignment_notes": [],
+            "method": "rule:english_if",
+            "source_text_type": "official_route",
+            "source_title": "Yosemite Valley Loop Trail 与谷地日间步道指南",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/valleylooptrail.htm",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "6be2256397ab"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "英文条件路线"
+      },
+      {
+        "case_id": "E5_012",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S002_OFF_001",
+          "start": 1702,
+          "end": 2294,
+          "text": "From the Lower Yosemite Fall area, head west along the base of the Three Brothers rock formation, past Camp 4, eventually working your way through Yosemite Valley to El Capitan. If you are planning to hike the half loop, cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village. If you are planning to hike the full loop, continue west past El Capitan toward Bridalveil Fall. While most of the trail is flat, there are some hilly sections throughout the hike. Additionally, you will find mixed trail surfaces: dirt, rocks, sand, and old pavement.\n"
+        },
+        "expected": [
+          {
+            "condition_text": "If you are planning to hike the full loop",
+            "suggestion_text": "continue west past El Capitan toward Bridalveil Fall",
+            "condition_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 2026,
+              "end": 2067,
+              "text": "If you are planning to hike the full loop"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 2069,
+              "end": 2121,
+              "text": "continue west past El Capitan toward Bridalveil Fall"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "If you are planning to hike the full loop",
+            "visitor_types": [],
+            "suggestion_text": "continue west past El Capitan toward Bridalveil Fall",
+            "condition_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 2026,
+              "end": 2067,
+              "text": "If you are planning to hike the full loop"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 2069,
+              "end": 2121,
+              "text": "continue west past El Capitan toward Bridalveil Fall"
+            },
+            "evidence": [
+              {
+                "doc_id": "S002_OFF_001",
+                "start": 2026,
+                "end": 2121,
+                "text": "If you are planning to hike the full loop, continue west past El Capitan toward Bridalveil Fall"
+              }
+            ],
+            "advice_id": "A_S002_OFF_001_257761964045209",
+            "scenic_id": "S002",
+            "doc_id": "S002_OFF_001",
+            "related_entity_ids": [
+              "S002_POI_003",
+              "S002_POI_007",
+              "S002_TRANSPORT_001"
+            ],
+            "alignment_notes": [],
+            "method": "rule:english_if",
+            "source_text_type": "official_route",
+            "source_title": "Yosemite Valley Loop Trail 与谷地日间步道指南",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/valleylooptrail.htm",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "6ac6035ec9f6"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "两个备选不可拼接"
+      },
+      {
+        "case_id": "E5_013",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S002_VIS_001",
+          "start": 2828,
+          "end": 2916,
+          "text": "趁着时间还早(早晨也很冷,大约10摄氏度左右)在车上吃了早餐,大约7点换好了登山鞋我们徒步出发,虽然刚出发穿着短裤、T恤稍有些冷,但建议还是不要增加衣服,因为很快就会感到热了。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "上下文冷暖为经历，未显式匹配通用条件句；记录边界局限"
+      },
+      {
+        "case_id": "E5_014",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S002_VIS_002",
+          "start": 41326,
+          "end": 41345,
+          "text": "不过停车场不大,感觉旺季会比较难停车。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "预测停车困难而非建议动作"
+      },
+      {
+        "case_id": "E5_015",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S002_VIS_002",
+          "start": 42151,
+          "end": 42188,
+          "text": "教堂很小,却在阳光的照射下很温馨,若是在这里举办幸福的婚礼,一定浪漫不已。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "主观想象婚礼不等于情侣适用性"
+      },
+      {
+        "case_id": "E5_016",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S002_VIS_003",
+          "start": 3105,
+          "end": 3165,
+          "text": "我们按照官方建议每人带了4L水,爬cable那天不算特别热还基本全喝完了,现在想想有些后怕,所以应该建议没人带5-6L。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "普通补水建议，未显式条件，不强填条件"
+      },
+      {
+        "case_id": "E5_017",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S003_OFF_001",
+          "start": 2225,
+          "end": 2277,
+          "text": "如果您想近距离观赏,可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果您想近距离观赏",
+            "suggestion_text": "可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2225,
+              "end": 2234,
+              "text": "如果您想近距离观赏"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2235,
+              "end": 2276,
+              "text": "可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果您想近距离观赏",
+            "visitor_types": [],
+            "suggestion_text": "可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2225,
+              "end": 2234,
+              "text": "如果您想近距离观赏"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2235,
+              "end": 2276,
+              "text": "可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布"
+            },
+            "evidence": [
+              {
+                "doc_id": "S003_OFF_001",
+                "start": 2225,
+                "end": 2276,
+                "text": "如果您想近距离观赏,可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布"
+              }
+            ],
+            "advice_id": "A_S003_OFF_001_051221032292834",
+            "scenic_id": "S003",
+            "doc_id": "S003_OFF_001",
+            "related_entity_ids": [
+              "S003_POI_015"
+            ],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "official_route",
+            "source_title": "Grand Cliff Top Walk 与蓝山一日游指南",
+            "source_url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "01c531f7c978"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "目的条件"
+      },
+      {
+        "case_id": "E5_018",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S003_OFF_001",
+          "start": 2674,
+          "end": 2720,
+          "text": "或者,如果想在旅途中享用美食,请前往这家小猪熟食店这里有琳琅满目的糕点、沙拉和其他自制美食。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果想在旅途中享用美食",
+            "suggestion_text": "请前往这家小猪熟食店这里有琳琅满目的糕点、沙拉和其他自制美食",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2677,
+              "end": 2688,
+              "text": "如果想在旅途中享用美食"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2689,
+              "end": 2719,
+              "text": "请前往这家小猪熟食店这里有琳琅满目的糕点、沙拉和其他自制美食"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果想在旅途中享用美食",
+            "visitor_types": [],
+            "suggestion_text": "请前往这家小猪熟食店这里有琳琅满目的糕点、沙拉和其他自制美食",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2677,
+              "end": 2688,
+              "text": "如果想在旅途中享用美食"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2689,
+              "end": 2719,
+              "text": "请前往这家小猪熟食店这里有琳琅满目的糕点、沙拉和其他自制美食"
+            },
+            "evidence": [
+              {
+                "doc_id": "S003_OFF_001",
+                "start": 2677,
+                "end": 2719,
+                "text": "如果想在旅途中享用美食,请前往这家小猪熟食店这里有琳琅满目的糕点、沙拉和其他自制美食"
+              }
+            ],
+            "advice_id": "A_S003_OFF_001_173909348912377",
+            "scenic_id": "S003",
+            "doc_id": "S003_OFF_001",
+            "related_entity_ids": [],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "official_route",
+            "source_title": "Grand Cliff Top Walk 与蓝山一日游指南",
+            "source_url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "00602615cdb4"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "原文转写不顺保留原貌"
+      },
+      {
+        "case_id": "E5_019",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S003_OFF_001",
+          "start": 2853,
+          "end": 2909,
+          "text": "如果你有时间,另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果你有时间",
+            "suggestion_text": "另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2853,
+              "end": 2859,
+              "text": "如果你有时间"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2860,
+              "end": 2908,
+              "text": "另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "time",
+            "condition_text": "如果你有时间",
+            "visitor_types": [],
+            "suggestion_text": "另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2853,
+              "end": 2859,
+              "text": "如果你有时间"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2860,
+              "end": 2908,
+              "text": "另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一"
+            },
+            "evidence": [
+              {
+                "doc_id": "S003_OFF_001",
+                "start": 2853,
+                "end": 2908,
+                "text": "如果你有时间,另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一"
+              }
+            ],
+            "advice_id": "A_S003_OFF_001_260778767605275",
+            "scenic_id": "S003",
+            "doc_id": "S003_OFF_001",
+            "related_entity_ids": [
+              "S003_POI_001",
+              "S003_POI_016",
+              "S003_POI_020"
+            ],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "official_route",
+            "source_title": "Grand Cliff Top Walk 与蓝山一日游指南",
+            "source_url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "e00ef5fdc0e8"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "没有可以/建议词但语义为条件推荐"
+      },
+      {
+        "case_id": "E5_020",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S003_OFF_001",
+          "start": 4095,
+          "end": 4143,
+          "text": "不过,如果游客想要体验更长的徒步旅行,例如壮观的大峡谷步道,或者想游览其他村庄,则应该在此过夜。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果游客想要体验更长的徒步旅行,例如壮观的大峡谷步道,或者想游览其他村庄",
+            "suggestion_text": "则应该在此过夜",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4098,
+              "end": 4134,
+              "text": "如果游客想要体验更长的徒步旅行,例如壮观的大峡谷步道,或者想游览其他村庄"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4135,
+              "end": 4142,
+              "text": "则应该在此过夜"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果游客想要体验更长的徒步旅行,例如壮观的大峡谷步道,或者想游览其他村庄",
+            "visitor_types": [],
+            "suggestion_text": "则应该在此过夜",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4098,
+              "end": 4134,
+              "text": "如果游客想要体验更长的徒步旅行,例如壮观的大峡谷步道,或者想游览其他村庄"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4135,
+              "end": 4142,
+              "text": "则应该在此过夜"
+            },
+            "evidence": [
+              {
+                "doc_id": "S003_OFF_001",
+                "start": 4098,
+                "end": 4142,
+                "text": "如果游客想要体验更长的徒步旅行,例如壮观的大峡谷步道,或者想游览其他村庄,则应该在此过夜"
+              }
+            ],
+            "advice_id": "A_S003_OFF_001_035301096231357",
+            "scenic_id": "S003",
+            "doc_id": "S003_OFF_001",
+            "related_entity_ids": [
+              "S003_POI_019",
+              "S003_TRANSPORT_001"
+            ],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "official_route",
+            "source_title": "Grand Cliff Top Walk 与蓝山一日游指南",
+            "source_url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "c0e49c0afa07"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "条件跨多个逗号；不可截成第一个分句"
+      },
+      {
+        "case_id": "E5_021",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S003_OFF_001",
+          "start": 4833,
+          "end": 4901,
+          "text": "蓝山适合儿童游玩吗?\n当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)。\n"
+        },
+        "expected": [
+          {
+            "condition_text": "蓝山适合儿童游玩吗?",
+            "suggestion_text": "当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)。",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4833,
+              "end": 4843,
+              "text": "蓝山适合儿童游玩吗?"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4844,
+              "end": 4900,
+              "text": "当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)。"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "visitor_type",
+            "condition_text": "蓝山适合儿童游玩吗?",
+            "visitor_types": [
+              "family"
+            ],
+            "suggestion_text": "当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4833,
+              "end": 4843,
+              "text": "蓝山适合儿童游玩吗?"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4844,
+              "end": 4899,
+              "text": "当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)"
+            },
+            "evidence": [
+              {
+                "doc_id": "S003_OFF_001",
+                "start": 4833,
+                "end": 4901,
+                "text": "蓝山适合儿童游玩吗?\n当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)。\n"
+              }
+            ],
+            "advice_id": "A_S003_OFF_001_143350059015598",
+            "scenic_id": "S003",
+            "doc_id": "S003_OFF_001",
+            "related_entity_ids": [
+              "S003_POI_001",
+              "S003_POI_003",
+              "S003_TRANSPORT_001",
+              "S003_TRANSPORT_008"
+            ],
+            "alignment_notes": [],
+            "method": "rule:faq_condition_block",
+            "source_text_type": "official_route",
+            "source_title": "Grand Cliff Top Walk 与蓝山一日游指南",
+            "source_url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "1feb834d7a5f"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "问答跨句，含家庭适用信息"
+      },
+      {
+        "case_id": "E5_022",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S003_OFF_001",
+          "start": 4901,
+          "end": 5133,
+          "text": "下雨天还值得去蓝山吗?\n在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山\n"
+        },
+        "expected": [
+          {
+            "condition_text": "下雨天还值得去蓝山吗?",
+            "suggestion_text": "在蓝山,即使下雨天也有很多室内活动可以参加,包括:",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4901,
+              "end": 4912,
+              "text": "下雨天还值得去蓝山吗?"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4913,
+              "end": 4938,
+              "text": "在蓝山,即使下雨天也有很多室内活动可以参加,包括:"
+            },
+            "match": "prefix"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "weather",
+            "condition_text": "下雨天还值得去蓝山吗?",
+            "visitor_types": [],
+            "suggestion_text": "在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4901,
+              "end": 4912,
+              "text": "下雨天还值得去蓝山吗?"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4913,
+              "end": 5132,
+              "text": "在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山"
+            },
+            "evidence": [
+              {
+                "doc_id": "S003_OFF_001",
+                "start": 4901,
+                "end": 5132,
+                "text": "下雨天还值得去蓝山吗?\n在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山"
+              }
+            ],
+            "advice_id": "A_S003_OFF_001_231897423423565",
+            "scenic_id": "S003",
+            "doc_id": "S003_OFF_001",
+            "related_entity_ids": [
+              "S003_POI_001",
+              "S003_POI_004",
+              "S003_POI_005",
+              "S003_POI_026",
+              "S003_POI_045",
+              "S003_POI_046",
+              "S003_POI_047",
+              "S003_POI_048",
+              "S003_POI_049",
+              "S003_POI_050",
+              "S003_POI_051"
+            ],
+            "alignment_notes": [],
+            "method": "rule:faq_condition_block",
+            "source_text_type": "official_route",
+            "source_title": "Grand Cliff Top Walk 与蓝山一日游指南",
+            "source_url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "a449d50637e6"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "问答列表应保留后续活动；此处仅标注最小建议前缀以作语义匹配"
+      },
+      {
+        "case_id": "E5_023",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S003_VIS_004",
+          "start": 6301,
+          "end": 6354,
+          "text": "很喜欢酒单上的Pinot Grigio,是非常清爽的开胃酒,入口很柔滑,有梨子和柑橘的香气,很适合女孩子。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "园外餐厅酒评，不能误归蓝山亲子建议"
+      },
+      {
+        "case_id": "E5_024",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S001_VIS_005",
+          "start": 5836,
+          "end": 5877,
+          "text": "如果乘坐小田急浪漫特快前往箱根汤本,则需另外购买特快车票,1200日元/人/单程\n"
+        },
+        "expected": [
+          {
+            "condition_text": "如果乘坐小田急浪漫特快前往箱根汤本",
+            "suggestion_text": "则需另外购买特快车票,1200日元/人/单程",
+            "condition_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5836,
+              "end": 5853,
+              "text": "如果乘坐小田急浪漫特快前往箱根汤本"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5854,
+              "end": 5876,
+              "text": "则需另外购买特快车票,1200日元/人/单程"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果乘坐小田急浪漫特快前往箱根汤本",
+            "visitor_types": [],
+            "suggestion_text": "则需另外购买特快车票,1200日元/人/单程",
+            "condition_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5836,
+              "end": 5853,
+              "text": "如果乘坐小田急浪漫特快前往箱根汤本"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5854,
+              "end": 5876,
+              "text": "则需另外购买特快车票,1200日元/人/单程"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_VIS_005",
+                "start": 5836,
+                "end": 5876,
+                "text": "如果乘坐小田急浪漫特快前往箱根汤本,则需另外购买特快车票,1200日元/人/单程"
+              }
+            ],
+            "advice_id": "A_S001_VIS_005_134550840182935",
+            "scenic_id": "S001",
+            "doc_id": "S001_VIS_005",
+            "related_entity_ids": [
+              "S001_POI_005",
+              "S001_TRANSPORT_015"
+            ],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "visitor_diary",
+            "source_title": "#2023年国庆#北海道登别函馆+东京富士山箱根横滨十日游",
+            "source_url": "https://you.ctrip.com/travels/Japan100041/4114114.html",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "dafc85cacbf3"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "交通票务"
+      },
+      {
+        "case_id": "E5_025",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S001_VIS_005",
+          "start": 5877,
+          "end": 5956,
+          "text": "如果不想另外付费,则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右\n"
+        },
+        "expected": [
+          {
+            "condition_text": "如果不想另外付费",
+            "suggestion_text": "则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右",
+            "condition_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5877,
+              "end": 5885,
+              "text": "如果不想另外付费"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5886,
+              "end": 5955,
+              "text": "则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果不想另外付费",
+            "visitor_types": [],
+            "suggestion_text": "则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右",
+            "condition_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5877,
+              "end": 5885,
+              "text": "如果不想另外付费"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5886,
+              "end": 5955,
+              "text": "则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_VIS_005",
+                "start": 5877,
+                "end": 5955,
+                "text": "如果不想另外付费,则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右"
+              }
+            ],
+            "advice_id": "A_S001_VIS_005_228267617104810",
+            "scenic_id": "S001",
+            "doc_id": "S001_VIS_005",
+            "related_entity_ids": [
+              "S001_POI_005",
+              "S001_POI_016",
+              "S001_TIME_030",
+              "S001_TRANSPORT_010",
+              "S001_TRANSPORT_015",
+              "S001_TRANSPORT_016"
+            ],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "visitor_diary",
+            "source_title": "#2023年国庆#北海道登别函馆+东京富士山箱根横滨十日游",
+            "source_url": "https://you.ctrip.com/travels/Japan100041/4114114.html",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "ed503e8d3170"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "条件后的多步骤完整保留"
+      },
+      {
+        "case_id": "E5_026",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S001_VIS_005",
+          "start": 6130,
+          "end": 6185,
+          "text": "如果座位有空的话,一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果座位有空的话",
+            "suggestion_text": "一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食",
+            "condition_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 6130,
+              "end": 6138,
+              "text": "如果座位有空的话"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 6139,
+              "end": 6184,
+              "text": "一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果座位有空的话",
+            "visitor_types": [],
+            "suggestion_text": "一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食",
+            "condition_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 6130,
+              "end": 6138,
+              "text": "如果座位有空的话"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 6139,
+              "end": 6184,
+              "text": "一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_VIS_005",
+                "start": 6130,
+                "end": 6184,
+                "text": "如果座位有空的话,一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食"
+              }
+            ],
+            "advice_id": "A_S001_VIS_005_117040616929219",
+            "scenic_id": "S001",
+            "doc_id": "S001_VIS_005",
+            "related_entity_ids": [
+              "S001_POI_003",
+              "S001_TRANSPORT_014"
+            ],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "visitor_diary",
+            "source_title": "#2023年国庆#北海道登别函馆+东京富士山箱根横滨十日游",
+            "source_url": "https://you.ctrip.com/travels/Japan100041/4114114.html",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "38744ca068e8"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "座位条件建议"
+      },
+      {
+        "case_id": "E5_027",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S002_VIS_004",
+          "start": 1430,
+          "end": 1530,
+          "text": "瀑布的水流量可以根据最近Sierra Nevada的降雪推算,你也可以通过国家公园的在线摄像头查看Yosemite Fall的情况,如果后者几乎没有水,那么估计Horsetail Fall的水也不大。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "水量推断，无建议动作"
+      },
+      {
+        "case_id": "E5_028",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S002_VIS_004",
+          "start": 1802,
+          "end": 1836,
+          "text": "如果你不想人挤人、也不想早起抢预约的话,建议计划周中去,人会少很多。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果你不想人挤人、也不想早起抢预约的话",
+            "suggestion_text": "建议计划周中去,人会少很多",
+            "condition_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 1802,
+              "end": 1821,
+              "text": "如果你不想人挤人、也不想早起抢预约的话"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 1822,
+              "end": 1835,
+              "text": "建议计划周中去,人会少很多"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "crowding",
+            "condition_text": "如果你不想人挤人、也不想早起抢预约的话",
+            "visitor_types": [],
+            "suggestion_text": "建议计划周中去,人会少很多",
+            "condition_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 1802,
+              "end": 1821,
+              "text": "如果你不想人挤人、也不想早起抢预约的话"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 1822,
+              "end": 1835,
+              "text": "建议计划周中去,人会少很多"
+            },
+            "evidence": [
+              {
+                "doc_id": "S002_VIS_004",
+                "start": 1802,
+                "end": 1835,
+                "text": "如果你不想人挤人、也不想早起抢预约的话,建议计划周中去,人会少很多"
+              }
+            ],
+            "advice_id": "A_S002_VIS_004_072958652312044",
+            "scenic_id": "S002",
+            "doc_id": "S002_VIS_004",
+            "related_entity_ids": [],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "visitor_diary",
+            "source_title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则",
+            "source_url": "https://www.uscreditcardguide.com/yosemite-firefall-2021/",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "5e1ba1c73c76"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "避人群条件"
+      },
+      {
+        "case_id": "E5_029",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S002_VIS_004",
+          "start": 2010,
+          "end": 2183,
+          "text": "更妙的是Tunnel View就在CA 41号路旁,路边有两个停车场,你不需要走trail就可以饱览美景,何乐而不为?建议大家条件允许的话,一定要沿41号路由南往北,从Oakhurst进入优胜美地,路上如果你感兴趣的话还可以去Mariposa Grove看看巨大的红杉树,当车从隧道穿出,Yosemite Valley一览无余的感觉非常震撼人心。"
+        },
+        "expected": [
+          {
+            "condition_text": "条件允许的话",
+            "suggestion_text": "一定要沿41号路由南往北,从Oakhurst进入优胜美地",
+            "condition_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2073,
+              "end": 2079,
+              "text": "条件允许的话"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2080,
+              "end": 2108,
+              "text": "一定要沿41号路由南往北,从Oakhurst进入优胜美地"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "条件允许的话",
+            "visitor_types": [],
+            "suggestion_text": "一定要沿41号路由南往北,从Oakhurst进入优胜美地,路上",
+            "condition_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2073,
+              "end": 2079,
+              "text": "条件允许的话"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2080,
+              "end": 2111,
+              "text": "一定要沿41号路由南往北,从Oakhurst进入优胜美地,路上"
+            },
+            "evidence": [
+              {
+                "doc_id": "S002_VIS_004",
+                "start": 2073,
+                "end": 2111,
+                "text": "条件允许的话,一定要沿41号路由南往北,从Oakhurst进入优胜美地,路上"
+              }
+            ],
+            "advice_id": "A_S002_VIS_004_021279618643253",
+            "scenic_id": "S002",
+            "doc_id": "S002_VIS_004",
+            "related_entity_ids": [
+              "S002_POI_001"
+            ],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "visitor_diary",
+            "source_title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则",
+            "source_url": "https://www.uscreditcardguide.com/yosemite-firefall-2021/",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "4bfde5615e90"
+          }
+        ],
+        "tp": 0,
+        "fp": 1,
+        "fn": 1,
+        "annotation_note": "前置建议与内嵌条件，另一个条件需拆开"
+      },
+      {
+        "case_id": "E5_030",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S002_VIS_004",
+          "start": 2010,
+          "end": 2183,
+          "text": "更妙的是Tunnel View就在CA 41号路旁,路边有两个停车场,你不需要走trail就可以饱览美景,何乐而不为?建议大家条件允许的话,一定要沿41号路由南往北,从Oakhurst进入优胜美地,路上如果你感兴趣的话还可以去Mariposa Grove看看巨大的红杉树,当车从隧道穿出,Yosemite Valley一览无余的感觉非常震撼人心。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果你感兴趣的话",
+            "suggestion_text": "还可以去Mariposa Grove看看巨大的红杉树",
+            "condition_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2111,
+              "end": 2119,
+              "text": "如果你感兴趣的话"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2119,
+              "end": 2145,
+              "text": "还可以去Mariposa Grove看看巨大的红杉树"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果你感兴趣的话",
+            "visitor_types": [],
+            "suggestion_text": "还可以去Mariposa Grove看看巨大的红杉树,当车从隧道穿出,Yosemite Valley一览无余的感觉非常震撼人心",
+            "condition_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2111,
+              "end": 2119,
+              "text": "如果你感兴趣的话"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2119,
+              "end": 2182,
+              "text": "还可以去Mariposa Grove看看巨大的红杉树,当车从隧道穿出,Yosemite Valley一览无余的感觉非常震撼人心"
+            },
+            "evidence": [
+              {
+                "doc_id": "S002_VIS_004",
+                "start": 2111,
+                "end": 2182,
+                "text": "如果你感兴趣的话还可以去Mariposa Grove看看巨大的红杉树,当车从隧道穿出,Yosemite Valley一览无余的感觉非常震撼人心"
+              }
+            ],
+            "advice_id": "A_S002_VIS_004_218817036761170",
+            "scenic_id": "S002",
+            "doc_id": "S002_VIS_004",
+            "related_entity_ids": [
+              "S002_POI_002",
+              "S002_POI_068"
+            ],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "visitor_diary",
+            "source_title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则",
+            "source_url": "https://www.uscreditcardguide.com/yosemite-firefall-2021/",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "5176c15d95cf"
+          }
+        ],
+        "tp": 0,
+        "fp": 1,
+        "fn": 1,
+        "annotation_note": "同句第二个条件建议"
+      },
+      {
+        "case_id": "E5_031",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S002_VIS_004",
+          "start": 2301,
+          "end": 2384,
+          "text": "如果说Tunnel View是从峡谷的谷底平视的话,那么另一个不得不去的观景点就是位于峭壁之上的Glacier Point了,这里有观看Half Dome的绝佳视角。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "比喻比较不是条件"
+      },
+      {
+        "case_id": "E5_032",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S002_VIS_004",
+          "start": 3340,
+          "end": 3358,
+          "text": "若喜欢本文,别忘了给个五星好评哦!\n"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "站点求好评无关旅游建议"
+      }
+    ]
+  },
+  "reviewed_delivery": {
+    "metrics": {
+      "development": {
+        "tp": 14,
+        "fp": 0,
+        "fn": 0,
+        "cases": 23,
+        "positive_relations": 14,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "correct_negative_cases": 9
+      },
+      "document_holdout": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "cases": 9,
+        "positive_relations": 6,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "correct_negative_cases": 3
+      },
+      "all": {
+        "tp": 20,
+        "fp": 0,
+        "fn": 0,
+        "cases": 32,
+        "positive_relations": 20,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "correct_negative_cases": 12
+      }
+    },
+    "cases": [
+      {
+        "case_id": "E5_001",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 454,
+          "end": 489,
+          "text": "如果遇上好天气,还可以从车窗看到富士山,这无疑会增加您对旅行的期待哦。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "描述可见景色，未给出游览动作"
+      },
+      {
+        "case_id": "E5_002",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 490,
+          "end": 543,
+          "text": "※1:从新宿站到箱根汤本站,如果使用“箱根周游券”乘坐“浪漫”特快,则需另外支付特快费(1,200日币)。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果使用“箱根周游券”乘坐“浪漫”特快",
+            "suggestion_text": "则需另外支付特快费(1,200日币)",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 504,
+              "end": 523,
+              "text": "如果使用“箱根周游券”乘坐“浪漫”特快"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 524,
+              "end": 542,
+              "text": "则需另外支付特快费(1,200日币)"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果使用“箱根周游券”乘坐“浪漫”特快",
+            "visitor_types": [],
+            "suggestion_text": "则需另外支付特快费(1,200日币)",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 504,
+              "end": 523,
+              "text": "如果使用“箱根周游券”乘坐“浪漫”特快"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 524,
+              "end": 542,
+              "text": "则需另外支付特快费(1,200日币)"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 504,
+                "end": 542,
+                "text": "如果使用“箱根周游券”乘坐“浪漫”特快,则需另外支付特快费(1,200日币)"
+              }
+            ],
+            "advice_id": "A_S001_OFF_001_255828790194615",
+            "scenic_id": "S001",
+            "doc_id": "S001_OFF_001",
+            "related_entity_ids": [
+              "S001_TRANSPORT_015"
+            ],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "official_route",
+            "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+            "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "e3d0c4caa07e"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "带条件的票务操作；历史价格需标记"
+      },
+      {
+        "case_id": "E5_003",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 639,
+          "end": 692,
+          "text": "如果在车站内部的服务柜台寄存包裹,则可以帮您运送到住处,因此您可以轻松地享受观光之旅(含税900日币~)。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果在车站内部的服务柜台寄存包裹",
+            "suggestion_text": "则可以帮您运送到住处,因此您可以轻松地享受观光之旅(含税900日币~)",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 639,
+              "end": 655,
+              "text": "如果在车站内部的服务柜台寄存包裹"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 656,
+              "end": 691,
+              "text": "则可以帮您运送到住处,因此您可以轻松地享受观光之旅(含税900日币~)"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果在车站内部的服务柜台寄存包裹",
+            "visitor_types": [],
+            "suggestion_text": "则可以帮您运送到住处,因此您可以轻松地享受观光之旅(含税900日币~)",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 639,
+              "end": 655,
+              "text": "如果在车站内部的服务柜台寄存包裹"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 656,
+              "end": 691,
+              "text": "则可以帮您运送到住处,因此您可以轻松地享受观光之旅(含税900日币~)"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 639,
+                "end": 691,
+                "text": "如果在车站内部的服务柜台寄存包裹,则可以帮您运送到住处,因此您可以轻松地享受观光之旅(含税900日币~)"
+              }
+            ],
+            "advice_id": "A_S001_OFF_001_171123485310695",
+            "scenic_id": "S001",
+            "doc_id": "S001_OFF_001",
+            "related_entity_ids": [],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "official_route",
+            "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+            "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "c2de00c5275d"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "寄存条件与服务"
+      },
+      {
+        "case_id": "E5_004",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 1084,
+          "end": 1135,
+          "text": "对于带儿童的家庭,推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等。"
+        },
+        "expected": [
+          {
+            "condition_text": "对于带儿童的家庭",
+            "suggestion_text": "推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1084,
+              "end": 1092,
+              "text": "对于带儿童的家庭"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1093,
+              "end": 1134,
+              "text": "推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "visitor_type",
+            "condition_text": "对于带儿童的家庭",
+            "visitor_types": [
+              "family"
+            ],
+            "suggestion_text": "推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1084,
+              "end": 1092,
+              "text": "对于带儿童的家庭"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1093,
+              "end": 1134,
+              "text": "推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 1084,
+                "end": 1134,
+                "text": "对于带儿童的家庭,推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等"
+              }
+            ],
+            "advice_id": "A_S001_OFF_001_247169266140315",
+            "scenic_id": "S001",
+            "doc_id": "S001_OFF_001",
+            "related_entity_ids": [
+              "S001_POI_020",
+              "S001_POI_021"
+            ],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "official_route",
+            "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+            "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "d4fa25978087"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "同条件多活动整体保留"
+      },
+      {
+        "case_id": "E5_005",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 1135,
+          "end": 1156,
+          "text": "如果您感到疲劳,还可以在馆区内泡足汤小憩。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果您感到疲劳",
+            "suggestion_text": "还可以在馆区内泡足汤小憩",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1135,
+              "end": 1142,
+              "text": "如果您感到疲劳"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1143,
+              "end": 1155,
+              "text": "还可以在馆区内泡足汤小憩"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果您感到疲劳",
+            "visitor_types": [],
+            "suggestion_text": "还可以在馆区内泡足汤小憩",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1135,
+              "end": 1142,
+              "text": "如果您感到疲劳"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1143,
+              "end": 1155,
+              "text": "还可以在馆区内泡足汤小憩"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 1135,
+                "end": 1155,
+                "text": "如果您感到疲劳,还可以在馆区内泡足汤小憩"
+              },
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 967,
+                "end": 976,
+                "text": "箱根雕刻森林美术馆"
+              }
+            ],
+            "advice_id": "A_S001_OFF_001_177547618944147",
+            "scenic_id": "S001",
+            "doc_id": "S001_OFF_001",
+            "related_entity_ids": [
+              "S001_POI_007"
+            ],
+            "alignment_notes": [
+              "馆区由前800字符唯一具名美术馆回指；保留名称证据"
+            ],
+            "method": "rule:conditional_action",
+            "source_text_type": "official_route",
+            "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+            "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "9af153c403f3"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "馆区具体关联需上下文"
+      },
+      {
+        "case_id": "E5_006",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 1195,
+          "end": 1251,
+          "text": "如果出示“箱根周游券”,可享优惠价成人1,900日币、高中生大学生1,500日币、中小学生700日币(均含税)。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果出示“箱根周游券”",
+            "suggestion_text": "可享优惠价成人1,900日币、高中生大学生1,500日币、中小学生700日币(均含税)",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1195,
+              "end": 1206,
+              "text": "如果出示“箱根周游券”"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1207,
+              "end": 1250,
+              "text": "可享优惠价成人1,900日币、高中生大学生1,500日币、中小学生700日币(均含税)"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果出示“箱根周游券”",
+            "visitor_types": [],
+            "suggestion_text": "可享优惠价成人1,900日币、高中生大学生1,500日币、中小学生700日币(均含税)",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1195,
+              "end": 1206,
+              "text": "如果出示“箱根周游券”"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 1207,
+              "end": 1250,
+              "text": "可享优惠价成人1,900日币、高中生大学生1,500日币、中小学生700日币(均含税)"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 1195,
+                "end": 1250,
+                "text": "如果出示“箱根周游券”,可享优惠价成人1,900日币、高中生大学生1,500日币、中小学生700日币(均含税)"
+              }
+            ],
+            "advice_id": "A_S001_OFF_001_147046239503370",
+            "scenic_id": "S001",
+            "doc_id": "S001_OFF_001",
+            "related_entity_ids": [],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "official_route",
+            "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+            "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "e116212bd38f"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "票券条件优惠，不作现价保证"
+      },
+      {
+        "case_id": "E5_007",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 2716,
+          "end": 2753,
+          "text": "最后,如果购买伴手礼,可以前往位于箱根汤本站的“箱根登山名产店 汤本店”。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果购买伴手礼",
+            "suggestion_text": "可以前往位于箱根汤本站的“箱根登山名产店 汤本店”",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 2719,
+              "end": 2726,
+              "text": "如果购买伴手礼"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 2727,
+              "end": 2752,
+              "text": "可以前往位于箱根汤本站的“箱根登山名产店 汤本店”"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果购买伴手礼",
+            "visitor_types": [],
+            "suggestion_text": "可以前往位于箱根汤本站的“箱根登山名产店 汤本店”",
+            "condition_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 2719,
+              "end": 2726,
+              "text": "如果购买伴手礼"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_OFF_001",
+              "start": 2727,
+              "end": 2752,
+              "text": "可以前往位于箱根汤本站的“箱根登山名产店 汤本店”"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 2719,
+                "end": 2752,
+                "text": "如果购买伴手礼,可以前往位于箱根汤本站的“箱根登山名产店 汤本店”"
+              }
+            ],
+            "advice_id": "A_S001_OFF_001_250646070388022",
+            "scenic_id": "S001",
+            "doc_id": "S001_OFF_001",
+            "related_entity_ids": [
+              "S001_POI_005",
+              "S001_POI_025"
+            ],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "official_route",
+            "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+            "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "3112c7ca5e4b"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "购买目的对应建议"
+      },
+      {
+        "case_id": "E5_008",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_OFF_001",
+          "start": 2861,
+          "end": 2906,
+          "text": "如果能像这样充分地利用箱根空中缆车和箱根海贼观光船等,您可以在一天内高效地游览很多景点哦。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "总结效率，不是具体条件建议"
+      },
+      {
+        "case_id": "E5_009",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_VIS_001",
+          "start": 222,
+          "end": 267,
+          "text": "走过小花园看见一片草坪运动场,看见一对夫妇带着三个孩子在玩类似棒球的游戏,真得好羡慕他们。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "游客观察儿童不等于亲子推荐"
+      },
+      {
+        "case_id": "E5_010",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S001_VIS_003",
+          "start": 448,
+          "end": 580,
+          "text": "再乘缆车就可以到桃源台了,因为时间尚早,我们的酒店下午3点才能办入住,所以在桃源台乘海贼船游览芦之湖全景.因为有周游券,所以每个停靠点都随意下来,看看美景,当天天气不太好,在箱根町港没能看到富士山.在元箱根港看了水中神社,这个拍照打卡点人气太旺,排队排到半山腰.\n"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "作者经历，不应由排队描述推断避峰建议"
+      },
+      {
+        "case_id": "E5_011",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S002_OFF_001",
+          "start": 1702,
+          "end": 2294,
+          "text": "From the Lower Yosemite Fall area, head west along the base of the Three Brothers rock formation, past Camp 4, eventually working your way through Yosemite Valley to El Capitan. If you are planning to hike the half loop, cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village. If you are planning to hike the full loop, continue west past El Capitan toward Bridalveil Fall. While most of the trail is flat, there are some hilly sections throughout the hike. Additionally, you will find mixed trail surfaces: dirt, rocks, sand, and old pavement.\n"
+        },
+        "expected": [
+          {
+            "condition_text": "If you are planning to hike the half loop",
+            "suggestion_text": "cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village",
+            "condition_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 1880,
+              "end": 1921,
+              "text": "If you are planning to hike the half loop"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 1923,
+              "end": 2024,
+              "text": "cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "If you are planning to hike the half loop",
+            "visitor_types": [],
+            "suggestion_text": "cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village",
+            "condition_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 1880,
+              "end": 1921,
+              "text": "If you are planning to hike the half loop"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 1923,
+              "end": 2024,
+              "text": "cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village"
+            },
+            "evidence": [
+              {
+                "doc_id": "S002_OFF_001",
+                "start": 1880,
+                "end": 2024,
+                "text": "If you are planning to hike the half loop, cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village"
+              }
+            ],
+            "advice_id": "A_S002_OFF_001_088248811662268",
+            "scenic_id": "S002",
+            "doc_id": "S002_OFF_001",
+            "related_entity_ids": [
+              "S002_POI_012",
+              "S002_POI_013",
+              "S002_POI_018",
+              "S002_TRANSPORT_001"
+            ],
+            "alignment_notes": [],
+            "method": "rule:english_if",
+            "source_text_type": "official_route",
+            "source_title": "Yosemite Valley Loop Trail 与谷地日间步道指南",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/valleylooptrail.htm",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "6be2256397ab"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "英文条件路线"
+      },
+      {
+        "case_id": "E5_012",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S002_OFF_001",
+          "start": 1702,
+          "end": 2294,
+          "text": "From the Lower Yosemite Fall area, head west along the base of the Three Brothers rock formation, past Camp 4, eventually working your way through Yosemite Valley to El Capitan. If you are planning to hike the half loop, cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village. If you are planning to hike the full loop, continue west past El Capitan toward Bridalveil Fall. While most of the trail is flat, there are some hilly sections throughout the hike. Additionally, you will find mixed trail surfaces: dirt, rocks, sand, and old pavement.\n"
+        },
+        "expected": [
+          {
+            "condition_text": "If you are planning to hike the full loop",
+            "suggestion_text": "continue west past El Capitan toward Bridalveil Fall",
+            "condition_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 2026,
+              "end": 2067,
+              "text": "If you are planning to hike the full loop"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 2069,
+              "end": 2121,
+              "text": "continue west past El Capitan toward Bridalveil Fall"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "If you are planning to hike the full loop",
+            "visitor_types": [],
+            "suggestion_text": "continue west past El Capitan toward Bridalveil Fall",
+            "condition_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 2026,
+              "end": 2067,
+              "text": "If you are planning to hike the full loop"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_OFF_001",
+              "start": 2069,
+              "end": 2121,
+              "text": "continue west past El Capitan toward Bridalveil Fall"
+            },
+            "evidence": [
+              {
+                "doc_id": "S002_OFF_001",
+                "start": 2026,
+                "end": 2121,
+                "text": "If you are planning to hike the full loop, continue west past El Capitan toward Bridalveil Fall"
+              }
+            ],
+            "advice_id": "A_S002_OFF_001_257761964045209",
+            "scenic_id": "S002",
+            "doc_id": "S002_OFF_001",
+            "related_entity_ids": [
+              "S002_POI_003",
+              "S002_POI_007",
+              "S002_TRANSPORT_001"
+            ],
+            "alignment_notes": [],
+            "method": "rule:english_if",
+            "source_text_type": "official_route",
+            "source_title": "Yosemite Valley Loop Trail 与谷地日间步道指南",
+            "source_url": "https://www.nps.gov/yose/planyourvisit/valleylooptrail.htm",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "6ac6035ec9f6"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "两个备选不可拼接"
+      },
+      {
+        "case_id": "E5_013",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S002_VIS_001",
+          "start": 2828,
+          "end": 2916,
+          "text": "趁着时间还早(早晨也很冷,大约10摄氏度左右)在车上吃了早餐,大约7点换好了登山鞋我们徒步出发,虽然刚出发穿着短裤、T恤稍有些冷,但建议还是不要增加衣服,因为很快就会感到热了。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "上下文冷暖为经历，未显式匹配通用条件句；记录边界局限"
+      },
+      {
+        "case_id": "E5_014",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S002_VIS_002",
+          "start": 41326,
+          "end": 41345,
+          "text": "不过停车场不大,感觉旺季会比较难停车。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "预测停车困难而非建议动作"
+      },
+      {
+        "case_id": "E5_015",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S002_VIS_002",
+          "start": 42151,
+          "end": 42188,
+          "text": "教堂很小,却在阳光的照射下很温馨,若是在这里举办幸福的婚礼,一定浪漫不已。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "主观想象婚礼不等于情侣适用性"
+      },
+      {
+        "case_id": "E5_016",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S002_VIS_003",
+          "start": 3105,
+          "end": 3165,
+          "text": "我们按照官方建议每人带了4L水,爬cable那天不算特别热还基本全喝完了,现在想想有些后怕,所以应该建议没人带5-6L。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "普通补水建议，未显式条件，不强填条件"
+      },
+      {
+        "case_id": "E5_017",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S003_OFF_001",
+          "start": 2225,
+          "end": 2277,
+          "text": "如果您想近距离观赏,可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果您想近距离观赏",
+            "suggestion_text": "可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2225,
+              "end": 2234,
+              "text": "如果您想近距离观赏"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2235,
+              "end": 2276,
+              "text": "可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果您想近距离观赏",
+            "visitor_types": [],
+            "suggestion_text": "可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2225,
+              "end": 2234,
+              "text": "如果您想近距离观赏"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2235,
+              "end": 2276,
+              "text": "可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布"
+            },
+            "evidence": [
+              {
+                "doc_id": "S003_OFF_001",
+                "start": 2225,
+                "end": 2276,
+                "text": "如果您想近距离观赏,可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布"
+              }
+            ],
+            "advice_id": "A_S003_OFF_001_051221032292834",
+            "scenic_id": "S003",
+            "doc_id": "S003_OFF_001",
+            "related_entity_ids": [
+              "S003_POI_015"
+            ],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "official_route",
+            "source_title": "Grand Cliff Top Walk 与蓝山一日游指南",
+            "source_url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "01c531f7c978"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "目的条件"
+      },
+      {
+        "case_id": "E5_018",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S003_OFF_001",
+          "start": 2674,
+          "end": 2720,
+          "text": "或者,如果想在旅途中享用美食,请前往这家小猪熟食店这里有琳琅满目的糕点、沙拉和其他自制美食。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果想在旅途中享用美食",
+            "suggestion_text": "请前往这家小猪熟食店这里有琳琅满目的糕点、沙拉和其他自制美食",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2677,
+              "end": 2688,
+              "text": "如果想在旅途中享用美食"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2689,
+              "end": 2719,
+              "text": "请前往这家小猪熟食店这里有琳琅满目的糕点、沙拉和其他自制美食"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果想在旅途中享用美食",
+            "visitor_types": [],
+            "suggestion_text": "请前往这家小猪熟食店这里有琳琅满目的糕点、沙拉和其他自制美食",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2677,
+              "end": 2688,
+              "text": "如果想在旅途中享用美食"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2689,
+              "end": 2719,
+              "text": "请前往这家小猪熟食店这里有琳琅满目的糕点、沙拉和其他自制美食"
+            },
+            "evidence": [
+              {
+                "doc_id": "S003_OFF_001",
+                "start": 2677,
+                "end": 2719,
+                "text": "如果想在旅途中享用美食,请前往这家小猪熟食店这里有琳琅满目的糕点、沙拉和其他自制美食"
+              }
+            ],
+            "advice_id": "A_S003_OFF_001_173909348912377",
+            "scenic_id": "S003",
+            "doc_id": "S003_OFF_001",
+            "related_entity_ids": [],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "official_route",
+            "source_title": "Grand Cliff Top Walk 与蓝山一日游指南",
+            "source_url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "00602615cdb4"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "原文转写不顺保留原貌"
+      },
+      {
+        "case_id": "E5_019",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S003_OFF_001",
+          "start": 2853,
+          "end": 2909,
+          "text": "如果你有时间,另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果你有时间",
+            "suggestion_text": "另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2853,
+              "end": 2859,
+              "text": "如果你有时间"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2860,
+              "end": 2908,
+              "text": "另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "time",
+            "condition_text": "如果你有时间",
+            "visitor_types": [],
+            "suggestion_text": "另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2853,
+              "end": 2859,
+              "text": "如果你有时间"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 2860,
+              "end": 2908,
+              "text": "另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一"
+            },
+            "evidence": [
+              {
+                "doc_id": "S003_OFF_001",
+                "start": 2853,
+                "end": 2908,
+                "text": "如果你有时间,另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一"
+              }
+            ],
+            "advice_id": "A_S003_OFF_001_260778767605275",
+            "scenic_id": "S003",
+            "doc_id": "S003_OFF_001",
+            "related_entity_ids": [
+              "S003_POI_001",
+              "S003_POI_016",
+              "S003_POI_020"
+            ],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "official_route",
+            "source_title": "Grand Cliff Top Walk 与蓝山一日游指南",
+            "source_url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "e00ef5fdc0e8"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "没有可以/建议词但语义为条件推荐"
+      },
+      {
+        "case_id": "E5_020",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S003_OFF_001",
+          "start": 4095,
+          "end": 4143,
+          "text": "不过,如果游客想要体验更长的徒步旅行,例如壮观的大峡谷步道,或者想游览其他村庄,则应该在此过夜。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果游客想要体验更长的徒步旅行,例如壮观的大峡谷步道,或者想游览其他村庄",
+            "suggestion_text": "则应该在此过夜",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4098,
+              "end": 4134,
+              "text": "如果游客想要体验更长的徒步旅行,例如壮观的大峡谷步道,或者想游览其他村庄"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4135,
+              "end": 4142,
+              "text": "则应该在此过夜"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果游客想要体验更长的徒步旅行,例如壮观的大峡谷步道,或者想游览其他村庄",
+            "visitor_types": [],
+            "suggestion_text": "则应该在此过夜",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4098,
+              "end": 4134,
+              "text": "如果游客想要体验更长的徒步旅行,例如壮观的大峡谷步道,或者想游览其他村庄"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4135,
+              "end": 4142,
+              "text": "则应该在此过夜"
+            },
+            "evidence": [
+              {
+                "doc_id": "S003_OFF_001",
+                "start": 4098,
+                "end": 4142,
+                "text": "如果游客想要体验更长的徒步旅行,例如壮观的大峡谷步道,或者想游览其他村庄,则应该在此过夜"
+              }
+            ],
+            "advice_id": "A_S003_OFF_001_035301096231357",
+            "scenic_id": "S003",
+            "doc_id": "S003_OFF_001",
+            "related_entity_ids": [
+              "S003_POI_019",
+              "S003_TRANSPORT_001"
+            ],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "official_route",
+            "source_title": "Grand Cliff Top Walk 与蓝山一日游指南",
+            "source_url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "c0e49c0afa07"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "条件跨多个逗号；不可截成第一个分句"
+      },
+      {
+        "case_id": "E5_021",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S003_OFF_001",
+          "start": 4833,
+          "end": 4901,
+          "text": "蓝山适合儿童游玩吗?\n当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)。\n"
+        },
+        "expected": [
+          {
+            "condition_text": "蓝山适合儿童游玩吗?",
+            "suggestion_text": "当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)。",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4833,
+              "end": 4843,
+              "text": "蓝山适合儿童游玩吗?"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4844,
+              "end": 4900,
+              "text": "当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)。"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "visitor_type",
+            "condition_text": "蓝山适合儿童游玩吗?",
+            "visitor_types": [
+              "family"
+            ],
+            "suggestion_text": "当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4833,
+              "end": 4843,
+              "text": "蓝山适合儿童游玩吗?"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4844,
+              "end": 4899,
+              "text": "当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)"
+            },
+            "evidence": [
+              {
+                "doc_id": "S003_OFF_001",
+                "start": 4833,
+                "end": 4901,
+                "text": "蓝山适合儿童游玩吗?\n当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)。\n"
+              }
+            ],
+            "advice_id": "A_S003_OFF_001_143350059015598",
+            "scenic_id": "S003",
+            "doc_id": "S003_OFF_001",
+            "related_entity_ids": [
+              "S003_POI_001",
+              "S003_POI_003",
+              "S003_TRANSPORT_001",
+              "S003_TRANSPORT_008"
+            ],
+            "alignment_notes": [],
+            "method": "rule:faq_condition_block",
+            "source_text_type": "official_route",
+            "source_title": "Grand Cliff Top Walk 与蓝山一日游指南",
+            "source_url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "1feb834d7a5f"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "问答跨句，含家庭适用信息"
+      },
+      {
+        "case_id": "E5_022",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S003_OFF_001",
+          "start": 4901,
+          "end": 5133,
+          "text": "下雨天还值得去蓝山吗?\n在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山\n"
+        },
+        "expected": [
+          {
+            "condition_text": "下雨天还值得去蓝山吗?",
+            "suggestion_text": "在蓝山,即使下雨天也有很多室内活动可以参加,包括:",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4901,
+              "end": 4912,
+              "text": "下雨天还值得去蓝山吗?"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4913,
+              "end": 4938,
+              "text": "在蓝山,即使下雨天也有很多室内活动可以参加,包括:"
+            },
+            "match": "prefix"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "weather",
+            "condition_text": "下雨天还值得去蓝山吗?",
+            "visitor_types": [],
+            "suggestion_text": "在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山",
+            "condition_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4901,
+              "end": 4912,
+              "text": "下雨天还值得去蓝山吗?"
+            },
+            "suggestion_span": {
+              "doc_id": "S003_OFF_001",
+              "start": 4913,
+              "end": 5132,
+              "text": "在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山"
+            },
+            "evidence": [
+              {
+                "doc_id": "S003_OFF_001",
+                "start": 4901,
+                "end": 5132,
+                "text": "下雨天还值得去蓝山吗?\n在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山"
+              }
+            ],
+            "advice_id": "A_S003_OFF_001_231897423423565",
+            "scenic_id": "S003",
+            "doc_id": "S003_OFF_001",
+            "related_entity_ids": [
+              "S003_POI_001",
+              "S003_POI_004",
+              "S003_POI_005",
+              "S003_POI_026",
+              "S003_POI_045",
+              "S003_POI_046",
+              "S003_POI_047",
+              "S003_POI_048",
+              "S003_POI_049",
+              "S003_POI_050",
+              "S003_POI_051"
+            ],
+            "alignment_notes": [],
+            "method": "rule:faq_condition_block",
+            "source_text_type": "official_route",
+            "source_title": "Grand Cliff Top Walk 与蓝山一日游指南",
+            "source_url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "a449d50637e6"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "问答列表应保留后续活动；此处仅标注最小建议前缀以作语义匹配"
+      },
+      {
+        "case_id": "E5_023",
+        "split": "development",
+        "evidence": {
+          "doc_id": "S003_VIS_004",
+          "start": 6301,
+          "end": 6354,
+          "text": "很喜欢酒单上的Pinot Grigio,是非常清爽的开胃酒,入口很柔滑,有梨子和柑橘的香气,很适合女孩子。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "园外餐厅酒评，不能误归蓝山亲子建议"
+      },
+      {
+        "case_id": "E5_024",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S001_VIS_005",
+          "start": 5836,
+          "end": 5877,
+          "text": "如果乘坐小田急浪漫特快前往箱根汤本,则需另外购买特快车票,1200日元/人/单程\n"
+        },
+        "expected": [
+          {
+            "condition_text": "如果乘坐小田急浪漫特快前往箱根汤本",
+            "suggestion_text": "则需另外购买特快车票,1200日元/人/单程",
+            "condition_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5836,
+              "end": 5853,
+              "text": "如果乘坐小田急浪漫特快前往箱根汤本"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5854,
+              "end": 5876,
+              "text": "则需另外购买特快车票,1200日元/人/单程"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果乘坐小田急浪漫特快前往箱根汤本",
+            "visitor_types": [],
+            "suggestion_text": "则需另外购买特快车票,1200日元/人/单程",
+            "condition_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5836,
+              "end": 5853,
+              "text": "如果乘坐小田急浪漫特快前往箱根汤本"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5854,
+              "end": 5876,
+              "text": "则需另外购买特快车票,1200日元/人/单程"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_VIS_005",
+                "start": 5836,
+                "end": 5876,
+                "text": "如果乘坐小田急浪漫特快前往箱根汤本,则需另外购买特快车票,1200日元/人/单程"
+              }
+            ],
+            "advice_id": "A_S001_VIS_005_134550840182935",
+            "scenic_id": "S001",
+            "doc_id": "S001_VIS_005",
+            "related_entity_ids": [
+              "S001_POI_005",
+              "S001_TRANSPORT_015"
+            ],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "visitor_diary",
+            "source_title": "#2023年国庆#北海道登别函馆+东京富士山箱根横滨十日游",
+            "source_url": "https://you.ctrip.com/travels/Japan100041/4114114.html",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "dafc85cacbf3"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "交通票务"
+      },
+      {
+        "case_id": "E5_025",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S001_VIS_005",
+          "start": 5877,
+          "end": 5956,
+          "text": "如果不想另外付费,则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右\n"
+        },
+        "expected": [
+          {
+            "condition_text": "如果不想另外付费",
+            "suggestion_text": "则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右",
+            "condition_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5877,
+              "end": 5885,
+              "text": "如果不想另外付费"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5886,
+              "end": 5955,
+              "text": "则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果不想另外付费",
+            "visitor_types": [],
+            "suggestion_text": "则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右",
+            "condition_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5877,
+              "end": 5885,
+              "text": "如果不想另外付费"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 5886,
+              "end": 5955,
+              "text": "则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_VIS_005",
+                "start": 5877,
+                "end": 5955,
+                "text": "如果不想另外付费,则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右"
+              }
+            ],
+            "advice_id": "A_S001_VIS_005_228267617104810",
+            "scenic_id": "S001",
+            "doc_id": "S001_VIS_005",
+            "related_entity_ids": [
+              "S001_POI_005",
+              "S001_POI_016",
+              "S001_TIME_030",
+              "S001_TRANSPORT_010",
+              "S001_TRANSPORT_015",
+              "S001_TRANSPORT_016"
+            ],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "visitor_diary",
+            "source_title": "#2023年国庆#北海道登别函馆+东京富士山箱根横滨十日游",
+            "source_url": "https://you.ctrip.com/travels/Japan100041/4114114.html",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "ed503e8d3170"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "条件后的多步骤完整保留"
+      },
+      {
+        "case_id": "E5_026",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S001_VIS_005",
+          "start": 6130,
+          "end": 6185,
+          "text": "如果座位有空的话,一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果座位有空的话",
+            "suggestion_text": "一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食",
+            "condition_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 6130,
+              "end": 6138,
+              "text": "如果座位有空的话"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 6139,
+              "end": 6184,
+              "text": "一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果座位有空的话",
+            "visitor_types": [],
+            "suggestion_text": "一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食",
+            "condition_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 6130,
+              "end": 6138,
+              "text": "如果座位有空的话"
+            },
+            "suggestion_span": {
+              "doc_id": "S001_VIS_005",
+              "start": 6139,
+              "end": 6184,
+              "text": "一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食"
+            },
+            "evidence": [
+              {
+                "doc_id": "S001_VIS_005",
+                "start": 6130,
+                "end": 6184,
+                "text": "如果座位有空的话,一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食"
+              }
+            ],
+            "advice_id": "A_S001_VIS_005_117040616929219",
+            "scenic_id": "S001",
+            "doc_id": "S001_VIS_005",
+            "related_entity_ids": [
+              "S001_POI_003",
+              "S001_TRANSPORT_014"
+            ],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "visitor_diary",
+            "source_title": "#2023年国庆#北海道登别函馆+东京富士山箱根横滨十日游",
+            "source_url": "https://you.ctrip.com/travels/Japan100041/4114114.html",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "38744ca068e8"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "座位条件建议"
+      },
+      {
+        "case_id": "E5_027",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S002_VIS_004",
+          "start": 1430,
+          "end": 1530,
+          "text": "瀑布的水流量可以根据最近Sierra Nevada的降雪推算,你也可以通过国家公园的在线摄像头查看Yosemite Fall的情况,如果后者几乎没有水,那么估计Horsetail Fall的水也不大。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "水量推断，无建议动作"
+      },
+      {
+        "case_id": "E5_028",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S002_VIS_004",
+          "start": 1802,
+          "end": 1836,
+          "text": "如果你不想人挤人、也不想早起抢预约的话,建议计划周中去,人会少很多。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果你不想人挤人、也不想早起抢预约的话",
+            "suggestion_text": "建议计划周中去,人会少很多",
+            "condition_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 1802,
+              "end": 1821,
+              "text": "如果你不想人挤人、也不想早起抢预约的话"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 1822,
+              "end": 1835,
+              "text": "建议计划周中去,人会少很多"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "crowding",
+            "condition_text": "如果你不想人挤人、也不想早起抢预约的话",
+            "visitor_types": [],
+            "suggestion_text": "建议计划周中去,人会少很多",
+            "condition_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 1802,
+              "end": 1821,
+              "text": "如果你不想人挤人、也不想早起抢预约的话"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 1822,
+              "end": 1835,
+              "text": "建议计划周中去,人会少很多"
+            },
+            "evidence": [
+              {
+                "doc_id": "S002_VIS_004",
+                "start": 1802,
+                "end": 1835,
+                "text": "如果你不想人挤人、也不想早起抢预约的话,建议计划周中去,人会少很多"
+              }
+            ],
+            "advice_id": "A_S002_VIS_004_072958652312044",
+            "scenic_id": "S002",
+            "doc_id": "S002_VIS_004",
+            "related_entity_ids": [],
+            "alignment_notes": [],
+            "method": "rule:conditional_action",
+            "source_text_type": "visitor_diary",
+            "source_title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则",
+            "source_url": "https://www.uscreditcardguide.com/yosemite-firefall-2021/",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "5e1ba1c73c76"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "避人群条件"
+      },
+      {
+        "case_id": "E5_029",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S002_VIS_004",
+          "start": 2010,
+          "end": 2183,
+          "text": "更妙的是Tunnel View就在CA 41号路旁,路边有两个停车场,你不需要走trail就可以饱览美景,何乐而不为?建议大家条件允许的话,一定要沿41号路由南往北,从Oakhurst进入优胜美地,路上如果你感兴趣的话还可以去Mariposa Grove看看巨大的红杉树,当车从隧道穿出,Yosemite Valley一览无余的感觉非常震撼人心。"
+        },
+        "expected": [
+          {
+            "condition_text": "条件允许的话",
+            "suggestion_text": "一定要沿41号路由南往北,从Oakhurst进入优胜美地",
+            "condition_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2073,
+              "end": 2079,
+              "text": "条件允许的话"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2080,
+              "end": 2108,
+              "text": "一定要沿41号路由南往北,从Oakhurst进入优胜美地"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "条件允许的话",
+            "visitor_types": [],
+            "suggestion_text": "一定要沿41号路由南往北,从Oakhurst进入优胜美地",
+            "condition_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2073,
+              "end": 2079,
+              "text": "条件允许的话"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2080,
+              "end": 2108,
+              "text": "一定要沿41号路由南往北,从Oakhurst进入优胜美地"
+            },
+            "evidence": [
+              {
+                "doc_id": "S002_VIS_004",
+                "start": 2073,
+                "end": 2111,
+                "text": "条件允许的话,一定要沿41号路由南往北,从Oakhurst进入优胜美地,路上"
+              }
+            ],
+            "raw_suggestion_text": "一定要沿41号路由南往北,从Oakhurst进入优胜美地,路上",
+            "review_correction": "句尾路上属于下一个条件的引导语",
+            "advice_id": "A_S002_VIS_004_017220019902559",
+            "scenic_id": "S002",
+            "doc_id": "S002_VIS_004",
+            "related_entity_ids": [
+              "S002_POI_001"
+            ],
+            "alignment_notes": [],
+            "method": "rule:conditional_action+ai_review",
+            "source_text_type": "visitor_diary",
+            "source_title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则",
+            "source_url": "https://www.uscreditcardguide.com/yosemite-firefall-2021/",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "42891d1b100d"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "前置建议与内嵌条件，另一个条件需拆开"
+      },
+      {
+        "case_id": "E5_030",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S002_VIS_004",
+          "start": 2010,
+          "end": 2183,
+          "text": "更妙的是Tunnel View就在CA 41号路旁,路边有两个停车场,你不需要走trail就可以饱览美景,何乐而不为?建议大家条件允许的话,一定要沿41号路由南往北,从Oakhurst进入优胜美地,路上如果你感兴趣的话还可以去Mariposa Grove看看巨大的红杉树,当车从隧道穿出,Yosemite Valley一览无余的感觉非常震撼人心。"
+        },
+        "expected": [
+          {
+            "condition_text": "如果你感兴趣的话",
+            "suggestion_text": "还可以去Mariposa Grove看看巨大的红杉树",
+            "condition_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2111,
+              "end": 2119,
+              "text": "如果你感兴趣的话"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2119,
+              "end": 2145,
+              "text": "还可以去Mariposa Grove看看巨大的红杉树"
+            },
+            "match": "exact"
+          }
+        ],
+        "predicted": [
+          {
+            "condition_type": "other",
+            "condition_text": "如果你感兴趣的话",
+            "visitor_types": [],
+            "suggestion_text": "还可以去Mariposa Grove看看巨大的红杉树",
+            "condition_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2111,
+              "end": 2119,
+              "text": "如果你感兴趣的话"
+            },
+            "suggestion_span": {
+              "doc_id": "S002_VIS_004",
+              "start": 2119,
+              "end": 2145,
+              "text": "还可以去Mariposa Grove看看巨大的红杉树"
+            },
+            "evidence": [
+              {
+                "doc_id": "S002_VIS_004",
+                "start": 2111,
+                "end": 2182,
+                "text": "如果你感兴趣的话还可以去Mariposa Grove看看巨大的红杉树,当车从隧道穿出,Yosemite Valley一览无余的感觉非常震撼人心"
+              }
+            ],
+            "raw_suggestion_text": "还可以去Mariposa Grove看看巨大的红杉树,当车从隧道穿出,Yosemite Valley一览无余的感觉非常震撼人心",
+            "review_correction": "后半段为作者观景感受，截去无关建议后缀",
+            "advice_id": "A_S002_VIS_004_062256464651836",
+            "scenic_id": "S002",
+            "doc_id": "S002_VIS_004",
+            "related_entity_ids": [
+              "S002_POI_002",
+              "S002_POI_068"
+            ],
+            "alignment_notes": [],
+            "method": "rule:conditional_action+ai_review",
+            "source_text_type": "visitor_diary",
+            "source_title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则",
+            "source_url": "https://www.uscreditcardguide.com/yosemite-firefall-2021/",
+            "collected_at": "2026-10-28",
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "duplicate_group": "81c6c3260751"
+          }
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "同句第二个条件建议"
+      },
+      {
+        "case_id": "E5_031",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S002_VIS_004",
+          "start": 2301,
+          "end": 2384,
+          "text": "如果说Tunnel View是从峡谷的谷底平视的话,那么另一个不得不去的观景点就是位于峭壁之上的Glacier Point了,这里有观看Half Dome的绝佳视角。"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "比喻比较不是条件"
+      },
+      {
+        "case_id": "E5_032",
+        "split": "document_holdout",
+        "evidence": {
+          "doc_id": "S002_VIS_004",
+          "start": 3340,
+          "end": 3358,
+          "text": "若喜欢本文,别忘了给个五星好评哦!\n"
+        },
+        "expected": [],
+        "predicted": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "annotation_note": "站点求好评无关旅游建议"
+      }
+    ]
+  }
+}

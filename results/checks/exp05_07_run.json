@@ -1,0 +1,80 @@
+{
+  "commands": [
+    {
+      "command": [
+        "python",
+        "src/exp03_routes.py"
+      ],
+      "returncode": 0,
+      "output": "{\"routes\": 4, \"steps\": [10, 6, 12, 2], \"output\": \"data\\\\outputs\\\\routes.json\"}\n"
+    },
+    {
+      "command": [
+        "python",
+        "src/exp03_evaluate.py"
+      ],
+      "returncode": 0,
+      "output": "{\"routes\": 4, \"matched\": 30, \"gold\": 30, \"evidence_checked\": 31}\n"
+    },
+    {
+      "command": [
+        "python",
+        "src/exp05_advice.py",
+        "--variant",
+        "baseline"
+      ],
+      "returncode": 0,
+      "output": "{'documents_scanned': 18, 'advice': 26, 'condition_types': {'weather': 1, 'other': 22, 'visitor_type': 1, 'crowding': 1, 'time': 1}, 'visitor_types': {'unspecified': 25, 'family': 1}, 'scenics': {'S001': 11, 'S002': 11, 'S003': 4}}\n"
+    },
+    {
+      "command": [
+        "python",
+        "src/exp05_advice.py"
+      ],
+      "returncode": 0,
+      "output": "{'documents_scanned': 18, 'advice': 20, 'condition_types': {'other': 15, 'visitor_type': 2, 'crowding': 1, 'time': 1, 'weather': 1}, 'visitor_types': {'unspecified': 18, 'family': 2}, 'scenics': {'S001': 9, 'S002': 5, 'S003': 6}}\n"
+    },
+    {
+      "command": [
+        "python",
+        "src/exp05_verify.py"
+      ],
+      "returncode": 0,
+      "output": "{'documents_scanned': 18, 'advice': 20, 'condition_types': {'other': 15, 'visitor_type': 2, 'crowding': 1, 'time': 1, 'weather': 1}, 'visitor_types': {'unspecified': 18, 'family': 2}, 'scenics': {'S001': 9, 'S002': 5, 'S003': 6}}\n{'baseline': {'development': {'tp': 11, 'fp': 4, 'fn': 3, 'cases': 23, 'positive_relations': 14, 'precision': 0.7333333333333333, 'recall': 0.7857142857142857, 'f1': 0.7586206896551724, 'correct_negative_cases': 6}, 'document_holdout': {'tp': 4, 'fp': 3, 'fn': 2, 'cases': 9, 'positive_relations': 6, 'precision': 0.5714285714285714, 'recall': 0.6666666666666666, 'f1': 0.6153846153846154, 'correct_negative_cases': 2}, 'all': {'tp': 15, 'fp': 7, 'fn': 5, 'cases': 32, 'positive_relations': 20, 'precision': 0.6818181818181818, 'recall': 0.75, 'f1': 0.7142857142857143, 'correct_negative_cases': 8}}, 'optimized': {'development': {'tp': 14, 'fp': 0, 'fn': 0, 'cases': 23, 'positive_relations': 14, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'correct_negative_cases': 9}, 'document_holdout': {'tp': 4, 'fp': 2, 'fn': 2, 'cases': 9, 'positive_relations': 6, 'precision': 0.6666666666666666, 'recall': 0.6666666666666666, 'f1': 0.6666666666666666, 'correct_negative_cases': 3}, 'all': {'tp': 18, 'fp': 2, 'fn': 2, 'cases': 32, 'positive_relations': 20, 'precision': 0.9, 'recall': 0.9, 'f1': 0.9, 'correct_negative_cases': 12}}, 'reviewed_delivery': {'development': {'tp': 14, 'fp': 0, 'fn': 0, 'cases': 23, 'positive_relations': 14, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'correct_negative_cases': 9}, 'document_holdout': {'tp': 6, 'fp': 0, 'fn': 0, 'cases': 9, 'positive_relations': 6, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'correct_negative_cases': 3}, 'all': {'tp': 20, 'fp': 0, 'fn': 0, 'cases': 32, 'positive_relations': 20, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'correct_negative_cases': 12}}}\n"
+    },
+    {
+      "command": [
+        "python",
+        "src/exp05_visualize.py"
+      ],
+      "returncode": 0,
+      "output": "exp05_advice_statistics.png\n"
+    },
+    {
+      "command": [
+        "python",
+        "src/exp06_graph.py",
+        "--require-complete"
+      ],
+      "returncode": 0,
+      "output": "{\"status\": \"fused\", \"nodes\": 151, \"edges\": 205, \"missing_inputs\": []}\n"
+    },
+    {
+      "command": [
+        "python",
+        "src/exp06_verify.py"
+      ],
+      "returncode": 0,
+      "output": "{\"nodes\": 151, \"edges\": 205, \"route_checks\": 4, \"checks_passed\": true}\n"
+    },
+    {
+      "command": [
+        "python",
+        "src/yzh_figures.py"
+      ],
+      "returncode": 0,
+      "output": "saved full S001 graph: 69 nodes, 103 edges, 4500x2684\nsaved exp03_time_hierarchy.png and complete exp06_hakone_graph.png\n"
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,1075 @@
+{
+  "schema_version": "1.0",
+  "corpus_version": "v1",
+  "graph_version": "v2",
+  "graph_sha256": "8234e5268429392bdfc8fa39bf58d911113a7547cc245204c3f8b14c2bded6c6",
+  "run_at": "2026-11-05T12:15:19+08:00",
+  "model": "qwen3.8-flash",
+  "protocol": "OpenAI-compatible Chat Completions function tools",
+  "execution_mode": "live_api",
+  "api_requests": 12,
+  "configuration_error": null,
+  "cases": [
+    {
+      "case_id": "AG_001",
+      "user_request": "我想带孩子在箱根玩一天，请基于图谱安排路线，并找明确适合亲子的建议。",
+      "parsed_constraints": {
+        "scenic_id": "S001",
+        "visitor_type": "family",
+        "time_bucket": null,
+        "duration_days": 1,
+        "condition_type": "visitor_type",
+        "missing_information": [
+          "未提供具体时间段偏好",
+          "未提供可安排路线的图谱数据或景点列表"
+        ],
+        "conflicts": [],
+        "decision_summary": "识别为日本箱根亲子一日游约束，需基于亲子人群筛选建议，但路线所需图谱数据缺失。"
+      },
+      "tool_calls": [],
+      "final_plan": {
+        "clarification": [
+          "未提供具体时间段偏好",
+          "未提供可安排路线的图谱数据或景点列表"
+        ],
+        "source_refs": []
+      },
+      "status": "partial",
+      "check_notes": [
+        "需澄清后再查询；未生成无证据行程"
+      ],
+      "decision_summaries": [
+        "识别为日本箱根亲子一日游约束，需基于亲子人群筛选建议，但路线所需图谱数据缺失。"
+      ],
+      "execution_mode": "live_api",
+      "model": "qwen3.8-flash",
+      "real_llm": true,
+      "expected_checks": [
+        "S001",
+        "family",
+        "duration_days=1",
+        "实际查询路线与family建议",
+        "缺整体适用性和耗时证据时partial"
+      ]
+    },
+    {
+      "case_id": "AG_002",
+      "user_request": "带老人去箱根，只看上午路线，有适合老人的建议吗？",
+      "parsed_constraints": {
+        "scenic_id": "S001",
+        "visitor_type": "elderly",
+        "time_bucket": "morning",
+        "duration_days": null,
+        "condition_type": "visitor_type",
+        "missing_information": [],
+        "conflicts": [],
+        "decision_summary": "匹配日本箱根，识别为老人游览且限定上午路线；未提及游览天数，无已知冲突。"
+      },
+      "tool_calls": [
+        {
+          "tool": "query_routes",
+          "arguments": {
+            "scenic_id": "S001",
+            "time_bucket": "morning"
+          },
+          "result": {
+            "status": "ok",
+            "data": [
+              {
+                "route_id": "R_S001_OFF_001_01",
+                "route_name": "初游箱根当日往返路线",
+                "text_type": "official_route",
+                "steps": [
+                  {
+                    "step_no": 1,
+                    "time_bucket": "morning",
+                    "time_text": "7:30",
+                    "duration_minutes": null,
+                    "activity": "从新宿乘坐“浪漫”特快前往箱根汤本",
+                    "pois": [
+                      {
+                        "name": "箱根汤本",
+                        "entity_id": "S001_POI_005"
+                      }
+                    ],
+                    "transport": [
+                      "浪漫特快"
+                    ],
+                    "evidence": [
+                      {
+                        "doc_id": "S001_OFF_001",
+                        "start": 222,
+                        "end": 246,
+                        "text": "7:30 ~ 从新宿乘坐“浪漫”特快前往箱根汤本"
+                      }
+                    ],
+                    "source_refs": [
+                      "S001_OFF_001"
+                    ]
+                  },
+                  {
+                    "step_no": 2,
+                    "time_bucket": "morning",
+                    "time_text": "9:20",
+                    "duration_minutes": null,
+                    "activity": "在箱根入口·箱根汤本站换乘",
+                    "pois": [
+                      {
+                        "name": "箱根汤本",
+                        "entity_id": "S001_POI_005"
+                      }
+                    ],
+                    "transport": [],
+                    "evidence": [
+                      {
+                        "doc_id": "S001_OFF_001",
+                        "start": 544,
+                        "end": 564,
+                        "text": "9:20 ~ 在箱根入口·箱根汤本站换乘"
+                      }
+                    ],
+                    "source_refs": [
+                      "S001_OFF_001"
+                    ]
+                  },
+                  {
+                    "step_no": 3,
+                    "time_bucket": "morning",
+                    "time_text": "9:25",
+                    "duration_minutes": null,
+                    "activity": "乘坐箱根登山电车前往箱根雕刻森林美术馆",
+                    "pois": [
+                      {
+                        "name": "箱根雕刻森林美术馆",
+                        "entity_id": "S001_POI_007"
+                      }
+                    ],
+                    "transport": [
+                      "箱根登山电车"
+                    ],
+                    "evidence": [
+                      {
+                        "doc_id": "S001_OFF_001",
+                        "start": 712,
+                        "end": 738,
+                        "text": "9:25 ~ 乘坐箱根登山电车前往箱根雕刻森林美术馆"
+                      }
+                    ],
+                    "source_refs": [
+                      "S001_OFF_001"
+                    ]
+                  },
+                  {
+                    "step_no": 4,
+                    "time_bucket": "morning",
+                    "time_text": "10:00",
+                    "duration_minutes": null,
+                    "activity": "在箱根雕刻森林美术馆享受艺术漫步",
+                    "pois": [
+                      {
+                        "name": "箱根雕刻森林美术馆",
+                        "entity_id": "S001_POI_007"
+                      }
+                    ],
+                    "transport": [
+                      "步行"
+                    ],
+                    "evidence": [
+                      {
+                        "doc_id": "S001_OFF_001",
+                        "start": 942,
+                        "end": 966,
+                        "text": "10:00 ~ 在箱根雕刻森林美术馆享受艺术漫步"
+                      }
+                    ],
+                    "source_refs": [
+                      "S001_OFF_001"
+                    ]
+                  }
+                ],
+                "sources": [
+                  {
+                    "doc_id": "S001_OFF_001",
+                    "title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+                    "url": "https://www.hakonenavi.jp/international/cn/course/515",
+                    "text_type": "official_route",
+                    "collected_at": "2026-10-28"
+                  }
+                ],
+                "scope_note": "小田急箱根运营方官网示范行程；7:30新宿出发至17:00汤本购物；景区外接驳起点仍保留。",
+                "filter_note": "筛选时间段的原路线片段",
+                "suitability": "原路线未标注老人/亲子/情侣适用性，不能据此保证适合或满足总时长"
+              }
+            ],
+            "message": null
+          },
+          "round": 1,
+          "tool_call_id": "call_69bc833b32db46c9a1988981"
+        },
+        {
+          "tool": "query_advice",
+          "arguments": {
+            "scenic_id": "S001",
+            "condition_type": "visitor_type",
+            "visitor_type": "elderly"
+          },
+          "result": {
+            "status": "no_match",
+            "data": [],
+            "message": "no_advice_match：数据已接入，但没有明确满足该过滤条件的建议"
+          },
+          "round": 1,
+          "tool_call_id": "call_3eba972a5abb4cf19987d2c8"
+        }
+      ],
+      "final_plan": {
+        "route_id": "R_S001_OFF_001_01",
+        "steps": [
+          {
+            "step_no": 1,
+            "poi_name": "箱根汤本",
+            "time_text": "7:30",
+            "source_refs": [
+              "S001_OFF_001"
+            ],
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 222,
+                "end": 246,
+                "text": "7:30 ~ 从新宿乘坐“浪漫”特快前往箱根汤本"
+              }
+            ]
+          },
+          {
+            "step_no": 2,
+            "poi_name": "箱根汤本",
+            "time_text": "9:20",
+            "source_refs": [
+              "S001_OFF_001"
+            ],
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 544,
+                "end": 564,
+                "text": "9:20 ~ 在箱根入口·箱根汤本站换乘"
+              }
+            ]
+          },
+          {
+            "step_no": 3,
+            "poi_name": "箱根雕刻森林美术馆",
+            "time_text": "9:25",
+            "source_refs": [
+              "S001_OFF_001"
+            ],
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 712,
+                "end": 738,
+                "text": "9:25 ~ 乘坐箱根登山电车前往箱根雕刻森林美术馆"
+              }
+            ]
+          },
+          {
+            "step_no": 4,
+            "poi_name": "箱根雕刻森林美术馆",
+            "time_text": "10:00",
+            "source_refs": [
+              "S001_OFF_001"
+            ],
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 942,
+                "end": 966,
+                "text": "10:00 ~ 在箱根雕刻森林美术馆享受艺术漫步"
+              }
+            ]
+          }
+        ],
+        "advice": [],
+        "supplementary_advice": [
+          {
+            "text": "原文钟点为历史推荐时间，不等同于实时发车或景区开放时刻。",
+            "basis": "general_suggestion"
+          },
+          {
+            "text": "预计用时估计：从7:30出发到10:00开始艺术漫步，仅按原始时刻估算交通与换乘片段约2.5小时，不包含各点停留、排队、休息及返回时间；完整上午总用时无法由当前片段确定。",
+            "basis": "estimate"
+          },
+          {
+            "text": "带老人出行时，建议自行评估步行强度、换乘便利性和休息条件，并预留缓冲时间。",
+            "basis": "general_suggestion"
+          }
+        ],
+        "limitations": [
+          "查询 elderly 适老条件建议返回 no_match：数据已接入但无明确匹配建议。",
+          "该上午路线为官方初游示范路线片段，未标注老人适用性，不能证明适合老人。",
+          "只返回 morning 时间段片段，不构成完整一日或整个上午路线证明。",
+          "缺少各步骤持续时间与完整可达性，无法判断老人友好程度。",
+          "图谱结果不是实时路况、班次或现场拥挤信息。",
+          "query_advice：no_advice_match：数据已接入，但没有明确满足该过滤条件的建议",
+          "原路线未标注整体人群适用性；条件建议的明确标签不证明全路线适合该人群。"
+        ],
+        "source_refs": [
+          "S001_OFF_001"
+        ],
+        "sources": [
+          {
+            "doc_id": "S001_OFF_001",
+            "title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+            "url": "https://www.hakonenavi.jp/international/cn/course/515",
+            "text_type": "official_route",
+            "collected_at": "2026-10-28"
+          }
+        ]
+      },
+      "status": "partial",
+      "check_notes": [
+        "通过程序核对路线/步骤/建议ID和引用；尚需组员独立语义验收"
+      ],
+      "decision_summaries": [
+        "匹配日本箱根，识别为老人游览且限定上午路线；未提及游览天数，无已知冲突。",
+        "已找到S001的上午原路线片段，但明确查询“适合老人”的条件建议时无匹配；该路线未标注老人适用性，只能作为备选。"
+      ],
+      "execution_mode": "live_api",
+      "model": "qwen3.8-flash",
+      "real_llm": true,
+      "expected_checks": [
+        "S001",
+        "elderly",
+        "morning",
+        "老人建议无匹配不能改成family或general",
+        "partial"
+      ]
+    },
+    {
+      "case_id": "AG_003",
+      "user_request": "情侣去蓝山两天，如果下雨，有哪些建议和可参考路线？",
+      "parsed_constraints": {
+        "scenic_id": "S003",
+        "visitor_type": "couple",
+        "time_bucket": null,
+        "duration_days": 2,
+        "condition_type": "weather",
+        "missing_information": [],
+        "conflicts": [],
+        "decision_summary": "情侣前往蓝山国家公园2天，关注雨天建议与路线。"
+      },
+      "tool_calls": [
+        {
+          "tool": "query_advice",
+          "arguments": {
+            "condition_type": null,
+            "scenic_id": "S003",
+            "visitor_type": "couple"
+          },
+          "result": {
+            "status": "no_match",
+            "data": [],
+            "message": "no_advice_match：数据已接入，但没有明确满足该过滤条件的建议"
+          },
+          "round": 1,
+          "tool_call_id": "call_4d2b684e6c32406da50532c6"
+        },
+        {
+          "tool": "query_advice",
+          "arguments": {
+            "condition_type": "weather",
+            "scenic_id": "S003",
+            "visitor_type": null
+          },
+          "result": {
+            "status": "ok",
+            "data": [
+              {
+                "advice_id": "A_S003_OFF_001_231897423423565",
+                "condition_type": "weather",
+                "condition_text": "下雨天还值得去蓝山吗?",
+                "visitor_types": [],
+                "suggestion_text": "在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山",
+                "related_entities": [
+                  {
+                    "entity_id": "S003_POI_001",
+                    "name": "蓝山国家公园",
+                    "type": "POI"
+                  },
+                  {
+                    "entity_id": "S003_POI_004",
+                    "name": "Katoomba",
+                    "type": "POI"
+                  },
+                  {
+                    "entity_id": "S003_POI_005",
+                    "name": "Leura",
+                    "type": "POI"
+                  },
+                  {
+                    "entity_id": "S003_POI_026",
+                    "name": "山地文化啤酒公司",
+                    "type": "POI"
+                  },
+                  {
+                    "entity_id": "S003_POI_045",
+                    "name": "蓝山文化中心",
+                    "type": "POI"
+                  },
+                  {
+                    "entity_id": "S003_POI_046",
+                    "name": "诺曼·林赛画廊及博物馆",
+                    "type": "POI"
+                  },
+                  {
+                    "entity_id": "S003_POI_047",
+                    "name": "维多利亚山博物馆",
+                    "type": "POI"
+                  },
+                  {
+                    "entity_id": "S003_POI_048",
+                    "name": "伍德福德学院",
+                    "type": "POI"
+                  },
+                  {
+                    "entity_id": "S003_POI_049",
+                    "name": "莉莲菲尔斯日间水疗中心",
+                    "type": "POI"
+                  },
+                  {
+                    "entity_id": "S003_POI_050",
+                    "name": "昔日美人珍藏茶壶博物馆和茶室",
+                    "type": "POI"
+                  },
+                  {
+                    "entity_id": "S003_POI_051",
+                    "name": "梅加隆谷茶室",
+                    "type": "POI"
+                  }
+                ],
+                "evidence": [
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "start": 4901,
+                    "end": 5132,
+                    "text": "下雨天还值得去蓝山吗?\n在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山"
+                  }
+                ],
+                "sources": [
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "title": "Grand Cliff Top Walk 与蓝山一日游指南",
+                    "url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+                    "text_type": "official_route",
+                    "collected_at": "2026-10-28"
+                  }
+                ],
+                "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+                "relation_note": "关联实体仅表示证据涉及，不表示每个实体都应访问或允许使用"
+              }
+            ],
+            "message": null
+          },
+          "round": 2,
+          "tool_call_id": "call_47a2ab6296754e97929b01e9"
+        },
+        {
+          "tool": "query_routes",
+          "arguments": {
+            "scenic_id": "S003",
+            "time_bucket": null
+          },
+          "result": {
+            "status": "ok",
+            "data": [
+              {
+                "route_id": "R_S003_OFF_001_01",
+                "route_name": "蓝山一日游时间分段路线",
+                "text_type": "official_route",
+                "steps": [
+                  {
+                    "step_no": 1,
+                    "time_bucket": "morning",
+                    "time_text": "早晨",
+                    "duration_minutes": null,
+                    "activity": "劳森黑凤头鹦鹉面包店 (Lawson's Black Cockatoo Bakery) 不容错过",
+                    "pois": [
+                      {
+                        "name": "黑凤头鹦鹉面包店",
+                        "entity_id": "S003_POI_027"
+                      }
+                    ],
+                    "transport": [],
+                    "evidence": [
+                      {
+                        "doc_id": "S003_OFF_001",
+                        "start": 1876,
+                        "end": 1924,
+                        "text": "劳森黑凤头鹦鹉面包店 (Lawson's Black Cockatoo Bakery) 不容错过"
+                      }
+                    ],
+                    "source_refs": [
+                      "S003_OFF_001"
+                    ]
+                  },
+                  {
+                    "step_no": 2,
+                    "time_bucket": "morning",
+                    "time_text": "早晨",
+                    "duration_minutes": null,
+                    "activity": "只需 10 分钟车程穿过原始丛林即可到达温特沃斯(Wentworth)瀑布野餐区",
+                    "pois": [
+                      {
+                        "name": "温特沃斯瀑布野餐区",
+                        "entity_id": "S003_POI_052"
+                      }
+                    ],
+                    "transport": [],
+                    "evidence": [
+                      {
+                        "doc_id": "S003_OFF_001",
+                        "start": 2021,
+                        "end": 2061,
+                        "text": "只需 10 分钟车程穿过原始丛林即可到达温特沃斯(Wentworth)瀑布野餐区"
+                      }
+                    ],
+                    "source_refs": [
+                      "S003_OFF_001"
+                    ]
+                  },
+                  {
+                    "step_no": 3,
+                    "time_bucket": "morning",
+                    "time_text": "早晨",
+                    "duration_minutes": null,
+                    "activity": "从杰米森瞭望台 (Jamison Lookout) 出发",
+                    "pois": [
+                      {
+                        "name": "Jamison Lookout",
+                        "entity_id": "S003_POI_012"
+                      }
+                    ],
+                    "transport": [],
+                    "evidence": [
+                      {
+                        "doc_id": "S003_OFF_001",
+                        "start": 2072,
+                        "end": 2100,
+                        "text": "从杰米森瞭望台 (Jamison Lookout) 出发"
+                      }
+                    ],
+                    "source_refs": [
+                      "S003_OFF_001"
+                    ]
+                  },
+                  {
+                    "step_no": 4,
+                    "time_bucket": "morning",
+                    "time_text": "早晨",
+                    "duration_minutes": null,
+                    "activity": "然后前往温特沃斯(Wentworth)瀑布步道 (Wentworth Falls Track)",
+                    "pois": [
+                      {
+                        "name": "Wentworth Falls Track",
+                        "entity_id": "S003_POI_014"
+                      }
+                    ],
+                    "transport": [],
+                    "evidence": [
+                      {
+                        "doc_id": "S003_OFF_001",
+                        "start": 2132,
+                        "end": 2180,
+                        "text": "然后前往温特沃斯(Wentworth)瀑布步道 (Wentworth Falls Track) "
+                      }
+                    ],
+                    "source_refs": [
+                      "S003_OFF_001"
+                    ]
+                  },
+                  {
+                    "step_no": 5,
+                    "time_bucket": "morning",
+                    "time_text": "早晨",
+                    "duration_minutes": null,
+                    "activity": "不妨前往Josophan's Fine Chocolates品尝纯正的比利时巧克力和手工松露巧克力",
+                    "pois": [
+                      {
+                        "name": "Josophan's Fine Chocolates",
+                        "entity_id": "S003_POI_028"
+                      }
+                    ],
+                    "transport": [],
+                    "evidence": [
+                      {
+                        "doc_id": "S003_OFF_001",
+                        "start": 2363,
+                        "end": 2412,
+                        "text": "不妨前往Josophan's Fine Chocolates品尝纯正的比利时巧克力和手工松露巧克力"
+                      }
+                    ],
+                    "source_refs": [
+                      "S003_OFF_001"
+                    ]
+                  },
+                  {
+                    "step_no": 6,
+                    "time_bucket": "morning",
+                    "time_text": "早晨",
+                    "duration_minutes": null,
+                    "activity": "您可以参观罗拉(Leura)购物中心的凯特·索迪画廊 (Kate Soady Gallery)",
+                    "pois": [
+                      {
+                        "name": "Kate Soady Gallery",
+                        "entity_id": "S003_POI_029"
+                      }
+                    ],
+                    "transport": [],
+                    "evidence": [
+                      {
+                        "doc_id": "S003_OFF_001",
+                        "start": 2416,
+                        "end": 2464,
+                        "text": "您可以参观罗拉(Leura)购物中心的凯特·索迪画廊 (Kate Soady Gallery) "
+                      }
+                    ],
+                    "source_refs": [
+                      "S003_OFF_001"
+                    ]
+                  },
+                  {
+                    "step_no": 7,
+                    "time_bucket": "afternoon",
+                    "time_text": "下午",
+                    "duration_minutes": null,
+                    "activity": "驾车前往布莱克希思(Blackheath)享用美味的地中海午餐",
+                    "pois": [
+                      {
+                        "name": "Blackheath",
+                        "entity_id": "S003_POI_016"
+                      }
+                    ],
+                    "transport": [
+                      "自驾"
+                    ],
+                    "evidence": [
+                      {
+                        "doc_id": "S003_OFF_001",
+                        "start": 2618,
+                        "end": 2649,
+                        "text": "驾车前往布莱克希思(Blackheath)享用美味的地中海午餐"
+                      }
+                    ],
+                    "source_refs": [
+                      "S003_OFF_001"
+                    ]
+                  },
+                  {
+                    "step_no": 8,
+                    "time_bucket": "afternoon",
+                    "time_text": "下午",
+                    "duration_minutes": null,
+                    "activity": "您可以去附近的埃文斯瞭望台呼吸着清新的山间空气",
+                    "pois": [
+                      {
+                        "name": "埃文斯瞭望台",
+                        "entity_id": "S003_POI_017"
+                      }
+                    ],
+                    "transport": [],
+                    "evidence": [
+                      {
+                        "doc_id": "S003_OFF_001",
+                        "start": 2724,
+                        "end": 2747,
+                        "text": "您可以去附近的埃文斯瞭望台呼吸着清新的山间空气"
+                      }
+                    ],
+                    "source_refs": [
+                      "S003_OFF_001"
+                    ]
+                  },
+                  {
+                    "step_no": 9,
+                    "time_bucket": "afternoon",
+                    "time_text": "下午",
+                    "duration_minutes": null,
+                    "activity": "可以轻松前往大峡谷步道",
+                    "pois": [
+                      {
+                        "name": "大峡谷步道",
+                        "entity_id": "S003_POI_019"
+                      }
+                    ],
+                    "transport": [],
+                    "evidence": [
+                      {
+                        "doc_id": "S003_OFF_001",
+                        "start": 2788,
+                        "end": 2799,
+                        "text": "可以轻松前往大峡谷步道"
+                      }
+                    ],
+                    "source_refs": [
+                      "S003_OFF_001"
+                    ]
+                  },
+                  {
+                    "step_no": 10,
+                    "time_bucket": "evening",
+                    "time_text": "晚上",
+                    "duration_minutes": null,
+                    "activity": "山地文化啤酒公司",
+                    "pois": [
+                      {
+                        "name": "山地文化啤酒公司",
+                        "entity_id": "S003_POI_026"
+                      }
+                    ],
+                    "transport": [],
+                    "evidence": [
+                      {
+                        "doc_id": "S003_OFF_001",
+                        "start": 3045,
+                        "end": 3054,
+                        "text": " 山地文化啤酒公司"
+                      }
+                    ],
+                    "source_refs": [
+                      "S003_OFF_001"
+                    ]
+                  },
+                  {
+                    "step_no": 11,
+                    "time_bucket": "evening",
+                    "time_text": "晚上",
+                    "duration_minutes": null,
+                    "activity": "卡通巴另一个不容错过的活动是 Beyond Skyway 体验风景世界(Scenic World). Beyond Skyway 是全球首创的 90 分钟屋顶缆车体验",
+                    "pois": [
+                      {
+                        "name": "Scenic World",
+                        "entity_id": "S003_POI_003"
+                      }
+                    ],
+                    "transport": [
+                      "缆车"
+                    ],
+                    "evidence": [
+                      {
+                        "doc_id": "S003_OFF_001",
+                        "start": 3156,
+                        "end": 3239,
+                        "text": "卡通巴另一个不容错过的活动是 Beyond Skyway 体验风景世界(Scenic World). Beyond Skyway 是全球首创的 90 分钟屋顶缆车体验"
+                      }
+                    ],
+                    "source_refs": [
+                      "S003_OFF_001"
+                    ]
+                  },
+                  {
+                    "step_no": 12,
+                    "time_bucket": "evening",
+                    "time_text": "晚上",
+                    "duration_minutes": null,
+                    "activity": "感受卡通巴瀑布自然保护区夜间灯光步道黄昏时分",
+                    "pois": [
+                      {
+                        "name": "卡通巴瀑布自然保护区夜间灯光步道",
+                        "entity_id": "S003_POI_024"
+                      }
+                    ],
+                    "transport": [],
+                    "evidence": [
+                      {
+                        "doc_id": "S003_OFF_001",
+                        "start": 3365,
+                        "end": 3387,
+                        "text": "感受卡通巴瀑布自然保护区夜间灯光步道黄昏时分"
+                      }
+                    ],
+                    "source_refs": [
+                      "S003_OFF_001"
+                    ]
+                  }
+                ],
+                "sources": [
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "title": "Grand Cliff Top Walk 与蓝山一日游指南",
+                    "url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+                    "text_type": "official_route",
+                    "collected_at": "2026-10-28"
+                  }
+                ],
+                "scope_note": "NSW国家公园部门19km两日步道及旅游局中文一日游；二者为备选路线，不强制拼接。",
+                "filter_note": null,
+                "suitability": "原路线未标注老人/亲子/情侣适用性，不能据此保证适合或满足总时长"
+              },
+              {
+                "route_id": "R_S003_VIS_001_01",
+                "route_name": "独行澳大利亚之二十悉尼蓝山（行进片段）",
+                "text_type": "visitor_diary",
+                "steps": [
+                  {
+                    "step_no": 1,
+                    "time_bucket": "unknown",
+                    "time_text": null,
+                    "duration_minutes": null,
+                    "activity": "饭后驱车沿32号公路直上海拔1100米高的蓝山三姐妹峰",
+                    "pois": [
+                      {
+                        "name": "三姐妹峰",
+                        "entity_id": "S003_POI_002"
+                      }
+                    ],
+                    "transport": [
+                      "自驾"
+                    ],
+                    "evidence": [
+                      {
+                        "doc_id": "S003_VIS_001",
+                        "start": 163,
+                        "end": 190,
+                        "text": "饭后驱车沿32号公路直上海拔1100米高的蓝山三姐妹峰"
+                      }
+                    ],
+                    "source_refs": [
+                      "S003_VIS_001"
+                    ]
+                  },
+                  {
+                    "step_no": 2,
+                    "time_bucket": "unknown",
+                    "time_text": null,
+                    "duration_minutes": null,
+                    "activity": "而是驱车前往Jenolan Caves珍罗兰洞",
+                    "pois": [
+                      {
+                        "name": "Jenolan Caves",
+                        "entity_id": "S003_POI_037"
+                      }
+                    ],
+                    "transport": [
+                      "自驾"
+                    ],
+                    "evidence": [
+                      {
+                        "doc_id": "S003_VIS_001",
+                        "start": 761,
+                        "end": 784,
+                        "text": "而是驱车前往Jenolan Caves珍罗兰洞"
+                      }
+                    ],
+                    "source_refs": [
+                      "S003_VIS_001"
+                    ]
+                  }
+                ],
+                "sources": [
+                  {
+                    "doc_id": "S003_VIS_001",
+                    "title": "独行澳大利亚之二十悉尼蓝山",
+                    "url": "https://you.ctrip.com/travels/Australia100048/1884682.html",
+                    "text_type": "visitor_diary",
+                    "collected_at": "2026-10-28"
+                  }
+                ],
+                "scope_note": "真实游客综合游记；保留园外行程和历史陈述，下游按景区范围筛选，价格、路况不作为当前事实。",
+                "filter_note": null,
+                "suitability": "原路线未标注老人/亲子/情侣适用性，不能据此保证适合或满足总时长"
+              }
+            ],
+            "message": null
+          },
+          "round": 2,
+          "tool_call_id": "call_4dd60154a5424286b9a296d1"
+        }
+      ],
+      "final_plan": null,
+      "status": "error",
+      "check_notes": [
+        "llm_network_error_or_timeout"
+      ],
+      "decision_summaries": [
+        "情侣前往蓝山国家公园2天，关注雨天建议与路线。"
+      ],
+      "execution_mode": "live_api",
+      "model": "qwen3.8-flash",
+      "real_llm": true,
+      "expected_checks": [
+        "S003",
+        "couple",
+        "duration_days=2",
+        "分别查询couple和weather建议",
+        "不声称已有两天完整路线",
+        "partial"
+      ]
+    },
+    {
+      "case_id": "AG_004",
+      "user_request": "请给我优胜美地的路线和避免拥挤的建议。",
+      "parsed_constraints": {
+        "scenic_id": "S002",
+        "visitor_type": null,
+        "time_bucket": null,
+        "duration_days": null,
+        "condition_type": "crowding",
+        "missing_information": [
+          "游览天数",
+          "出行日期或具体时间段",
+          "路线偏好或体力水平"
+        ],
+        "conflicts": [],
+        "decision_summary": "识别为优胜美地国家公园，需求涉及路线与避峰建议，但缺少时间、天数和路线偏好信息。"
+      },
+      "tool_calls": [],
+      "final_plan": {
+        "clarification": [
+          "游览天数",
+          "出行日期或具体时间段",
+          "路线偏好或体力水平"
+        ],
+        "source_refs": []
+      },
+      "status": "partial",
+      "check_notes": [
+        "需澄清后再查询；未生成无证据行程"
+      ],
+      "decision_summaries": [
+        "识别为优胜美地国家公园，需求涉及路线与避峰建议，但缺少时间、天数和路线偏好信息。"
+      ],
+      "execution_mode": "live_api",
+      "model": "qwen3.8-flash",
+      "real_llm": true,
+      "expected_checks": [
+        "S002",
+        "crowding",
+        "路线no_match但条件建议可查询",
+        "partial"
+      ]
+    },
+    {
+      "case_id": "AG_005",
+      "user_request": "带孩子玩一天，帮我规划。",
+      "parsed_constraints": {
+        "scenic_id": null,
+        "visitor_type": "family",
+        "time_bucket": null,
+        "duration_days": 1,
+        "condition_type": "visitor_type",
+        "missing_information": [
+          "景区"
+        ],
+        "conflicts": [],
+        "decision_summary": "明确带孩子游玩且时长为1天，未指定景区。"
+      },
+      "tool_calls": [],
+      "final_plan": {
+        "clarification": [
+          "景区"
+        ],
+        "source_refs": []
+      },
+      "status": "partial",
+      "check_notes": [
+        "需澄清后再查询；未生成无证据行程"
+      ],
+      "decision_summaries": [
+        "明确带孩子游玩且时长为1天，未指定景区。"
+      ],
+      "execution_mode": "live_api",
+      "model": "qwen3.8-flash",
+      "real_llm": true,
+      "expected_checks": [
+        "景区信息不足",
+        "请求澄清",
+        "不猜景区"
+      ]
+    },
+    {
+      "case_id": "AG_006",
+      "user_request": "去箱根，必须总共一天完成，但同时总共必须两天完成，不接受放宽。",
+      "parsed_constraints": {
+        "scenic_id": "S001",
+        "visitor_type": null,
+        "time_bucket": null,
+        "duration_days": null,
+        "condition_type": "time",
+        "missing_information": [],
+        "conflicts": [
+          "总时长同时要求必须一天完成且必须两天完成，互斥且不接受放宽"
+        ],
+        "decision_summary": "识别景区为S001日本箱根；发现一天与两天总时长约束互斥，因此无法确定duration_days。"
+      },
+      "tool_calls": [],
+      "final_plan": {
+        "clarification": [
+          "总时长同时要求必须一天完成且必须两天完成，互斥且不接受放宽"
+        ],
+        "source_refs": []
+      },
+      "status": "partial",
+      "check_notes": [
+        "需澄清后再查询；未生成无证据行程"
+      ],
+      "decision_summaries": [
+        "识别景区为S001日本箱根；发现一天与两天总时长约束互斥，因此无法确定duration_days。"
+      ],
+      "execution_mode": "live_api",
+      "model": "qwen3.8-flash",
+      "real_llm": true,
+      "expected_checks": [
+        "时间约束冲突",
+        "请求澄清",
+        "不伪造满足"
+      ]
+    },
+    {
+      "case_id": "AG_007",
+      "user_request": "给我黄山的游览路线。",
+      "parsed_constraints": {
+        "scenic_id": null,
+        "visitor_type": null,
+        "time_bucket": null,
+        "duration_days": null,
+        "condition_type": null,
+        "missing_information": [
+          "黄山为未登记景区，无法映射为已知scenic_id",
+          "未提供游览时长",
+          "未提供游客类型",
+          "未提供具体时间段",
+          "未提供天气、拥挤度或其他明确条件"
+        ],
+        "conflicts": [],
+        "decision_summary": "用户请求黄山游览路线，但黄山不在登记景区中，且未明示其他约束。"
+      },
+      "tool_calls": [],
+      "final_plan": {
+        "clarification": [
+          "黄山为未登记景区，无法映射为已知scenic_id",
+          "未提供游览时长",
+          "未提供游客类型",
+          "未提供具体时间段",
+          "未提供天气、拥挤度或其他明确条件"
+        ],
+        "source_refs": []
+      },
+      "status": "partial",
+      "check_notes": [
+        "需澄清后再查询；未生成无证据行程"
+      ],
+      "decision_summaries": [
+        "用户请求黄山游览路线，但黄山不在登记景区中，且未明示其他约束。"
+      ],
+      "execution_mode": "live_api",
+      "model": "qwen3.8-flash",
+      "real_llm": true,
+      "expected_checks": [
+        "未知景区",
+        "不替换成箱根或蓝山",
+        "说明覆盖不足"
+      ]
+    }
+  ]
+}

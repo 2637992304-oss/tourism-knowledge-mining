@@ -1,17 +1,17 @@
 {
-  "graph_status": "entity_route_fused",
-  "missing_inputs": [
-    "advice.json"
-  ],
-  "nodes": 82,
-  "edges": 118,
+  "graph_status": "fused",
+  "missing_inputs": [],
+  "nodes": 151,
+  "edges": 205,
   "node_types": {
-    "POI": 24,
-    "TIME": 14,
-    "TRANSPORT": 8,
-    "SCENIC": 2,
+    "POI": 47,
+    "TIME": 15,
+    "TRANSPORT": 12,
+    "SCENIC": 3,
     "ROUTE": 4,
-    "STEP": 30
+    "STEP": 30,
+    "CONDITION": 20,
+    "ADVICE": 20
   },
   "relations": {
     "HAS_ROUTE": 4,
@@ -19,10 +19,13 @@
     "VISITS": 30,
     "AT_TIME": 14,
     "USES_TRANSPORT": 14,
-    "NEXT_STEP": 26
+    "NEXT_STEP": 26,
+    "HAS_ADVICE": 20,
+    "TRIGGERS": 20,
+    "APPLIES_TO": 47
   },
   "isolated_nodes": [],
-  "weak_components": 2,
+  "weak_components": 3,
   "route_checks": [
     {
       "route_id": "R_S001_OFF_001_01",
@@ -78,9 +81,349 @@
     },
     {
       "query": "条件建议",
-      "result": [],
-      "availability": "missing_upstream"
+      "result": [
+        "N_ADVICE_A_S001_OFF_001_255828790194615",
+        "N_ADVICE_A_S001_OFF_001_171123485310695",
+        "N_ADVICE_A_S001_OFF_001_247169266140315",
+        "N_ADVICE_A_S001_OFF_001_177547618944147",
+        "N_ADVICE_A_S001_OFF_001_147046239503370",
+        "N_ADVICE_A_S001_OFF_001_250646070388022",
+        "N_ADVICE_A_S001_VIS_005_134550840182935",
+        "N_ADVICE_A_S001_VIS_005_228267617104810",
+        "N_ADVICE_A_S001_VIS_005_117040616929219",
+        "N_ADVICE_A_S002_OFF_001_088248811662268",
+        "N_ADVICE_A_S002_OFF_001_257761964045209",
+        "N_ADVICE_A_S002_VIS_004_072958652312044",
+        "N_ADVICE_A_S002_VIS_004_017220019902559",
+        "N_ADVICE_A_S002_VIS_004_062256464651836",
+        "N_ADVICE_A_S003_OFF_001_051221032292834",
+        "N_ADVICE_A_S003_OFF_001_173909348912377",
+        "N_ADVICE_A_S003_OFF_001_260778767605275",
+        "N_ADVICE_A_S003_OFF_001_035301096231357",
+        "N_ADVICE_A_S003_OFF_001_143350059015598",
+        "N_ADVICE_A_S003_OFF_001_231897423423565"
+      ],
+      "availability": "available"
+    },
+    {
+      "query": "真实工具 query_routes",
+      "parameters": {
+        "scenic_id": "S001",
+        "time_bucket": "morning"
+      },
+      "result": {
+        "status": "ok",
+        "data": [
+          {
+            "route_id": "R_S001_OFF_001_01",
+            "route_name": "初游箱根当日往返路线",
+            "text_type": "official_route",
+            "steps": [
+              {
+                "step_no": 1,
+                "time_bucket": "morning",
+                "time_text": "7:30",
+                "duration_minutes": null,
+                "activity": "从新宿乘坐“浪漫”特快前往箱根汤本",
+                "pois": [
+                  {
+                    "name": "箱根汤本",
+                    "entity_id": "S001_POI_005"
+                  }
+                ],
+                "transport": [
+                  "浪漫特快"
+                ],
+                "evidence": [
+                  {
+                    "doc_id": "S001_OFF_001",
+                    "start": 222,
+                    "end": 246,
+                    "text": "7:30 ~ 从新宿乘坐“浪漫”特快前往箱根汤本"
+                  }
+                ],
+                "source_refs": [
+                  "S001_OFF_001"
+                ]
+              },
+              {
+                "step_no": 2,
+                "time_bucket": "morning",
+                "time_text": "9:20",
+                "duration_minutes": null,
+                "activity": "在箱根入口·箱根汤本站换乘",
+                "pois": [
+                  {
+                    "name": "箱根汤本",
+                    "entity_id": "S001_POI_005"
+                  }
+                ],
+                "transport": [],
+                "evidence": [
+                  {
+                    "doc_id": "S001_OFF_001",
+                    "start": 544,
+                    "end": 564,
+                    "text": "9:20 ~ 在箱根入口·箱根汤本站换乘"
+                  }
+                ],
+                "source_refs": [
+                  "S001_OFF_001"
+                ]
+              },
+              {
+                "step_no": 3,
+                "time_bucket": "morning",
+                "time_text": "9:25",
+                "duration_minutes": null,
+                "activity": "乘坐箱根登山电车前往箱根雕刻森林美术馆",
+                "pois": [
+                  {
+                    "name": "箱根雕刻森林美术馆",
+                    "entity_id": "S001_POI_007"
+                  }
+                ],
+                "transport": [
+                  "箱根登山电车"
+                ],
+                "evidence": [
+                  {
+                    "doc_id": "S001_OFF_001",
+                    "start": 712,
+                    "end": 738,
+                    "text": "9:25 ~ 乘坐箱根登山电车前往箱根雕刻森林美术馆"
+                  }
+                ],
+                "source_refs": [
+                  "S001_OFF_001"
+                ]
+              },
+              {
+                "step_no": 4,
+                "time_bucket": "morning",
+                "time_text": "10:00",
+                "duration_minutes": null,
+                "activity": "在箱根雕刻森林美术馆享受艺术漫步",
+                "pois": [
+                  {
+                    "name": "箱根雕刻森林美术馆",
+                    "entity_id": "S001_POI_007"
+                  }
+                ],
+                "transport": [
+                  "步行"
+                ],
+                "evidence": [
+                  {
+                    "doc_id": "S001_OFF_001",
+                    "start": 942,
+                    "end": 966,
+                    "text": "10:00 ~ 在箱根雕刻森林美术馆享受艺术漫步"
+                  }
+                ],
+                "source_refs": [
+                  "S001_OFF_001"
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "doc_id": "S001_OFF_001",
+                "title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+                "url": "https://www.hakonenavi.jp/international/cn/course/515",
+                "text_type": "official_route",
+                "collected_at": "2026-10-28"
+              }
+            ],
+            "scope_note": "小田急箱根运营方官网示范行程；7:30新宿出发至17:00汤本购物；景区外接驳起点仍保留。",
+            "filter_note": "筛选时间段的原路线片段",
+            "suitability": "原路线未标注老人/亲子/情侣适用性，不能据此保证适合或满足总时长"
+          }
+        ],
+        "message": null
+      }
+    },
+    {
+      "query": "真实工具 query_advice",
+      "parameters": {
+        "scenic_id": "S001",
+        "visitor_type": "family"
+      },
+      "result": {
+        "status": "ok",
+        "data": [
+          {
+            "advice_id": "A_S001_OFF_001_247169266140315",
+            "condition_type": "visitor_type",
+            "condition_text": "对于带儿童的家庭",
+            "visitor_types": [
+              "family"
+            ],
+            "suggestion_text": "推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等",
+            "related_entities": [
+              {
+                "entity_id": "S001_POI_020",
+                "name": "泡泡城堡",
+                "type": "POI"
+              },
+              {
+                "entity_id": "S001_POI_021",
+                "name": "网之森林",
+                "type": "POI"
+              }
+            ],
+            "evidence": [
+              {
+                "doc_id": "S001_OFF_001",
+                "start": 1084,
+                "end": 1134,
+                "text": "对于带儿童的家庭,推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等"
+              }
+            ],
+            "sources": [
+              {
+                "doc_id": "S001_OFF_001",
+                "title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+                "url": "https://www.hakonenavi.jp/international/cn/course/515",
+                "text_type": "official_route",
+                "collected_at": "2026-10-28"
+              }
+            ],
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "relation_note": "关联实体仅表示证据涉及，不表示每个实体都应访问或允许使用"
+          }
+        ],
+        "message": null
+      }
+    },
+    {
+      "query": "真实工具 query_advice",
+      "parameters": {
+        "scenic_id": "S003",
+        "condition_type": "weather"
+      },
+      "result": {
+        "status": "ok",
+        "data": [
+          {
+            "advice_id": "A_S003_OFF_001_231897423423565",
+            "condition_type": "weather",
+            "condition_text": "下雨天还值得去蓝山吗?",
+            "visitor_types": [],
+            "suggestion_text": "在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山",
+            "related_entities": [
+              {
+                "entity_id": "S003_POI_001",
+                "name": "蓝山国家公园",
+                "type": "POI"
+              },
+              {
+                "entity_id": "S003_POI_004",
+                "name": "Katoomba",
+                "type": "POI"
+              },
+              {
+                "entity_id": "S003_POI_005",
+                "name": "Leura",
+                "type": "POI"
+              },
+              {
+                "entity_id": "S003_POI_026",
+                "name": "山地文化啤酒公司",
+                "type": "POI"
+              },
+              {
+                "entity_id": "S003_POI_045",
+                "name": "蓝山文化中心",
+                "type": "POI"
+              },
+              {
+                "entity_id": "S003_POI_046",
+                "name": "诺曼·林赛画廊及博物馆",
+                "type": "POI"
+              },
+              {
+                "entity_id": "S003_POI_047",
+                "name": "维多利亚山博物馆",
+                "type": "POI"
+              },
+              {
+                "entity_id": "S003_POI_048",
+                "name": "伍德福德学院",
+                "type": "POI"
+              },
+              {
+                "entity_id": "S003_POI_049",
+                "name": "莉莲菲尔斯日间水疗中心",
+                "type": "POI"
+              },
+              {
+                "entity_id": "S003_POI_050",
+                "name": "昔日美人珍藏茶壶博物馆和茶室",
+                "type": "POI"
+              },
+              {
+                "entity_id": "S003_POI_051",
+                "name": "梅加隆谷茶室",
+                "type": "POI"
+              }
+            ],
+            "evidence": [
+              {
+                "doc_id": "S003_OFF_001",
+                "start": 4901,
+                "end": 5132,
+                "text": "下雨天还值得去蓝山吗?\n在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山"
+              }
+            ],
+            "sources": [
+              {
+                "doc_id": "S003_OFF_001",
+                "title": "Grand Cliff Top Walk 与蓝山一日游指南",
+                "url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+                "text_type": "official_route",
+                "collected_at": "2026-10-28"
+              }
+            ],
+            "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+            "relation_note": "关联实体仅表示证据涉及，不表示每个实体都应访问或允许使用"
+          }
+        ],
+        "message": null
+      }
+    },
+    {
+      "query": "真实工具 query_advice",
+      "parameters": {
+        "scenic_id": "S001",
+        "visitor_type": "elderly"
+      },
+      "result": {
+        "status": "no_match",
+        "data": [],
+        "message": "no_advice_match：数据已接入，但没有明确满足该过滤条件的建议"
+      }
+    },
+    {
+      "query": "真实工具 query_routes",
+      "parameters": {
+        "scenic_id": "S002"
+      },
+      "result": {
+        "status": "no_match",
+        "data": [],
+        "message": "no_route_match：当前图谱未覆盖该景区/时间段；不代表现实中没有路线"
+      }
     }
   ],
-  "checks_passed": true
+  "checks_passed": true,
+  "advice_checked": 20,
+  "relation_directions_checked": 205,
+  "graph_sha256": "d18c388356312dd762602795e0af9c5bba8d4468c920d74065bf6bd7730bd0df",
+  "input_sha256": {
+    "routes.json": "634ac6cdc52e9cb408bbd9bf99cb229b91dc6db738078d5d96625cc76416db33",
+    "entities.json": "71598abfdec68cd99d3983cd5099ee07c653d41438968d14d7c9ee46ea6caac9",
+    "advice.json": "114da2a976c0651519514637a497b99aa0f4e80021b26bed0cfc71f8362823c0",
+    "corpus.jsonl": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0"
+  }
 }
