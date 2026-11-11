@@ -10,7 +10,7 @@ AI辅助逐例语义核验；参考标签由阅读原句编写，非随机独立
 TP=35，FP=47，FN=49；P=42.68%，R=41.67%，F1=42.17%。
 
 ## optimized
-TP=79，FP=0，FN=5；P=100.00%，R=94.05%，F1=96.93%。
+TP=82，FP=0，FN=2；P=100.00%，R=97.62%，F1=98.80%。
 
 ## C01 S001_OFF_001 [222,246)
 > 7:30 ~ 从新宿乘坐“浪漫”特快前往箱根汤本
@@ -86,11 +86,11 @@ TP=79，FP=0，FN=5；P=100.00%，R=94.05%，F1=96.93%。
 > 缆车先是在树林上方前行,突然就可以看到左手方向的地貌陡然改变,浓烟滚滚,往下看原来是硫磺谷,谷里遍地都是燃烧着浓烟的硫磺洞,那情景恍惚让人置身于人间地狱一般,很震撼.
 
 - 初版预测：缆车→TRANSPORT/缆车 [285,287)；车→TRANSPORT/车 [286,287)
-- 优化预测：缆车→TRANSPORT/缆车 [285,287)
-- 核验参考：缆车→TRANSPORT/缆车 [285,287)；硫磺谷→POI/硫磺谷 [327,330)
-- 判断：硫磺谷是描述性地点提及，但尚无已确认目录项；保留漏识别，不能擅自合并大涌谷。
+- 优化预测：缆车→TRANSPORT/缆车 [285,287)；硫磺谷→POI/大涌谷 [327,330)
+- 核验参考：缆车→TRANSPORT/缆车 [285,287)；硫磺谷→POI/大涌谷 [327,330)
+- 判断：硫磺谷是描述性地点提及，但尚无已确认目录项；保留漏识别，不能擅自合并大涌谷。 本轮依据同篇去大涌谷、下缆车到大涌谷的上下文，改为文档局部归一。
 - 误识别：无
-- 漏识别或边界偏差：硫磺谷→POI/硫磺谷 [327,330)
+- 漏识别或边界偏差：无
 
 ## C09 S002_OFF_001 [737,787)
 > Time: 5-7 hours full loop, 2.5-3.5 hours half loop
@@ -136,11 +136,11 @@ TP=79，FP=0，FN=5；P=100.00%，R=94.05%，F1=96.93%。
 > 这里有充裕的停车位,视野宽阔的观景台,向山谷望去近在眼前的是酋长岩,山谷尽头是标志性的Half Doom,大约20分钟后我们就离开景区前往Yosemite view lodge办理入住,结束了第一天的景区游览。
 
 - 初版预测：车→TRANSPORT/车 [3489,3490)；观景台→POI/观景台 [3497,3500)；20分钟→TIME/20分钟 [3537,3541)；景区→POI/景区 [3547,3549)；一天→TIME/一天 [3579,3581)；景区→POI/景区 [3582,3584)
-- 优化预测：酋长岩→POI/El Capitan [3512,3515)；20分钟→TIME/20分钟 [3537,3541)；Yosemite view lodge→POI/Yosemite View Lodge [3551,3570)；第一天→TIME/第一天 [3578,3581)
+- 优化预测：酋长岩→POI/El Capitan [3512,3515)；Half Doom→POI/Half Dome [3525,3534)；20分钟→TIME/20分钟 [3537,3541)；Yosemite view lodge→POI/Yosemite View Lodge [3551,3570)；第一天→TIME/第一天 [3578,3581)
 - 核验参考：酋长岩→POI/El Capitan [3512,3515)；Half Doom→POI/Half Dome [3525,3534)；20分钟→TIME/20分钟 [3537,3541)；Yosemite view lodge→POI/Yosemite View Lodge [3551,3570)；第一天→TIME/第一天 [3578,3581)
 - 判断：Half Doom疑似错拼，需要语义核验；当前自动程序不擅自纠错，预期保留漏识别。
 - 误识别：无
-- 漏识别或边界偏差：Half Doom→POI/Half Dome [3525,3534)
+- 漏识别或边界偏差：无
 
 ## C14 S002_VIS_003 [2331,2523)
 > 登顶Half Dome的15 miles,除了最后的绳索以及登顶的喜悦,沿途的景色也是非常可圈可点,我们按官方建议沿Mist Trail上,John Muir Trail下,经过了Nevada Falls,Vernal Falls,Clark Point、Little Yosemite Valley等多个景点,即使不去Half Dome,徒步到这几个景点也是国家公园重点推荐的线路。
@@ -156,11 +156,11 @@ TP=79，FP=0，FN=5；P=100.00%，R=94.05%，F1=96.93%。
 > 同时风景很好的的Glacie Point和Tioga Road都尚未开放。
 
 - 初版预测：Tioga Road→POI/Tioga Road [212,222)
-- 优化预测：Tioga Road→POI/Tioga Road [212,222)
+- 优化预测：Glacie Point→POI/Glacier Point [199,211)；Tioga Road→POI/Tioga Road [212,222)
 - 核验参考：Glacie Point→POI/Glacier Point [199,211)；Tioga Road→POI/Tioga Road [212,222)
 - 判断：Glacie Point疑似错拼，当前不自动合并；不能因道路未开放就删除实体。
 - 误识别：无
-- 漏识别或边界偏差：Glacie Point→POI/Glacier Point [199,211)
+- 漏识别或边界偏差：无
 
 ## C16 S002_VIS_005 [872,900)
 > 另一个惊喜来自于酋长岩东壁的马尾瀑布horsetail。

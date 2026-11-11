@@ -898,7 +898,7 @@
         "text": "缆车先是在树林上方前行,突然就可以看到左手方向的地貌陡然改变,浓烟滚滚,往下看原来是硫磺谷,谷里遍地都是燃烧着浓烟的硫磺洞,那情景恍惚让人置身于人间地狱一般,很震撼.",
         "start": 285,
         "end": 368,
-        "judgment": "硫磺谷是描述性地点提及，但尚无已确认目录项；保留漏识别，不能擅自合并大涌谷。",
+        "judgment": "硫磺谷是描述性地点提及，但尚无已确认目录项；保留漏识别，不能擅自合并大涌谷。 本轮依据同篇去大涌谷、下缆车到大涌谷的上下文，改为文档局部归一。",
         "expected": [
           {
             "start": 285,
@@ -912,7 +912,7 @@
             "end": 330,
             "text": "硫磺谷",
             "entity_type": "POI",
-            "canonical_name": "硫磺谷"
+            "canonical_name": "大涌谷"
           }
         ],
         "predicted": [
@@ -946,7 +946,7 @@
             "end": 330,
             "text": "硫磺谷",
             "entity_type": "POI",
-            "canonical_name": "硫磺谷"
+            "canonical_name": "大涌谷"
           }
         ],
         "tp": 1,
@@ -2393,21 +2393,21 @@
     "cases_count": 24,
     "reference_mentions": 84,
     "metrics": {
-      "tp": 79,
+      "tp": 82,
       "fp": 0,
-      "fn": 5,
+      "fn": 2,
       "precision": 1.0,
-      "recall": 0.9404761904761905,
-      "f1": 0.9693251533742331
+      "recall": 0.9761904761904762,
+      "f1": 0.9879518072289156
     },
     "per_type": {
       "POI": {
-        "tp": 47,
+        "tp": 50,
         "fp": 0,
-        "fn": 4,
+        "fn": 1,
         "precision": 1.0,
-        "recall": 0.9215686274509803,
-        "f1": 0.9591836734693878
+        "recall": 0.9803921568627451,
+        "f1": 0.99009900990099
       },
       "TRANSPORT": {
         "tp": 20,
@@ -2979,7 +2979,7 @@
         "text": "缆车先是在树林上方前行,突然就可以看到左手方向的地貌陡然改变,浓烟滚滚,往下看原来是硫磺谷,谷里遍地都是燃烧着浓烟的硫磺洞,那情景恍惚让人置身于人间地狱一般,很震撼.",
         "start": 285,
         "end": 368,
-        "judgment": "硫磺谷是描述性地点提及，但尚无已确认目录项；保留漏识别，不能擅自合并大涌谷。",
+        "judgment": "硫磺谷是描述性地点提及，但尚无已确认目录项；保留漏识别，不能擅自合并大涌谷。 本轮依据同篇去大涌谷、下缆车到大涌谷的上下文，改为文档局部归一。",
         "expected": [
           {
             "start": 285,
@@ -2993,7 +2993,7 @@
             "end": 330,
             "text": "硫磺谷",
             "entity_type": "POI",
-            "canonical_name": "硫磺谷"
+            "canonical_name": "大涌谷"
           }
         ],
         "predicted": [
@@ -3003,24 +3003,23 @@
             "text": "缆车",
             "entity_type": "TRANSPORT",
             "canonical_name": "缆车"
-          }
-        ],
-        "false_positive": [],
-        "false_negative": [
+          },
           {
             "start": 327,
             "end": 330,
             "text": "硫磺谷",
             "entity_type": "POI",
-            "canonical_name": "硫磺谷"
+            "canonical_name": "大涌谷"
           }
         ],
-        "tp": 1,
+        "false_positive": [],
+        "false_negative": [],
+        "tp": 2,
         "fp": 0,
-        "fn": 1,
+        "fn": 0,
         "precision": 1.0,
-        "recall": 0.5,
-        "f1": 0.6666666666666666
+        "recall": 1.0,
+        "f1": 1.0
       },
       {
         "case_id": "C09",
@@ -3295,6 +3294,13 @@
             "canonical_name": "El Capitan"
           },
           {
+            "start": 3525,
+            "end": 3534,
+            "text": "Half Doom",
+            "entity_type": "POI",
+            "canonical_name": "Half Dome"
+          },
+          {
             "start": 3537,
             "end": 3541,
             "text": "20分钟",
@@ -3317,21 +3323,13 @@
           }
         ],
         "false_positive": [],
-        "false_negative": [
-          {
-            "start": 3525,
-            "end": 3534,
-            "text": "Half Doom",
-            "entity_type": "POI",
-            "canonical_name": "Half Dome"
-          }
-        ],
-        "tp": 4,
+        "false_negative": [],
+        "tp": 5,
         "fp": 0,
-        "fn": 1,
+        "fn": 0,
         "precision": 1.0,
-        "recall": 0.8,
-        "f1": 0.888888888888889
+        "recall": 1.0,
+        "f1": 1.0
       },
       {
         "case_id": "C14",
@@ -3504,6 +3502,13 @@
         ],
         "predicted": [
           {
+            "start": 199,
+            "end": 211,
+            "text": "Glacie Point",
+            "entity_type": "POI",
+            "canonical_name": "Glacier Point"
+          },
+          {
             "start": 212,
             "end": 222,
             "text": "Tioga Road",
@@ -3512,21 +3517,13 @@
           }
         ],
         "false_positive": [],
-        "false_negative": [
-          {
-            "start": 199,
-            "end": 211,
-            "text": "Glacie Point",
-            "entity_type": "POI",
-            "canonical_name": "Glacier Point"
-          }
-        ],
-        "tp": 1,
+        "false_negative": [],
+        "tp": 2,
         "fp": 0,
-        "fn": 1,
+        "fn": 0,
         "precision": 1.0,
-        "recall": 0.5,
-        "f1": 0.6666666666666666
+        "recall": 1.0,
+        "f1": 1.0
       },
       {
         "case_id": "C16",

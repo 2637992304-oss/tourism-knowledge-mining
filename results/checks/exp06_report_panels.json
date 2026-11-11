@@ -1,0 +1,278 @@
+{
+  "graph_sha256": "6521a274dd7c61a0d57ad1af46703dad0ff5425cdca716d8b7e1998aa80cedc7",
+  "panels": [
+    {
+      "file": "results/figures/report_panels/route_R_S001_OFF_001_01_1.png",
+      "size": [
+        1800,
+        1460
+      ],
+      "sha256": "b2b129c933f6f0f33db22d47c8eb7e82b232c82560f71421aa8e84b7e04e4ee1",
+      "labels_truncated": false,
+      "route_id": "R_S001_OFF_001_01",
+      "step_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "file": "results/figures/report_panels/route_R_S001_OFF_001_01_2.png",
+      "size": [
+        1800,
+        1460
+      ],
+      "sha256": "f0a8593a381c4ed17c7de6911be66aa91b82d0cfae5f9c3e972c47134597d316",
+      "labels_truncated": false,
+      "route_id": "R_S001_OFF_001_01",
+      "step_numbers": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "file": "results/figures/report_panels/route_R_S001_VIS_001_01_1.png",
+      "size": [
+        1800,
+        1460
+      ],
+      "sha256": "adf5d146473c08559d250581e8829f8b61f908a8dcbdca5b376a6b0ab48e73b1",
+      "labels_truncated": false,
+      "route_id": "R_S001_VIS_001_01",
+      "step_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "file": "results/figures/report_panels/route_R_S001_VIS_001_01_2.png",
+      "size": [
+        1800,
+        492
+      ],
+      "sha256": "5c8e104e7f8482b2bc5e2cd102435c0c1801e28d2c5c6ff192f90f4f52261adf",
+      "labels_truncated": false,
+      "route_id": "R_S001_VIS_001_01",
+      "step_numbers": [
+        6
+      ]
+    },
+    {
+      "file": "results/figures/report_panels/route_R_S003_OFF_001_01_1.png",
+      "size": [
+        1800,
+        1460
+      ],
+      "sha256": "605a6f686589b093a20fc32978d74f5adbb9a22e16d210265aa2b8f475c3455b",
+      "labels_truncated": false,
+      "route_id": "R_S003_OFF_001_01",
+      "step_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "file": "results/figures/report_panels/route_R_S003_OFF_001_01_2.png",
+      "size": [
+        1800,
+        1460
+      ],
+      "sha256": "f00bcc8cbf1de8664c4927080667d9d054d9cd64455e24127e30f1207b638954",
+      "labels_truncated": false,
+      "route_id": "R_S003_OFF_001_01",
+      "step_numbers": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "file": "results/figures/report_panels/route_R_S003_OFF_001_01_3.png",
+      "size": [
+        1800,
+        788
+      ],
+      "sha256": "7f5039219be7f1dccbf8ff4f9b08c0306fbd195b1304ea42c1f502d629d78841",
+      "labels_truncated": false,
+      "route_id": "R_S003_OFF_001_01",
+      "step_numbers": [
+        11,
+        12
+      ]
+    },
+    {
+      "file": "results/figures/report_panels/route_R_S003_VIS_001_01_1.png",
+      "size": [
+        1800,
+        1568
+      ],
+      "sha256": "dadc5fff3bdc99d1f7b558731f7d8bb33a14cc13f34c60963026f3a2216dcc9c",
+      "labels_truncated": false,
+      "route_id": "R_S003_VIS_001_01",
+      "step_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "file": "results/figures/report_panels/advice_1.png",
+      "size": [
+        1800,
+        896
+      ],
+      "sha256": "f8c630829b0e2f5ffbb2857bbfec21659965939df664ff1115c580a20de545b6",
+      "labels_truncated": false,
+      "advice_ids": [
+        "A_S001_OFF_001_255828790194615",
+        "A_S001_OFF_001_171123485310695"
+      ]
+    },
+    {
+      "file": "results/figures/report_panels/advice_2.png",
+      "size": [
+        1800,
+        896
+      ],
+      "sha256": "8c40c10d832caaf8b5090dfb6bf00127f775c7938d7b9a99c43952ca2ee02630",
+      "labels_truncated": false,
+      "advice_ids": [
+        "A_S001_OFF_001_247169266140315",
+        "A_S001_OFF_001_177547618944147"
+      ]
+    },
+    {
+      "file": "results/figures/report_panels/advice_3.png",
+      "size": [
+        1800,
+        896
+      ],
+      "sha256": "6e14856a4acda43228e0cfa09aae65182e048954e1bb254b9d826b2a7aaf16ea",
+      "labels_truncated": false,
+      "advice_ids": [
+        "A_S001_OFF_001_147046239503370",
+        "A_S001_OFF_001_250646070388022"
+      ]
+    },
+    {
+      "file": "results/figures/report_panels/advice_4.png",
+      "size": [
+        1800,
+        1058
+      ],
+      "sha256": "c0309dfbcfdc499b29277d545089cede492166f53e16acb0292b8339805fddfb",
+      "labels_truncated": false,
+      "advice_ids": [
+        "A_S001_VIS_005_134550840182935",
+        "A_S001_VIS_005_228267617104810"
+      ]
+    },
+    {
+      "file": "results/figures/report_panels/advice_5.png",
+      "size": [
+        1800,
+        1004
+      ],
+      "sha256": "a1ee23bab035d52b80a27e7fcbe373ed01aabba2c385253fb2caa3692bb261e5",
+      "labels_truncated": false,
+      "advice_ids": [
+        "A_S001_VIS_005_117040616929219",
+        "A_S002_OFF_001_088248811662268"
+      ]
+    },
+    {
+      "file": "results/figures/report_panels/advice_6.png",
+      "size": [
+        1800,
+        950
+      ],
+      "sha256": "f012211d1f286e9d3e3291f5d71cbc6b992cb55db6231e89a1d34e0a6bc17c7b",
+      "labels_truncated": false,
+      "advice_ids": [
+        "A_S002_OFF_001_257761964045209",
+        "A_S002_VIS_001_020396443207909"
+      ]
+    },
+    {
+      "file": "results/figures/report_panels/advice_7.png",
+      "size": [
+        1800,
+        842
+      ],
+      "sha256": "453f44d16af0bf36d2db1bf4ae6a5538df6c85bc78886af6b6d46846f6f13c7c",
+      "labels_truncated": false,
+      "advice_ids": [
+        "A_S002_VIS_004_072958652312044",
+        "A_S002_VIS_004_017220019902559"
+      ]
+    },
+    {
+      "file": "results/figures/report_panels/advice_8.png",
+      "size": [
+        1800,
+        896
+      ],
+      "sha256": "50281603f550be7d4393dc92bb4d7f9d1d8ff63502fc9167d17dad643fa6539a",
+      "labels_truncated": false,
+      "advice_ids": [
+        "A_S002_VIS_004_062256464651836",
+        "A_S003_OFF_001_051221032292834"
+      ]
+    },
+    {
+      "file": "results/figures/report_panels/advice_9.png",
+      "size": [
+        1800,
+        1004
+      ],
+      "sha256": "43de48fa55b84b2047d93aaa5166f328b8e57c089c4c4edd892eac951f558cd0",
+      "labels_truncated": false,
+      "advice_ids": [
+        "A_S003_OFF_001_173909348912377",
+        "A_S003_OFF_001_260778767605275"
+      ]
+    },
+    {
+      "file": "results/figures/report_panels/advice_10.png",
+      "size": [
+        1800,
+        1004
+      ],
+      "sha256": "05e8d5bb93776e22e4b13865c1977cadf7ab1939d84250fd9ad9e054c7adf245",
+      "labels_truncated": false,
+      "advice_ids": [
+        "A_S003_OFF_001_035301096231357",
+        "A_S003_OFF_001_143350059015598"
+      ]
+    },
+    {
+      "file": "results/figures/report_panels/advice_11.png",
+      "size": [
+        1800,
+        1626
+      ],
+      "sha256": "e4313f354bc6ce615032758ebb5c1e6209d45db9fd81a53fc6ae46678f3d1ffe",
+      "labels_truncated": false,
+      "advice_ids": [
+        "A_S003_OFF_001_231897423423565"
+      ]
+    }
+  ],
+  "route_steps": 33,
+  "advice": 21
+}

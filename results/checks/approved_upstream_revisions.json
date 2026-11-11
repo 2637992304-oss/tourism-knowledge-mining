@@ -1,0 +1,16 @@
+{
+  "revisions": {
+    "data/outputs/entities.json": {
+      "previous_sha256": "71598abfdec68cd99d3983cd5099ee07c653d41438968d14d7c9ee46ea6caac9",
+      "sha256": "9a313ff85726ba81373e6b6757d02077e99b3a82461a2fb97da553fb75105054",
+      "reason": "R05/R06/R09已授权的版本化修订；冻结正文、景区登记、任务书、模板均未改"
+    },
+    "data/outputs/coreference.json": {
+      "previous_sha256": "0da68168749a9533286b3bc3ddf3f3f4f8c580ae68daade1e12d8a8ad0dab400",
+      "sha256": "0a96f6cf6bcf606e806d40d44158b4afc0edcd278df6ac6006f29ee1a72bb963",
+      "reason": "R05/R06/R09已授权的版本化修订；冻结正文、景区登记、任务书、模板均未改"
+    }
+  },
+  "old_entity_ids_preserved": true,
+  "archive": "results/checks/history/pre_remaining_review_fix.zip"
+}

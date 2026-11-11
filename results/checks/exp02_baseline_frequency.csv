@@ -1,22 +1,22 @@
 ﻿entity_id,scenic_id,entity_type,canonical_name,scope,text_type,count
-S001_POI_001,S001,POI,箱根,regional,official_route,72
+S001_POI_001,S001,POI,箱根,regional,official_route,65
 S001_POI_001,S001,POI,箱根,regional,visitor_diary,72
-S001_POI_002,S001,POI,大涌谷,inside,official_route,18
+S001_POI_002,S001,POI,大涌谷,inside,official_route,16
 S001_POI_002,S001,POI,大涌谷,inside,visitor_diary,34
 S001_POI_003,S001,POI,芦之湖,inside,official_route,6
 S001_POI_003,S001,POI,芦之湖,inside,visitor_diary,21
 S001_POI_004,S001,POI,富士山,external,official_route,6
 S001_POI_004,S001,POI,富士山,external,visitor_diary,22
-S001_POI_005,S001,POI,箱根汤本,inside,official_route,10
+S001_POI_005,S001,POI,箱根汤本,inside,official_route,9
 S001_POI_005,S001,POI,箱根汤本,inside,visitor_diary,6
 S001_POI_006,S001,POI,新宿,external,official_route,3
 S001_POI_006,S001,POI,新宿,external,visitor_diary,2
-S001_POI_007,S001,POI,箱根雕刻森林美术馆,inside,official_route,5
+S001_POI_007,S001,POI,箱根雕刻森林美术馆,inside,official_route,4
 S001_POI_008,S001,POI,强罗,inside,official_route,3
 S001_POI_008,S001,POI,强罗,inside,visitor_diary,2
 S001_POI_010,S001,POI,桃源台,inside,official_route,2
 S001_POI_010,S001,POI,桃源台,inside,visitor_diary,9
-S001_POI_014,S001,POI,箱根神社,inside,official_route,4
+S001_POI_014,S001,POI,箱根神社,inside,official_route,3
 S001_POI_014,S001,POI,箱根神社,inside,visitor_diary,1
 S001_POI_NOISE_公园,S001,POI,公园,unknown,visitor_diary,19
 S001_POI_NOISE_景区,S001,POI,景区,unknown,visitor_diary,3
@@ -64,18 +64,18 @@ S001_TRANSPORT_002,S001,TRANSPORT,巴士,not_applicable,visitor_diary,3
 S001_TRANSPORT_003,S001,TRANSPORT,列车,not_applicable,official_route,10
 S001_TRANSPORT_003,S001,TRANSPORT,列车,not_applicable,visitor_diary,4
 S001_TRANSPORT_004,S001,TRANSPORT,自驾,not_applicable,visitor_diary,2
-S001_TRANSPORT_005,S001,TRANSPORT,缆车,not_applicable,official_route,10
+S001_TRANSPORT_005,S001,TRANSPORT,缆车,not_applicable,official_route,9
 S001_TRANSPORT_005,S001,TRANSPORT,缆车,not_applicable,visitor_diary,12
-S001_TRANSPORT_006,S001,TRANSPORT,游船,not_applicable,official_route,6
+S001_TRANSPORT_006,S001,TRANSPORT,游船,not_applicable,official_route,5
 S001_TRANSPORT_006,S001,TRANSPORT,游船,not_applicable,visitor_diary,8
 S001_TRANSPORT_007,S001,TRANSPORT,出租车,not_applicable,visitor_diary,1
 S001_TRANSPORT_NOISE_交通,S001,TRANSPORT,交通,unknown,official_route,3
 S001_TRANSPORT_NOISE_交通,S001,TRANSPORT,交通,unknown,visitor_diary,3
 S001_TRANSPORT_NOISE_交通工具,S001,TRANSPORT,交通工具,unknown,official_route,1
 S001_TRANSPORT_NOISE_交通工具,S001,TRANSPORT,交通工具,unknown,visitor_diary,2
-S001_TRANSPORT_NOISE_船,S001,TRANSPORT,船,unknown,official_route,9
+S001_TRANSPORT_NOISE_船,S001,TRANSPORT,船,unknown,official_route,8
 S001_TRANSPORT_NOISE_船,S001,TRANSPORT,船,unknown,visitor_diary,26
-S001_TRANSPORT_NOISE_车,S001,TRANSPORT,车,unknown,official_route,26
+S001_TRANSPORT_NOISE_车,S001,TRANSPORT,车,unknown,official_route,25
 S001_TRANSPORT_NOISE_车,S001,TRANSPORT,车,unknown,visitor_diary,23
 S002_POI_001,S002,POI,优胜美地国家公园,regional,visitor_diary,4
 S002_POI_002,S002,POI,Yosemite Valley,inside,official_route,11
@@ -167,8 +167,8 @@ S003_POI_005,S003,POI,Leura,surrounding,official_route,17
 S003_POI_006,S003,POI,Wentworth Falls,surrounding,official_route,5
 S003_POI_008,S003,POI,Grand Cliff Top Walk,inside,official_route,3
 S003_POI_009,S003,POI,悉尼,external,official_route,12
-S003_POI_009,S003,POI,悉尼,external,visitor_diary,16
-S003_POI_NOISE_公园,S003,POI,公园,unknown,visitor_diary,16
+S003_POI_009,S003,POI,悉尼,external,visitor_diary,11
+S003_POI_NOISE_公园,S003,POI,公园,unknown,visitor_diary,15
 S003_POI_NOISE_景点,S003,POI,景点,unknown,official_route,10
 S003_POI_NOISE_景点,S003,POI,景点,unknown,visitor_diary,1
 S003_POI_NOISE_温泉,S003,POI,温泉,unknown,official_route,1
@@ -204,11 +204,10 @@ S003_TRANSPORT_002,S003,TRANSPORT,巴士,not_applicable,visitor_diary,2
 S003_TRANSPORT_003,S003,TRANSPORT,列车,not_applicable,official_route,7
 S003_TRANSPORT_003,S003,TRANSPORT,列车,not_applicable,visitor_diary,2
 S003_TRANSPORT_004,S003,TRANSPORT,自驾,not_applicable,official_route,13
-S003_TRANSPORT_004,S003,TRANSPORT,自驾,not_applicable,visitor_diary,4
+S003_TRANSPORT_004,S003,TRANSPORT,自驾,not_applicable,visitor_diary,3
 S003_TRANSPORT_005,S003,TRANSPORT,缆车,not_applicable,official_route,4
 S003_TRANSPORT_005,S003,TRANSPORT,缆车,not_applicable,visitor_diary,6
 S003_TRANSPORT_NOISE_交通,S003,TRANSPORT,交通,unknown,official_route,3
-S003_TRANSPORT_NOISE_交通,S003,TRANSPORT,交通,unknown,visitor_diary,1
 S003_TRANSPORT_NOISE_交通工具,S003,TRANSPORT,交通工具,unknown,official_route,2
 S003_TRANSPORT_NOISE_车,S003,TRANSPORT,车,unknown,official_route,37
-S003_TRANSPORT_NOISE_车,S003,TRANSPORT,车,unknown,visitor_diary,15
+S003_TRANSPORT_NOISE_车,S003,TRANSPORT,车,unknown,visitor_diary,14

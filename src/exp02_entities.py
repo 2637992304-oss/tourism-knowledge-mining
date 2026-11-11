@@ -11,6 +11,7 @@ import json
 from pathlib import Path
 import re
 import sys
+from noise_filter import effective_ranges
 
 ROOT = Path(__file__).resolve().parents[1]
 TYPES = ('POI', 'TRANSPORT', 'TIME')
@@ -47,6 +48,7 @@ def load_inputs():
             if interval['end_marker'] and not row['text'][b:].startswith(interval['end_marker']):
                 raise ValueError('范围终点与原文不符')
             previous_end=b
+    scopes={did:effective_ranges(did,ranges) for did,ranges in scopes.items()}
     return rows,lex,scopes,hashlib.sha256(corpus.read_bytes()).hexdigest()
 
 
@@ -104,6 +106,10 @@ def normalize_time(surface, subtype):
 def extract_candidates(row, lex, intervals, variant='optimized'):
     text,sid=row['text'],row['scenic_id']; found=[]
     for entry,aliases in dictionaries(lex,sid,variant):
+        if entry.get('document_ids') and row['doc_id'] not in entry['document_ids']:continue
+        if variant!='baseline':
+            aliases=aliases+[a['surface'] for a in lex.get('contextual_aliases',[])
+                             if a['entity_id']==entry['entity_id'] and a['doc_id']==row['doc_id']]
         for alias in aliases:
             pat=alias_pattern(alias)
             for interval in intervals:

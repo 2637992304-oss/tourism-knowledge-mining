@@ -4,7 +4,7 @@ import argparse
 import json
 import re
 from pathlib import Path
-from exp03_rules import extract
+from exp03_rules import extract,transport_activities
 from exp03_alignment import align_poi
 
 OFFICIAL_ID = "S001_OFF_001"
@@ -101,6 +101,9 @@ def official_route(doc):
 
 def visitor_route(doc):
     steps, _ = extract(doc, make_step)
+    rides=transport_activities(doc,make_step)
+    steps=sorted(steps+rides,key=lambda s:s['evidence'][0]['start'])
+    for no,step in enumerate(steps,1):step['step_no']=no
     return make_route(doc, doc["source_title"] + "（行进片段）", steps)
 
 
@@ -129,6 +132,7 @@ def main():
                 raise ValueError("实体与语料版本不一致")
             for route in routes:
                 for step in route["steps"]:
+                    if step.get('step_kind')=='transport_activity':continue
                     entity, method = align_poi(step["raw_poi_name"], route["scenic_id"],
                                                entities["entity_catalog"])
                     step["alignment_method"] = method

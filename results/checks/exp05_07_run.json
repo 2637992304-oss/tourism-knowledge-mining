@@ -11,10 +11,70 @@
     {
       "command": [
         "python",
+        "src/exp02_entities.py",
+        "--variant",
+        "baseline"
+      ],
+      "returncode": 0,
+      "output": "{\"variant\": \"baseline\", \"documents\": 18, \"active_entities\": 166, \"mentions\": 1395, \"by_type\": {\"POI\": 804, \"TRANSPORT\": 411, \"TIME\": 180}}\n"
+    },
+    {
+      "command": [
+        "python",
+        "src/exp02_entities.py"
+      ],
+      "returncode": 0,
+      "output": "{\"variant\": \"optimized\", \"documents\": 18, \"active_entities\": 327, \"mentions\": 1395, \"by_type\": {\"POI\": 977, \"TRANSPORT\": 217, \"TIME\": 201}}\n"
+    },
+    {
+      "command": [
+        "python",
+        "src/exp02_verify.py"
+      ],
+      "returncode": 0,
+      "output": "结构和位置检查通过； 1395 处提及；24例逐例核验：\nbaseline {'tp': 35, 'fp': 47, 'fn': 49, 'precision': 0.4268292682926829, 'recall': 0.4166666666666667, 'f1': 0.42168674698795183}\noptimized {'tp': 82, 'fp': 0, 'fn': 2, 'precision': 1.0, 'recall': 0.9761904761904762, 'f1': 0.9879518072289156}\nC16 FP [] FN [('horsetail', 'Horsetail Fall')]\nC18 FP [] FN [('每小时', '每小时')]\n"
+    },
+    {
+      "command": [
+        "python",
+        "src/exp02_visualize.py"
+      ],
+      "returncode": 0,
+      "output": "已生成3张彩色图与按正文长度归一化的统计表。\n"
+    },
+    {
+      "command": [
+        "python",
+        "src/exp04_coreference.py",
+        "--variant",
+        "baseline"
+      ],
+      "returncode": 0,
+      "output": "Python 3.13.9 | baseline | 5篇 | 59例\n{\n  \"total\": 59,\n  \"positive\": 49,\n  \"gold_null\": 10,\n  \"answered\": 54,\n  \"correct_links\": 14,\n  \"correct_nulls\": 3,\n  \"metrics\": {\n    \"overall_accuracy\": {\n      \"numerator\": 17,\n      \"denominator\": 59,\n      \"value\": 0.288135593220339\n    },\n    \"positive_accuracy\": {\n      \"numerator\": 14,\n      \"denominator\": 49,\n      \"value\": 0.2857142857142857\n    },\n    \"coverage\": {\n      \"numerator\": 54,\n      \"denominator\": 59,\n      \"value\": 0.9152542372881356\n    },\n    \"answered_precision\": {\n      \"numerator\": 14,\n      \"denominator\": 54,\n      \"value\": 0.25925925925925924\n    },\n    \"null_rejection_accuracy\": {\n      \"numerator\": 3,\n      \"denominator\": 10,\n      \"value\": 0.3\n    },\n    \"unresolved_rate\": {\n      \"numerator\": 5,\n      \"denominator\": 59,\n      \"value\": 0.0847457627118644\n    }\n  },\n  \"status_counts\": {\n    \"resolved\": 49,\n    \"non_anaphoric\": 4,\n    \"exophoric\": 5,\n    \"ambiguous\": 1\n  }\n}\n"
+    },
+    {
+      "command": [
+        "python",
+        "src/exp04_coreference.py"
+      ],
+      "returncode": 0,
+      "output": "Python 3.13.9 | typed | 5篇 | 59例\n{\n  \"total\": 59,\n  \"positive\": 49,\n  \"gold_null\": 10,\n  \"answered\": 47,\n  \"correct_links\": 33,\n  \"correct_nulls\": 6,\n  \"metrics\": {\n    \"overall_accuracy\": {\n      \"numerator\": 39,\n      \"denominator\": 59,\n      \"value\": 0.6610169491525424\n    },\n    \"positive_accuracy\": {\n      \"numerator\": 33,\n      \"denominator\": 49,\n      \"value\": 0.673469387755102\n    },\n    \"coverage\": {\n      \"numerator\": 47,\n      \"denominator\": 59,\n      \"value\": 0.7966101694915254\n    },\n    \"answered_precision\": {\n      \"numerator\": 33,\n      \"denominator\": 47,\n      \"value\": 0.7021276595744681\n    },\n    \"null_rejection_accuracy\": {\n      \"numerator\": 6,\n      \"denominator\": 10,\n      \"value\": 0.6\n    },\n    \"unresolved_rate\": {\n      \"numerator\": 12,\n      \"denominator\": 59,\n      \"value\": 0.2033898305084746\n    }\n  },\n  \"status_counts\": {\n    \"resolved\": 49,\n    \"non_anaphoric\": 4,\n    \"exophoric\": 5,\n    \"ambiguous\": 1\n  }\n}\n"
+    },
+    {
+      "command": [
+        "python",
+        "src/exp04_verify.py"
+      ],
+      "returncode": 0,
+      "output": "结构检查通过：5篇、59例、405处证据；两种方法复跑稳定；输入未修改。\n"
+    },
+    {
+      "command": [
+        "python",
         "src/exp03_routes.py"
       ],
       "returncode": 0,
-      "output": "{\"routes\": 4, \"steps\": [10, 6, 12, 2], \"output\": \"data\\\\outputs\\\\routes.json\"}\n"
+      "output": "{\"routes\": 4, \"steps\": [10, 6, 12, 5], \"output\": \"data\\\\outputs\\\\routes.json\"}\n"
     },
     {
       "command": [
@@ -22,7 +82,7 @@
         "src/exp03_evaluate.py"
       ],
       "returncode": 0,
-      "output": "{\"routes\": 4, \"matched\": 30, \"gold\": 30, \"evidence_checked\": 32}\n"
+      "output": "{\"routes\": 4, \"matched\": 33, \"gold\": 33, \"evidence_checked\": 35}\n"
     },
     {
       "command": [
@@ -65,7 +125,7 @@
         "--require-complete"
       ],
       "returncode": 0,
-      "output": "{\"status\": \"fused\", \"nodes\": 153, \"edges\": 207, \"missing_inputs\": []}\n"
+      "output": "{\"status\": \"fused\", \"nodes\": 156, \"edges\": 218, \"missing_inputs\": []}\n"
     },
     {
       "command": [
@@ -73,7 +133,7 @@
         "src/exp06_verify.py"
       ],
       "returncode": 0,
-      "output": "{\"nodes\": 153, \"edges\": 207, \"route_checks\": 4, \"checks_passed\": true}\n"
+      "output": "{\"nodes\": 156, \"edges\": 218, \"route_checks\": 4, \"checks_passed\": true}\n"
     },
     {
       "command": [
@@ -86,11 +146,27 @@
     {
       "command": [
         "python",
+        "src/report_panels.py"
+      ],
+      "returncode": 0,
+      "output": "报告分图 15 张；步骤和建议全覆盖。\n"
+    },
+    {
+      "command": [
+        "python",
+        "src/review_round2_verify.py"
+      ],
+      "returncode": 0,
+      "output": "R05/R06/R09/R10/R11/R12关闭证据通过；冻结语料及旧实体ID保持。\n"
+    },
+    {
+      "command": [
+        "python",
         "src/exp07_agent.py",
         "--cases"
       ],
       "returncode": 0,
-      "output": "{\n  \"execution_mode\": \"live_api\",\n  \"api_requests\": 18,\n  \"cases\": [\n    {\n      \"case_id\": \"AG_001\",\n      \"status\": \"partial\",\n      \"check_notes\": [\n        \"通过程序核对路线/步骤/建议ID和引用；尚需组员独立语义验收\"\n      ]\n    },\n    {\n      \"case_id\": \"AG_002\",\n      \"status\": \"partial\",\n      \"check_notes\": [\n        \"通过程序核对路线/步骤/建议ID和引用；尚需组员独立语义验收\"\n      ]\n    },\n    {\n      \"case_id\": \"AG_003\",\n      \"status\": \"partial\",\n      \"check_notes\": [\n        \"final_validation: invalid_final_schema\",\n        \"通过程序核对路线/步骤/建议ID和引用；尚需组员独立语义验收\"\n      ]\n    },\n    {\n      \"case_id\": \"AG_004\",\n      \"status\": \"partial\",\n      \"check_notes\": [\n        \"通过程序核对路线/步骤/建议ID和引用；尚需组员独立语义验收\"\n      ]\n    },\n    {\n      \"case_id\": \"AG_005\",\n      \"status\": \"partial\",\n      \"check_notes\": [\n        \"需澄清后再查询；未生成无证据行程\"\n      ]\n    },\n    {\n      \"case_id\": \"AG_006\",\n      \"status\": \"partial\",\n      \"check_notes\": [\n        \"需澄清后再查询；未生成无证据行程\"\n      ]\n    },\n    {\n      \"case_id\": \"AG_007\",\n      \"status\": \"partial\",\n      \"check_notes\": [\n        \"需澄清后再查询；未生成无证据行程\"\n      ]\n    }\n  ]\n}\nAG_001: partial / tool_calls=2\nAG_002: partial / tool_calls=4\nAG_003: partial / tool_calls=4\nAG_004: partial / tool_calls=2\nAG_005: partial / tool_calls=0\nAG_006: partial / tool_calls=0\nAG_007: partial / tool_calls=0\n"
+      "output": "{\n  \"execution_mode\": \"live_api\",\n  \"api_requests\": 15,\n  \"cases\": [\n    {\n      \"case_id\": \"AG_001\",\n      \"status\": \"partial\",\n      \"check_notes\": [\n        \"通过程序核对路线/步骤/建议ID和引用；尚需组员独立语义验收\"\n      ]\n    },\n    {\n      \"case_id\": \"AG_002\",\n      \"status\": \"partial\",\n      \"check_notes\": [\n        \"通过程序核对路线/步骤/建议ID和引用；尚需组员独立语义验收\"\n      ]\n    },\n    {\n      \"case_id\": \"AG_003\",\n      \"status\": \"partial\",\n      \"check_notes\": [\n        \"通过程序核对路线/步骤/建议ID和引用；尚需组员独立语义验收\"\n      ]\n    },\n    {\n      \"case_id\": \"AG_004\",\n      \"status\": \"partial\",\n      \"check_notes\": [\n        \"通过程序核对路线/步骤/建议ID和引用；尚需组员独立语义验收\"\n      ]\n    },\n    {\n      \"case_id\": \"AG_005\",\n      \"status\": \"partial\",\n      \"check_notes\": [\n        \"需澄清后再查询；未生成无证据行程\"\n      ]\n    },\n    {\n      \"case_id\": \"AG_006\",\n      \"status\": \"partial\",\n      \"check_notes\": [\n        \"需澄清后再查询；未生成无证据行程\"\n      ]\n    },\n    {\n      \"case_id\": \"AG_007\",\n      \"status\": \"partial\",\n      \"check_notes\": [\n        \"需澄清后再查询；未生成无证据行程\"\n      ]\n    }\n  ]\n}\nAG_001: partial / tool_calls=2\nAG_002: partial / tool_calls=2\nAG_003: partial / tool_calls=3\nAG_004: partial / tool_calls=2\nAG_005: partial / tool_calls=0\nAG_006: partial / tool_calls=0\nAG_007: partial / tool_calls=0\n"
     }
   ],
   "passed": true

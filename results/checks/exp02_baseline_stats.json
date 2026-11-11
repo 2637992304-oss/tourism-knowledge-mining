@@ -1,11 +1,11 @@
 {
   "variant": "baseline",
   "documents": 18,
-  "mentions": 1420,
+  "mentions": 1395,
   "active_entities": 166,
   "by_type": {
-    "POI": 822,
-    "TRANSPORT": 418,
+    "POI": 804,
+    "TRANSPORT": 411,
     "TIME": 180
   },
   "per_scenic": [
@@ -13,10 +13,10 @@
       "scenic_id": "S001",
       "scenic_name": "日本箱根",
       "docs": 6,
-      "scoped_chars": 10082,
+      "scoped_chars": 9900,
       "mentions_by_type": {
-        "POI": 366,
-        "TRANSPORT": 160,
+        "POI": 354,
+        "TRANSPORT": 156,
         "TIME": 37
       },
       "entities_by_type": {
@@ -29,7 +29,7 @@
       "scenic_id": "S002",
       "scenic_name": "美国优胜美地国家公园",
       "docs": 6,
-      "scoped_chars": 24494,
+      "scoped_chars": 24449,
       "mentions_by_type": {
         "POI": 331,
         "TRANSPORT": 134,
@@ -45,10 +45,10 @@
       "scenic_id": "S003",
       "scenic_name": "澳大利亚蓝山国家公园",
       "docs": 6,
-      "scoped_chars": 8335,
+      "scoped_chars": 7889,
       "mentions_by_type": {
-        "POI": 125,
-        "TRANSPORT": 124,
+        "POI": 119,
+        "TRANSPORT": 121,
         "TIME": 50
       },
       "entities_by_type": {
@@ -64,7 +64,7 @@
         "entity_id": "S001_POI_001",
         "canonical_name": "箱根",
         "scenic_id": "S001",
-        "count": 144
+        "count": 137
       },
       {
         "entity_id": "S002_POI_NOISE_瀑布",
@@ -76,7 +76,7 @@
         "entity_id": "S001_POI_002",
         "canonical_name": "大涌谷",
         "scenic_id": "S001",
-        "count": 52
+        "count": 50
       },
       {
         "entity_id": "S002_POI_004",
@@ -115,16 +115,16 @@
         "count": 28
       },
       {
-        "entity_id": "S003_POI_009",
-        "canonical_name": "悉尼",
-        "scenic_id": "S003",
-        "count": 28
-      },
-      {
         "entity_id": "S001_POI_003",
         "canonical_name": "芦之湖",
         "scenic_id": "S001",
         "count": 27
+      },
+      {
+        "entity_id": "S003_POI_009",
+        "canonical_name": "悉尼",
+        "scenic_id": "S003",
+        "count": 23
       },
       {
         "entity_id": "S001_POI_NOISE_公园",
@@ -144,13 +144,13 @@
         "entity_id": "S003_TRANSPORT_NOISE_车",
         "canonical_name": "车",
         "scenic_id": "S003",
-        "count": 52
+        "count": 51
       },
       {
         "entity_id": "S001_TRANSPORT_NOISE_车",
         "canonical_name": "车",
         "scenic_id": "S001",
-        "count": 49
+        "count": 48
       },
       {
         "entity_id": "S002_TRANSPORT_001",
@@ -162,13 +162,13 @@
         "entity_id": "S001_TRANSPORT_NOISE_船",
         "canonical_name": "船",
         "scenic_id": "S001",
-        "count": 35
+        "count": 34
       },
       {
         "entity_id": "S001_TRANSPORT_005",
         "canonical_name": "缆车",
         "scenic_id": "S001",
-        "count": 22
+        "count": 21
       },
       {
         "entity_id": "S003_TRANSPORT_001",
@@ -180,7 +180,7 @@
         "entity_id": "S003_TRANSPORT_004",
         "canonical_name": "自驾",
         "scenic_id": "S003",
-        "count": 17
+        "count": 16
       },
       {
         "entity_id": "S002_TRANSPORT_004",
@@ -198,7 +198,7 @@
         "entity_id": "S001_TRANSPORT_006",
         "canonical_name": "游船",
         "scenic_id": "S001",
-        "count": 14
+        "count": 13
       },
       {
         "entity_id": "S003_TRANSPORT_002",

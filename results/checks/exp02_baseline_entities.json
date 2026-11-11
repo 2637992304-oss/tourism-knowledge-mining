@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "corpus_version": "v1",
-  "resource_version": "exp02-v1.1",
+  "resource_version": "exp02-v1.2",
   "variant": "baseline",
   "corpus_sha256": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0",
   "offset_convention": "Python Unicode characters; zero-based [start,end) in full corpus text",
@@ -19,7 +19,7 @@
       "baseline": true,
       "note": "",
       "active": true,
-      "mention_count": 144
+      "mention_count": 137
     },
     {
       "entity_id": "S001_POI_002",
@@ -34,7 +34,7 @@
       "baseline": true,
       "note": "",
       "active": true,
-      "mention_count": 52
+      "mention_count": 50
     },
     {
       "entity_id": "S001_POI_003",
@@ -74,7 +74,7 @@
       "baseline": true,
       "note": "箱根汤本区域与车站暂共用入口节点；精细站区粒度可后续拆分，拆分时须保留ID映射。",
       "active": true,
-      "mention_count": 16
+      "mention_count": 15
     },
     {
       "entity_id": "S001_POI_006",
@@ -102,7 +102,7 @@
       "baseline": true,
       "note": "",
       "active": true,
-      "mention_count": 5
+      "mention_count": 4
     },
     {
       "entity_id": "S001_POI_008",
@@ -142,7 +142,7 @@
       "baseline": true,
       "note": "",
       "active": true,
-      "mention_count": 5
+      "mention_count": 4
     },
     {
       "entity_id": "S001_POI_NOISE_公园",
@@ -617,7 +617,7 @@
       ],
       "scope": "not_applicable",
       "active": true,
-      "mention_count": 22
+      "mention_count": 21
     },
     {
       "entity_id": "S001_TRANSPORT_006",
@@ -632,7 +632,7 @@
       ],
       "scope": "not_applicable",
       "active": true,
-      "mention_count": 14
+      "mention_count": 13
     },
     {
       "entity_id": "S001_TRANSPORT_007",
@@ -674,7 +674,7 @@
       "aliases": [],
       "scope": "unknown",
       "active": true,
-      "mention_count": 35
+      "mention_count": 34
     },
     {
       "entity_id": "S001_TRANSPORT_NOISE_车",
@@ -684,7 +684,7 @@
       "aliases": [],
       "scope": "unknown",
       "active": true,
-      "mention_count": 49
+      "mention_count": 48
     },
     {
       "entity_id": "S002_POI_001",
@@ -1641,7 +1641,7 @@
       "baseline": true,
       "note": "",
       "active": true,
-      "mention_count": 28
+      "mention_count": 23
     },
     {
       "entity_id": "S003_POI_NOISE_公园",
@@ -1651,7 +1651,7 @@
       "aliases": [],
       "scope": "unknown",
       "active": true,
-      "mention_count": 16
+      "mention_count": 15
     },
     {
       "entity_id": "S003_POI_NOISE_景点",
@@ -1975,7 +1975,7 @@
       ],
       "scope": "not_applicable",
       "active": true,
-      "mention_count": 17
+      "mention_count": 16
     },
     {
       "entity_id": "S003_TRANSPORT_005",
@@ -1997,7 +1997,7 @@
       "aliases": [],
       "scope": "unknown",
       "active": true,
-      "mention_count": 4
+      "mention_count": 3
     },
     {
       "entity_id": "S003_TRANSPORT_NOISE_交通工具",
@@ -2017,7 +2017,7 @@
       "aliases": [],
       "scope": "unknown",
       "active": true,
-      "mention_count": 52
+      "mention_count": 51
     }
   ],
   "mentions": [
@@ -2793,34 +2793,6 @@
     },
     {
       "mention_id": "M_S001_OFF_001_0056",
-      "entity_id": "S001_POI_001",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 698,
-        "end": 700,
-        "text": "箱根"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
-      "mention_id": "M_S001_OFF_001_0057",
-      "entity_id": "S001_POI_005",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 698,
-        "end": 702,
-        "text": "箱根汤本"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
-      "mention_id": "M_S001_OFF_001_0058",
       "entity_id": "S001_TIME_005",
       "entity_type": "TIME",
       "span": {
@@ -2834,7 +2806,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0059",
+      "mention_id": "M_S001_OFF_001_0057",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -2848,7 +2820,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0060",
+      "mention_id": "M_S001_OFF_001_0058",
       "entity_id": "S001_TRANSPORT_003",
       "entity_type": "TRANSPORT",
       "span": {
@@ -2862,7 +2834,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0061",
+      "mention_id": "M_S001_OFF_001_0059",
       "entity_id": "S001_TRANSPORT_NOISE_车",
       "entity_type": "TRANSPORT",
       "span": {
@@ -2876,7 +2848,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0062",
+      "mention_id": "M_S001_OFF_001_0060",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -2890,7 +2862,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0063",
+      "mention_id": "M_S001_OFF_001_0061",
       "entity_id": "S001_POI_007",
       "entity_type": "POI",
       "span": {
@@ -2904,7 +2876,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0064",
+      "mention_id": "M_S001_OFF_001_0062",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -2918,7 +2890,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0065",
+      "mention_id": "M_S001_OFF_001_0063",
       "entity_id": "S001_POI_005",
       "entity_type": "POI",
       "span": {
@@ -2932,7 +2904,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0066",
+      "mention_id": "M_S001_OFF_001_0064",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -2946,7 +2918,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0067",
+      "mention_id": "M_S001_OFF_001_0065",
       "entity_id": "S001_POI_007",
       "entity_type": "POI",
       "span": {
@@ -2960,7 +2932,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0068",
+      "mention_id": "M_S001_OFF_001_0066",
       "entity_id": "S001_POI_008",
       "entity_type": "POI",
       "span": {
@@ -2974,7 +2946,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0069",
+      "mention_id": "M_S001_OFF_001_0067",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -2988,7 +2960,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0070",
+      "mention_id": "M_S001_OFF_001_0068",
       "entity_id": "S001_TRANSPORT_003",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3002,7 +2974,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0071",
+      "mention_id": "M_S001_OFF_001_0069",
       "entity_id": "S001_TRANSPORT_NOISE_车",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3016,7 +2988,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0072",
+      "mention_id": "M_S001_OFF_001_0070",
       "entity_id": "S001_POI_008",
       "entity_type": "POI",
       "span": {
@@ -3030,7 +3002,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0073",
+      "mention_id": "M_S001_OFF_001_0071",
       "entity_id": "S001_TRANSPORT_003",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3044,7 +3016,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0074",
+      "mention_id": "M_S001_OFF_001_0072",
       "entity_id": "S001_TRANSPORT_NOISE_车",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3058,7 +3030,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0075",
+      "mention_id": "M_S001_OFF_001_0073",
       "entity_id": "S001_TRANSPORT_003",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3072,7 +3044,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0076",
+      "mention_id": "M_S001_OFF_001_0074",
       "entity_id": "S001_TRANSPORT_NOISE_车",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3086,7 +3058,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0077",
+      "mention_id": "M_S001_OFF_001_0075",
       "entity_id": "S001_TRANSPORT_003",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3100,7 +3072,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0078",
+      "mention_id": "M_S001_OFF_001_0076",
       "entity_id": "S001_TRANSPORT_NOISE_车",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3114,7 +3086,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0079",
+      "mention_id": "M_S001_OFF_001_0077",
       "entity_id": "S001_TRANSPORT_003",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3128,7 +3100,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0080",
+      "mention_id": "M_S001_OFF_001_0078",
       "entity_id": "S001_TRANSPORT_NOISE_车",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3142,7 +3114,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0081",
+      "mention_id": "M_S001_OFF_001_0079",
       "entity_id": "S001_TIME_006",
       "entity_type": "TIME",
       "span": {
@@ -3156,7 +3128,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0082",
+      "mention_id": "M_S001_OFF_001_0080",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -3170,7 +3142,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0083",
+      "mention_id": "M_S001_OFF_001_0081",
       "entity_id": "S001_POI_007",
       "entity_type": "POI",
       "span": {
@@ -3184,7 +3156,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0084",
+      "mention_id": "M_S001_OFF_001_0082",
       "entity_id": "S001_TRANSPORT_001",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3198,7 +3170,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0085",
+      "mention_id": "M_S001_OFF_001_0083",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -3212,7 +3184,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0086",
+      "mention_id": "M_S001_OFF_001_0084",
       "entity_id": "S001_POI_007",
       "entity_type": "POI",
       "span": {
@@ -3226,7 +3198,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0087",
+      "mention_id": "M_S001_OFF_001_0085",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -3240,7 +3212,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0088",
+      "mention_id": "M_S001_OFF_001_0086",
       "entity_id": "S001_TRANSPORT_001",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3254,7 +3226,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0089",
+      "mention_id": "M_S001_OFF_001_0087",
       "entity_id": "S001_POI_NOISE_景点",
       "entity_type": "POI",
       "span": {
@@ -3268,7 +3240,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0090",
+      "mention_id": "M_S001_OFF_001_0088",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -3282,35 +3254,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0091",
-      "entity_id": "S001_POI_001",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 1257,
-        "end": 1259,
-        "text": "箱根"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
-      "mention_id": "M_S001_OFF_001_0092",
-      "entity_id": "S001_POI_007",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 1257,
-        "end": 1266,
-        "text": "箱根雕刻森林美术馆"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
-      "mention_id": "M_S001_OFF_001_0093",
+      "mention_id": "M_S001_OFF_001_0089",
       "entity_id": "S001_TIME_007",
       "entity_type": "TIME",
       "span": {
@@ -3324,7 +3268,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0094",
+      "mention_id": "M_S001_OFF_001_0090",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -3338,7 +3282,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0095",
+      "mention_id": "M_S001_OFF_001_0091",
       "entity_id": "S001_TRANSPORT_005",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3352,7 +3296,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0096",
+      "mention_id": "M_S001_OFF_001_0092",
       "entity_id": "S001_TRANSPORT_NOISE_车",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3366,7 +3310,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0097",
+      "mention_id": "M_S001_OFF_001_0093",
       "entity_id": "S001_POI_002",
       "entity_type": "POI",
       "span": {
@@ -3380,7 +3324,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0098",
+      "mention_id": "M_S001_OFF_001_0094",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -3394,7 +3338,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0099",
+      "mention_id": "M_S001_OFF_001_0095",
       "entity_id": "S001_POI_NOISE_景点",
       "entity_type": "POI",
       "span": {
@@ -3408,7 +3352,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0100",
+      "mention_id": "M_S001_OFF_001_0096",
       "entity_id": "S001_POI_002",
       "entity_type": "POI",
       "span": {
@@ -3422,7 +3366,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0101",
+      "mention_id": "M_S001_OFF_001_0097",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -3436,7 +3380,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0102",
+      "mention_id": "M_S001_OFF_001_0098",
       "entity_id": "S001_TRANSPORT_003",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3450,7 +3394,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0103",
+      "mention_id": "M_S001_OFF_001_0099",
       "entity_id": "S001_TRANSPORT_NOISE_车",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3464,7 +3408,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0104",
+      "mention_id": "M_S001_OFF_001_0100",
       "entity_id": "S001_POI_008",
       "entity_type": "POI",
       "span": {
@@ -3478,7 +3422,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0105",
+      "mention_id": "M_S001_OFF_001_0101",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -3492,7 +3436,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0106",
+      "mention_id": "M_S001_OFF_001_0102",
       "entity_id": "S001_TRANSPORT_005",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3506,7 +3450,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0107",
+      "mention_id": "M_S001_OFF_001_0103",
       "entity_id": "S001_TRANSPORT_NOISE_车",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3520,7 +3464,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0108",
+      "mention_id": "M_S001_OFF_001_0104",
       "entity_id": "S001_TRANSPORT_005",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3534,7 +3478,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0109",
+      "mention_id": "M_S001_OFF_001_0105",
       "entity_id": "S001_TRANSPORT_NOISE_车",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3548,7 +3492,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0110",
+      "mention_id": "M_S001_OFF_001_0106",
       "entity_id": "S001_TIME_008",
       "entity_type": "TIME",
       "span": {
@@ -3562,7 +3506,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0111",
+      "mention_id": "M_S001_OFF_001_0107",
       "entity_id": "S001_POI_004",
       "entity_type": "POI",
       "span": {
@@ -3576,7 +3520,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0112",
+      "mention_id": "M_S001_OFF_001_0108",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -3590,7 +3534,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0113",
+      "mention_id": "M_S001_OFF_001_0109",
       "entity_id": "S001_TRANSPORT_005",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3604,7 +3548,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0114",
+      "mention_id": "M_S001_OFF_001_0110",
       "entity_id": "S001_TRANSPORT_NOISE_车",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3618,7 +3562,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0115",
+      "mention_id": "M_S001_OFF_001_0111",
       "entity_id": "S001_TRANSPORT_005",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3632,7 +3576,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0116",
+      "mention_id": "M_S001_OFF_001_0112",
       "entity_id": "S001_TRANSPORT_NOISE_车",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3646,7 +3590,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0117",
+      "mention_id": "M_S001_OFF_001_0113",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -3660,7 +3604,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0118",
+      "mention_id": "M_S001_OFF_001_0114",
       "entity_id": "S001_TRANSPORT_005",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3674,7 +3618,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0119",
+      "mention_id": "M_S001_OFF_001_0115",
       "entity_id": "S001_TRANSPORT_NOISE_车",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3688,7 +3632,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0120",
+      "mention_id": "M_S001_OFF_001_0116",
       "entity_id": "S001_TRANSPORT_NOISE_车",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3702,7 +3646,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0121",
+      "mention_id": "M_S001_OFF_001_0117",
       "entity_id": "S001_TIME_009",
       "entity_type": "TIME",
       "span": {
@@ -3716,7 +3660,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0122",
+      "mention_id": "M_S001_OFF_001_0118",
       "entity_id": "S001_TRANSPORT_005",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3730,7 +3674,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0123",
+      "mention_id": "M_S001_OFF_001_0119",
       "entity_id": "S001_TRANSPORT_NOISE_车",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3744,7 +3688,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0124",
+      "mention_id": "M_S001_OFF_001_0120",
       "entity_id": "S001_POI_004",
       "entity_type": "POI",
       "span": {
@@ -3758,7 +3702,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0125",
+      "mention_id": "M_S001_OFF_001_0121",
       "entity_id": "S001_POI_002",
       "entity_type": "POI",
       "span": {
@@ -3772,7 +3716,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0126",
+      "mention_id": "M_S001_OFF_001_0122",
       "entity_id": "S001_TIME_010",
       "entity_type": "TIME",
       "span": {
@@ -3786,49 +3730,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0127",
-      "entity_id": "S001_POI_001",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 1544,
-        "end": 1546,
-        "text": "箱根"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
-      "mention_id": "M_S001_OFF_001_0128",
-      "entity_id": "S001_TRANSPORT_005",
-      "entity_type": "TRANSPORT",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 1548,
-        "end": 1550,
-        "text": "缆车"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
-      "mention_id": "M_S001_OFF_001_0129",
-      "entity_id": "S001_TRANSPORT_NOISE_车",
-      "entity_type": "TRANSPORT",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 1549,
-        "end": 1550,
-        "text": "车"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
-      "mention_id": "M_S001_OFF_001_0130",
+      "mention_id": "M_S001_OFF_001_0123",
       "entity_id": "S001_TIME_011",
       "entity_type": "TIME",
       "span": {
@@ -3842,7 +3744,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0131",
+      "mention_id": "M_S001_OFF_001_0124",
       "entity_id": "S001_POI_002",
       "entity_type": "POI",
       "span": {
@@ -3856,7 +3758,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0132",
+      "mention_id": "M_S001_OFF_001_0125",
       "entity_id": "S001_POI_002",
       "entity_type": "POI",
       "span": {
@@ -3870,7 +3772,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0133",
+      "mention_id": "M_S001_OFF_001_0126",
       "entity_id": "S001_POI_NOISE_景点",
       "entity_type": "POI",
       "span": {
@@ -3884,7 +3786,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0134",
+      "mention_id": "M_S001_OFF_001_0127",
       "entity_id": "S001_POI_002",
       "entity_type": "POI",
       "span": {
@@ -3898,7 +3800,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0135",
+      "mention_id": "M_S001_OFF_001_0128",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -3912,7 +3814,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0136",
+      "mention_id": "M_S001_OFF_001_0129",
       "entity_id": "S001_POI_NOISE_温泉",
       "entity_type": "POI",
       "span": {
@@ -3926,21 +3828,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0137",
-      "entity_id": "S001_POI_002",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 1682,
-        "end": 1685,
-        "text": "大涌谷"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
-      "mention_id": "M_S001_OFF_001_0138",
+      "mention_id": "M_S001_OFF_001_0130",
       "entity_id": "S001_POI_002",
       "entity_type": "POI",
       "span": {
@@ -3954,7 +3842,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0139",
+      "mention_id": "M_S001_OFF_001_0131",
       "entity_id": "S001_TRANSPORT_NOISE_车",
       "entity_type": "TRANSPORT",
       "span": {
@@ -3968,7 +3856,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0140",
+      "mention_id": "M_S001_OFF_001_0132",
       "entity_id": "S001_POI_NOISE_景点",
       "entity_type": "POI",
       "span": {
@@ -3982,7 +3870,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0141",
+      "mention_id": "M_S001_OFF_001_0133",
       "entity_id": "S001_POI_002",
       "entity_type": "POI",
       "span": {
@@ -3996,7 +3884,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0142",
+      "mention_id": "M_S001_OFF_001_0134",
       "entity_id": "S001_POI_NOISE_温泉",
       "entity_type": "POI",
       "span": {
@@ -4010,21 +3898,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0143",
-      "entity_id": "S001_POI_002",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 1801,
-        "end": 1804,
-        "text": "大涌谷"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
-      "mention_id": "M_S001_OFF_001_0144",
+      "mention_id": "M_S001_OFF_001_0135",
       "entity_id": "S001_TRANSPORT_001",
       "entity_type": "TRANSPORT",
       "span": {
@@ -4038,7 +3912,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0145",
+      "mention_id": "M_S001_OFF_001_0136",
       "entity_id": "S001_TIME_009",
       "entity_type": "TIME",
       "span": {
@@ -4052,7 +3926,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0146",
+      "mention_id": "M_S001_OFF_001_0137",
       "entity_id": "S001_POI_NOISE_温泉",
       "entity_type": "POI",
       "span": {
@@ -4066,7 +3940,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0147",
+      "mention_id": "M_S001_OFF_001_0138",
       "entity_id": "S001_POI_002",
       "entity_type": "POI",
       "span": {
@@ -4080,7 +3954,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0148",
+      "mention_id": "M_S001_OFF_001_0139",
       "entity_id": "S001_POI_002",
       "entity_type": "POI",
       "span": {
@@ -4094,7 +3968,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0149",
+      "mention_id": "M_S001_OFF_001_0140",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -4108,7 +3982,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0150",
+      "mention_id": "M_S001_OFF_001_0141",
       "entity_id": "S001_POI_002",
       "entity_type": "POI",
       "span": {
@@ -4122,7 +3996,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0151",
+      "mention_id": "M_S001_OFF_001_0142",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -4136,7 +4010,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0152",
+      "mention_id": "M_S001_OFF_001_0143",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -4150,7 +4024,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0153",
+      "mention_id": "M_S001_OFF_001_0144",
       "entity_id": "S001_POI_002",
       "entity_type": "POI",
       "span": {
@@ -4164,21 +4038,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0154",
-      "entity_id": "S001_POI_001",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 2034,
-        "end": 2036,
-        "text": "箱根"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
-      "mention_id": "M_S001_OFF_001_0155",
+      "mention_id": "M_S001_OFF_001_0145",
       "entity_id": "S001_TIME_012",
       "entity_type": "TIME",
       "span": {
@@ -4192,7 +4052,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0156",
+      "mention_id": "M_S001_OFF_001_0146",
       "entity_id": "S001_POI_002",
       "entity_type": "POI",
       "span": {
@@ -4206,7 +4066,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0157",
+      "mention_id": "M_S001_OFF_001_0147",
       "entity_id": "S001_POI_003",
       "entity_type": "POI",
       "span": {
@@ -4220,7 +4080,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0158",
+      "mention_id": "M_S001_OFF_001_0148",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -4234,7 +4094,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0159",
+      "mention_id": "M_S001_OFF_001_0149",
       "entity_id": "S001_TRANSPORT_006",
       "entity_type": "TRANSPORT",
       "span": {
@@ -4248,7 +4108,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0160",
+      "mention_id": "M_S001_OFF_001_0150",
       "entity_id": "S001_TRANSPORT_NOISE_船",
       "entity_type": "TRANSPORT",
       "span": {
@@ -4262,7 +4122,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0161",
+      "mention_id": "M_S001_OFF_001_0151",
       "entity_id": "S001_POI_003",
       "entity_type": "POI",
       "span": {
@@ -4276,7 +4136,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0162",
+      "mention_id": "M_S001_OFF_001_0152",
       "entity_id": "S001_POI_002",
       "entity_type": "POI",
       "span": {
@@ -4290,7 +4150,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0163",
+      "mention_id": "M_S001_OFF_001_0153",
       "entity_id": "S001_POI_004",
       "entity_type": "POI",
       "span": {
@@ -4304,7 +4164,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0164",
+      "mention_id": "M_S001_OFF_001_0154",
       "entity_id": "S001_POI_003",
       "entity_type": "POI",
       "span": {
@@ -4318,7 +4178,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0165",
+      "mention_id": "M_S001_OFF_001_0155",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -4332,7 +4192,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0166",
+      "mention_id": "M_S001_OFF_001_0156",
       "entity_id": "S001_TRANSPORT_006",
       "entity_type": "TRANSPORT",
       "span": {
@@ -4346,7 +4206,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0167",
+      "mention_id": "M_S001_OFF_001_0157",
       "entity_id": "S001_TRANSPORT_NOISE_船",
       "entity_type": "TRANSPORT",
       "span": {
@@ -4360,7 +4220,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0168",
+      "mention_id": "M_S001_OFF_001_0158",
       "entity_id": "S001_POI_002",
       "entity_type": "POI",
       "span": {
@@ -4374,7 +4234,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0169",
+      "mention_id": "M_S001_OFF_001_0159",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -4388,7 +4248,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0170",
+      "mention_id": "M_S001_OFF_001_0160",
       "entity_id": "S001_TRANSPORT_005",
       "entity_type": "TRANSPORT",
       "span": {
@@ -4402,7 +4262,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0171",
+      "mention_id": "M_S001_OFF_001_0161",
       "entity_id": "S001_TRANSPORT_NOISE_车",
       "entity_type": "TRANSPORT",
       "span": {
@@ -4416,7 +4276,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0172",
+      "mention_id": "M_S001_OFF_001_0162",
       "entity_id": "S001_POI_010",
       "entity_type": "POI",
       "span": {
@@ -4430,7 +4290,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0173",
+      "mention_id": "M_S001_OFF_001_0163",
       "entity_id": "S001_POI_010",
       "entity_type": "POI",
       "span": {
@@ -4444,7 +4304,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0174",
+      "mention_id": "M_S001_OFF_001_0164",
       "entity_id": "S001_TRANSPORT_006",
       "entity_type": "TRANSPORT",
       "span": {
@@ -4458,7 +4318,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0175",
+      "mention_id": "M_S001_OFF_001_0165",
       "entity_id": "S001_TRANSPORT_NOISE_船",
       "entity_type": "TRANSPORT",
       "span": {
@@ -4472,7 +4332,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0176",
+      "mention_id": "M_S001_OFF_001_0166",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -4486,7 +4346,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0177",
+      "mention_id": "M_S001_OFF_001_0167",
       "entity_id": "S001_TRANSPORT_006",
       "entity_type": "TRANSPORT",
       "span": {
@@ -4500,7 +4360,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0178",
+      "mention_id": "M_S001_OFF_001_0168",
       "entity_id": "S001_TRANSPORT_NOISE_船",
       "entity_type": "TRANSPORT",
       "span": {
@@ -4514,7 +4374,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0179",
+      "mention_id": "M_S001_OFF_001_0169",
       "entity_id": "S001_TRANSPORT_NOISE_船",
       "entity_type": "TRANSPORT",
       "span": {
@@ -4528,7 +4388,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0180",
+      "mention_id": "M_S001_OFF_001_0170",
       "entity_id": "S001_POI_004",
       "entity_type": "POI",
       "span": {
@@ -4542,7 +4402,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0181",
+      "mention_id": "M_S001_OFF_001_0171",
       "entity_id": "S001_POI_003",
       "entity_type": "POI",
       "span": {
@@ -4556,7 +4416,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0182",
+      "mention_id": "M_S001_OFF_001_0172",
       "entity_id": "S001_TRANSPORT_NOISE_船",
       "entity_type": "TRANSPORT",
       "span": {
@@ -4570,7 +4430,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0183",
+      "mention_id": "M_S001_OFF_001_0173",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -4584,7 +4444,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0184",
+      "mention_id": "M_S001_OFF_001_0174",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -4598,7 +4458,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0185",
+      "mention_id": "M_S001_OFF_001_0175",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -4612,7 +4472,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0186",
+      "mention_id": "M_S001_OFF_001_0176",
       "entity_id": "S001_POI_014",
       "entity_type": "POI",
       "span": {
@@ -4626,7 +4486,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0187",
+      "mention_id": "M_S001_OFF_001_0177",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -4640,7 +4500,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0188",
+      "mention_id": "M_S001_OFF_001_0178",
       "entity_id": "S001_TRANSPORT_NOISE_船",
       "entity_type": "TRANSPORT",
       "span": {
@@ -4654,49 +4514,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0189",
-      "entity_id": "S001_POI_001",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 2299,
-        "end": 2301,
-        "text": "箱根"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
-      "mention_id": "M_S001_OFF_001_0190",
-      "entity_id": "S001_TRANSPORT_006",
-      "entity_type": "TRANSPORT",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 2303,
-        "end": 2306,
-        "text": "观光船"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
-      "mention_id": "M_S001_OFF_001_0191",
-      "entity_id": "S001_TRANSPORT_NOISE_船",
-      "entity_type": "TRANSPORT",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 2305,
-        "end": 2306,
-        "text": "船"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
-      "mention_id": "M_S001_OFF_001_0192",
+      "mention_id": "M_S001_OFF_001_0179",
       "entity_id": "S001_TIME_013",
       "entity_type": "TIME",
       "span": {
@@ -4710,7 +4528,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0193",
+      "mention_id": "M_S001_OFF_001_0180",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -4724,7 +4542,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0194",
+      "mention_id": "M_S001_OFF_001_0181",
       "entity_id": "S001_POI_014",
       "entity_type": "POI",
       "span": {
@@ -4738,7 +4556,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0195",
+      "mention_id": "M_S001_OFF_001_0182",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -4752,7 +4570,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0196",
+      "mention_id": "M_S001_OFF_001_0183",
       "entity_id": "S001_TRANSPORT_001",
       "entity_type": "TRANSPORT",
       "span": {
@@ -4766,7 +4584,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0197",
+      "mention_id": "M_S001_OFF_001_0184",
       "entity_id": "S001_TIME_010",
       "entity_type": "TIME",
       "span": {
@@ -4780,7 +4598,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0198",
+      "mention_id": "M_S001_OFF_001_0185",
       "entity_id": "S001_POI_003",
       "entity_type": "POI",
       "span": {
@@ -4794,7 +4612,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0199",
+      "mention_id": "M_S001_OFF_001_0186",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -4808,7 +4626,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0200",
+      "mention_id": "M_S001_OFF_001_0187",
       "entity_id": "S001_POI_014",
       "entity_type": "POI",
       "span": {
@@ -4822,7 +4640,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0201",
+      "mention_id": "M_S001_OFF_001_0188",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -4836,7 +4654,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0202",
+      "mention_id": "M_S001_OFF_001_0189",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -4850,7 +4668,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0203",
+      "mention_id": "M_S001_OFF_001_0190",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -4864,7 +4682,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0204",
+      "mention_id": "M_S001_OFF_001_0191",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -4878,7 +4696,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0205",
+      "mention_id": "M_S001_OFF_001_0192",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -4892,7 +4710,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0206",
+      "mention_id": "M_S001_OFF_001_0193",
       "entity_id": "S001_TRANSPORT_002",
       "entity_type": "TRANSPORT",
       "span": {
@@ -4906,7 +4724,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0207",
+      "mention_id": "M_S001_OFF_001_0194",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -4920,7 +4738,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0208",
+      "mention_id": "M_S001_OFF_001_0195",
       "entity_id": "S001_POI_005",
       "entity_type": "POI",
       "span": {
@@ -4934,7 +4752,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0209",
+      "mention_id": "M_S001_OFF_001_0196",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -4948,7 +4766,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0210",
+      "mention_id": "M_S001_OFF_001_0197",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -4962,7 +4780,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0211",
+      "mention_id": "M_S001_OFF_001_0198",
       "entity_id": "S001_POI_005",
       "entity_type": "POI",
       "span": {
@@ -4976,7 +4794,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0212",
+      "mention_id": "M_S001_OFF_001_0199",
       "entity_id": "S001_TIME_014",
       "entity_type": "TIME",
       "span": {
@@ -4990,7 +4808,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0213",
+      "mention_id": "M_S001_OFF_001_0200",
       "entity_id": "S001_TIME_015",
       "entity_type": "TIME",
       "span": {
@@ -5004,7 +4822,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0214",
+      "mention_id": "M_S001_OFF_001_0201",
       "entity_id": "S001_TRANSPORT_002",
       "entity_type": "TRANSPORT",
       "span": {
@@ -5018,35 +4836,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0215",
-      "entity_id": "S001_POI_001",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 2672,
-        "end": 2674,
-        "text": "箱根"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
-      "mention_id": "M_S001_OFF_001_0216",
-      "entity_id": "S001_POI_014",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 2672,
-        "end": 2676,
-        "text": "箱根神社"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
-      "mention_id": "M_S001_OFF_001_0217",
+      "mention_id": "M_S001_OFF_001_0202",
       "entity_id": "S001_TIME_016",
       "entity_type": "TIME",
       "span": {
@@ -5060,7 +4850,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0218",
+      "mention_id": "M_S001_OFF_001_0203",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -5074,7 +4864,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0219",
+      "mention_id": "M_S001_OFF_001_0204",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -5088,7 +4878,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0220",
+      "mention_id": "M_S001_OFF_001_0205",
       "entity_id": "S001_POI_005",
       "entity_type": "POI",
       "span": {
@@ -5102,7 +4892,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0221",
+      "mention_id": "M_S001_OFF_001_0206",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -5116,7 +4906,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0222",
+      "mention_id": "M_S001_OFF_001_0207",
       "entity_id": "S001_TIME_017",
       "entity_type": "TIME",
       "span": {
@@ -5130,7 +4920,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0223",
+      "mention_id": "M_S001_OFF_001_0208",
       "entity_id": "S001_TIME_018",
       "entity_type": "TIME",
       "span": {
@@ -5144,21 +4934,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0224",
-      "entity_id": "S001_POI_001",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 2807,
-        "end": 2809,
-        "text": "箱根"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
-      "mention_id": "M_S001_OFF_001_0225",
+      "mention_id": "M_S001_OFF_001_0209",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -5172,7 +4948,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0226",
+      "mention_id": "M_S001_OFF_001_0210",
       "entity_id": "S001_POI_NOISE_景点",
       "entity_type": "POI",
       "span": {
@@ -5186,7 +4962,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0227",
+      "mention_id": "M_S001_OFF_001_0211",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -5200,7 +4976,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0228",
+      "mention_id": "M_S001_OFF_001_0212",
       "entity_id": "S001_POI_NOISE_景点",
       "entity_type": "POI",
       "span": {
@@ -5214,7 +4990,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0229",
+      "mention_id": "M_S001_OFF_001_0213",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -5228,7 +5004,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0230",
+      "mention_id": "M_S001_OFF_001_0214",
       "entity_id": "S001_TRANSPORT_005",
       "entity_type": "TRANSPORT",
       "span": {
@@ -5242,7 +5018,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0231",
+      "mention_id": "M_S001_OFF_001_0215",
       "entity_id": "S001_TRANSPORT_NOISE_车",
       "entity_type": "TRANSPORT",
       "span": {
@@ -5256,7 +5032,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0232",
+      "mention_id": "M_S001_OFF_001_0216",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -5270,7 +5046,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0233",
+      "mention_id": "M_S001_OFF_001_0217",
       "entity_id": "S001_TRANSPORT_006",
       "entity_type": "TRANSPORT",
       "span": {
@@ -5284,7 +5060,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0234",
+      "mention_id": "M_S001_OFF_001_0218",
       "entity_id": "S001_TRANSPORT_NOISE_船",
       "entity_type": "TRANSPORT",
       "span": {
@@ -5298,7 +5074,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0235",
+      "mention_id": "M_S001_OFF_001_0219",
       "entity_id": "S001_TIME_019",
       "entity_type": "TIME",
       "span": {
@@ -5312,7 +5088,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0236",
+      "mention_id": "M_S001_OFF_001_0220",
       "entity_id": "S001_POI_NOISE_景点",
       "entity_type": "POI",
       "span": {
@@ -5326,7 +5102,7 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0237",
+      "mention_id": "M_S001_OFF_001_0221",
       "entity_id": "S001_POI_001",
       "entity_type": "POI",
       "span": {
@@ -21114,132 +20890,6 @@
         "text": "一天"
       },
       "method": "rule",
-      "scenic_id": "S003",
-      "text_type": "visitor_diary"
-    },
-    {
-      "mention_id": "M_S003_VIS_001_0033",
-      "entity_id": "S003_POI_009",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S003_VIS_001",
-        "start": 1207,
-        "end": 1209,
-        "text": "悉尼"
-      },
-      "method": "dictionary",
-      "scenic_id": "S003",
-      "text_type": "visitor_diary"
-    },
-    {
-      "mention_id": "M_S003_VIS_001_0034",
-      "entity_id": "S003_POI_009",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S003_VIS_001",
-        "start": 1248,
-        "end": 1250,
-        "text": "悉尼"
-      },
-      "method": "dictionary",
-      "scenic_id": "S003",
-      "text_type": "visitor_diary"
-    },
-    {
-      "mention_id": "M_S003_VIS_001_0035",
-      "entity_id": "S003_POI_009",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S003_VIS_001",
-        "start": 1264,
-        "end": 1266,
-        "text": "悉尼"
-      },
-      "method": "dictionary",
-      "scenic_id": "S003",
-      "text_type": "visitor_diary"
-    },
-    {
-      "mention_id": "M_S003_VIS_001_0036",
-      "entity_id": "S003_POI_009",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S003_VIS_001",
-        "start": 1294,
-        "end": 1296,
-        "text": "悉尼"
-      },
-      "method": "dictionary",
-      "scenic_id": "S003",
-      "text_type": "visitor_diary"
-    },
-    {
-      "mention_id": "M_S003_VIS_001_0037",
-      "entity_id": "S003_TRANSPORT_004",
-      "entity_type": "TRANSPORT",
-      "span": {
-        "doc_id": "S003_VIS_001",
-        "start": 1410,
-        "end": 1412,
-        "text": "驱车"
-      },
-      "method": "dictionary",
-      "scenic_id": "S003",
-      "text_type": "visitor_diary"
-    },
-    {
-      "mention_id": "M_S003_VIS_001_0038",
-      "entity_id": "S003_TRANSPORT_NOISE_车",
-      "entity_type": "TRANSPORT",
-      "span": {
-        "doc_id": "S003_VIS_001",
-        "start": 1411,
-        "end": 1412,
-        "text": "车"
-      },
-      "method": "dictionary",
-      "scenic_id": "S003",
-      "text_type": "visitor_diary"
-    },
-    {
-      "mention_id": "M_S003_VIS_001_0039",
-      "entity_id": "S003_POI_NOISE_公园",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S003_VIS_001",
-        "start": 1535,
-        "end": 1537,
-        "text": "公园"
-      },
-      "method": "dictionary",
-      "scenic_id": "S003",
-      "text_type": "visitor_diary"
-    },
-    {
-      "mention_id": "M_S003_VIS_001_0040",
-      "entity_id": "S003_POI_009",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S003_VIS_001",
-        "start": 1552,
-        "end": 1554,
-        "text": "悉尼"
-      },
-      "method": "dictionary",
-      "scenic_id": "S003",
-      "text_type": "visitor_diary"
-    },
-    {
-      "mention_id": "M_S003_VIS_001_0041",
-      "entity_id": "S003_TRANSPORT_NOISE_交通",
-      "entity_type": "TRANSPORT",
-      "span": {
-        "doc_id": "S003_VIS_001",
-        "start": 1579,
-        "end": 1581,
-        "text": "交通"
-      },
-      "method": "dictionary",
       "scenic_id": "S003",
       "text_type": "visitor_diary"
     },

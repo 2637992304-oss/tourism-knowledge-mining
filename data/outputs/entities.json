@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "corpus_version": "v1",
-  "resource_version": "exp02-v1.1",
+  "resource_version": "exp02-v1.2",
   "variant": "optimized",
   "corpus_sha256": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0",
   "offset_convention": "Python Unicode characters; zero-based [start,end) in full corpus text",
@@ -28,6 +28,7 @@
       "canonical_name": "大涌谷",
       "aliases": [
         "大地狱",
+        "硫磺谷",
         "箱根大涌谷"
       ],
       "scope": "inside",
@@ -102,7 +103,7 @@
       "baseline": true,
       "note": "",
       "active": true,
-      "mention_count": 5
+      "mention_count": 4
     },
     {
       "entity_id": "S001_POI_008",
@@ -194,7 +195,7 @@
       "baseline": true,
       "note": "",
       "active": true,
-      "mention_count": 5
+      "mention_count": 4
     },
     {
       "entity_id": "S001_POI_015",
@@ -246,8 +247,8 @@
       "scope": "inside",
       "baseline": false,
       "note": "",
-      "active": true,
-      "mention_count": 1
+      "active": false,
+      "mention_count": 0
     },
     {
       "entity_id": "S001_POI_019",
@@ -297,7 +298,7 @@
       "baseline": false,
       "note": "",
       "active": true,
-      "mention_count": 2
+      "mention_count": 1
     },
     {
       "entity_id": "S001_POI_023",
@@ -311,7 +312,7 @@
       "baseline": false,
       "note": "",
       "active": true,
-      "mention_count": 3
+      "mention_count": 2
     },
     {
       "entity_id": "S001_POI_024",
@@ -325,7 +326,7 @@
       "baseline": false,
       "note": "",
       "active": true,
-      "mention_count": 3
+      "mention_count": 2
     },
     {
       "entity_id": "S001_POI_025",
@@ -337,7 +338,7 @@
       "baseline": false,
       "note": "",
       "active": true,
-      "mention_count": 3
+      "mention_count": 2
     },
     {
       "entity_id": "S001_POI_026",
@@ -553,6 +554,21 @@
       "scope": "inside",
       "baseline": false,
       "note": "",
+      "active": true,
+      "mention_count": 2
+    },
+    {
+      "entity_id": "S001_POI_043",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "水中神社",
+      "aliases": [],
+      "document_ids": [
+        "S001_VIS_003"
+      ],
+      "scope": "unknown",
+      "baseline": false,
+      "note": "保留作者水边打卡点指称；建筑边界不确定，不与和平鸟居或箱根神社合并。",
       "active": true,
       "mention_count": 2
     },
@@ -1111,7 +1127,7 @@
       ],
       "scope": "not_applicable",
       "active": true,
-      "mention_count": 8
+      "mention_count": 7
     },
     {
       "entity_id": "S001_TRANSPORT_013",
@@ -1136,7 +1152,7 @@
       ],
       "scope": "not_applicable",
       "active": true,
-      "mention_count": 20
+      "mention_count": 19
     },
     {
       "entity_id": "S001_TRANSPORT_015",
@@ -1215,6 +1231,7 @@
       "entity_type": "POI",
       "canonical_name": "Half Dome",
       "aliases": [
+        "Half Doom",
         "半圆顶",
         "半圓頂",
         "半穹"
@@ -1223,7 +1240,7 @@
       "baseline": true,
       "note": "",
       "active": true,
-      "mention_count": 43
+      "mention_count": 47
     },
     {
       "entity_id": "S002_POI_005",
@@ -1231,6 +1248,7 @@
       "entity_type": "POI",
       "canonical_name": "Glacier Point",
       "aliases": [
+        "Glacie Point",
         "冰川点",
         "冰川觀景點"
       ],
@@ -1238,7 +1256,7 @@
       "baseline": true,
       "note": "",
       "active": true,
-      "mention_count": 9
+      "mention_count": 10
     },
     {
       "entity_id": "S002_POI_006",
@@ -3006,7 +3024,7 @@
       "baseline": true,
       "note": "",
       "active": true,
-      "mention_count": 60
+      "mention_count": 59
     },
     {
       "entity_id": "S003_POI_002",
@@ -3044,13 +3062,14 @@
       "entity_type": "POI",
       "canonical_name": "Katoomba",
       "aliases": [
+        "卡图姆巴",
         "卡通巴"
       ],
       "scope": "surrounding",
       "baseline": true,
       "note": "",
       "active": true,
-      "mention_count": 21
+      "mention_count": 22
     },
     {
       "entity_id": "S003_POI_005",
@@ -3116,7 +3135,7 @@
       "baseline": true,
       "note": "",
       "active": true,
-      "mention_count": 26
+      "mention_count": 21
     },
     {
       "entity_id": "S003_POI_010",
@@ -4065,7 +4084,7 @@
       ],
       "scope": "not_applicable",
       "active": true,
-      "mention_count": 17
+      "mention_count": 16
     },
     {
       "entity_id": "S003_TRANSPORT_005",
@@ -4616,20 +4635,6 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0038",
-      "entity_id": "S001_POI_018",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 698,
-        "end": 707,
-        "text": "箱根汤本站前商店街"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
       "mention_id": "M_S001_OFF_001_0039",
       "entity_id": "S001_TIME_005",
       "entity_type": "TIME",
@@ -4952,20 +4957,6 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0063",
-      "entity_id": "S001_POI_007",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 1257,
-        "end": 1266,
-        "text": "箱根雕刻森林美术馆"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
       "mention_id": "M_S001_OFF_001_0064",
       "entity_id": "S001_TIME_007",
       "entity_type": "TIME",
@@ -5246,20 +5237,6 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0084",
-      "entity_id": "S001_TRANSPORT_012",
-      "entity_type": "TRANSPORT",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 1544,
-        "end": 1550,
-        "text": "箱根空中缆车"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
       "mention_id": "M_S001_OFF_001_0085",
       "entity_id": "S001_TIME_011",
       "entity_type": "TIME",
@@ -5330,20 +5307,6 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0090",
-      "entity_id": "S001_POI_002",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 1682,
-        "end": 1685,
-        "text": "大涌谷"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
       "mention_id": "M_S001_OFF_001_0091",
       "entity_id": "S001_POI_022",
       "entity_type": "POI",
@@ -5366,20 +5329,6 @@
         "start": 1751,
         "end": 1754,
         "text": "大涌谷"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
-      "mention_id": "M_S001_OFF_001_0093",
-      "entity_id": "S001_POI_022",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 1801,
-        "end": 1806,
-        "text": "大涌谷厨房"
       },
       "method": "dictionary",
       "scenic_id": "S001",
@@ -5435,20 +5384,6 @@
         "doc_id": "S001_OFF_001",
         "start": 1897,
         "end": 1900,
-        "text": "黑蛋馆"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
-      "mention_id": "M_S001_OFF_001_0098",
-      "entity_id": "S001_POI_023",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 1922,
-        "end": 1925,
         "text": "黑蛋馆"
       },
       "method": "dictionary",
@@ -5534,20 +5469,6 @@
         "start": 2020,
         "end": 2023,
         "text": "大涌谷"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
-      "mention_id": "M_S001_OFF_001_0105",
-      "entity_id": "S001_POI_024",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 2034,
-        "end": 2041,
-        "text": "箱根地质博物馆"
       },
       "method": "dictionary",
       "scenic_id": "S001",
@@ -5848,20 +5769,6 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0127",
-      "entity_id": "S001_TRANSPORT_014",
-      "entity_type": "TRANSPORT",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 2299,
-        "end": 2306,
-        "text": "箱根海贼观光船"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
       "mention_id": "M_S001_OFF_001_0128",
       "entity_id": "S001_TIME_013",
       "entity_type": "TIME",
@@ -6142,20 +6049,6 @@
       "text_type": "official_route"
     },
     {
-      "mention_id": "M_S001_OFF_001_0148",
-      "entity_id": "S001_POI_014",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 2672,
-        "end": 2676,
-        "text": "箱根神社"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
       "mention_id": "M_S001_OFF_001_0149",
       "entity_id": "S001_TIME_016",
       "entity_type": "TIME",
@@ -6248,20 +6141,6 @@
         "start": 2791,
         "end": 2797,
         "text": "“浪漫”特快"
-      },
-      "method": "dictionary",
-      "scenic_id": "S001",
-      "text_type": "official_route"
-    },
-    {
-      "mention_id": "M_S001_OFF_001_0156",
-      "entity_id": "S001_POI_025",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S001_OFF_001",
-        "start": 2807,
-        "end": 2818,
-        "text": "箱根登山名产店 汤本店"
       },
       "method": "dictionary",
       "scenic_id": "S001",
@@ -7710,6 +7589,20 @@
       "text_type": "visitor_diary"
     },
     {
+      "mention_id": "M_S001_VIS_003_0048",
+      "entity_id": "S001_POI_002",
+      "entity_type": "POI",
+      "span": {
+        "doc_id": "S001_VIS_003",
+        "start": 327,
+        "end": 330,
+        "text": "硫磺谷"
+      },
+      "method": "dictionary",
+      "scenic_id": "S001",
+      "text_type": "visitor_diary"
+    },
+    {
       "mention_id": "M_S001_VIS_003_0018",
       "entity_id": "S001_TRANSPORT_005",
       "entity_type": "TRANSPORT",
@@ -7858,6 +7751,20 @@
         "start": 548,
         "end": 552,
         "text": "元箱根港"
+      },
+      "method": "dictionary",
+      "scenic_id": "S001",
+      "text_type": "visitor_diary"
+    },
+    {
+      "mention_id": "M_S001_VIS_003_0049",
+      "entity_id": "S001_POI_043",
+      "entity_type": "POI",
+      "span": {
+        "doc_id": "S001_VIS_003",
+        "start": 554,
+        "end": 558,
+        "text": "水中神社"
       },
       "method": "dictionary",
       "scenic_id": "S001",
@@ -8124,6 +8031,20 @@
         "start": 949,
         "end": 952,
         "text": "富士山"
+      },
+      "method": "dictionary",
+      "scenic_id": "S001",
+      "text_type": "visitor_diary"
+    },
+    {
+      "mention_id": "M_S001_VIS_003_0050",
+      "entity_id": "S001_POI_043",
+      "entity_type": "POI",
+      "span": {
+        "doc_id": "S001_VIS_003",
+        "start": 953,
+        "end": 957,
+        "text": "水中神社"
       },
       "method": "dictionary",
       "scenic_id": "S001",
@@ -12750,6 +12671,20 @@
       "text_type": "visitor_diary"
     },
     {
+      "mention_id": "M_S002_VIS_001_0201",
+      "entity_id": "S002_POI_004",
+      "entity_type": "POI",
+      "span": {
+        "doc_id": "S002_VIS_001",
+        "start": 3525,
+        "end": 3534,
+        "text": "Half Doom"
+      },
+      "method": "dictionary",
+      "scenic_id": "S002",
+      "text_type": "visitor_diary"
+    },
+    {
       "mention_id": "M_S002_VIS_001_0099",
       "entity_id": "S002_TIME_032",
       "entity_type": "TIME",
@@ -12960,6 +12895,20 @@
       "text_type": "visitor_diary"
     },
     {
+      "mention_id": "M_S002_VIS_001_0202",
+      "entity_id": "S002_POI_004",
+      "entity_type": "POI",
+      "span": {
+        "doc_id": "S002_VIS_001",
+        "start": 3852,
+        "end": 3861,
+        "text": "Half Doom"
+      },
+      "method": "dictionary",
+      "scenic_id": "S002",
+      "text_type": "visitor_diary"
+    },
+    {
       "mention_id": "M_S002_VIS_001_0114",
       "entity_id": "S002_TIME_025",
       "entity_type": "TIME",
@@ -13108,6 +13057,20 @@
         "start": 4215,
         "end": 4228,
         "text": "Olmsted Point"
+      },
+      "method": "dictionary",
+      "scenic_id": "S002",
+      "text_type": "visitor_diary"
+    },
+    {
+      "mention_id": "M_S002_VIS_001_0203",
+      "entity_id": "S002_POI_004",
+      "entity_type": "POI",
+      "span": {
+        "doc_id": "S002_VIS_001",
+        "start": 4229,
+        "end": 4238,
+        "text": "Half Doom"
       },
       "method": "dictionary",
       "scenic_id": "S002",
@@ -13808,6 +13771,20 @@
         "start": 5695,
         "end": 5708,
         "text": "Columbia Rock"
+      },
+      "method": "dictionary",
+      "scenic_id": "S002",
+      "text_type": "visitor_diary"
+    },
+    {
+      "mention_id": "M_S002_VIS_001_0204",
+      "entity_id": "S002_POI_004",
+      "entity_type": "POI",
+      "span": {
+        "doc_id": "S002_VIS_001",
+        "start": 5751,
+        "end": 5760,
+        "text": "Half Doom"
       },
       "method": "dictionary",
       "scenic_id": "S002",
@@ -17784,6 +17761,20 @@
         "start": 188,
         "end": 190,
         "text": "徒步"
+      },
+      "method": "dictionary",
+      "scenic_id": "S002",
+      "text_type": "visitor_diary"
+    },
+    {
+      "mention_id": "M_S002_VIS_005_0062",
+      "entity_id": "S002_POI_005",
+      "entity_type": "POI",
+      "span": {
+        "doc_id": "S002_VIS_005",
+        "start": 199,
+        "end": 211,
+        "text": "Glacie Point"
       },
       "method": "dictionary",
       "scenic_id": "S002",
@@ -21864,6 +21855,20 @@
       "text_type": "official_route"
     },
     {
+      "mention_id": "M_S003_OFF_001_0287",
+      "entity_id": "S003_POI_004",
+      "entity_type": "POI",
+      "span": {
+        "doc_id": "S003_OFF_001",
+        "start": 4668,
+        "end": 4672,
+        "text": "卡图姆巴"
+      },
+      "method": "dictionary",
+      "scenic_id": "S003",
+      "text_type": "official_route"
+    },
+    {
       "mention_id": "M_S003_OFF_001_0241",
       "entity_id": "S003_TRANSPORT_002",
       "entity_type": "TRANSPORT",
@@ -22938,104 +22943,6 @@
         "text": "一天"
       },
       "method": "rule",
-      "scenic_id": "S003",
-      "text_type": "visitor_diary"
-    },
-    {
-      "mention_id": "M_S003_VIS_001_0034",
-      "entity_id": "S003_POI_009",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S003_VIS_001",
-        "start": 1207,
-        "end": 1209,
-        "text": "悉尼"
-      },
-      "method": "dictionary",
-      "scenic_id": "S003",
-      "text_type": "visitor_diary"
-    },
-    {
-      "mention_id": "M_S003_VIS_001_0035",
-      "entity_id": "S003_POI_009",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S003_VIS_001",
-        "start": 1248,
-        "end": 1250,
-        "text": "悉尼"
-      },
-      "method": "dictionary",
-      "scenic_id": "S003",
-      "text_type": "visitor_diary"
-    },
-    {
-      "mention_id": "M_S003_VIS_001_0036",
-      "entity_id": "S003_POI_009",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S003_VIS_001",
-        "start": 1264,
-        "end": 1266,
-        "text": "悉尼"
-      },
-      "method": "dictionary",
-      "scenic_id": "S003",
-      "text_type": "visitor_diary"
-    },
-    {
-      "mention_id": "M_S003_VIS_001_0037",
-      "entity_id": "S003_POI_009",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S003_VIS_001",
-        "start": 1294,
-        "end": 1296,
-        "text": "悉尼"
-      },
-      "method": "dictionary",
-      "scenic_id": "S003",
-      "text_type": "visitor_diary"
-    },
-    {
-      "mention_id": "M_S003_VIS_001_0038",
-      "entity_id": "S003_POI_001",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S003_VIS_001",
-        "start": 1296,
-        "end": 1298,
-        "text": "蓝山"
-      },
-      "method": "dictionary",
-      "scenic_id": "S003",
-      "text_type": "visitor_diary"
-    },
-    {
-      "mention_id": "M_S003_VIS_001_0039",
-      "entity_id": "S003_TRANSPORT_004",
-      "entity_type": "TRANSPORT",
-      "span": {
-        "doc_id": "S003_VIS_001",
-        "start": 1410,
-        "end": 1412,
-        "text": "驱车"
-      },
-      "method": "dictionary",
-      "scenic_id": "S003",
-      "text_type": "visitor_diary"
-    },
-    {
-      "mention_id": "M_S003_VIS_001_0040",
-      "entity_id": "S003_POI_009",
-      "entity_type": "POI",
-      "span": {
-        "doc_id": "S003_VIS_001",
-        "start": 1552,
-        "end": 1554,
-        "text": "悉尼"
-      },
-      "method": "dictionary",
       "scenic_id": "S003",
       "text_type": "visitor_diary"
     },

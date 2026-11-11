@@ -5,9 +5,111 @@
       "ranges": [
         {
           "start": 0,
+          "end": 693,
+          "start_marker": null,
+          "end_marker": null
+        },
+        {
+          "start": 711,
+          "end": 937,
+          "start_marker": null,
+          "end_marker": null
+        },
+        {
+          "start": 941,
+          "end": 1252,
+          "start_marker": null,
+          "end_marker": null
+        },
+        {
+          "start": 1270,
+          "end": 1271,
+          "start_marker": null,
+          "end_marker": null
+        },
+        {
+          "start": 1275,
+          "end": 1390,
+          "start_marker": null,
+          "end_marker": null
+        },
+        {
+          "start": 1394,
+          "end": 1539,
+          "start_marker": null,
+          "end_marker": null
+        },
+        {
+          "start": 1554,
+          "end": 1555,
+          "start_marker": null,
+          "end_marker": null
+        },
+        {
+          "start": 1559,
+          "end": 1677,
+          "start_marker": null,
+          "end_marker": null
+        },
+        {
+          "start": 1689,
+          "end": 1796,
+          "start_marker": null,
+          "end_marker": null
+        },
+        {
+          "start": 1810,
+          "end": 1917,
+          "start_marker": null,
+          "end_marker": null
+        },
+        {
+          "start": 1929,
+          "end": 2029,
+          "start_marker": null,
+          "end_marker": null
+        },
+        {
+          "start": 2045,
+          "end": 2046,
+          "start_marker": null,
+          "end_marker": null
+        },
+        {
+          "start": 2050,
+          "end": 2294,
+          "start_marker": null,
+          "end_marker": null
+        },
+        {
+          "start": 2310,
+          "end": 2311,
+          "start_marker": null,
+          "end_marker": null
+        },
+        {
+          "start": 2315,
+          "end": 2667,
+          "start_marker": null,
+          "end_marker": null
+        },
+        {
+          "start": 2680,
+          "end": 2681,
+          "start_marker": null,
+          "end_marker": null
+        },
+        {
+          "start": 2685,
+          "end": 2802,
+          "start_marker": null,
+          "end_marker": null
+        },
+        {
+          "start": 2822,
           "end": 2948,
           "start_marker": null,
-          "end_marker": "\n新浪微博"
+          "end_marker": null
         }
       ],
       "candidates": 6,
@@ -54,7 +156,7 @@
           "start": 0,
           "end": 1609,
           "start_marker": null,
-          "end_marker": "\n我们在芦之湖的饭店里面"
+          "end_marker": null
         }
       ],
       "candidates": 0,
@@ -81,8 +183,8 @@
         {
           "start": 4797,
           "end": 7547,
-          "start_marker": "\n箱根\n",
-          "end_marker": "\n、名古屋"
+          "start_marker": null,
+          "end_marker": null
         }
       ],
       "candidates": 0,
@@ -95,8 +197,8 @@
         {
           "start": 5749,
           "end": 6559,
-          "start_marker": "Day 10 箱根",
-          "end_marker": "\n下北泽----"
+          "start_marker": null,
+          "end_marker": null
         }
       ],
       "candidates": 3,
@@ -110,7 +212,7 @@
           "start": 0,
           "end": 5719,
           "start_marker": null,
-          "end_marker": "\nHiking Videos"
+          "end_marker": null
         }
       ],
       "candidates": 2,
@@ -147,8 +249,8 @@
         {
           "start": 40666,
           "end": 43027,
-          "start_marker": "优胜美地,游戏中的磅礴场景",
-          "end_marker": "\n下了山后,在这里会偶遇一片草原"
+          "start_marker": null,
+          "end_marker": null
         }
       ],
       "candidates": 0,
@@ -180,8 +282,8 @@
         {
           "start": 264,
           "end": 4736,
-          "start_marker": "1.1. Yosemite",
-          "end_marker": "\n1.2 Mammoth"
+          "start_marker": null,
+          "end_marker": null
         }
       ],
       "candidates": 0,
@@ -203,7 +305,7 @@
       "ranges": [
         {
           "start": 0,
-          "end": 3385,
+          "end": 3340,
           "start_marker": null,
           "end_marker": null
         }
@@ -252,7 +354,7 @@
           "start": 0,
           "end": 5132,
           "start_marker": null,
-          "end_marker": "\n您可能也喜欢"
+          "end_marker": null
         }
       ],
       "candidates": 6,
@@ -264,7 +366,7 @@
       "ranges": [
         {
           "start": 0,
-          "end": 1608,
+          "end": 1162,
           "start_marker": null,
           "end_marker": null
         }
@@ -279,8 +381,8 @@
         {
           "start": 1850,
           "end": 2292,
-          "start_marker": "DAY 5 ,",
-          "end_marker": "\nDay 6 ,"
+          "start_marker": null,
+          "end_marker": null
         }
       ],
       "candidates": 0,
@@ -293,8 +395,8 @@
         {
           "start": 4461,
           "end": 4728,
-          "start_marker": "4.1 蓝山的魔咒",
-          "end_marker": "\n4.2 悉尼歌剧院"
+          "start_marker": null,
+          "end_marker": null
         }
       ],
       "candidates": 0,
@@ -307,8 +409,8 @@
         {
           "start": 2684,
           "end": 2895,
-          "start_marker": "【直升机体验】",
-          "end_marker": "\n最划算的是Sydney Harbour Heli Flight"
+          "start_marker": null,
+          "end_marker": null
         }
       ],
       "candidates": 0,

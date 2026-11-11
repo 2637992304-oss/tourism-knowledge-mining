@@ -1,25 +1,25 @@
 {
   "graph_status": "fused",
   "missing_inputs": [],
-  "nodes": 153,
-  "edges": 207,
+  "nodes": 156,
+  "edges": 218,
   "node_types": {
     "POI": 47,
     "TIME": 15,
     "TRANSPORT": 12,
     "SCENIC": 3,
     "ROUTE": 4,
-    "STEP": 30,
+    "STEP": 33,
     "CONDITION": 21,
     "ADVICE": 21
   },
   "relations": {
     "HAS_ROUTE": 4,
-    "HAS_STEP": 30,
+    "HAS_STEP": 33,
     "VISITS": 30,
     "AT_TIME": 14,
-    "USES_TRANSPORT": 14,
-    "NEXT_STEP": 26,
+    "USES_TRANSPORT": 19,
+    "NEXT_STEP": 29,
     "HAS_ADVICE": 21,
     "TRIGGERS": 21,
     "APPLIES_TO": 47
@@ -44,8 +44,8 @@
     },
     {
       "route_id": "R_S003_VIS_001_01",
-      "steps": 2,
-      "next_edges": 1
+      "steps": 5,
+      "next_edges": 4
     }
   ],
   "queries": [
@@ -146,6 +146,7 @@
                   "S001_OFF_001"
                 ],
                 "step_kind": "route_activity",
+                "display_name": "箱根汤本",
                 "location_role": "activity_location",
                 "destination_poi_name": null
               },
@@ -174,6 +175,7 @@
                   "S001_OFF_001"
                 ],
                 "step_kind": "route_activity",
+                "display_name": "箱根汤本",
                 "location_role": "activity_location",
                 "destination_poi_name": null
               },
@@ -204,6 +206,7 @@
                   "S001_OFF_001"
                 ],
                 "step_kind": "route_activity",
+                "display_name": "箱根雕刻森林美术馆",
                 "location_role": "activity_location",
                 "destination_poi_name": null
               },
@@ -234,6 +237,7 @@
                   "S001_OFF_001"
                 ],
                 "step_kind": "route_activity",
+                "display_name": "箱根雕刻森林美术馆",
                 "location_role": "activity_location",
                 "destination_poi_name": null
               }
@@ -283,6 +287,36 @@
                 "entity_id": "S001_POI_021",
                 "name": "网之森林",
                 "type": "POI"
+              }
+            ],
+            "entity_roles": [
+              {
+                "entity_id": "S001_POI_020",
+                "role": "suggestion_reference",
+                "polarity": "not_asserted",
+                "polarity_scope": "evidence_clause_not_entity_permission",
+                "evidence": [
+                  {
+                    "doc_id": "S001_OFF_001",
+                    "start": 1121,
+                    "end": 1125,
+                    "text": "泡泡城堡"
+                  }
+                ]
+              },
+              {
+                "entity_id": "S001_POI_021",
+                "role": "suggestion_reference",
+                "polarity": "not_asserted",
+                "polarity_scope": "evidence_clause_not_entity_permission",
+                "evidence": [
+                  {
+                    "doc_id": "S001_OFF_001",
+                    "start": 1128,
+                    "end": 1132,
+                    "text": "网之森林"
+                  }
+                ]
               }
             ],
             "evidence": [
@@ -381,6 +415,230 @@
                 "type": "POI"
               }
             ],
+            "entity_roles": [
+              {
+                "entity_id": "S003_POI_001",
+                "role": "condition_reference",
+                "polarity": "not_asserted",
+                "polarity_scope": "evidence_clause_not_entity_permission",
+                "evidence": [
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "start": 4908,
+                    "end": 4910,
+                    "text": "蓝山"
+                  }
+                ]
+              },
+              {
+                "entity_id": "S003_POI_001",
+                "role": "suggestion_reference",
+                "polarity": "not_asserted",
+                "polarity_scope": "evidence_clause_not_entity_permission",
+                "evidence": [
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "start": 4914,
+                    "end": 4916,
+                    "text": "蓝山"
+                  },
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "start": 5001,
+                    "end": 5003,
+                    "text": "蓝山"
+                  },
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "start": 5004,
+                    "end": 5006,
+                    "text": "蓝山"
+                  },
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "start": 5130,
+                    "end": 5132,
+                    "text": "蓝山"
+                  }
+                ]
+              },
+              {
+                "entity_id": "S003_POI_004",
+                "role": "suggestion_reference",
+                "polarity": "not_asserted",
+                "polarity_scope": "evidence_clause_not_entity_permission",
+                "evidence": [
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "start": 4948,
+                    "end": 4951,
+                    "text": "卡通巴"
+                  },
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "start": 5100,
+                    "end": 5103,
+                    "text": "卡通巴"
+                  }
+                ]
+              },
+              {
+                "entity_id": "S003_POI_005",
+                "role": "suggestion_reference",
+                "polarity": "not_asserted",
+                "polarity_scope": "evidence_clause_not_entity_permission",
+                "evidence": [
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "start": 4959,
+                    "end": 4961,
+                    "text": "罗拉"
+                  },
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "start": 4962,
+                    "end": 4967,
+                    "text": "Leura"
+                  },
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "start": 4982,
+                    "end": 4984,
+                    "text": "罗拉"
+                  },
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "start": 4985,
+                    "end": 4990,
+                    "text": "Leura"
+                  },
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "start": 5024,
+                    "end": 5026,
+                    "text": "罗拉"
+                  },
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "start": 5027,
+                    "end": 5032,
+                    "text": "Leura"
+                  }
+                ]
+              },
+              {
+                "entity_id": "S003_POI_026",
+                "role": "suggestion_reference",
+                "polarity": "not_asserted",
+                "polarity_scope": "evidence_clause_not_entity_permission",
+                "evidence": [
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "start": 4939,
+                    "end": 4947,
+                    "text": "山地文化啤酒公司"
+                  }
+                ]
+              },
+              {
+                "entity_id": "S003_POI_045",
+                "role": "suggestion_reference",
+                "polarity": "not_asserted",
+                "polarity_scope": "evidence_clause_not_entity_permission",
+                "evidence": [
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "start": 5058,
+                    "end": 5064,
+                    "text": "蓝山文化中心"
+                  }
+                ]
+              },
+              {
+                "entity_id": "S003_POI_046",
+                "role": "suggestion_reference",
+                "polarity": "not_asserted",
+                "polarity_scope": "evidence_clause_not_entity_permission",
+                "evidence": [
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "start": 5046,
+                    "end": 5057,
+                    "text": "诺曼·林赛画廊及博物馆"
+                  }
+                ]
+              },
+              {
+                "entity_id": "S003_POI_047",
+                "role": "suggestion_reference",
+                "polarity": "not_asserted",
+                "polarity_scope": "evidence_clause_not_entity_permission",
+                "evidence": [
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "start": 5065,
+                    "end": 5073,
+                    "text": "维多利亚山博物馆"
+                  }
+                ]
+              },
+              {
+                "entity_id": "S003_POI_048",
+                "role": "suggestion_reference",
+                "polarity": "not_asserted",
+                "polarity_scope": "evidence_clause_not_entity_permission",
+                "evidence": [
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "start": 5074,
+                    "end": 5080,
+                    "text": "伍德福德学院"
+                  }
+                ]
+              },
+              {
+                "entity_id": "S003_POI_049",
+                "role": "suggestion_reference",
+                "polarity": "not_asserted",
+                "polarity_scope": "evidence_clause_not_entity_permission",
+                "evidence": [
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "start": 5034,
+                    "end": 5045,
+                    "text": "莉莲菲尔斯日间水疗中心"
+                  }
+                ]
+              },
+              {
+                "entity_id": "S003_POI_050",
+                "role": "suggestion_reference",
+                "polarity": "not_asserted",
+                "polarity_scope": "evidence_clause_not_entity_permission",
+                "evidence": [
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "start": 5009,
+                    "end": 5023,
+                    "text": "昔日美人珍藏茶壶博物馆和茶室"
+                  }
+                ]
+              },
+              {
+                "entity_id": "S003_POI_051",
+                "role": "suggestion_reference",
+                "polarity": "not_asserted",
+                "polarity_scope": "evidence_clause_not_entity_permission",
+                "evidence": [
+                  {
+                    "doc_id": "S003_OFF_001",
+                    "start": 5113,
+                    "end": 5119,
+                    "text": "梅加隆谷茶室"
+                  }
+                ]
+              }
+            ],
             "evidence": [
               {
                 "doc_id": "S003_OFF_001",
@@ -431,13 +689,14 @@
   ],
   "checks_passed": true,
   "advice_checked": 21,
-  "relation_directions_checked": 207,
-  "graph_sha256": "0e90251a3019ddf60cf031e1ba94bb6a964cc886896b812a83e29b38906023f3",
+  "relation_directions_checked": 218,
+  "graph_sha256": "6521a274dd7c61a0d57ad1af46703dad0ff5425cdca716d8b7e1998aa80cedc7",
   "input_sha256": {
-    "routes.json": "d0587da8e06252ac9c1eda14307ec887121d1dbdc2abdba47658b9dcab47288b",
-    "entities.json": "71598abfdec68cd99d3983cd5099ee07c653d41438968d14d7c9ee46ea6caac9",
-    "advice.json": "39092e56a376ca3fc56b23abd3030422154dec56b72ea3cf84d9342a2afff885",
+    "routes.json": "1a3dd437e9ae70292afd4a14c0f8150341919e0569c3e21eba64587cb215514b",
+    "entities.json": "9a313ff85726ba81373e6b6757d02077e99b3a82461a2fb97da553fb75105054",
+    "advice.json": "5e33d4c1d16ac7c948647ae7af3edd4d3c4a0680e02946f3b9f8cc3338c83a78",
     "corpus.jsonl": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0",
-    "source_page_spans.json": "d1de6e5a37c393d280315821e45969d45090f86f639152cfe996254fffb56cb7"
+    "source_page_spans.json": "d1de6e5a37c393d280315821e45969d45090f86f639152cfe996254fffb56cb7",
+    "noise_exclusions.json": "fa9aa3e847602b60c6f71e4e581cd602d07e1d5b0206dc0c7c3a8db5eea8090a"
   }
 }

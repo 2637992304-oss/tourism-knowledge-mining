@@ -313,10 +313,10 @@
           "end": 330,
           "text": "硫磺谷",
           "entity_type": "POI",
-          "canonical_name": "硫磺谷"
+          "canonical_name": "大涌谷"
         }
       ],
-      "judgment": "硫磺谷是描述性地点提及，但尚无已确认目录项；保留漏识别，不能擅自合并大涌谷。"
+      "judgment": "硫磺谷是描述性地点提及，但尚无已确认目录项；保留漏识别，不能擅自合并大涌谷。 本轮依据同篇去大涌谷、下缆车到大涌谷的上下文，改为文档局部归一。"
     },
     {
       "case_id": "C09",
@@ -879,5 +879,6 @@
       "expected": [],
       "judgment": "下午茶为餐饮名称，不能把下午切出作时间。"
     }
-  ]
+  ],
+  "reference_version": "exp02-reference-v1.2"
 }

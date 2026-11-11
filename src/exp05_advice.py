@@ -6,6 +6,8 @@ from collections import Counter
 from difflib import SequenceMatcher
 from mining_io import ROOT, corpus, read_json, write_json, sha256, span
 from source_provenance import evidence_sources
+from noise_filter import effective_ranges
+from advice_roles import entity_roles
 
 CONDITION_TYPES = {'weather', 'visitor_type', 'time', 'crowding', 'other'}
 VISITOR_TYPES = {'elderly', 'family', 'couple', 'general', 'other'}
@@ -115,7 +117,7 @@ def run(variant='optimized',review=True):
     if {d['corpus_version'] for d in docs.values()}!={'v1'} or entities['corpus_version']!='v1':raise ValueError('输入版本不是冻结v1')
     output=[];audit=[];duplicates=[]
     for did,doc in docs.items():
-        selected=[s for s in ranges[did] if not (did=='S003_VIS_004' and s['start']==6195)]
+        selected=effective_ranges(did,[s for s in ranges[did] if not (did=='S003_VIS_004' and s['start']==6195)])
         candidates,rejected=extract_document(doc,selected,variant);candidates,merged=deduplicate(candidates)
         audit.append({'doc_id':did,'ranges':selected,'candidates':len(candidates),'rejected':rejected,
                       'scope_note':'排除[6195,6418)园外酒评' if did=='S003_VIS_004' else '复用实验2相关区间；不修改原文'})
@@ -131,6 +133,7 @@ def run(variant='optimized',review=True):
                         item['suggestion_text']=fixed;item['suggestion_span']=span(did,doc['text'],sa,sa+len(fixed))
                         item['review_correction']=correction['reason']
             ids,notes=related(item,doc,entities)
+            item['entity_roles']=entity_roles(item,doc,entities,ids)
             source_pages=evidence_sources(docs,[did],item['evidence'])
             key=f"{item['condition_span']['start']}:{item['condition_text']}:{item['suggestion_text']}"
             suffix=int(hashlib.sha256(key.encode()).hexdigest()[:12],16)
@@ -146,7 +149,7 @@ def run(variant='optimized',review=True):
             score=SequenceMatcher(None,a['condition_text']+a['suggestion_text'],b['condition_text']+b['suggestion_text']).ratio()
             if a['scenic_id']==b['scenic_id'] and score>=0.82:
                 near_duplicates.append({'advice_ids':[a['advice_id'],b['advice_id']],'similarity':round(score,4),'action':'保留不同条件或来源；不自动语义合并'})
-    payload={'schema_version':'1.0','corpus_version':'v1','resource_version':'exp05-v1.1',
+    payload={'schema_version':'1.0','corpus_version':'v1','resource_version':'exp05-v1.2',
              'reviewed':variant=='optimized' and review,
              'corpus_sha256':sha256(ROOT/'data/processed/corpus.jsonl'),'entities_sha256':sha256(ROOT/'data/outputs/entities.json'),
              'variant':variant,'scope_policy':'exp02相关区间，排除S003_VIS_004园外酒评；全文坐标。',

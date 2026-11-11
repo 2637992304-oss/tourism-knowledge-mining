@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "acceptance_scope": "live",
   "live_validation_pending": false,
-  "run_at": "2026-11-11T20:11:17+08:00",
+  "run_at": "2026-11-11T20:40:02+08:00",
   "python": "3.13.9",
   "checks": {
-    "protected_files_unchanged": true,
+    "protected_inputs_valid": true,
     "exp05_passed": true,
     "exp06_passed": true,
     "exp07_live_passed": true,
@@ -13,17 +13,30 @@
     "unit_tests_passed": true,
     "all_artifacts_present": true,
     "local_key_absent_from_shareable_files": true,
-    "all_s001_nodes_visualized": true
+    "all_s001_nodes_visualized": true,
+    "remaining_review_issues_closed": true
   },
   "passed": true,
   "protected_files": {
     "data/processed/corpus.jsonl": true,
     "data/processed/scenic_registry.json": true,
-    "data/outputs/entities.json": true,
-    "data/outputs/coreference.json": true,
+    "data/outputs/entities.json": false,
+    "data/outputs/coreference.json": false,
     "data/outputs/coreference_resolved_documents.json": true,
     "《数据挖掘》探索性实验任务书及评分细则【Final】.pdf": true,
     "第X组_组长姓名_《数据挖掘》探索性实验报告（模板）.docx": true
+  },
+  "approved_upstream_revisions": {
+    "data/outputs/entities.json": {
+      "previous_sha256": "71598abfdec68cd99d3983cd5099ee07c653d41438968d14d7c9ee46ea6caac9",
+      "sha256": "9a313ff85726ba81373e6b6757d02077e99b3a82461a2fb97da553fb75105054",
+      "reason": "R05/R06/R09已授权的版本化修订；冻结正文、景区登记、任务书、模板均未改"
+    },
+    "data/outputs/coreference.json": {
+      "previous_sha256": "0da68168749a9533286b3bc3ddf3f3f4f8c580ae68daade1e12d8a8ad0dab400",
+      "sha256": "0a96f6cf6bcf606e806d40d44158b4afc0edcd278df6ac6006f29ee1a72bb963",
+      "reason": "R05/R06/R09已授权的版本化修订；冻结正文、景区登记、任务书、模板均未改"
+    }
   },
   "artifacts": {
     "data/outputs/advice.json": true,
@@ -46,7 +59,7 @@
         1600
       ],
       "format": "PNG",
-      "sha256": "ab9cf95eeb9d389d256c732073f503cf761d1ba54881e9b0b316e811b548db51"
+      "sha256": "b9c78d803244c45f4a91ae8c4036a36fd0e7904b9e16dc1b45ed5b7bf008d2a4"
     },
     "exp05_advice_statistics.png": {
       "size": [
@@ -62,17 +75,17 @@
         2715
       ],
       "format": "PNG",
-      "sha256": "371d827559292d8832fe8ec57b6be909c927cf4d3f7188dc9166de04ce4971e8"
+      "sha256": "18ac33e14fc5f10ab20f75862483bc8fcf4e54e6d6d8cfd331d553ceacd7b112"
     }
   },
-  "graph_sha256": "0e90251a3019ddf60cf031e1ba94bb6a964cc886896b812a83e29b38906023f3",
+  "graph_sha256": "6521a274dd7c61a0d57ad1af46703dad0ff5425cdca716d8b7e1998aa80cedc7",
   "metrics": {
     "advice": 21,
-    "graph_nodes": 153,
-    "graph_edges": 207,
+    "graph_nodes": 156,
+    "graph_edges": 218,
     "live_cases": 7,
     "offline_cases": 0,
-    "api_requests": 20
+    "api_requests": 15
   },
   "limitations": [
     "程序核验与AI语义核验，未代替组员独立验收",

@@ -1,11 +1,11 @@
 {
   "variant": "optimized",
   "documents": 18,
-  "mentions": 1403,
+  "mentions": 1395,
   "active_entities": 327,
   "by_type": {
-    "POI": 982,
-    "TRANSPORT": 220,
+    "POI": 977,
+    "TRANSPORT": 217,
     "TIME": 201
   },
   "per_scenic": [
@@ -13,10 +13,10 @@
       "scenic_id": "S001",
       "scenic_name": "日本箱根",
       "docs": 6,
-      "scoped_chars": 10082,
+      "scoped_chars": 9900,
       "mentions_by_type": {
-        "POI": 296,
-        "TRANSPORT": 94,
+        "POI": 291,
+        "TRANSPORT": 92,
         "TIME": 41
       },
       "entities_by_type": {
@@ -29,9 +29,9 @@
       "scenic_id": "S002",
       "scenic_name": "美国优胜美地国家公园",
       "docs": 6,
-      "scoped_chars": 24494,
+      "scoped_chars": 24449,
       "mentions_by_type": {
-        "POI": 424,
+        "POI": 429,
         "TRANSPORT": 64,
         "TIME": 107
       },
@@ -45,10 +45,10 @@
       "scenic_id": "S003",
       "scenic_name": "澳大利亚蓝山国家公园",
       "docs": 6,
-      "scoped_chars": 8335,
+      "scoped_chars": 7889,
       "mentions_by_type": {
-        "POI": 262,
-        "TRANSPORT": 62,
+        "POI": 257,
+        "TRANSPORT": 61,
         "TIME": 53
       },
       "entities_by_type": {
@@ -76,7 +76,7 @@
         "entity_id": "S003_POI_001",
         "canonical_name": "蓝山国家公园",
         "scenic_id": "S003",
-        "count": 60
+        "count": 59
       },
       {
         "entity_id": "S001_POI_002",
@@ -88,7 +88,7 @@
         "entity_id": "S002_POI_004",
         "canonical_name": "Half Dome",
         "scenic_id": "S002",
-        "count": 43
+        "count": 47
       },
       {
         "entity_id": "S002_POI_002",
@@ -115,14 +115,14 @@
         "count": 26
       },
       {
-        "entity_id": "S003_POI_009",
-        "canonical_name": "悉尼",
-        "scenic_id": "S003",
-        "count": 26
-      },
-      {
         "entity_id": "S003_POI_004",
         "canonical_name": "Katoomba",
+        "scenic_id": "S003",
+        "count": 22
+      },
+      {
+        "entity_id": "S003_POI_009",
+        "canonical_name": "悉尼",
         "scenic_id": "S003",
         "count": 21
       },
@@ -144,13 +144,13 @@
         "entity_id": "S001_TRANSPORT_014",
         "canonical_name": "箱根海贼观光船",
         "scenic_id": "S001",
-        "count": 20
+        "count": 19
       },
       {
         "entity_id": "S003_TRANSPORT_004",
         "canonical_name": "自驾",
         "scenic_id": "S003",
-        "count": 17
+        "count": 16
       },
       {
         "entity_id": "S002_TRANSPORT_004",
@@ -195,16 +195,16 @@
         "count": 8
       },
       {
-        "entity_id": "S001_TRANSPORT_012",
-        "canonical_name": "箱根空中缆车",
-        "scenic_id": "S001",
-        "count": 8
-      },
-      {
         "entity_id": "S002_TRANSPORT_002",
         "canonical_name": "巴士",
         "scenic_id": "S002",
         "count": 8
+      },
+      {
+        "entity_id": "S001_TRANSPORT_015",
+        "canonical_name": "浪漫特快",
+        "scenic_id": "S001",
+        "count": 7
       }
     ],
     "TIME": [

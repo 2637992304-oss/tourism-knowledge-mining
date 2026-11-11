@@ -126,6 +126,7 @@ def build(routes_data, registry, entities=None, advice=None, docs=None):
                  {"route_id": route_id, "step_no": no, "time_bucket": step["time_bucket"],
                   "time_text": step["time_text"], "duration_minutes": step["duration_minutes"],
                   "evidence": step["evidence"],
+                  "display_name":step['poi_name'],
                   "step_kind":step.get('step_kind','route_activity'),
                   "location_role":step.get('location_role','activity_location'),
                   "destination_poi_name":step.get('destination_poi_name')})
@@ -140,12 +141,13 @@ def build(routes_data, registry, entities=None, advice=None, docs=None):
                 raise ValueError(f"路线引用不存在的实体：{entity_id}")
             if entity_id and catalog[entity_id]["scenic_id"] != scenic_id:
                 raise ValueError(f"路线实体跨景区：{entity_id}")
-            canonical = catalog[entity_id]["canonical_name"] if entity_id else step["poi_name"]
-            poi_id = entity_nodes[entity_id] if entity_id else name_id(scenic_id, canonical)
-            node(poi_id, "POI", canonical, scenic_id, [doc_id],
-                 {"entity_id": entity_id, "alignment_status": "aligned" if entity_id else "pending"})
-            edge(f"EDGE_VISITS_{route_id}_{no:03d}", step_id, poi_id, "VISITS",
-                 [doc_id], {"evidence": step["evidence"]})
+            if step.get('step_kind')!='transport_activity':
+                canonical = catalog[entity_id]["canonical_name"] if entity_id else step["poi_name"]
+                poi_id = entity_nodes[entity_id] if entity_id else name_id(scenic_id, canonical)
+                node(poi_id, "POI", canonical, scenic_id, [doc_id],
+                     {"entity_id": entity_id, "alignment_status": "aligned" if entity_id else "pending"})
+                edge(f"EDGE_VISITS_{route_id}_{no:03d}", step_id, poi_id, "VISITS",
+                     [doc_id], {"evidence": step["evidence"]})
             for mention in mentions:
                 span = mention["span"]
                 item = catalog[mention["entity_id"]]
@@ -187,7 +189,9 @@ def build(routes_data, registry, entities=None, advice=None, docs=None):
             node(poi_id, entity['entity_type'], entity["canonical_name"], scenic_id, [doc_id],
                  {"entity_id": entity_id, "alignment_status": "aligned"})
             edge(f"EDGE_APPLIES_TO_{advice_id}_{entity_id}", advice_node_id, poi_id,
-                 "APPLIES_TO", [doc_id], {'semantic_role':'related_context','evidence':item['evidence']})
+                 "APPLIES_TO", [doc_id], {'semantic_role':'evidence_scoped_reference',
+                 'entity_roles':[r for r in item.get('entity_roles',[]) if r['entity_id']==entity_id],
+                 'evidence':item['evidence']})
 
     if any(e["source"] not in nodes or e["target"] not in nodes for e in edges.values()):
         raise ValueError("存在悬空边")
@@ -196,7 +200,7 @@ def build(routes_data, registry, entities=None, advice=None, docs=None):
     for nid in unused:
         del nodes[nid]
     missing = [name for name, value in (("entities.json", entities), ("advice.json", advice)) if value is None]
-    return {"schema_version": "1.0", "corpus_version": version, "graph_version": "v3",
+    return {"schema_version": "1.0", "corpus_version": version, "graph_version": "v4",
             "builder_provenance":"YZH 60a7dda路线实体融合；FYH接管建议融合与验证",
             "advice_availability":"missing_upstream" if advice is None else "available" if advice['advice'] else "available_empty",
             "advice_count":len((advice or {}).get('advice',[])),
@@ -223,7 +227,7 @@ def main():
         entities = load(args.outputs_dir / "entities.json", "entity_catalog", routes["corpus_version"])
         advice = load(args.outputs_dir / "advice.json", "advice", routes["corpus_version"])
         graph = build(routes, registry, entities, advice,corpus())
-        graph['input_sha256']={p.name:sha256(p) for p in [args.outputs_dir/'routes.json',args.outputs_dir/'entities.json',args.outputs_dir/'advice.json',Path('data/processed/corpus.jsonl'),Path('data/resources/source_page_spans.json')] if p.exists()}
+        graph['input_sha256']={p.name:sha256(p) for p in [args.outputs_dir/'routes.json',args.outputs_dir/'entities.json',args.outputs_dir/'advice.json',Path('data/processed/corpus.jsonl'),Path('data/resources/source_page_spans.json'),Path('data/resources/noise_exclusions.json')] if p.exists()}
         if args.require_entities and entities is None:
             raise ValueError("核心融合缺少 entities.json")
         if args.require_complete and graph["missing_inputs"]:

@@ -56,6 +56,11 @@ def validate(payload,docs,entities):
             if s['text']!=a[field+'_text'] or not any(e['start']<=s['start'] and s['end']<=e['end'] for e in a['evidence']):raise ValueError('边界或证据覆盖错误')
         for eid in a['related_entity_ids']:
             if eid not in cat or cat[eid]['scenic_id']!=a['scenic_id']:raise ValueError('无效/停用/跨景区实体')
+        if 'entity_roles' in a:
+            if {r['entity_id'] for r in a['entity_roles']}!=set(a['related_entity_ids']):raise ValueError('实体角色覆盖不全')
+            for role in a['entity_roles']:
+                if role['role'] not in {'condition_reference','suggestion_reference','supporting_context','comparison_reference'}:raise ValueError('未知实体角色')
+                for evidence in role['evidence']:check_span(evidence,docs)
         key=(a['doc_id'],normalize(a['condition_text']),normalize(a['suggestion_text']))
         if key in keys:raise ValueError('重复关系')
         keys.add(key)

@@ -4,12 +4,12 @@
   "documents": 5,
   "characters": 6053,
   "cases": 59,
-  "checked_evidence_spans": 404,
+  "checked_evidence_spans": 405,
   "ids_unique": true,
   "input_hashes_unchanged": {
     "data/processed/corpus.jsonl": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0",
-    "data/outputs/entities.json": "71598abfdec68cd99d3983cd5099ee07c653d41438968d14d7c9ee46ea6caac9",
-    "data/resources/exp04_reference.json": "a24ca1764030d08ee294e4904a46d74fc6d9ae7bcae0b995a7082f3df18dd642"
+    "data/outputs/entities.json": "9a313ff85726ba81373e6b6757d02077e99b3a82461a2fb97da553fb75105054",
+    "data/resources/exp04_reference.json": "e5d70ea7e09ec717ec1d2ad03ccfd765709164dd3285a8f90b9b89b7345304db"
   },
   "deterministic_rerun": true,
   "full_document_detection_matches_reference": true,

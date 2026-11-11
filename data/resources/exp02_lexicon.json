@@ -1,5 +1,5 @@
 {
-  "resource_version": "exp02-v1.1",
+  "resource_version": "exp02-v1.2",
   "annotation_origin": "基于v1语料逐篇阅读，AI辅助整理，组员独立复核待完成",
   "poi_entries": [
     {
@@ -1890,6 +1890,19 @@
       "scope": "inside",
       "baseline": false,
       "note": "S003_OFF_001明确描述先到达野餐区再步行前往瀑布；与瀑布S003_POI_007、步道S003_POI_014、镇区S003_POI_006分别登记，不合并。"
+    },
+    {
+      "entity_id": "S001_POI_043",
+      "scenic_id": "S001",
+      "entity_type": "POI",
+      "canonical_name": "水中神社",
+      "aliases": [],
+      "document_ids": [
+        "S001_VIS_003"
+      ],
+      "scope": "unknown",
+      "baseline": false,
+      "note": "保留作者水边打卡点指称；建筑边界不确定，不与和平鸟居或箱根神社合并。"
     }
   ],
   "transport_entries": [
@@ -2175,33 +2188,7 @@
       "时间"
     ]
   },
-  "ambiguous_names": [
-    {
-      "surface": "Half Doom",
-      "suggested": "Half Dome",
-      "reason": "游记拼写疑似错误，待成员确认，未自动合并"
-    },
-    {
-      "surface": "Glacie Point",
-      "suggested": "Glacier Point",
-      "reason": "拼写疑似错误，未自动合并"
-    },
-    {
-      "surface": "硫磺谷",
-      "suggested": "大涌谷",
-      "reason": "作者描述性称呼，不能仅据相似语义自动合并"
-    },
-    {
-      "surface": "水中神社",
-      "suggested": "和平鸟居 / 箱根神社",
-      "reason": "建筑与神社整体有边界歧义，待确认"
-    },
-    {
-      "surface": "卡图姆巴",
-      "suggested": "Katoomba",
-      "reason": "疑似异译名，保留在待确认清单"
-    }
-  ],
+  "ambiguous_names": [],
   "context_exclusions": [
     "Half Dome Pizza",
     "Half Dome View",
@@ -2209,5 +2196,27 @@
     "一点（程度）",
     "下午茶（餐饮）",
     "箱根周游券／箱根2日周游券（票券名称）"
+  ],
+  "contextual_aliases": [
+    {
+      "surface": "Half Doom",
+      "entity_id": "S002_POI_004",
+      "doc_id": "S002_VIS_001"
+    },
+    {
+      "surface": "Glacie Point",
+      "entity_id": "S002_POI_005",
+      "doc_id": "S002_VIS_005"
+    },
+    {
+      "surface": "硫磺谷",
+      "entity_id": "S001_POI_002",
+      "doc_id": "S001_VIS_003"
+    },
+    {
+      "surface": "卡图姆巴",
+      "entity_id": "S003_POI_004",
+      "doc_id": "S003_OFF_001"
+    }
   ]
 }

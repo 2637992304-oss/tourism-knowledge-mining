@@ -621,6 +621,69 @@
           "step_no": 2,
           "time_bucket": "unknown",
           "time_text": null,
+          "poi_entity_id": null,
+          "poi_name": "下山的缆车",
+          "raw_poi_name": "下山的缆车",
+          "activity": "在这里可以购买缆车套票,28澳币,有3种缆车可以乘坐呢! 先坐下山的缆车,途中可以看到云在桉树林上的阴影,还有云缝中投射到桉树上的阳光",
+          "duration_minutes": null,
+          "evidence": [
+            {
+              "doc_id": "S003_VIS_001",
+              "start": 586,
+              "end": 653,
+              "text": "在这里可以购买缆车套票,28澳币,有3种缆车可以乘坐呢! 先坐下山的缆车,途中可以看到云在桉树林上的阴影,还有云缝中投射到桉树上的阳光"
+            }
+          ],
+          "step_kind": "transport_activity",
+          "location_role": "unnamed_transport_activity",
+          "alignment_method": "not_applicable_transport"
+        },
+        {
+          "step_no": 3,
+          "time_bucket": "unknown",
+          "time_text": null,
+          "poi_entity_id": null,
+          "poi_name": "近90度陡的缆车",
+          "raw_poi_name": "近90度陡的缆车",
+          "activity": "下到山下,我们便要沿着山谷穿过树林,来乘坐世界上独一无二的近90度陡的缆车",
+          "duration_minutes": null,
+          "evidence": [
+            {
+              "doc_id": "S003_VIS_001",
+              "start": 655,
+              "end": 692,
+              "text": "下到山下,我们便要沿着山谷穿过树林,来乘坐世界上独一无二的近90度陡的缆车"
+            }
+          ],
+          "step_kind": "transport_activity",
+          "location_role": "unnamed_transport_activity",
+          "alignment_method": "not_applicable_transport"
+        },
+        {
+          "step_no": 4,
+          "time_bucket": "unknown",
+          "time_text": null,
+          "poi_entity_id": null,
+          "poi_name": "SKYWAY缆车",
+          "raw_poi_name": "SKYWAY缆车",
+          "activity": "最后一段旅程乘上SKYWAY缆车横越公园山谷和瀑布",
+          "duration_minutes": null,
+          "evidence": [
+            {
+              "doc_id": "S003_VIS_001",
+              "start": 711,
+              "end": 736,
+              "text": "最后一段旅程乘上SKYWAY缆车横越公园山谷和瀑布"
+            }
+          ],
+          "step_kind": "transport_activity",
+          "location_role": "unnamed_transport_activity",
+          "alignment_method": "not_applicable_transport"
+        },
+        {
+          "step_no": 5,
+          "time_bucket": "unknown",
+          "time_text": null,
           "poi_entity_id": "S003_POI_037",
           "poi_name": "Jenolan Caves",
           "raw_poi_name": "Jenolan Caves珍罗兰洞",

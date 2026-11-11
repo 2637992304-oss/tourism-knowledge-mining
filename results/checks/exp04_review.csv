@@ -13,7 +13,7 @@ CR_S001_VIS_003_00152,S001_VIS_003,它,152,153,resolved,小田急线的箱根2�
 CR_S001_VIS_003_00270,S001_VIS_003,那里,270,272,resolved,桃源台 [S001_POI_010],桃源台 [S001_POI_010],True,出游方向指前文订酒店的桃源台地区。
 CR_S001_VIS_003_00347,S001_VIS_003,那,347,348,resolved,"浓烟滚滚,往下看原来是硫磺谷,谷里遍地都是燃烧着浓烟的硫磺洞 [entity_id=null]",null,False,那情景概括前面描写的火山景象。
 CR_S001_VIS_003_00398,S001_VIS_003,这里,398,400,resolved,大涌谷 [S001_POI_002],大涌谷 [S001_POI_002],True,硫磺水的地点是当前大涌谷。
-CR_S001_VIS_003_00559,S001_VIS_003,这个,559,561,resolved,水中神社 [entity_id=null],水中神社 [entity_id=null],True,这个打卡点指刚参观的水中神社；实验2目录没有此名称，entity_id为null。
+CR_S001_VIS_003_00559,S001_VIS_003,这个,559,561,resolved,水中神社 [S001_POI_043],水中神社 [S001_POI_043],True,这个打卡点指刚参观的水中神社；实验2目录没有此名称，entity_id为null。 本轮新增原文指称ID，仍不认定具体建筑边界。
 CR_S002_VIS_005_00113,S002_VIS_005,它,113,114,resolved,优胜美地国家公园 [S002_POI_001],优胜美地国家公园 [S002_POI_001],True,给它三天时间，指游览目标公园。
 CR_S002_VIS_005_00148,S002_VIS_005,这,148,149,non_anaphoric,null,null,True,这是…时间为当下季节的时间指示，不强行对齐公园。
 CR_S002_VIS_005_00403,S002_VIS_005,那,403,404,resolved,Yosemite Valley [S002_POI_002],Yosemite Valley [S002_POI_002],True,那一片指山谷区域。
@@ -46,7 +46,7 @@ CR_S003_VIS_001_00353,S003_VIS_001,这,353,354,resolved,三姐妹峰 [S003_POI_0
 CR_S003_VIS_001_00404,S003_VIS_001,这,404,405,resolved,三位美貌的姐妹 [entity_id=null],三位美貌的姐妹 [entity_id=null],True,这三位姐妹指前句引出的三姐妹人物。
 CR_S003_VIS_001_00428,S003_VIS_001,他们,428,430,resolved,三位美貌的姐妹 [entity_id=null],三位美貌的姐妹 [entity_id=null],True,原文误用他们，但语义主语仍为三姐妹，不能指部落。
 CR_S003_VIS_001_00451,S003_VIS_001,这,451,452,resolved,他们三人同时爱上了山下Nepean族兄弟三人 [entity_id=null],Katoomba [S003_POI_004],False,这是有违规矩，概括前一句跨族恋爱事件。
-CR_S003_VIS_001_00474,S003_VIS_001,他们,474,476,ambiguous,null,三位美貌的姐妹 [entity_id=null],False,他们的恋情可指三姐妹或三对恋人，群体边界无法唯一判断；保留歧义。
+CR_S003_VIS_001_00474,S003_VIS_001,他们,474,476,resolved,三位美貌的姐妹 [entity_id=null],三位美貌的姐妹 [entity_id=null],True,2026-11-11 AI辅助仲裁：前文这三位姐妹→他们三人→他们的恋情构成连续指代，采用三姐妹群体；不将其等同岩石POI。旧标签与指标归档，不修改预测凑分。
 CR_S003_VIS_001_00512,S003_VIS_001,她们,512,514,resolved,三位美貌的姐妹 [entity_id=null],三位美貌的姐妹 [entity_id=null],True,巫师把她们变石头，受事是人物三姐妹，不能与岩石POI混合。
 CR_S003_VIS_001_00587,S003_VIS_001,这里,587,589,ambiguous,null,蓝山国家公园 [S003_POI_001],False,此处已进入缆车售票点叙述，但没有明确售票地点名称，不能只凭最近蓝山强填。
 CR_S003_VIS_001_00700,S003_VIS_001,这个,700,702,exophoric,null,蓝山国家公园 [S003_POI_001],False,这个地底下依赖照片或现场视角，文本中无明确地点边界。

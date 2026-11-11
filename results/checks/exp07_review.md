@@ -1,14 +1,14 @@
 # 实验7场景核验
 
-执行模式：live_api；20次本轮API请求；图谱v3。
+执行模式：live_api；15次本轮API请求；图谱v4。
 offline_revalidation为对历史模型提案的程序复验，不是新模型调用；语义仍需组员独立复核。
 
 ## AG_001
 我想带孩子在箱根玩一天，请基于图谱安排路线，并找明确适合亲子的建议。
 
 状态：partial
-约束：{'scenic_id': 'S001', 'visitor_type': 'family', 'time_bucket': None, 'duration_days': 1, 'condition_type': 'visitor_type', 'missing_information': [], 'conflicts': [], 'decision_summary': '用户明确带孩子在箱根游玩一天，需基于图谱安排亲子路线并优先明确适合亲子的建议。'}
-工具：[('query_routes', {'scenic_id': 'S001'}, 'ok'), ('query_advice', {'scenic_id': 'S001', 'visitor_type': 'family', 'condition_type': 'visitor_type'}, 'ok')]
+约束：{'scenic_id': 'S001', 'visitor_type': 'family', 'time_bucket': None, 'duration_days': 1, 'condition_type': 'visitor_type', 'missing_information': [], 'conflicts': [], 'decision_summary': '用户明确带孩子去日本箱根游玩一天，需要亲子友好路线与建议；未提具体时段。'}
+工具：[('query_routes', {'scenic_id': 'S001', 'time_bucket': None}, 'ok'), ('query_advice', {'scenic_id': 'S001', 'visitor_type': 'family', 'condition_type': 'visitor_type'}, 'ok')]
 核验：['通过程序核对路线/步骤/建议ID和引用；尚需组员独立语义验收']
 最终结果：{
   "route_id": "R_S001_OFF_001_01",
@@ -237,6 +237,36 @@ offline_revalidation为对历史模型提案的程序复验，不是新模型调
           "type": "POI"
         }
       ],
+      "entity_roles": [
+        {
+          "entity_id": "S001_POI_020",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S001_OFF_001",
+              "start": 1121,
+              "end": 1125,
+              "text": "泡泡城堡"
+            }
+          ]
+        },
+        {
+          "entity_id": "S001_POI_021",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S001_OFF_001",
+              "start": 1128,
+              "end": 1132,
+              "text": "网之森林"
+            }
+          ]
+        }
+      ],
       "evidence": [
         {
           "doc_id": "S001_OFF_001",
@@ -260,20 +290,23 @@ offline_revalidation为对历史模型提案的程序复验，不是新模型调
   ],
   "supplementary_advice": [
     {
-      "text": "按来源时刻从7:30新宿出发至17:00汤本购物，全天行程约为9.5小时（含交通与游览，实际以当日交通和停留时间为准）。",
+      "text": "按来源时刻，这条路线从7:30新宿出发到17:00汤本购物，整体约占据一个白天；此为根据原文时刻的估计，并非工具给出的总时长。",
       "basis": "estimate"
     },
     {
-      "text": "文中时刻为来源的历史推荐时间，非实时班次或路况；建议出行前核实交通班次、设施开放情况与人流。",
+      "text": "带儿童可优先把时间放在雕刻森林美术馆：亲子建议提到大号密封舱及“泡泡城堡”“网之森林”等体验，但这些地点不是本路线中的独立步骤，不宜自行插入或改写路线顺序。",
+      "basis": "general_suggestion"
+    },
+    {
+      "text": "文中时刻为历史推荐时间，出发前请核实交通班次、开放情况与天气。",
       "basis": "general_suggestion"
     }
   ],
   "limitations": [
-    "官方路线未标注老人、亲子或情侣适用性，不能据此保证整条路线适合亲子。",
-    "明确的亲子建议只针对相关实体“泡泡城堡”“网之森林”；图谱未证明其属于本路线步骤，也未证明可替换或新增到该路线。",
-    "无各步骤预计用时数据，无法验证一天内实际可完成的时长。",
-    "路线包含新宿至箱根汤本的景区外接驳起点。",
-    "图谱不是实时路况或运营服务，价格、开放与服务需出行前核实。",
+    "原路线未标注老人/亲子/情侣适用性，不能保证整条路线适合亲子。",
+    "图谱未提供各步骤或全程的预计用时，无法核验是否满足一日游总时长。",
+    "亲子建议仅涉及雕刻森林美术馆内的具体体验，且相关实体不等于必访项。",
+    "图谱不是实时路况或运营服务，班次、开放与价格需出行前核实。",
     "原路线未标注整体人群适用性；条件建议的明确标签不证明全路线适合该人群。",
     "图谱缺少完整停留及交通耗时，不能保证满足请求总时长；原文钟点仅为历史推荐。"
   ],
@@ -295,8 +328,8 @@ offline_revalidation为对历史模型提案的程序复验，不是新模型调
 带老人去箱根，只看上午路线，有适合老人的建议吗？
 
 状态：partial
-约束：{'scenic_id': 'S001', 'visitor_type': 'elderly', 'time_bucket': 'morning', 'duration_days': None, 'condition_type': 'visitor_type', 'missing_information': [], 'conflicts': [], 'decision_summary': '用户明确带老人前往箱根，并只看上午路线；景区已登记为S001，未提及其他互斥时长或缺失景区。'}
-工具：[('query_routes', {'scenic_id': 'S001', 'time_bucket': 'morning'}, 'ok'), ('query_advice', {'scenic_id': 'S001', 'visitor_type': 'elderly', 'condition_type': 'visitor_type'}, 'no_match'), ('query_advice', {'condition_type': 'visitor_type', 'scenic_id': 'S001', 'visitor_type': 'general'}, 'no_match'), ('query_advice', {'condition_type': 'time', 'scenic_id': 'S001', 'visitor_type': None}, 'no_match')]
+约束：{'scenic_id': 'S001', 'visitor_type': 'elderly', 'time_bucket': 'morning', 'duration_days': None, 'condition_type': 'visitor_type', 'missing_information': [], 'conflicts': [], 'decision_summary': '用户明确带老人前往箱根，并限定只看上午路线。'}
+工具：[('query_routes', {'scenic_id': 'S001', 'time_bucket': 'morning'}, 'ok'), ('query_advice', {'scenic_id': 'S001', 'visitor_type': 'elderly', 'condition_type': 'visitor_type'}, 'no_match')]
 核验：['通过程序核对路线/步骤/建议ID和引用；尚需组员独立语义验收']
 最终结果：{
   "route_id": "R_S001_OFF_001_01",
@@ -381,23 +414,15 @@ offline_revalidation为对历史模型提案的程序复验，不是新模型调
   "advice": [],
   "supplementary_advice": [
     {
-      "text": "上述时刻为原路线中的历史推荐时间，不是实时班次或路况；该上午片段为“初游箱根当日往返路线”的一部分，原路线整体为7:30新宿出发至17:00汤本购物，未提供各步骤或整体的预计用时，需另行核实。",
+      "text": "当前结果只是原路线中的上午片段，并非完整一日路线；原路线未标注老人适用性，也没有可用的总时长或步行强度数据，安排时应结合老人体力预留休息和返程时间。",
       "basis": "general_suggestion"
-    },
-    {
-      "text": "按原路线时刻推算，上午片段自7:30出发至10:00抵达美术馆，行程历时约为2.5小时（估计值，不含返程与停留时长）。",
-      "basis": "estimate"
     }
   ],
   "limitations": [
-    "原路线未标注老人适用性，不能据此保证适合老人（步行量、台阶、换乘便利性均无证据）",
-    "老人专属条件建议查询结果为no_match（数据已接入但无匹配建议），无可引用的适老建议",
-    "上午时段条件建议查询结果同样为no_match",
-    "各步骤duration_minutes为空，无法给出有依据的停留或总时长",
-    "列表仅为原路线上午片段，不能视为完整一日路线；未纳入午后及傍晚行程",
-    "图谱非实时服务，不反映当日列车班次、拥挤或天气情况",
-    "query_advice：no_advice_match：数据已接入，但没有明确满足该过滤条件的建议",
-    "query_advice：no_advice_match：数据已接入，但没有明确满足该过滤条件的建议",
+    "没有明确匹配“老人适用”的条件建议。",
+    "原路线未标注老人适用性，不能据此保证适合老人。",
+    "缺少总时长、步行强度和休息安排数据。",
+    "上午路线是原路线的时间段片段，不构成完整一日行程。",
     "query_advice：no_advice_match：数据已接入，但没有明确满足该过滤条件的建议",
     "原路线未标注整体人群适用性；条件建议的明确标签不证明全路线适合该人群。"
   ],
@@ -419,9 +444,9 @@ offline_revalidation为对历史模型提案的程序复验，不是新模型调
 情侣去蓝山两天，如果下雨，有哪些建议和可参考路线？
 
 状态：partial
-约束：{'scenic_id': 'S003', 'visitor_type': 'couple', 'time_bucket': None, 'duration_days': 2, 'condition_type': 'weather', 'missing_information': [], 'conflicts': [], 'decision_summary': '情侣计划前往澳大利亚蓝山国家公园游玩两天，并询问下雨情况下的建议和可参考路线。'}
-工具：[('query_routes', {'scenic_id': 'S003', 'time_bucket': None}, 'ok'), ('query_advice', {'scenic_id': 'S003', 'visitor_type': 'couple', 'condition_type': 'visitor_type'}, 'no_match'), ('query_advice', {'scenic_id': 'S003', 'visitor_type': None, 'condition_type': 'weather'}, 'ok'), ('query_advice', {'scenic_id': 'S003', 'visitor_type': 'general', 'condition_type': None}, 'no_match')]
-核验：['final_validation: invalid_final_schema', '通过程序核对路线/步骤/建议ID和引用；尚需组员独立语义验收']
+约束：{'scenic_id': 'S003', 'visitor_type': 'couple', 'time_bucket': None, 'duration_days': 2, 'condition_type': 'weather', 'missing_information': [], 'conflicts': [], 'decision_summary': '情侣计划蓝山两天行程，并询问下雨情况下的建议与参考路线。'}
+工具：[('query_routes', {'scenic_id': 'S003'}, 'ok'), ('query_advice', {'scenic_id': 'S003', 'visitor_type': 'couple'}, 'no_match'), ('query_advice', {'scenic_id': 'S003', 'condition_type': 'weather'}, 'ok')]
+核验：['通过程序核对路线/步骤/建议ID和引用；尚需组员独立语义验收']
 最终结果：{
   "route_id": "R_S003_OFF_001_01",
   "steps": [
@@ -718,6 +743,230 @@ offline_revalidation为对历史模型提案的程序复验，不是新模型调
           "type": "POI"
         }
       ],
+      "entity_roles": [
+        {
+          "entity_id": "S003_POI_001",
+          "role": "condition_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4908,
+              "end": 4910,
+              "text": "蓝山"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_001",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4914,
+              "end": 4916,
+              "text": "蓝山"
+            },
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5001,
+              "end": 5003,
+              "text": "蓝山"
+            },
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5004,
+              "end": 5006,
+              "text": "蓝山"
+            },
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5130,
+              "end": 5132,
+              "text": "蓝山"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_004",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4948,
+              "end": 4951,
+              "text": "卡通巴"
+            },
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5100,
+              "end": 5103,
+              "text": "卡通巴"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_005",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4959,
+              "end": 4961,
+              "text": "罗拉"
+            },
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4962,
+              "end": 4967,
+              "text": "Leura"
+            },
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4982,
+              "end": 4984,
+              "text": "罗拉"
+            },
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4985,
+              "end": 4990,
+              "text": "Leura"
+            },
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5024,
+              "end": 5026,
+              "text": "罗拉"
+            },
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5027,
+              "end": 5032,
+              "text": "Leura"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_026",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4939,
+              "end": 4947,
+              "text": "山地文化啤酒公司"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_045",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5058,
+              "end": 5064,
+              "text": "蓝山文化中心"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_046",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5046,
+              "end": 5057,
+              "text": "诺曼·林赛画廊及博物馆"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_047",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5065,
+              "end": 5073,
+              "text": "维多利亚山博物馆"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_048",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5074,
+              "end": 5080,
+              "text": "伍德福德学院"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_049",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5034,
+              "end": 5045,
+              "text": "莉莲菲尔斯日间水疗中心"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_050",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5009,
+              "end": 5023,
+              "text": "昔日美人珍藏茶壶博物馆和茶室"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_051",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5113,
+              "end": 5119,
+              "text": "梅加隆谷茶室"
+            }
+          ]
+        }
+      ],
       "evidence": [
         {
           "doc_id": "S003_OFF_001",
@@ -741,18 +990,22 @@ offline_revalidation为对历史模型提案的程序复验，不是新模型调
   ],
   "supplementary_advice": [
     {
-      "text": "上述步骤为来源列出的一日游候选活动清单，按原文时间分段与顺序呈现，并非两日连续行程；无法据此估计两天各段用时，需自行取舍并在出行前核实开放与服务。",
+      "text": "该路线原文为按早晨/下午/晚上分段的候选活动清单，并非必须连续完成的整日行程；两天行程可把其中室内项与雨天建议中的室内活动搭配，户外瞭望台与步道按当天雨势取舍。",
       "basis": "general_suggestion"
+    },
+    {
+      "text": "预计两天行程需自行按上午/下午分段安排，每个地点停留时长原始数据未给出，无法估计总时长。",
+      "basis": "estimate"
     }
   ],
   "limitations": [
-    "情侣专属建议查询无匹配（no_advice_match），无法确认路线或活动的情侣适用性。",
-    "图谱仅提供一日游候选活动，没有两日完整路线，无法满足两天时长安排。",
-    "原路线未标注老人/亲子/情侣适用性，列出步骤不表示适合情侣或雨天适用。",
-    "雨天建议为来源历史陈述，价格、开放时间与服务须出行前核实。",
-    "本规划不提供实时天气或路况判断，雨天户外步骤（瀑布步道、瞭望台、夜间灯光步道）的可行性未经验证。",
+    "未查到情侣（couple）标签的专属建议，不能声称该路线适合情侣。",
+    "无已核实的蓝山两天路线，仅提供官方一日候选活动清单作参考，两日如何分配需自行安排。",
+    "路线与建议均未标注各地点预计用时，无法给出时长或可达性保证。",
+    "下雨天建议中的室内场所（画廊、博物馆、水疗、茶室等）原始数据为历史陈述，开放时间与服务须出行前核实。",
+    "路线含瞭望台、瀑布步道等户外环节，雨天是否适宜原文未说明。",
+    "未查询实时天气或路况，图谱不是实时路况服务。",
     "以下仅为原文顺序的候选活动，含可选推荐；不是必须依次完成的固定路线。",
-    "query_advice：no_advice_match：数据已接入，但没有明确满足该过滤条件的建议",
     "query_advice：no_advice_match：数据已接入，但没有明确满足该过滤条件的建议",
     "原路线未标注整体人群适用性；条件建议的明确标签不证明全路线适合该人群。",
     "图谱缺少完整停留及交通耗时，不能保证满足请求总时长；原文钟点仅为历史推荐。",
@@ -777,7 +1030,7 @@ offline_revalidation为对历史模型提案的程序复验，不是新模型调
 请给我优胜美地的路线和避免拥挤的建议。
 
 状态：partial
-约束：{'scenic_id': 'S002', 'visitor_type': None, 'time_bucket': None, 'duration_days': None, 'condition_type': 'crowding', 'missing_information': [], 'conflicts': [], 'decision_summary': '用户明确查询优胜美地国家公园的路线，并希望避免拥挤。'}
+约束：{'scenic_id': 'S002', 'visitor_type': None, 'time_bucket': None, 'duration_days': None, 'condition_type': 'crowding', 'missing_information': [], 'conflicts': [], 'decision_summary': '用户请求优胜美地路线及避免拥挤建议；识别景区为S002，并记录拥挤条件。'}
 工具：[('query_routes', {'scenic_id': 'S002'}, 'no_match'), ('query_advice', {'scenic_id': 'S002', 'condition_type': 'crowding'}, 'ok')]
 核验：['通过程序核对路线/步骤/建议ID和引用；尚需组员独立语义验收']
 最终结果：{
@@ -791,6 +1044,7 @@ offline_revalidation为对历史模型提案的程序复验，不是新模型调
       "visitor_types": [],
       "suggestion_text": "建议计划周中去,人会少很多",
       "related_entities": [],
+      "entity_roles": [],
       "evidence": [
         {
           "doc_id": "S002_VIS_004",
@@ -814,15 +1068,15 @@ offline_revalidation为对历史模型提案的程序复验，不是新模型调
   ],
   "supplementary_advice": [
     {
-      "text": "该建议来自游客游记，属于历史经验；预约政策、开放情况和实际人流须出行前另行核实。",
+      "text": "可优先考虑周中出行以降低拥挤程度；该建议来自历史游客记录，实际出发前请核实最新预约与开放要求。",
       "basis": "general_suggestion"
     }
   ],
   "limitations": [
-    "路线查询无匹配：当前图谱未覆盖该景区或时间段，不代表现实中没有路线",
-    "图谱不是实时路况或人流服务，无法提供实时拥挤程度",
-    "未查询人群适用性（用户未指定人群），无适用性证据",
-    "来源为游客日记类历史陈述，价格、开放、预约要求须出行前核实",
+    "query_routes对S002返回no_match：当前图谱未覆盖该景区路线，无法提供有序路线方案。",
+    "未指定出行时间段，且无路线数据可用于匹配时段。",
+    "未查询人群适用性：用户未提出老人、亲子等要求，现有建议也未标注人群适用。",
+    "图谱不是实时路况或客流监测服务，无法保证实际拥挤程度。",
     "query_routes：no_route_match：当前图谱未覆盖该景区/时间段；不代表现实中没有路线"
   ],
   "source_refs": [
@@ -843,7 +1097,7 @@ offline_revalidation为对历史模型提案的程序复验，不是新模型调
 带孩子玩一天，帮我规划。
 
 状态：partial
-约束：{'scenic_id': None, 'visitor_type': 'family', 'time_bucket': None, 'duration_days': 1, 'condition_type': 'visitor_type', 'missing_information': ['未指定景区'], 'conflicts': [], 'decision_summary': '用户带孩子出行，计划游玩1天，但未指定景区，需先确认景区后再检索。'}
+约束：{'scenic_id': None, 'visitor_type': 'family', 'time_bucket': None, 'duration_days': 1, 'condition_type': None, 'missing_information': ['未提供景区'], 'conflicts': [], 'decision_summary': '用户明确带孩子一日游，未指定景区，因此scenic_id为null。'}
 工具：[]
 核验：['需澄清后再查询；未生成无证据行程']
 最终结果：{
@@ -857,12 +1111,12 @@ offline_revalidation为对历史模型提案的程序复验，不是新模型调
 去箱根，必须总共一天完成，但同时总共必须两天完成，不接受放宽。
 
 状态：partial
-约束：{'scenic_id': 'S001', 'visitor_type': None, 'time_bucket': None, 'duration_days': None, 'condition_type': 'time', 'missing_information': [], 'conflicts': ['用户同时要求总行程必须一天完成和必须两天完成，二者互斥且不接受放宽'], 'decision_summary': '识别景区为日本箱根，但行程天数约束存在一天与两天互斥冲突，无法确定duration_days。'}
+约束：{'scenic_id': 'S001', 'visitor_type': None, 'time_bucket': None, 'duration_days': None, 'condition_type': 'time', 'missing_information': [], 'conflicts': ['总时长要求互斥：必须一天完成且必须两天完成，不接受放宽'], 'decision_summary': '识别景区为箱根；时长要求同时为一天和两天且互斥，无法确定duration_days。'}
 工具：[]
 核验：['需澄清后再查询；未生成无证据行程']
 最终结果：{
   "clarification": [
-    "你的要求存在冲突：用户同时要求总行程必须一天完成和必须两天完成，二者互斥且不接受放宽。请确认采用哪一种时长要求？"
+    "你的要求存在冲突：总时长要求互斥：必须一天完成且必须两天完成，不接受放宽。请确认采用哪一种时长要求？"
   ],
   "source_refs": []
 }
@@ -871,12 +1125,12 @@ offline_revalidation为对历史模型提案的程序复验，不是新模型调
 给我黄山的游览路线。
 
 状态：partial
-约束：{'scenic_id': None, 'visitor_type': None, 'time_bucket': None, 'duration_days': None, 'condition_type': None, 'missing_information': ['黄山不在已登记景区列表'], 'conflicts': [], 'decision_summary': '用户请求黄山游览路线，但黄山未登记在已知景区列表中，无法映射到scenic_id。'}
+约束：{'scenic_id': None, 'visitor_type': None, 'time_bucket': None, 'duration_days': None, 'condition_type': None, 'missing_information': ['未登记景区：黄山'], 'conflicts': [], 'decision_summary': '用户请求黄山游览路线，但黄山不在登记景区中，无法检索。'}
 工具：[]
 核验：['需澄清后再查询；未生成无证据行程']
 最终结果：{
   "clarification": [
-    "你指定的“黄山”尚未被知识库覆盖。当前知识库仅覆盖日本箱根、美国优胜美地和澳大利亚蓝山。你希望查询其中哪个景区？当前不能为未覆盖景区生成有来源的路线。"
+    "你请求的目的地尚未被知识库覆盖。当前知识库仅覆盖日本箱根、美国优胜美地和澳大利亚蓝山。你希望查询其中哪个景区？当前不能为未覆盖景区生成有来源的路线。"
   ],
   "source_refs": []
 }

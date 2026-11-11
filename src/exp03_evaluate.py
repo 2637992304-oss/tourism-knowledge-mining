@@ -39,7 +39,7 @@ def main():
     for scenic in sorted({r["scenic_id"] for r in routes}):
         off = next(r for r in routes if r["scenic_id"] == scenic and r["text_type"] == "official_route")
         vis = next(r for r in routes if r["scenic_id"] == scenic and r["text_type"] == "visitor_diary")
-        a, b = [set(s["poi_name"] for s in r["steps"]) for r in (off, vis)]
+        a, b = [set(s["poi_name"] for s in r["steps"] if s.get('step_kind')!='transport_activity') for r in (off, vis)]
         comparisons.append({"scenic_id": scenic, "official_unique": len(a), "visitor_unique": len(b),
                             "shared": sorted(a & b), "jaccard": len(a & b) / len(a | b),
                             "ordered_overlap": lcs([s["poi_name"] for s in off["steps"]],

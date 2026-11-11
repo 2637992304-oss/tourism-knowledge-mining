@@ -30,7 +30,7 @@ class GraphTools:
         # Reject stale graph when supplied with canonical files. Test fixtures can supply their own docs.
         if docs is None:
             for name,expected in self.graph.get('input_sha256',{}).items():
-                p=ROOT/('data/processed' if name=='corpus.jsonl' else 'data/resources' if name=='source_page_spans.json' else 'data/outputs')/name
+                p=ROOT/('data/processed' if name=='corpus.jsonl' else 'data/resources' if name in {'source_page_spans.json','noise_exclusions.json'} else 'data/outputs')/name
                 if not p.exists() or sha256(p)!=expected:raise ValueError('图谱输入已变化，请重新构图：'+name)
 
     def sources(self,refs,evidence=None):
@@ -58,6 +58,7 @@ class GraphTools:
                               'transport':[p['name'] for p in targets('USES_TRANSPORT')],
                               'evidence':a.get('evidence',[]),'source_refs':step['source_refs'],
                               'step_kind':a.get('step_kind','route_activity'),
+                              'display_name':a.get('display_name',step['name']),
                               'location_role':a.get('location_role','activity_location'),
                               'destination_poi_name':a.get('destination_poi_name')})
             if steps:
@@ -84,9 +85,11 @@ class GraphTools:
             if visitor_type and visitor_type not in a.get('visitor_types',[]):continue
             if condition_type and condition_type!=a['condition_type']:continue
             entities=[self.nodes[e['target']] for e in self.out[n['node_id']] if e['relation']=='APPLIES_TO']
+            roles=[r for e in self.out[n['node_id']] if e['relation']=='APPLIES_TO' for r in e['attributes'].get('entity_roles',[])]
             rows.append({'advice_id':n['attributes']['advice_id'],'condition_type':a['condition_type'],
                          'condition_text':c['name'],'visitor_types':a.get('visitor_types',[]),'suggestion_text':n['name'],
                          'related_entities':[{'entity_id':e['attributes'].get('entity_id'),'name':e['name'],'type':e['node_type']} for e in entities],
+                         'entity_roles':roles,
                          'evidence':n['attributes'].get('evidence',[]),'sources':self.sources(n['source_refs'],n['attributes'].get('evidence',[])),
                          'temporal_note':n['attributes'].get('temporal_note'),
                          'relation_note':'关联实体仅表示证据涉及，不表示每个实体都应访问或允许使用'})

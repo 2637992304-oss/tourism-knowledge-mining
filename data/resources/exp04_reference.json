@@ -361,7 +361,7 @@
       "antecedent_type": "POI",
       "gold_antecedent": {
         "text": "水中神社",
-        "entity_id": null
+        "entity_id": "S001_POI_043"
       },
       "gold_evidence": {
         "doc_id": "S001_VIS_003",
@@ -369,7 +369,7 @@
         "end": 558,
         "text": "水中神社"
       },
-      "annotation_note": "这个打卡点指刚参观的水中神社；实验2目录没有此名称，entity_id为null。"
+      "annotation_note": "这个打卡点指刚参观的水中神社；实验2目录没有此名称，entity_id为null。 本轮新增原文指称ID，仍不认定具体建筑边界。"
     },
     {
       "case_id": "CR_S002_VIS_005_00113",
@@ -1125,11 +1125,19 @@
         "end": 476,
         "text": "他们"
       },
-      "gold_status": "ambiguous",
+      "gold_status": "resolved",
       "antecedent_type": "PERSON",
-      "gold_antecedent": null,
-      "gold_evidence": null,
-      "annotation_note": "他们的恋情可指三姐妹或三对恋人，群体边界无法唯一判断；保留歧义。"
+      "gold_antecedent": {
+        "text": "三位美貌的姐妹",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 372,
+        "end": 379,
+        "text": "三位美貌的姐妹"
+      },
+      "annotation_note": "2026-11-11 AI辅助仲裁：前文这三位姐妹→他们三人→他们的恋情构成连续指代，采用三姐妹群体；不将其等同岩石POI。旧标签与指标归档，不修改预测凑分。"
     },
     {
       "case_id": "CR_S003_VIS_001_00512",
@@ -1347,5 +1355,6 @@
       },
       "annotation_note": "女王在此处观景，回指同句完整观景台名称。"
     }
-  ]
+  ],
+  "reference_version": "exp04-reference-v1.1"
 }

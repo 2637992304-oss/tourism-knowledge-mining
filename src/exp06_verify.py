@@ -15,7 +15,7 @@ def main():
     graph = nx.MultiDiGraph()
     assert data['schema_version']=='1.0'
     for name,digest in data.get('input_sha256',{}).items():
-        path=ROOT/('data/processed' if name=='corpus.jsonl' else 'data/resources' if name=='source_page_spans.json' else 'data/outputs')/name
+        path=ROOT/('data/processed' if name=='corpus.jsonl' else 'data/resources' if name in {'source_page_spans.json','noise_exclusions.json'} else 'data/outputs')/name
         assert sha256(path)==digest,'构图后输入变化'
     catalog={e['entity_id']:e for e in read_json(ROOT/'data/outputs/entities.json')['entity_catalog'] if e.get('active',True)}
     for node in data["nodes"]:
@@ -59,6 +59,8 @@ def main():
         assert [(e['source'],e['target']) for e in data['edges'] if e['relation']=='TRIGGERS' and e['target']==nid]==[(cid,nid)]
         actual={graph.nodes[e['target']]['attributes']['entity_id'] for e in data['edges'] if e['relation']=='APPLIES_TO' and e['source']==nid}
         assert actual==set(item['related_entity_ids']),'建议关联实体丢失'
+        actual_roles=[r for e in data['edges'] if e['relation']=='APPLIES_TO' and e['source']==nid for r in e['attributes'].get('entity_roles',[])]
+        assert sorted(actual_roles,key=str)==sorted(item.get('entity_roles',[]),key=str),'实体角色丢失'
     assert data['advice_count']==len(delivered)
     assert data['advice_availability']==('available' if delivered else 'available_empty')
     next_edges = [e for e in data["edges"] if e["relation"] == "NEXT_STEP"]
@@ -118,7 +120,8 @@ def main():
     alignment_result = {"steps": len(alignment), "aligned": sum(bool(s["entity_id"]) for s in alignment),
                         "methods": dict(Counter(s.get("alignment_method", "pending")
                                                 for r in routes for s in r["steps"])),
-                        "pending": [s for s in alignment if not s["entity_id"]],
+                        "pending": [s for s in alignment if not s["entity_id"] and s['alignment_method']!='not_applicable_transport'],
+                        "transport_activities":sum(s['alignment_method']=='not_applicable_transport' for s in alignment),
                         "bilingual_resolved": [s for s in alignment if s["alignment_method"] == "bilingual_components"],
                         "inactive_entities_skipped": data.get("inactive_entities_skipped", []),
                         "unused_entity_nodes_filtered": len(data.get("unused_entity_nodes_filtered", []))}

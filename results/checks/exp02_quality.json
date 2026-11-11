@@ -1,12 +1,12 @@
 {
   "status": "passed",
   "documents": 18,
-  "mentions": 1403,
+  "mentions": 1395,
   "checks": {
     "schema_and_corpus_hash": true,
     "unique_entity_and_mention_ids": true,
-    "exact_source_spans": 1403,
-    "valid_entity_references": 1403,
+    "exact_source_spans": 1395,
+    "valid_entity_references": 1395,
     "same_scenic_mapping": true,
     "within_declared_scope": true,
     "no_duplicate_or_overlapping_mentions": true,
@@ -27,12 +27,12 @@
       "f1": 0.42168674698795183
     },
     "optimized": {
-      "tp": 79,
+      "tp": 82,
       "fp": 0,
-      "fn": 5,
+      "fn": 2,
       "precision": 1.0,
-      "recall": 0.9404761904761905,
-      "f1": 0.9693251533742331
+      "recall": 0.9761904761904762,
+      "f1": 0.9879518072289156
     }
   }
 }

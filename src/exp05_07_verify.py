@@ -18,9 +18,11 @@ def main():
     if a.live and a.offline:p.error('--live与--offline互斥')
     commands=[]
     if not a.audit_only:
-        jobs=[['src/build_source_spans.py'],['src/exp03_routes.py'],['src/exp03_evaluate.py'],['src/exp05_advice.py','--variant','baseline'],
+        jobs=[['src/build_source_spans.py'],['src/exp02_entities.py','--variant','baseline'],['src/exp02_entities.py'],['src/exp02_verify.py'],['src/exp02_visualize.py'],
+              ['src/exp04_coreference.py','--variant','baseline'],['src/exp04_coreference.py'],['src/exp04_verify.py'],
+              ['src/exp03_routes.py'],['src/exp03_evaluate.py'],['src/exp05_advice.py','--variant','baseline'],
               ['src/exp05_advice.py'],['src/exp05_verify.py'],['src/exp05_visualize.py'],
-              ['src/exp06_graph.py','--require-complete'],['src/exp06_verify.py'],['src/yzh_figures.py']]
+              ['src/exp06_graph.py','--require-complete'],['src/exp06_verify.py'],['src/yzh_figures.py'],['src/report_panels.py'],['src/review_round2_verify.py']]
         if a.live:jobs.append(['src/exp07_agent.py','--cases'])
         if a.offline:jobs.append(['src/exp07_revalidate.py'])
         for job in jobs:
@@ -38,6 +40,9 @@ def main():
     print(verify.stdout+verify.stderr,flush=True)
     protected=read_json(ROOT/'results/checks/exp05_07_protected.json')['sha256']
     unchanged={name:sha256(ROOT/name)==digest for name,digest in protected.items()}
+    revision_path=ROOT/'results/checks/approved_upstream_revisions.json'
+    revisions=read_json(revision_path)['revisions'] if revision_path.exists() else {}
+    protected_valid={name:(same or name in revisions and revisions[name]['previous_sha256']==protected[name] and sha256(ROOT/name)==revisions[name]['sha256']) for name,same in unchanged.items()}
     images={}
     for name in ['exp03_time_hierarchy.png','exp05_advice_statistics.png','exp06_hakone_graph.png']:
         with Image.open(ROOT/'results/figures'/name) as im:
@@ -55,16 +60,18 @@ def main():
         secret_check=not any(secret in (ROOT/name).read_bytes() for name in names if name and (ROOT/name).is_file())
     except ModelError:
         pass  # No local secret to compare; the live-run gate will separately fail when absent.
-    checks={'protected_files_unchanged':all(unchanged.values()),'exp05_passed':quality5['passed'],
+    checks={'protected_inputs_valid':all(protected_valid.values()),'exp05_passed':quality5['passed'],
             'exp06_passed':quality6['checks_passed'] and quality6['graph_sha256']==graph_hash,
             'exp07_live_passed':verify.returncode==0 and quality7.get('live_validation_passed',False),
             'exp07_offline_passed':verify.returncode==0 and quality7['passed'],
             'unit_tests_passed':test.returncode==0,'all_artifacts_present':all(artifacts.values()),
             'local_key_absent_from_shareable_files':secret_check,
             'all_s001_nodes_visualized':visualization['all_nodes_positioned'] and visualization['graph_sha256']==graph_hash}
+    closure=read_json(ROOT/'results/checks/review_round2_closure.json')
+    checks['remaining_review_issues_closed']=closure['passed'] and closure['graph_sha256']==graph_hash
     required={k:v for k,v in checks.items() if k!='exp07_live_passed' or not a.offline}
     result={'schema_version':'1.0','acceptance_scope':'offline' if a.offline else 'live','live_validation_pending':a.offline,'run_at':datetime.now(ZoneInfo('Asia/Shanghai')).isoformat(timespec='seconds'),
-            'python':sys.version.split()[0],'checks':checks,'passed':all(required.values()),'protected_files':unchanged,
+            'python':sys.version.split()[0],'checks':checks,'passed':all(required.values()),'protected_files':unchanged,'approved_upstream_revisions':revisions,
             'artifacts':artifacts,'figures':images,'graph_sha256':graph_hash,
             'metrics':{'advice':quality5['advice'],'graph_nodes':quality6['nodes'],'graph_edges':quality6['edges'],
                        'live_cases':0 if a.offline else quality7.get('cases'),

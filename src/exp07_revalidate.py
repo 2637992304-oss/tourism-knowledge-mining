@@ -23,7 +23,7 @@ def main():
             routes={r['route_id']:r for call in calls if call['result']['status']=='ok' for r in call['result']['data'] if 'route_id' in r}
             for step in raw['steps']:
                 current=next(s for s in routes[raw['route_id']]['steps'] if s['step_no']==step['step_no'])
-                step['poi_name']=current['pois'][0]['name']
+                step['poi_name']=current['pois'][0]['name'] if current['pois'] else current['display_name']
             raw['advice']=[{'advice_id':a['advice_id'],'source_refs':[s['doc_id'] for s in a['sources']]} for a in raw['advice']]
             # Discard historical prose; it was generated from the old graph.
             raw['limitations']=[];raw['supplementary_advice']=[]

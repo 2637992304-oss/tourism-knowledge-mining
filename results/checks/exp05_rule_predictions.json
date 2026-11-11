@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
   "corpus_version": "v1",
-  "resource_version": "exp05-v1.1",
+  "resource_version": "exp05-v1.2",
   "reviewed": false,
   "corpus_sha256": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0",
-  "entities_sha256": "71598abfdec68cd99d3983cd5099ee07c653d41438968d14d7c9ee46ea6caac9",
+  "entities_sha256": "9a313ff85726ba81373e6b6757d02077e99b3a82461a2fb97da553fb75105054",
   "variant": "optimized",
   "scope_policy": "exp02相关区间，排除S003_VIS_004园外酒评；全文坐标。",
   "statistics": {
@@ -51,6 +51,22 @@
           "start": 504,
           "end": 542,
           "text": "如果使用“箱根周游券”乘坐“浪漫”特快,则需另外支付特快费(1,200日币)"
+        }
+      ],
+      "entity_roles": [
+        {
+          "entity_id": "S001_TRANSPORT_015",
+          "role": "condition_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S001_OFF_001",
+              "start": 517,
+              "end": 523,
+              "text": "“浪漫”特快"
+            }
+          ]
         }
       ],
       "advice_id": "A_S001_OFF_001_255828790194615",
@@ -102,6 +118,7 @@
           "text": "如果在车站内部的服务柜台寄存包裹,则可以帮您运送到住处,因此您可以轻松地享受观光之旅(含税900日币~)"
         }
       ],
+      "entity_roles": [],
       "advice_id": "A_S001_OFF_001_171123485310695",
       "scenic_id": "S001",
       "doc_id": "S001_OFF_001",
@@ -149,6 +166,36 @@
           "start": 1084,
           "end": 1134,
           "text": "对于带儿童的家庭,推荐您体验大号的密封舱,还可以在网中体验能够感受艺术的“泡泡城堡”和“网之森林”等"
+        }
+      ],
+      "entity_roles": [
+        {
+          "entity_id": "S001_POI_020",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S001_OFF_001",
+              "start": 1121,
+              "end": 1125,
+              "text": "泡泡城堡"
+            }
+          ]
+        },
+        {
+          "entity_id": "S001_POI_021",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S001_OFF_001",
+              "start": 1128,
+              "end": 1132,
+              "text": "网之森林"
+            }
+          ]
         }
       ],
       "advice_id": "A_S001_OFF_001_247169266140315",
@@ -207,6 +254,22 @@
           "text": "箱根雕刻森林美术馆"
         }
       ],
+      "entity_roles": [
+        {
+          "entity_id": "S001_POI_007",
+          "role": "supporting_context",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S001_OFF_001",
+              "start": 967,
+              "end": 976,
+              "text": "箱根雕刻森林美术馆"
+            }
+          ]
+        }
+      ],
       "advice_id": "A_S001_OFF_001_177547618944147",
       "scenic_id": "S001",
       "doc_id": "S001_OFF_001",
@@ -258,6 +321,7 @@
           "text": "如果出示“箱根周游券”,可享优惠价成人1,900日币、高中生大学生1,500日币、中小学生700日币(均含税)"
         }
       ],
+      "entity_roles": [],
       "advice_id": "A_S001_OFF_001_147046239503370",
       "scenic_id": "S001",
       "doc_id": "S001_OFF_001",
@@ -303,6 +367,36 @@
           "start": 2719,
           "end": 2752,
           "text": "如果购买伴手礼,可以前往位于箱根汤本站的“箱根登山名产店 汤本店”"
+        }
+      ],
+      "entity_roles": [
+        {
+          "entity_id": "S001_POI_005",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S001_OFF_001",
+              "start": 2733,
+              "end": 2738,
+              "text": "箱根汤本站"
+            }
+          ]
+        },
+        {
+          "entity_id": "S001_POI_025",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S001_OFF_001",
+              "start": 2740,
+              "end": 2751,
+              "text": "箱根登山名产店 汤本店"
+            }
+          ]
         }
       ],
       "advice_id": "A_S001_OFF_001_250646070388022",
@@ -355,6 +449,36 @@
           "text": "如果乘坐小田急浪漫特快前往箱根汤本,则需另外购买特快车票,1200日元/人/单程"
         }
       ],
+      "entity_roles": [
+        {
+          "entity_id": "S001_POI_005",
+          "role": "condition_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S001_VIS_005",
+              "start": 5849,
+              "end": 5853,
+              "text": "箱根汤本"
+            }
+          ]
+        },
+        {
+          "entity_id": "S001_TRANSPORT_015",
+          "role": "condition_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S001_VIS_005",
+              "start": 5840,
+              "end": 5847,
+              "text": "小田急浪漫特快"
+            }
+          ]
+        }
+      ],
       "advice_id": "A_S001_VIS_005_134550840182935",
       "scenic_id": "S001",
       "doc_id": "S001_VIS_005",
@@ -403,6 +527,126 @@
           "start": 5877,
           "end": 5955,
           "text": "如果不想另外付费,则只能乘坐普通小田急线,小田急线不能直接到箱根汤本,只能乘到小田原,再从小田原坐箱根登山电车到箱根汤本,这样会比坐浪漫特快多花20分钟左右"
+        }
+      ],
+      "entity_roles": [
+        {
+          "entity_id": "S001_POI_005",
+          "role": "suggestion_reference",
+          "polarity": "negative",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S001_VIS_005",
+              "start": 5907,
+              "end": 5911,
+              "text": "箱根汤本"
+            }
+          ]
+        },
+        {
+          "entity_id": "S001_POI_005",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S001_VIS_005",
+              "start": 5933,
+              "end": 5937,
+              "text": "箱根汤本"
+            }
+          ]
+        },
+        {
+          "entity_id": "S001_POI_016",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S001_VIS_005",
+              "start": 5916,
+              "end": 5919,
+              "text": "小田原"
+            },
+            {
+              "doc_id": "S001_VIS_005",
+              "start": 5922,
+              "end": 5925,
+              "text": "小田原"
+            }
+          ]
+        },
+        {
+          "entity_id": "S001_TIME_030",
+          "role": "comparison_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S001_VIS_005",
+              "start": 5949,
+              "end": 5953,
+              "text": "20分钟"
+            }
+          ]
+        },
+        {
+          "entity_id": "S001_TRANSPORT_010",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S001_VIS_005",
+              "start": 5926,
+              "end": 5932,
+              "text": "箱根登山电车"
+            }
+          ]
+        },
+        {
+          "entity_id": "S001_TRANSPORT_015",
+          "role": "comparison_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S001_VIS_005",
+              "start": 5943,
+              "end": 5947,
+              "text": "浪漫特快"
+            }
+          ]
+        },
+        {
+          "entity_id": "S001_TRANSPORT_016",
+          "role": "suggestion_reference",
+          "polarity": "negative",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S001_VIS_005",
+              "start": 5898,
+              "end": 5902,
+              "text": "小田急线"
+            }
+          ]
+        },
+        {
+          "entity_id": "S001_TRANSPORT_016",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S001_VIS_005",
+              "start": 5893,
+              "end": 5897,
+              "text": "小田急线"
+            }
+          ]
         }
       ],
       "advice_id": "A_S001_VIS_005_228267617104810",
@@ -459,6 +703,36 @@
           "text": "如果座位有空的话,一定要坐在靠窗边,因为窗外可以看到宽广的芦之湖和停泊在湖上的海贼船,一边欣赏美景一边吃美食"
         }
       ],
+      "entity_roles": [
+        {
+          "entity_id": "S001_POI_003",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S001_VIS_005",
+              "start": 6159,
+              "end": 6162,
+              "text": "芦之湖"
+            }
+          ]
+        },
+        {
+          "entity_id": "S001_TRANSPORT_014",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S001_VIS_005",
+              "start": 6169,
+              "end": 6172,
+              "text": "海贼船"
+            }
+          ]
+        }
+      ],
       "advice_id": "A_S001_VIS_005_117040616929219",
       "scenic_id": "S001",
       "doc_id": "S001_VIS_005",
@@ -507,6 +781,64 @@
           "start": 1880,
           "end": 2024,
           "text": "If you are planning to hike the half loop, cross the Merced River at El Capitan Bridge and continue by heading east back toward Yosemite Village"
+        }
+      ],
+      "entity_roles": [
+        {
+          "entity_id": "S002_POI_012",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S002_OFF_001",
+              "start": 1949,
+              "end": 1966,
+              "text": "El Capitan Bridge"
+            }
+          ]
+        },
+        {
+          "entity_id": "S002_POI_013",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S002_OFF_001",
+              "start": 1933,
+              "end": 1945,
+              "text": "Merced River"
+            }
+          ]
+        },
+        {
+          "entity_id": "S002_POI_018",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S002_OFF_001",
+              "start": 2008,
+              "end": 2024,
+              "text": "Yosemite Village"
+            }
+          ]
+        },
+        {
+          "entity_id": "S002_TRANSPORT_001",
+          "role": "condition_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S002_OFF_001",
+              "start": 1903,
+              "end": 1907,
+              "text": "hike"
+            }
+          ]
         }
       ],
       "advice_id": "A_S002_OFF_001_088248811662268",
@@ -561,6 +893,50 @@
           "text": "If you are planning to hike the full loop, continue west past El Capitan toward Bridalveil Fall"
         }
       ],
+      "entity_roles": [
+        {
+          "entity_id": "S002_POI_003",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S002_OFF_001",
+              "start": 2088,
+              "end": 2098,
+              "text": "El Capitan"
+            }
+          ]
+        },
+        {
+          "entity_id": "S002_POI_007",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S002_OFF_001",
+              "start": 2106,
+              "end": 2121,
+              "text": "Bridalveil Fall"
+            }
+          ]
+        },
+        {
+          "entity_id": "S002_TRANSPORT_001",
+          "role": "condition_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S002_OFF_001",
+              "start": 2049,
+              "end": 2053,
+              "text": "hike"
+            }
+          ]
+        }
+      ],
       "advice_id": "A_S002_OFF_001_257761964045209",
       "scenic_id": "S002",
       "doc_id": "S002_OFF_001",
@@ -612,6 +988,7 @@
           "text": "虽然刚出发穿着短裤、T恤稍有些冷,但建议还是不要增加衣服,因为很快就会感到热了"
         }
       ],
+      "entity_roles": [],
       "advice_id": "A_S002_VIS_001_020396443207909",
       "scenic_id": "S002",
       "doc_id": "S002_VIS_001",
@@ -659,6 +1036,7 @@
           "text": "如果你不想人挤人、也不想早起抢预约的话,建议计划周中去,人会少很多"
         }
       ],
+      "entity_roles": [],
       "advice_id": "A_S002_VIS_004_072958652312044",
       "scenic_id": "S002",
       "doc_id": "S002_VIS_004",
@@ -704,6 +1082,22 @@
           "start": 2073,
           "end": 2111,
           "text": "条件允许的话,一定要沿41号路由南往北,从Oakhurst进入优胜美地,路上"
+        }
+      ],
+      "entity_roles": [
+        {
+          "entity_id": "S002_POI_001",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S002_VIS_004",
+              "start": 2104,
+              "end": 2108,
+              "text": "优胜美地"
+            }
+          ]
         }
       ],
       "advice_id": "A_S002_VIS_004_021279618643253",
@@ -753,6 +1147,36 @@
           "start": 2111,
           "end": 2182,
           "text": "如果你感兴趣的话还可以去Mariposa Grove看看巨大的红杉树,当车从隧道穿出,Yosemite Valley一览无余的感觉非常震撼人心"
+        }
+      ],
+      "entity_roles": [
+        {
+          "entity_id": "S002_POI_002",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S002_VIS_004",
+              "start": 2154,
+              "end": 2169,
+              "text": "Yosemite Valley"
+            }
+          ]
+        },
+        {
+          "entity_id": "S002_POI_068",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S002_VIS_004",
+              "start": 2123,
+              "end": 2137,
+              "text": "Mariposa Grove"
+            }
+          ]
         }
       ],
       "advice_id": "A_S002_VIS_004_218817036761170",
@@ -805,6 +1229,28 @@
           "text": "如果您想近距离观赏,可以走岔路前往弗莱彻瞭望台 (Fletchers Lookout),近距离欣赏瀑布"
         }
       ],
+      "entity_roles": [
+        {
+          "entity_id": "S003_POI_015",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 2242,
+              "end": 2248,
+              "text": "弗莱彻瞭望台"
+            },
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 2250,
+              "end": 2267,
+              "text": "Fletchers Lookout"
+            }
+          ]
+        }
+      ],
       "advice_id": "A_S003_OFF_001_051221032292834",
       "scenic_id": "S003",
       "doc_id": "S003_OFF_001",
@@ -854,6 +1300,7 @@
           "text": "如果想在旅途中享用美食,请前往这家小猪熟食店这里有琳琅满目的糕点、沙拉和其他自制美食"
         }
       ],
+      "entity_roles": [],
       "advice_id": "A_S003_OFF_001_173909348912377",
       "scenic_id": "S003",
       "doc_id": "S003_OFF_001",
@@ -899,6 +1346,56 @@
           "start": 2853,
           "end": 2908,
           "text": "如果你有时间,另一个最佳观景点是戈维茨跳跃瞭望台布莱克希思(Blackheath)附近:蓝山海拔最高的城镇之一"
+        }
+      ],
+      "entity_roles": [
+        {
+          "entity_id": "S003_POI_001",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 2897,
+              "end": 2899,
+              "text": "蓝山"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_016",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 2877,
+              "end": 2882,
+              "text": "布莱克希思"
+            },
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 2883,
+              "end": 2893,
+              "text": "Blackheath"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_020",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 2869,
+              "end": 2877,
+              "text": "戈维茨跳跃瞭望台"
+            }
+          ]
         }
       ],
       "advice_id": "A_S003_OFF_001_260778767605275",
@@ -950,6 +1447,36 @@
           "start": 4098,
           "end": 4142,
           "text": "如果游客想要体验更长的徒步旅行,例如壮观的大峡谷步道,或者想游览其他村庄,则应该在此过夜"
+        }
+      ],
+      "entity_roles": [
+        {
+          "entity_id": "S003_POI_019",
+          "role": "condition_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4119,
+              "end": 4124,
+              "text": "大峡谷步道"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_TRANSPORT_001",
+          "role": "condition_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4109,
+              "end": 4111,
+              "text": "徒步"
+            }
+          ]
         }
       ],
       "advice_id": "A_S003_OFF_001_035301096231357",
@@ -1004,6 +1531,84 @@
           "text": "蓝山适合儿童游玩吗?\n当然! 蓝山有很多适合家庭的趣味活动,包括观星、骑自行车、露营、徒步旅行和风景世界(Scenic World)。\n"
         }
       ],
+      "entity_roles": [
+        {
+          "entity_id": "S003_POI_001",
+          "role": "condition_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4833,
+              "end": 4835,
+              "text": "蓝山"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_001",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4848,
+              "end": 4850,
+              "text": "蓝山"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_003",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4881,
+              "end": 4885,
+              "text": "风景世界"
+            },
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4886,
+              "end": 4898,
+              "text": "Scenic World"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_TRANSPORT_001",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4876,
+              "end": 4878,
+              "text": "徒步"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_TRANSPORT_008",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4868,
+              "end": 4872,
+              "text": "骑自行车"
+            }
+          ]
+        }
+      ],
       "advice_id": "A_S003_OFF_001_143350059015598",
       "scenic_id": "S003",
       "doc_id": "S003_OFF_001",
@@ -1054,6 +1659,230 @@
           "start": 4901,
           "end": 5132,
           "text": "下雨天还值得去蓝山吗?\n在蓝山,即使下雨天也有很多室内活动可以参加,包括:\n山地文化啤酒公司在卡通巴\n午餐阿特斯, 罗拉(Leura) Gourmet或小妹妹\n在罗拉(Leura)逛橱窗\n日本温泉浴场蓝山\n蓝山桑拿\n昔日美人珍藏茶壶博物馆和茶室(罗拉(Leura)\n莉莲菲尔斯日间水疗中心\n诺曼·林赛画廊及博物馆\n蓝山文化中心\n维多利亚山博物馆\n伍德福德学院\n维多利亚山电影\n阿普萨拉日间水疗中心(卡通巴)\n水疗盛宴下午茶\n梅加隆谷茶室\n下午茶热情莉莲费尔斯蓝山"
+        }
+      ],
+      "entity_roles": [
+        {
+          "entity_id": "S003_POI_001",
+          "role": "condition_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4908,
+              "end": 4910,
+              "text": "蓝山"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_001",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4914,
+              "end": 4916,
+              "text": "蓝山"
+            },
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5001,
+              "end": 5003,
+              "text": "蓝山"
+            },
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5004,
+              "end": 5006,
+              "text": "蓝山"
+            },
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5130,
+              "end": 5132,
+              "text": "蓝山"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_004",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4948,
+              "end": 4951,
+              "text": "卡通巴"
+            },
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5100,
+              "end": 5103,
+              "text": "卡通巴"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_005",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4959,
+              "end": 4961,
+              "text": "罗拉"
+            },
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4962,
+              "end": 4967,
+              "text": "Leura"
+            },
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4982,
+              "end": 4984,
+              "text": "罗拉"
+            },
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4985,
+              "end": 4990,
+              "text": "Leura"
+            },
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5024,
+              "end": 5026,
+              "text": "罗拉"
+            },
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5027,
+              "end": 5032,
+              "text": "Leura"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_026",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 4939,
+              "end": 4947,
+              "text": "山地文化啤酒公司"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_045",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5058,
+              "end": 5064,
+              "text": "蓝山文化中心"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_046",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5046,
+              "end": 5057,
+              "text": "诺曼·林赛画廊及博物馆"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_047",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5065,
+              "end": 5073,
+              "text": "维多利亚山博物馆"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_048",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5074,
+              "end": 5080,
+              "text": "伍德福德学院"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_049",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5034,
+              "end": 5045,
+              "text": "莉莲菲尔斯日间水疗中心"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_050",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5009,
+              "end": 5023,
+              "text": "昔日美人珍藏茶壶博物馆和茶室"
+            }
+          ]
+        },
+        {
+          "entity_id": "S003_POI_051",
+          "role": "suggestion_reference",
+          "polarity": "not_asserted",
+          "polarity_scope": "evidence_clause_not_entity_permission",
+          "evidence": [
+            {
+              "doc_id": "S003_OFF_001",
+              "start": 5113,
+              "end": 5119,
+              "text": "梅加隆谷茶室"
+            }
+          ]
         }
       ],
       "advice_id": "A_S003_OFF_001_231897423423565",

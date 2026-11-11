@@ -2,8 +2,8 @@
   "schema_version": "1.0",
   "corpus_version": "v1",
   "corpus_sha256": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0",
-  "entities_sha256": "71598abfdec68cd99d3983cd5099ee07c653d41438968d14d7c9ee46ea6caac9",
-  "reference_sha256": "a24ca1764030d08ee294e4904a46d74fc6d9ae7bcae0b995a7082f3df18dd642",
+  "entities_sha256": "9a313ff85726ba81373e6b6757d02077e99b3a82461a2fb97da553fb75105054",
+  "reference_sha256": "e5d70ea7e09ec717ec1d2ad03ccfd765709164dd3285a8f90b9b89b7345304db",
   "annotation_provenance": "AI辅助逐例阅读原文并标注，非学生或多名人工标注者独立复核；在运行消解预测前固定此参考。",
   "parameters": {
     "variant": "typed",
@@ -50,21 +50,21 @@
   ],
   "metrics": {
     "total": 59,
-    "positive": 48,
-    "gold_null": 11,
+    "positive": 49,
+    "gold_null": 10,
     "answered": 47,
-    "correct_links": 32,
+    "correct_links": 33,
     "correct_nulls": 6,
     "metrics": {
       "overall_accuracy": {
-        "numerator": 38,
+        "numerator": 39,
         "denominator": 59,
-        "value": 0.6440677966101694
+        "value": 0.6610169491525424
       },
       "positive_accuracy": {
-        "numerator": 32,
-        "denominator": 48,
-        "value": 0.6666666666666666
+        "numerator": 33,
+        "denominator": 49,
+        "value": 0.673469387755102
       },
       "coverage": {
         "numerator": 47,
@@ -72,14 +72,14 @@
         "value": 0.7966101694915254
       },
       "answered_precision": {
-        "numerator": 32,
+        "numerator": 33,
         "denominator": 47,
-        "value": 0.6808510638297872
+        "value": 0.7021276595744681
       },
       "null_rejection_accuracy": {
         "numerator": 6,
-        "denominator": 11,
-        "value": 0.5454545454545454
+        "denominator": 10,
+        "value": 0.6
       },
       "unresolved_rate": {
         "numerator": 12,
@@ -88,10 +88,10 @@
       }
     },
     "status_counts": {
-      "resolved": 48,
+      "resolved": 49,
       "non_anaphoric": 4,
       "exophoric": 5,
-      "ambiguous": 2
+      "ambiguous": 1
     }
   },
   "cases": [
@@ -1064,6 +1064,18 @@
           "text": "大涌谷",
           "entity_id": "S001_POI_002",
           "candidate_type": "POI",
+          "distance": 68,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 327,
+            "end": 330,
+            "text": "硫磺谷"
+          }
+        },
+        {
+          "text": "大涌谷",
+          "entity_id": "S001_POI_002",
+          "candidate_type": "POI",
           "distance": 114,
           "evidence": {
             "doc_id": "S001_VIS_003",
@@ -1094,18 +1106,6 @@
             "start": 212,
             "end": 215,
             "text": "宫之下"
-          }
-        },
-        {
-          "text": "箱根汤本",
-          "entity_id": "S001_POI_005",
-          "candidate_type": "POI",
-          "distance": 200,
-          "evidence": {
-            "doc_id": "S001_VIS_003",
-            "start": 194,
-            "end": 198,
-            "text": "箱根汤本"
           }
         }
       ],
@@ -1150,7 +1150,7 @@
       },
       "predicted_antecedent": {
         "text": "水中神社",
-        "entity_id": null
+        "entity_id": "S001_POI_043"
       },
       "predicted_evidence": {
         "doc_id": "S001_VIS_003",
@@ -1162,6 +1162,18 @@
       "method": "typed_nearest_rule",
       "decision_reason": "poi_default",
       "candidate_trace": [
+        {
+          "text": "水中神社",
+          "entity_id": "S001_POI_043",
+          "candidate_type": "POI",
+          "distance": 1,
+          "evidence": {
+            "doc_id": "S001_VIS_003",
+            "start": 554,
+            "end": 558,
+            "text": "水中神社"
+          }
+        },
         {
           "text": "水中神社",
           "entity_id": null,
@@ -1209,18 +1221,6 @@
             "end": 539,
             "text": "箱根町港"
           }
-        },
-        {
-          "text": "芦之湖",
-          "entity_id": "S001_POI_003",
-          "candidate_type": "POI",
-          "distance": 61,
-          "evidence": {
-            "doc_id": "S001_VIS_003",
-            "start": 495,
-            "end": 498,
-            "text": "芦之湖"
-          }
         }
       ],
       "resolved_text": "在元箱根港看了水中神社,这个（指：水中神社）拍照打卡点人气太旺,排队排到半山腰.",
@@ -1228,7 +1228,7 @@
       "antecedent_type": "POI",
       "gold_antecedent": {
         "text": "水中神社",
-        "entity_id": null
+        "entity_id": "S001_POI_043"
       },
       "gold_evidence": {
         "doc_id": "S001_VIS_003",
@@ -1236,7 +1236,7 @@
         "end": 558,
         "text": "水中神社"
       },
-      "annotation_note": "这个打卡点指刚参观的水中神社；实验2目录没有此名称，entity_id为null。",
+      "annotation_note": "这个打卡点指刚参观的水中神社；实验2目录没有此名称，entity_id为null。 本轮新增原文指称ID，仍不认定具体建筑边界。",
       "correct": true
     },
     {
@@ -3888,12 +3888,20 @@
         }
       ],
       "resolved_text": "这是有违异族缩怨与规矩,不被父辈首肯,后来因为他们（指：三位美貌的姐妹）的恋情而引爆了两族的战争。",
-      "gold_status": "ambiguous",
+      "gold_status": "resolved",
       "antecedent_type": "PERSON",
-      "gold_antecedent": null,
-      "gold_evidence": null,
-      "annotation_note": "他们的恋情可指三姐妹或三对恋人，群体边界无法唯一判断；保留歧义。",
-      "correct": false
+      "gold_antecedent": {
+        "text": "三位美貌的姐妹",
+        "entity_id": null
+      },
+      "gold_evidence": {
+        "doc_id": "S003_VIS_001",
+        "start": 372,
+        "end": 379,
+        "text": "三位美貌的姐妹"
+      },
+      "annotation_note": "2026-11-11 AI辅助仲裁：前文这三位姐妹→他们三人→他们的恋情构成连续指代，采用三姐妹群体；不将其等同岩石POI。旧标签与指标归档，不修改预测凑分。",
+      "correct": true
     },
     {
       "case_id": "CR_S003_VIS_001_00512",

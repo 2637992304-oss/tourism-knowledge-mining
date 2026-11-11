@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "reviewer": "AI辅助复核，不代签组员",
+  "issues": {
+    "R05": "closed_with_evidence",
+    "R06": "closed_with_evidence",
+    "R09": "closed_with_evidence",
+    "R10": "closed_with_evidence",
+    "R11": "closed_with_evidence",
+    "R12": "closed_with_evidence"
+  },
+  "graph_sha256": "6521a274dd7c61a0d57ad1af46703dad0ff5425cdca716d8b7e1998aa80cedc7",
+  "source_referent_policy": "水中神社保留原文ID，不断言建筑身份，不再作为待确认别名",
+  "frozen_corpus_sha256": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0",
+  "documents_audited": 18,
+  "evidence_spans_checked": 1452,
+  "excluded_noise_spans": 46,
+  "transport_steps": 3,
+  "roles": 51,
+  "report_panels": 19,
+  "old_entity_ids_preserved": true
+}

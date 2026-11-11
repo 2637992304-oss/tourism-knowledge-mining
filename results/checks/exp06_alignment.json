@@ -1,11 +1,13 @@
 {
-  "steps": 30,
+  "steps": 33,
   "aligned": 30,
   "methods": {
     "exact_alias": 27,
-    "bilingual_components": 3
+    "bilingual_components": 3,
+    "not_applicable_transport": 3
   },
   "pending": [],
+  "transport_activities": 3,
   "bilingual_resolved": [
     {
       "route_id": "R_S003_OFF_001_01",
@@ -41,7 +43,7 @@
     },
     {
       "route_id": "R_S003_VIS_001_01",
-      "step_no": 2,
+      "step_no": 5,
       "raw_poi_name": "Jenolan Caves珍罗兰洞",
       "poi_name": "Jenolan Caves",
       "entity_id": "S003_POI_037",
@@ -57,10 +59,11 @@
     }
   ],
   "inactive_entities_skipped": [
+    "S001_POI_018",
     "S003_TIME_023"
   ],
   "unused_entity_nodes_filtered": 253,
-  "entity_resource_version": "exp02-v1.1",
+  "entity_resource_version": "exp02-v1.2",
   "confirmed_updates": [
     {
       "surface": "姥子缆车站",

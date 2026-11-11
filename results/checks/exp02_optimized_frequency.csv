@@ -1,8 +1,8 @@
 ﻿entity_id,scenic_id,entity_type,canonical_name,scope,text_type,count
 S001_POI_001,S001,POI,箱根,regional,official_route,20
 S001_POI_001,S001,POI,箱根,regional,visitor_diary,40
-S001_POI_002,S001,POI,大涌谷,inside,official_route,16
-S001_POI_002,S001,POI,大涌谷,inside,visitor_diary,36
+S001_POI_002,S001,POI,大涌谷,inside,official_route,15
+S001_POI_002,S001,POI,大涌谷,inside,visitor_diary,37
 S001_POI_003,S001,POI,芦之湖,inside,official_route,6
 S001_POI_003,S001,POI,芦之湖,inside,visitor_diary,20
 S001_POI_004,S001,POI,富士山,external,official_route,6
@@ -11,7 +11,7 @@ S001_POI_005,S001,POI,箱根汤本,inside,official_route,9
 S001_POI_005,S001,POI,箱根汤本,inside,visitor_diary,7
 S001_POI_006,S001,POI,新宿,external,official_route,3
 S001_POI_006,S001,POI,新宿,external,visitor_diary,2
-S001_POI_007,S001,POI,箱根雕刻森林美术馆,inside,official_route,5
+S001_POI_007,S001,POI,箱根雕刻森林美术馆,inside,official_route,4
 S001_POI_008,S001,POI,强罗,inside,official_route,3
 S001_POI_008,S001,POI,强罗,inside,visitor_diary,2
 S001_POI_009,S001,POI,早云山,inside,official_route,1
@@ -24,22 +24,21 @@ S001_POI_012,S001,POI,箱根町港,inside,official_route,1
 S001_POI_012,S001,POI,箱根町港,inside,visitor_diary,3
 S001_POI_013,S001,POI,元箱根港,inside,official_route,3
 S001_POI_013,S001,POI,元箱根港,inside,visitor_diary,7
-S001_POI_014,S001,POI,箱根神社,inside,official_route,4
+S001_POI_014,S001,POI,箱根神社,inside,official_route,3
 S001_POI_014,S001,POI,箱根神社,inside,visitor_diary,1
 S001_POI_015,S001,POI,和平鸟居,inside,official_route,1
 S001_POI_015,S001,POI,和平鸟居,inside,visitor_diary,1
 S001_POI_016,S001,POI,小田原,surrounding,official_route,2
 S001_POI_016,S001,POI,小田原,surrounding,visitor_diary,7
 S001_POI_017,S001,POI,雕刻森林站,inside,official_route,1
-S001_POI_018,S001,POI,箱根汤本站前商店街,inside,official_route,1
 S001_POI_019,S001,POI,毕加索馆,inside,official_route,1
 S001_POI_020,S001,POI,泡泡城堡,inside,official_route,1
 S001_POI_021,S001,POI,网之森林,inside,official_route,1
-S001_POI_022,S001,POI,大涌谷厨房,inside,official_route,2
-S001_POI_023,S001,POI,黑蛋馆,inside,official_route,2
+S001_POI_022,S001,POI,大涌谷厨房,inside,official_route,1
+S001_POI_023,S001,POI,黑蛋馆,inside,official_route,1
 S001_POI_023,S001,POI,黑蛋馆,inside,visitor_diary,1
-S001_POI_024,S001,POI,箱根地质博物馆,inside,official_route,3
-S001_POI_025,S001,POI,箱根登山名产店 汤本店,inside,official_route,3
+S001_POI_024,S001,POI,箱根地质博物馆,inside,official_route,2
+S001_POI_025,S001,POI,箱根登山名产店 汤本店,inside,official_route,2
 S001_POI_026,S001,POI,姥子站,inside,visitor_diary,2
 S001_POI_027,S001,POI,金太郎展望台,inside,visitor_diary,1
 S001_POI_028,S001,POI,仙石原,inside,visitor_diary,2
@@ -58,6 +57,7 @@ S001_POI_040,S001,POI,桃源台展观餐厅,inside,visitor_diary,1
 S001_POI_041,S001,POI,箱根町,inside,visitor_diary,2
 S001_POI_042,S001,POI,元箱根,inside,official_route,1
 S001_POI_042,S001,POI,元箱根,inside,visitor_diary,1
+S001_POI_043,S001,POI,水中神社,unknown,visitor_diary,2
 S001_TIME_001,S001,TIME,1.5小时,not_applicable,official_route,2
 S001_TIME_002,S001,TIME,1日,not_applicable,official_route,1
 S001_TIME_003,S001,TIME,7:30,not_applicable,official_route,1
@@ -111,10 +111,10 @@ S001_TRANSPORT_010,S001,TRANSPORT,箱根登山电车,not_applicable,official_rou
 S001_TRANSPORT_010,S001,TRANSPORT,箱根登山电车,not_applicable,visitor_diary,3
 S001_TRANSPORT_011,S001,TRANSPORT,箱根登山缆车,not_applicable,official_route,2
 S001_TRANSPORT_011,S001,TRANSPORT,箱根登山缆车,not_applicable,visitor_diary,1
-S001_TRANSPORT_012,S001,TRANSPORT,箱根空中缆车,not_applicable,official_route,5
+S001_TRANSPORT_012,S001,TRANSPORT,箱根空中缆车,not_applicable,official_route,4
 S001_TRANSPORT_012,S001,TRANSPORT,箱根空中缆车,not_applicable,visitor_diary,3
 S001_TRANSPORT_013,S001,TRANSPORT,箱根登山巴士,not_applicable,official_route,2
-S001_TRANSPORT_014,S001,TRANSPORT,箱根海贼观光船,not_applicable,official_route,5
+S001_TRANSPORT_014,S001,TRANSPORT,箱根海贼观光船,not_applicable,official_route,4
 S001_TRANSPORT_014,S001,TRANSPORT,箱根海贼观光船,not_applicable,visitor_diary,15
 S001_TRANSPORT_015,S001,TRANSPORT,浪漫特快,not_applicable,official_route,5
 S001_TRANSPORT_015,S001,TRANSPORT,浪漫特快,not_applicable,visitor_diary,2
@@ -125,8 +125,8 @@ S002_POI_002,S002,POI,Yosemite Valley,inside,official_route,10
 S002_POI_002,S002,POI,Yosemite Valley,inside,visitor_diary,22
 S002_POI_003,S002,POI,El Capitan,inside,official_route,4
 S002_POI_003,S002,POI,El Capitan,inside,visitor_diary,8
-S002_POI_004,S002,POI,Half Dome,inside,visitor_diary,43
-S002_POI_005,S002,POI,Glacier Point,inside,visitor_diary,9
+S002_POI_004,S002,POI,Half Dome,inside,visitor_diary,47
+S002_POI_005,S002,POI,Glacier Point,inside,visitor_diary,10
 S002_POI_006,S002,POI,Tunnel View,inside,visitor_diary,13
 S002_POI_007,S002,POI,Bridalveil Fall,inside,official_route,3
 S002_POI_007,S002,POI,Bridalveil Fall,inside,visitor_diary,14
@@ -284,18 +284,18 @@ S002_TRANSPORT_004,S002,TRANSPORT,自驾,not_applicable,visitor_diary,14
 S002_TRANSPORT_008,S002,TRANSPORT,自行车,not_applicable,official_route,3
 S002_TRANSPORT_008,S002,TRANSPORT,自行车,not_applicable,visitor_diary,1
 S003_POI_001,S003,POI,蓝山国家公园,regional,official_route,28
-S003_POI_001,S003,POI,蓝山国家公园,regional,visitor_diary,32
+S003_POI_001,S003,POI,蓝山国家公园,regional,visitor_diary,31
 S003_POI_002,S003,POI,三姐妹峰,inside,official_route,5
 S003_POI_002,S003,POI,三姐妹峰,inside,visitor_diary,5
 S003_POI_003,S003,POI,Scenic World,surrounding,official_route,10
-S003_POI_004,S003,POI,Katoomba,surrounding,official_route,20
+S003_POI_004,S003,POI,Katoomba,surrounding,official_route,21
 S003_POI_004,S003,POI,Katoomba,surrounding,visitor_diary,1
 S003_POI_005,S003,POI,Leura,surrounding,official_route,32
 S003_POI_006,S003,POI,Wentworth Falls,surrounding,official_route,4
 S003_POI_007,S003,POI,温特沃斯瀑布,inside,official_route,3
 S003_POI_008,S003,POI,Grand Cliff Top Walk,inside,official_route,3
 S003_POI_009,S003,POI,悉尼,external,official_route,12
-S003_POI_009,S003,POI,悉尼,external,visitor_diary,14
+S003_POI_009,S003,POI,悉尼,external,visitor_diary,9
 S003_POI_010,S003,POI,Gordon Falls,inside,official_route,1
 S003_POI_011,S003,POI,Buttenshaw Bridge,inside,official_route,1
 S003_POI_012,S003,POI,Jamison Lookout,inside,official_route,2
@@ -373,7 +373,7 @@ S003_TRANSPORT_002,S003,TRANSPORT,巴士,not_applicable,official_route,7
 S003_TRANSPORT_002,S003,TRANSPORT,巴士,not_applicable,visitor_diary,2
 S003_TRANSPORT_003,S003,TRANSPORT,列车,not_applicable,official_route,6
 S003_TRANSPORT_004,S003,TRANSPORT,自驾,not_applicable,official_route,13
-S003_TRANSPORT_004,S003,TRANSPORT,自驾,not_applicable,visitor_diary,4
+S003_TRANSPORT_004,S003,TRANSPORT,自驾,not_applicable,visitor_diary,3
 S003_TRANSPORT_005,S003,TRANSPORT,缆车,not_applicable,official_route,3
 S003_TRANSPORT_005,S003,TRANSPORT,缆车,not_applicable,visitor_diary,6
 S003_TRANSPORT_008,S003,TRANSPORT,自行车,not_applicable,official_route,3

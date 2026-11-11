@@ -1,6 +1,6 @@
 {
   "dataset_role": "development",
-  "annotation_note": "依据清洗原文逐条对照整理的开发集参考顺序，待组员复核；不是独立测试集。可选岔路不计入主线，游客未具名站点不计入。 2026-11-11修订：11:20步为前往大涌谷途中的早云山换乘点；蓝山官方评来源顺序候选活动，不评必经行程。",
+  "annotation_note": "依据清洗原文逐条对照整理的开发集参考顺序，待组员复核；不是独立测试集。可选岔路不计入主线，游客未具名站点不计入。 2026-11-11修订：11:20步为前往大涌谷途中的早云山换乘点；蓝山官方评来源顺序候选活动，不评必经行程。 本轮纳入三段明确缆车乘坐活动，作为非POI交通步骤；参考参与开发，不是独立盲测。",
   "routes": [
     {
       "route_id": "R_S001_OFF_001_01",
@@ -37,17 +37,17 @@
     },
     {
       "route_id": "R_S003_VIS_001_01",
-      "predicted": 2,
-      "gold": 2,
-      "matched": 2,
+      "predicted": 5,
+      "gold": 5,
+      "matched": 5,
       "precision": 1.0,
       "recall": 1.0,
-      "ordered_matched": 2,
+      "ordered_matched": 5,
       "sequence_recall": 1.0,
       "missing": []
     }
   ],
-  "evidence_checked": 32,
+  "evidence_checked": 35,
   "comparisons": [
     {
       "scenic_id": "S001",
@@ -75,7 +75,7 @@
       "official_time_known": 12,
       "official_steps": 12,
       "visitor_time_known": 0,
-      "visitor_steps": 2
+      "visitor_steps": 5
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "resource_version": "exp02-v1.1",
+  "resource_version": "exp02-v1.2",
   "corpus_version": "v1",
   "corpus_sha256": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0",
   "provenance": "依据YZH的exp06_alignment.json反馈、冻结v1原文及DHT在本次会话授权落实的结论；不代表组员已独立验收。",

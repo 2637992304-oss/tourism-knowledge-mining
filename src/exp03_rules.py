@@ -1,5 +1,6 @@
 """由语料核对的地点词表与通用行进子句规则；不创建 DHT 的实体 ID。"""
 import re
+from noise_filter import overlaps_noise
 
 LEXICONS = {
     "S001": ["早云山", "桃源台", "芦之湖", "金太郎展望台", "姥子缆车站",
@@ -29,6 +30,7 @@ def extract(doc, make_step, start=0, end=None, inherit_bucket=False):
     for sentence in re.finditer(r"[^。！？\n]+", text[start:end]):
         base = start + sentence.start()
         content = sentence[0]
+        if overlaps_noise(doc['doc_id'],base,base+len(content)):continue
         heading = re.match(r"(早晨|上午|中午|下午|晚上|傍晚)[:：]", content)
         if heading and inherit_bucket:
             time_text, bucket = heading[1], BUCKET[heading[1]]
@@ -61,3 +63,20 @@ def extract(doc, make_step, start=0, end=None, inherit_bucket=False):
                     step.update(time_bucket=bucket, time_text=time_text)
                 steps.append(step)
     return steps, rejected
+
+
+def transport_activities(doc,make_step):
+    """Keep explicitly narrated rides even when no station POI is named."""
+    steps=[]
+    pattern=re.compile(r'[^。！？\n]*(?:先坐下山的缆车|来乘坐[^。！？\n]*?缆车|乘上SKYWAY缆车)[^。！？\n]*')
+    for match in pattern.finditer(doc['text']):
+        if overlaps_noise(doc['doc_id'],match.start(),match.end()):continue
+        text=match.group()
+        if re.search(r'没有|未去|打算|计划',text):continue
+        label=next((m.group() for m in re.finditer(r'下山的缆车|近90度陡的缆车|SKYWAY缆车',text)),None)
+        if label:
+            step=make_step(doc,0,label,text,match.start(),match.end())
+            step.update(step_kind='transport_activity',location_role='unnamed_transport_activity',
+                        alignment_method='not_applicable_transport',poi_entity_id=None)
+            steps.append(step)
+    return steps
