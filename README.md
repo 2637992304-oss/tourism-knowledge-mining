@@ -16,11 +16,11 @@
 | 4 共指消解 | DHT，59例参考与预测、报告 | 不将未经复核的错误预测直接写入图谱事实 |
 | 5 条件建议 | FYH，21条建议及32例评价 | E5_013修订为情境条件正例，当前参考21正关系、11负例 |
 | 6 图谱与展示 | YZH基础，FYH完整融合，本轮复核修正 | v3，153节点207边；来源按字符证据映射到具体网页 |
-| 7 Agent | FYH，模型调用、图谱工具与案例 | 当前离线复验通过；新图谱真实模型验证待配置 |
+| 7 Agent | FYH，模型调用、图谱工具与案例 | 当前v3真实模型与离线复验均通过 |
 
-本轮49项测试和7例历史提案离线复验通过，见[当前验收](results/checks/exp05_07_acceptance.json)。acceptance_scope=offline、exp07_live_passed=false；不能称修复后真实模型验收通过。模型配置尚未提供，本轮没有新API请求。
+本轮49项测试、当前v3的7个真实模型案例与历史提案离线复验通过，见[当前验收](results/checks/exp05_07_acceptance.json)。真实运行模型deepseek-flash，累计20次请求（18次完整运行，黄山措辞回归追加2次），最终7例均partial；不表示全部旅行约束满足。
 
-原[data/outputs/agent_cases.json](data/outputs/agent_cases.json)保留旧图谱v2的真实调用记录（7例最终partial、累计20次请求），不能验收新v3图谱。新增[agent_revalidated_cases.json](data/outputs/agent_revalidated_cases.json)为当前工具对历史模型提案的离线重验证，real_llm=false、0次API请求。没有把旧日志的图谱指纹替换成新值。
+[agent_cases.json](data/outputs/agent_cases.json)是当前v3真实模型记录，包含全部工具轨迹及黄山两次早期提示结果。旧v2原始真实日志完整归档至[历史日志](results/checks/history/agent_cases_5f0efd5058dc.json)。另有[agent_revalidated_cases.json](data/outputs/agent_revalidated_cases.json)记录旧提案在v3的离线复验，real_llm=false、0次API请求；与新真实运行分开。
 
 ## 环境与运行
 

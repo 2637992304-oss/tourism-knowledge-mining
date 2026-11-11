@@ -8,7 +8,7 @@
 | `processed/` | `scenic_registry.json` 和公共清洗语料 `corpus.jsonl` | DHT |
 | `outputs/` | 实体、路线、共指、建议、图谱和 Agent 场景正式结果 | 各实验负责人 |
 
-当前已有3景区18篇v1正式语料、实体和共指结果，并已整合YZH的4条路线。FYH接管实验5/6/7后新增20条条件建议、v2融合图谱与真实LLM案例。来源与运行说明见根目录README及results/checks中的各实验交接文件。示例和合成协议测试不计入正式语料或真实LLM案例。
+当前已有3景区18篇v1正式语料、实体和共指结果，并已整合YZH的4条路线。FYH接管实验5/6/7后当前有21条条件建议、v3融合图谱及本轮deepseek-flash真实LLM案例；旧v2日志保存在results/checks/history。来源与运行说明见根目录README及results/checks中的各实验交接文件。示例和合成协议测试不计入正式语料或真实LLM案例。
 
 公共语料首版标记为 `corpus_version: "v1"`。实验输出先引用同一份语料，再进行交接；语料变更须升级版本并重新生成受影响的结果。
 

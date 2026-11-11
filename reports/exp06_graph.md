@@ -72,4 +72,4 @@ yzh_figures保留YZH路线层级绘图，图谱部分转到exp06_visualize完整
 
 ## v3复核修正
 
-逐证据来源映射见data/resources/source_page_spans.json；复合文档跨页证据返回多网页来源。蓝山官方NEXT_STEP的sequence_semantics=source_order_only，仅表达候选活动的原文顺序；不是必经链。箱根11:20步骤使用早云山换乘位置，另存最终目的地大涌谷。图谱和源文件均含相应语义。旧v2 Agent日志保留历史，新图谱离线复验通过，真实模型复验尚待配置。
+逐证据来源映射见data/resources/source_page_spans.json；复合文档跨页证据返回多网页来源。蓝山官方NEXT_STEP的sequence_semantics=source_order_only，仅表达候选活动的原文顺序；不是必经链。箱根11:20步骤使用早云山换乘位置，另存最终目的地大涌谷。图谱和源文件均含相应语义。旧v2 Agent日志保留历史，新图谱离线复验及deepseek-flash真实模型复验均通过。

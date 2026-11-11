@@ -59,6 +59,10 @@ class ReviewFixTests(unittest.TestCase):
         answer=clarification_questions(c,'给我黄山的路线')[0]
         self.assertIn('黄山',answer);self.assertIn('尚未',answer)
         self.assertIn('箱根',answer);self.assertIn('？',answer)
+        c['missing_information']=['黄山未在登记景区中，无法确定scenic_id']
+        self.assertIn('你指定的“黄山”尚未被知识库覆盖',clarification_questions(c,'给我黄山的路线')[0])
+        c['missing_information']=['未登记景区：黄山']
+        self.assertTrue(clarification_questions(c,'给我黄山的路线')[0].startswith('你请求的目的地尚未'))
 
     def test_revalidated_history_cannot_pass_as_new_live_run(self):
         data=read_json(ROOT/'data/outputs/agent_revalidated_cases.json')

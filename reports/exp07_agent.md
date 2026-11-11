@@ -4,9 +4,9 @@
 
 ## 当前验证状态
 
-data/outputs/agent_cases.json保留原始7例真实调用记录：旧图谱v2、20次API请求，最终均partial。原日志不重写、不换指纹。当前图谱v3已有变化，原记录不能验收当前图谱。
+data/outputs/agent_cases.json为当前图谱v3的7个真实模型案例，模型deepseek-flash、累计20次API请求。18次完成整组场景后，为修正黄山提示的模型表述兼容问题追加2次单例请求；早期结果保留在AG_007.previous_attempts。最终7例均partial，程序核验通过，不代表全部旅行约束满足。
 
-data/outputs/agent_revalidated_cases.json是7例历史提案的离线复验，重新调用当前只读图谱工具并重新核对来源、地点与约束；不调用模型，API请求0，real_llm=false。它不能验证修复后模型是否会正确解析、选工具和生成文本。当前尚无模型配置，新真实验收待进行。验收状态见exp05_07_acceptance.json与exp07_quality.json。
+旧v2的qwen3.8-flash真实日志原样归档至results/checks/history/agent_cases_5f0efd5058dc.json，不替换其指纹。agent_revalidated_cases.json是旧提案在v3的7例离线复验，real_llm=false、API请求0，不能替代新真实案例。当前完整门禁见exp05_07_acceptance.json，exp07_live_passed=true。
 
 ## 约束与工具闭环
 

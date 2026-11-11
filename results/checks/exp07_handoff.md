@@ -1,7 +1,7 @@
 # 实验7当前交接
 
-当前图谱v3。原agent_cases.json是图谱v2的历史真实记录，不修改其内容和指纹。
+当前图谱v3、模型deepseek-flash。agent_cases.json为本轮7个真实案例，18次完整运行加黄山两次单例回归共20次API请求，最终均partial。49项测试和真实链路验收通过。黄山旧提示结果保存在previous_attempts，历史v2真实记录完整保存在results/checks/history/agent_cases_5f0efd5058dc.json。
 
-本轮新增agent_revalidated_cases.json：7例历史提案在新工具上的离线复验、0次API请求、real_llm=false。exp07_quality.json明确execution_mode与live_validation_passed；exp05_07_acceptance.json的offline通过不表示新模型验收通过。
+agent_revalidated_cases.json为独立的旧提案离线复验，real_llm=false、请求0，不混同真实运行。exp07_quality.json与exp05_07_acceptance.json明确执行模式与门禁。
 
-已修复未覆盖景区、缺信息和冲突的完整提示；来源按网页证据返回；蓝山候选活动不作为固定行程承诺。仍需实际配置模型并运行新真实案例，操作见reports/模型配置与更新.md。历史模型记录、失败与恢复日志保留溯源。
+用户私有.env仅保留本地，不入库。模型配置及更新步骤见reports/模型配置与更新.md。

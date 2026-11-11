@@ -6,6 +6,11 @@ from exp07_agent import grounded_plan, clarification_questions
 
 def main():
     tools=GraphTools();historical=read_json(ROOT/'data/outputs/agent_cases.json');cases=[]
+    digest=sha256(ROOT/'data/outputs/agent_cases.json')
+    archive=ROOT/'results/checks/history'/('agent_cases_'+digest[:12]+'.json')
+    if not archive.exists():
+        archive.parent.mkdir(parents=True,exist_ok=True)
+        archive.write_bytes((ROOT/'data/outputs/agent_cases.json').read_bytes())
     for old in historical['cases']:
         c=copy.deepcopy(old['parsed_constraints']);calls=[]
         for call in old['tool_calls']:
@@ -31,7 +36,7 @@ def main():
     write_json(ROOT/'data/outputs/agent_revalidated_cases.json',{
         'schema_version':'1.0','corpus_version':'v1','graph_version':tools.graph['graph_version'],
         'graph_sha256':tools.graph_sha256,'execution_mode':'offline_revalidation','api_requests':0,
-        'model':None,'historical_source':'data/outputs/agent_cases.json',
+        'model':None,'historical_source':archive.relative_to(ROOT).as_posix(),
         'historical_sha256':sha256(ROOT/'data/outputs/agent_cases.json'),
         'limitations':['不证明更新后的模型约束解析、选工具或文本生成已实测；需要新真实调用'], 'cases':cases})
     print('7例历史提案当前数据复验；0次API请求。')

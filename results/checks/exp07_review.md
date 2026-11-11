@@ -1,15 +1,15 @@
 # 实验7场景核验
 
-执行模式：offline_revalidation；0次本轮API请求；图谱v3。
+执行模式：live_api；20次本轮API请求；图谱v3。
 offline_revalidation为对历史模型提案的程序复验，不是新模型调用；语义仍需组员独立复核。
 
 ## AG_001
 我想带孩子在箱根玩一天，请基于图谱安排路线，并找明确适合亲子的建议。
 
 状态：partial
-约束：{'scenic_id': 'S001', 'visitor_type': 'family', 'time_bucket': None, 'duration_days': 1, 'condition_type': 'visitor_type', 'missing_information': [], 'conflicts': [], 'decision_summary': '识别为日本箱根一日游，用户明确带孩子游玩并要求亲子建议，时段未提供。'}
-工具：[('query_routes', {'scenic_id': 'S001', 'time_bucket': ''}, 'error'), ('query_advice', {'condition_type': 'visitor_type', 'scenic_id': 'S001', 'visitor_type': 'family'}, 'ok'), ('query_routes', {'scenic_id': 'S001', 'time_bucket': None}, 'ok')]
-核验：['复用历史约束和所选步骤ID，重新查询当前图谱并校验；无新LLM调用']
+约束：{'scenic_id': 'S001', 'visitor_type': 'family', 'time_bucket': None, 'duration_days': 1, 'condition_type': 'visitor_type', 'missing_information': [], 'conflicts': [], 'decision_summary': '用户明确带孩子在箱根游玩一天，需基于图谱安排亲子路线并优先明确适合亲子的建议。'}
+工具：[('query_routes', {'scenic_id': 'S001'}, 'ok'), ('query_advice', {'scenic_id': 'S001', 'visitor_type': 'family', 'condition_type': 'visitor_type'}, 'ok')]
+核验：['通过程序核对路线/步骤/建议ID和引用；尚需组员独立语义验收']
 最终结果：{
   "route_id": "R_S001_OFF_001_01",
   "steps": [
@@ -258,9 +258,22 @@ offline_revalidation为对历史模型提案的程序复验，不是新模型调
       "relation_note": "关联实体仅表示证据涉及，不表示每个实体都应访问或允许使用"
     }
   ],
-  "supplementary_advice": [],
+  "supplementary_advice": [
+    {
+      "text": "按来源时刻从7:30新宿出发至17:00汤本购物，全天行程约为9.5小时（含交通与游览，实际以当日交通和停留时间为准）。",
+      "basis": "estimate"
+    },
+    {
+      "text": "文中时刻为来源的历史推荐时间，非实时班次或路况；建议出行前核实交通班次、设施开放情况与人流。",
+      "basis": "general_suggestion"
+    }
+  ],
   "limitations": [
-    "query_routes：invalid_time_bucket",
+    "官方路线未标注老人、亲子或情侣适用性，不能据此保证整条路线适合亲子。",
+    "明确的亲子建议只针对相关实体“泡泡城堡”“网之森林”；图谱未证明其属于本路线步骤，也未证明可替换或新增到该路线。",
+    "无各步骤预计用时数据，无法验证一天内实际可完成的时长。",
+    "路线包含新宿至箱根汤本的景区外接驳起点。",
+    "图谱不是实时路况或运营服务，价格、开放与服务需出行前核实。",
     "原路线未标注整体人群适用性；条件建议的明确标签不证明全路线适合该人群。",
     "图谱缺少完整停留及交通耗时，不能保证满足请求总时长；原文钟点仅为历史推荐。"
   ],
@@ -282,9 +295,9 @@ offline_revalidation为对历史模型提案的程序复验，不是新模型调
 带老人去箱根，只看上午路线，有适合老人的建议吗？
 
 状态：partial
-约束：{'scenic_id': 'S001', 'visitor_type': 'elderly', 'time_bucket': 'morning', 'duration_days': None, 'condition_type': 'visitor_type', 'missing_information': [], 'conflicts': [], 'decision_summary': '识别景区为日本箱根，用户明确带老人、只看上午路线；未提供天数，不阻止检索。'}
-工具：[('query_routes', {'scenic_id': 'S001', 'time_bucket': 'morning'}, 'ok'), ('query_advice', {'scenic_id': 'S001', 'condition_type': 'visitor_type', 'visitor_type': 'elderly'}, 'no_match')]
-核验：['复用历史约束和所选步骤ID，重新查询当前图谱并校验；无新LLM调用']
+约束：{'scenic_id': 'S001', 'visitor_type': 'elderly', 'time_bucket': 'morning', 'duration_days': None, 'condition_type': 'visitor_type', 'missing_information': [], 'conflicts': [], 'decision_summary': '用户明确带老人前往箱根，并只看上午路线；景区已登记为S001，未提及其他互斥时长或缺失景区。'}
+工具：[('query_routes', {'scenic_id': 'S001', 'time_bucket': 'morning'}, 'ok'), ('query_advice', {'scenic_id': 'S001', 'visitor_type': 'elderly', 'condition_type': 'visitor_type'}, 'no_match'), ('query_advice', {'condition_type': 'visitor_type', 'scenic_id': 'S001', 'visitor_type': 'general'}, 'no_match'), ('query_advice', {'condition_type': 'time', 'scenic_id': 'S001', 'visitor_type': None}, 'no_match')]
+核验：['通过程序核对路线/步骤/建议ID和引用；尚需组员独立语义验收']
 最终结果：{
   "route_id": "R_S001_OFF_001_01",
   "steps": [
@@ -366,8 +379,25 @@ offline_revalidation为对历史模型提案的程序复验，不是新模型调
     }
   ],
   "advice": [],
-  "supplementary_advice": [],
+  "supplementary_advice": [
+    {
+      "text": "上述时刻为原路线中的历史推荐时间，不是实时班次或路况；该上午片段为“初游箱根当日往返路线”的一部分，原路线整体为7:30新宿出发至17:00汤本购物，未提供各步骤或整体的预计用时，需另行核实。",
+      "basis": "general_suggestion"
+    },
+    {
+      "text": "按原路线时刻推算，上午片段自7:30出发至10:00抵达美术馆，行程历时约为2.5小时（估计值，不含返程与停留时长）。",
+      "basis": "estimate"
+    }
+  ],
   "limitations": [
+    "原路线未标注老人适用性，不能据此保证适合老人（步行量、台阶、换乘便利性均无证据）",
+    "老人专属条件建议查询结果为no_match（数据已接入但无匹配建议），无可引用的适老建议",
+    "上午时段条件建议查询结果同样为no_match",
+    "各步骤duration_minutes为空，无法给出有依据的停留或总时长",
+    "列表仅为原路线上午片段，不能视为完整一日路线；未纳入午后及傍晚行程",
+    "图谱非实时服务，不反映当日列车班次、拥挤或天气情况",
+    "query_advice：no_advice_match：数据已接入，但没有明确满足该过滤条件的建议",
+    "query_advice：no_advice_match：数据已接入，但没有明确满足该过滤条件的建议",
     "query_advice：no_advice_match：数据已接入，但没有明确满足该过滤条件的建议",
     "原路线未标注整体人群适用性；条件建议的明确标签不证明全路线适合该人群。"
   ],
@@ -389,9 +419,9 @@ offline_revalidation为对历史模型提案的程序复验，不是新模型调
 情侣去蓝山两天，如果下雨，有哪些建议和可参考路线？
 
 状态：partial
-约束：{'scenic_id': 'S003', 'visitor_type': 'couple', 'time_bucket': None, 'duration_days': 2, 'condition_type': 'weather', 'missing_information': [], 'conflicts': [], 'decision_summary': '解析为情侣前往澳大利亚蓝山国家公园、行程2天，并涉及雨天条件约束。'}
-工具：[('query_routes', {'scenic_id': 'S003', 'time_bucket': None}, 'ok'), ('query_advice', {'scenic_id': 'S003', 'visitor_type': 'couple', 'condition_type': None}, 'no_match'), ('query_advice', {'scenic_id': 'S003', 'condition_type': 'weather', 'visitor_type': None}, 'ok')]
-核验：['复用历史约束和所选步骤ID，重新查询当前图谱并校验；无新LLM调用']
+约束：{'scenic_id': 'S003', 'visitor_type': 'couple', 'time_bucket': None, 'duration_days': 2, 'condition_type': 'weather', 'missing_information': [], 'conflicts': [], 'decision_summary': '情侣计划前往澳大利亚蓝山国家公园游玩两天，并询问下雨情况下的建议和可参考路线。'}
+工具：[('query_routes', {'scenic_id': 'S003', 'time_bucket': None}, 'ok'), ('query_advice', {'scenic_id': 'S003', 'visitor_type': 'couple', 'condition_type': 'visitor_type'}, 'no_match'), ('query_advice', {'scenic_id': 'S003', 'visitor_type': None, 'condition_type': 'weather'}, 'ok'), ('query_advice', {'scenic_id': 'S003', 'visitor_type': 'general', 'condition_type': None}, 'no_match')]
+核验：['final_validation: invalid_final_schema', '通过程序核对路线/步骤/建议ID和引用；尚需组员独立语义验收']
 最终结果：{
   "route_id": "R_S003_OFF_001_01",
   "steps": [
@@ -709,9 +739,20 @@ offline_revalidation为对历史模型提案的程序复验，不是新模型调
       "relation_note": "关联实体仅表示证据涉及，不表示每个实体都应访问或允许使用"
     }
   ],
-  "supplementary_advice": [],
+  "supplementary_advice": [
+    {
+      "text": "上述步骤为来源列出的一日游候选活动清单，按原文时间分段与顺序呈现，并非两日连续行程；无法据此估计两天各段用时，需自行取舍并在出行前核实开放与服务。",
+      "basis": "general_suggestion"
+    }
+  ],
   "limitations": [
+    "情侣专属建议查询无匹配（no_advice_match），无法确认路线或活动的情侣适用性。",
+    "图谱仅提供一日游候选活动，没有两日完整路线，无法满足两天时长安排。",
+    "原路线未标注老人/亲子/情侣适用性，列出步骤不表示适合情侣或雨天适用。",
+    "雨天建议为来源历史陈述，价格、开放时间与服务须出行前核实。",
+    "本规划不提供实时天气或路况判断，雨天户外步骤（瀑布步道、瞭望台、夜间灯光步道）的可行性未经验证。",
     "以下仅为原文顺序的候选活动，含可选推荐；不是必须依次完成的固定路线。",
+    "query_advice：no_advice_match：数据已接入，但没有明确满足该过滤条件的建议",
     "query_advice：no_advice_match：数据已接入，但没有明确满足该过滤条件的建议",
     "原路线未标注整体人群适用性；条件建议的明确标签不证明全路线适合该人群。",
     "图谱缺少完整停留及交通耗时，不能保证满足请求总时长；原文钟点仅为历史推荐。",
@@ -736,9 +777,9 @@ offline_revalidation为对历史模型提案的程序复验，不是新模型调
 请给我优胜美地的路线和避免拥挤的建议。
 
 状态：partial
-约束：{'scenic_id': 'S002', 'visitor_type': None, 'time_bucket': None, 'duration_days': None, 'condition_type': 'crowding', 'missing_information': [], 'conflicts': [], 'decision_summary': '用户明确请求优胜美地景区，并希望获取路线与避免拥挤建议。'}
-工具：[('query_routes', {'scenic_id': 'S002'}, 'no_match'), ('query_advice', {'condition_type': 'crowding', 'scenic_id': 'S002'}, 'ok')]
-核验：['复用历史约束和所选步骤ID，重新查询当前图谱并校验；无新LLM调用']
+约束：{'scenic_id': 'S002', 'visitor_type': None, 'time_bucket': None, 'duration_days': None, 'condition_type': 'crowding', 'missing_information': [], 'conflicts': [], 'decision_summary': '用户明确查询优胜美地国家公园的路线，并希望避免拥挤。'}
+工具：[('query_routes', {'scenic_id': 'S002'}, 'no_match'), ('query_advice', {'scenic_id': 'S002', 'condition_type': 'crowding'}, 'ok')]
+核验：['通过程序核对路线/步骤/建议ID和引用；尚需组员独立语义验收']
 最终结果：{
   "route_id": null,
   "steps": [],
@@ -771,9 +812,17 @@ offline_revalidation为对历史模型提案的程序复验，不是新模型调
       "relation_note": "关联实体仅表示证据涉及，不表示每个实体都应访问或允许使用"
     }
   ],
-  "supplementary_advice": [],
+  "supplementary_advice": [
+    {
+      "text": "该建议来自游客游记，属于历史经验；预约政策、开放情况和实际人流须出行前另行核实。",
+      "basis": "general_suggestion"
+    }
+  ],
   "limitations": [
-    "当前图谱缺少该景区的有序路线。",
+    "路线查询无匹配：当前图谱未覆盖该景区或时间段，不代表现实中没有路线",
+    "图谱不是实时路况或人流服务，无法提供实时拥挤程度",
+    "未查询人群适用性（用户未指定人群），无适用性证据",
+    "来源为游客日记类历史陈述，价格、开放、预约要求须出行前核实",
     "query_routes：no_route_match：当前图谱未覆盖该景区/时间段；不代表现实中没有路线"
   ],
   "source_refs": [
@@ -794,9 +843,9 @@ offline_revalidation为对历史模型提案的程序复验，不是新模型调
 带孩子玩一天，帮我规划。
 
 状态：partial
-约束：{'scenic_id': None, 'visitor_type': 'family', 'time_bucket': None, 'duration_days': 1, 'condition_type': 'visitor_type', 'missing_information': ['景区'], 'conflicts': [], 'decision_summary': '识别为带孩子一日游；未提供景区，不替换为已知景区。'}
+约束：{'scenic_id': None, 'visitor_type': 'family', 'time_bucket': None, 'duration_days': 1, 'condition_type': 'visitor_type', 'missing_information': ['未指定景区'], 'conflicts': [], 'decision_summary': '用户带孩子出行，计划游玩1天，但未指定景区，需先确认景区后再检索。'}
 工具：[]
-核验：['复用历史约束和所选步骤ID，重新查询当前图谱并校验；无新LLM调用']
+核验：['需澄清后再查询；未生成无证据行程']
 最终结果：{
   "clarification": [
     "请先指定想游览的景区。当前知识库仅覆盖日本箱根、美国优胜美地和澳大利亚蓝山。你希望查询其中哪个景区？当前不能为未覆盖景区生成有来源的路线。"
@@ -808,12 +857,12 @@ offline_revalidation为对历史模型提案的程序复验，不是新模型调
 去箱根，必须总共一天完成，但同时总共必须两天完成，不接受放宽。
 
 状态：partial
-约束：{'scenic_id': 'S001', 'visitor_type': None, 'time_bucket': None, 'duration_days': None, 'condition_type': 'time', 'missing_information': [], 'conflicts': ['总时长要求同时包含“必须总共一天完成”和“总共必须两天完成”，二者互斥且不接受放宽'], 'decision_summary': '景区识别为箱根；总时长要求存在一天与两天互斥，无法确定唯一 duration_days。'}
+约束：{'scenic_id': 'S001', 'visitor_type': None, 'time_bucket': None, 'duration_days': None, 'condition_type': 'time', 'missing_information': [], 'conflicts': ['用户同时要求总行程必须一天完成和必须两天完成，二者互斥且不接受放宽'], 'decision_summary': '识别景区为日本箱根，但行程天数约束存在一天与两天互斥冲突，无法确定duration_days。'}
 工具：[]
-核验：['复用历史约束和所选步骤ID，重新查询当前图谱并校验；无新LLM调用']
+核验：['需澄清后再查询；未生成无证据行程']
 最终结果：{
   "clarification": [
-    "你的要求存在冲突：总时长要求同时包含“必须总共一天完成”和“总共必须两天完成”，二者互斥且不接受放宽。请确认采用哪一种时长要求？"
+    "你的要求存在冲突：用户同时要求总行程必须一天完成和必须两天完成，二者互斥且不接受放宽。请确认采用哪一种时长要求？"
   ],
   "source_refs": []
 }
@@ -822,9 +871,9 @@ offline_revalidation为对历史模型提案的程序复验，不是新模型调
 给我黄山的游览路线。
 
 状态：partial
-约束：{'scenic_id': None, 'visitor_type': None, 'time_bucket': None, 'duration_days': None, 'condition_type': None, 'missing_information': ['黄山'], 'conflicts': [], 'decision_summary': "用户请求未知景区'黄山'，不在登记景区范围内，缺失景区信息，无法匹配已知景区提供路线。"}
+约束：{'scenic_id': None, 'visitor_type': None, 'time_bucket': None, 'duration_days': None, 'condition_type': None, 'missing_information': ['黄山不在已登记景区列表'], 'conflicts': [], 'decision_summary': '用户请求黄山游览路线，但黄山未登记在已知景区列表中，无法映射到scenic_id。'}
 工具：[]
-核验：['复用历史约束和所选步骤ID，重新查询当前图谱并校验；无新LLM调用']
+核验：['需澄清后再查询；未生成无证据行程']
 最终结果：{
   "clarification": [
     "你指定的“黄山”尚未被知识库覆盖。当前知识库仅覆盖日本箱根、美国优胜美地和澳大利亚蓝山。你希望查询其中哪个景区？当前不能为未覆盖景区生成有来源的路线。"

@@ -6,7 +6,7 @@
   "execution_mode": "offline_revalidation",
   "api_requests": 0,
   "model": null,
-  "historical_source": "data/outputs/agent_cases.json",
+  "historical_source": "results/checks/history/agent_cases_5f0efd5058dc.json",
   "historical_sha256": "5f0efd5058dc5f2d91b25c3c89134ac21ef7aee07aeb8ed8b7c273330f2c56d9",
   "limitations": [
     "不证明更新后的模型约束解析、选工具或文本生成已实测；需要新真实调用"

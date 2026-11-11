@@ -86,10 +86,11 @@
     {
       "command": [
         "python",
-        "src/exp07_revalidate.py"
+        "src/exp07_agent.py",
+        "--cases"
       ],
       "returncode": 0,
-      "output": "7例历史提案当前数据复验；0次API请求。\n"
+      "output": "{\n  \"execution_mode\": \"live_api\",\n  \"api_requests\": 18,\n  \"cases\": [\n    {\n      \"case_id\": \"AG_001\",\n      \"status\": \"partial\",\n      \"check_notes\": [\n        \"通过程序核对路线/步骤/建议ID和引用；尚需组员独立语义验收\"\n      ]\n    },\n    {\n      \"case_id\": \"AG_002\",\n      \"status\": \"partial\",\n      \"check_notes\": [\n        \"通过程序核对路线/步骤/建议ID和引用；尚需组员独立语义验收\"\n      ]\n    },\n    {\n      \"case_id\": \"AG_003\",\n      \"status\": \"partial\",\n      \"check_notes\": [\n        \"final_validation: invalid_final_schema\",\n        \"通过程序核对路线/步骤/建议ID和引用；尚需组员独立语义验收\"\n      ]\n    },\n    {\n      \"case_id\": \"AG_004\",\n      \"status\": \"partial\",\n      \"check_notes\": [\n        \"通过程序核对路线/步骤/建议ID和引用；尚需组员独立语义验收\"\n      ]\n    },\n    {\n      \"case_id\": \"AG_005\",\n      \"status\": \"partial\",\n      \"check_notes\": [\n        \"需澄清后再查询；未生成无证据行程\"\n      ]\n    },\n    {\n      \"case_id\": \"AG_006\",\n      \"status\": \"partial\",\n      \"check_notes\": [\n        \"需澄清后再查询；未生成无证据行程\"\n      ]\n    },\n    {\n      \"case_id\": \"AG_007\",\n      \"status\": \"partial\",\n      \"check_notes\": [\n        \"需澄清后再查询；未生成无证据行程\"\n      ]\n    }\n  ]\n}\nAG_001: partial / tool_calls=2\nAG_002: partial / tool_calls=4\nAG_003: partial / tool_calls=4\nAG_004: partial / tool_calls=2\nAG_005: partial / tool_calls=0\nAG_006: partial / tool_calls=0\nAG_007: partial / tool_calls=0\n"
     }
   ],
   "passed": true

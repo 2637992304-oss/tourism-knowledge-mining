@@ -2,6 +2,7 @@
 import argparse
 import json
 import sys
+import re
 from pathlib import Path
 from datetime import datetime
 from zoneinfo import ZoneInfo
@@ -99,8 +100,13 @@ def clarification_questions(c,request):
         return ['你的要求存在冲突：'+'；'.join(c['conflicts'])+'。请确认采用哪一种时长要求？']
     coverage='当前知识库仅覆盖日本箱根、美国优胜美地和澳大利亚蓝山。'
     if c['scenic_id'] is None:
-        names=[x for x in c['missing_information'] if x and not any(w in x for w in ['景区','目的地','请提供','未提供'])]
+        names=[]
+        for item in c['missing_information']:
+            name=re.split(r'未在|不在|未被|尚未|不属于|未登记|未覆盖',item,maxsplit=1)[0].strip(' “”。,，')
+            if name and not any(w in name for w in ['景区','目的地','请提供','未提供','未指定']):names.append(name)
         prefix=('你指定的“'+'、'.join(names)+'”尚未被知识库覆盖。') if names else '请先指定想游览的景区。'
+        if not names and re.search(r'未登记|未覆盖|不在|未在|不支持', ' '.join(c['missing_information'])+' '+c.get('decision_summary','')):
+            prefix='你请求的目的地尚未被知识库覆盖。'
         return [prefix+coverage+'你希望查询其中哪个景区？当前不能为未覆盖景区生成有来源的路线。']
     return []
 
