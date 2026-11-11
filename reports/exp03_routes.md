@@ -61,3 +61,9 @@
     python src/yzh_figures.py
 
 结构化结果、开发集、指标、PNG 和原文证据可以对应核查。交接说明见 results/checks/exp03_handoff.md。
+
+## 2026年11月11日语义修订
+
+箱根11:20标题中的大涌谷是最终目的地，正文明确先到早云山站换乘；当前第5步poi_name为早云山，destination_poi_name为大涌谷，location_role为transfer_target。保留原文标题与时刻，参考顺序同步改标并重算，旧29/30等指标属于历史开发阶段。蓝山官方12项为candidate_activity，route.sequence_semantics=source_order_only；图中箭头只表示原文顺序，不能认定全部必须连续完成。30步的数量是具名活动/地点参考范围，不代表全部交通与游览动作都被穷尽。
+
+换乘目标表示该段交通将前往的换乘点，不表示已经在11:20到达早云山。

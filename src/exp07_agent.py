@@ -59,6 +59,8 @@ def grounded_plan(obj,calls,constraints):
         if step['poi_name'] not in [p['name'] for p in original['pois']] or step['time_text']!=original['time_text']:raise ModelError('unsupported_step_fact')
         if not isinstance(step['source_refs'],list) or not step['source_refs'] or not set(step['source_refs'])<=set(original['source_refs']):raise ModelError('unsupported_step_source')
         step['evidence']=original['evidence']
+        for key in ['step_kind','location_role','destination_poi_name']:
+            if key in original:step[key]=original[key]
     for index,item in enumerate(plan['advice']):
         if not isinstance(item,dict) or set(item)!={'advice_id','source_refs'} or item['advice_id'] not in advice:raise ModelError('unsupported_advice')
         original=advice[item['advice_id']]
@@ -68,6 +70,9 @@ def grounded_plan(obj,calls,constraints):
         if not isinstance(item,dict) or set(item)!={'text','basis'} or item['basis'] not in {'general_suggestion','estimate'} or not isinstance(item['text'],str):raise ModelError('unlabelled_supplement')
     # Enforce material uncertainty outside the model's prose.
     limitations=plan['limitations']
+    if route and route.get('sequence_semantics')=='source_order_only':
+        plan['sequence_semantics']='source_order_only'
+        limitations.append('以下仅为原文顺序的候选活动，含可选推荐；不是必须依次完成的固定路线。')
     for call in calls:
         if call['result']['status']!='ok':
             limitations.append(call['tool']+'：'+str(call['result']['message']))
@@ -84,8 +89,20 @@ def grounded_plan(obj,calls,constraints):
     for step in plan['steps']:used.update(step['source_refs'])
     for item in plan['advice']:used.update(s['doc_id'] for s in item['sources'])
     plan['source_refs']=sorted(used)
-    plan['sources']=[{'doc_id':sid,**next(s for call in calls if call['result']['status']=='ok' for row in call['result']['data'] for s in row['sources'] if s['doc_id']==sid)} for sid in sorted(used)]
+    selected_sources=([] if not route or not plan['steps'] else route['sources'])+[s for a in plan['advice'] for s in a['sources']]
+    plan['sources']=list({(s['doc_id'],s['url']):s for s in selected_sources}.values())
     return obj
+
+
+def clarification_questions(c,request):
+    if c['conflicts']:
+        return ['你的要求存在冲突：'+'；'.join(c['conflicts'])+'。请确认采用哪一种时长要求？']
+    coverage='当前知识库仅覆盖日本箱根、美国优胜美地和澳大利亚蓝山。'
+    if c['scenic_id'] is None:
+        names=[x for x in c['missing_information'] if x and not any(w in x for w in ['景区','目的地','请提供','未提供'])]
+        prefix=('你指定的“'+'、'.join(names)+'”尚未被知识库覆盖。') if names else '请先指定想游览的景区。'
+        return [prefix+coverage+'你希望查询其中哪个景区？当前不能为未覆盖景区生成有来源的路线。']
+    return []
 
 
 class TourismAgent:
@@ -103,7 +120,7 @@ class TourismAgent:
             parsed=self.client.complete([{'role':'system','content':PARSER_PROMPT},{'role':'user','content':request}],json_mode=True)
             c=validate_constraints(parse_json(parsed.get('content')));case['parsed_constraints']=c;case['decision_summaries'].append(c['decision_summary'])
             if c['scenic_id'] is None or c['conflicts']:
-                case.update(status='partial',final_plan={'clarification':c['conflicts']+c['missing_information'],'source_refs':[]})
+                case.update(status='partial',final_plan={'clarification':clarification_questions(c,request),'source_refs':[]})
                 case['check_notes'].append('需澄清后再查询；未生成无证据行程');return case
             messages=[{'role':'system','content':PLANNER_PROMPT},{'role':'user','content':json.dumps({'request':request,'constraints':c},ensure_ascii=False)}]
             if c['missing_information']:case['check_notes'].append('非必要补充信息缺失，继续检索并保留限制')
@@ -151,6 +168,14 @@ def run_cases(graph_path=None,env_path=None,output=None,retry_errors=False):
         if {c['case_id'] for c in previous['cases']}!={s['case_id'] for s in spec['cases']}:raise ModelError('retry_scenarios_changed')
     try:client=ChatClient(load_config(env_path))
     except ModelError as exc:config_error=str(exc)
+    if client is None:
+        raise ModelError(config_error)  # Never overwrite historical cases on missing config.
+    if not retry_errors and destination.exists():
+        digest=sha256(destination)
+        archive=ROOT/'results/checks/history'/('agent_cases_'+digest[:12]+'.json')
+        if not archive.exists():
+            archive.parent.mkdir(parents=True,exist_ok=True)
+            archive.write_bytes(destination.read_bytes())
     for s in spec['cases']:
         old=next((c for c in previous['cases'] if c['case_id']==s['case_id']),None) if previous else None
         if old and old['user_request']!=s['user_request']:raise ModelError('retry_scenarios_changed')

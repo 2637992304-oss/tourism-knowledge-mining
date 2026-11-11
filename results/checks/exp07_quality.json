@@ -1,9 +1,11 @@
 {
   "passed": true,
+  "live_validation_passed": false,
+  "execution_mode": "offline_revalidation",
   "cases": 7,
-  "api_requests": 20,
-  "model": "qwen3.8-flash",
-  "graph_sha256": "d18c388356312dd762602795e0af9c5bba8d4468c920d74065bf6bd7730bd0df",
+  "api_requests": 0,
+  "model": null,
+  "graph_sha256": "0e90251a3019ddf60cf031e1ba94bb6a964cc886896b812a83e29b38906023f3",
   "status_counts": {
     "partial": 7
   },

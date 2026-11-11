@@ -34,6 +34,8 @@ def main():
         text=n['name']
         if n['node_type']=='STEP':text=f"{'官方' if 'OFF' in n['attributes']['route_id'] else '游客'} 步骤{n['attributes']['step_no']} / {n['attributes']['time_text'] or 'unknown'}\n"+text
         if n['node_type']=='ROUTE':text=n['attributes']['route_id']+'\n'+text
+        if n['node_type']=='STEP' and n['attributes'].get('location_role')=='transfer_target':
+            text+='\n换乘目标非到达钟点；最终目的地：'+n['attributes']['destination_poi_name']
         labels[n['node_id']]=wrapped(dummy,text,font,box_width-34)
         heights[n['node_id']]=max(84,36+31*len(labels[n['node_id']]))
     columns=[[n for n in nodes if n['node_type'] in g] for g in groups]

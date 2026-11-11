@@ -54,7 +54,7 @@ def main():
     im = Image.new("RGB", (2400, 1600), "#f8fafc")
     draw = ImageDraw.Draw(im)
     draw.text((60, 35), "实验 3 · 路线与时间层级", font=title, fill="#183344")
-    draw.text((60, 95), "语料 v1 / 时间均来自原文；unknown 表示没有明确钟点或时间段", font=f, fill="#486475")
+    draw.text((60, 95), "语料 v1 / 蓝山官方列为候选活动，箭头仅指原文顺序；不是全部必经行程", font=f, fill="#486475")
     bucket_colors = {"morning": "#e5f0f7", "noon": "#fff2d8", "afternoon": "#e3f2e6",
                      "evening": "#ebe7f6", "unknown": "#edf0f2"}
     for col, route in enumerate(routes):
@@ -67,6 +67,8 @@ def main():
             if i:
                 arrow(draw, (x, y-64), (x, y-41))
             label = f"{step['step_no']}. {step['time_text'] or 'unknown'} / {step['poi_name']}"
+            if step.get('location_role')=='transfer_target':
+                label = f"{step['step_no']}. {step['time_text']} 出发 / 前往{step['poi_name']}换乘"
             box(draw, (x, y), label, f, bucket_colors[step["time_bucket"]], width=540, height=82)
     im.save(output / "exp03_time_hierarchy.png")
 

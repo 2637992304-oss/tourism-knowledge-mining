@@ -1,8 +1,8 @@
 {
   "graph_status": "fused",
   "missing_inputs": [],
-  "nodes": 151,
-  "edges": 205,
+  "nodes": 153,
+  "edges": 207,
   "node_types": {
     "POI": 47,
     "TIME": 15,
@@ -10,8 +10,8 @@
     "SCENIC": 3,
     "ROUTE": 4,
     "STEP": 30,
-    "CONDITION": 20,
-    "ADVICE": 20
+    "CONDITION": 21,
+    "ADVICE": 21
   },
   "relations": {
     "HAS_ROUTE": 4,
@@ -20,8 +20,8 @@
     "AT_TIME": 14,
     "USES_TRANSPORT": 14,
     "NEXT_STEP": 26,
-    "HAS_ADVICE": 20,
-    "TRIGGERS": 20,
+    "HAS_ADVICE": 21,
+    "TRIGGERS": 21,
     "APPLIES_TO": 47
   },
   "isolated_nodes": [],
@@ -63,7 +63,7 @@
         "箱根汤本",
         "箱根雕刻森林美术馆",
         "箱根雕刻森林美术馆",
-        "大涌谷",
+        "早云山",
         "早云山",
         "大涌谷",
         "芦之湖",
@@ -74,7 +74,6 @@
     {
       "query": "访问大涌谷的步骤",
       "result": [
-        "N_STEP_R_S001_OFF_001_01_005",
         "N_STEP_R_S001_OFF_001_01_007",
         "N_STEP_R_S001_VIS_001_01_006"
       ]
@@ -93,6 +92,7 @@
         "N_ADVICE_A_S001_VIS_005_117040616929219",
         "N_ADVICE_A_S002_OFF_001_088248811662268",
         "N_ADVICE_A_S002_OFF_001_257761964045209",
+        "N_ADVICE_A_S002_VIS_001_020396443207909",
         "N_ADVICE_A_S002_VIS_004_072958652312044",
         "N_ADVICE_A_S002_VIS_004_017220019902559",
         "N_ADVICE_A_S002_VIS_004_062256464651836",
@@ -144,7 +144,10 @@
                 ],
                 "source_refs": [
                   "S001_OFF_001"
-                ]
+                ],
+                "step_kind": "route_activity",
+                "location_role": "activity_location",
+                "destination_poi_name": null
               },
               {
                 "step_no": 2,
@@ -169,7 +172,10 @@
                 ],
                 "source_refs": [
                   "S001_OFF_001"
-                ]
+                ],
+                "step_kind": "route_activity",
+                "location_role": "activity_location",
+                "destination_poi_name": null
               },
               {
                 "step_no": 3,
@@ -196,7 +202,10 @@
                 ],
                 "source_refs": [
                   "S001_OFF_001"
-                ]
+                ],
+                "step_kind": "route_activity",
+                "location_role": "activity_location",
+                "destination_poi_name": null
               },
               {
                 "step_no": 4,
@@ -223,19 +232,23 @@
                 ],
                 "source_refs": [
                   "S001_OFF_001"
-                ]
+                ],
+                "step_kind": "route_activity",
+                "location_role": "activity_location",
+                "destination_poi_name": null
               }
             ],
             "sources": [
               {
                 "doc_id": "S001_OFF_001",
-                "title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+                "title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅 - 箱根｜箱根完整攻略",
                 "url": "https://www.hakonenavi.jp/international/cn/course/515",
                 "text_type": "official_route",
                 "collected_at": "2026-10-28"
               }
             ],
             "scope_note": "小田急箱根运营方官网示范行程；7:30新宿出发至17:00汤本购物；景区外接驳起点仍保留。",
+            "sequence_semantics": "itinerary_order",
             "filter_note": "筛选时间段的原路线片段",
             "suitability": "原路线未标注老人/亲子/情侣适用性，不能据此保证适合或满足总时长"
           }
@@ -283,7 +296,7 @@
             "sources": [
               {
                 "doc_id": "S001_OFF_001",
-                "title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+                "title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅 - 箱根｜箱根完整攻略",
                 "url": "https://www.hakonenavi.jp/international/cn/course/515",
                 "text_type": "official_route",
                 "collected_at": "2026-10-28"
@@ -379,8 +392,8 @@
             "sources": [
               {
                 "doc_id": "S003_OFF_001",
-                "title": "Grand Cliff Top Walk 与蓝山一日游指南",
-                "url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+                "title": "从悉尼出发，蓝山风景一日游 | 访问新南威尔士州",
+                "url": "https://www.visitnsw.com/cn/articles/blue-mountains-scenic-day-trip",
                 "text_type": "official_route",
                 "collected_at": "2026-10-28"
               }
@@ -417,13 +430,14 @@
     }
   ],
   "checks_passed": true,
-  "advice_checked": 20,
-  "relation_directions_checked": 205,
-  "graph_sha256": "d18c388356312dd762602795e0af9c5bba8d4468c920d74065bf6bd7730bd0df",
+  "advice_checked": 21,
+  "relation_directions_checked": 207,
+  "graph_sha256": "0e90251a3019ddf60cf031e1ba94bb6a964cc886896b812a83e29b38906023f3",
   "input_sha256": {
-    "routes.json": "634ac6cdc52e9cb408bbd9bf99cb229b91dc6db738078d5d96625cc76416db33",
+    "routes.json": "d0587da8e06252ac9c1eda14307ec887121d1dbdc2abdba47658b9dcab47288b",
     "entities.json": "71598abfdec68cd99d3983cd5099ee07c653d41438968d14d7c9ee46ea6caac9",
-    "advice.json": "114da2a976c0651519514637a497b99aa0f4e80021b26bed0cfc71f8362823c0",
-    "corpus.jsonl": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0"
+    "advice.json": "39092e56a376ca3fc56b23abd3030422154dec56b72ea3cf84d9342a2afff885",
+    "corpus.jsonl": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0",
+    "source_page_spans.json": "d1de6e5a37c393d280315821e45969d45090f86f639152cfe996254fffb56cb7"
   }
 }

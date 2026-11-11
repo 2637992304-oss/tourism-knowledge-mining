@@ -1,12 +1,13 @@
 {
   "schema_version": "1.0",
   "corpus_version": "v1",
-  "graph_version": "v2",
+  "graph_version": "v3",
   "builder_provenance": "YZH 60a7dda路线实体融合；FYH接管建议融合与验证",
   "advice_availability": "available",
-  "advice_count": 20,
+  "advice_count": 21,
   "relation_semantics": {
-    "APPLIES_TO": "ADVICE -> POI/TRANSPORT/TIME：证据涉及的实体，非必访、许可或人群适用证明"
+    "APPLIES_TO": "ADVICE -> POI/TRANSPORT/TIME：证据涉及的实体，非必访、许可或人群适用证明",
+    "NEXT_STEP": "按sequence_semantics解释：source_order_only仅为候选在原文中的相邻顺序，非必经行程"
   },
   "entity_resource_version": "exp02-v1.1",
   "completion_status": "fused",
@@ -5681,7 +5682,8 @@
       "attributes": {
         "route_id": "R_S001_OFF_001_01",
         "text_type": "official_route",
-        "scope_note": "小田急箱根运营方官网示范行程；7:30新宿出发至17:00汤本购物；景区外接驳起点仍保留。"
+        "scope_note": "小田急箱根运营方官网示范行程；7:30新宿出发至17:00汤本购物；景区外接驳起点仍保留。",
+        "sequence_semantics": "itinerary_order"
       }
     },
     {
@@ -5705,7 +5707,10 @@
             "end": 246,
             "text": "7:30 ~ 从新宿乘坐“浪漫”特快前往箱根汤本"
           }
-        ]
+        ],
+        "step_kind": "route_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -5729,7 +5734,10 @@
             "end": 564,
             "text": "9:20 ~ 在箱根入口·箱根汤本站换乘"
           }
-        ]
+        ],
+        "step_kind": "route_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -5753,7 +5761,10 @@
             "end": 738,
             "text": "9:25 ~ 乘坐箱根登山电车前往箱根雕刻森林美术馆"
           }
-        ]
+        ],
+        "step_kind": "route_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -5777,7 +5788,10 @@
             "end": 966,
             "text": "10:00 ~ 在箱根雕刻森林美术馆享受艺术漫步"
           }
-        ]
+        ],
+        "step_kind": "route_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -5800,8 +5814,17 @@
             "start": 1276,
             "end": 1297,
             "text": "11:20 ~ 乘坐箱根登山缆车前往大涌谷"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1427,
+            "end": 1431,
+            "text": "早云山站"
           }
-        ]
+        ],
+        "step_kind": "route_activity",
+        "location_role": "transfer_target",
+        "destination_poi_name": "大涌谷"
       }
     },
     {
@@ -5831,7 +5854,10 @@
             "end": 1431,
             "text": "早云山站"
           }
-        ]
+        ],
+        "step_kind": "route_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -5855,7 +5881,10 @@
             "end": 1592,
             "text": "12:55 ~ 在大涌谷尽情欣赏动人心弦的自然美景&品尝特色美食"
           }
-        ]
+        ],
+        "step_kind": "route_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -5879,7 +5908,10 @@
             "end": 2085,
             "text": "14:20 ~ 从大涌谷前往芦之湖,乘坐箱根海贼观光船游览芦之湖吧!"
           }
-        ]
+        ],
+        "step_kind": "route_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -5903,7 +5935,10 @@
             "end": 2337,
             "text": "15:40 ~ 参拜具有历史渊源的箱根神社"
           }
-        ]
+        ],
+        "step_kind": "route_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -5927,7 +5962,10 @@
             "end": 2715,
             "text": "17:00 ~ 购买伴手礼推荐去“箱根登山名产店 汤本店”"
           }
-        ]
+        ],
+        "step_kind": "route_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -5941,7 +5979,8 @@
       "attributes": {
         "route_id": "R_S001_VIS_001_01",
         "text_type": "visitor_diary",
-        "scope_note": "真实游客综合游记；保留园外行程和历史陈述，下游按景区范围筛选，价格、路况不作为当前事实。"
+        "scope_note": "真实游客综合游记；保留园外行程和历史陈述，下游按景区范围筛选，价格、路况不作为当前事实。",
+        "sequence_semantics": "itinerary_order"
       }
     },
     {
@@ -5965,7 +6004,10 @@
             "end": 45,
             "text": "从早云山乘坐箱根登山吊舱(rope way)到终点桃源台下车"
           }
-        ]
+        ],
+        "step_kind": "route_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -5989,7 +6031,10 @@
             "end": 45,
             "text": "从早云山乘坐箱根登山吊舱(rope way)到终点桃源台下车"
           }
-        ]
+        ],
+        "step_kind": "route_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -6013,7 +6058,10 @@
             "end": 113,
             "text": "黑石渣铺成的路面一直延伸到芦之湖畔"
           }
-        ]
+        ],
+        "step_kind": "route_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -6037,7 +6085,10 @@
             "end": 438,
             "text": "来到一处可以眺望芦之湖的金太郎展望台"
           }
-        ]
+        ],
+        "step_kind": "route_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -6061,7 +6112,10 @@
             "end": 488,
             "text": "大约1小时来到姥子缆车站前"
           }
-        ]
+        ],
+        "step_kind": "route_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -6085,7 +6139,10 @@
             "end": 532,
             "text": "离开姥子站继续向大涌谷进发"
           }
-        ]
+        ],
+        "step_kind": "route_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -6099,7 +6156,7 @@
     {
       "node_id": "N_ROUTE_R_S003_OFF_001_01",
       "node_type": "ROUTE",
-      "name": "蓝山一日游时间分段路线",
+      "name": "蓝山一日游候选活动（原文顺序）",
       "scenic_id": "S003",
       "source_refs": [
         "S003_OFF_001"
@@ -6107,7 +6164,8 @@
       "attributes": {
         "route_id": "R_S003_OFF_001_01",
         "text_type": "official_route",
-        "scope_note": "NSW国家公园部门19km两日步道及旅游局中文一日游；二者为备选路线，不强制拼接。"
+        "scope_note": "按原文时间分段列出的候选活动，含可选推荐；不是全部必须完成的连续行程。",
+        "sequence_semantics": "source_order_only"
       }
     },
     {
@@ -6131,7 +6189,10 @@
             "end": 1924,
             "text": "劳森黑凤头鹦鹉面包店 (Lawson's Black Cockatoo Bakery) 不容错过"
           }
-        ]
+        ],
+        "step_kind": "candidate_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -6155,7 +6216,10 @@
             "end": 2061,
             "text": "只需 10 分钟车程穿过原始丛林即可到达温特沃斯(Wentworth)瀑布野餐区"
           }
-        ]
+        ],
+        "step_kind": "candidate_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -6179,7 +6243,10 @@
             "end": 2100,
             "text": "从杰米森瞭望台 (Jamison Lookout) 出发"
           }
-        ]
+        ],
+        "step_kind": "candidate_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -6203,7 +6270,10 @@
             "end": 2180,
             "text": "然后前往温特沃斯(Wentworth)瀑布步道 (Wentworth Falls Track) "
           }
-        ]
+        ],
+        "step_kind": "candidate_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -6227,7 +6297,10 @@
             "end": 2412,
             "text": "不妨前往Josophan's Fine Chocolates品尝纯正的比利时巧克力和手工松露巧克力"
           }
-        ]
+        ],
+        "step_kind": "candidate_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -6251,7 +6324,10 @@
             "end": 2464,
             "text": "您可以参观罗拉(Leura)购物中心的凯特·索迪画廊 (Kate Soady Gallery) "
           }
-        ]
+        ],
+        "step_kind": "candidate_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -6275,7 +6351,10 @@
             "end": 2649,
             "text": "驾车前往布莱克希思(Blackheath)享用美味的地中海午餐"
           }
-        ]
+        ],
+        "step_kind": "candidate_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -6299,7 +6378,10 @@
             "end": 2747,
             "text": "您可以去附近的埃文斯瞭望台呼吸着清新的山间空气"
           }
-        ]
+        ],
+        "step_kind": "candidate_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -6323,7 +6405,10 @@
             "end": 2799,
             "text": "可以轻松前往大峡谷步道"
           }
-        ]
+        ],
+        "step_kind": "candidate_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -6347,7 +6432,10 @@
             "end": 3054,
             "text": " 山地文化啤酒公司"
           }
-        ]
+        ],
+        "step_kind": "candidate_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -6371,7 +6459,10 @@
             "end": 3239,
             "text": "卡通巴另一个不容错过的活动是 Beyond Skyway 体验风景世界(Scenic World). Beyond Skyway 是全球首创的 90 分钟屋顶缆车体验"
           }
-        ]
+        ],
+        "step_kind": "candidate_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -6395,7 +6486,10 @@
             "end": 3387,
             "text": "感受卡通巴瀑布自然保护区夜间灯光步道黄昏时分"
           }
-        ]
+        ],
+        "step_kind": "candidate_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -6409,7 +6503,8 @@
       "attributes": {
         "route_id": "R_S003_VIS_001_01",
         "text_type": "visitor_diary",
-        "scope_note": "真实游客综合游记；保留园外行程和历史陈述，下游按景区范围筛选，价格、路况不作为当前事实。"
+        "scope_note": "真实游客综合游记；保留园外行程和历史陈述，下游按景区范围筛选，价格、路况不作为当前事实。",
+        "sequence_semantics": "itinerary_order"
       }
     },
     {
@@ -6433,7 +6528,10 @@
             "end": 190,
             "text": "饭后驱车沿32号公路直上海拔1100米高的蓝山三姐妹峰"
           }
-        ]
+        ],
+        "step_kind": "route_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -6457,7 +6555,10 @@
             "end": 784,
             "text": "而是驱车前往Jenolan Caves珍罗兰洞"
           }
-        ]
+        ],
+        "step_kind": "route_activity",
+        "location_role": "activity_location",
+        "destination_poi_name": null
       }
     },
     {
@@ -7132,6 +7233,65 @@
       }
     },
     {
+      "node_id": "N_CONDITION_A_S002_VIS_001_020396443207909",
+      "node_type": "CONDITION",
+      "name": "虽然刚出发穿着短裤、T恤稍有些冷",
+      "scenic_id": "S002",
+      "source_refs": [
+        "S002_VIS_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S002_VIS_001_020396443207909",
+        "condition_type": "weather",
+        "visitor_types": [],
+        "evidence": [
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 2876,
+            "end": 2915,
+            "text": "虽然刚出发穿着短裤、T恤稍有些冷,但建议还是不要增加衣服,因为很快就会感到热了"
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "N_ADVICE_A_S002_VIS_001_020396443207909",
+      "node_type": "ADVICE",
+      "name": "但建议还是不要增加衣服,因为很快就会感到热了",
+      "scenic_id": "S002",
+      "source_refs": [
+        "S002_VIS_001"
+      ],
+      "attributes": {
+        "advice_id": "A_S002_VIS_001_020396443207909",
+        "method": "rule:concessive_advice",
+        "evidence": [
+          {
+            "doc_id": "S002_VIS_001",
+            "start": 2876,
+            "end": 2915,
+            "text": "虽然刚出发穿着短裤、T恤稍有些冷,但建议还是不要增加衣服,因为很快就会感到热了"
+          }
+        ],
+        "condition_span": {
+          "doc_id": "S002_VIS_001",
+          "start": 2876,
+          "end": 2892,
+          "text": "虽然刚出发穿着短裤、T恤稍有些冷"
+        },
+        "suggestion_span": {
+          "doc_id": "S002_VIS_001",
+          "start": 2893,
+          "end": 2915,
+          "text": "但建议还是不要增加衣服,因为很快就会感到热了"
+        },
+        "source_text_type": "visitor_diary",
+        "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
+        "duplicate_group": "d6fc4b70d756",
+        "review_correction": null
+      }
+    },
+    {
       "node_id": "N_CONDITION_A_S002_VIS_004_072958652312044",
       "node_type": "CONDITION",
       "name": "如果你不想人挤人、也不想早起抢预约的话",
@@ -7762,7 +7922,8 @@
         "S001_OFF_001"
       ],
       "attributes": {
-        "route_id": "R_S001_OFF_001_01"
+        "route_id": "R_S001_OFF_001_01",
+        "sequence_semantics": "itinerary_order"
       }
     },
     {
@@ -7822,7 +7983,8 @@
         "S001_OFF_001"
       ],
       "attributes": {
-        "route_id": "R_S001_OFF_001_01"
+        "route_id": "R_S001_OFF_001_01",
+        "sequence_semantics": "itinerary_order"
       }
     },
     {
@@ -7901,7 +8063,8 @@
         "S001_OFF_001"
       ],
       "attributes": {
-        "route_id": "R_S001_OFF_001_01"
+        "route_id": "R_S001_OFF_001_01",
+        "sequence_semantics": "itinerary_order"
       }
     },
     {
@@ -7980,13 +8143,14 @@
         "S001_OFF_001"
       ],
       "attributes": {
-        "route_id": "R_S001_OFF_001_01"
+        "route_id": "R_S001_OFF_001_01",
+        "sequence_semantics": "itinerary_order"
       }
     },
     {
       "edge_id": "EDGE_VISITS_R_S001_OFF_001_01_005",
       "source": "N_STEP_R_S001_OFF_001_01_005",
-      "target": "N_ENTITY_S001_POI_002",
+      "target": "N_ENTITY_S001_POI_009",
       "relation": "VISITS",
       "source_refs": [
         "S001_OFF_001"
@@ -7998,6 +8162,12 @@
             "start": 1276,
             "end": 1297,
             "text": "11:20 ~ 乘坐箱根登山缆车前往大涌谷"
+          },
+          {
+            "doc_id": "S001_OFF_001",
+            "start": 1427,
+            "end": 1431,
+            "text": "早云山站"
           }
         ]
       }
@@ -8059,7 +8229,8 @@
         "S001_OFF_001"
       ],
       "attributes": {
-        "route_id": "R_S001_OFF_001_01"
+        "route_id": "R_S001_OFF_001_01",
+        "sequence_semantics": "itinerary_order"
       }
     },
     {
@@ -8144,7 +8315,8 @@
         "S001_OFF_001"
       ],
       "attributes": {
-        "route_id": "R_S001_OFF_001_01"
+        "route_id": "R_S001_OFF_001_01",
+        "sequence_semantics": "itinerary_order"
       }
     },
     {
@@ -8204,7 +8376,8 @@
         "S001_OFF_001"
       ],
       "attributes": {
-        "route_id": "R_S001_OFF_001_01"
+        "route_id": "R_S001_OFF_001_01",
+        "sequence_semantics": "itinerary_order"
       }
     },
     {
@@ -8283,7 +8456,8 @@
         "S001_OFF_001"
       ],
       "attributes": {
-        "route_id": "R_S001_OFF_001_01"
+        "route_id": "R_S001_OFF_001_01",
+        "sequence_semantics": "itinerary_order"
       }
     },
     {
@@ -8343,7 +8517,8 @@
         "S001_OFF_001"
       ],
       "attributes": {
-        "route_id": "R_S001_OFF_001_01"
+        "route_id": "R_S001_OFF_001_01",
+        "sequence_semantics": "itinerary_order"
       }
     },
     {
@@ -8480,7 +8655,8 @@
         "S001_VIS_001"
       ],
       "attributes": {
-        "route_id": "R_S001_VIS_001_01"
+        "route_id": "R_S001_VIS_001_01",
+        "sequence_semantics": "itinerary_order"
       }
     },
     {
@@ -8559,7 +8735,8 @@
         "S001_VIS_001"
       ],
       "attributes": {
-        "route_id": "R_S001_VIS_001_01"
+        "route_id": "R_S001_VIS_001_01",
+        "sequence_semantics": "itinerary_order"
       }
     },
     {
@@ -8600,7 +8777,8 @@
         "S001_VIS_001"
       ],
       "attributes": {
-        "route_id": "R_S001_VIS_001_01"
+        "route_id": "R_S001_VIS_001_01",
+        "sequence_semantics": "itinerary_order"
       }
     },
     {
@@ -8641,7 +8819,8 @@
         "S001_VIS_001"
       ],
       "attributes": {
-        "route_id": "R_S001_VIS_001_01"
+        "route_id": "R_S001_VIS_001_01",
+        "sequence_semantics": "itinerary_order"
       }
     },
     {
@@ -8701,7 +8880,8 @@
         "S001_VIS_001"
       ],
       "attributes": {
-        "route_id": "R_S001_VIS_001_01"
+        "route_id": "R_S001_VIS_001_01",
+        "sequence_semantics": "itinerary_order"
       }
     },
     {
@@ -8781,7 +8961,8 @@
         "S003_OFF_001"
       ],
       "attributes": {
-        "route_id": "R_S003_OFF_001_01"
+        "route_id": "R_S003_OFF_001_01",
+        "sequence_semantics": "source_order_only"
       }
     },
     {
@@ -8841,7 +9022,8 @@
         "S003_OFF_001"
       ],
       "attributes": {
-        "route_id": "R_S003_OFF_001_01"
+        "route_id": "R_S003_OFF_001_01",
+        "sequence_semantics": "source_order_only"
       }
     },
     {
@@ -8882,7 +9064,8 @@
         "S003_OFF_001"
       ],
       "attributes": {
-        "route_id": "R_S003_OFF_001_01"
+        "route_id": "R_S003_OFF_001_01",
+        "sequence_semantics": "source_order_only"
       }
     },
     {
@@ -8923,7 +9106,8 @@
         "S003_OFF_001"
       ],
       "attributes": {
-        "route_id": "R_S003_OFF_001_01"
+        "route_id": "R_S003_OFF_001_01",
+        "sequence_semantics": "source_order_only"
       }
     },
     {
@@ -8964,7 +9148,8 @@
         "S003_OFF_001"
       ],
       "attributes": {
-        "route_id": "R_S003_OFF_001_01"
+        "route_id": "R_S003_OFF_001_01",
+        "sequence_semantics": "source_order_only"
       }
     },
     {
@@ -9005,7 +9190,8 @@
         "S003_OFF_001"
       ],
       "attributes": {
-        "route_id": "R_S003_OFF_001_01"
+        "route_id": "R_S003_OFF_001_01",
+        "sequence_semantics": "source_order_only"
       }
     },
     {
@@ -9065,7 +9251,8 @@
         "S003_OFF_001"
       ],
       "attributes": {
-        "route_id": "R_S003_OFF_001_01"
+        "route_id": "R_S003_OFF_001_01",
+        "sequence_semantics": "source_order_only"
       }
     },
     {
@@ -9106,7 +9293,8 @@
         "S003_OFF_001"
       ],
       "attributes": {
-        "route_id": "R_S003_OFF_001_01"
+        "route_id": "R_S003_OFF_001_01",
+        "sequence_semantics": "source_order_only"
       }
     },
     {
@@ -9147,7 +9335,8 @@
         "S003_OFF_001"
       ],
       "attributes": {
-        "route_id": "R_S003_OFF_001_01"
+        "route_id": "R_S003_OFF_001_01",
+        "sequence_semantics": "source_order_only"
       }
     },
     {
@@ -9188,7 +9377,8 @@
         "S003_OFF_001"
       ],
       "attributes": {
-        "route_id": "R_S003_OFF_001_01"
+        "route_id": "R_S003_OFF_001_01",
+        "sequence_semantics": "source_order_only"
       }
     },
     {
@@ -9267,7 +9457,8 @@
         "S003_OFF_001"
       ],
       "attributes": {
-        "route_id": "R_S003_OFF_001_01"
+        "route_id": "R_S003_OFF_001_01",
+        "sequence_semantics": "source_order_only"
       }
     },
     {
@@ -9385,7 +9576,8 @@
         "S003_VIS_001"
       ],
       "attributes": {
-        "route_id": "R_S003_VIS_001_01"
+        "route_id": "R_S003_VIS_001_01",
+        "sequence_semantics": "itinerary_order"
       }
     },
     {
@@ -10113,6 +10305,26 @@
       }
     },
     {
+      "edge_id": "EDGE_HAS_ADVICE_A_S002_VIS_001_020396443207909",
+      "source": "N_SCENIC_S002",
+      "target": "N_ADVICE_A_S002_VIS_001_020396443207909",
+      "relation": "HAS_ADVICE",
+      "source_refs": [
+        "S002_VIS_001"
+      ],
+      "attributes": {}
+    },
+    {
+      "edge_id": "EDGE_TRIGGERS_A_S002_VIS_001_020396443207909",
+      "source": "N_CONDITION_A_S002_VIS_001_020396443207909",
+      "target": "N_ADVICE_A_S002_VIS_001_020396443207909",
+      "relation": "TRIGGERS",
+      "source_refs": [
+        "S002_VIS_001"
+      ],
+      "attributes": {}
+    },
+    {
       "edge_id": "EDGE_HAS_ADVICE_A_S002_VIS_004_072958652312044",
       "source": "N_SCENIC_S002",
       "target": "N_ADVICE_A_S002_VIS_004_072958652312044",
@@ -10774,9 +10986,10 @@
     }
   ],
   "input_sha256": {
-    "routes.json": "634ac6cdc52e9cb408bbd9bf99cb229b91dc6db738078d5d96625cc76416db33",
+    "routes.json": "d0587da8e06252ac9c1eda14307ec887121d1dbdc2abdba47658b9dcab47288b",
     "entities.json": "71598abfdec68cd99d3983cd5099ee07c653d41438968d14d7c9ee46ea6caac9",
-    "advice.json": "114da2a976c0651519514637a497b99aa0f4e80021b26bed0cfc71f8362823c0",
-    "corpus.jsonl": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0"
+    "advice.json": "39092e56a376ca3fc56b23abd3030422154dec56b72ea3cf84d9342a2afff885",
+    "corpus.jsonl": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0",
+    "source_page_spans.json": "d1de6e5a37c393d280315821e45969d45090f86f639152cfe996254fffb56cb7"
   }
 }

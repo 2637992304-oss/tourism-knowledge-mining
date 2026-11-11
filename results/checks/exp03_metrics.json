@@ -1,6 +1,6 @@
 {
   "dataset_role": "development",
-  "annotation_note": "依据清洗原文逐条对照整理的开发集参考顺序，待组员复核；不是独立测试集。可选岔路不计入主线，游客未具名站点不计入。",
+  "annotation_note": "依据清洗原文逐条对照整理的开发集参考顺序，待组员复核；不是独立测试集。可选岔路不计入主线，游客未具名站点不计入。 2026-11-11修订：11:20步为前往大涌谷途中的早云山换乘点；蓝山官方评来源顺序候选活动，不评必经行程。",
   "routes": [
     {
       "route_id": "R_S001_OFF_001_01",
@@ -47,7 +47,7 @@
       "missing": []
     }
   ],
-  "evidence_checked": 31,
+  "evidence_checked": 32,
   "comparisons": [
     {
       "scenic_id": "S001",

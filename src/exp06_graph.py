@@ -115,7 +115,8 @@ def build(routes_data, registry, entities=None, advice=None, docs=None):
         node(sid, "SCENIC", scenics[scenic_id], scenic_id, [], {})
         node(rid, "ROUTE", route["route_name"], scenic_id, [doc_id],
              {"route_id": route_id, "text_type": route["text_type"],
-              "scope_note": route.get("scope_note")})
+              "scope_note": route.get("scope_note"),
+              "sequence_semantics":route.get('sequence_semantics','itinerary_order')})
         edge(f"EDGE_HAS_ROUTE_{route_id}", sid, rid, "HAS_ROUTE", [doc_id])
         previous = None
         for step in route["steps"]:
@@ -124,11 +125,15 @@ def build(routes_data, registry, entities=None, advice=None, docs=None):
             node(step_id, "STEP", step["activity"], scenic_id, [doc_id],
                  {"route_id": route_id, "step_no": no, "time_bucket": step["time_bucket"],
                   "time_text": step["time_text"], "duration_minutes": step["duration_minutes"],
-                  "evidence": step["evidence"]})
+                  "evidence": step["evidence"],
+                  "step_kind":step.get('step_kind','route_activity'),
+                  "location_role":step.get('location_role','activity_location'),
+                  "destination_poi_name":step.get('destination_poi_name')})
             edge(f"EDGE_HAS_STEP_{route_id}_{no:03d}", rid, step_id, "HAS_STEP", [doc_id])
             if previous:
                 edge(f"EDGE_NEXT_STEP_{route_id}_{no-1:03d}", previous, step_id,
-                     "NEXT_STEP", [doc_id], {"route_id": route_id})
+                     "NEXT_STEP", [doc_id], {"route_id": route_id,
+                     "sequence_semantics":route.get('sequence_semantics','itinerary_order')})
             previous = step_id
             entity_id = step.get("poi_entity_id") or aliases.get((scenic_id, step["poi_name"]))
             if entity_id and entity_id not in catalog:
@@ -191,11 +196,12 @@ def build(routes_data, registry, entities=None, advice=None, docs=None):
     for nid in unused:
         del nodes[nid]
     missing = [name for name, value in (("entities.json", entities), ("advice.json", advice)) if value is None]
-    return {"schema_version": "1.0", "corpus_version": version, "graph_version": "v2",
+    return {"schema_version": "1.0", "corpus_version": version, "graph_version": "v3",
             "builder_provenance":"YZH 60a7dda路线实体融合；FYH接管建议融合与验证",
             "advice_availability":"missing_upstream" if advice is None else "available" if advice['advice'] else "available_empty",
             "advice_count":len((advice or {}).get('advice',[])),
-            "relation_semantics":{"APPLIES_TO":"ADVICE -> POI/TRANSPORT/TIME：证据涉及的实体，非必访、许可或人群适用证明"},
+            "relation_semantics":{"APPLIES_TO":"ADVICE -> POI/TRANSPORT/TIME：证据涉及的实体，非必访、许可或人群适用证明",
+                                  "NEXT_STEP":"按sequence_semantics解释：source_order_only仅为候选在原文中的相邻顺序，非必经行程"},
             "entity_resource_version": (entities or {}).get("resource_version"),
             "completion_status": "route_stage" if entities is None else "entity_route_fused" if advice is None else "fused",
             "inactive_entities_skipped": sorted(inactive),
@@ -217,7 +223,7 @@ def main():
         entities = load(args.outputs_dir / "entities.json", "entity_catalog", routes["corpus_version"])
         advice = load(args.outputs_dir / "advice.json", "advice", routes["corpus_version"])
         graph = build(routes, registry, entities, advice,corpus())
-        graph['input_sha256']={p.name:sha256(p) for p in [args.outputs_dir/'routes.json',args.outputs_dir/'entities.json',args.outputs_dir/'advice.json',Path('data/processed/corpus.jsonl')] if p.exists()}
+        graph['input_sha256']={p.name:sha256(p) for p in [args.outputs_dir/'routes.json',args.outputs_dir/'entities.json',args.outputs_dir/'advice.json',Path('data/processed/corpus.jsonl'),Path('data/resources/source_page_spans.json')] if p.exists()}
         if args.require_entities and entities is None:
             raise ValueError("核心融合缺少 entities.json")
         if args.require_complete and graph["missing_inputs"]:

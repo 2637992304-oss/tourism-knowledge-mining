@@ -4,7 +4,7 @@
 
 ## 输入、版本和融合
 
-读取v1景区登记、DHT exp02-v1.1实体、YZH 4条30步路线和FYH 20条正式建议。schema_version=1.0、corpus_version=v1、graph_version=v2。图谱状态fused、missing_inputs=[]、advice_availability=available。v2增加了APPLIES_TO对TRANSPORT/TIME的支持；已有实体、路线和步骤节点ID保持不变，输入文件指纹保存在input_sha256。
+读取v1景区登记、DHT exp02-v1.1实体、YZH 4条30步路线和FYH 21条正式建议。schema_version=1.0、corpus_version=v1、graph_version=v3。图谱状态fused、missing_inputs=[]、advice_availability=available。v2增加了APPLIES_TO对TRANSPORT/TIME的支持；已有实体、路线和步骤节点ID保持不变，输入文件指纹保存在input_sha256。
 
 状态route_stage/ entity_route_fused/ fused表示输入接入程度；advice_availability明确区分missing_upstream、available_empty、available，不能把“输入齐备”当成语义覆盖完整。
 
@@ -27,7 +27,7 @@
 
 ## 实际结果
 
-151节点、205边。节点为POI 47、TIME 15、TRANSPORT 12、SCENIC 3、ROUTE 4、STEP 30、CONDITION 20、ADVICE 20。关系为HAS_ROUTE 4、HAS_STEP 30、NEXT_STEP 26、VISITS 30、AT_TIME 14、USES_TRANSPORT 14、HAS_ADVICE 20、TRIGGERS 20、APPLIES_TO 47。
+153节点、207边。节点为POI 47、TIME 15、TRANSPORT 12、SCENIC 3、ROUTE 4、STEP 30、CONDITION 21、ADVICE 21。关系为HAS_ROUTE 4、HAS_STEP 30、NEXT_STEP 26、VISITS 30、AT_TIME 14、USES_TRANSPORT 14、HAS_ADVICE 21、TRIGGERS 21、APPLIES_TO 47。
 
 相比原82节点/118边阶段图，新增条件建议及其涉及实体；路线仍4条30步，四条链分别10/6/12/2步，原30/30实体映射不变。优胜美地新增建议网络，但没有新增未实现的路线。
 
@@ -45,7 +45,7 @@ src/exp06_verify.py实际构建NetworkX MultiDiGraph，检查输入指纹、唯�
 4. 箱根elderly建议：no_match；原文人群未标注不自动映射general。
 5. 优胜美地路线：no_match；其crowding建议仍可查询，不能说整个景区没有数据。
 
-图的3个弱连通分量分别对应3景区，景区隔离是预期结构。箱根实体中，箱根汤本和箱根空中缆车的入/出边总度数各为5，浪漫特快为4，反映入口与交通在路线和建议中的共同出现，不等于旅游价值或推荐强度。大涌谷有3条VISITS，来自官方不同活动和游客路线；不能去重成一次到访。典型游客有序路径为早云山→桃源台→芦之湖→金太郎展望台→姥子站→大涌谷，与官方钟点路线分别保存，可解释来源差异。
+图的3个弱连通分量分别对应3景区，景区隔离是预期结构。箱根实体中，箱根汤本和箱根空中缆车的入/出边总度数各为5，浪漫特快为4，反映入口与交通在路线和建议中的共同出现，不等于旅游价值或推荐强度。大涌谷当前有2条VISITS，来自官方游览活动和游客路线；不能去重成一次到访。典型游客有序路径为早云山→桃源台→芦之湖→金太郎展望台→姥子站→大涌谷，与官方钟点路线分别保存，可解释来源差异。
 
 调用结果统一status/data/message。未知景区、参数非法、上游缺失返回error并给不同原因；输入已接入而未匹配为no_match。
 
@@ -68,4 +68,8 @@ py -3.12 src/yzh_figures.py
 py -3.12 -m unittest discover -s tests -v
 ```
 
-yzh_figures保留YZH路线层级绘图，图谱部分转到exp06_visualize完整布局。交接见results/checks/exp06_handoff.md；历史YZH报告记录保留，接管说明优先描述本次v2状态。
+yzh_figures保留YZH路线层级绘图，图谱部分转到exp06_visualize完整布局。交接见results/checks/exp06_handoff.md；历史YZH报告记录保留，接管说明优先描述本次v3状态。
+
+## v3复核修正
+
+逐证据来源映射见data/resources/source_page_spans.json；复合文档跨页证据返回多网页来源。蓝山官方NEXT_STEP的sequence_semantics=source_order_only，仅表达候选活动的原文顺序；不是必经链。箱根11:20步骤使用早云山换乘位置，另存最终目的地大涌谷。图谱和源文件均含相应语义。旧v2 Agent日志保留历史，新图谱离线复验通过，真实模型复验尚待配置。

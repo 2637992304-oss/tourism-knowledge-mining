@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "corpus_version": "v1",
-  "resource_version": "exp05-v1",
+  "resource_version": "exp05-v1.1",
   "reviewed": false,
   "corpus_sha256": "31def2d3b91f905129d06eb6b11552d60f06dc64d084f49e36cdb750578d4ca0",
   "entities_sha256": "71598abfdec68cd99d3983cd5099ee07c653d41438968d14d7c9ee46ea6caac9",
@@ -62,8 +62,17 @@
       "alignment_notes": [],
       "method": "rule:first_comma_baseline",
       "source_text_type": "official_route",
-      "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+      "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅 - 箱根｜箱根完整攻略",
       "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+      "source_pages": [
+        {
+          "doc_id": "S001_OFF_001",
+          "title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅 - 箱根｜箱根完整攻略",
+          "url": "https://www.hakonenavi.jp/international/cn/course/515",
+          "text_type": "official_route",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "200d56cd3994"
@@ -102,8 +111,17 @@
       "alignment_notes": [],
       "method": "rule:first_comma_baseline",
       "source_text_type": "official_route",
-      "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+      "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅 - 箱根｜箱根完整攻略",
       "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+      "source_pages": [
+        {
+          "doc_id": "S001_OFF_001",
+          "title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅 - 箱根｜箱根完整攻略",
+          "url": "https://www.hakonenavi.jp/international/cn/course/515",
+          "text_type": "official_route",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "e3d0c4caa07e"
@@ -140,8 +158,17 @@
       "alignment_notes": [],
       "method": "rule:first_comma_baseline",
       "source_text_type": "official_route",
-      "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+      "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅 - 箱根｜箱根完整攻略",
       "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+      "source_pages": [
+        {
+          "doc_id": "S001_OFF_001",
+          "title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅 - 箱根｜箱根完整攻略",
+          "url": "https://www.hakonenavi.jp/international/cn/course/515",
+          "text_type": "official_route",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "c2de00c5275d"
@@ -183,8 +210,17 @@
       "alignment_notes": [],
       "method": "rule:first_comma_baseline",
       "source_text_type": "official_route",
-      "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+      "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅 - 箱根｜箱根完整攻略",
       "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+      "source_pages": [
+        {
+          "doc_id": "S001_OFF_001",
+          "title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅 - 箱根｜箱根完整攻略",
+          "url": "https://www.hakonenavi.jp/international/cn/course/515",
+          "text_type": "official_route",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "d4fa25978087"
@@ -231,8 +267,17 @@
       ],
       "method": "rule:first_comma_baseline",
       "source_text_type": "official_route",
-      "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+      "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅 - 箱根｜箱根完整攻略",
       "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+      "source_pages": [
+        {
+          "doc_id": "S001_OFF_001",
+          "title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅 - 箱根｜箱根完整攻略",
+          "url": "https://www.hakonenavi.jp/international/cn/course/515",
+          "text_type": "official_route",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "9af153c403f3"
@@ -269,8 +314,17 @@
       "alignment_notes": [],
       "method": "rule:first_comma_baseline",
       "source_text_type": "official_route",
-      "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+      "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅 - 箱根｜箱根完整攻略",
       "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+      "source_pages": [
+        {
+          "doc_id": "S001_OFF_001",
+          "title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅 - 箱根｜箱根完整攻略",
+          "url": "https://www.hakonenavi.jp/international/cn/course/515",
+          "text_type": "official_route",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "e116212bd38f"
@@ -310,8 +364,17 @@
       "alignment_notes": [],
       "method": "rule:first_comma_baseline",
       "source_text_type": "official_route",
-      "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+      "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅 - 箱根｜箱根完整攻略",
       "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+      "source_pages": [
+        {
+          "doc_id": "S001_OFF_001",
+          "title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅 - 箱根｜箱根完整攻略",
+          "url": "https://www.hakonenavi.jp/international/cn/course/515",
+          "text_type": "official_route",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "3112c7ca5e4b"
@@ -352,8 +415,17 @@
       "alignment_notes": [],
       "method": "rule:first_comma_baseline",
       "source_text_type": "official_route",
-      "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅",
+      "source_title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅 - 箱根｜箱根完整攻略",
       "source_url": "https://www.hakonenavi.jp/international/cn/course/515",
+      "source_pages": [
+        {
+          "doc_id": "S001_OFF_001",
+          "title": "初游箱根！推荐当日往返的标准路线—特定景点环游之旅 - 箱根｜箱根完整攻略",
+          "url": "https://www.hakonenavi.jp/international/cn/course/515",
+          "text_type": "official_route",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "734de214b63e"
@@ -393,8 +465,17 @@
       "alignment_notes": [],
       "method": "rule:first_comma_baseline",
       "source_text_type": "visitor_diary",
-      "source_title": "#2023年国庆#北海道登别函馆+东京富士山箱根横滨十日游",
+      "source_title": "#2023年国庆#北海道登别函馆+东京富士山箱根横滨十日游 - 日本游记攻略【携程攻略】",
       "source_url": "https://you.ctrip.com/travels/Japan100041/4114114.html",
+      "source_pages": [
+        {
+          "doc_id": "S001_VIS_005",
+          "title": "#2023年国庆#北海道登别函馆+东京富士山箱根横滨十日游 - 日本游记攻略【携程攻略】",
+          "url": "https://you.ctrip.com/travels/Japan100041/4114114.html",
+          "text_type": "visitor_diary",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "dafc85cacbf3"
@@ -438,8 +519,17 @@
       "alignment_notes": [],
       "method": "rule:first_comma_baseline",
       "source_text_type": "visitor_diary",
-      "source_title": "#2023年国庆#北海道登别函馆+东京富士山箱根横滨十日游",
+      "source_title": "#2023年国庆#北海道登别函馆+东京富士山箱根横滨十日游 - 日本游记攻略【携程攻略】",
       "source_url": "https://you.ctrip.com/travels/Japan100041/4114114.html",
+      "source_pages": [
+        {
+          "doc_id": "S001_VIS_005",
+          "title": "#2023年国庆#北海道登别函馆+东京富士山箱根横滨十日游 - 日本游记攻略【携程攻略】",
+          "url": "https://you.ctrip.com/travels/Japan100041/4114114.html",
+          "text_type": "visitor_diary",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "ed503e8d3170"
@@ -479,8 +569,17 @@
       "alignment_notes": [],
       "method": "rule:first_comma_baseline",
       "source_text_type": "visitor_diary",
-      "source_title": "#2023年国庆#北海道登别函馆+东京富士山箱根横滨十日游",
+      "source_title": "#2023年国庆#北海道登别函馆+东京富士山箱根横滨十日游 - 日本游记攻略【携程攻略】",
       "source_url": "https://you.ctrip.com/travels/Japan100041/4114114.html",
+      "source_pages": [
+        {
+          "doc_id": "S001_VIS_005",
+          "title": "#2023年国庆#北海道登别函馆+东京富士山箱根横滨十日游 - 日本游记攻略【携程攻略】",
+          "url": "https://you.ctrip.com/travels/Japan100041/4114114.html",
+          "text_type": "visitor_diary",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "38744ca068e8"
@@ -522,8 +621,17 @@
       "alignment_notes": [],
       "method": "rule:english_if",
       "source_text_type": "official_route",
-      "source_title": "Yosemite Valley Loop Trail 与谷地日间步道指南",
+      "source_title": "Yosemite Valley Loop Trail - Yosemite National Park (U.S. National Park Service)",
       "source_url": "https://www.nps.gov/yose/planyourvisit/valleylooptrail.htm",
+      "source_pages": [
+        {
+          "doc_id": "S002_OFF_001",
+          "title": "Yosemite Valley Loop Trail - Yosemite National Park (U.S. National Park Service)",
+          "url": "https://www.nps.gov/yose/planyourvisit/valleylooptrail.htm",
+          "text_type": "official_route",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "6be2256397ab"
@@ -564,8 +672,17 @@
       "alignment_notes": [],
       "method": "rule:english_if",
       "source_text_type": "official_route",
-      "source_title": "Yosemite Valley Loop Trail 与谷地日间步道指南",
+      "source_title": "Yosemite Valley Loop Trail - Yosemite National Park (U.S. National Park Service)",
       "source_url": "https://www.nps.gov/yose/planyourvisit/valleylooptrail.htm",
+      "source_pages": [
+        {
+          "doc_id": "S002_OFF_001",
+          "title": "Yosemite Valley Loop Trail - Yosemite National Park (U.S. National Park Service)",
+          "url": "https://www.nps.gov/yose/planyourvisit/valleylooptrail.htm",
+          "text_type": "official_route",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "6ac6035ec9f6"
@@ -613,8 +730,17 @@
       "alignment_notes": [],
       "method": "rule:first_comma_baseline",
       "source_text_type": "visitor_diary",
-      "source_title": "22年7月优胜美地三日自驾",
+      "source_title": "22年7月优胜美地三日自驾 - 美国游记攻略【携程攻略】",
       "source_url": "https://you.ctrip.com/travels/unitedstates100047/4075943.html",
+      "source_pages": [
+        {
+          "doc_id": "S002_VIS_001",
+          "title": "22年7月优胜美地三日自驾 - 美国游记攻略【携程攻略】",
+          "url": "https://you.ctrip.com/travels/unitedstates100047/4075943.html",
+          "text_type": "visitor_diary",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "04eb0fc0d171"
@@ -651,8 +777,17 @@
       "alignment_notes": [],
       "method": "rule:first_comma_baseline",
       "source_text_type": "visitor_diary",
-      "source_title": "【带着爸爸去旅行】驰聘美西18日，新手女司机的第一个5600公里",
+      "source_title": "【带着爸爸去旅行】驰聘美西18日，新手女司机的第一个5600公里 - 美国西海岸游记攻略【携程攻略】",
       "source_url": "https://you.ctrip.com/travels/westcoastoftheunitedstates1446740/3948721.html",
+      "source_pages": [
+        {
+          "doc_id": "S002_VIS_002",
+          "title": "【带着爸爸去旅行】驰聘美西18日，新手女司机的第一个5600公里 - 美国西海岸游记攻略【携程攻略】",
+          "url": "https://you.ctrip.com/travels/westcoastoftheunitedstates1446740/3948721.html",
+          "text_type": "visitor_diary",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "4eaef0c99014"
@@ -689,8 +824,17 @@
       "alignment_notes": [],
       "method": "rule:first_comma_baseline",
       "source_text_type": "visitor_diary",
-      "source_title": "【带着爸爸去旅行】驰聘美西18日，新手女司机的第一个5600公里",
+      "source_title": "【带着爸爸去旅行】驰聘美西18日，新手女司机的第一个5600公里 - 美国西海岸游记攻略【携程攻略】",
       "source_url": "https://you.ctrip.com/travels/westcoastoftheunitedstates1446740/3948721.html",
+      "source_pages": [
+        {
+          "doc_id": "S002_VIS_002",
+          "title": "【带着爸爸去旅行】驰聘美西18日，新手女司机的第一个5600公里 - 美国西海岸游记攻略【携程攻略】",
+          "url": "https://you.ctrip.com/travels/westcoastoftheunitedstates1446740/3948721.html",
+          "text_type": "visitor_diary",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "96b77c2a2d20"
@@ -729,8 +873,17 @@
       "alignment_notes": [],
       "method": "rule:first_comma_baseline",
       "source_text_type": "visitor_diary",
-      "source_title": "群山在呼唤 – 优胜美地、猛犸湖游记及住宿体验",
+      "source_title": "群山在呼唤 - 优胜美地、猛犸湖游记及住宿体验 - 美国信用卡指南",
       "source_url": "https://www.uscreditcardguide.com/qunshanzaihuhuan-youshengmeidimengmahuyoujijizhusutiyan/",
+      "source_pages": [
+        {
+          "doc_id": "S002_VIS_003",
+          "title": "群山在呼唤 - 优胜美地、猛犸湖游记及住宿体验 - 美国信用卡指南",
+          "url": "https://www.uscreditcardguide.com/qunshanzaihuhuan-youshengmeidimengmahuyoujijizhusutiyan/",
+          "text_type": "visitor_diary",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "dd4ce95dc191"
@@ -769,8 +922,17 @@
       "alignment_notes": [],
       "method": "rule:first_comma_baseline",
       "source_text_type": "visitor_diary",
-      "source_title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则",
+      "source_title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则 - 美国信用卡指南",
       "source_url": "https://www.uscreditcardguide.com/yosemite-firefall-2021/",
+      "source_pages": [
+        {
+          "doc_id": "S002_VIS_004",
+          "title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则 - 美国信用卡指南",
+          "url": "https://www.uscreditcardguide.com/yosemite-firefall-2021/",
+          "text_type": "visitor_diary",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "573fcd6fa558"
@@ -807,8 +969,17 @@
       "alignment_notes": [],
       "method": "rule:first_comma_baseline",
       "source_text_type": "visitor_diary",
-      "source_title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则",
+      "source_title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则 - 美国信用卡指南",
       "source_url": "https://www.uscreditcardguide.com/yosemite-firefall-2021/",
+      "source_pages": [
+        {
+          "doc_id": "S002_VIS_004",
+          "title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则 - 美国信用卡指南",
+          "url": "https://www.uscreditcardguide.com/yosemite-firefall-2021/",
+          "text_type": "visitor_diary",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "5e1ba1c73c76"
@@ -847,8 +1018,17 @@
       "alignment_notes": [],
       "method": "rule:first_comma_baseline",
       "source_text_type": "visitor_diary",
-      "source_title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则",
+      "source_title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则 - 美国信用卡指南",
       "source_url": "https://www.uscreditcardguide.com/yosemite-firefall-2021/",
+      "source_pages": [
+        {
+          "doc_id": "S002_VIS_004",
+          "title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则 - 美国信用卡指南",
+          "url": "https://www.uscreditcardguide.com/yosemite-firefall-2021/",
+          "text_type": "visitor_diary",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "4bfde5615e90"
@@ -888,8 +1068,17 @@
       "alignment_notes": [],
       "method": "rule:first_comma_baseline",
       "source_text_type": "visitor_diary",
-      "source_title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则",
+      "source_title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则 - 美国信用卡指南",
       "source_url": "https://www.uscreditcardguide.com/yosemite-firefall-2021/",
+      "source_pages": [
+        {
+          "doc_id": "S002_VIS_004",
+          "title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则 - 美国信用卡指南",
+          "url": "https://www.uscreditcardguide.com/yosemite-firefall-2021/",
+          "text_type": "visitor_diary",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "4910747bb5e2"
@@ -928,8 +1117,17 @@
       "alignment_notes": [],
       "method": "rule:first_comma_baseline",
       "source_text_type": "visitor_diary",
-      "source_title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则",
+      "source_title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则 - 美国信用卡指南",
       "source_url": "https://www.uscreditcardguide.com/yosemite-firefall-2021/",
+      "source_pages": [
+        {
+          "doc_id": "S002_VIS_004",
+          "title": "疑是熔岩落九天——优胜美地火瀑布外加夏日游记一则 - 美国信用卡指南",
+          "url": "https://www.uscreditcardguide.com/yosemite-firefall-2021/",
+          "text_type": "visitor_diary",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "82598ff14e5f"
@@ -968,8 +1166,17 @@
       "alignment_notes": [],
       "method": "rule:first_comma_baseline",
       "source_text_type": "official_route",
-      "source_title": "Grand Cliff Top Walk 与蓝山一日游指南",
-      "source_url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+      "source_title": "从悉尼出发，蓝山风景一日游 | 访问新南威尔士州",
+      "source_url": "https://www.visitnsw.com/cn/articles/blue-mountains-scenic-day-trip",
+      "source_pages": [
+        {
+          "doc_id": "S003_OFF_001",
+          "title": "从悉尼出发，蓝山风景一日游 | 访问新南威尔士州",
+          "url": "https://www.visitnsw.com/cn/articles/blue-mountains-scenic-day-trip",
+          "text_type": "official_route",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "01c531f7c978"
@@ -1006,8 +1213,17 @@
       "alignment_notes": [],
       "method": "rule:first_comma_baseline",
       "source_text_type": "official_route",
-      "source_title": "Grand Cliff Top Walk 与蓝山一日游指南",
-      "source_url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+      "source_title": "从悉尼出发，蓝山风景一日游 | 访问新南威尔士州",
+      "source_url": "https://www.visitnsw.com/cn/articles/blue-mountains-scenic-day-trip",
+      "source_pages": [
+        {
+          "doc_id": "S003_OFF_001",
+          "title": "从悉尼出发，蓝山风景一日游 | 访问新南威尔士州",
+          "url": "https://www.visitnsw.com/cn/articles/blue-mountains-scenic-day-trip",
+          "text_type": "official_route",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "00602615cdb4"
@@ -1048,8 +1264,17 @@
       "alignment_notes": [],
       "method": "rule:first_comma_baseline",
       "source_text_type": "official_route",
-      "source_title": "Grand Cliff Top Walk 与蓝山一日游指南",
-      "source_url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+      "source_title": "从悉尼出发，蓝山风景一日游 | 访问新南威尔士州",
+      "source_url": "https://www.visitnsw.com/cn/articles/blue-mountains-scenic-day-trip",
+      "source_pages": [
+        {
+          "doc_id": "S003_OFF_001",
+          "title": "从悉尼出发，蓝山风景一日游 | 访问新南威尔士州",
+          "url": "https://www.visitnsw.com/cn/articles/blue-mountains-scenic-day-trip",
+          "text_type": "official_route",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "e00ef5fdc0e8"
@@ -1089,8 +1314,17 @@
       "alignment_notes": [],
       "method": "rule:first_comma_baseline",
       "source_text_type": "official_route",
-      "source_title": "Grand Cliff Top Walk 与蓝山一日游指南",
-      "source_url": "https://www.nationalparks.nsw.gov.au/things-to-do/experiences/grand-cliff-top-walk",
+      "source_title": "从悉尼出发，蓝山风景一日游 | 访问新南威尔士州",
+      "source_url": "https://www.visitnsw.com/cn/articles/blue-mountains-scenic-day-trip",
+      "source_pages": [
+        {
+          "doc_id": "S003_OFF_001",
+          "title": "从悉尼出发，蓝山风景一日游 | 访问新南威尔士州",
+          "url": "https://www.visitnsw.com/cn/articles/blue-mountains-scenic-day-trip",
+          "text_type": "official_route",
+          "collected_at": "2026-10-28"
+        }
+      ],
       "collected_at": "2026-10-28",
       "temporal_note": "来源历史陈述；价格、开放和服务须出行前核实",
       "duplicate_group": "8d11a4653c4f"

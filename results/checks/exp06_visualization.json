@@ -1,5 +1,5 @@
 {
-  "graph_sha256": "d18c388356312dd762602795e0af9c5bba8d4468c920d74065bf6bd7730bd0df",
+  "graph_sha256": "0e90251a3019ddf60cf031e1ba94bb6a964cc886896b812a83e29b38906023f3",
   "scenic_id": "S001",
   "nodes": 69,
   "edges": 103,
@@ -16,7 +16,7 @@
   "all_nodes_positioned": true,
   "image_size": [
     4500,
-    2684
+    2715
   ],
   "labels_truncated": false
 }

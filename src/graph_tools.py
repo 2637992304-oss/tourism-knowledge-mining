@@ -1,6 +1,7 @@
 """真实图谱只读查询；不从普通路线推断老人/亲子适用性。"""
 from collections import defaultdict
 from mining_io import ROOT,read_json,corpus,sha256
+from source_provenance import evidence_sources
 
 TIME_BUCKETS={'morning','noon','afternoon','evening','unknown'}
 VISITORS={'elderly','family','couple','general','other'}
@@ -29,13 +30,11 @@ class GraphTools:
         # Reject stale graph when supplied with canonical files. Test fixtures can supply their own docs.
         if docs is None:
             for name,expected in self.graph.get('input_sha256',{}).items():
-                p=ROOT/('data/processed' if name=='corpus.jsonl' else 'data/outputs')/name
+                p=ROOT/('data/processed' if name=='corpus.jsonl' else 'data/resources' if name=='source_page_spans.json' else 'data/outputs')/name
                 if not p.exists() or sha256(p)!=expected:raise ValueError('图谱输入已变化，请重新构图：'+name)
 
-    def sources(self,refs):
-        return [{'doc_id':did,'title':self.docs[did]['source_title'],'url':self.docs[did]['source_url'],
-                 'text_type':self.docs[did]['text_type'],'collected_at':self.docs[did]['collected_at']}
-                for did in sorted(set(refs)) if did in self.docs]
+    def sources(self,refs,evidence=None):
+        return evidence_sources(self.docs,refs,evidence or [])
 
     def validate_scenic(self,sid):
         if not isinstance(sid,str) or sid not in self.scenics:return result('error',message='unknown_scenic：请使用登记表中的S001/S002/S003')
@@ -57,11 +56,15 @@ class GraphTools:
                               'duration_minutes':a.get('duration_minutes'),'activity':step['name'],
                               'pois':[{'name':p['name'],'entity_id':p['attributes'].get('entity_id')} for p in targets('VISITS')],
                               'transport':[p['name'] for p in targets('USES_TRANSPORT')],
-                              'evidence':a.get('evidence',[]),'source_refs':step['source_refs']})
+                              'evidence':a.get('evidence',[]),'source_refs':step['source_refs'],
+                              'step_kind':a.get('step_kind','route_activity'),
+                              'location_role':a.get('location_role','activity_location'),
+                              'destination_poi_name':a.get('destination_poi_name')})
             if steps:
                 routes.append({'route_id':n['attributes']['route_id'],'route_name':n['name'],
                                'text_type':n['attributes']['text_type'],'steps':sorted(steps,key=lambda s:s['step_no']),
-                               'sources':self.sources(n['source_refs']),'scope_note':n['attributes'].get('scope_note'),
+                               'sources':self.sources(n['source_refs'],[e for s in steps for e in s['evidence']]),'scope_note':n['attributes'].get('scope_note'),
+                               'sequence_semantics':n['attributes'].get('sequence_semantics','itinerary_order'),
                                'filter_note':'筛选时间段的原路线片段' if time_bucket else None,
                                'suitability':'原路线未标注老人/亲子/情侣适用性，不能据此保证适合或满足总时长'})
         return result('ok',routes) if routes else result('no_match',message='no_route_match：当前图谱未覆盖该景区/时间段；不代表现实中没有路线')
@@ -84,7 +87,7 @@ class GraphTools:
             rows.append({'advice_id':n['attributes']['advice_id'],'condition_type':a['condition_type'],
                          'condition_text':c['name'],'visitor_types':a.get('visitor_types',[]),'suggestion_text':n['name'],
                          'related_entities':[{'entity_id':e['attributes'].get('entity_id'),'name':e['name'],'type':e['node_type']} for e in entities],
-                         'evidence':n['attributes'].get('evidence',[]),'sources':self.sources(n['source_refs']),
+                         'evidence':n['attributes'].get('evidence',[]),'sources':self.sources(n['source_refs'],n['attributes'].get('evidence',[])),
                          'temporal_note':n['attributes'].get('temporal_note'),
                          'relation_note':'关联实体仅表示证据涉及，不表示每个实体都应访问或允许使用'})
         return result('ok',rows) if rows else result('no_match',message='no_advice_match：数据已接入，但没有明确满足该过滤条件的建议')

@@ -5,6 +5,7 @@ import re
 from collections import Counter
 from difflib import SequenceMatcher
 from mining_io import ROOT, corpus, read_json, write_json, sha256, span
+from source_provenance import evidence_sources
 
 CONDITION_TYPES = {'weather', 'visitor_type', 'time', 'crowding', 'other'}
 VISITOR_TYPES = {'elderly', 'family', 'couple', 'general', 'other'}
@@ -17,7 +18,7 @@ def classify(condition):
     for pat, value in [(r'儿童|孩子|小孩|亲子|家庭','family'),(r'老人|老年|长者','elderly'),(r'情侣|恋人|夫妻','couple')]:
         if re.search(pat,condition): visitors.append(value)
     if visitors:return 'visitor_type', visitors
-    if re.search(r'天气|下雨|雨天|下雪|冰雪|高温|寒冷|大风',condition):return 'weather',[]
+    if re.search(r'天气|下雨|雨天|下雪|冰雪|高温|寒冷|有些冷|大风',condition):return 'weather',[]
     if re.search(r'人挤人|人多|拥挤|排队|旺季|预约',condition):return 'crowding',[]
     if re.search(r'时间|早晨|晚上|周中|周末|冬季|夏季|季节',condition):return 'time',[]
     return 'other',[]
@@ -49,6 +50,13 @@ def extract_document(doc,ranges,variant='optimized'):
         lo,hi=interval['start'],interval['end']
         for a,b in units(text,lo,hi):
             unit=text[a:b]
+            if variant=='optimized':
+                # Concessive context is a real condition even without 如果.
+                implicit=re.search(r'虽然([^。！？]+?)[,，](但(?:是)?建议[^。！？]+)',unit)
+                if implicit:
+                    add(a+implicit.start(),a+implicit.start(2)-1,
+                        a+implicit.start(2),a+implicit.end(2),
+                        a+implicit.start(),a+implicit.end(2),'concessive_advice')
             if re.search(r'\bIf\s',unit):
                 for m in re.finditer(r'\bIf\s+([^,.!?\n]+),\s*([^.!?\n]+)',unit):
                     add(a+m.start(),a+m.start(2),a+m.start(2),a+m.end(2),a+m.start(),a+m.end(),'english_if')
@@ -123,11 +131,12 @@ def run(variant='optimized',review=True):
                         item['suggestion_text']=fixed;item['suggestion_span']=span(did,doc['text'],sa,sa+len(fixed))
                         item['review_correction']=correction['reason']
             ids,notes=related(item,doc,entities)
+            source_pages=evidence_sources(docs,[did],item['evidence'])
             key=f"{item['condition_span']['start']}:{item['condition_text']}:{item['suggestion_text']}"
             suffix=int(hashlib.sha256(key.encode()).hexdigest()[:12],16)
             item.update(advice_id=f'A_{did}_{suffix:015d}',scenic_id=doc['scenic_id'],doc_id=did,
                         related_entity_ids=ids,alignment_notes=notes,method='rule:'+item.pop('rule')+('+ai_review' if 'review_correction' in item else ''),
-                        source_text_type=doc['text_type'],source_title=doc['source_title'],source_url=doc['source_url'],
+                        source_text_type=doc['text_type'],source_title=source_pages[0]['title'],source_url=source_pages[0]['url'],source_pages=source_pages,
                         collected_at=doc['collected_at'],temporal_note='来源历史陈述；价格、开放和服务须出行前核实',
                         duplicate_group=hashlib.sha256(re.sub(r'\s+','',item['condition_text']+'|'+item['suggestion_text']).encode()).hexdigest()[:12])
             output.append(item)
@@ -137,7 +146,7 @@ def run(variant='optimized',review=True):
             score=SequenceMatcher(None,a['condition_text']+a['suggestion_text'],b['condition_text']+b['suggestion_text']).ratio()
             if a['scenic_id']==b['scenic_id'] and score>=0.82:
                 near_duplicates.append({'advice_ids':[a['advice_id'],b['advice_id']],'similarity':round(score,4),'action':'保留不同条件或来源；不自动语义合并'})
-    payload={'schema_version':'1.0','corpus_version':'v1','resource_version':'exp05-v1',
+    payload={'schema_version':'1.0','corpus_version':'v1','resource_version':'exp05-v1.1',
              'reviewed':variant=='optimized' and review,
              'corpus_sha256':sha256(ROOT/'data/processed/corpus.jsonl'),'entities_sha256':sha256(ROOT/'data/outputs/entities.json'),
              'variant':variant,'scope_policy':'exp02相关区间，排除S003_VIS_004园外酒评；全文坐标。',

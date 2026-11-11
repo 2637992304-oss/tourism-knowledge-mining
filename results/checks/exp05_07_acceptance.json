@@ -1,12 +1,15 @@
 {
   "schema_version": "1.0",
-  "run_at": "2026-11-11T18:36:45+08:00",
-  "python": "3.12.14",
+  "acceptance_scope": "offline",
+  "live_validation_pending": true,
+  "run_at": "2026-11-11T20:03:53+08:00",
+  "python": "3.13.9",
   "checks": {
     "protected_files_unchanged": true,
     "exp05_passed": true,
     "exp06_passed": true,
-    "exp07_live_passed": true,
+    "exp07_live_passed": false,
+    "exp07_offline_passed": true,
     "unit_tests_passed": true,
     "all_artifacts_present": true,
     "local_key_absent_from_shareable_files": true,
@@ -43,7 +46,7 @@
         1600
       ],
       "format": "PNG",
-      "sha256": "b3cdf10e6c3e871f3c0fd4c35cd877946ce1a53de8000efc5ebc3877007ffe86"
+      "sha256": "ab9cf95eeb9d389d256c732073f503cf761d1ba54881e9b0b316e811b548db51"
     },
     "exp05_advice_statistics.png": {
       "size": [
@@ -51,24 +54,25 @@
         1000
       ],
       "format": "PNG",
-      "sha256": "955a4d084d2779578e42ac10930b6ef7beaae2ec49a87f911c430151a9b71e01"
+      "sha256": "f1dc1ff1ae0a32438d815c4bbadaa1988a2b3ace077038d8d7aeb07d751d800c"
     },
     "exp06_hakone_graph.png": {
       "size": [
         4500,
-        2684
+        2715
       ],
       "format": "PNG",
-      "sha256": "549ffc6eb15c322beb4fe081b3bc6adf3c80bb87886788bc4c74e8cd97336702"
+      "sha256": "371d827559292d8832fe8ec57b6be909c927cf4d3f7188dc9166de04ce4971e8"
     }
   },
-  "graph_sha256": "d18c388356312dd762602795e0af9c5bba8d4468c920d74065bf6bd7730bd0df",
+  "graph_sha256": "0e90251a3019ddf60cf031e1ba94bb6a964cc886896b812a83e29b38906023f3",
   "metrics": {
-    "advice": 20,
-    "graph_nodes": 151,
-    "graph_edges": 205,
-    "live_cases": 7,
-    "api_requests": 20
+    "advice": 21,
+    "graph_nodes": 153,
+    "graph_edges": 207,
+    "live_cases": 0,
+    "offline_cases": 7,
+    "api_requests": 0
   },
   "limitations": [
     "程序核验与AI语义核验，未代替组员独立验收",

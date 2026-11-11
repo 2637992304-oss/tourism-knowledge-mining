@@ -15,7 +15,7 @@ def main():
     graph = nx.MultiDiGraph()
     assert data['schema_version']=='1.0'
     for name,digest in data.get('input_sha256',{}).items():
-        path=ROOT/('data/processed' if name=='corpus.jsonl' else 'data/outputs')/name
+        path=ROOT/('data/processed' if name=='corpus.jsonl' else 'data/resources' if name=='source_page_spans.json' else 'data/outputs')/name
         assert sha256(path)==digest,'构图后输入变化'
     catalog={e['entity_id']:e for e in read_json(ROOT/'data/outputs/entities.json')['entity_catalog'] if e.get('active',True)}
     for node in data["nodes"]:

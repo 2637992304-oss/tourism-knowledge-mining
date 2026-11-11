@@ -5,9 +5,10 @@ from graph_tools import GraphTools
 from exp07_agent import grounded_plan
 
 
-def verify(data,tools):
+def verify(data,tools,allow_offline=False):
     checks=[];docs=corpus();cases=data['cases']
-    if data.get('execution_mode')!='live_api' or data.get('api_requests',0)<=0:raise ValueError('未完成真实LLM调用')
+    offline=allow_offline and data.get('execution_mode')=='offline_revalidation'
+    if not offline and (data.get('execution_mode')!='live_api' or data.get('api_requests',0)<=0):raise ValueError('未完成真实LLM调用')
     if data['graph_sha256']!=sha256(tools.path) or data['graph_version']!=tools.graph['graph_version']:raise ValueError('案例图谱版本过期')
     expected={'AG_001':('S001','family',1),'AG_002':('S001','elderly',None),
               'AG_003':('S003','couple',2),'AG_004':('S002',None,None)}
@@ -15,7 +16,8 @@ def verify(data,tools):
     if len({c['case_id'] for c in cases})!=len(cases):raise ValueError('案例ID重复')
     for case in cases:
         cid=case['case_id'];c=case['parsed_constraints'];notes=[]
-        if not case['real_llm'] or case['execution_mode']!='live_api' or not case['model']:raise ValueError('非真实模型案例')
+        if not offline and (not case['real_llm'] or case['execution_mode']!='live_api' or not case['model']):raise ValueError('非真实模型案例')
+        if offline and (case['real_llm'] or case['execution_mode']!='offline_revalidation'):raise ValueError('离线复验不得声称真实模型新调用')
         if case['status']=='error' or not isinstance(c,dict):raise ValueError(cid+'模型链路失败')
         if cid in expected:
             sid,visitor,days=expected[cid]
@@ -56,18 +58,20 @@ def verify(data,tools):
             if cid=='AG_006' and not c['conflicts']:raise ValueError('冲突未识别')
             notes.append('信息不足/未知景区/冲突：追问且未生成无证据行程')
         checks.append({'case_id':cid,'passed':True,'notes':notes,'semantic_review':'AI辅助检查；未由组员独立验收'})
-    return {'passed':True,'cases':len(cases),'api_requests':data['api_requests'],'model':data['model'],
+    return {'passed':True,'live_validation_passed':not offline,'execution_mode':data['execution_mode'],'cases':len(cases),'api_requests':data['api_requests'],'model':data['model'],
             'graph_sha256':data['graph_sha256'],'status_counts':dict(Counter(c['status'] for c in cases)),'checks':checks}
 
 
 def main():
-    data=read_json(ROOT/'data/outputs/agent_cases.json')
+    import argparse
+    p=argparse.ArgumentParser();p.add_argument('--offline',action='store_true');a=p.parse_args()
+    data=read_json(ROOT/('data/outputs/agent_revalidated_cases.json' if a.offline else 'data/outputs/agent_cases.json'))
     try:
-        quality=verify(data,GraphTools());write_json(ROOT/'results/checks/exp07_quality.json',quality)
+        quality=verify(data,GraphTools(),allow_offline=a.offline);write_json(ROOT/'results/checks/exp07_quality.json',quality)
     except (ValueError,KeyError,TypeError) as exc:
         write_json(ROOT/'results/checks/exp07_quality.json',{'passed':False,'reason':str(exc),'graph_sha256':data.get('graph_sha256')})
         raise SystemExit(str(exc))
-    md=['# 实验7真实API场景核验','',f"模型：{data['model']}；{data['api_requests']}次API请求；图谱{data['graph_version']}。",'程序可核验字段与引用，语义仍需组员独立复核。','']
+    md=['# 实验7场景核验','',f"执行模式：{data['execution_mode']}；{data['api_requests']}次本轮API请求；图谱{data['graph_version']}。",'offline_revalidation为对历史模型提案的程序复验，不是新模型调用；语义仍需组员独立复核。','']
     for c in data['cases']:
         md += [f"## {c['case_id']}",c['user_request'],'',f"状态：{c['status']}",
                '约束：'+str(c['parsed_constraints']),

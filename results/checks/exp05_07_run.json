@@ -3,6 +3,14 @@
     {
       "command": [
         "python",
+        "src/build_source_spans.py"
+      ],
+      "returncode": 0,
+      "output": "网页来源范围： 20\n"
+    },
+    {
+      "command": [
+        "python",
         "src/exp03_routes.py"
       ],
       "returncode": 0,
@@ -14,7 +22,7 @@
         "src/exp03_evaluate.py"
       ],
       "returncode": 0,
-      "output": "{\"routes\": 4, \"matched\": 30, \"gold\": 30, \"evidence_checked\": 31}\n"
+      "output": "{\"routes\": 4, \"matched\": 30, \"gold\": 30, \"evidence_checked\": 32}\n"
     },
     {
       "command": [
@@ -32,7 +40,7 @@
         "src/exp05_advice.py"
       ],
       "returncode": 0,
-      "output": "{'documents_scanned': 18, 'advice': 20, 'condition_types': {'other': 15, 'visitor_type': 2, 'crowding': 1, 'time': 1, 'weather': 1}, 'visitor_types': {'unspecified': 18, 'family': 2}, 'scenics': {'S001': 9, 'S002': 5, 'S003': 6}}\n"
+      "output": "{'documents_scanned': 18, 'advice': 21, 'condition_types': {'other': 15, 'visitor_type': 2, 'weather': 2, 'crowding': 1, 'time': 1}, 'visitor_types': {'unspecified': 19, 'family': 2}, 'scenics': {'S001': 9, 'S002': 6, 'S003': 6}}\n"
     },
     {
       "command": [
@@ -40,7 +48,7 @@
         "src/exp05_verify.py"
       ],
       "returncode": 0,
-      "output": "{'documents_scanned': 18, 'advice': 20, 'condition_types': {'other': 15, 'visitor_type': 2, 'crowding': 1, 'time': 1, 'weather': 1}, 'visitor_types': {'unspecified': 18, 'family': 2}, 'scenics': {'S001': 9, 'S002': 5, 'S003': 6}}\n{'baseline': {'development': {'tp': 11, 'fp': 4, 'fn': 3, 'cases': 23, 'positive_relations': 14, 'precision': 0.7333333333333333, 'recall': 0.7857142857142857, 'f1': 0.7586206896551724, 'correct_negative_cases': 6}, 'document_holdout': {'tp': 4, 'fp': 3, 'fn': 2, 'cases': 9, 'positive_relations': 6, 'precision': 0.5714285714285714, 'recall': 0.6666666666666666, 'f1': 0.6153846153846154, 'correct_negative_cases': 2}, 'all': {'tp': 15, 'fp': 7, 'fn': 5, 'cases': 32, 'positive_relations': 20, 'precision': 0.6818181818181818, 'recall': 0.75, 'f1': 0.7142857142857143, 'correct_negative_cases': 8}}, 'optimized': {'development': {'tp': 14, 'fp': 0, 'fn': 0, 'cases': 23, 'positive_relations': 14, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'correct_negative_cases': 9}, 'document_holdout': {'tp': 4, 'fp': 2, 'fn': 2, 'cases': 9, 'positive_relations': 6, 'precision': 0.6666666666666666, 'recall': 0.6666666666666666, 'f1': 0.6666666666666666, 'correct_negative_cases': 3}, 'all': {'tp': 18, 'fp': 2, 'fn': 2, 'cases': 32, 'positive_relations': 20, 'precision': 0.9, 'recall': 0.9, 'f1': 0.9, 'correct_negative_cases': 12}}, 'reviewed_delivery': {'development': {'tp': 14, 'fp': 0, 'fn': 0, 'cases': 23, 'positive_relations': 14, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'correct_negative_cases': 9}, 'document_holdout': {'tp': 6, 'fp': 0, 'fn': 0, 'cases': 9, 'positive_relations': 6, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'correct_negative_cases': 3}, 'all': {'tp': 20, 'fp': 0, 'fn': 0, 'cases': 32, 'positive_relations': 20, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'correct_negative_cases': 12}}}\n"
+      "output": "{'documents_scanned': 18, 'advice': 21, 'condition_types': {'other': 15, 'visitor_type': 2, 'weather': 2, 'crowding': 1, 'time': 1}, 'visitor_types': {'unspecified': 19, 'family': 2}, 'scenics': {'S001': 9, 'S002': 6, 'S003': 6}}\n{'baseline': {'development': {'tp': 11, 'fp': 4, 'fn': 4, 'cases': 23, 'positive_relations': 15, 'precision': 0.7333333333333333, 'recall': 0.7333333333333333, 'f1': 0.7333333333333333, 'correct_negative_cases': 5}, 'document_holdout': {'tp': 4, 'fp': 3, 'fn': 2, 'cases': 9, 'positive_relations': 6, 'precision': 0.5714285714285714, 'recall': 0.6666666666666666, 'f1': 0.6153846153846154, 'correct_negative_cases': 2}, 'all': {'tp': 15, 'fp': 7, 'fn': 6, 'cases': 32, 'positive_relations': 21, 'precision': 0.6818181818181818, 'recall': 0.7142857142857143, 'f1': 0.6976744186046512, 'correct_negative_cases': 7}}, 'optimized': {'development': {'tp': 15, 'fp': 0, 'fn': 0, 'cases': 23, 'positive_relations': 15, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'correct_negative_cases': 8}, 'document_holdout': {'tp': 4, 'fp': 2, 'fn': 2, 'cases': 9, 'positive_relations': 6, 'precision': 0.6666666666666666, 'recall': 0.6666666666666666, 'f1': 0.6666666666666666, 'correct_negative_cases': 3}, 'all': {'tp': 19, 'fp': 2, 'fn': 2, 'cases': 32, 'positive_relations': 21, 'precision': 0.9047619047619048, 'recall': 0.9047619047619048, 'f1': 0.9047619047619048, 'correct_negative_cases': 11}}, 'reviewed_delivery': {'development': {'tp': 15, 'fp': 0, 'fn': 0, 'cases': 23, 'positive_relations': 15, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'correct_negative_cases': 8}, 'document_holdout': {'tp': 6, 'fp': 0, 'fn': 0, 'cases': 9, 'positive_relations': 6, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'correct_negative_cases': 3}, 'all': {'tp': 21, 'fp': 0, 'fn': 0, 'cases': 32, 'positive_relations': 21, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'correct_negative_cases': 11}}}\n"
     },
     {
       "command": [
@@ -57,7 +65,7 @@
         "--require-complete"
       ],
       "returncode": 0,
-      "output": "{\"status\": \"fused\", \"nodes\": 151, \"edges\": 205, \"missing_inputs\": []}\n"
+      "output": "{\"status\": \"fused\", \"nodes\": 153, \"edges\": 207, \"missing_inputs\": []}\n"
     },
     {
       "command": [
@@ -65,7 +73,7 @@
         "src/exp06_verify.py"
       ],
       "returncode": 0,
-      "output": "{\"nodes\": 151, \"edges\": 205, \"route_checks\": 4, \"checks_passed\": true}\n"
+      "output": "{\"nodes\": 153, \"edges\": 207, \"route_checks\": 4, \"checks_passed\": true}\n"
     },
     {
       "command": [
@@ -73,7 +81,15 @@
         "src/yzh_figures.py"
       ],
       "returncode": 0,
-      "output": "saved full S001 graph: 69 nodes, 103 edges, 4500x2684\nsaved exp03_time_hierarchy.png and complete exp06_hakone_graph.png\n"
+      "output": "saved full S001 graph: 69 nodes, 103 edges, 4500x2715\nsaved exp03_time_hierarchy.png and complete exp06_hakone_graph.png\n"
+    },
+    {
+      "command": [
+        "python",
+        "src/exp07_revalidate.py"
+      ],
+      "returncode": 0,
+      "output": "7例历史提案当前数据复验；0次API请求。\n"
     }
   ],
   "passed": true

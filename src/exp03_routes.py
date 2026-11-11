@@ -79,6 +79,20 @@ def official_route(doc):
                 pos = text.index(poi, match.end(), match.end() + 130)
                 step["evidence"].append({"doc_id": doc["doc_id"], "start": pos,
                                          "end": pos + len(poi), "text": poi})
+            # A transport heading can name the eventual destination, not the
+            # location reached at that time. Preserve both without a false visit.
+            if "前往" in title and "缆车" in title:
+                # The next timed heading describes the transfer reached by
+                # this leg; retain it as a target, not a claimed 11:20 arrival.
+                body = text[match.end():match.end()+400]
+                waypoint = re.search(r"终点站[—-]([^（(,，。]+)", body)
+                if waypoint:
+                    step['destination_poi_name'] = poi
+                    step['location_role'] = 'transfer_target'
+                    step['poi_name'] = step['raw_poi_name'] = waypoint[1].strip()
+                    pos = match.end()+waypoint.start(1)
+                    step['evidence'].append({'doc_id':doc['doc_id'],'start':pos,
+                                            'end':pos+len(waypoint[1]),'text':waypoint[1]})
             steps.append(step)
     if not steps:
         raise ValueError("官方路线未找到时间标题")
@@ -102,7 +116,12 @@ def main():
         blue = docs["S003_OFF_001"]
         start, end = blue["text"].index("早晨:咖啡"), blue["text"].index("到达那里")
         steps, _ = extract(blue, make_step, start, end, inherit_bucket=True)
-        routes.append(make_route(blue, "蓝山一日游时间分段路线", steps))
+        candidate = make_route(blue, "蓝山一日游候选活动（原文顺序）", steps)
+        candidate['sequence_semantics'] = 'source_order_only'
+        candidate['scope_note'] = '按原文时间分段列出的候选活动，含可选推荐；不是全部必须完成的连续行程。'
+        for step in steps:
+            step['step_kind'] = 'candidate_activity'
+        routes.append(candidate)
         routes.append(visitor_route(docs["S003_VIS_001"]))
         if args.entities.exists():
             entities = json.loads(args.entities.read_text(encoding="utf-8"))

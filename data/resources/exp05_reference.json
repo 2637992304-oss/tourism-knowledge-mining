@@ -314,9 +314,27 @@
         "end": 2916,
         "text": "趁着时间还早(早晨也很冷,大约10摄氏度左右)在车上吃了早餐,大约7点换好了登山鞋我们徒步出发,虽然刚出发穿着短裤、T恤稍有些冷,但建议还是不要增加衣服,因为很快就会感到热了。"
       },
-      "anchor": 2893,
-      "expected": [],
-      "annotation_note": "上下文冷暖为经历，未显式匹配通用条件句；记录边界局限"
+      "anchor": 2876,
+      "expected": [
+        {
+          "condition_text": "虽然刚出发穿着短裤、T恤稍有些冷",
+          "suggestion_text": "但建议还是不要增加衣服,因为很快就会感到热了",
+          "condition_span": {
+            "doc_id": "S002_VIS_001",
+            "start": 2876,
+            "end": 2892,
+            "text": "虽然刚出发穿着短裤、T恤稍有些冷"
+          },
+          "suggestion_span": {
+            "doc_id": "S002_VIS_001",
+            "start": 2893,
+            "end": 2915,
+            "text": "但建议还是不要增加衣服,因为很快就会感到热了"
+          },
+          "match": "exact"
+        }
+      ],
+      "annotation_note": "2026-11-11 AI复核修订：虽然…但建议…表达情境条件与动作；原负例按规则覆盖范围标注不当。不是新增独立测试。"
     },
     {
       "case_id": "E5_014",
@@ -781,5 +799,6 @@
       "expected": [],
       "annotation_note": "站点求好评无关旅游建议"
     }
-  ]
+  ],
+  "reference_version": "exp05-reference-v1.1"
 }

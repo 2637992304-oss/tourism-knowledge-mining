@@ -6,13 +6,13 @@ AI辅助阅读原文后、抽取器实现与预测前形成；未由组员独立
 严格边界：条件和建议归一空白/终止标点后匹配；雨天FAQ按预先标注的最小建议前缀匹配，完整列表另做切片检查。边界错同时计FP和FN。
 
 ## baseline
-{'development': {'tp': 11, 'fp': 4, 'fn': 3, 'cases': 23, 'positive_relations': 14, 'precision': 0.7333333333333333, 'recall': 0.7857142857142857, 'f1': 0.7586206896551724, 'correct_negative_cases': 6}, 'document_holdout': {'tp': 4, 'fp': 3, 'fn': 2, 'cases': 9, 'positive_relations': 6, 'precision': 0.5714285714285714, 'recall': 0.6666666666666666, 'f1': 0.6153846153846154, 'correct_negative_cases': 2}, 'all': {'tp': 15, 'fp': 7, 'fn': 5, 'cases': 32, 'positive_relations': 20, 'precision': 0.6818181818181818, 'recall': 0.75, 'f1': 0.7142857142857143, 'correct_negative_cases': 8}}
+{'development': {'tp': 11, 'fp': 4, 'fn': 4, 'cases': 23, 'positive_relations': 15, 'precision': 0.7333333333333333, 'recall': 0.7333333333333333, 'f1': 0.7333333333333333, 'correct_negative_cases': 5}, 'document_holdout': {'tp': 4, 'fp': 3, 'fn': 2, 'cases': 9, 'positive_relations': 6, 'precision': 0.5714285714285714, 'recall': 0.6666666666666666, 'f1': 0.6153846153846154, 'correct_negative_cases': 2}, 'all': {'tp': 15, 'fp': 7, 'fn': 6, 'cases': 32, 'positive_relations': 21, 'precision': 0.6818181818181818, 'recall': 0.7142857142857143, 'f1': 0.6976744186046512, 'correct_negative_cases': 7}}
 
 ## optimized
-{'development': {'tp': 14, 'fp': 0, 'fn': 0, 'cases': 23, 'positive_relations': 14, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'correct_negative_cases': 9}, 'document_holdout': {'tp': 4, 'fp': 2, 'fn': 2, 'cases': 9, 'positive_relations': 6, 'precision': 0.6666666666666666, 'recall': 0.6666666666666666, 'f1': 0.6666666666666666, 'correct_negative_cases': 3}, 'all': {'tp': 18, 'fp': 2, 'fn': 2, 'cases': 32, 'positive_relations': 20, 'precision': 0.9, 'recall': 0.9, 'f1': 0.9, 'correct_negative_cases': 12}}
+{'development': {'tp': 15, 'fp': 0, 'fn': 0, 'cases': 23, 'positive_relations': 15, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'correct_negative_cases': 8}, 'document_holdout': {'tp': 4, 'fp': 2, 'fn': 2, 'cases': 9, 'positive_relations': 6, 'precision': 0.6666666666666666, 'recall': 0.6666666666666666, 'f1': 0.6666666666666666, 'correct_negative_cases': 3}, 'all': {'tp': 19, 'fp': 2, 'fn': 2, 'cases': 32, 'positive_relations': 21, 'precision': 0.9047619047619048, 'recall': 0.9047619047619048, 'f1': 0.9047619047619048, 'correct_negative_cases': 11}}
 
 ## reviewed_delivery
-{'development': {'tp': 14, 'fp': 0, 'fn': 0, 'cases': 23, 'positive_relations': 14, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'correct_negative_cases': 9}, 'document_holdout': {'tp': 6, 'fp': 0, 'fn': 0, 'cases': 9, 'positive_relations': 6, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'correct_negative_cases': 3}, 'all': {'tp': 20, 'fp': 0, 'fn': 0, 'cases': 32, 'positive_relations': 20, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'correct_negative_cases': 12}}
+{'development': {'tp': 15, 'fp': 0, 'fn': 0, 'cases': 23, 'positive_relations': 15, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'correct_negative_cases': 8}, 'document_holdout': {'tp': 6, 'fp': 0, 'fn': 0, 'cases': 9, 'positive_relations': 6, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'correct_negative_cases': 3}, 'all': {'tp': 21, 'fp': 0, 'fn': 0, 'cases': 32, 'positive_relations': 21, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'correct_negative_cases': 11}}
 
 ## E5_001 / development
 > 如果遇上好天气,还可以从车窗看到富士山,这无疑会增加您对旅行的期待哦。
@@ -104,9 +104,9 @@ TP=1 FP=0 FN=0；两个备选不可拼接
 ## E5_013 / development
 > 趁着时间还早(早晨也很冷,大约10摄氏度左右)在车上吃了早餐,大约7点换好了登山鞋我们徒步出发,虽然刚出发穿着短裤、T恤稍有些冷,但建议还是不要增加衣服,因为很快就会感到热了。
 
-参考：[]
-预测：[]
-TP=0 FP=0 FN=0；上下文冷暖为经历，未显式匹配通用条件句；记录边界局限
+参考：[('虽然刚出发穿着短裤、T恤稍有些冷', '但建议还是不要增加衣服,因为很快就会感到热了')]
+预测：[('虽然刚出发穿着短裤、T恤稍有些冷', '但建议还是不要增加衣服,因为很快就会感到热了')]
+TP=1 FP=0 FN=0；2026-11-11 AI复核修订：虽然…但建议…表达情境条件与动作；原负例按规则覆盖范围标注不当。不是新增独立测试。
 
 ## E5_014 / development
 > 不过停车场不大,感觉旺季会比较难停车。
