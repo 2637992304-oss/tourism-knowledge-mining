@@ -10,7 +10,23 @@
 
 ## 当前状态
 
-**本工作分支已整合实验3，并由FYH接管实验5、6、7。** 实验1/2/4来自DHT的main交付，路线与原图谱来自YZH提交60a7dda；本分支不自动推送或表示已合入远端main。正式语料为箱根（主展示）、优胜美地、蓝山，每景区1份官方文档和5篇游记，共18篇、20个网页快照。实体exp02-v1.1有327个活跃实体、1403次提及；共指59例内部核验38/59。当前新增20条条件建议，复用4条30步路线，融合图谱v2为151节点/205边。Agent已接入真实模型并提供7类场景，最终运行结果与验证状态见[实验7核验](results/checks/exp07_quality.json)。原任务书、报告模板、冻结语料及实验1/2/4输出保持不变；各模块AI辅助标注尚待组员独立复核。
+**实验 1–7 的代码、结构化成果和各实验 Markdown 章节已统一合入 main。** 2026 年 11 月 11 日整合 `yzh/routes-graph`（`3e1a043`），其中已包含 FYH 的实验 5–7 交付。DHT 完成实验 1、2、4，YZH 完成实验 3 和基础图谱，FYH 完成条件建议融合与 Agent，YZH 完成整合复建验收。
+
+正式语料为箱根（主展示）、优胜美地、蓝山，每景区 1 份官方文档和 5 篇游记，共 18 篇、20 个网页快照。主要成果如下：
+
+| 实验 | 已交付成果 |
+| --- | --- |
+| 1 数据采集与预处理 | 冻结 v1 语料、来源记录和质量检查 |
+| 2 实体识别 | exp02-v1.1：327 个活跃实体、1403 次提及 |
+| 3 路线层级结构 | 4 条路线、30 个步骤，30/30 步完成实体对齐 |
+| 4 共指消解 | 59 处目标指代，内部核验 38/59 |
+| 5 条件建议抽取 | 20 条条件建议及逐例核验 |
+| 6 图谱融合与可视化 | 图谱 v2：151 个节点、205 条边，含 PNG 和交互 HTML |
+| 7 旅游规划 Agent | 真实模型与图谱工具闭环，7 类场景及调用记录 |
+
+2026 年 11 月 11 日的全链路离线验收与 43 项测试通过，见[验收记录](results/checks/exp05_07_acceptance.json)及[测试记录](results/checks/exp05_07_tests.json)。该次验收复用了已有真实 Agent 记录并核对图谱指纹，没有重新调用模型。7 个正式案例均为 `partial`，累计 20 次 API 请求；表示数据无法充分支持所有旅行约束，不能写为全部规划成功。详见[实验7核验](results/checks/exp07_quality.json)。
+
+**最终提交仍需收尾：** 组员独立复核参考标注与案例语义，并按课程模板汇总、排版最终 Word 报告。现有程序验收不等于这些工作已完成。[YZH 实验3和6提交稿](reports/YZH_实验3和6提交稿.md)可供汇总使用。原任务书、报告模板、冻结语料及实验 1/2/4 输出沿用原交付。
 
 从项目根目录运行：
 
@@ -31,10 +47,10 @@ python src/exp01_verify.py
 | 3 路线层级结构 | YZH | `src/exp03_routes.py` | `data/outputs/routes.json` |
 | 4 共指消解 | DHT | `src/exp04_coreference.py` | `data/outputs/coreference.json` |
 | 5 条件建议抽取 | FYH | `src/exp05_advice.py` | `data/outputs/advice.json` |
-| 6 图谱融合与可视化 | FYH接管，复用YZH基础 | `src/exp06_graph.py` | `data/outputs/graph.json` |
+| 6 图谱融合与可视化 | YZH基础，FYH完整融合，YZH复建验收 | `src/exp06_graph.py` | `data/outputs/graph.json` |
 | 7 旅游规划 Agent | FYH | `src/exp07_agent.py` | `data/outputs/agent_cases.json` |
 
-先完成实验 1 的公共语料；实验 2、3、4、5 可逐步并行；实验 6 汇总实体、路线和条件建议后交给实验 7。实验 4 结果可按需融入。实验 7 可提前验证模型调用并开发工具接口。
+运行依赖顺序为：实验 1 生成公共语料；实验 2、3、4、5 使用公共语料，实验 3、5 同时依赖正式实体目录；实验 6 汇总实体、路线和条件建议，实验 7 查询完整图谱。共指结果另行保留，未经逐例复核的预测不直接写为图谱事实。
 
 ## 项目目录
 
@@ -52,7 +68,7 @@ python src/exp01_verify.py
 │  ├─ processed/                     # 景区登记表与清洗语料
 │  └─ outputs/                       # 实验 2—7 的正式结果
 ├─ src/                              # 实验1—7入口、图谱工具和全链路验证
-├─ reports/                          # 各实验章节和总结反思模板
+├─ reports/                          # 各实验章节、提交稿和总结反思
 └─ results/
    ├─ figures/                       # 图表与运行截图
    └─ checks/                        # 检查结果与交接模板
@@ -62,16 +78,16 @@ python src/exp01_verify.py
 
 ## 环境准备（Windows PowerShell）
 
-约定使用 Python 3.11。首次加入项目时克隆仓库；已有本工作目录的成员直接使用当前目录，不要再在目录内重复克隆。
+代码以 Python 3.11+ 为兼容目标；建议使用已实测的 Python 3.12。首次加入项目时克隆仓库；已有本工作目录的成员直接使用当前目录，不要再在目录内重复克隆。
 
 ```powershell
 git clone https://github.com/2637992304-oss/tourism-knowledge-mining.git
 cd tourism-knowledge-mining
-py -3.11 -m venv .venv
+py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
-当前requirements.txt汇总lxml 6.1.1、Pillow 12.3.0、NetworkX 3.4.2。实验5抽取和实验7 HTTP/配置加载只使用标准库。此次接管实际验证Python 3.12.6；本机可使用`py -3.12`，Python 3.11尚未另行实测。
+当前requirements.txt汇总lxml 6.1.1、Pillow 12.3.0、NetworkX 3.4.2。实验5抽取和实验7 HTTP/配置加载只使用标准库。FYH 原交付实测 Python 3.12.6，YZH 2026 年 11 月 11 日整合验收使用 Python 3.12.14；Python 3.11 尚未另行实测。
 
 需要模型配置时，在本地复制示例，再填写自己的值：
 
@@ -108,9 +124,9 @@ python src/exp04_coreference.py
 python src/exp04_verify.py
 ```
 
-实验4只使用Python标准库，原交付实测Python 3.12.14。参考标签由AI辅助逐例阅读原文形成，未由组员独立复核；59例准确率只代表这5篇目的选样内部结果。完整字段与局限见[实验4交接说明](results/checks/exp04_handoff.md)。本次接管不重写实验4结果。
+实验4只使用Python标准库，原交付实测Python 3.12.14。参考标签由AI辅助逐例阅读原文形成，未由组员独立复核；59例准确率只代表这5篇目的选样内部结果。完整字段与局限见[实验4交接说明](results/checks/exp04_handoff.md)。共指输出沿用 DHT 交付版本。
 
-实验5—7从项目根目录运行：
+实验 3、5、6 的重建及实验 7 已有记录核验，从项目根目录运行：
 
 ```powershell
 py -3.12 -m pip install -r requirements.txt
